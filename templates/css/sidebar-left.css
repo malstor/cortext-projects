@@ -16,10 +16,19 @@
 	height:100px;
 }
 
-.user_bar { position : relative; display : block; height : 10px; }
+.user_bar { position : relative; 
+			display : block; 
+			height : 10px; 
+			width: 245px;
+			background:#EEF2F6; 
+			margin-left:10px;
+			margin-bottom:5px;
 
-.bar #progressbarBgnd_canvas { display : none !important; }
-.bar { position : absolute !important; top : 0; }
+			}
+
+.bar #progressbarBgnd_canvas { display : none !important;  }
+.bar { position : absolute !important; top : 0;
+ }
 
 .bar_1 { z-index : 1; }
 .bar_2 { z-index : 0; }
