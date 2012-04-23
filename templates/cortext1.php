@@ -10,6 +10,8 @@
 <link href="css/sidebar-left.css" type="text/css" rel="stylesheet" />
 <link href="css/sidebar-right.css" type="text/css" rel="stylesheet" />
 
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/mootools/1.2.1/mootools-yui-compressed.js"></script>
 <!--[if IE]><script type="text/javascript" src="/js/excanvas.js"></script><![endif]-->
 <script type="text/javascript" src="js/Rectangle.js"></script>
@@ -43,39 +45,43 @@ for(var i = 1; i < 4; i++){
 // ------------------------- barre de progression pour "sidebar-left" essai pour créer 2 div--------------------
 
 function user_progress_bar(name, div, a, b){
+	console.log(a);
+	console.log(b);
+
 	var div_prog = document.createElement("div");
 	div_prog.id = name+"_progressbar";
+	$(div_prog).addClass("user_bar");;
+
 	document.getElementById(div).appendChild(div_prog);
 	
 
-	var pb = new ProgressBar({
+	var pa = new ProgressBar({
 		id: name+"_progressbar_canvas",
 		injectInto: div_prog.id,
 		width:240,
 		height: 10
 	}).set(a);
-	
-	
-	
-var pb = new ProgressBar({
-		id: name+"_progressbar_canvas2",
-		injectInto: div_prog.id,
-		width: 280,
-		height:10,
-		progressbarGradientColors: ["#8C5DA3"]
-	}).set(b);
 
-		
+	var pb = new ProgressBar({
+			id: name+"_progressbar_canvas2",
+			injectInto: div_prog.id,
+			width: 240,
+			height:10,
+			progressbarGradientColors: ["#8C5DA3"]
+		}).set(a+b);
+
+	$(pa.elements.container).addClass("bar bar_1");
+	$(pb.elements.container).addClass("bar bar_2");
+	
+	console.log(pa.elements);
 }
 
 for(var i = 1; i < 5; i++){
     var a = Math.floor(Math.random() * 50);
     var b = Math.floor(Math.random() * 50);
  
-    user_progress_bar("contain"+i, "contain"+i, a+b, a);
+    user_progress_bar("contain"+i, "contain"+i, a, b);
 }	
-
-
 
 });
 

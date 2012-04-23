@@ -14,11 +14,15 @@
 	
 #sid_1{
 	height:100px;
-	
-	}
-		
-	
-	
+}
+
+.user_bar { position : relative; display : block; height : 10px; }
+
+.bar #progressbarBgnd_canvas { display : none !important; }
+.bar { position : absolute !important; top : 0; }
+
+.bar_1 { z-index : 1; }
+.bar_2 { z-index : 0; }
 	
 #sid_1 h3{
 	font-family: Arial, Helvetica, sans-serif;
