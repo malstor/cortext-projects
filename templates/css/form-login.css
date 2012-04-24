@@ -1,35 +1,70 @@
 @charset "UTF-8";
 /* CSS Document */
 
-
-/*#demo-header{
-    width: 980px;
-    margin: 0 auto;
-    position: relative;
-}*/
 #login-link{
     position: absolute;
     top: 0px;
     right: 0px;
     display: block;
-    background: #2a2a2a;
+    background: #3C3C3C;
 	height:12px;
     padding: 5px 5px 5px 5px;
     color: #FFF;
 }
 #login-panel{
-    position: absolute;
-    top: 26px;
-	height:150px;
-    right: 0px;
-    width: 290px;
-    padding: 10px 15px 5px 15px;
-    background: #2a2a2a;
-    font-size: 8pt;
-    font-weight: bold;
-    color: #FFF;
-    display: none;
+	position: absolute;
+	top: 26px;
+	height:240px;
+	right: 0px;
+	width: 420px;
+	padding: 10px 15px 5px 15px;
+	background: #3C3C3C;
+	font-size: 15px;
+	font-family:Arial, Helvetica, sans-serif;
+	color: #FFF;
+	display: none;
+	font-style: normal;
 }
-label{
-    line-height: 1.8;
+
+
+	
+	
+
+.user{
+	line-height: 1.5;
+	margin-left:78px;
 }
+
+.password{
+	margin-left:83px;
+}
+.email{
+	line-height: 1.8;
+	margin-left:112px;
+}
+
+.sign{
+	margin-left:155px;
+	line-height: 1.8;
+}
+
+form p{
+	margin-top:10px;}
+	
+	
+.enter{
+	background:url(../images/submit-button.png);
+	width:67px;
+	height:21px;
+	color:#FFF;
+	margin-left:240px;
+	margin-top:10px;
+	border:none;
+	text-align: center;
+} 
+		
+
+.phrase{
+	margin-left:35px;
+	line-height:1.8;
+	}	

@@ -116,18 +116,23 @@ function user_progress_bar(name, div, a, b){
 <div id="login-panel">
 <form action="" method="post">
 <p>
-<label>Username:
+<span class="sign">sign in</span> <br/>
+<label class="user">user name
 <input name="username" type="text" value="" />
 </label> <br /><br />
-<label>Password:
+<label class="password">password
 <input name="password" type="password" value="" />
-</label><br /><br /><br />
-<input type="submit" name="submit" value="Login" />
-<small>Press ESC to close</small>
+</label>
+<input class="enter" type="submit" name="submit" value="Login" /><br/><br />
+<span class="phrase">don't have an account. ask one by providing your email</span>
+<label class="email">email
+<input name="email" type="email" value="" />
+<input class="enter" type="submit" name="submit" value="sign up" />
+</label>
 </p>
 </form>
 </div>
-<!-- /login-panel -->
+
 <!-- </div>/demoheader -->
     
    </div>  
