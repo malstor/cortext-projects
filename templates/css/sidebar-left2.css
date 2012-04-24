@@ -1,0 +1,137 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+
+#sidebar-left{
+	width:255px;
+/*	background-color:#C66;*/
+	height:850px;
+	float:left;
+	}
+	
+	
+	
+#sid_1{
+	height:100px;
+}
+
+
+	
+#sid_1 h3{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #BEBEBE;
+	margin:10px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #EEF2F6;
+	}	
+	
+
+#sid_1 p{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #909090;
+	margin-top:5px;
+	margin-left:10px;
+	
+	}
+	
+
+#sid_2 h3{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #BEBEBE;
+	margin-left:10px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #EEF2F6;
+	}
+	
+#utilisateur{
+	margin-top:10px;
+	
+	}			
+	
+/*---------------- barre de progression double -------------------------*/	
+	
+/*#container4 {
+	margin-left:10px;
+	
+	}	
+#container5{
+	margin-left:10px;
+	margin-top:-8px;
+	
+	}	
+	
+#container6 {
+	margin-left:10px;
+	}
+	
+#container7{
+	margin-left:10px;
+	margin-top:-8px;	
+	}
+	
+#container8 {
+	margin-left:10px;
+	}
+	
+#container9{
+	margin-left:10px;
+	margin-top:-8px;	
+	}
+#container10 {
+	margin-left:10px;
+	}
+	
+#container11{
+	margin-left:10px;
+	margin-top:-8px;	
+	}*/			
+
+.name{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: normal;
+	color:#909090;
+	margin-left: 10px;
+}	
+
+.barre-progress{
+	height:10px;
+	background:#EEF2F6;
+	margin-left:10px;
+/*	margin-right:5px;
+*/	margin-top:0px;
+}	
+
+#sid_3{
+	height:100px;
+		}
+
+
+
+#sid_3 h3{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #BEBEBE;
+	margin-left:10px;
+	margin-top:30px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #EEF2F6;
+	}				
+	
+.contain-left{
+	height:10px;
+	background:#EEF2F6;
+	margin-left:10px;
+	margin-bottom:5px;
+	 
+		}	
