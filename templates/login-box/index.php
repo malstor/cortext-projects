@@ -4,8 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Create a sliding Login box with CSS and jQuery</title>
 <link rel="shortcut icon" href="images/favicon.ico" />
-<link rel="stylesheet" media="screen" href="demo.css" />
-<!-- Demo Styles -->
+<!--<link rel="stylesheet" media="screen" href="demo.css" />
+--><!-- Demo Styles -->
 <style type="text/css">
 #demo-header{
     width: 980px;
@@ -72,19 +72,7 @@ $(document).keydown(function(e) {
 </form>
 </div><!-- /login-panel -->
 </div><!-- /demoheader -->
-        <br class="clear" /><br /><br /><br />
-        <div id="content">
-            <h1 class="pagehead">Sliding Login Box Demo</h1>
-            <div class="description">
-            <p>Click on Clients Area link to top to view it in action.</p>
-            <p>To close the panel you can click the Clients Area Link again or press ESC key on your keyboard.</p>
-            <h3><a href="http://www.cssjockey.com/css-tips/jquery-css-login-panel" title="">View and Download Code</a></h3>
-            </div>
-        </div><!-- /content -->
 
-
-        <div id="footer">
-            <a href="http://www.cssjockey.com" title="Unique &amp; Practical Web Presence">Copyright &copy; CSSJockey.com</a>
-        </div><!-- /footer -->
+       
     </body>
 </html>

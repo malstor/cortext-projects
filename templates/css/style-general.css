@@ -18,7 +18,9 @@ background-repeat:repeat-x;
 	border-bottom-width: 2px;
 	border-bottom-style: solid;
 	border-bottom-color: #9C9C9C;
-/*	height:18px;
+	position: relative;
+/*	   
+	height:18px;
 	margin-left:190px;
 	display:block;*/
 	}	
@@ -49,8 +51,9 @@ line-height:22px;
   background-color:#3C3C3C;
 padding-left:7px;
 padding-right:7px;
-line-height:22px;
-
+line-height:10px;
+/*line-height:22px;
+*/
 } 
 #menu a{
 	font-size:11px;
@@ -273,7 +276,8 @@ background-position:right;
 	
 .img-commentaire{
 height:25px;
-width:90px;
+width:60px;
+margin-right:20px;
 float:right;
 background-color: #EEF2F6;	
 			}

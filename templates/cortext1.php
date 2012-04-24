@@ -10,14 +10,21 @@
 <link href="css/sidebar-left.css" type="text/css" rel="stylesheet" />
 <link href="css/sidebar-right.css" type="text/css" rel="stylesheet" />
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<link href="css/form-login.css" type="text/css" rel="stylesheet" />
 
+
+ 
+
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/mootools/1.2.1/mootools-yui-compressed.js"></script>
 <!--[if IE]><script type="text/javascript" src="/js/excanvas.js"></script><![endif]-->
 <script type="text/javascript" src="js/Rectangle.js"></script>
 <script type="text/javascript" src="js/ProgressBar.js"></script>
 
 
+
+ 
 <script type="text/javascript">
 
 window.addEvent('domready', function() {
@@ -86,11 +93,21 @@ for(var i = 1; i < 5; i++){
 });
 
 
-
-
-
-
 </script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("#login-link").click(function(){
+        $("#login-panel").slideToggle(200);
+    })
+})
+$(document).keydown(function(e) {
+    if (e.keyCode == 27) {
+        $("#login-panel").hide(0);
+    }
+});
+
+
+</script> 
 
 </head>
 <body>
@@ -98,11 +115,30 @@ for(var i = 1; i < 5; i++){
     <div id="menu"><img src="images/home.png" alt="#" /> 
     
     <ul>
-    <li class="menu1"><a href="#"> algues vertes</a></li>
-    <li class="menu2"><a href="#"> tam kien duong</a></li>
-    </ul></div>
+    <li class="menu1"><a href="#"> algues vertes</a></li>  
+   <li class="menu2"><a id="login-link" href="#login" title="Login"> tam kien duong</a></li>
+    </ul>    
+  
+   
+<div id="login-panel">
+<form action="" method="post">
+<p>
+<label>Username:
+<input name="username" type="text" value="" />
+</label> <br /><br />
+<label>Password:
+<input name="password" type="password" value="" />
+</label><br /><br /><br />
+<input type="submit" name="submit" value="Login" />
+<small>Press ESC to close</small>
+</p>
+</form>
+</div>
+<!-- /login-panel -->
+<!-- </div>/demoheader -->
     
-    
+   </div>  
+ 
     
    <div class="effacement"></div>
  
