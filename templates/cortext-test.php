@@ -103,11 +103,11 @@ function user_progress_bar(name, div, a, b){
 </head>
 <body onload="">
   	
-    <div id="menu"><img src="images/home.png" alt="#" /> 
+    <div id="menu"><a href="#"><img src="images/home2.png" alt="#" /></a> 
     
     <ul>
     <li class="menu1"><a href="#"> algues vertes</a></li>  
-   <li class="menu2"><a id="login-link" href="#login" title="Login"> tam kien duong</a></li>
+   <li class="menu2"><a id="login-link" href="#" title="Login"> tam kien duong</a></li>
     </ul>    
   
    
@@ -198,7 +198,7 @@ function user_progress_bar(name, div, a, b){
             <h4>10.03.2012</h4></div>
             
             <div class="fichier">
-            <div class="img-pdf"></div>
+            <div class="img-pdf">pdf</div>
             <p class="name-pdf">mon super nom de fichier un peu long</p>
             
             <div class="bloc">            
@@ -209,7 +209,7 @@ function user_progress_bar(name, div, a, b){
             </div>
             
             <div class="fichier">
-            <div class="img-pdf"></div>
+            <div class="img-pdf">pdf</div>
             <p class="name-pdf">mon super nom de fichier un peu long</p>
             <div class="bloc">            
             <span class="infos"><a href="#">5 comments</a></span><br/>
@@ -219,7 +219,7 @@ function user_progress_bar(name, div, a, b){
           
             
             <div class="fichier">
-            <div class="img-pdf"></div>
+            <div class="img-pdf">pdf</div>
             <p class="name-pdf">mon super nom de fichier un peu long</p>
             <div class="bloc">            
             <span class="infos"><a href="#">5 comments</a></span><br/>
@@ -230,7 +230,7 @@ function user_progress_bar(name, div, a, b){
             
             
             <div class="fichier">
-            <div class="img-pdf"></div>
+            <div class="img-pdf">pdf</div>
             <p class="name-pdf">mon super nom de fichier un peu long</p>
             <div class="bloc">            
             <span class="infos"><a href="#">5 comments</a></span><br/>
@@ -261,7 +261,9 @@ function user_progress_bar(name, div, a, b){
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
             </div>
             <div class="comment-text">
-            <div class="img-commentaire"><img src="images/comment-img.png" alt="#" /></div>           
+           <form action="" method="post"> <textarea name="champ"> </textarea> </form>
+                     
+            <div class="img-commentaire"><img src="images/comment.png" alt="#" /></div>           
           </div>
         
         </div>
@@ -295,7 +297,7 @@ function user_progress_bar(name, div, a, b){
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
             </div>
             <div class="comment-text">
-            <div class="img-commentaire"><img src="images/comment-img.png" alt="#" /></div>           
+            <div class="img-commentaire"><img src="images/comment.png" alt="#" /></div>           
           </div>
         
         </div>
@@ -327,7 +329,7 @@ function user_progress_bar(name, div, a, b){
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
             </div>
             <div class="comment-text">
-            <div class="img-commentaire"><img src="images/comment-img.png" alt="#" /></div>           
+            <div class="img-commentaire"><img src="images/comment.png" alt="#" /></div>           
           </div>
         
         </div>

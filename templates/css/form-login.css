@@ -8,7 +8,11 @@
     display: block;
     background: #3C3C3C;
 	height:12px;
-    padding: 5px 5px 5px 5px;
+	line-height:15px;
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color: #504B59;
+    padding: 3px 5px 5px 5px;
     color: #FFF;
 }
 #login-panel{
@@ -53,15 +57,16 @@ form p{
 	
 	
 .enter{
-	background:url(../images/submit-button.png);
+	background:url(../images/bouton-form2.png);
 	width:67px;
 	height:21px;
 	color:#FFF;
 	margin-left:240px;
 	margin-top:10px;
 	border:none;
-	text-align: center;
+	padding-bottom:4px;
 } 
+
 		
 
 .phrase{
