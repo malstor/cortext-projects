@@ -29,17 +29,18 @@ $(document).ready(function(){
     });
 	
 	for(var i = 1; i < 4; i++){
-		script_progress_bar("container"+i, "canvas"+i, Math.floor(Math.random() * 100) );
+		var a = Math.floor(Math.random() * 100);
+		
+		script_progress_bar("container"+i, "canvas"+i, a );
 	}
 	
 
 	
 	for(var i = 1; i < 5; i++){
-    var a = Math.floor(Math.random() * 50);
-   var b = Math.floor(Math.random() * 50);
- 
-    user_progress_bar("container"+i, "contain"+i, a, b);
-}	
+		var a = Math.floor(Math.random() * 50);
+		var b = Math.floor(Math.random() * 50);
+		user_progress_bar("container"+i, "contain"+i, a, b);
+	}
 	
 });
 
@@ -54,12 +55,12 @@ $(document).keydown(function(e) {
 
 
 <script type="application/x-javascript">
-function draw_bar() {
+function draw_bar(a) {
  var canvas = document.createElement("canvas");
  var ctx = canvas.getContext("2d");
 
  ctx.fillStyle = "rgb(52, 176, 44)";
- ctx.fillRect (0, 0, Math.floor(Math.random() * 100), 10);
+ ctx.fillRect (0, 0,  Math.floor((a * 235 ) / 100), 10);
 
 	return canvas;
 
@@ -67,26 +68,23 @@ function draw_bar() {
 
 function script_progress_bar(name, div, a){
 	console.log(div);
-	document.getElementById(div).appendChild(draw_bar(Math.random));
+	document.getElementById(div).appendChild(draw_bar(a));
 }
 
 
 
 
 function draw_user_bar(a, b) {
- var canvas = document.createElement("canvas");
- var ctx = canvas.getContext("2d");
+	var canvas = document.createElement("canvas");
+	var ctx = canvas.getContext("2d");
 
- ctx.fillStyle = "rgb(121, 81, 139)";
- ctx.fillRect (0, 0, Math.floor(((a+b) * 235 ) / 100), 10);
+	ctx.fillStyle = "rgb(121, 81, 139)";
+	ctx.fillRect (0, 0, Math.floor(((a+b) * 235 ) / 100), 10);
 
- ctx.fillStyle = "rgb(52, 176, 44)";
- ctx.fillRect (0, 0, Math.floor((a * 235 ) / 100), 10);
-
+	ctx.fillStyle = "rgb(52, 176, 44)";
+	ctx.fillRect (0, 0, Math.floor((a * 235 ) / 100), 10);
 	
-
 	return canvas;
-
 }
 
 function user_progress_bar(name, div, a, b){
