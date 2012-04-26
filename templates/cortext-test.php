@@ -261,9 +261,9 @@ function user_progress_bar(name, div, a, b){
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
             </div>
             <div class="comment-text">
-           <form action="" method="post"> <textarea name="champ"> </textarea> </form>
+           <form action="" method="post"> <textarea name="champ" cols="5" rows="4"> </textarea> </form>
                      
-            <div class="img-commentaire"><img src="images/comment.png" alt="#" /></div>           
+            <div class="img-commentaire"><div class="bouton-com"><img src="images/bul-com.png" alt="" /><span class="comm">comment</span></div></div>           
           </div>
         
         </div>
@@ -297,7 +297,8 @@ function user_progress_bar(name, div, a, b){
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
             </div>
             <div class="comment-text">
-            <div class="img-commentaire"><img src="images/comment.png" alt="#" /></div>           
+            <form action="" method="post"> <textarea name="champ" cols="5" rows="4"> </textarea> </form>
+            <div class="img-commentaire"><div class="bouton-com"><img src="images/bul-com.png" alt="" /><span class="comm">comment</span></div></div>           
           </div>
         
         </div>
@@ -329,7 +330,8 @@ function user_progress_bar(name, div, a, b){
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
             </div>
             <div class="comment-text">
-            <div class="img-commentaire"><img src="images/comment.png" alt="#" /></div>           
+            <form action="" method="post"> <textarea name="champ" cols="5" rows="4"> </textarea> </form>
+            <div class="img-commentaire"><div class="bouton-com"><img src="images/bul-com.png" alt="" /><span class="comm">comment</span></div></div>           
           </div>
         
         </div>

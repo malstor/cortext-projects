@@ -53,12 +53,15 @@
 }
 
 form p{
-	margin-top:10px;}
+	margin-top:10px;
+	margin-left:-5px;}
 	
 	
 .enter{
-	background:url(../images/bouton-form2.png);
-	width:67px;
+	background:#34B02C;
+	border-radius: 4px;	
+/*	background:url(../images/bouton-form2.png);
+*/	width:67px;
 	height:21px;
 	color:#FFF;
 	margin-left:240px;

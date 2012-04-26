@@ -286,14 +286,15 @@ background-position:right;
 	
 .comment-text textarea{
 	height:21px;
+	width:633px;
 	border: none;
 	margin-left:40px;
-	width:635px;
+	
 	}
 	
 input:focus,
 textarea:focus{
-background-color:#E0FCDE;		
+	border: thin solid #699;
 	}
 	
 .img-commentaire{
@@ -303,11 +304,30 @@ width:75px;
 */float:right;
 background-color: #EEF2F6;	
 			}
-	
-.img-commentaire img{
+
+.bouton-com{
+height:21px;
+width:67px;
+background:#34B02C;
+margin-left:8px;
+border-radius: 4px;	
+	}
+.comm{
+	font-size:11px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#FFF;
+	margin-right: 3px;
+    margin-top: 4px;
+	float:right;
+}
+.bouton-com img {
+padding-top:5px;
+padding-left:4px;}
+
+/*.img-commentaire img{
 margin-left:7px;	
 		
-	}
+	}*/
 	
 .comment2{
 	height:100px;
