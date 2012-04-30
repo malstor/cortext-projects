@@ -22,23 +22,27 @@
 	
 #sid1 h2{
 		background:url(../images/buttonb.png);
-/*	background-color:#4DBF2F;
-*/	font-family: Arial, Helvetica, sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
-/*	font-weight: bold;
-*/	color: #FFF;
+	color: #FFF;
 	padding:5px;
 	margin-top:9px;
 	margin-bottom:15px;
 	}
+
+#sid1 a{
+		text-decoration:none;
+	}
+	
+#sid1 h2:hover, #sid1 h3:hover{
+		background:url(../images/buttonb_lien.png);
+	}
 	
 #sid1 h3{
 	background:url(../images/buttonb.png);
-/*	background-color:#7C1A6E;
-*/	font-family: Arial, Helvetica, sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
-/*	font-weight: bold;
-*/	color: #FFF;
+	color: #FFF;
 	padding:5px;
 	margin-top:-3px;
 	}
@@ -141,7 +145,7 @@
 		margin-top:1200px ;
 
 	}	
-#canvas1{
+#canvas1, #canvas2, #canvas3{
 	height:10px;
 	background:#EEF2F6;
 	margin-left:5px;
@@ -149,7 +153,7 @@
 } 
  
   
-#canvas2{
+/*#canvas2{
 	height:10px;
 	background:#EEF2F6;
 	margin-left:5px;
@@ -162,5 +166,5 @@
 	margin-left:5px;
 	margin-right:5px;
 }
-
+*/
 

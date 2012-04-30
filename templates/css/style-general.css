@@ -205,13 +205,27 @@ background:url(../images/dialogue.png);
 background-repeat:no-repeat;
 background-position:right;
 	}		
-		
-.commentaires{
-	background:url(../images/barre-dialogue2.png);
+.info-bul-img{
+	background:url(../images/bul_petit.png);
 	background-repeat:no-repeat;
+	margin-top:5px;
+	margin-left:12px;
+	width:12px;
+	height:12px;
+	}
+	
+.comments_list{
+	
+	}
+	
+	
+.commentaires{
+	
+	background:url(../images/barre-dial.png);
+	background-repeat:repeat-y;
 	background-position:left;
-	height:240px;
-	width:750px;
+/*	height:240px;
+*/	width:750px;
 	float:left;
 	margin-top:0px;
 	margin-left:8px;
@@ -227,9 +241,12 @@ background-position:right;
 	
 	}		
 	
+
+	
+	
 .comment1{
-	height:70px;
-	width:710px;
+/*	height:70px;
+*/	width:710px;
 	margin-left:40px;
 /*	background:#CCCCCC;
 */	border-bottom-width: 1px;
@@ -237,7 +254,18 @@ background-position:right;
 	border-bottom-color: #EEF2F6;
 	
 	}	
-	
+
+.comment1 h2{
+	float:left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color:#BEBEBE;
+	margin-left:10px;
+	padding-bottom:4px;
+	margin-top:-10px;
+
+	}
 .comment1 h3{
 	float:left;
 	font-family: Arial, Helvetica, sans-serif;
@@ -245,10 +273,21 @@ background-position:right;
 	font-weight: normal;
 	color:#BEBEBE;
 	margin-left:10px;
-	padding-bottom:7px;
-	padding-top:2px;
+	padding-bottom:4px;
+	padding-top:5px;
 
 	}
+
+.data2A{
+	float:left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color:#BEBEBE;
+	margin-left:500px;
+	margin-top:-10px;
+	
+	}	
 	
 .data2{
 	float:left;
@@ -257,7 +296,8 @@ background-position:right;
 	font-weight: normal;
 	color:#BEBEBE;
 	margin-left:500px;
-	padding-top:2px;
+	padding-top:5px;
+
 	
 	}			
 	
@@ -270,6 +310,7 @@ background-position:right;
 	margin-right:10px;
 	text-align: justify;
 	line-height:14px;
+	margin-bottom:7px;
 	}		
 
 .comment-text{
@@ -285,24 +326,31 @@ background-position:right;
 	}
 	
 .comment-text textarea{
-	height:21px;
+height:21px;
 	width:633px;
 	border: none;
 	margin-left:40px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	font-weight: normal;
+	color:#909090;
 	
 	}
 	
-input:focus,
+/*input:focus,
 textarea:focus{
 	border: thin solid #699;
-	}
+	}*/
 	
 .img-commentaire{
-height:25px;
-width:75px;
+/*height:25px;
+*/width:75px;
 /*margin-right:20px;
 */float:right;
-background-color: #EEF2F6;	
+/*background-color: #EEF2F6;
+*/background:url(../images/barre-dial.png);
+	background-repeat:repeat-x;
+	background-position:right;
 			}
 
 .bouton-com{
