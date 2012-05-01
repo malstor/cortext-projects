@@ -14,11 +14,7 @@
 <script type="text/javascript" src="js/canvas_barreprogress.js"></script>
 <script type="text/javascript" src="js/fonctions_form_barre_comment.js"></script>
 <script type="text/javascript" src="js/jquery.autogrowtextarea.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-  $('textarea').simpleautogrow();
-});
-</script>
+
 </head>
 <body onload="">
   	
@@ -197,9 +193,10 @@ $(document).ready(function(){
     
      <div class="commentaires" id="el_2_comments">
         <div class="comments_list2">
-        
+       <div class="info-bul-img"></div>
+
         	<div class="comment1">
-            <h3>jean-philippe cointet</h3> <span class="data2">23:12 12.05.2012</span>
+            <h2>jean-philippe cointet</h2> <span class="data2A">23:12 12.05.2012</span>
                <div class="effacement"></div>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
            </div>
@@ -242,9 +239,10 @@ $(document).ready(function(){
     
     <div class="commentaires" id="el_3_comments">
             <div class="comments_list3">
+			<div class="info-bul-img"></div>
 
         	<div class="comment1">
-            <h3>jean-philippe cointet</h3> <span class="data2">23:12 12.05.2012</span>
+            <h2>jean-philippe cointet</h2> <span class="data2A">23:12 12.05.2012</span>
                <div class="effacement"></div>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
            </div>

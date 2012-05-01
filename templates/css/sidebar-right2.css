@@ -3,10 +3,11 @@
 
 #sidebar-right{
 	width:260px;
-/*	background-color:#DDE4E7;
-*/	background-color:#E0E3E7;
-	height:1500px;
-	float:left;
+	background-color:#E0E3E7;
+/*	height:1500px;
+*/	overflow:visible;
+	max-height:100%;
+float:left;
 	margin-top:0px;
 	
 	}	
@@ -152,19 +153,3 @@
 	margin-right:5px;
 } 
  
-  
-/*#canvas2{
-	height:10px;
-	background:#EEF2F6;
-	margin-left:5px;
-	margin-right:5px;
-}
-
-#canvas3{
-	height:10px;
-	background:#EEF2F6;
-	margin-left:5px;
-	margin-right:5px;
-}
-*/
-

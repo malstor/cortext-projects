@@ -7,6 +7,11 @@ $(document).ready(function(){
     });
 	
 	
+	//-------- commentaire/saut de ligne----------
+
+	  $('textarea').simpleautogrow();
+	  
+
 	//--------fonction pour les barres de progression----------
 	
 	for(var i = 1; i < 4; i++){

@@ -5,8 +5,9 @@
 
 #sidebar-left{
 	width:255px;
-/*	background-color:#C66;*/
-	height:850px;
+/*	
+	height:850px;*/
+	height:100%;
 	float:left;
 	}
 	
