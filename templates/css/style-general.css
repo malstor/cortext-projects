@@ -3,102 +3,50 @@
 
 
 body {
-margin : 0px ;
-background:url(../images/body.png);
-background-repeat:repeat-x;
-}
-
-
-	
-#menu{
-	margin : 0px auto 0px auto;
-	height:22px;
-	width:1280px;
-	background-color:#EEF2F6;
-	border-bottom-width: 2px;
-	border-bottom-style: solid;
-	border-bottom-color: #9C9C9C;
-	position: relative;
-/*	   
-	height:18px;
-	margin-left:190px;
-	display:block;*/
-	}	
-	
-	
-#menu img{
-	float:left;
-	
-	}		
-	
-	ul {
- margin:0;
- list-style-type:none;
- 
- }
- 
-.menu1 {
-	float:left;
-	background-color:#3C3C3C;
-	margin-left:0px;
-	padding-left:7px;
-	padding-right:7px;
-	line-height:19px;
-	border-bottom-width: 3px;
-	border-bottom-style: solid;
-	border-bottom-color: #504B59;
- }
- 
-/*.menu2 {float:right;
-  background-color:#3C3C3C;
-	padding-left:7px;
-	line-height:10px;
-	
-
-} */
-
-
-#menu a{
-	font-size:11px;
-	font-family:Arial, Helvetica, sans-serif;
-	text-decoration:none;
-	color:#FFF;
-	text-align: center;
+	margin : 0px ;
+	background:url(../images/body.png);
+	background-repeat:repeat-x;
+	background-attachment:fixed;
 	}
-.menu1:hover, #login-link:hover{
-	background-color:#777777;
 	
-	}	
-	
-	
-#contener {
+		
+#conteneur-principal {
+	z-index:2;
 	margin : 0px auto 0px auto;
 /*	background-image:url(../images/maquette-page.png);
-*/	background-repeat:no-repeat;
+	background-repeat:no-repeat;
+	min-height:1500px;
+	height:auto !important;*/
 	width:1280px;
-	/*height:1500px;*/
-	height:100%;
-}
+	position:relative;
+	}
+
+	
 
 /*---------------------------contenu-centre-----------------------------------------*/
-	
+
+#contener{
+	background:url(../images/slide-droite.png);
+	background-repeat:repeat-y;
+	background-position:right;
+	position:absolute;
+	margin-top:22px;
+	z-index:15px;
+	}
+
+
 #main-content{
 	width:765px;
-/*	background-color:#C66;
-*/	height:850px;
 	float:left;
+	margin-left:255px;
 	}
 	
-
 .projet{
-/*	background-color:#C66;
-	height:220px;*/
 	width:750px;
 	float:left;
 	margin-top:21px;
 	margin-left:8px;
 	}
-	
 	
 .projet h3{
 	font-size:12px;
@@ -107,8 +55,7 @@ background-repeat:repeat-x;
 	font-weight: normal;
 	float:left;
 	line-height:17px;
-		margin-left:5px;
-
+	margin-left:5px;
 	}	
 	
 .projet h4{
@@ -118,24 +65,19 @@ background-repeat:repeat-x;
 	font-weight: normal;
 	float:right;
 	line-height:17px;
-	margin-right:5px;
-		
+	margin-right:5px;		
 	}	
 	
 .fichier {
-	/*  background-color:#3C3C3C;
-*/height:44px;
-	
+	height:44px;
 	border: 1px solid #EEF2F6;
-
-} 
+	} 
 
 .fichier img{
-float:right;
-margin-top:10px;
-margin-right:5px;
-
-} 
+	float:right;
+	margin-top:10px;
+	margin-right:5px;
+	} 
 
 .img-pdf {
 	background-color:#EEF2F6;
@@ -152,7 +94,7 @@ margin-right:5px;
 	line-height: 40px;
 	font-weight: normal;
 	color:#909090;
-} 
+	} 
 
 
 .name-pdf {
@@ -163,7 +105,7 @@ margin-right:5px;
 	margin-left:15px;
 	font-weight: normal;
 	color:#909090;
-} 
+	} 
 
 .infos a{
 	font-family: Arial, Helvetica, sans-serif;
@@ -171,7 +113,7 @@ margin-right:5px;
 	font-weight: normal;
 	color:#BEBEBE;
 	padding-right:40px;
-} 	
+	} 	
 
 .data {
 	font-family: Arial, Helvetica, sans-serif;
@@ -179,11 +121,8 @@ margin-right:5px;
 	font-weight: normal;
 	color:#909090;
 	padding-right:40px;
+	} 	
 
-} 	
-
-
-	
 
 #titre{
 	height:20px;
@@ -196,10 +135,19 @@ margin-right:5px;
 	border-right-width: 1px;
 	border-right-style: solid;
 	border-right-color: #EEF2F6;
-	}	
+	}
+	
 #titre a{
 	color:#BEBEBE;
-	}		
+	}
+
+#titre a:hover{
+	color:#767676;
+	}
+	
+.bloc a:hover{
+	color:#767676;
+	}	
 	
 .bloc {
 	float:right;
@@ -207,10 +155,11 @@ margin-right:5px;
 	margin-top:5px;
 	/*width:150px;
 	height:35px;*/
-background:url(../images/dialogue.png);
-background-repeat:no-repeat;
-background-position:right;
-	}		
+	background:url(../images/dialogue.png);
+	background-repeat:no-repeat;
+	background-position:right;
+	}
+	
 .info-bul-img{
 	background:url(../images/bul_petit.png);
 	background-repeat:no-repeat;
@@ -219,42 +168,38 @@ background-position:right;
 	width:12px;
 	height:12px;
 	}
-
 	
-.commentaires{
-	
-	background:url(../images/barre-dial.png);
+.commentaires{	
+/*	background:url(../images/barre-dial.png);
 	background-repeat:repeat-y;
-	background-position:left;
-/*	height:240px;
-*/	width:750px;
+	background-position:left;*/
+	background:#EEF2F6;
+	width:750px;
 	float:left;
 	margin-top:0px;
 	margin-left:8px;
-	border-top-width: 7px;
+	/*border-top-width: 7px;
 	border-top-style: solid;
-	border-top-color: #EEF2F6;
+	border-top-color: #EEF2F6;*/
 	border-right-width: 1px;
 	border-right-style: solid;
 	border-right-color: #EEF2F6;
-	border-bottom-width: 7px;
+	border-bottom-width: 4px;
 	border-bottom-style: solid;
-	border-bottom-color: #EEF2F6;
-	
+	border-bottom-color: #EEF2F6;	
 	}		
-	
 
-	
+.comments_list, .comments_list2, .comments_list3
+	{margin-top:-13px
+	}
 	
 .comment1{
-/*	height:70px;
-*/	width:710px;
+	background:#FFF;
+	width:710px;
 	margin-left:40px;
-/*	background:#CCCCCC;
-*/	border-bottom-width: 1px;
+	border-bottom-width: 1px;
 	border-bottom-style: solid;
-	border-bottom-color: #EEF2F6;
-	
+	border-bottom-color: #EEF2F6;	
 	}	
 
 .comment1 h2{
@@ -265,9 +210,10 @@ background-position:right;
 	color:#BEBEBE;
 	margin-left:10px;
 	padding-bottom:4px;
-	margin-top:-12px;
-
-	}
+	padding-top:4px;
+/*	margin-top:-12px;
+*/	}
+	
 .comment1 h3{
 	float:left;
 	font-family: Arial, Helvetica, sans-serif;
@@ -277,7 +223,6 @@ background-position:right;
 	margin-left:10px;
 	padding-bottom:4px;
 	padding-top:5px;
-
 	}
 
 .data2A{
@@ -287,9 +232,9 @@ background-position:right;
 	font-weight: normal;
 	color:#BEBEBE;
 	margin-left:500px;
-	margin-top:-12px;
-	
-	}	
+	padding-top:4px;
+/*	margin-top:-12px;	
+*/	}	
 	
 .data2{
 	float:left;
@@ -298,9 +243,7 @@ background-position:right;
 	font-weight: normal;
 	color:#BEBEBE;
 	margin-left:500px;
-	padding-top:5px;
-
-	
+	padding-top:5px;	
 	}			
 	
 .comment1 p{
@@ -321,6 +264,7 @@ background-position:right;
 	border-top-style: solid;
 	border-top-color: #EEF2F6;	
 	}
+	
 .comment-text form{
 	width:630px;
 	float:left;	
@@ -328,15 +272,14 @@ background-position:right;
 	}
 	
 .comment-text textarea{
-height:21px;
+	height:22px;
 	width:633px;
 	border: none;
 	margin-left:40px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 15px;
 	font-weight: normal;
-	color:#909090;
-	
+	color:#909090;	
 	}
 	
 /*input:focus,
@@ -345,23 +288,21 @@ textarea:focus{
 	}*/
 	
 .img-commentaire{
-/*height:25px;
-*/width:75px;
-/*margin-right:20px;
-*/float:right;
-/*background-color: #EEF2F6;
-*/background:url(../images/barre-dial.png);
+	width:75px;
+	float:right;
+	background:url(../images/barre-dial.png);
 	background-repeat:repeat-x;
 	background-position:right;
-			}
+	}
 
 .bouton-com{
-height:21px;
-width:67px;
-background:#34B02C;
-margin-left:8px;
-border-radius: 4px;	
+	height:21px;
+	width:67px;
+	background:#34B02C;
+	margin-left:8px;
+	border-radius: 4px;	
 	}
+	
 .comm{
 	font-size:11px;
 	font-family:Arial, Helvetica, sans-serif;
@@ -369,10 +310,12 @@ border-radius: 4px;
 	margin-right: 3px;
     margin-top: 4px;
 	float:right;
-}
+	}
+
 .bouton-com img {
-padding-top:5px;
-padding-left:4px;}
+	padding-top:5px;
+	padding-left:4px;
+	}
 
 /*.img-commentaire img{
 margin-left:7px;	
@@ -383,7 +326,7 @@ margin-left:7px;
 	height:100px;
 	width:750px;
 	margin-left: 8px;
-    margin-top: 21px;
+    margin-top: 18px;
 	border-top-width: 1px;
 	border-top-style: solid;
 	border-top-color: #EEF2F6;
@@ -392,11 +335,9 @@ margin-left:7px;
 	border-right-color: #EEF2F6;
 	border-left-width: 1px;
 	border-left-style: solid;
-	border-left-color: #EEF2F6;
-	
+	border-left-color: #EEF2F6;	
 	}
-	
-	
+		
 .comment2 h3{
 	font-size:12px;
 	font-family:Arial, Helvetica, sans-serif;
@@ -406,7 +347,6 @@ margin-left:7px;
 	line-height:17px;
 	margin-left:10px;
 	margin-top:3px;
-
 	}	
 	
 .data3{
@@ -418,15 +358,7 @@ margin-left:7px;
 	line-height:17px;
 	margin-right:10px;
 	margin-top:3px;
-		
 	}	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 .comment2b{
@@ -434,9 +366,7 @@ margin-left:7px;
 	width:750px;
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
-	border-bottom-color: #EEF2F6;
-
-	
+	border-bottom-color: #EEF2F6;	
 	}
 	
 .comment2 p{
@@ -458,7 +388,7 @@ margin-left:7px;
 	height:365px;
 	width:750px;
 	margin-left: 8px;
-    margin-top: 21px;
+    margin-top: 18px;
 	border-top-width: 1px;
 	border-top-style: solid;
 	border-top-color: #EEF2F6;
@@ -470,8 +400,7 @@ margin-left:7px;
 	border-left-color: #EEF2F6;
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
-	border-bottom-color: #EEF2F6;
-	
+	border-bottom-color: #EEF2F6;	
 	}
 	
 	
@@ -484,7 +413,5 @@ margin-left:7px;
 	line-height:17px;
 	margin-left:10px;
 	margin-top:3px;
-
 	}
-	
-									
+								

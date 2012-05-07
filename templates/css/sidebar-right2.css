@@ -2,27 +2,25 @@
 /* CSS Document */
 
 #sidebar-right{
+	background:url(../images/logo.png);
+	background-position:bottom;
+	background-repeat:no-repeat;
 	width:260px;
 	background-color:#E0E3E7;
-/*	height:1500px;
-*/	overflow:visible;
-	max-height:100%;
-float:left;
+	height:inherit;
+	float:right;
 	margin-top:0px;
 	
 	}	
 	
+	
 #sid1{
 	height:85px;
-	
-/*	background-color:#D5DDE1;
-*/	}
-		
-	
-	
+	}
+
 	
 #sid1 h2{
-		background:url(../images/buttonb.png);
+	background:url(../images/buttonb.png);
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	color: #FFF;
@@ -32,11 +30,11 @@ float:left;
 	}
 
 #sid1 a{
-		text-decoration:none;
+	text-decoration:none;
 	}
 	
 #sid1 h2:hover, #sid1 h3:hover{
-		background:url(../images/buttonb_lien.png);
+	background:url(../images/buttonb_lien.png);
 	}
 	
 #sid1 h3{
@@ -49,9 +47,7 @@ float:left;
 	}
 	
 	
-	
 #sid2 {
-	
 	height:170px;
 	margin-bottom:0px;
 	border-right-width:6px;
@@ -72,14 +68,10 @@ float:left;
 	color: #FFF;
 	padding:4px;
 	margin-top:0px;
-	background-color:#666869;
-		
-	
+	background-color:#666869;			
 	}
 	
 .effacement {clear:both;}	
-
-
 
 	#analysis1{
 	margin-top:0px;	
@@ -87,8 +79,7 @@ float:left;
 	background-color:#FFF;
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
-	border-bottom-color: #666869;
-	
+	border-bottom-color: #666869;	
 	}
 
 	.an1{
@@ -98,7 +89,7 @@ float:left;
 	color:#909090;
 	margin-left: 5px;
 	line-height:20px;
-}
+	}
 
 .an2{
 	font-family: Arial, Helvetica, sans-serif;
@@ -106,9 +97,8 @@ float:left;
 	color:#909090;
 	font-style: normal;
 	margin-left:115px; 
-		line-height:20px;
-
-}	
+	line-height:20px;
+	}	
 
 .an3{
 	font-family: Arial, Helvetica, sans-serif;
@@ -116,16 +106,14 @@ float:left;
 	color:#D6DADF;
 	font-style: normal;
 	margin-left:5px; 
-	
-
-}	
+	}	
 
 .barre{
 	height:10px;
 	background:#EEF2F6;
 	margin-left:5px;
 	margin-right:5px;
-}	
+	}	
 
 #analysis2{
 	height:50px;
@@ -137,15 +125,15 @@ float:left;
 	
 #analysis3{
 	height:50px;
-	background-color:#FFF;
-	
+	background-color:#FFF;	
 	}	
-	
-#sidebar-right img{
+
+/*#sidebar-right img{
 		margin-left:30px;
 		margin-top:1200px ;
 
-	}	
+	}	*/
+	
 #canvas1, #canvas2, #canvas3{
 	height:10px;
 	background:#EEF2F6;
