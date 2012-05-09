@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	margin : 0px ;
+	background:url(../images/body.png);
+	background-repeat:repeat-x;
+	}
+
+
+#contener-accueil{
+	margin : 180px auto 0px auto;
+	/*background:#CCCCCC;
+	height:850px;*/
+	width:1000px;
+	}
+	
+#accueil{
+	border-radius: 4px;
+	height:328px;
+	width:520px;
+	background:#666666;
+	float:left;
+	}
+	
+
+	
+				
