@@ -1,5 +1,12 @@
 $(document).ready(function(){
 	
+	// ajustement de la barre de droite en javascript
+	
+	// $(window).resize(function(e){
+	// 	$("#barre-right").height( $(window).height() - 48 - 28 - 10);
+	// });
+	// $(window).resize();
+
 	//-------- formulaire: login/password----------
 						   
     $("#login-link").click(function(){
