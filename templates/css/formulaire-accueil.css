@@ -25,6 +25,10 @@
 	margin-left:19px;
 	}
 	
+/*.password input{
+	border:1px solid #F5C5C5;
+	}	*/
+	
 .member{
 	margin-left:8px;
 	}	
@@ -40,7 +44,7 @@
 
 .sign{
 	margin-left:130px;
-	line-height: 1.8;
+	line-height: 2;
 	font-size:17px;
 	}
 	
@@ -51,10 +55,17 @@
 	width:67px;
 	height:21px;
 	color:#FFF;
-	margin-left:20px;
-	margin-top:6px;
-	border:none;
+	margin-left:10px;
+	font-size:13px;
+/*	margin-top:6px;
+*/	border:none;
 	padding-bottom:4px;
+	cursor:pointer;
+} 
+
+.enter:hover, .enter2:hover{
+	background:#0C0;
+	
 } 
 
 
@@ -65,7 +76,7 @@
 	
 	border-radius: 4px;
 	margin-left:40px;
-	height:280px;
+	height:183px;
 	width:350px;
 	background:#3C3C3C;
 	float:left;
@@ -80,16 +91,17 @@
 	
 .phrase{
 	margin-left:100px;
-	line-height: 1.8;
+	line-height: 2;
 	font-size:17px;
 	}	
 	
 .member2{
 	margin-left:8px;
-	}
+/*	margin-top:10px;
+*/	}
 	
 .user2{
-	margin-left:18px;
+	margin-left:16px;
 }	
 
 .password2{
@@ -101,11 +113,11 @@
 	}
 	
 .last{
-	margin-left:22px;
+	margin-left:20px;
 	}	
 	
 .email{
-	margin-left:50px;
+	margin-left:49px;
 	}
 	
 .institut{
@@ -118,8 +130,13 @@
 	width:67px;
 	height:21px;
 	color:#FFF;
-	/*margin-left:20px;
-	margin-top:6px;*/
+	margin-left:10px;
+	font-size:13px;
 	border:none;
 	padding-bottom:4px;
+	cursor:pointer;
 } 				
+
+input{margin-left:10px;
+	
+	}

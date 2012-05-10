@@ -1,0 +1,70 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#login_accueil{
+	margin : 40px auto 0px auto;
+	width:650px;
+	height:530px;
+	border-radius: 26px;
+	background: #3C3C3C;
+	font-size: 16px;
+	font-family:Arial, Helvetica, sans-serif;
+	color: #FFF;
+	font-style: normal;	
+	}
+	
+.phrase{
+/*	margin-left:80px;
+*/	line-height: 3;
+	font-size:19px;
+	}	
+
+	
+.member2{
+	
+	margin-left:110px;}
+	
+.enter{
+	background:#34B02C;
+	border-radius: 4px;	
+	width:257px;
+	height:28px;
+	color:#FFF;
+	margin-left:125px;
+	font-size:17px;
+/*	margin-top:6px;
+*/	border:none;
+	padding-bottom:4px;
+	cursor:pointer;
+} 
+
+.enter:hover{
+	background:#0C0;
+	
+} 
+
+input{width:250px;
+
+margin-left:50px;
+	
+	}
+
+.first, .last, .password2, .institut{
+	margin-left:3px;
+	}
+
+.email{
+	margin-left:32px;
+	}
+	
+textarea{width:250px;
+margin-left:50px;
+	
+	}	
+	
+.text2{
+	margin-left:-39px;
+	}
+.text1{
+	margin-left:-36px;
+	}		

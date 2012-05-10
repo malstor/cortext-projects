@@ -7,8 +7,8 @@
 <meta name="keywords" content="manager,corpus,texte" />  
 <link href="css/reset.css" type="text/css" rel="stylesheet" />  
 <link href="css/style-menu-accueil.css" type="text/css" rel="stylesheet" />
-<link href="css/style-accueil.css" type="text/css" rel="stylesheet" />
-<link href="css/formulaire-accueil.css" type="text/css" rel="stylesheet" />
+<link href="css/style-accueil2.css" type="text/css" rel="stylesheet" />
+<link href="css/formulaire-accueil2.css" type="text/css" rel="stylesheet" />
 
 </head>
 <body onload="">
@@ -16,7 +16,8 @@
 <!--    <div id="barre-top">
 -->    
     <div id="menu"> 
-    <a href="#"><img src="images/home2.png" alt="#" /></a>      
+    <a href="cortext_accueil.php"><img src="images/home2.png" alt="#" /></a>     
+   
    </div> <!--fin de menu-->  
  
 <!-- </div>--> <!--fin barre-top pour position:fixed-->
@@ -27,31 +28,16 @@
 	<div id="contener-accueil">
 
 
-	  <div id="accueil" class="b<?php echo rand(1, 3);?>">
-<div id="wel"> <h1>Welcome to Cortext Manager<img src="images/logo-petit.png" alt="#" /></h1></div>
-      </div>
-      
-      
       <div id="login_accueil">
       
-		<form class="member" action="" method="post">
-        <span class="sign">sign in</span> <br/>
-     <label class="user">username
+      <form class="member2" action="" method="post">
+        <span class="phrase">Welcome to Cortext Manager - Apply for an account</span> <br/>
+     
+     	<label class="user2">username
         <input name="username" type="text" value="" />
         </label> <br /><br />
-        <label class="password">password
-        <input name="password" type="password" value="" />
-        </label>
-        <input class="enter" type="submit" name="submit" value="login" />    
-        </form>
-    
-    	</div>
-
-      	<div id="login_accueil2">
-      
-      <form class="member2" action="cortext_accueil2.php" method="post">
-        <span class="phrase">apply for an account</span> <br/>
-                     
+        
+        
         <label class="first">first name
         <input name="first" type="text" value="" />
         </label> <br /><br />
@@ -59,18 +45,33 @@
         <label class="last">last name
         <input name="last" type="text" value="" />
         </label> <br /><br />
-        
-        <label class="email">email 
-        <input name="email" type="mail" value="" />
-        </label> <br /><br />
-        
+                      
         <label class="password2">password
         <input name="password" type="password" value="" />
-        </label>
-        <input class="enter2" type="submit" name="submit" value="sign up"/>   
+        </label><br /><br />
+        
+       	<label class="institut">institution
+        <input name="institut" type="text" value="" />
+        </label><br /><br />  
+        
+        <label class="email">email 
+        <input name="email" type="email" value="" />
+        </label> <br /><br />
+        
+        <label class="text1">Purpose of use
+		<textarea id="purpose" name="purpose1" cols="30" rows="4"></textarea>        
+         </label><br /><br />
+        
+        <label class="text2">Related Project
+		<textarea id="project" name="project1" cols="30" rows="4"></textarea>        
+        </label> <br /><br />
+        
+        
+        
+        <input class="enter" type="submit" name="submit" value="create my account" />    
         </form>
-	
-     </div> 	        
+ 
+      </div> 	        
     
     </div><!--fin du contener--> 
       

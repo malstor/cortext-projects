@@ -9,7 +9,7 @@ body {
 
 
 #contener-accueil{
-	margin : 180px auto 0px auto;
+	margin : 160px auto 0px auto;
 	/*background:#CCCCCC;
 	height:850px;*/
 	width:1000px;
@@ -17,12 +17,37 @@ body {
 	
 #accueil{
 	border-radius: 4px;
-	height:328px;
+	height:306px;
 	width:520px;
-	background:#666666;
-	float:left;
+/*	background:url(../images/network1.png);
+*/	float:left;
 	}
 	
+#accueil.b1 {background:url(../images/network1.png);}
 
+
+
+#accueil.b2 {background:url(../images/network4.png);}
+
+
+
+#accueil.b3 {background:url(../images/network5.png);}	
 	
-				
+	
+	
+h1{color:#3C3C3C;
+	font-size:25px;
+	font-family:Arial, Helvetica, sans-serif;
+/*	font-weight:bold;
+*/	line-height:1.2;
+	margin-left:5px;
+	}
+	
+#wel{
+	background:#FFF;
+	margin-top:98px;
+	}				
+h1 img{
+	margin-top:4px;
+	margin-left:48px;
+	}		
