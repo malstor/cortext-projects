@@ -82,7 +82,12 @@
 	background:#EEF2F6;
 	margin-left:10px;
 	margin-bottom:5px;	 
-		}	
+}	
+
+.contain-left canvas {
+	display : block;
+}	
+
 	
 #utilisateur{
 	margin-top:10px;
