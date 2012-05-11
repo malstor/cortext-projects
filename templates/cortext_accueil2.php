@@ -16,21 +16,18 @@
 <!--    <div id="barre-top">
 -->    
     <div id="menu"> 
-    <a href="cortext_accueil.php"><img src="images/home2.png" alt="#" /></a>     
-   
+    <a href="cortext_accueil.php"><img src="images/home2.png" alt="#" /></a>        
    </div> <!--fin de menu-->  
  
 <!-- </div>--> <!--fin barre-top pour position:fixed-->
     
-   <div class="effacement"></div>
- 
-    
+	<div class="effacement"></div>
+     
 	<div id="contener-accueil">
-
 
       <div id="login_accueil">
       
-      <form class="member2" action="" method="post">
+      	<form class="member2" action="" method="post">
         <span class="phrase">Welcome to Cortext Manager - Apply for an account</span> <br/>
      
      	<label class="user2">username
@@ -65,11 +62,13 @@
         <label class="text2">Related Project
 		<textarea id="project" name="project1" cols="30" rows="4"></textarea>        
         </label> <br /><br />
-        
-        
-        
+               
         <input class="enter" type="submit" name="submit" value="create my account" />    
-        </form>
+       
+ 
+        <span class="cancel">* skip this step</span> 
+
+       </form>
  
       </div> 	        
     

@@ -19,6 +19,7 @@ body {
 	height:auto !important;*/
 	width:1280px;
 	position:relative;
+	
 	}
 
 	
@@ -38,7 +39,8 @@ body {
 #main-content{
 	width:765px;
 	float:left;
-	margin-left:255px;
+/*	position:relative;
+*/	margin-left:255px;
 	}
 	
 .projet{
@@ -301,6 +303,10 @@ textarea:focus{
 	background:#34B02C;
 	margin-left:8px;
 	border-radius: 4px;	
+	}
+	
+	.bouton-com:hover{
+	background:#0C0;
 	}
 	
 .comm{

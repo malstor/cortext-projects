@@ -73,7 +73,9 @@ form p{
 	padding-bottom:4px;
 } 
 
-		
+.enter:hover{
+	background:#0C0;
+	}		
 
 .phrase{
 	margin-left:35px;

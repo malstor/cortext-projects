@@ -14,15 +14,15 @@
 	}
 	
 .phrase{
-/*	margin-left:80px;
-*/	line-height: 3;
+	line-height: 3;
 	font-size:19px;
 	}	
 
 	
-.member2{
-	
-	margin-left:110px;}
+.member2{	
+/*	margin-left:110px;*/
+		margin-left:80px;
+	}
 	
 .enter{
 	background:#34B02C;
@@ -32,21 +32,34 @@
 	color:#FFF;
 	margin-left:125px;
 	font-size:17px;
-/*	margin-top:6px;
-*/	border:none;
-	padding-bottom:4px;
+	border:none;
+	padding-bottom:5px;
 	cursor:pointer;
-} 
+	} 
+	
+.cancel{
+
+/*	float:right;
+*/	color:#FFF;
+	margin-right:40px;
+	margin-left:25px;
+	font-size:17px;
+	margin-top:0px;
+	margin-bottom:0px;
+/*	margin-top:5px;
+*/	cursor:pointer;
+	} 	
 
 .enter:hover{
 	background:#0C0;
-	
-} 
+	} 
+.cancel:hover{
+	color:#34B02C;
+	}	
 
-input{width:250px;
-
-margin-left:50px;
-	
+input{
+	width:250px;
+	margin-left:50px;
 	}
 
 .first, .last, .password2, .institut{
@@ -57,14 +70,15 @@ margin-left:50px;
 	margin-left:32px;
 	}
 	
-textarea{width:250px;
-margin-left:50px;
-	
+textarea{
+	width:250px;
+	margin-left:50px;
 	}	
 	
 .text2{
 	margin-left:-39px;
 	}
+	
 .text1{
 	margin-left:-36px;
 	}		
