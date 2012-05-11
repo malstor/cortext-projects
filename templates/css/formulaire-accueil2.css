@@ -30,7 +30,7 @@
 	width:257px;
 	height:28px;
 	color:#FFF;
-	margin-left:125px;
+	margin-left:105px;
 	font-size:17px;
 	border:none;
 	padding-bottom:5px;
@@ -38,12 +38,11 @@
 	} 
 	
 .cancel a{
-	text-decoration:none;
 /*	float:right;
 */	color:#FFF;
 	margin-right:40px;
-	margin-left:25px;
-	font-size:17px;
+	margin-left:15px;
+	font-size:15px;
 	margin-top:0px;
 	margin-bottom:0px;
 /*	cursor:pointer;*/
@@ -58,7 +57,7 @@
 
 input{
 	width:250px;
-	margin-left:50px;
+	margin-left:30px;
 	}
 
 
@@ -72,13 +71,14 @@ input{
 	
 textarea{
 	width:250px;
-	margin-left:50px;
+	margin-left:35px;
 	}	
 	
 .text2{
 	margin-left:-39px;
-	}
+float:left;	}
 	
 .text1{
 	margin-left:-36px;
+	float:left;
 	}		

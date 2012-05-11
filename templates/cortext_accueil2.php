@@ -55,18 +55,18 @@
         <input name="email" type="email" value="" />
         </label> <br /><br />
         
-        <label class="text1">Purpose of use
+        <label class="text1">Purpose of use</label>
 		<textarea id="purpose" name="purpose1" cols="30" rows="4"></textarea>        
-         </label><br /><br />
+         <br /><br />
         
-        <label class="text2">Related Project
+        <label class="text2">Related Project</label>
 		<textarea id="project" name="project1" cols="30" rows="4"></textarea>        
-        </label> <br /><br />
+         <br /><br />
                
         <input class="enter" type="submit" name="submit" value="create my account" />    
        
  
-        <span class="cancel"><a href="cortext_index1.php">* skip this step</a></span> 
+        <span class="cancel"><a href="cortext_index1.php">skip this step</a></span> 
 
        </form>
  
