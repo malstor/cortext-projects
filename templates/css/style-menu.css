@@ -11,15 +11,12 @@ z-index:10;
 	}	
 
 #menu{
-/*	margin : 0px auto 0px auto;
-*/	height:22px;
-/*	width:1280px;
-*/	background-color:#EEF2F6;
+	height:22px;
+	background-color:#EEF2F6;
 	border-bottom-width: 2px;
 	border-bottom-style: solid;
 	border-bottom-color: #9C9C9C;
-/*	position:fixed;
-*/	position: relative;
+	position: relative;
 	}	
 	
 	
@@ -68,8 +65,6 @@ z-index:10;
 	border-bottom-color: #4AC1CF;
  	}		
 
-
-
 #menu a{
 	font-size:11px;
 	font-family:Arial, Helvetica, sans-serif;
@@ -77,8 +72,7 @@ z-index:10;
 	color:#FFF;
 	text-align: center;
 	}
-	
-	
+		
 	
 .menu1:hover, #login-link:hover{
 	background-color:#777777;	

@@ -7,6 +7,7 @@ body {
 	background:url(../images/body.png);
 	background-repeat:repeat-x;
 	background-attachment:fixed;
+	overflow-x:hidden;/*pour empecher le scroll horizontal du navigateur*/
 	}
 	
 		
@@ -14,9 +15,7 @@ body {
 	z-index:2;
 	margin : 0px auto 0px auto;
 /*	background-image:url(../images/maquette-page.png);
-	background-repeat:no-repeat;
-	min-height:1500px;
-	height:auto !important;*/
+	*/
 	width:1280px;
 	position:relative;
 	
@@ -39,8 +38,7 @@ body {
 #main-content{
 	width:765px;
 	float:left;
-/*	position:relative;
-*/	margin-left:255px;
+	margin-left:255px;
 	}
 	
 .projet{
@@ -322,11 +320,6 @@ textarea:focus{
 	padding-top:5px;
 	padding-left:4px;
 	}
-
-/*.img-commentaire img{
-margin-left:7px;	
-		
-	}*/
 	
 .comment2{
 	height:100px;
@@ -388,8 +381,7 @@ margin-left:7px;
 	line-height:14px;
 	}	
 	
-	
-	
+		
 .rendu{
 	height:365px;
 	width:750px;

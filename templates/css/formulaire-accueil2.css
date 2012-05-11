@@ -37,8 +37,8 @@
 	cursor:pointer;
 	} 
 	
-.cancel{
-
+.cancel a{
+	text-decoration:none;
 /*	float:right;
 */	color:#FFF;
 	margin-right:40px;
@@ -46,14 +46,13 @@
 	font-size:17px;
 	margin-top:0px;
 	margin-bottom:0px;
-/*	margin-top:5px;
-*/	cursor:pointer;
+/*	cursor:pointer;*/
 	} 	
 
 .enter:hover{
 	background:#0C0;
 	} 
-.cancel:hover{
+.cancel a:hover{
 	color:#34B02C;
 	}	
 
@@ -61,6 +60,7 @@ input{
 	width:250px;
 	margin-left:50px;
 	}
+
 
 .first, .last, .password2, .institut{
 	margin-left:3px;
