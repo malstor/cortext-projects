@@ -15,7 +15,7 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript" src="js/canvas_barreprogress.js"></script>
 <script type="text/javascript" src="js/fonctions_form_barre_comment.js"></script>
-<script type="text/javascript" src="js/jquery.autogrowtextarea.js"></script>
+<script type="text/javascript" src="lib/jquery.autogrowtextarea.js"></script>
 
 </head>
 <body onload="">
