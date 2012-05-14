@@ -9,8 +9,8 @@
 <link href="css/style-general.css" type="text/css" rel="stylesheet" />
 <link href="css/style-general.css" type="text/css" rel="stylesheet" />
 <link href="css/style-menu.css" type="text/css" rel="stylesheet" />
-<link href="css/sidebar-left2.css" type="text/css" rel="stylesheet" />
-<link href="css/sidebar-right2-test.css" type="text/css" rel="stylesheet" />
+<link href="css/sidebar-left.css" type="text/css" rel="stylesheet" />
+<link href="css/sidebar-right.css" type="text/css" rel="stylesheet" />
 <link href="css/form-login.css" type="text/css" rel="stylesheet" />
 <link href="css/style-objet.css" type="text/css" rel="stylesheet" />
 <link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />

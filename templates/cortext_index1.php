@@ -9,8 +9,8 @@
 <link href="css/style-general.css" type="text/css" rel="stylesheet" />
 <link href="css/style-general.css" type="text/css" rel="stylesheet" />
 <link href="css/style-menu.css" type="text/css" rel="stylesheet" />
-<link href="css/sidebar-left2.css" type="text/css" rel="stylesheet" />
-<link href="css/sidebar-right2-test.css" type="text/css" rel="stylesheet" />
+<link href="css/sidebar-left.css" type="text/css" rel="stylesheet" />
+<link href="css/sidebar-right.css" type="text/css" rel="stylesheet" />
 <link href="css/form-login.css" type="text/css" rel="stylesheet" />
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript" src="js/canvas_barreprogress.js"></script>
