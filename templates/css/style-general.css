@@ -304,8 +304,10 @@ textarea:focus{
 	}
 	
 	.bouton-com:hover{
-	background:#0C0;
-	}
+/*	background:#0C0;
+*/
+	background:#54cf4c;
+		}
 	
 .comm{
 	font-size:11px;

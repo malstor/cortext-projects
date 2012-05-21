@@ -4,7 +4,7 @@
 #login_accueil{
 	margin : 40px auto 0px auto;
 	width:650px;
-	height:530px;
+	height:555px;
 	border-radius: 26px;
 	background: #3C3C3C;
 	font-size: 16px;
@@ -13,19 +13,37 @@
 	font-style: normal;	
 	}
 	
+#login-header{
+/*		margin-top:0;
+*/		margin-left:-100px;
+		margin-bottom:15px;
+		width:648px;
+		height:30px;
+		border-top-right-radius:15px;
+		border-top-left-radius:15px;
+		background:url(../images/form_heading2.gif) repeat-x;	
+		color:#fff;
+		border:1px solid #34B02C;
+		border-bottom:none;
+		}
+					
 .phrase{
-	line-height: 3;
-	font-size:19px;
+	line-height: 1.5;
+/*	line-height: 3;
+*/	font-size:20px;
+	margin-left:100px;
 	}	
 
 	
 .member2{	
-/*	margin-left:110px;*/
-		margin-left:80px;
+	margin-left:100px;
 	}
 	
 .enter{
-	background:#34B02C;
+	background:url(../images/form_heading2.gif) repeat-x;	
+	margin-top:4px;
+	border:none;
+	box-shadow:none;
 	border-radius: 4px;	
 	width:257px;
 	height:28px;
@@ -38,28 +56,32 @@
 	} 
 	
 .cancel a{
-/*	float:right;
-*/	color:#FFF;
+	color:#FFF;
 	margin-right:40px;
 	margin-left:15px;
 	font-size:15px;
 	margin-top:0px;
 	margin-bottom:0px;
-/*	cursor:pointer;*/
 	} 	
 
 .enter:hover{
-	background:#0C0;
-	} 
+	background:#54cf4c;
+	}
+	 
 .cancel a:hover{
-	color:#34B02C;
+	color:#54cf4c;
 	}	
 
 input{
 	width:250px;
 	margin-left:30px;
+	height:20px;
+	border: 2px solid #999; 
+	background-color: #fff;
+	border-radius:4px;
+	box-shadow: inset 0px 1px 5px rgba(0,0,0,0.8); 
+	color: #999;	
 	}
-
 
 .first, .last, .password2, .institut{
 	margin-left:3px;
@@ -71,14 +93,29 @@ input{
 	
 textarea{
 	width:250px;
-	margin-left:35px;
+	margin-left:35px;  
+	border: 2px solid #999; 
+	background-color: #fff;
+	border-radius:4px;
+	box-shadow: inset 0px 1px 5px rgba(0,0,0,0.8); 
+	color: #999;
 	}	
 	
 .text2{
 	margin-left:-39px;
-float:left;	}
+	float:left;
+		}
 	
 .text1{
 	margin-left:-36px;
 	float:left;
 	}		
+	
+input:focus,textarea:focus{
+	-moz-transition:1s; 
+	-o-transition:1s; 
+	-ms-transition:1s; 
+	-webkit-transition:1s;
+	border: 2px solid #54cf4c;
+	box-shadow: none;
+	}	

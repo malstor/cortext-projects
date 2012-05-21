@@ -35,7 +35,8 @@
     <div id="login_accueil">
       
 		<form class="member" action="" method="post">
-        <span class="sign">sign in</span> <br/>
+        <span class="sign">sign in</span>
+         <br/>
      	<label class="user">username
         <input name="username" type="text" value="" />
         </label> <br /><br />

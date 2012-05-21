@@ -28,7 +28,9 @@
       <div id="login_accueil">
       
       	<form class="member2" action="" method="post">
-        <span class="phrase">Welcome to Cortext Manager - Apply for an account</span> <br/>
+        <div id="login-header">
+        <span class="phrase">Welcome to Cortext Manager - Apply for an account</span>
+        </div> <br/>
      
      	<label class="user2">username
         <input name="username" type="text" value="" />
