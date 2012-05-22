@@ -68,7 +68,7 @@
         <input class="enter" type="submit" name="submit" value="create my account" />    
        
  
-        <span class="cancel"><a href="cortext_index1.php">skip this step</a></span> 
+        <span class="cancel"><a href="cortext_projet.php">skip this step</a></span> 
 
        </form>
  
