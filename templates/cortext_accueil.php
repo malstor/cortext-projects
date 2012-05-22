@@ -34,7 +34,7 @@
             
     <div id="login_accueil">
       
-		<form class="member" action="" method="post">
+		<form class="member" action="cortext_projet.php" method="post">
         <span class="sign">sign in</span>
          <br/>
      	<label class="user">username
