@@ -1,5 +1,12 @@
 $(document).ready(function(){
 	
+	// ajustement de la barre de droite en javascript fdferfer
+	
+	// $(window).resize(function(e){
+	// 	$("#barre-right").height( $(window).height() - 48 - 28 - 10);
+	// });
+	// $(window).resize();
+
 	//-------- formulaire: login/password----------
 						   
     $("#login-link").click(function(){
@@ -14,7 +21,7 @@ $(document).ready(function(){
 
 	//--------fonction pour les barres de progression----------
 	
-	for(var i = 1; i < 7; i++){
+	for(var i = 1; i < 4; i++){
 		var a = Math.floor(Math.random() * 100);
 		
 		script_progress_bar("container"+i, "canvas"+i, a );
@@ -22,10 +29,12 @@ $(document).ready(function(){
 	
 
 	
-	for(var i = 1; i < 5; i++){
+	for(var i = 1; i < 7; i++){
 		var a = Math.floor(Math.random() * 50);
 		var b = Math.floor(Math.random() * 50);
-		user_progress_bar("container"+i, "contain"+i, a, b);
+		var c = Math.floor(Math.random() * 50);
+
+		user_progress_bar("container"+i, "contain"+i, a, b, c);
 	}
 	
 	
@@ -71,19 +80,6 @@ $(document).ready(function(){
 		
 	});
 	
-	
-	//--------fonction pour l'ajout des commentaires 4----------
-	
-	$("#el_4_comments a").click(function(){
-		var div = $("#test15").clone();
-		
-		$(div).children('.content').html("<p>"+ $("#dmc4").val() +"</p>");
-		
-		$(".comments_list4").append(div);
-		$(div).hide();
-		$(div).slideDown("slow");
-		
-	});
 	
 });
 

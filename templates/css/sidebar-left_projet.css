@@ -1,0 +1,139 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+#sidebar-left{
+	width:255px;
+	float:left;
+	z-index:2;
+	height:inherit;
+	margin-top:0px;
+	margin-bottom:0px;
+	}
+
+#barre-left{
+	position:fixed;
+	width:255px;
+	}
+
+#sid_1_projet{
+	height:100px;
+	}
+	
+#sid_1_projet h3{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #BEBEBE;
+	margin: 10px 10px 10px 0px;
+	width:245px;
+	padding-bottom:2px;
+	padding-left:8px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #EEF2F6;
+	}		
+
+#sid_1_projet p{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #909090;
+	margin-top:5px;
+	margin-left:10px;
+	line-height:1.2;
+	}
+	
+#sid_2_projet{
+	margin-top:28px;
+	margin-bottom:60px;
+	height:75px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #EEF2F6;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #EEF2F6;
+	}
+
+#sid_2_projet:hover{
+	background:#F6FAFE;
+	cursor:pointer;
+	}
+
+#sid_2_projet a{
+	text-decoration:none;
+	}	
+		
+#sid_2_projet img{
+	margin-top:5px;
+	margin-left:8px;
+	}	
+
+#sid_2_projet h3{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:17px;
+	float:right;
+	font-weight: normal;
+	color: #7F8183;
+	width:190px;
+	margin-top:12px;
+	margin-right:5px;
+	padding-bottom:12px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #EEF2F6;
+	}
+	
+#sid_2_projet h4{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	float:right;
+	font-weight: normal;
+	margin-top:-22px;
+	margin-right:5px;
+	color: #2159BE;
+	width:190px;
+	}	
+				
+#sid_3_projet{
+	height:200px;
+	}
+	
+#sid_3_projet h3{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #BEBEBE;
+	margin: 10px 10px 10px 0px;
+	width:245px;
+	padding-bottom:2px;
+	padding-left:8px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #EEF2F6;
+	}		
+
+#sid_3_projet p{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #909090;
+	margin-top:5px;
+	margin-left:10px;
+	line-height:1.2;
+	
+	}
+	
+
+
+.contain-left{
+	height:10px;
+/*	background:#EEF2F6;
+*/	margin-left:198px;
+	margin-bottom:5px;	
+	width:345px;
+	margin-top:-12px; 
+}	
+
+.contain-left canvas {
+	display : block;
+}		

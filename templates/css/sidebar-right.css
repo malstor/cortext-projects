@@ -2,51 +2,65 @@
 /* CSS Document */
 
 #sidebar-right{
+	z-index:2;
 	width:260px;
-/*	background-color:#DDE4E7;
-*/	background-color:#E0E3E7;
-	height:1500px;
-	float:left;
+	height:inherit;
+	float:right;
 	margin-top:0px;
+	margin-bottom:0px;
+	}
+		
+#barre-right{
+	position:fixed;
+	width:260px;
+	padding-bottom : 48px;
+	}
 	
+#logo{
+	background:url(../images/logo.png);
+	background-position:bottom;
+	background-repeat:no-repeat;
+	height:28px;
+	width : 260px;
+	margin-right:15px;	
+	position : absolute;
+	bottom : 0;
 	}	
-	
+
 #sid1{
 	height:85px;
-	
-/*	background-color:#D5DDE1;
-*/	}
-		
-	
-	
+	}
+
 	
 #sid1 h2{
-		background:url(../images/buttonb.png);
-/*	background-color:#4DBF2F;
-*/	font-family: Arial, Helvetica, sans-serif;
+	background:url(../images/buttonb.png);
+	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
-/*	font-weight: bold;
-*/	color: #FFF;
+	color: #FFF;
 	padding:5px;
 	margin-top:9px;
 	margin-bottom:15px;
 	}
+
+#sid1 a{
+	text-decoration:none;
+	}
+	
+#sid1 h2:hover, #sid1 h3:hover{
+	background:url(../images/buttonb_lien.png);
+	}
 	
 #sid1 h3{
 	background:url(../images/buttonb.png);
-/*	background-color:#7C1A6E;
-*/	font-family: Arial, Helvetica, sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
-/*	font-weight: bold;
-*/	color: #FFF;
+	color: #FFF;
 	padding:5px;
 	margin-top:-3px;
 	}
 	
 	
-	
 #sid2 {
-	
 	height:170px;
 	margin-bottom:0px;
 	border-right-width:6px;
@@ -67,14 +81,10 @@
 	color: #FFF;
 	padding:4px;
 	margin-top:0px;
-	background-color:#666869;
-		
-	
+	background-color:#666869;			
 	}
 	
 .effacement {clear:both;}	
-
-
 
 	#analysis1{
 	margin-top:0px;	
@@ -82,18 +92,17 @@
 	background-color:#FFF;
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
-	border-bottom-color: #666869;
-	
+	border-bottom-color: #666869;	
 	}
 
 	.an1{
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 11px;
-font-style: normal;
+	font-style: normal;
 	color:#909090;
 	margin-left: 5px;
 	line-height:20px;
-}
+	}
 
 .an2{
 	font-family: Arial, Helvetica, sans-serif;
@@ -101,9 +110,8 @@ font-style: normal;
 	color:#909090;
 	font-style: normal;
 	margin-left:115px; 
-		line-height:20px;
-
-}	
+	line-height:20px;
+	}	
 
 .an3{
 	font-family: Arial, Helvetica, sans-serif;
@@ -111,14 +119,14 @@ font-style: normal;
 	color:#D6DADF;
 	font-style: normal;
 	margin-left:5px; 
-}	
+	}	
 
 .barre{
 	height:10px;
 	background:#EEF2F6;
 	margin-left:5px;
 	margin-right:5px;
-}	
+	}	
 
 #analysis2{
 	height:50px;
@@ -130,21 +138,14 @@ font-style: normal;
 	
 #analysis3{
 	height:50px;
-	background-color:#FFF;
-	
+	background-color:#FFF;	
 	}	
-	
-#sidebar-right img{
-		margin-left:30px;
-		margin-top:1200px ;
 
-	}	
-  
- /*#contener1 #contener2 #contener3{
+	
+#canvas1, #canvas2, #canvas3{
 	height:10px;
 	background:#EEF2F6;
 	margin-left:5px;
 	margin-right:5px;
-}*/
-
-
+} 
+ 

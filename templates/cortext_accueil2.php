@@ -16,22 +16,21 @@
 <!--    <div id="barre-top">
 -->    
     <div id="menu"> 
-    <a href="cortext_accueil.php"><img src="images/home2.png" alt="#" /></a>     
-   
+    <a href="cortext_accueil.php"><img src="images/home2.png" alt="#" /></a>        
    </div> <!--fin de menu-->  
  
 <!-- </div>--> <!--fin barre-top pour position:fixed-->
     
-   <div class="effacement"></div>
- 
-    
+	<div class="effacement"></div>
+     
 	<div id="contener-accueil">
-
 
       <div id="login_accueil">
       
-      <form class="member2" action="" method="post">
-        <span class="phrase">Welcome to Cortext Manager - Apply for an account</span> <br/>
+      	<form class="member2" action="" method="post">
+        <div id="login-header">
+        <span class="phrase">Welcome to Cortext Manager - Apply for an account</span>
+        </div> <br/>
      
      	<label class="user2">username
         <input name="username" type="text" value="" />
@@ -58,18 +57,20 @@
         <input name="email" type="email" value="" />
         </label> <br /><br />
         
-        <label class="text1">Purpose of use
+        <label class="text1">Purpose of use</label>
 		<textarea id="purpose" name="purpose1" cols="30" rows="4"></textarea>        
-         </label><br /><br />
+         <br /><br />
         
-        <label class="text2">Related Project
+        <label class="text2">Related Project</label>
 		<textarea id="project" name="project1" cols="30" rows="4"></textarea>        
-        </label> <br /><br />
-        
-        
-        
+         <br /><br />
+               
         <input class="enter" type="submit" name="submit" value="create my account" />    
-        </form>
+       
+ 
+        <span class="cancel"><a href="cortext_index1.php">skip this step</a></span> 
+
+       </form>
  
       </div> 	        
     

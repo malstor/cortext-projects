@@ -6,8 +6,7 @@
 	margin-left:40px;
 	height:108px;
 	width:350px;
-/*	background: #3C3C3C;	
-*/	margin-bottom:15px;
+	margin-bottom:15px;
 	border-radius: 4px;
 	float:left;
 	background: #3C3C3C;
@@ -19,61 +18,57 @@
 	
 .user{
 	margin-left:18px;
-}
+	}
 
 .password{
 	margin-left:19px;
 	}
 	
-/*.password input{
-	border:1px solid #F5C5C5;
-	}	*/
-	
 .member{
 	margin-left:8px;
 	}	
 	
-/*
-
-
-
-.email{
-	line-height: 1.8;
-	margin-left:112px;
-	}*/
-
 .sign{
 	margin-left:130px;
 	line-height: 2;
 	font-size:17px;
 	}
-	
-	
+		
 .enter{
-	background:#34B02C;
+/*	background:url(../images/form_heading2.gif) repeat-x;	
+*/	background:#34B02C;
 	border-radius: 4px;	
 	width:67px;
 	height:21px;
 	color:#FFF;
 	margin-left:10px;
 	font-size:13px;
-/*	margin-top:6px;
-*/	border:none;
+	border:none;
 	padding-bottom:4px;
 	cursor:pointer;
 } 
 
 .enter:hover, .enter2:hover{
-	background:#0C0;
-	
-} 
+/*	background:#0C0;
+*/	background:#54cf4c;	
+	} 
 
+/*.login-header{		
+		margin-left:-8px;
+		width:348px;
+		height:20px;
+		border-top-right-radius:3px;
+		border-top-left-radius:3px;
+		background:url(../images/form_heading2.gif) repeat-x;	
+		color:#fff;
+		border:1px solid #34B02C;
+		border-bottom:none;
+		}*/
 
 /*-------------------------formulaire 2--------------------------------*/	
 
 
 #login_accueil2{
-	
 	border-radius: 4px;
 	margin-left:40px;
 	height:183px;
@@ -97,12 +92,11 @@
 	
 .member2{
 	margin-left:8px;
-/*	margin-top:10px;
-*/	}
+	}
 	
 .user2{
 	margin-left:16px;
-}	
+	}	
 
 .password2{
 	margin-left:19px;
@@ -125,7 +119,8 @@
 	}
 	
 .enter2{
-	background:#34B02C;
+/*	background:#34B02C url(../images/form_heading2.gif) repeat-x;	
+*/	background:#34B02C;
 	border-radius: 4px;	
 	width:67px;
 	height:21px;
@@ -135,8 +130,10 @@
 	border:none;
 	padding-bottom:4px;
 	cursor:pointer;
-} 				
+	} 				
 
-input{margin-left:10px;
-	
+input{
+	margin-left:10px;	
 	}
+	
+	

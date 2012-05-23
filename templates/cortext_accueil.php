@@ -21,22 +21,23 @@
  
 <!-- </div>--> <!--fin barre-top pour position:fixed-->
     
-   <div class="effacement"></div>
- 
-    
+	<div class="effacement"></div>
+     
 	<div id="contener-accueil">
 
 
-	  <div id="accueil" class="b<?php echo rand(1, 3);?>">
-<div id="wel"> <h1>Welcome to Cortext Manager<img src="images/logo-petit.png" alt="#" /></h1></div>
-      </div>
+	<div id="accueil" class="b<?php echo rand(1, 3);?>">
+	<div id="wel"> 
+    <h1>Welcome to Cortext Manager<img src="images/logo-petit.png" alt="#" /></h1>
+    </div>
+    </div>
+            
+    <div id="login_accueil">
       
-      
-      <div id="login_accueil">
-      
-		<form class="member" action="" method="post">
-        <span class="sign">sign in</span> <br/>
-     <label class="user">username
+		<form class="member" action="cortext_projet.php" method="post">
+        <span class="sign">sign in</span>
+         <br/>
+     	<label class="user">username
         <input name="username" type="text" value="" />
         </label> <br /><br />
         <label class="password">password
@@ -45,11 +46,11 @@
         <input class="enter" type="submit" name="submit" value="login" />    
         </form>
     
-    	</div>
+    </div>
 
-      	<div id="login_accueil2">
+    <div id="login_accueil2">
       
-      <form class="member2" action="cortext_accueil2.php" method="post">
+      	<form class="member2" action="cortext_accueil2.php" method="post">
         <span class="phrase">apply for an account</span> <br/>
                      
         <label class="first">first name

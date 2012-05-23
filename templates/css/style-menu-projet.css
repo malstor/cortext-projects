@@ -6,8 +6,8 @@
 #barre-top{
 	height:22px;
 	position:fixed;
-width:1280px;
-z-index:10;
+	width:1280px;
+	z-index:10;
 	}	
 
 #menu{
@@ -18,8 +18,7 @@ z-index:10;
 	border-bottom-color: #9C9C9C;
 	position: relative;
 	}	
-	
-	
+		
 #menu img{
 	float:left;	
 	}		
@@ -31,14 +30,14 @@ z-index:10;
  
 .menu1 {
 	float:left;
-	background-color:#3C3C3C;
+	background-color:#235BBE;
 	margin-left:0px;
 	padding-left:7px;
 	padding-right:7px;
 	line-height:20px;
 	border-bottom-width: 3px;
 	border-bottom-style: solid;
-	border-bottom-color: #504B59;
+	border-bottom-color: #32B9E5;
  	}
 	
 .menu1b {
@@ -73,8 +72,12 @@ z-index:10;
 	text-align: center;
 	}
 		
+
+.menu1:hover{
+	background-color:#3974db;	
+	}	
 	
-.menu1:hover, #login-link:hover{
+ #login-link:hover{
 	background-color:#777777;	
 	}	
 	
@@ -86,4 +89,3 @@ z-index:10;
 	background-color:#3974db;	
 	}		
 		
-
