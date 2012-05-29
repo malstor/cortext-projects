@@ -1,0 +1,10 @@
+{
+  "author": "",
+  "name": "cortext-projects-server",
+  "version": "0.0.0",
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
