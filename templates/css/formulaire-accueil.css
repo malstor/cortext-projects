@@ -35,8 +35,7 @@
 	}
 		
 .enter{
-/*	background:url(../images/form_heading2.gif) repeat-x;	
-*/	background:#34B02C;
+	background:#34B02C;
 	border-radius: 4px;	
 	width:67px;
 	height:21px;
@@ -49,21 +48,18 @@
 } 
 
 .enter:hover, .enter2:hover{
-/*	background:#0C0;
-*/	background:#54cf4c;	
+	background:#54cf4c;	
 	} 
 
-/*.login-header{		
-		margin-left:-8px;
-		width:348px;
-		height:20px;
-		border-top-right-radius:3px;
-		border-top-left-radius:3px;
-		background:url(../images/form_heading2.gif) repeat-x;	
-		color:#fff;
-		border:1px solid #34B02C;
-		border-bottom:none;
-		}*/
+input:focus{
+	-moz-transition:1s; 
+	-o-transition:1s; 
+	-ms-transition:1s; 
+	-webkit-transition:1s;
+	border: 2px solid #54cf4c;
+	box-shadow: none;
+	}	
+	
 
 /*-------------------------formulaire 2--------------------------------*/	
 

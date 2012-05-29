@@ -104,7 +104,7 @@
     	<div class="projet_cortext">
         
         <div class="titreprojet"></div>
-         <h1>Algues Vertes</h1>	
+         <h1><a href="cortext_index1.php">Algues Vertes</a></h1>	
          <span class="date">10.05.12</span>
  
      	<div class="derniere_actu">
@@ -234,7 +234,7 @@
         
         <div class="projet_cortext">
         <div class="titreprojet"></div>
-         <h1>Voix du Nord</h1>
+         <h1><a href="cortext_index1.php">Voix du Nord</a></h1>
          <span class="date">10.05.12</span>
  
      	<div class="derniere_actu">
@@ -367,7 +367,7 @@
         
         <div class="projet_cortext">
         <div class="titreprojet"></div>
-	    <h1>Les économistes</h1>
+	    <h1><a href="cortext_index1.php">Les économistes</a></h1>
 		<span class="date">10.05.12</span>
  
      	<div class="derniere_actu">
@@ -499,7 +499,7 @@
         
         <div class="projet_cortext">
         <div class="titreprojet"></div>
-         <h1>Algues Vertes</h1> 
+         <h1><a href="cortext_index1.php">Algues Vertes</a></h1> 
          <span class="date">10.05.12</span>
  
      	<div class="derniere_actu">

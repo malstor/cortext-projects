@@ -17,6 +17,14 @@
 	background-repeat: repeat-x;
 	margin-top:-2px;
 	}		
+
+ h1 a{	
+	text-decoration:none;
+	color:#235BBE;
+	}
+h1 a:hover{	
+	color:#32B9E5;
+	}
 	
 .projet_cortext h1{
 	float:left;
@@ -142,10 +150,18 @@
 	margin-left:240px;
 	}			
 	
-.projet_cortext a{
+.title a, .title-pdf a{
+	color:#909090;
+	}	
+	
+.title a:hover, .title-pdf a:hover{
+	color:#666768;
+	}		
+	
+/*.projet_cortext a{
 	color:#909090;
 	}	
 	
 .projet_cortext a:hover{
 	color:#666768;
-	}		
+	}	*/	

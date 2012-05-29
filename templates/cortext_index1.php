@@ -12,6 +12,8 @@
 <link href="css/sidebar-left.css" type="text/css" rel="stylesheet" />
 <link href="css/sidebar-right.css" type="text/css" rel="stylesheet" />
 <link href="css/form-login.css" type="text/css" rel="stylesheet" />
+<link href="css/form-invit.css" type="text/css" rel="stylesheet" />
+
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript" src="js/canvas_barreprogress.js"></script>
 <script type="text/javascript" src="js/fonctions_form_barre_comment.js"></script>
@@ -96,8 +98,20 @@
         </div>
                   
          <div id="sid_3">         
-         <h3>phases</h3>                  
-         </div>
+         <h3></h3>                
+   	<h4><a id="login-link2" href="#" title="Login"> invit for share</a></h4>    
+    <div id="login-panel2">
+	<form action="" method="post">
+    <p>
+    <label class="user2">looking for people
+    <input name="username2" type="text" value="" />
+    </label> <br /><br />
+    <input class="enter2" type="submit" name="submit" value="Invit" /><br/><br />
+    </p>
+    </form>
+    </div>
+                                         
+        </div><!--fin de sid_3-->
     
     	</div> <!--fin de barre-left-->
     	</div><!--fin de sidebar-left-->

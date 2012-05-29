@@ -14,6 +14,13 @@ $(document).ready(function(){
     });
 	
 	
+	//-------- formulaire2: invitation----------
+						   
+    $("#login-link2").click(function(){
+        $("#login-panel2").slideToggle(200);
+    });
+	
+	
 	//-------- commentaire/saut de ligne----------
 
 	  $('textarea').simpleautogrow();
@@ -87,4 +94,12 @@ $(document).ready(function(){
     if (e.keyCode == 27) {
         $("#login-panel").hide(0);
   	  }
+	  
+	 
+	//--------fonction pour le formulaire2: invitation----------
+	  if (e.keyCode == 27) {
+        $("#login-panel2").hide(0);
+  	  }
+	
+	  
 });

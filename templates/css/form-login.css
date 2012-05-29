@@ -76,3 +76,14 @@ form p{
 	margin-left:35px;
 	line-height:1.8;
 	}	
+
+/*	focus avec transition  */	
+	
+input:focus{
+	-moz-transition:1s; 
+	-o-transition:1s; 
+	-ms-transition:1s; 
+	-webkit-transition:1s;
+	border: 2px solid #54cf4c;
+	box-shadow: none;
+	}	

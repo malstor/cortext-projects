@@ -64,7 +64,7 @@
 	height:100px;
 		}
 
-#sid_3 h3{
+/*#sid_3 h3{
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 11px;
 	font-weight: normal;
@@ -77,7 +77,23 @@
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
 	border-bottom-color: #EEF2F6;
-	}				
+	}	*/			
+	
+#sid_3 h3{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #BEBEBE;
+	margin: 10px 10px 10px 0px;
+	width:245px;
+	padding-bottom:2px;
+	padding-left:8px;	
+	margin-top:43px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #EEF2F6;
+	}		
+	
 	
 .contain-left{
 	height:10px;
