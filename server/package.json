@@ -2,6 +2,9 @@
   "author": "",
   "name": "cortext-projects-server",
   "version": "0.0.0",
+  "dependencies" : {
+  	"bones" : "2.0.1"
+  },
   "devDependencies": {},
   "optionalDependencies": {},
   "engines": {
