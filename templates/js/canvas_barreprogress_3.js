@@ -24,14 +24,14 @@ function draw_user_bar(a, b, c) {
 	canvas.width = 335;
 	canvas.height = 10;
 	
-	ctx.fillStyle = "rgb(238, 242, 246)";
-	ctx.fillRect (0, 0, Math.floor(((b+c) * 345 ) / 100), 10);
+	ctx.fillStyle = "rgb(208,214,68)";
+	ctx.fillRect (0, 0, Math.floor(((b+c) * 390 ) / 100), 10);
 	
-	ctx.fillStyle = "rgb(121, 81, 139)";
-	ctx.fillRect (0, 0, Math.floor(((a+b) * 345 ) / 100), 10);
+	ctx.fillStyle = "rgb(72,88,123)";
+	ctx.fillRect (0, 0, Math.floor(((a+b) * 390 ) / 100), 10);
 		
 	ctx.fillStyle = "rgb(52, 176, 44)";
-	ctx.fillRect (0, 0, Math.floor((a * 345 ) / 100), 10);
+	ctx.fillRect (0, 0, Math.floor((a * 390 ) / 100), 10);
 	
 	
 	

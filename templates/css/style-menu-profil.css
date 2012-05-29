@@ -28,7 +28,7 @@
  	list-style-type:none; 
  	}
  
-.menu1b {
+.menu1 {
 	float:left;
 	background-color:#EE6E21;
 	margin-left:0px;
@@ -40,7 +40,7 @@
 	border-bottom-color: #F3BE00;
  	}
 	
-.menu1 {
+.menu1b {
 	float:left;
 	background-color:#3C3C3C;
 	margin-left:0px;
@@ -49,8 +49,7 @@
 	line-height:20px;
 	border-bottom-width: 3px;
 	border-bottom-style: solid;
-	border-bottom-color: #504B59;
-	
+	border-bottom-color:#9c96a7;
  	}	
 		
 
@@ -63,11 +62,13 @@
 	}
 		
 
-.menu1b:hover{
-	background-color:#f07d39;	
+.menu1:hover{
+	background-color:#f28d51;	
 	}		
 	
-.menu1:hover, #login-link:hover{
+ #login-link:hover, .menu1b:hover{
 	background-color:#777777;	
 	}
+	
+	
 	

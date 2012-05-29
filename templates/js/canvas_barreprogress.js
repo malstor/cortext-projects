@@ -24,7 +24,7 @@ function draw_user_bar(a, b) {
 	canvas.width = 235;
 	canvas.height = 10;
 
-	ctx.fillStyle = "rgb(121, 81, 139)";
+	ctx.fillStyle = "rgb(208,214,68)";
 	ctx.fillRect (0, 0, Math.floor(((a+b) * 245 ) / 100), 10);
 
 	ctx.fillStyle = "rgb(52, 176, 44)";
