@@ -125,15 +125,3 @@
 	
 
 
-.contain-left{
-	height:10px;
-/*	background:#EEF2F6;
-*/	margin-left:198px;
-	margin-bottom:5px;	
-	width:345px;
-	margin-top:-12px; 
-}	
-
-.contain-left canvas {
-	display : block;
-}		

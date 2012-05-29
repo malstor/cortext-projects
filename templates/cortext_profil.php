@@ -155,7 +155,7 @@
             <div id="carr1"></div>
             <p>analysis</p>
             <div id="carr2"></div>
-            <p>visualisations</p>
+            <p>messages</p>
             <div id="carr3"></div>
             <p>documents</p>
             </div>

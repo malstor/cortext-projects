@@ -28,7 +28,7 @@
 
 	<div id="barre-top">
     <div id="menu">
-    <a href="#"><img src="images/home2.png" alt="#" /></a>     
+    <a href="cortext_accueil.php"><img src="images/home2.png" alt="#" /></a>     
     <ul>
     <li class="menu1"><a href="#"> algues vertes</a></li> 
     <li class="menu1b"><a href="#"> analysis.py - 12.12.2012</a></li>
