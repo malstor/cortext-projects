@@ -27,7 +27,8 @@
     <div id="menu">
     <a href="cortext_accueil.php"><img src="images/home2.png" alt="#" /></a>     
     <ul>
-    <li class="menu1"><a href="#"> projects</a></li>  
+    <li class="menu1"><a href="#"> user</a></li> 
+    <li class="menu1b"><a href="#"> chloé duloquin</a></li>   
    	<li class="menu2"><a id="login-link" href="#" title="Login"> tam kien duong</a></li>
     </ul>    
      
