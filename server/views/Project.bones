@@ -11,12 +11,18 @@ view = views.Main.extend({
 
 		$(this.el).empty();
 
+		var current_date = new Date().getTime();
+
     	for(var i = 0; i < nb_elements; i++){
     		var e = {
     			id: Math.floor( Math.random() * 100),
     			type : types[ Math.floor( Math.random() * 3) ],
-    			author : names [ Math.floor( Math.random() * names.length) ]
+    			author : names [ Math.floor( Math.random() * names.length) ],
+    			date : current_date,
+    			date_formated : format_date(current_date)
     		};
+
+    		current_date = current_date - Math.floor( Math.random() * 4) * 24 * 60 * 60 * 1000;
 
     		if(e.type == "Message"){
     			e.content = lorem.create( Math.floor( Math.random() * 3) + 1).generate();
@@ -38,3 +44,13 @@ view = views.Main.extend({
         return this;
     }
 });
+
+function format_date(date){
+	var date = new Date(date);
+
+	var d = date.getDate();
+	var m = date.getMonth()+1;
+	var y = date.getFullYear()
+
+	return d+"."+m+"."+y;
+}

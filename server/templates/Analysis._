@@ -1,6 +1,6 @@
 <div class="analysis element">
 <div id="titre"><h3>analysis.py <a href="#">parameters</a> - <a href="#">logs</a></h3>
-<h4>10.03.2012</h4></div>
+<h4><%= e.date_formated %></h4></div>
 
 <div class="fichier">
 <div class="img-pdf">pdf</div>
