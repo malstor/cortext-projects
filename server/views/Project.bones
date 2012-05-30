@@ -14,7 +14,8 @@ view = views.Main.extend({
     	for(var i = 0; i < nb_elements; i++){
     		var e = {
     			id: Math.floor( Math.random() * 100),
-    			type : types[ Math.floor( Math.random() * 3) ]
+    			type : types[ Math.floor( Math.random() * 3) ],
+    			author : names [ Math.floor( Math.random() * names.length) ]
     		};
 
     		if(e.type == "Message"){
@@ -37,5 +38,3 @@ view = views.Main.extend({
         return this;
     }
 });
-
-var types = [ "Image", "Analysis", "Message" ];

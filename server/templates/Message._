@@ -1,6 +1,6 @@
 <div class="image comment2">
 
-<h3>lise cornilleau</h3> <span class="data3">10.03.2012</span>
+<h3><%= e.author %></h3> <span class="data3">10.03.2012</span>
 
 <div class="comment2b"></div>
    <%= marked(e.content) %>

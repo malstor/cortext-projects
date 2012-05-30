@@ -20,8 +20,6 @@
 <body>
 
 <div id="conteneur-principal">
-
-
 	<div id="barre-top">
 
 		<div id="menu">
@@ -54,8 +52,11 @@
 		</div> <!--fin de menu-->  
 	</div> <!--fin barre-top pour position:fixed-->
 
-<div id='main'><%= main %></div>
+   <div class="effacement"></div>
 
+	<div id='main main-content'>
+		<%= main %>
+	</div>
 
 </div> <!--fin du conteneur principal (englobe menu)-->
 

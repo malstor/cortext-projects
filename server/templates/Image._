@@ -1,6 +1,7 @@
 <div class="image rendu element">
 
-<h3>tubes (analysis.py/12:02 21.06.2011)</h3> <span class="data3">10.03.2012</span>
+<h3>tubes (analysis.py/12:02 21.06.2011)</h3>
+<span class="data3">10.03.2012</span>
 <a href="cortext_objet2.php"><img src="<%= e.url %>" alt="resultat-script" /></a>
 
 </div>
