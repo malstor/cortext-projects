@@ -21,6 +21,9 @@ view = views.Main.extend({
     			e.content = lorem.create(2).generate();
     		}
 
+    		if(e.type == "Image"){
+    			e.url = "http://lorempixel.com/735/400/";
+    		}
 
     		elements.push(e);
     	}
