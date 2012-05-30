@@ -1,0 +1,5 @@
+<div id="elements" class="project elements">
+<% _.each(elements, function(e){
+	console.log(templates[e.type]( { e : e } ));
+}); %>
+</div>

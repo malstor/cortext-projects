@@ -1,0 +1,74 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+
+#barre-top{
+	height:22px;
+	position:fixed;
+	width:1280px;
+	z-index:10;
+	}	
+
+#menu{
+	height:22px;
+	background-color:#EEF2F6;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #9C9C9C;
+	position: relative;
+	}	
+		
+#menu img{
+	float:left;	
+	}		
+	
+	ul {
+ 	margin:0;
+ 	list-style-type:none; 
+ 	}
+ 
+.menu1 {
+	float:left;
+	background-color:#EE6E21;
+	margin-left:0px;
+	padding-left:7px;
+	padding-right:7px;
+	line-height:20px;
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color: #F3BE00;
+ 	}
+	
+.menu1b {
+	float:left;
+	background-color:#3C3C3C;
+	margin-left:0px;
+	padding-left:7px;
+	padding-right:7px;
+	line-height:20px;
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color:#9c96a7;
+ 	}	
+		
+
+#menu a{
+	font-size:11px;
+	font-family:Arial, Helvetica, sans-serif;
+	text-decoration:none;
+	color:#FFF;
+	text-align: center;
+	}
+		
+
+.menu1:hover{
+	background-color:#f28d51;	
+	}		
+	
+ #login-link:hover, .menu1b:hover{
+	background-color:#777777;	
+	}
+	
+	
+	

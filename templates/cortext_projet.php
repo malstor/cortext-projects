@@ -4,7 +4,7 @@
 <title>Cortext Manager</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="description" content="Plateforme Cortext Manager" />
-<meta name="keywords" content="manager,corpus,texte" />  
+<meta name="keywords" content="manager,corpus,texte" />
 <link href="css/reset.css" type="text/css" rel="stylesheet" />  
 <link href="css/style-general.css" type="text/css" rel="stylesheet" />
 <link href="css/style-projet.css" type="text/css" rel="stylesheet" />

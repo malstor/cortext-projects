@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	margin : 0px ;
+	background:url(../images/body.png);
+	background-repeat:repeat-x;
+	}
+
+
+#contener-accueil{
+	margin :0px auto 0px auto;
+	width:1280px;
+	}
+	

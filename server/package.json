@@ -1,6 +1,6 @@
 {
   "author": "",
-  "name": "cortext-projects-server",
+  "name": "server",
   "version": "0.0.0",
   "dependencies" : {
   	"bones" : "2.0.1"

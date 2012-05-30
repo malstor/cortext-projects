@@ -1,22 +1,65 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='utf-8'>
-    <title><%= title %></title>
-    <script src="/assets/bones/all.js?<%= version %>" type="text/javascript" charset="utf-8"></script>
-    <link rel='stylesheet' href='/assets/simple/stylesheets/style.css?<%= version %>' media='screen' />
-  </head>
-  <body>
-    <div id='header'>
-      <ul>
-        <li><a href='/'>Home</a></li>
-        <li><a href='/about'>About</a></li>
-        <li><a href='https://github.com/developmentseed/bones'>Bones@Github</a></li>
-      </ul>
-    </div>
-    <div id='page' class='limiter clearfix'>
-      <div id='main'><%= main %></div>
-    </div>
-    <script type="text/javascript"><%= startup %></script>
-  </body>
+
+<head>
+<meta charset='utf-8'>
+<title><%= title %></title>
+
+<script src="/assets/bones/all.js?<%= version %>" type="text/javascript" charset="utf-8"></script>
+
+<link rel="stylesheet" href="/assets/server/css/reset.css" type="text/css" />  
+<link rel="stylesheet" href="/assets/server/css/style-general.css" type="text/css" />
+<link rel="stylesheet" href="/assets/server/css/style-projet.css" type="text/css" />
+<link rel="stylesheet" href="/assets/server/css/style-menu-projet.css" type="text/css" />
+<link rel="stylesheet" href="/assets/server/css/sidebar-left_projet.css" type="text/css" />
+<link rel="stylesheet" href="/assets/server/css/sidebar-right_projet.css" type="text/css" />
+<link rel="stylesheet" href="/assets/server/css/form-login.css" type="text/css" />
+
+</head>
+
+<body>
+
+<div id="conteneur-principal">
+
+
+	<div id="barre-top">
+
+		<div id="menu">
+			<a href="cortext_accueil.php"><img src="/assets/server/images/home2.png" alt="#" /></a>     
+			<ul>
+				<li class="menu1"><a href="#"> projects</a></li>  
+				<li class="menu2"><a id="login-link" href="#" title="Login"> tam kien duong</a></li>
+			</ul>    
+
+			<div id="login-panel">
+				<form action="" method="post">
+					<p>
+						<span class="sign">sign in</span> <br/>
+						<label class="user">user name
+							<input name="username" type="text" value="" />
+						</label> <br /><br />
+						<label class="password">password
+							<input name="password" type="password" value="" />
+						</label>
+						<input class="enter" type="submit" name="submit" value="Login" /><br/><br />
+						<span class="phrase">don't have an account. ask one by providing your email</span>
+						<label class="email">email
+							<input name="email" type="email" value="" />
+							<input class="enter" type="submit" name="submit" value="sign up" />
+						</label>
+					</p>
+				</form>
+			</div>
+
+		</div> <!--fin de menu-->  
+	</div> <!--fin barre-top pour position:fixed-->
+
+<div id='main'><%= main %></div>
+
+
+</div> <!--fin du conteneur principal (englobe menu)-->
+
+<script type="text/javascript"><%= startup %></script>
+</body>
+
 </html>

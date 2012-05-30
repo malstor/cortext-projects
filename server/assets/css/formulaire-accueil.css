@@ -1,0 +1,135 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#login_accueil{
+	border-radius: 4px;
+	margin-left:40px;
+	height:108px;
+	width:350px;
+	margin-bottom:15px;
+	border-radius: 4px;
+	float:left;
+	background: #3C3C3C;
+	font-size: 15px;
+	font-family:Arial, Helvetica, sans-serif;
+	color: #FFF;
+	font-style: normal;		
+	}
+	
+.user{
+	margin-left:18px;
+	}
+
+.password{
+	margin-left:19px;
+	}
+	
+.member{
+	margin-left:8px;
+	}	
+	
+.sign{
+	margin-left:130px;
+	line-height: 2;
+	font-size:17px;
+	}
+		
+.enter{
+	background:#34B02C;
+	border-radius: 4px;	
+	width:67px;
+	height:21px;
+	color:#FFF;
+	margin-left:10px;
+	font-size:13px;
+	border:none;
+	padding-bottom:4px;
+	cursor:pointer;
+} 
+
+.enter:hover, .enter2:hover{
+	background:#54cf4c;	
+	} 
+
+input:focus{
+	-moz-transition:1s; 
+	-o-transition:1s; 
+	-ms-transition:1s; 
+	-webkit-transition:1s;
+	border: 2px solid #54cf4c;
+	box-shadow: none;
+	}	
+	
+
+/*-------------------------formulaire 2--------------------------------*/	
+
+
+#login_accueil2{
+	border-radius: 4px;
+	margin-left:40px;
+	height:183px;
+	width:350px;
+	background:#3C3C3C;
+	float:left;
+	border-radius: 4px;
+	margin-bottom:15px;
+	border-radius: 4px;	
+	font-size: 15px;
+	font-family:Arial, Helvetica, sans-serif;
+	color: #FFF;
+	font-style: normal;		
+	}
+	
+.phrase{
+	margin-left:100px;
+	line-height: 2;
+	font-size:17px;
+	}	
+	
+.member2{
+	margin-left:8px;
+	}
+	
+.user2{
+	margin-left:16px;
+	}	
+
+.password2{
+	margin-left:19px;
+	}
+	
+.first{
+	margin-left:19px;
+	}
+	
+.last{
+	margin-left:20px;
+	}	
+	
+.email{
+	margin-left:49px;
+	}
+	
+.institut{
+	margin-left:22px;
+	}
+	
+.enter2{
+/*	background:#34B02C url(../images/form_heading2.gif) repeat-x;	
+*/	background:#34B02C;
+	border-radius: 4px;	
+	width:67px;
+	height:21px;
+	color:#FFF;
+	margin-left:10px;
+	font-size:13px;
+	border:none;
+	padding-bottom:4px;
+	cursor:pointer;
+	} 				
+
+input{
+	margin-left:10px;	
+	}
+	
+	

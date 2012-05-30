@@ -1,8 +1,8 @@
 router = Backbone.Router.extend({
     routes: {
-		'/': 'home'
+		'/': 'home',
         // '/user/:user': 'user',
-        // '/project/:project': 'project',
+        '/project/:project': 'project'
         // '/project/:project/object/:object': 'object'
     },
 
@@ -12,8 +12,19 @@ router = Backbone.Router.extend({
     	router.send(views.Home, {});
     },
 
+    project: function(project_id){
+        var router = this;
+
+        router.send(views.Project, { project : project_id });
+    },
+
+    send: function(view) {
+        var options = (arguments.length > 1 ? arguments[1] : {});
+        var v = new view(options);
+    },
+
     pageTitle: function(el){
-    	return "lol"
+    	return "lola";
     },
 
     error: function(error) {
