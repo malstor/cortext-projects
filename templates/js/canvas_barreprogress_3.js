@@ -27,7 +27,7 @@ function draw_user_bar(a, b, c) {
 	ctx.fillStyle = "rgb(208,214,68)";
 	ctx.fillRect (0, 0, Math.floor(((b+c) * 390 ) / 100), 10);
 	
-	ctx.fillStyle = "rgb(72,88,123)";
+	ctx.fillStyle ="rgb(120,79,139)"; //"rgb(72,88,123)"
 	ctx.fillRect (0, 0, Math.floor(((a+b) * 390 ) / 100), 10);
 		
 	ctx.fillStyle = "rgb(52, 176, 44)";

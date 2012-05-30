@@ -108,7 +108,7 @@
          <span class="date">10.05.12</span>
  
      	<div class="derniere_actu">
-        <div class="color_trait"></div>
+        
         <div class="img_actu"><img src="images/post_actu.png" alt="post" /></div>
         
         <div class="autor">
@@ -117,23 +117,21 @@
         </div>
         <div class="title"><a href="#">Re : new project “algues vertes”</a></div>
         <div class="date_actu">10.05.12</div>
-        <div class="color_trait-right"></div>
         </div><!--fin de derniere_actu-->
                       
         <div class="derniere_actu2">
-        <div class="color_trait"></div>
+        
         <div class="img_actu"><img src="images/post_actu.png" alt="post" /></div>
         <div class="autor">
         Jean-philippe C<br/>
         <div class="min_autor">message posted by</div>
         </div>
         <div class="title"><a href="#">Re : new project “algues vertes”</a></div>
-        <div class="date_actu">14.05.12</div>
-        <div class="color_trait-right"></div>        
+        <div class="date_actu">14.05.12</div>        
         </div>
         
      	<div class="derniere_actu">
-       	<div class="color_trait"></div>
+       	
         <div class="img_actu"><img src="images/post_actu.png" alt="post" /></div>
         <div class="autor">
         Tam-Kien D<br/>
@@ -141,11 +139,10 @@
         </div>
         <div class="title"><a href="#">Re : new project “algues vertes”</a></div>
         <div class="date_actu">14.05.12</div>
-        <div class="color_trait-right"></div>
 		</div>
         
      	<div class="derniere_actu2">
-        <div class="color_trait"></div>
+        
 		<div class="img_actu"><img src="images/post_actu.png" alt="post" /></div>
         <div class="autor">
         Philippe B<br/>
@@ -153,23 +150,21 @@
         </div>
         <div class="title"><a href="#">Re : new project “algues vertes”</a></div>
         <div class="date_actu">15.05.12</div>
-        <div class="color_trait-right"></div>
         </div>
         
      	<div class="derniere_actu">
-        <div class="color_trait"></div>
-		<div class="img_actu"><img src="images/script_actu.png" alt="post" /></div>
+        
+		<div class="img_actu"><img src="images/script_actu2.png" alt="post" /></div>
         <div class="autor">
         Script<br/>
         <div class="min_autor"></div>
         </div>
         <div class="title"><a href="#">augmentation des données</a></div>
         <div class="date_actu">14.05.12</div>
-        <div class="color_trait-right"></div>
         </div>
         
      	<div class="derniere_actu2">
-        <div class="color_trait"></div>
+        
 		<div class="img_actu"><img src="images/visual_actu.png" alt="post" /></div>
         <div class="autor">
         Visualisation<br/>
@@ -177,11 +172,10 @@
         </div>
         <div class="title-pdf"><div class="pdf"><a href="#">co-occurences.pdf</a></div></div>
         <div class="date_actu">11.05.12</div>
-        <div class="color_trait-right"></div>
         </div>
                
      	<div class="derniere_actu">
-        <div class="color_trait"></div>
+        
         <div class="img_actu"><img src="images/post_actu.png" alt="post" /></div>
         <div class="autor">
         Tam-Kien D<br/>
@@ -189,11 +183,10 @@
         </div>
         <div class="title"><a href="#">new project “algues vertes”</a></div>
         <div class="date_actu">10.05.12</div>
-        <div class="color_trait-right"></div>
         </div>
                 
      	<div class="derniere_actu2">
-       	<div class="color_trait"></div>
+       	
 		<div class="img_actu"><img src="images/visual_actu.png" alt="post" /></div>
         <div class="autor">
         Visualisation <br/>       
@@ -201,12 +194,11 @@
         </div>
         <div class="title-pdf"><div class="pdf"><a href="#">tubes-ontologie.pdf</a></div></div>
         <div class="date_actu">10.05.12</div>
-        <div class="color_trait-right"></div>
         </div>
         
      	<div class="derniere_actu">
-        <div class="color_trait"></div>
-		<div class="img_actu"><img src="images/script_actu.png" alt="post" /></div>
+        
+		<div class="img_actu"><img src="images/script_actu2.png" alt="post" /></div>
         <div class="autor">
         Script<br/>
         <div class="min_autor"></div>
@@ -214,11 +206,10 @@
         </div>
         <div class="title"><a href="#">calcul de cartographie</a></div>
         <div class="date_actu">10.05.12</div>
-        <div class="color_trait-right"></div>
         </div>
         
         <div class="derniere_actu2">
-       	<div class="color_trait"></div>
+       	
 		<div class="img_actu"><img src="images/visual_actu.png" alt="post" /></div>
         <div class="autor">
         Visualisation <br/>       
@@ -226,7 +217,6 @@
         </div>
         <div class="title-pdf"><div class="pdf"><a href="#">tubes-phase.pdf</a></div></div>
         <div class="date_actu">10.05.12</div>
-        <div class="color_trait-right"></div>
         </div>
         
         </div><!--fin div projet -->
@@ -238,7 +228,7 @@
          <span class="date">10.05.12</span>
  
      	<div class="derniere_actu">
-        <div class="color_trait"></div>
+        
         <div class="img_actu"><img src="images/post_actu.png" alt="post" /></div>
         
         <div class="autor">
@@ -247,25 +237,23 @@
         </div>
         <div class="title"><a href="#">Re : new project “algues vertes”</a></div>
         <div class="date_actu">10.05.12</div>
-        <div class="color_trait-right"></div>
         </div><!--fin de derniere_actu-->
               
         
         <div class="derniere_actu2">
-        <div class="color_trait"></div>
+        
         <div class="img_actu"><img src="images/post_actu.png" alt="post" /></div>
         <div class="autor">
         Jean-philippe C<br/>
         <div class="min_autor">message posted by</div>
         </div>
         <div class="title"><a href="#">Re : new project “algues vertes”</a></div>
-        <div class="date_actu">14.05.12</div>
-        <div class="color_trait-right"></div>        
+        <div class="date_actu">14.05.12</div>        
         </div>
         
         
      	<div class="derniere_actu">
-       	<div class="color_trait"></div>
+       	
         <div class="img_actu"><img src="images/post_actu.png" alt="post" /></div>
         <div class="autor">
         Tam-Kien D<br/>
@@ -273,35 +261,32 @@
         </div>
         <div class="title"><a href="#">Re : new project “algues vertes”</a></div>
         <div class="date_actu">14.05.12</div>
-        <div class="color_trait-right"></div>
 		</div>
         
      	<div class="derniere_actu2">
-        <div class="color_trait"></div>
+        
 		<div class="img_actu"><img src="images/post_actu.png" alt="post" /></div>
         <div class="autor">
         Philippe B<br/>
         <div class="min_autor">message posted by</div>
         </div>
         <div class="title"><a href="#">Re : new project “algues vertes”</a></div>
-        <div class="date_actu">15.05.12</div>
-        <div class="color_trait-right"></div>        
+        <div class="date_actu">15.05.12</div>        
         </div>
         
      	<div class="derniere_actu">
-        <div class="color_trait"></div>
-		<div class="img_actu"><img src="images/script_actu.png" alt="post" /></div>
+        
+		<div class="img_actu"><img src="images/script_actu2.png" alt="post" /></div>
         <div class="autor">
         Script<br/>
         <div class="min_autor"></div>
         </div>
         <div class="title"><a href="#">augmentation des données</a></div>
         <div class="date_actu">14.05.12</div>
-        <div class="color_trait-right"></div>
         </div>
         
      	<div class="derniere_actu2">
-        <div class="color_trait"></div>
+        
 		<div class="img_actu"><img src="images/visual_actu.png" alt="post" /></div>
         <div class="autor">
         Visualisation<br/>
@@ -309,11 +294,10 @@
         </div>
         <div class="title-pdf"><div class="pdf"><a href="#">co-occurences.pdf</a></div></div>
         <div class="date_actu">11.05.12</div>
-        <div class="color_trait-right"></div>
         </div>
                 
      	<div class="derniere_actu">
-        <div class="color_trait"></div>
+        
         <div class="img_actu"><img src="images/post_actu.png" alt="post" /></div>
         <div class="autor">
         Tam-Kien D<br/>
@@ -321,11 +305,10 @@
         </div>
         <div class="title"><a href="#">new project “algues vertes”</a></div>
         <div class="date_actu">10.05.12</div>
-        <div class="color_trait-right"></div>
         </div>
                 
      	<div class="derniere_actu2">
-       	<div class="color_trait"></div>
+       	
 		<div class="img_actu"><img src="images/visual_actu.png" alt="post" /></div>
         <div class="autor">
         Visualisation <br/>       
@@ -333,12 +316,11 @@
         </div>
         <div class="title-pdf"><div class="pdf"><a href="#">tubes-ontologie.pdf</a></div></div>
         <div class="date_actu">10.05.12</div>
-        <div class="color_trait-right"></div>
         </div>
         
      	<div class="derniere_actu">
-        <div class="color_trait"></div>
-		<div class="img_actu"><img src="images/script_actu.png" alt="post" /></div>
+        
+		<div class="img_actu"><img src="images/script_actu2.png" alt="post" /></div>
         <div class="autor">
         Script<br/>
         <div class="min_autor"></div>
@@ -346,11 +328,10 @@
         </div>
         <div class="title"><a href="#">calcul de cartographie</a></div>
         <div class="date_actu">10.05.12</div>
-        <div class="color_trait-right"></div>
         </div>
         
         <div class="derniere_actu2">
-       	<div class="color_trait"></div>
+       	
 		<div class="img_actu"><img src="images/visual_actu.png" alt="post" /></div>
         <div class="autor">
         Visualisation <br/>       
@@ -358,7 +339,6 @@
         </div>
         <div class="title-pdf"><div class="pdf"><a href="#">tubes-phase.pdf</a></div></div>
         <div class="date_actu">10.05.12</div>
-        <div class="color_trait-right"></div>
         </div>
          
      
@@ -371,7 +351,7 @@
 		<span class="date">10.05.12</span>
  
      	<div class="derniere_actu">
-        <div class="color_trait"></div>
+        
         <div class="img_actu"><img src="images/post_actu.png" alt="post" /></div>
         
         <div class="autor">
@@ -380,12 +360,11 @@
         </div>
         <div class="title"><a href="#">Re : new project “algues vertes”</a></div>
         <div class="date_actu">10.05.12</div>
-        <div class="color_trait-right"></div>
         </div><!--fin de derniere_actu-->
               
         
         <div class="derniere_actu2">
-        <div class="color_trait"></div>
+        
         <div class="img_actu"><img src="images/post_actu.png" alt="post" /></div>
         <div class="autor">
         Jean-philippe C<br/>
@@ -393,12 +372,11 @@
         </div>
         <div class="title"><a href="#">Re : new project “algues vertes”</a></div>
         <div class="date_actu">14.05.12</div>
-        <div class="color_trait-right"></div>
         </div>
         
         
      	<div class="derniere_actu">
-       	<div class="color_trait"></div>
+       	
         <div class="img_actu"><img src="images/post_actu.png" alt="post" /></div>
         <div class="autor">
         Tam-Kien D<br/>
@@ -406,11 +384,10 @@
         </div>
         <div class="title"><a href="#">Re : new project “algues vertes”</a></div>
         <div class="date_actu">14.05.12</div>
-        <div class="color_trait-right"></div>
 		</div>
         
      	<div class="derniere_actu2">
-        <div class="color_trait"></div>
+        
 		<div class="img_actu"><img src="images/post_actu.png" alt="post" /></div>
         <div class="autor">
         Philippe B<br/>
@@ -418,23 +395,21 @@
         </div>
         <div class="title"><a href="#">Re : new project “algues vertes”</a></div>
         <div class="date_actu">15.05.12</div>
-        <div class="color_trait-right"></div>
         </div>
         
      	<div class="derniere_actu">
-        <div class="color_trait"></div>
-		<div class="img_actu"><img src="images/script_actu.png" alt="post" /></div>
+        
+		<div class="img_actu"><img src="images/script_actu2.png" alt="post" /></div>
         <div class="autor">
         Script<br/>
         <div class="min_autor"></div>
         </div>
         <div class="title"><a href="#">augmentation des données</a></div>
         <div class="date_actu">14.05.12</div>
-        <div class="color_trait-right"></div>
         </div>
         
      	<div class="derniere_actu2">
-        <div class="color_trait"></div>
+        
 		<div class="img_actu"><img src="images/visual_actu.png" alt="post" /></div>
         <div class="autor">
         Visualisation<br/>
@@ -442,11 +417,10 @@
         </div>
         <div class="title-pdf"><div class="pdf"><a href="#">co-occurences.pdf</a></div></div>
         <div class="date_actu">11.05.12</div>
-        <div class="color_trait-right"></div>
         </div>
                 
      	<div class="derniere_actu">
-        <div class="color_trait"></div>
+        
         <div class="img_actu"><img src="images/post_actu.png" alt="post" /></div>
         <div class="autor">
         Tam-Kien D<br/>
@@ -454,11 +428,10 @@
         </div>
         <div class="title"><a href="#">new project “algues vertes”</a></div>
         <div class="date_actu">10.05.12</div>
-        <div class="color_trait-right"></div>
         </div>
                
      	<div class="derniere_actu2">
-       	<div class="color_trait"></div>
+       	
 		<div class="img_actu"><img src="images/visual_actu.png" alt="post" /></div>
         <div class="autor">
         Visualisation <br/>       
@@ -466,12 +439,11 @@
         </div>
         <div class="title-pdf"><div class="pdf"><a href="#">tubes-ontologie.pdf</a></div></div>
         <div class="date_actu">10.05.12</div>
-        <div class="color_trait-right"></div>
         </div>
         
      	<div class="derniere_actu">
-        <div class="color_trait"></div>
-		<div class="img_actu"><img src="images/script_actu.png" alt="post" /></div>
+        
+		<div class="img_actu"><img src="images/script_actu2.png" alt="post" /></div>
         <div class="autor">
         Script<br/>
         <div class="min_autor"></div>
@@ -479,11 +451,10 @@
         </div>
         <div class="title"><a href="#">calcul de cartographie</a></div>
         <div class="date_actu">10.05.12</div>
-        <div class="color_trait-right"></div>
         </div>
         
         <div class="derniere_actu2">
-       	<div class="color_trait"></div>
+       	
 		<div class="img_actu"><img src="images/visual_actu.png" alt="post" /></div>
         <div class="autor">
         Visualisation <br/>       
@@ -491,7 +462,6 @@
         </div>
         <div class="title-pdf"><div class="pdf"><a href="#">tubes-phase.pdf</a></div></div>
         <div class="date_actu">10.05.12</div>
-        <div class="color_trait-right"></div>
         </div>
     
         </div><!--fin div projet -->   
@@ -503,7 +473,7 @@
          <span class="date">10.05.12</span>
  
      	<div class="derniere_actu">
-        <div class="color_trait"></div>
+        
         <div class="img_actu"><img src="images/post_actu.png" alt="post" /></div>
         
         <div class="autor">
@@ -512,25 +482,23 @@
         </div>
         <div class="title"><a href="#">Re : new project “algues vertes”</a></div>
         <div class="date_actu">10.05.12</div>
-        <div class="color_trait-right"></div>
 
         </div><!--fin de derniere_actu-->
               
         
         <div class="derniere_actu2">
-        <div class="color_trait"></div>
+        
         <div class="img_actu"><img src="images/post_actu.png" alt="post" /></div>
         <div class="autor">
         Jean-philippe C<br/>
         <div class="min_autor">message posted by</div>
         </div>
         <div class="title"><a href="#">Re : new project “algues vertes”</a></div>
-        <div class="date_actu">14.05.12</div>
-        <div class="color_trait-right"></div>       
+        <div class="date_actu">14.05.12</div>       
         </div>
                
      	<div class="derniere_actu">
-       	<div class="color_trait"></div>
+       	
         <div class="img_actu"><img src="images/post_actu.png" alt="post" /></div>
         <div class="autor">
         Tam-Kien D<br/>
@@ -538,11 +506,10 @@
         </div>
         <div class="title"><a href="#">Re : new project “algues vertes”</a></div>
         <div class="date_actu">14.05.12</div>
-        <div class="color_trait-right"></div>
 		</div>
         
      	<div class="derniere_actu2">
-        <div class="color_trait"></div>
+        
 		<div class="img_actu"><img src="images/post_actu.png" alt="post" /></div>
         <div class="autor">
         Philippe B<br/>
@@ -550,23 +517,21 @@
         </div>
         <div class="title"><a href="#">Re : new project “algues vertes”</a></div>
         <div class="date_actu">15.05.12</div>
-        <div class="color_trait-right"></div>
         </div>
         
      	<div class="derniere_actu">
-        <div class="color_trait"></div>
-		<div class="img_actu"><img src="images/script_actu.png" alt="post" /></div>
+        
+		<div class="img_actu"><img src="images/script_actu2.png" alt="post" /></div>
         <div class="autor">
         Script<br/>
         <div class="min_autor"></div>
         </div>
         <div class="title"><a href="#">augmentation des données</a></div>
         <div class="date_actu">14.05.12</div>
-        <div class="color_trait-right"></div>
         </div>
         
      	<div class="derniere_actu2">
-        <div class="color_trait"></div>
+        
 		<div class="img_actu"><img src="images/visual_actu.png" alt="post" /></div>
         <div class="autor">
         Visualisation<br/>
@@ -574,11 +539,10 @@
         </div>
         <div class="title-pdf"><div class="pdf"><a href="#">co-occurences.pdf</a></div></div>
         <div class="date_actu">11.05.12</div>
-        <div class="color_trait-right"></div>
         </div>
                 
      	<div class="derniere_actu">
-        <div class="color_trait"></div>
+        
         <div class="img_actu"><img src="images/post_actu.png" alt="post" /></div>
         <div class="autor">
         Tam-Kien D<br/>
@@ -586,11 +550,10 @@
         </div>
         <div class="title"><a href="#">new project “algues vertes”</a></div>
         <div class="date_actu">10.05.12</div>
-        <div class="color_trait-right"></div>
         </div>
                 
      	<div class="derniere_actu2">
-       	<div class="color_trait"></div>
+       	
 		<div class="img_actu"><img src="images/visual_actu.png" alt="post" /></div>
         <div class="autor">
         Visualisation <br/>       
@@ -598,12 +561,11 @@
         </div>
         <div class="title-pdf"><div class="pdf"><a href="#">tubes-ontologie.pdf</a></div></div>
         <div class="date_actu">10.05.12</div>
-        <div class="color_trait-right"></div>
         </div>
         
      	<div class="derniere_actu">
-        <div class="color_trait"></div>
-		<div class="img_actu"><img src="images/script_actu.png" alt="post" /></div>
+        
+		<div class="img_actu"><img src="images/script_actu2.png" alt="post" /></div>
         <div class="autor">
         Script<br/>
         <div class="min_autor"></div>
@@ -611,11 +573,10 @@
         </div>
         <div class="title"><a href="#">calcul de cartographie</a></div>
         <div class="date_actu">10.05.12</div>
-        <div class="color_trait-right"></div>
         </div>
         
         <div class="derniere_actu2">
-       	<div class="color_trait"></div>
+       	
 		<div class="img_actu"><img src="images/visual_actu.png" alt="post" /></div>
         <div class="autor">
         Visualisation <br/>       
@@ -623,7 +584,6 @@
         </div>
         <div class="title-pdf"><div class="pdf"><a href="#">tubes-phase.pdf</a></div></div>
         <div class="date_actu">10.05.12</div>
-        <div class="color_trait-right"></div>
         </div>
         
     </div><!--fin div projet -->   

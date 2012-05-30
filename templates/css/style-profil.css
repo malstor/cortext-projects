@@ -140,11 +140,11 @@
 	display : block;
 	}
 
-/*#contain1, #contain2, #contain3, #contain4, #contain5, #contain6{
+#contain1, #contain2, #contain3, #contain4, #contain5, #contain6{
 	height:10px;
 	background:#EEF2F6;
 } 
-	*/		
+		
 	
 .proj_explain{
 	height:22px;
@@ -171,8 +171,9 @@
 #carr2{
 	height:12px;
 	width:12px;
-	background:#48587b;
-	float:left;
+	background:#784F8B;
+/*	background:#48587b;
+*/	float:left;
 	margin-left:100px;
 	}
 
