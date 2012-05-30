@@ -19,7 +19,7 @@ view = views.Main.extend({
     		};
 
     		if(e.type == "Message"){
-    			e.content = lorem.create(2).generate();
+    			e.content = lorem.create( Math.floor( Math.random() * 3) + 1).generate();
     		}
 
     		if(e.type == "Image"){
