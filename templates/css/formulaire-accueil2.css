@@ -22,8 +22,6 @@
 		margin-bottom:15px;
 		width:648px;
 		height:30px;
-		/*border-top-right-radius:15px;
-		border-top-left-radius:15px;*/
 		background:url(../images/form_heading2.gif) repeat-x;	
 		color:#fff;
 		border:1px solid #34B02C;
@@ -35,7 +33,6 @@
 	font-size:20px;
 	margin-left:100px;
 	}	
-
 	
 .member2{	
 	margin-left:100px;
