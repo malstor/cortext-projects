@@ -596,7 +596,7 @@
     
     	<div id="barre-right">
     	<div id="sid1">
-        <a href="#"><h2>create new project</h2></a>
+         <div id="bt-purple"><a href="#"><h2>create new project</h2></a> </div>
         </div>
         
     	<div id="sid2">

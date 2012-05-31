@@ -162,7 +162,7 @@
         </div><!--fin div commentaires -->   
         	
         
-    <div class="effacement"></div>
+   <!--  <div class="effacement"></div>
 	
     
     <div class="comment2">
@@ -196,7 +196,7 @@
             </div>
             </div>
             
-            </div><!-- /comments_list2 -->
+            </div>
 
             <div class="comment-text">
             <form name="fff">
@@ -208,7 +208,7 @@
             </div></div> 
          	</div>
         
-        </div>   
+        </div>   -->
     
     	</div><!--fin contenu central -->   
    

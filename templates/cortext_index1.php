@@ -307,8 +307,8 @@
     
     	<div id="barre-right">
     	<div id="sid1">
-        <a href="#"><h2>start an analysis</h2></a>
-     	<a href="#"><h3>add a document</h3></a>
+        <div id="bt-purple"><a href="#"><h2>start an analysis</h2></a></div>
+     	<div id="bt-purple2"><a href="#"><h3>add a document</h3></a></div>
         </div>
         
         

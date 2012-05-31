@@ -31,8 +31,63 @@
 	height:85px;
 	}
 
+#bt-purple{
+	background-color:#4b116f;
+	height:24px;
+	width:260px;
+	}
 	
-#sid1 h2{
+#bt-purple h2{
+	background:url(../images/boutya.png);
+	background-position:right;
+	background-repeat:no-repeat;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color: #FFF;
+	padding:4px;
+	margin-left:15px;
+	margin-right:10px;
+	margin-top:9px;
+	margin-bottom:15px;
+	}	
+
+#bt-purple a{
+	text-decoration:none;
+	}
+	
+#bt-purple:hover{
+	background-color:#b65518;
+	}
+	
+#bt-purple2{
+	background-color:#3C3C3C;
+	height:24px;
+	width:260px;
+	}
+	
+#bt-purple2 h3{
+	background:url(../images/boutyb.png);
+	background-position:right;
+	background-repeat:no-repeat;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color: #FFF;
+	padding:4px;
+	margin-left:15px;
+	margin-right:10px;
+	margin-top:9px;
+	margin-bottom:15px;
+	}	
+
+#bt-purple2 a{
+	text-decoration:none;
+	}
+	
+#bt-purple2:hover{
+	background-color:#b65518;
+	}	
+		
+/*#sid1 h2{
 	background:url(../images/buttonb.png);
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
@@ -58,7 +113,7 @@
 	padding:5px;
 	margin-top:-3px;
 	}
-	
+	*/
 	
 #sid2 {
 	height:170px;
@@ -86,7 +141,7 @@
 	
 .effacement {clear:both;}	
 
-	#analysis1{
+#analysis1{
 	margin-top:0px;	
 	height:50px;
 	background-color:#FFF;
@@ -95,7 +150,7 @@
 	border-bottom-color: #666869;	
 	}
 
-	.an1{
+.an1{
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 11px;
 	font-style: normal;
