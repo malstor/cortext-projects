@@ -1,6 +1,6 @@
 view = views.Main.extend({
 	initialize: function(){
-		console.log("opening project "+ this.options.model.id);
+		console.log("rendering project "+ this.options.model.id);
 	},
     render: function() {
     	var el = this.el;

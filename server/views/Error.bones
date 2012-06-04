@@ -11,6 +11,7 @@ view = views.Main.extend({
         this.options = {};
         this.options.status = options.status || '404';
         this.options.message = options.message || 'Not found';
+
         views.Main.prototype.initialize.call(this, options);
     },
     render: function() {

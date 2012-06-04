@@ -28,10 +28,14 @@ router = Backbone.Router.extend({
     send: function(view) {
         var options = (arguments.length > 1 ? arguments[1] : {});
         var v = new view(options);
+
+        document.title = this.pageTitle(v);
     },
 
-    pageTitle: function(el){
-    	return "lola";
+    pageTitle: function(v){
+    	var t = "projects.cortext";
+
+        return (v.pageTitle ? t+": "+v.pageTitle : t);
     },
 
     error: function(error) {
