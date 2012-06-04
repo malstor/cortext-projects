@@ -1,11 +1,11 @@
 view = views.Main.extend({
 	initialize: function(){
-		console.log("opening project "+ this.options.project);
+		console.log("opening project "+ this.options.model.id);
 	},
     render: function() {
     	var el = this.el;
 
-    	var elements = this.model.elements;
+    	var elements = this.model.get("elements");
 
         console.log(this);
 
