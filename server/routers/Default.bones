@@ -13,9 +13,16 @@ router = Backbone.Router.extend({
     },
 
     project: function(project_id){
-        var router = this;
+        var router = this,
+            fetcher = this.fetcher(),
+            project = new models.Project({id: project_id});
 
-        router.send(views.Project, { project : project_id });
+        fetcher.push(project);
+        
+        fetcher.fetch(function(err) {
+            if (err) return router.error(err);
+            router.send(views.Project, { model : project });
+        });
     },
 
     send: function(view) {
@@ -29,5 +36,29 @@ router = Backbone.Router.extend({
 
     error: function(error) {
     	this.send(views.Error, _.isArray(error) ? error.shift() : error);
+    },
+
+    fetcher: function() {
+        var models = [];
+
+        return {
+            push: function(item) { models.push(item) },
+            fetch: function(callback) {
+                if (!models.length) return callback();
+                var errors = [];
+                var _done = _.after(models.length, function() {
+                    callback(errors.length ? errors : null);
+                });
+                _.each(models, function(model) {
+                    model.fetch({
+                        success: _done,
+                        error: function(error) {
+                            errors.push(error);
+                            _done();
+                        }
+                    });
+                });
+            }
+        }
     }
 });
