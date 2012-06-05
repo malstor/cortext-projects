@@ -18,12 +18,14 @@
 <div id="header">
 <div id="menu">
 
+<nav id="path">
 <ul>
 <li><a href="/"><img src="/assets/server/images/home2.png" alt="#" /></a></li>
 <% _.each(path, function(element){ %>
-	<li class="<%= element.class %>"><a href="<%= element.url %>"><%= element.name %></a></li>  
+<li class="<%= element.class %>"><a href="<%= element.url %>"><%= element.name %></a></li>  
 <% }); %>
-</ul>    
+</ul>
+</nav>
 
 	<div id="login-panel">
 		<form action="" method="post">
