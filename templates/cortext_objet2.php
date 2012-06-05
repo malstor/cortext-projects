@@ -14,6 +14,8 @@
 <link href="css/form-login.css" type="text/css" rel="stylesheet" />
 <link href="css/style-objet.css" type="text/css" rel="stylesheet" />
 <link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />
+<link href="css/bouton-style.css" type="text/css" rel="stylesheet" />
+
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript" src="js/canvas_barreprogress.js"></script>
 <script type="text/javascript" src="js/fonctions_form_barre_comment.js"></script>
@@ -63,7 +65,7 @@
    <div class="effacement"></div>
  
     
-	<div id="contener">
+	<div id="container">
  
 	<!--contenu colone gauche -->    	
     <div id="sidebar-left">
@@ -217,14 +219,17 @@
     <div id="sidebar-right">
        <div id="barre-right">
        
-    	<!--<div id="sid1">
-        <a href="#"><h2>start an analysis</h2></a>
-     	<a href="#"><h3>add a document</h3></a>
-        </div>-->
+    	<div id="sid1">
+        <p class="bouton violet">Create new project</p> 
+        <p class="bouton noir">Add a document</p> 
+
+       <!-- <a href="#"><h2>start an analysis</h2></a>
+     	<a href="#"><h3>add a document</h3></a>-->
+        </div>
         
         
-        <div id="barre-right">
-          
+<!--        <div id="barre-right">
+-->          
     	<div id="sid2-suite">
       	<h4>queued scripts</h4>
                       

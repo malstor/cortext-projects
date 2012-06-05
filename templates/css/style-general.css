@@ -25,7 +25,7 @@ body {
 
 /*---------------------------contenu-centre-----------------------------------------*/
 
-#contener{
+#container{
 	background:url(../images/slide-droite.png);
 	background-repeat:repeat-y;
 	background-position:right;
@@ -414,4 +414,4 @@ textarea:focus{
 	margin-left:10px;
 	margin-top:3px;
 	}
-								
+

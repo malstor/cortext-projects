@@ -13,6 +13,7 @@
 <link href="css/sidebar-right.css" type="text/css" rel="stylesheet" />
 <link href="css/form-login.css" type="text/css" rel="stylesheet" />
 <link href="css/form-invit.css" type="text/css" rel="stylesheet" />
+<link href="css/bouton-style.css" type="text/css" rel="stylesheet" />
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript" src="js/canvas_barreprogress.js"></script>
@@ -60,7 +61,7 @@
    <div class="effacement"></div>
  
     
-	<div id="contener" class="logo">
+	<div id="container" class="logo">
 
 	<!--contenu colone gauche -->    	
     <div id="sidebar-left">
@@ -293,13 +294,11 @@
             <div class="bouton-com">
             <a href="#"><img src="images/bul-com.png" alt="" /><span class="comm">comment</span></a>
             </div></div>     
-          </div>
+          	</div>
         
         </div>
     
-    
     	</div><!--fin contenu central -->   
-
     
     
 <!--contenu colonne droite -->    	        
@@ -307,10 +306,11 @@
     
     	<div id="barre-right">
     	<div id="sid1">
-        <div id="bt-purple"><a href="#"><h2>start an analysis</h2></a></div>
-     	<div id="bt-purple2"><a href="#"><h3>add a document</h3></a></div>
+        <!--<div id="bt-purple"><a href="#"><h2>start an analysis</h2></a></div>
+     		<div id="bt-purple2"><a href="#"><h3>add a document</h3></a></div>-->
+        <p class="bouton violet">Create new project</p> 
+        <p class="bouton noir">Add a document</p> 
         </div>
-        
         
     	<div id="sid2">
       	<h4>queued scripts</h4>
@@ -340,13 +340,10 @@
         
         <div id="logo"></div>
         
-        
-        
-        
-        </div> <!--fin barre<-->
+       </div> <!--fin barre<-->
    </div><!--fin colonne droite -->    	        
     
-    </div><!--fin du contener--> 
+</div><!--fin du contener--> 
       
 </div> <!--fin du conteneur principal (englobe menu)-->
 </body>

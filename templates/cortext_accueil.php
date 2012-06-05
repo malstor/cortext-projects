@@ -23,7 +23,7 @@
     
 	<div class="effacement"></div>
      
-	<div id="contener-accueil">
+	<div id="container-accueil">
 
 
 	<div id="accueil" class="b<?php echo rand(1, 3);?>">

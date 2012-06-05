@@ -23,7 +23,7 @@
     
 	<div class="effacement"></div>
      
-	<div id="contener-accueil">
+	<div id="container-accueil">
 
       <div id="login_accueil">
       
