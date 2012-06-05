@@ -8,7 +8,7 @@ routers.Default.prototype.send = function(view, options) {
     var main = new view(options);
     main.render();
 
-    console.log(options.model.constructor.title);
+ //   console.log(options.model.constructor.title);
 
     // Provide all models with the data that well be used to prop them back up
     // on the browser.
