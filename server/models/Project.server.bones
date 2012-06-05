@@ -17,8 +17,7 @@ models.Project.prototype.sync = function(method, model, options) {
 
         console.log("[project: "+model.id+"] loading data from yaml");
 
-        // this is a temporary bug. elements of a project should be stored as it and not redefined afterward
-        resp = _.extend(resp, { elements: data });
+        resp = _.extend(resp, data);
         options.success(resp);
 
         // console.log(model);
