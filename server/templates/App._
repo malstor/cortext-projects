@@ -8,55 +8,50 @@
 <script src="/assets/bones/all.js?<%= version %>" type="text/javascript" charset="utf-8"></script>
 
 <link rel="stylesheet" href="/assets/server/css/reset.css" type="text/css" />  
-<link rel="stylesheet" href="/assets/server/css/style-general.css" type="text/css" />
-<link rel="stylesheet" href="/assets/server/css/style-projet.css" type="text/css" />
-<link rel="stylesheet" href="/assets/server/css/style-menu-projet.css" type="text/css" />
-<link rel="stylesheet" href="/assets/server/css/sidebar-left_projet.css" type="text/css" />
-<link rel="stylesheet" href="/assets/server/css/sidebar-right_projet.css" type="text/css" />
-<link rel="stylesheet" href="/assets/server/css/form-login.css" type="text/css" />
 
 </head>
 
 <body>
 
 <div id="conteneur-principal">
-	<div id="barre-top">
 
-		<div id="menu">
-			<a href="cortext_accueil.php"><img src="/assets/server/images/home2.png" alt="#" /></a>     
-			<ul>
-				<li class="menu1"><a href="#"> projects</a></li>  
-				<li class="menu2"><a id="login-link" href="#" title="Login"> tam kien duong</a></li>
-			</ul>    
+<div id="header">
+<div id="menu">
 
-			<div id="login-panel">
-				<form action="" method="post">
-					<p>
-						<span class="sign">sign in</span> <br/>
-						<label class="user">user name
-							<input name="username" type="text" value="" />
-						</label> <br /><br />
-						<label class="password">password
-							<input name="password" type="password" value="" />
-						</label>
-						<input class="enter" type="submit" name="submit" value="Login" /><br/><br />
-						<span class="phrase">don't have an account. ask one by providing your email</span>
-						<label class="email">email
-							<input name="email" type="email" value="" />
-							<input class="enter" type="submit" name="submit" value="sign up" />
-						</label>
-					</p>
-				</form>
-			</div>
+<nav id="path">
+<ul>
+<li><a href="/"><img src="/assets/server/images/home2.png" alt="#" /></a></li>
+<% _.each(path, function(element){ %>
+<li class="<%= element.class %>"><a href="<%= element.url %>"><%= element.name %></a></li>  
+<% }); %>
+</ul>
+</nav>
 
-		</div> <!--fin de menu-->  
-	</div> <!--fin barre-top pour position:fixed-->
-
-   <div class="effacement"></div>
-
-	<div id='main main-content'>
-		<%= main %>
+	<div id="login-panel">
+		<form action="" method="post">
+			<p>
+				<span class="sign">sign in</span> <br/>
+				<label class="user">user name
+					<input name="username" type="text" value="" />
+				</label> <br /><br />
+				<label class="password">password
+					<input name="password" type="password" value="" />
+				</label>
+				<input class="enter" type="submit" name="submit" value="Login" /><br/><br />
+				<span class="phrase">don't have an account. ask one by providing your email</span>
+				<label class="email">email
+					<input name="email" type="email" value="" />
+					<input class="enter" type="submit" name="submit" value="sign up" />
+				</label>
+			</p>
+		</form>
 	</div>
+</div> <!-- /#menu-->  
+</div><!-- #header -->
+
+<div id='main'>
+<%= main %>
+</div><!-- /#main -->
 
 </div> <!--fin du conteneur principal (englobe menu)-->
 

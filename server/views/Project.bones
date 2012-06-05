@@ -6,16 +6,31 @@ view = views.Main.extend({
     	var el = this.el;
 
     	var elements = this.model.get("elements");
+        var members = this.model.get("members");
+        var info = this.model.get("info");
 
-        console.log(this);
+        // console.log(this);
 
 		$(this.el).empty();
 
-    	console.log(elements);
+    	// console.log(elements);
+
+        var elements_rendered = [];
 
     	_.each(elements, function(e){
-    		$(el).append(templates[ e.type ]({ e: e }));
+            var t = templates[ e.type ]({ e: e });
+            console.log("  - "+e.type+"#"+e.id);
+
+    		elements_rendered.push(t);
     	});
+
+        var options = {
+            info: info,
+            members: members,
+            elements:elements_rendered
+        }
+
+        $(this.el).append(templates.Project(options));
 
         return this;
     }
