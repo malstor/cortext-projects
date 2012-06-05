@@ -7,19 +7,20 @@ body {
 	background-repeat:repeat-x;
 	}
 
-
 #body-welcome{
-	margin : 80px auto 0px auto;
+	margin : 40px auto 0px auto;
 	background:url(../images/body-goutte.png);
 	background-repeat:no-repeat;
 	height:330px;
 	width:1000px;
 	}
+	
 	#contenu-welcome{
 	margin : -300px auto 0px auto;
 	height:310px;
 	width:1000px;
 	}
+	
 #text_net{
 	width:250px;
 	float:left;
@@ -43,7 +44,8 @@ body {
 	font-weight:normal;
 	opacity:0.5;
 	cursor:pointer;
-		}		
+		}
+				
 	#text_net p:hover{
 	opacity:0.8;
 		}	
@@ -71,12 +73,12 @@ body {
 	font-weight:normal;
 	opacity:0.5;
 	cursor:pointer;
-		}		
+		}
+				
 	#text_net2 p:hover{
 	opacity:0.8;
 		}		
-	
-	
+		
 #text_net3{
 	width:400px;
 	float:left;
@@ -89,9 +91,9 @@ body {
 	margin-left:268px;
 	margin-top:32px;
 	font-weight: bold;
-		}	
+	}	
 	
-	#text_net3 p{
+#text_net3 p{
 	color:#000000;
 	font-size:13px;
 	font-family:Arial, Helvetica, sans-serif;
@@ -100,53 +102,53 @@ body {
 	font-weight:normal;
 	opacity:0.5;
 	cursor:pointer;
-		}		
-	#text_net3 p:hover{
+	}	
+		
+#text_net3 p:hover{
 	opacity:0.8;
-		}		
-	#bas-welcome{
+	}
+			
+#bas-welcome{
 	margin :0px auto 0px auto;
-width:1220px;
-/*height:450px;
-background:black;*/		}		
+	width:1220px;
+	}		
 
 #bas1{
-height:90px;
-width:140px;
-margin-left:20px;
-margin-top:-70px;
-float:left;
-}
+	height:90px;
+	width:140px;
+	margin-left:20px;
+	margin-top:-70px;
+	float:left;
+	}
 
 #bas1 h3{
 	color:#225ABE;
 	font-size:20px;
 	font-family:Arial, Helvetica, sans-serif;
-	font-weight:normal;}
-
-
-#bas2{
-height:75px;
-width:252px;
-margin-left:50px;
-float:left;
-background:#25A618;
-border-radius:6px;
-margin-top:-60px;
-cursor:pointer;
-}
-
-#create{
-background:url(../images/create-bt.png);
-height:50px;
-margin-top:13px;
-}
-
-#create:hover{
-background:url(../images/create-bt_hover.png);
+	font-weight:normal;
 	}
 
-	
+#bas2{
+	height:75px;
+	width:252px;
+	margin-left:50px;
+	float:left;
+	background:#25A618;
+	border-radius:6px;
+	margin-top:-60px;
+	cursor:pointer;
+	}
+
+#create{
+	background:url(../images/create-bt.png);
+	height:50px;
+	margin-top:13px;
+	}
+
+#create:hover{
+	background:url(../images/create-bt_hover.png);
+	}
+
 #create h3{
 	font-size:20px;
 	font-family:Arial, Helvetica, sans-serif;
@@ -157,37 +159,39 @@ background:url(../images/create-bt_hover.png);
 	
 #create h3 a{
 	color:#ffffff;
-	text-decoration:none;}
-
+	text-decoration:none;
+	}
 
 #bas3{
-height:90px;
-width:140px;
-margin-left:50px;
-margin-top:-70px;
-float:left;
-}
+	height:90px;
+	width:140px;
+	margin-left:50px;
+	margin-top:-70px;
+	float:left;
+	}
 
 #bas3 h3{
 	color:#ED6D20;
 	font-size:20px;
 	font-family:Arial, Helvetica, sans-serif;
 	font-weight:normal;
-	margin-left:-10px;}
+	margin-left:-10px;
+	}
 	
 #bas4{
-height:370px;
-width:370px;
-margin-top:-135px;
-float:left;
-background:#ffffff;}
+	height:370px;
+	width:370px;
+	margin-top:-125px;
+	float:left;
+	background:#ffffff;
+	}
 
 #logo_cortext{
-height:38px;
-background:url(../images/logo_cortext.png);
-background-repeat:no-repeat;
-margin-left:25px;
-}
+	height:38px;
+	background:url(../images/logo_cortext.png);
+	background-repeat:no-repeat;
+	margin-left:25px;
+	}
 	
 #bas4 p{
 	color:#000000;
@@ -196,44 +200,44 @@ margin-left:25px;
 	font-weight:normal;
 	margin-left:25px;
 	line-height:1.3;
-	margin-top:26px;
+	margin-top:18px;
 	margin-right:25px;
 	text-align:left;
 	letter-spacing:1px;
-
-}
+	}
 
 .team{
 	color:#929297;
 	font-size:15px;
 	font-family:Arial, Helvetica, sans-serif;
-	font-weight:normal;}
+	font-weight:normal;
+	}
+	
 .team2{
 	color:#25A618;
 	font-size:15px;
 	font-family:Arial, Helvetica, sans-serif;
-	font-weight:normal;}	
+	font-weight:normal;
+	}	
 	
 #bas5{
-height:90px;
-width:140px;
-float:left;
-margin-left:50px;
-margin-top:-70px;
-
-}		
+	height:90px;
+	width:140px;
+	float:left;
+	margin-left:50px;
+	margin-top:-70px;
+	}		
 		
-
 #bas5 h3{
 	color:#A3319F;
 	font-size:20px;
 	font-family:Arial, Helvetica, sans-serif;
-	font-weight:normal;}
-
-
+	font-weight:normal;
+	}
 
 #traits{
-height:42px;
-background:url(../images/traits-welcome.png);
-background-repeat:repeat-x;
-margin-top:100px;}		
+	height:42px;
+	background:url(../images/traits-welcome.png);
+	background-repeat:repeat-x;
+	margin-top:100px;
+	}		
