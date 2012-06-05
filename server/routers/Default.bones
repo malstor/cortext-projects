@@ -41,19 +41,20 @@ router = Backbone.Router.extend({
     	this.send(views.Error, _.isArray(error) ? error.shift() : error);
     },
 
-    path : function(info){
+    path : function(model){
         var p = [];
+        var info = model.get("info");
+        var type = model.constructor.title;
 
         p.push({
-            class: "project type",
-            name: "project"
+            class: type+" type",
+            name: type
         });
-
 
         p.push({
             class: "project name",
-            url: "/project/2",
-            name: "Voix du Nord"
+            url: info.url,
+            name: info.title
         });
 
         return p;

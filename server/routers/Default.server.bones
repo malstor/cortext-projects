@@ -8,9 +8,7 @@ routers.Default.prototype.send = function(view, options) {
     var main = new view(options);
     main.render();
 
-    // console.log(view);
-    // console.log(options);
-    // console.log(main);
+    console.log(options.model.constructor.title);
 
     // Provide all models with the data that well be used to prop them back up
     // on the browser.
@@ -31,7 +29,7 @@ routers.Default.prototype.send = function(view, options) {
         version: time,
         title: this.pageTitle(main),
         main: $(main.el).html(),
-        path: this.path(main),
+        path: this.path(options.model),
         startup: ''
     }));
 };
