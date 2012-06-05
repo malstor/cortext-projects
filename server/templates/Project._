@@ -1,8 +1,8 @@
 <div class="project-meta">
 
 <div class="info">
-	<div class="date_created date">created: <span><%= info.date_created %></span></div>
-	<div class="date_updated date">updated: <span><%= info.date_updated %></span></div>
+	<div class="date_created date">created: <span><%= format_date(info.date_created) %></span></div>
+	<div class="date_updated date">updated: <span><%= format_date(info.date_updated) %></span></div>
 </div>
 
 <div class="members" id="member">

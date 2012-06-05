@@ -7,6 +7,7 @@ view = views.Main.extend({
 
     	var elements = this.model.get("elements");
         var members = this.model.get("members");
+        var info = this.model.get("info");
 
         // console.log(this);
 
@@ -16,14 +17,9 @@ view = views.Main.extend({
 
         var elements_rendered = [];
 
-        var info = {
-            date_created : "xx.xx.xx",
-            date_updated : "yy.yy.yy"
-        }
-
     	_.each(elements, function(e){
             var t = templates[ e.type ]({ e: e });
-            console.log("  - "+e.type+"+"+e.id);
+            console.log("  - "+e.type+"#"+e.id);
 
     		elements_rendered.push(t);
     	});

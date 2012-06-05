@@ -8,7 +8,6 @@ router = Backbone.Router.extend({
 
     home: function() {
     	var router = this;
-
     	router.send(views.Home, {});
     },
 
@@ -40,6 +39,24 @@ router = Backbone.Router.extend({
 
     error: function(error) {
     	this.send(views.Error, _.isArray(error) ? error.shift() : error);
+    },
+
+    path : function(info){
+        var p = [];
+
+        p.push({
+            class: "project type",
+            name: "project"
+        });
+
+
+        p.push({
+            class: "project name",
+            url: "/project/2",
+            name: "Voix du Nord"
+        });
+
+        return p;
     },
 
     fetcher: function() {
