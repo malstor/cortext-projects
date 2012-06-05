@@ -1,9 +1,10 @@
-<div class="image comment2">
+<div class="element message" id="message-<%= e.id %>">
 
-<h3><%= e.author %></h3> <span class="data3"><%= e.date_formated %></span>
+	<h3><%= e.author %></h3>
+	<span class="date"><%= e.date_formated %></span>
 
-<div class="comment2b"></div>
-   <%= marked(e.content) %>
-</div>
+	<div class="body">
+	   <%= marked(e.content) %>
+	</div>
 
 </div>

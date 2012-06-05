@@ -1,5 +1,24 @@
-<div id="elements" class="project elements">
-<% _.each(elements, function(e){
-	console.log(templates[e.type]( { e : e } ));
-}); %>
+<div class="project-meta">
+
+<div class="info">
+	<div class="date_created date">created: <span><%= info.date_created %></span></div>
+	<div class="date_updated date">updated: <span><%= info.date_updated %></span></div>
 </div>
+
+<div class="members" id="member">
+	<% _.each(members, function(member){ %>
+	<div class="member">
+		<div class="name"><%= member.name %></div>
+	</div>
+	<% }); %>
+</div>
+
+</div><!-- /project-meta -->
+
+<div id="elements" class="project elements">
+
+<% _.each(elements, function(e){ %>
+<%= e %>
+<% }); %>
+
+</div><!-- /elements -->

@@ -8,12 +8,6 @@
 <script src="/assets/bones/all.js?<%= version %>" type="text/javascript" charset="utf-8"></script>
 
 <link rel="stylesheet" href="/assets/server/css/reset.css" type="text/css" />  
-<link rel="stylesheet" href="/assets/server/css/style-general.css" type="text/css" />
-<link rel="stylesheet" href="/assets/server/css/style-projet.css" type="text/css" />
-<link rel="stylesheet" href="/assets/server/css/style-menu-projet.css" type="text/css" />
-<link rel="stylesheet" href="/assets/server/css/sidebar-left_projet.css" type="text/css" />
-<link rel="stylesheet" href="/assets/server/css/sidebar-right_projet.css" type="text/css" />
-<link rel="stylesheet" href="/assets/server/css/form-login.css" type="text/css" />
 
 </head>
 

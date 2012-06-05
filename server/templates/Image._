@@ -1,7 +1,10 @@
-<div class="image rendu element">
+<div class="element image" id="image-<%= e.id %>">
 
-<h3>tubes (analysis.py/12:02 21.06.2011)</h3>
-<span class="data3"><%= e.date_formated %></span>
-<a href="cortext_objet2.php"><img src="<%= e.url %>" alt="resultat-script" /></a>
+	<h3>tubes (analysis.py/12:02 21.06.2011)</h3>
 
+	<span class="date"><%= e.date_formated %></span>
+
+	<div class="body">
+		<a href="cortext_objet2.php"><img src="<%= e.url %>" alt="resultat-script" /></a>
+	</div>
 </div>

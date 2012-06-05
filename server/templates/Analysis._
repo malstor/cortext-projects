@@ -1,37 +1,42 @@
-<div class="analysis element">
-<div id="titre"><h3>analysis.py <a href="#">parameters</a> - <a href="#">logs</a></h3>
-<h4><%= e.date_formated %></h4></div>
+<div class="element analysis" id="analysis-<%= e.id %>">
 
-<div class="fichier">
-<div class="img-pdf">pdf</div>
-<p class="name-pdf">mon super nom de fichier un peu long</p>
-<div class="bloc">            
-<span class="infos"><a href="#">5 comments</a></span><br/>
-<span class="data">23:12 12.05.2012</span>
-</div></div>
+<div class="info">
+	<h3>analysis.py</h3>
+	<span class="extra"><a href="#">parameters</a> - <a href="#">logs</a></span>
+	<span class="date><%= e.date_formated %></span>
+</div><!-- /info -->
 
-<div class="fichier">
-<div class="img-pdf">pdf</div>
-<p class="name-pdf">mon super nom de fichier un peu long</p>
-<div class="bloc">            
-<span class="infos"><a href="#">5 comments</a></span><br/>
-<span class="data">23:12 12.05.2012</span>
-</div></div>
-        
-<div class="fichier">
-<div class="img-pdf">pdf</div>
-<p class="name-pdf">mon super nom de fichier un peu long</p>
-<div class="bloc">            
-<span class="infos"><a href="#">5 comments</a></span><br/>
-<span class="data">23:12 12.05.2012</span>
-</div></div>          
+<div class="files">
+	<div class="file">
+		<div class="icon img-pdf">pdf</div>
+		<div class="name">mon super nom de fichier un peu long</div>
 
+		<div class="info">            
+			<span class="comments"><a href="#">5 comments</a></span>
+			<span class="date">23:12 12.05.2012</span>
+		</div>
+	</div><!-- /file: 1 -->
 
-<div class="fichier">
-<div class="img-pdf">pdf</div>
-<p class="name-pdf">mon super nom de fichier un peu long</p>
-<div class="bloc">            
-<span class="infos"><a href="#">5 comments</a></span><br/>
-<span class="data">23:12 12.05.2012</span>
-</div></div>
+	<div class="file">
+		<div class="icon img-pdf">pdf</div>
+		<div class="name">mon super nom de fichier un peu long</div>
+
+		<div class="info">            
+			<span class="comments"><a href="#">5 comments</a></span>
+			<span class="date">23:12 12.05.2012</span>
+		</div>
+	</div><!-- /file: 2 -->
+
+	<div class="file">
+		<div class="icon img-pdf">pdf</div>
+		<div class="name">mon super nom de fichier un peu long</div>
+
+		<div class="info">            
+			<span class="comments"><a href="#">5 comments</a></span>
+			<span class="date">23:12 12.05.2012</span>
+		</div>
+	</div><!-- /file: 3 -->
+
+</div><!-- /files -->
+
 </div>
