@@ -43,19 +43,27 @@ router = Backbone.Router.extend({
 
     path : function(model){
         var p = [];
-        var info = model.get("info");
-        var type = model.constructor.title;
 
-        p.push({
-            class: type+" type",
-            name: type
-        });
+        if(model){
+            var info = model.get("info");
+            var type = model.constructor.title;
 
-        p.push({
-            class: "project name",
-            url: info.url,
-            name: info.title
-        });
+            p.push({
+                class: type+" type",
+                name: type
+            });
+
+            p.push({
+                class: "project name",
+                url: info.url,
+                name: info.title
+            });
+        } else {
+            p.push({
+                class: "dashboard",
+                name: "dashboard"
+            });
+        }
 
         return p;
     },

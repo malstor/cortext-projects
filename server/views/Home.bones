@@ -1,6 +1,6 @@
 view = views.Main.extend({
 	initialize: function(){
-		console.log("opening dashboard ");
+		console.log("opening dashboard");
 	},
 
     render: function() {
