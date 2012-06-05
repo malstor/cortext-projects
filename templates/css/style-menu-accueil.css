@@ -3,22 +3,15 @@
 
 
 #menu{
-height:22px;
-margin : 0px auto 0px auto;
-width:1280px;
-	/*background-color:#EEF2F6;
-	border-bottom-width: 2px;
-	border-bottom-style: solid;
-	border-bottom-color: #9C9C9C;
-	margin-top:-1px;*/
+	height:22px;
+	margin : 0px auto 0px auto;
+	width:1280px;
 	}	
-	
 	
 #menu img{
 	float:left;
 	margin-left:5px;
-/*	margin-top:1px;
-*/	}		
+	}		
 	
 	ul {
  	margin:0;
@@ -61,8 +54,6 @@ width:1280px;
 	border-bottom-color: #4AC1CF;
  	}		
 
-
-
 #menu a{
 	font-size:11px;
 	font-family:Arial, Helvetica, sans-serif;
@@ -70,9 +61,7 @@ width:1280px;
 	color:#FFF;
 	text-align: center;
 	}
-	
-	
-	
+		
 .menu1:hover, #login-link:hover{
 	background-color:#777777;	
 	}	
@@ -84,5 +73,3 @@ width:1280px;
 .menu1c:hover{
 	background-color:#3974db;	
 	}		
-		
-
