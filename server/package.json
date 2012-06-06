@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "dependencies" : {
   	"bones" : "2.0.1",
-    "pyyaml" : "*"
+    "pyyaml" : "*",
+    "marked" : "*"
   },
   "devDependencies": {},
   "optionalDependencies": {},
