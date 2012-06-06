@@ -1,6 +1,7 @@
 router = Backbone.Router.extend({
     routes: {
 		'/': 'home',
+        '/dashboard': 'dashboard',
         // '/user/:user': 'user',
         '/project/:project': 'project'
         // '/project/:project/object/:object': 'object'
@@ -9,6 +10,19 @@ router = Backbone.Router.extend({
     home: function() {
     	var router = this;
     	router.send(views.Home, {});
+    },
+
+    dashboard: function() {
+        var router = this,
+            fetcher = this.fetcher(),
+            projects = new models.projects();
+
+        fetcher.push(projects);
+        fetcher.fetch(function(error){
+            if (error) return router.error(error);
+            // console.log(projects);
+            router.send(views.Dashboard, { projects : projects });
+        });
     },
 
     project: function(project_id){
