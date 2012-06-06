@@ -1,6 +1,6 @@
 <div class="element message" id="message-<%= e.id %>">
 
-	<h3><%= e.author %></h3>
+	<h3 class="author"><%= e.author.name %></h3>
 	<span class="date"><%= e.date_formated %></span>
 
 	<div class="body">
