@@ -1,11 +1,15 @@
 <div class="project-meta">
 
 <div class="info">
+	<h3>informations</h3>
+
 	<div class="date_created date">created: <span><%= format_date(info.date_created) %></span></div>
 	<div class="date_updated date">updated: <span><%= format_date(info.date_updated) %></span></div>
 </div>
 
 <div class="members" id="member">
+	<h3>participants</h3>
+
 	<% _.each(members, function(member){ %>
 	<div class="member">
 		<div class="name"><%= member.name %></div>
