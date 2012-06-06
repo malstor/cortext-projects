@@ -308,7 +308,7 @@
     	<div id="sid1">
         <!--<div id="bt-purple"><a href="#"><h2>start an analysis</h2></a></div>
      		<div id="bt-purple2"><a href="#"><h3>add a document</h3></a></div>-->
-        <p class="bouton violet">Create new project</p> 
+        <p class="bouton bleu">Create new project</p> 
         <p class="bouton noir">Add a document</p> 
         </div>
         

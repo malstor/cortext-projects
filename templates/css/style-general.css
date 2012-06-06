@@ -7,15 +7,13 @@ body {
 	background:url(../images/body.png);
 	background-repeat:repeat-x;
 	background-attachment:fixed;
-	overflow-x:hidden;/*pour empecher le scroll horizontal du navigateur*/
+	overflow-x:hidden; /*pour empecher le scroll horizontal du navigateur*/
 	}
 	
 		
 #conteneur-principal {
 	z-index:2;
 	margin : 0px auto 0px auto;
-/*	background-image:url(../images/maquette-page.png);
-	*/
 	width:1280px;
 	position:relative;
 	
@@ -26,7 +24,7 @@ body {
 /*---------------------------contenu-centre-----------------------------------------*/
 
 #container{
-	background:url(../images/slide-droite.png);
+	background:url(../images/slide-droite2.png);
 	background-repeat:repeat-y;
 	background-position:right;
 	position:absolute;
@@ -282,11 +280,6 @@ body {
 	color:#909090;	
 	}
 	
-/*input:focus,
-textarea:focus{
-	border: thin solid #699;
-	}*/
-	
 .img-commentaire{
 	width:75px;
 	float:right;
@@ -304,8 +297,6 @@ textarea:focus{
 	}
 	
 	.bouton-com:hover{
-/*	background:#0C0;
-*/
 	background:#54cf4c;
 		}
 	
