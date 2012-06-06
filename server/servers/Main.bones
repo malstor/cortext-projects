@@ -1,2 +1,1 @@
 server = Bones.Server.extend();
-

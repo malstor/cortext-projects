@@ -1,6 +1,9 @@
-#!/usr/bin/env node
 bones  = require('bones');
 marked = require('marked');
+
+require('bones').plugin.config.secret = '4b6be4b408195388def323740e7cc20053fa6f57f46faf57816a99ae2a257af2';
+
+require('bones-auth');
 
 require('./views/Main');
 

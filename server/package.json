@@ -5,7 +5,9 @@
   "dependencies" : {
   	"bones" : "2.0.1",
     "pyyaml" : "*",
-    "marked" : "*"
+    "marked" : "*",
+    "email": "0.2.3",
+    "bones-auth" : "1.3.10"
   },
   "devDependencies": {},
   "optionalDependencies": {},
