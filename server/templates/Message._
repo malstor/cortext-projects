@@ -1,7 +1,9 @@
 <div class="element message" id="message-<%= e.id %>">
 
-	<h3 class="author"><%= e.author.name %></h3>
-	<span class="date"><%= e.date_formated %></span>
+	<div class="info">
+		<h3 class="author"><%= e.author.name %></h3>
+		<span class="date"><%= e.date_formated %></span>
+	</div><!-- /info -->
 
 	<div class="body">
 	   <%= marked(e.content) %>
