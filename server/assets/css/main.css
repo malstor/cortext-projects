@@ -190,11 +190,11 @@ input:focus{
 	
 	
 	
-.info{
+.project-meta .info{
 	height:100px;
 	}
 	
-.info h3{
+.project-meta .info h3{
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 11px;
 	font-weight: normal;
@@ -208,7 +208,7 @@ input:focus{
 	border-bottom-color: #EEF2F6;
 	}	
 
-.date{
+.project-meta .date{
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 12px;
 	color: #909090;
@@ -227,9 +227,7 @@ input:focus{
 	padding-bottom:2px;
 	padding-left:8px;
 	width:245px;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-	border-bottom-color: #EEF2F6;
+	border-bottom-width: 0px solid #EEF2F6;
 	}	
 	
 .member{
@@ -243,14 +241,47 @@ input:focus{
 #elements{
 	width:765px;
 	float:left;
-/*	margin-left:255px;
-*/	}	
+	margin-top: 12px;
+/*	margin-left:255px;*/
+	}	
+
+/*-----------------commentaires 1-------------------------*/
+
+.element {
+	width: 750px;
+	border: 1px solid #EEF2F6;
+	margin-left: 8px;
+    margin-top: 10px;
+}
+
+.element .info {
+	border-bottom: 1px solid #EEF2F6;
+	padding: 3px 10px;
+	position: relative;
+}
+
+.element .info h3{
+	display: inline-block;
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#909090;
+	font-weight: normal;
+	line-height:17px;
+}
+
+.element .info .date {
+	float: right;
+	font: normal 12px/17px Arial, sans-serif;
+	color:#909090;
+}
+
+.element .info .extra {
+	display: inline-block;
+}
 
 .message{	
-/*	height:100px;
-*/	width:750px;
-	margin-left: 8px;
-    margin-top: 18px;
+/*	height:100px; */
+	/*border:1px solid #EEF2F6;	
 	border-top-width: 1px;
 	border-top-style: solid;
 	border-top-color: #EEF2F6;
@@ -259,76 +290,104 @@ input:focus{
 	border-right-color: #EEF2F6;
 	border-left-width: 1px;
 	border-left-style: solid;
-	border-left-color: #EEF2F6;	
+	border-left-color: #EEF2F6;	*/
 	}		
 	
-.message h3{	
-	font-size:12px;
-	font-family:Arial, Helvetica, sans-serif;
-	color:#909090;
-	font-weight: normal;
-/*	float:left;
-*/	line-height:17px;
-	margin-left:10px;
-	margin-top:3px;
-	}			
-
-/*.message .body{
-height: 20px;
-width: 750px;
-border-bottom-width: 1px;
-border-bottom-style: solid;
-border-bottom-color: 
-#EEF2F6;}*/
-
 	
-.message .date{
+
+
+.message .body{
+	width:750px;
+	/*float:left;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #EEF2F6;*/	
+	}
+	
+.message .body p{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color:#909090;
+	margin-top:5px;
+	margin-left:10px;
+	margin-right:10px;
+	margin-bottom:5px;
+	text-align: justify;
+	line-height:14px;
+	
+	}	
+
+
+.analysis{
+}
+
+.analysis .info{
+}
+	
+.analysis .info h3{
+}	
+	
+.analysis .info .date{	
+}
+
+.analysis .info .author{
 	font-size:12px;
 	font-family:Arial, Helvetica, sans-serif;
 	color:#909090;
 	font-weight: normal;
 	float:right;
 	line-height:17px;
-	margin-right:10px;
-	margin-top:3px;
+	margin-right:5px;
+	display:none;		
 	}	
-
-
+.analysis .info .extra a{
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#BEBEBE;
+	font-weight: normal;
+	/*float:left; */
+	line-height:17px;
+	margin-left:5px;
+	}				
 	
-.message .body{
+	
+.image{
+/*	height:365px;
+	width:750px;*/
+/*	border: 1px solid #EEF2F6; */
+	}	
+/*.image .info{	
 	height:20px;
 	width:750px;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-	border-bottom-color: #EEF2F6;	
-	}
+		border: 1px solid #EEF2F6;
+	}	*/	
 	
-.message .body p{
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
-	font-weight: normal;
+/*.image .info h3{
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
 	color:#909090;
-	margin-top:5px;
-	margin-left:10px;
-	margin-right:10px;
-	margin-bottom:5px;
-	text-align: justify;
-	line-height:14px;
+	font-weight: normal;
 	float:left;
-	}	
-
-
-	
-.message .body p{
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
-	font-weight: normal;
-	color:#909090;
-	margin-top:5px;
+	line-height:17px;
 	margin-left:10px;
-	margin-right:10px;
-	margin-bottom:5px;
-	text-align: justify;
-	line-height:14px;
-	}
-			
+	margin-top:3px;
+	}*/
+.image .date{
+}
+	
+.image .info .author{
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#BEBEBE;
+	float:left;
+	line-height:17px;
+	margin-top:3px;
+	margin-left:10px;
+	display:none;
+	}			
+	
+.image .body img{
+	
+	margin-left:7px;
+	}		

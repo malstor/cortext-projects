@@ -13,19 +13,15 @@ models.projects.prototype.sync = function(method, model, options) {
 
     var files = fs.readdirSync(projectDir);
 
-    function fetch_next(current){
-        yaml.load(projectDir+files[current], function(error, data){
-            // ): chemo !
-            if (current > files.length - 1){
-                options.success(projects);
-            } else {
-                // console.log(error);
-                // console.log(current);
-                projects.push(data.info);
-                fetch_next(current+1);
-            }
-        });
-    }
+    var load_defer = _.after(files.length, function(){
+        options.success(projects);
+    });
+    _.each(files, function(file){
+        yaml.load(projectDir+file, function(error, data){
+            if(error) console.log(error)
 
-    fetch_next(0);
+            projects.push(data.info);
+            load_defer();
+        });
+    });
 };
