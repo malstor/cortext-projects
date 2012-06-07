@@ -27,8 +27,3 @@ models.user.prototype.sync = function(method, model, options) {
         options.success(resp);
     });
 };
-
-models.user.prototype.filter = function() {
-    var user = this;
-    delete user.password;
-};

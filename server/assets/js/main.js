@@ -17,6 +17,8 @@ $(document).ready(function(){
 		console.log(user);
 		console.log(user.url());
 		var response = user.login(user.toJSON());
+//		var response = user.login();
+
 		console.log(user);
 	});	
 });

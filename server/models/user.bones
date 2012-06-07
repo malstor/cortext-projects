@@ -1,5 +1,5 @@
 model = models.User;
-model = model.extend(Backbone.Model);
+// model = model.extend(Backbone.Model);
 
 model = model.extend({
 	initialize: function(){
@@ -10,7 +10,6 @@ model = model.extend({
 		this.bind("auth:status", function(e){
 			console.log("log success");
 		});
-
 	},
 	url: function() {
         return '/api/user/' + encodeURIComponent(this.get('id'));
