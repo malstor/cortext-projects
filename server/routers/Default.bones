@@ -2,6 +2,7 @@ router = Backbone.Router.extend({
     routes: {
 		'/': 'home',
         '/dashboard': 'dashboard',
+        '/login': 'login',
         // '/user/:user': 'user',
         '/project/:project': 'project'
         // '/project/:project/object/:object': 'object'
@@ -23,6 +24,11 @@ router = Backbone.Router.extend({
             // console.log(projects);
             router.send(views.Dashboard, { projects : projects });
         });
+    },
+
+    login: function() {
+        var router = this;
+        router.send(views.Login, {});
     },
 
     project: function(project_id){
