@@ -172,8 +172,7 @@
 	height:12px;
 	width:12px;
 	background:#a3319f;
-/*	background:#48587b;
-*/	float:left;
+	float:left;
 	margin-left:100px;
 	}
 
@@ -189,7 +188,7 @@
 	margin-bottom:10px;
 	height:40px;
 	border: 1px solid #EEF2F6;
-}
+	}
 
 .proj h3{
 	font-family:Arial, Helvetica, sans-serif;
@@ -197,7 +196,8 @@
 	color:#777777;
 	font-style:normal;
 	margin-left:45px;
-	margin-top:-14px;}
+	margin-top:-14px;
+	}
 
 .creat{
 	font-family:Arial, Helvetica, sans-serif;
@@ -206,7 +206,8 @@
 	font-style:normal;
 	float:right;
 	margin-top:-15px;
-	margin-right:10px;}
+	margin-right:10px;
+	}
 
 .proj-icon{
 	height:18px;
@@ -215,12 +216,6 @@
 	background-repeat:no-repeat;
 	margin-top:12px;
 	margin-left:15px;
-	
-	/*height:15px;
-	width:15px;
-	background:url(../images/proj-icon2.gif);
-	margin-top:12px;
-	margin-left:15px;*/
 	}
 
 #trait {
@@ -242,7 +237,6 @@
 #lastpost h3{
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:16px;
-/*	color:#48587b;*/
 	color:#EE6E21;
 	font-style:normal;
 	margin-left:3px;
@@ -255,35 +249,46 @@
 	margin-left:8px;
 	}
 	
+.proj2{
+	margin-bottom:10px;
+	border: 1px solid #EEF2F6;
+	}
+
 .autor{
-	float:left;
-	font-family:Arial, Helvetica, sans-serif;
-	font-size:13px;
-	color:#666768;
-	margin-top:8px;
-	margin-left:10px;
+	width:750px;
+	margin-top:12px;
+	margin-bottom:12px;
+	margin-left:15px;
 	}			
 
+.autor img{
+	float:left;
+	}	
+
+
 .min_autor{	
-	width:108px;
-	height:10px;
-	font-family:Arial, Helvetica, sans-serif;
-	font-size:12px;
-	color:#CCCBCC;
+	color: #777777;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    margin-left: 30px;
+    margin-top: 3px;
 	}			
 	
 .title{
-	float:left;
+	margin-left:195px;
+	margin-right:75px;
+	margin-bottom:18px;
+	}
+	
+.title p{
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:13px;
-	color:#909090;
-	margin-top:15px;
-	margin-left:150px;
-	width:190px;
 	}
 	
 .title a{
 	color:#909090;
+	text-decoration:none;
 	}	
 	
 .title a:hover{
@@ -291,10 +296,9 @@
 	}
 	
 .date_actu{
-	float:left;
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:12px;
-	color:#CCCBCE;
-	margin-top:17px;
-	margin-left:230px;
+	color:#777777;
+	float:right;
+	margin-right:10px;
 	}

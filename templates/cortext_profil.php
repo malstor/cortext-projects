@@ -217,81 +217,69 @@
         </div>
         <div id="profil_comment"> 
               
-        <div class="proj">             
+        <div class="proj2">             
         <div class="autor">
-        Chloé D<br/>
-        <div class="min_autor">message posted by</div>
+        <img src="images/post_actu.png" alt="icon-message" />
+       <!-- Chloé D<br/>-->
+        <div class="min_autor">Algues vertes</div>
         </div>
-        <div class="title"><a href="#">Re : new project “algues vertes”</a></div>
+        
         <div class="date_actu">14.05.12</div>
+       <div class="title">  <a href="#">   <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p></a>       
+        </div> 
+        
+		<div class="date_actu">14.05.12</div>
+		<div class="title">  <a href="#">   <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p></a>       
+        </div>
+           
+  	   <div class="date_actu">14.05.12</div>
+       <div class="title">  <a href="#">   <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p></a>       
+        </div> 
+        
+       <div class="date_actu">14.05.12</div>
+       <div class="title">  <a href="#">   <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p></a>       
         </div>
         
-             <div class="proj">
-             <div class="autor">
-        Chloé D<br/>
-        <div class="min_autor">message posted by</div>
-        </div>
-        <div class="title"><a href="#">Re : new project “algues vertes”</a></div>
-        <div class="date_actu">10.05.12</div>
-             </div>
-             
-             <div class="proj"><div class="autor">
-        Chloé D<br/>
-        <div class="min_autor">message posted by</div>
-        </div>
-        <div class="title"><a href="#">Re : new project “algues vertes”</a></div>
-        <div class="date_actu">10.05.12</div></div>
-        
-             <div class="proj"><div class="autor">
-        Chloé D<br/>
-        <div class="min_autor">message posted by</div>
-        </div>
-        <div class="title"><a href="#">Re : transformation du site</a></div>
-        <div class="date_actu">03.05.12</div></div>
-        
-             <div class="proj"><div class="autor">
-        Chloé D<br/>
-        <div class="min_autor">message posted by</div>
-        </div>
-        <div class="title"><a href="#">transformation du site</a></div>
-        <div class="date_actu">03.05.12</div></div>
-        
-             <div class="proj"><div class="autor">
-        Chloé D<br/>
-        <div class="min_autor">message posted by</div>
-        </div>
-        <div class="title"><a href="#">Re : new project “algues vertes”</a></div>
-        <div class="date_actu">28.04.12</div></div>
-        
-             <div class="proj"><div class="autor">
-        Chloé D<br/>
-        <div class="min_autor">message posted by</div>
-        </div>
-        <div class="title"><a href="#">new project “algues vertes”</a></div>
-        <div class="date_actu">27.04.12</div></div>
-        
-             <div class="proj"><div class="autor">
-        Chloé D<br/>
-        <div class="min_autor">message posted by</div>
-        </div>
-        <div class="title"><a href="#">project nouveau script</a></div>
-        <div class="date_actu">05.02.12</div></div>
-        
-             <div class="proj"><div class="autor">
-        Chloé D<br/>
-        <div class="min_autor">message posted by</div>
-        </div>
-        <div class="title"><a href="#">Re : modification template</a></div>
-        <div class="date_actu">05.02.12</div></div>
-        
-             <div class="proj"><div class="autor">
-        Chloé D<br/>
-        <div class="min_autor">message posted by</div>
-        </div>
-        <div class="title"><a href="#">modification template</a></div>
-        <div class="date_actu">14.12.11</div></div>   
         
         
+         <div class="proj2">             
+        <div class="autor">
+        <img src="images/post_actu.png" alt="icon-message" />
+       <!-- Chloé D<br/>-->
+        <div class="min_autor">Les économistes</div>
+        </div>
+        
+        <div class="date_actu">14.05.12</div>
+       <div class="title">  <a href="#">   <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p></a>       
+        </div> 
+        
+		<div class="date_actu">14.05.12</div>
+		<div class="title">  <a href="#">   <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p></a>       
+        </div>
+           
+  	  <div class="proj2">             
+        <div class="autor">
+        <img src="images/post_actu.png" alt="icon-message" />
+       <!-- Chloé D<br/>-->
+        <div class="min_autor">Voix du nord</div>
+        </div>
+        
+        <div class="date_actu">14.05.12</div>
+       <div class="title">  <a href="#">   <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p></a>       
+        </div> 
+        
+		<div class="date_actu">14.05.12</div>
+		<div class="title">  <a href="#">   <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p></a>       
+        </div>
+        
+       <div class="date_actu">14.05.12</div>
+		<div class="title">  <a href="#">   <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p></a>       
+        </div> 
+        
+        
+                
+        </div>
+                  
         </div><!--fin div profil_comment -->
          
 
