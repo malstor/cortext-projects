@@ -6,37 +6,32 @@ body {
 	overflow-x:hidden; 
 	}
 	
-	
 #conteneur-principal {
 	z-index:2;
 	margin : 0px auto 0px auto;
 	width:1280px;
 	position:relative;
-	
 	}
 
 #header {
-height: 22px;
-position: fixed;
-width: 1280px;
-z-index: 10;
-}	
+	height: 22px;
+	position: fixed;
+	width: 1280px;
+	z-index: 10;
+	}	
 
 /*----------------------menu----------------------*/
 
 #menu {
-height: 22px;
-background-color: #EEF2F6;
-border-bottom-width: 2px;
-border-bottom-style: solid;
-border-bottom-color: #9C9C9C;
-position: relative;
-}
+	height: 22px;
+	background-color: #EEF2F6;
+	border-bottom: 2px solid #9C9C9C;
+	position: relative;
+	}
 
 #menu img {
-float: left;
-}
-
+	float: left;
+	}
 
 #path ul {
  	margin:0;
@@ -50,9 +45,7 @@ float: left;
 	padding-left:7px;
 	padding-right:7px;
 	line-height:20px;
-	border-bottom-width: 3px;
-	border-bottom-style: solid;
-	border-bottom-color: #9c96a7;
+	border-bottom: 3px solid #9c96a7;
  	}
 	
 #path .Project{
@@ -62,45 +55,39 @@ float: left;
 	padding-left:7px;
 	padding-right:7px;
 	line-height:20px;
-	border-bottom-width: 3px;
-	border-bottom-style: solid;
-	border-bottom-color: #32B9E5;
+	border-bottom: 3px solid #32B9E5;
  	}	
 	
 #path .Project:hover{
-background-color:#3974db;	
+	background-color:#3974db;	
 	}	
 	
 #path .project:hover{
-background-color:#777777;	
+	background-color:#777777;	
 	}
 			
 #path a{
-font-size: 11px;
-font-family: Arial, Helvetica, sans-serif;
-text-decoration: none;
-color:white;
-text-align: center;
-}
-
+	font: normal 11px Arial, sans-serif;
+	text-decoration: none;
+	color:white;
+	text-align: center;
+	}
 
 /*----------------------formulaire/login----------------------*/
 
 #login-panel {
-z-index: 5;
-position: absolute;
-top: 26px;
-height: 240px;
-right: 0px;
-width: 420px;
-padding: 10px 15px 5px 15px;
-background: #3C3C3C;
-font-size: 15px;
-font-family: Arial, Helvetica, sans-serif;
-color: white;
-display: none;
-font-style: normal;
-}	
+	z-index: 5;
+	position: absolute;
+	top: 26px;
+	height: 240px;
+	right: 0px;
+	width: 420px;
+	padding: 10px 15px 5px 15px;
+	background: #3C3C3C;
+	font: normal 15px Arial, sans-serif;
+	color: white;
+	display: none;
+	}	
 
 #login-link{	
     position: absolute;
@@ -110,9 +97,7 @@ font-style: normal;
     background: #3C3C3C;
 	height:12px;
 	line-height:15px;
-	border-bottom-width: 3px;
-	border-bottom-style: solid;
-	border-bottom-color: #9c96a7;
+	border-bottom: 3px solid #9c96a7;
     padding: 3px 5px 5px 5px;
     color: #FFF;
 }
@@ -120,25 +105,26 @@ font-style: normal;
 .user{
 	line-height: 1.5;
 	margin-left:78px;
-}
+	}
 
 .password{
 	margin-left:83px;
-}
+	}
+	
 .email{
 	line-height: 1.8;
 	margin-left:112px;
-}
+	}
 
 .sign{
 	margin-left:155px;
 	line-height: 1.8;
-}
+	}
 
 form p{
 	margin-top:10px;
-	margin-left:-5px;}
-	
+	margin-left:-5px;
+	}
 	
 .enter{
 	background:#34B02C;
@@ -150,7 +136,7 @@ form p{
 	margin-top:10px;
 	border:none;
 	padding-bottom:4px;
-} 
+	} 
 
 .enter:hover{
 	background:#54cf4c;
@@ -171,6 +157,8 @@ input:focus{
 	}	
 	
 	
+/*--------------------main------------------------*/
+
 #main{
 	background:url(../images/slide-droite2.png);
 	background-repeat:repeat-y;
@@ -186,54 +174,42 @@ input:focus{
 	z-index:2;
 	height:inherit;
 	margin-top:0px;
-	margin-bottom:0px;}	
-	
-	
-	
+	margin-bottom:0px;
+	}	
+		
 .project-meta .info{
 	height:100px;
 	}
 	
 .project-meta .info h3{
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 11px;
-	font-weight: normal;
+	font: normal 11px Arial, sans-serif;
 	color: #BEBEBE;
 	margin: 10px 10px 10px 0px;
 	width:245px;
 	padding-bottom:2px;
 	padding-left:8px;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-	border-bottom-color: #EEF2F6;
+	border-bottom: 1px solid #EEF2F6;
 	}	
 
 .project-meta .date{
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
+	font: normal 12px/1.2em Arial, sans-serif;
 	color: #909090;
 	margin-top:5px;
 	margin-left:10px;
-	line-height:1.2;
-	
 	}	
 	
 .members h3{
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 11px;
-	font-weight: normal;
+	font: normal 11px Arial, sans-serif;
 	color: #BEBEBE;
 	margin: 10px 10px 10px 0px;
 	padding-bottom:2px;
 	padding-left:8px;
 	width:245px;
-	border-bottom-width: 0px solid #EEF2F6;
+	border-bottom: 1px solid #EEF2F6;
 	}	
 	
 .member{
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 11px;
-	font-style: normal;
+	font: normal 11px Arial, sans-serif;
 	color:#909090;
 	margin-left: 10px;
 	}		
@@ -242,152 +218,133 @@ input:focus{
 	width:765px;
 	float:left;
 	margin-top: 12px;
-/*	margin-left:255px;*/
 	}	
 
-/*-----------------commentaires 1-------------------------*/
+
+
+/*-----------------messages-------------------------*/
+
 
 .element {
 	width: 750px;
 	border: 1px solid #EEF2F6;
 	margin-left: 8px;
     margin-top: 10px;
-}
+	}
 
 .element .info {
 	border-bottom: 1px solid #EEF2F6;
 	padding: 3px 10px;
 	position: relative;
-}
+	}
 
 .element .info h3{
 	display: inline-block;
 	font-size:12px;
-	font-family:Arial, Helvetica, sans-serif;
+	font-family:Arial, sans-serif;
 	color:#909090;
 	font-weight: normal;
 	line-height:17px;
-}
+	}
 
 .element .info .date {
 	float: right;
 	font: normal 12px/17px Arial, sans-serif;
 	color:#909090;
-}
+	}
 
 .element .info .extra {
 	display: inline-block;
-}
-
-.message{	
-/*	height:100px; */
-	/*border:1px solid #EEF2F6;	
-	border-top-width: 1px;
-	border-top-style: solid;
-	border-top-color: #EEF2F6;
-	border-right-width: 1px;
-	border-right-style: solid;
-	border-right-color: #EEF2F6;
-	border-left-width: 1px;
-	border-left-style: solid;
-	border-left-color: #EEF2F6;	*/
-	}		
-	
-	
-
+	}
 
 .message .body{
 	width:750px;
-	/*float:left;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-	border-bottom-color: #EEF2F6;*/	
 	}
 	
 .message .body p{
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
-	font-weight: normal;
+	font: normal 12px/14px Arial, sans-serif;
 	color:#909090;
-	margin-top:5px;
-	margin-left:10px;
-	margin-right:10px;
-	margin-bottom:5px;
+	margin: 5px 10px;
 	text-align: justify;
-	line-height:14px;
-	
 	}	
 
 
-.analysis{
-}
 
-.analysis .info{
-}
-	
-.analysis .info h3{
-}	
-	
-.analysis .info .date{	
-}
+/*-------------------analysis--------------------------*/
+
 
 .analysis .info .author{
-	font-size:12px;
-	font-family:Arial, Helvetica, sans-serif;
+	font: normal 12px/17px Arial, sans-serif;
 	color:#909090;
-	font-weight: normal;
 	float:right;
-	line-height:17px;
 	margin-right:5px;
 	display:none;		
-	}	
+	}
+		
 .analysis .info .extra a{
-	font-size:12px;
-	font-family:Arial, Helvetica, sans-serif;
+	font: normal 12px/17px Arial, sans-serif;
 	color:#BEBEBE;
-	font-weight: normal;
-	/*float:left; */
-	line-height:17px;
 	margin-left:5px;
 	}				
 	
-	
-.image{
-/*	height:365px;
-	width:750px;*/
-/*	border: 1px solid #EEF2F6; */
-	}	
-/*.image .info{	
-	height:20px;
-	width:750px;
-		border: 1px solid #EEF2F6;
-	}	*/	
-	
-/*.image .info h3{
-	font-size:12px;
-	font-family:Arial, Helvetica, sans-serif;
-	color:#909090;
-	font-weight: normal;
-	float:left;
-	line-height:17px;
-	margin-left:10px;
-	margin-top:3px;
-	}*/
-.image .date{
-}
-	
 .image .info .author{
-	font-size:12px;
-	font-family:Arial, Helvetica, sans-serif;
+	font: normal 12px/17px Arial, sans-serif;
 	color:#BEBEBE;
 	float:left;
-	line-height:17px;
 	margin-top:3px;
 	margin-left:10px;
 	display:none;
 	}			
 	
 .image .body img{
-	
 	margin-left:7px;
 	}		
+
+
+
+/*--------------------fichiers----------------------*/
+
+	
+.analysis .file{
+	position:relative;	
+	border: 1px solid #EEF2F6;
+	height:44px;	
+	}
+
+.analysis .file .img-pdf {
+    background-color: #EEF2F6;
+    border: 1px solid #EEF2F6;
+    color: #909090;
+    float: left;
+	font: normal 12px/40px Arial, sans-serif;
+    height: 38px;
+	margin:2px 0px 2px 5px;
+    text-align: center;
+    width: 28px;
+	}
+		
+.analysis .file .name {
+	font: normal 12px/45px Arial, sans-serif;
+	color: #909090;
+    float: left;
+    margin-left: 15px;
+	}
+	
+.analysis .file .info {
+	background: url("../images/dialogue.png") no-repeat scroll right center transparent;
+    float: right;
+    margin-right: 10px;
+    margin-top: 5px;
+	border-style:none;
+	}
+
+.analysis .file .info span { 
+	display:block;
+	font: normal 11px Arial, sans-serif;
+	color: #909090;
+    padding-right: 30px;
+  	}
+  
+.analysis .file .info span a{
+	color: #BEBEBE; 
+	}
