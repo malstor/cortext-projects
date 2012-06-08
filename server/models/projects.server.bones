@@ -13,7 +13,7 @@ models.projects.prototype.sync = function(method, model, options) {
 
     var files = fs.readdirSync(projectDir);
 
-    console.log(session);
+//    console.log(session);
 
     var load_defer = _.after(files.length, function(){
         options.success(projects);
