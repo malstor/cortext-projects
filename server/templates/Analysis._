@@ -12,9 +12,8 @@
 		<div class="icon img-pdf">pdf</div>
 		<div class="name">mon super nom de fichier un peu long</div>
 
-		<div class="info-analysis">            
+		<div class="info">            
 			<span class="comments"><a href="#">5 comments</a></span>
-			<br/>
 			<span class="date">23:12 12.05.2012</span>
 		</div>
 	</div><!-- /file: 1 -->
@@ -23,9 +22,8 @@
 		<div class="icon img-pdf">pdf</div>
 		<div class="name">mon super nom de fichier un peu long</div>
 
-		<div class="info-analysis">            
+		<div class="info">            
 			<span class="comments"><a href="#">5 comments</a></span>
-			<br/>
 			<span class="date">23:12 12.05.2012</span>
 		</div>
 	</div><!-- /file: 2 -->
@@ -34,9 +32,8 @@
 		<div class="icon img-pdf">pdf</div>
 		<div class="name">mon super nom de fichier un peu long</div>
 
-		<div class="info-analysis">            
+		<div class="info">            
 			<span class="comments"><a href="#">5 comments</a></span>
-			<br/>
 			<span class="date">23:12 12.05.2012</span>
 		</div>
 	</div><!-- /file: 3 -->
