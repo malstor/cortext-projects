@@ -20,7 +20,7 @@ models.user.prototype.sync = function(method, model, options) {
         }
 
         console.log("[user: "+model.id+"] loading data from yaml");
-        model.password = models.User.hash(data.password);
+        model.password = data.password;
         delete data.password;
 
         resp = _.extend(resp, data);
