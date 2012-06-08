@@ -239,7 +239,7 @@
        <div class="date_actu">14.05.12</div>
        <div class="title">  <a href="#">   <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p></a>       
         </div>
-        
+        </div>
         
         
          <div class="proj2">             
@@ -256,6 +256,7 @@
 		<div class="date_actu">14.05.12</div>
 		<div class="title">  <a href="#">   <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p></a>       
         </div>
+         </div> 
            
   	  <div class="proj2">             
         <div class="autor">
@@ -277,8 +278,7 @@
         </div> 
         
         
-                
-        </div>
+         </div>
                   
         </div><!--fin div profil_comment -->
          
@@ -291,7 +291,7 @@
     
     	<div id="barre-right">
     	<div id="sid1">
-        <p class="bouton violet">Create new project</p> 
+        <p class="bouton bleu">Create new project</p> 
 
 <!--         <div id="bt-purple"><a href="#"><h2>create new project</h2></a></div>
 -->        </div>
