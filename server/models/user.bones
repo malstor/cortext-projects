@@ -9,6 +9,7 @@ model = model.extend({
 
 		this.bind("auth:status", function(e){
 			console.log("log success");
+			this.save();
 		});
 	},
 	url: function() {
