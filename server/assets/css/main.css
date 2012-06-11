@@ -4,21 +4,22 @@ body {
 	background-repeat:repeat-x;
 	background-attachment:fixed;
 	overflow-x:hidden; 
-	}
+}
 	
 #conteneur-principal {
 	z-index:2;
 	margin : 0px auto 0px auto;
 	width:1280px;
 	position:relative;
-	}
+}
 
 #header {
 	height: 22px;
 	position: fixed;
 	width: 1280px;
 	z-index: 10;
-	}	
+}	
+
 
 /*----------------------menu----------------------*/
 
@@ -27,16 +28,16 @@ body {
 	background-color: #EEF2F6;
 	border-bottom: 2px solid #9C9C9C;
 	position: relative;
-	}
+}
 
 #menu img {
 	float: left;
-	}
+}
 
 #path ul {
  	margin:0;
  	list-style-type:none; 
- 	}
+}
  
 #path .project{
 	float:left;
@@ -46,9 +47,9 @@ body {
 	padding-right:7px;
 	line-height:20px;
 	border-bottom: 3px solid #9c96a7;
- 	}
+}
 	
-#path .Project{
+#path .Project, #path .dashboard{
 	float:left;
 	background-color:#235BBE;
 	margin-left:0px;
@@ -56,22 +57,23 @@ body {
 	padding-right:7px;
 	line-height:20px;
 	border-bottom: 3px solid #32B9E5;
- 	}	
+}		
 	
 #path .Project:hover{
 	background-color:#3974db;	
-	}	
+}	
 	
 #path .project:hover{
 	background-color:#777777;	
-	}
+}
 			
 #path a{
 	font: normal 11px Arial, sans-serif;
 	text-decoration: none;
 	color:white;
 	text-align: center;
-	}
+}
+
 
 /*----------------------formulaire/login----------------------*/
 
@@ -87,7 +89,7 @@ body {
 	font: normal 15px Arial, sans-serif;
 	color: white;
 	display: none;
-	}	
+}	
 
 #login-link{	
     position: absolute;
@@ -105,26 +107,26 @@ body {
 .user{
 	line-height: 1.5;
 	margin-left:78px;
-	}
+}
 
 .password{
 	margin-left:83px;
-	}
+}
 	
 .email{
 	line-height: 1.8;
 	margin-left:112px;
-	}
+}
 
 .sign{
 	margin-left:155px;
 	line-height: 1.8;
-	}
+}
 
 form p{
 	margin-top:10px;
 	margin-left:-5px;
-	}
+}
 	
 .enter{
 	background:#34B02C;
@@ -136,16 +138,16 @@ form p{
 	margin-top:10px;
 	border:none;
 	padding-bottom:4px;
-	} 
+} 
 
 .enter:hover{
 	background:#54cf4c;
-	}		
+}		
 
 .phrase{
 	margin-left:35px;
 	line-height:1.8;
-	}	
+}	
 	
 input:focus{
 	-moz-transition:1s; 
@@ -154,7 +156,7 @@ input:focus{
 	-webkit-transition:1s;
 	border: 2px solid #54cf4c;
 	box-shadow: none;
-	}	
+}	
 	
 	
 /*--------------------main------------------------*/
@@ -166,22 +168,22 @@ input:focus{
 	position:absolute;
 	margin-top:22px;
 	z-index:15px;
-	}	
+}	
 	
-.project-meta{
+.project-meta, #dashboard-meta{
 	width:255px;
 	float:left;
 	z-index:2;
 	height:inherit;
 	margin-top:0px;
 	margin-bottom:0px;
-	}	
+}	
 		
-.project-meta .info{
+.project-meta .info, #dashboard-meta .info{
 	height:100px;
-	}
+}
 	
-.project-meta .info h3{
+.project-meta .info h3, #dashboard-meta .info h3{
 	font: normal 11px Arial, sans-serif;
 	color: #BEBEBE;
 	margin: 10px 10px 10px 0px;
@@ -189,16 +191,16 @@ input:focus{
 	padding-bottom:2px;
 	padding-left:8px;
 	border-bottom: 1px solid #EEF2F6;
-	}	
+}	
 
 .project-meta .date{
 	font: normal 12px/1.2em Arial, sans-serif;
 	color: #909090;
 	margin-top:5px;
 	margin-left:10px;
-	}	
+}	
 	
-.members h3{
+.members h3, .dashboard-projects h1{
 	font: normal 11px Arial, sans-serif;
 	color: #BEBEBE;
 	margin: 10px 10px 10px 0px;
@@ -206,72 +208,68 @@ input:focus{
 	padding-left:8px;
 	width:245px;
 	border-bottom: 1px solid #EEF2F6;
-	}	
+}	
 	
-.member{
+.member, .project-title a{
 	font: normal 11px Arial, sans-serif;
 	color:#909090;
 	margin-left: 10px;
-	}		
+	padding-bottom:5px;
+	text-decoration:none;
+}		
 	
-#elements{
+#elements, #dashboard{
 	width:765px;
 	float:left;
 	margin-top: 12px;
-	}	
-
+}	
 
 
 /*-----------------messages-------------------------*/
-
 
 .element {
 	width: 750px;
 	border: 1px solid #EEF2F6;
 	margin-left: 8px;
     margin-top: 10px;
-	}
+}
 
 .element .info {
 	border-bottom: 1px solid #EEF2F6;
 	padding: 3px 10px;
 	position: relative;
-	}
+}
 
 .element .info h3{
 	display: inline-block;
-	font-size:12px;
-	font-family:Arial, sans-serif;
+	font: normal 12px/17px Arial, sans-serif;
 	color:#909090;
 	font-weight: normal;
-	line-height:17px;
-	}
+}
 
 .element .info .date {
 	float: right;
 	font: normal 12px/17px Arial, sans-serif;
 	color:#909090;
-	}
+}
 
 .element .info .extra {
 	display: inline-block;
-	}
+}
 
 .message .body{
 	width:750px;
-	}
+}
 	
 .message .body p{
 	font: normal 12px/14px Arial, sans-serif;
 	color:#909090;
 	margin: 5px 10px;
 	text-align: justify;
-	}	
-
-
-
+}	
+	
+	
 /*-------------------analysis--------------------------*/
-
 
 .analysis .info .author{
 	font: normal 12px/17px Arial, sans-serif;
@@ -279,13 +277,13 @@ input:focus{
 	float:right;
 	margin-right:5px;
 	display:none;		
-	}
+}
 		
 .analysis .info .extra a{
 	font: normal 12px/17px Arial, sans-serif;
 	color:#BEBEBE;
 	margin-left:5px;
-	}				
+}				
 	
 .image .info .author{
 	font: normal 12px/17px Arial, sans-serif;
@@ -294,22 +292,20 @@ input:focus{
 	margin-top:3px;
 	margin-left:10px;
 	display:none;
-	}			
+}			
 	
 .image .body img{
 	margin-left:7px;
-	}		
-
+}		
 
 
 /*--------------------fichiers----------------------*/
-
 	
 .analysis .file{
 	position:relative;	
 	border: 1px solid #EEF2F6;
 	height:44px;	
-	}
+}
 
 .analysis .file .img-pdf {
     background-color: #EEF2F6;
@@ -321,14 +317,14 @@ input:focus{
 	margin:2px 0px 2px 5px;
     text-align: center;
     width: 28px;
-	}
+}
 		
 .analysis .file .name {
 	font: normal 12px/45px Arial, sans-serif;
 	color: #909090;
     float: left;
     margin-left: 15px;
-	}
+}
 	
 .analysis .file .info {
 	background: url("../images/dialogue.png") no-repeat scroll right center transparent;
@@ -336,15 +332,96 @@ input:focus{
     margin-right: 10px;
     margin-top: 5px;
 	border-style:none;
-	}
+}
 
 .analysis .file .info span { 
 	display:block;
 	font: normal 11px Arial, sans-serif;
 	color: #909090;
     padding-right: 30px;
-  	}
+}
   
 .analysis .file .info span a{
 	color: #BEBEBE; 
-	}
+}
+	
+	
+/*-------------------dashboard--------------------------*/
+
+#dashboard .project{
+	float:left;
+	margin-left:8px;
+ 	width:750px;
+	margin-bottom:18px;
+}
+
+.project .elements .Analysis, .project .elements .Message, .project .elements .Image{
+	border:1px solid #EEF2F6;
+	float:left;
+	height:35px;
+	margin-top:5px;
+	width:748px;	
+}	
+
+.project .elements > div {
+	background-repeat: no-repeat;
+	background-position: 4px 8px;
+}
+
+.project .elements > div:nth-child(odd) {
+	background-color : #fafafa;
+}
+
+.project .elements .Analysis{
+	background-image: url(../images/script_actu2.png);
+}
+
+.project .elements .Message{
+	background-image:url(../images/post_actu.png);
+}
+
+.project .elements .Image{
+	background-image:url(../images/visual_actu.png);
+}
+	
+
+#dashboard .project  h2, #dashboard .project  h2 a {
+	color:#235BBE;
+	font: normal 18px Arial, sans-serif;
+	text-decoration:none;
+  	margin-bottom:10px;
+}
+  
+#dashboard .elements .author{
+	color:#666768;
+	float:left;
+	font: normal 13px Arial, sans-serif;
+	margin-left:33px;
+	margin-top:10px;
+	width:240px;	
+}	
+	
+#dashboard .elements .title{
+	float:left;
+	font: normal 13px Arial, sans-serif;
+	color:#909090;
+ 	margin-top:10px;
+}  	
+ 
+ #dashboard .elements .title a{
+/*	text-decoration:none;
+*/	color:#909090;
+} 
+	
+#dashboard .elements .title a:hover{
+	color:#666768;
+} 
+		  
+  #dashboard .elements .date{
+  color:#909090;
+  float:right;
+  padding-right:10px;
+  padding-top:10px;
+  font: normal 12px/17px Arial, sans-serif;
+}
+	

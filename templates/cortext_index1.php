@@ -30,6 +30,7 @@
     <div id="menu">
     <a href="cortext_accueil.php"><img src="images/home2.png" alt="#" /></a>     
     <ul>
+    <li class="menu1a"><a href="#"> projet</a></li>  
     <li class="menu1"><a href="#"> algues vertes</a></li>  
    	<li class="menu2"><a id="login-link" href="#" title="Login"> tam kien duong</a></li>
     </ul>    
@@ -309,7 +310,7 @@
         <!--<div id="bt-purple"><a href="#"><h2>start an analysis</h2></a></div>
      		<div id="bt-purple2"><a href="#"><h3>add a document</h3></a></div>-->
         <p class="bouton bleu">Create new project</p> 
-        <p class="bouton noir">Add a document</p> 
+        <p class="bouton violet">Add a document</p> 
         </div>
         
     	<div id="sid2">

@@ -32,9 +32,10 @@
     <div id="menu">
     <a href="cortext_accueil.php"><img src="images/home2.png" alt="#" /></a>     
     <ul>
+    <li class="menu1a"><a href="#"> projet</a></li>  
     <li class="menu1"><a href="#"> algues vertes</a></li> 
     <li class="menu1b"><a href="#"> analysis.py - 12.12.2012</a></li>
-    <li class="menu1c"><a href="#"> carte semantique</a></li>   
+    <li class="menu1"><a href="#"> carte semantique</a></li>   
    	<li class="menu2"><a id="login-link" href="#" title="Login"> tam kien duong</a></li>
     </ul>    
      
@@ -108,8 +109,7 @@
          
     	</div>  <!--fin de barre-left-->
     	</div><!--fin de sidebar-left-->
-    
-   
+       
     
 	<!--contenu central -->       
     <div id="main-content">
@@ -161,57 +161,7 @@
             </div></div>           
          </div>
         
-        </div><!--fin div commentaires -->   
-        	
-        
-   <!--  <div class="effacement"></div>
-	
-    
-    <div class="comment2">
-    	<h3>lise cornilleau</h3> <span class="data3">10.03.2012</span>
-        <div class="comment2b"></div>
-    <p>veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis es</p>
-       
-    </div>
-    
-    
-     <div class="commentaires" id="el_2_comments">
-      <div class="info-bul-img"></div>
-
-        <div class="comments_list2">
-
-        	<div class="comment1">
-            <h2>jean-philippe cointet</h2> <span class="data2A">23:12 12.05.2012</span>
-               <div class="effacement"></div>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-           </div>
-            <div class="comment1">
-            <h3>jean-philippe cointet</h3> <span class="data2">23:12 12.05.2012</span>
-               <div class="effacement"></div>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-            </div>
-            <div class="comment1" id="test13">
-            <h3>jean-philippe cointet</h3> <span class="data2">23:12 12.05.2012</span>
-               <div class="effacement"></div>
-               <div class="content">
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-            </div>
-            </div>
-            
-            </div>
-
-            <div class="comment-text">
-            <form name="fff">
-  			<textarea id="dmc2" onFocus="if(this.value!='')this.value=''"; ></textarea>
-			</form>
-            <div class="img-commentaire">
-            <div class="bouton-com">
-            <a href="#"><img src="images/bul-com.png" alt="" /><span class="comm">comment</span></a>
-            </div></div> 
-         	</div>
-        
-        </div>   -->
-    
+        </div><!--fin div commentaires -->           	
     	</div><!--fin contenu central -->   
    
     
@@ -220,16 +170,10 @@
        <div id="barre-right">
        
     	<div id="sid1">
-        <p class="bouton violet">Create new project</p> 
-        <p class="bouton noir">Add a document</p> 
-
-       <!-- <a href="#"><h2>start an analysis</h2></a>
-     	<a href="#"><h3>add a document</h3></a>-->
-        </div>
-        
-        
-<!--        <div id="barre-right">
--->          
+        <p class="bouton bleu">Create new project</p> 
+        <p class="bouton violet">Add a document</p> 
+        </div>        
+                 
     	<div id="sid2-suite">
       	<h4>queued scripts</h4>
                       
