@@ -13,6 +13,8 @@
 	<li class="project-title"><a href="/project/<%= p.info.id %>"><%= p.info.title %></a></li>
 	<% }); %>
 </ul>
+
+</div><!-- /dashboard-projects -->
 </div><!-- /dashboard-meta -->
 
 <div id="dashboard" class="projects-list">
