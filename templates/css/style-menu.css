@@ -41,6 +41,19 @@ z-index:10;
 	border-bottom-color: #9c96a7;
  	}
 	
+	
+.menu1a {
+	float:left;
+	background-color:#235BBE;
+	margin-left:0px;
+	padding-left:7px;
+	padding-right:7px;
+	line-height:20px;
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color: #32B9E5;
+ 	}	
+	
 .menu1b {
 	float:left;
 	background-color:#27AD19;
@@ -73,6 +86,10 @@ z-index:10;
 	text-align: center;
 	}
 		
+.menu1a:hover{
+	background-color:#3974db;	
+	}	
+
 	
 .menu1:hover, #login-link:hover{
 	background-color:#777777;	

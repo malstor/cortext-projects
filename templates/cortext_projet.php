@@ -598,7 +598,7 @@
     	<div id="barre-right">
     	<div id="sid1">
 <!--         <div id="bt-purple"><a href="#"><h2>create new project</h2></a> </div>
--->       <p class="bouton violet">Create new project</p> 
+-->       <p class="bouton bleu">Create new project</p> 
 
          
         </div>
