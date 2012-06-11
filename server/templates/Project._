@@ -13,6 +13,13 @@
 	<% _.each(members, function(member){ %>
 	<div class="member">
 		<div class="name"><%= member.name %></div>
+		<div class="participation">
+		<ul class="data">
+			<% _.each(member.participation, function(v, k){ %>
+				<div class="<%= k %>"><%= k %>: <span><%= v %></span></div>
+			<% }); %>
+		</ul>
+		</div>
 	</div>
 	<% }); %>
 </div>
