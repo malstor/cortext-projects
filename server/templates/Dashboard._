@@ -10,7 +10,7 @@
 <% _.each(projects, function(p){ %>
 <div id="project-<%= p.info.id %>" class="project">
 
-	<h2><a href="/project/<%= p.info.id %>"><%= p.info.title %></a>><h2>
+	<h2><a href="/project/<%= p.info.id %>"><%= p.info.title %></a>></h2>
 
 	<div class="elements">
 	<% _.each(p.elements, function(e){ %>
