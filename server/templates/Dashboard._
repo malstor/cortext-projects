@@ -1,4 +1,13 @@
 <div id="dashboard-meta" class="col-1">
+
+<div class="info">
+	<h3>informations</h3>
+
+</div>
+
+<div class="dashboard-projects">
+	<h1>projects</h1>
+	
 <ul class="projects">
 	<% _.each(projects, function(p){ %>
 	<li class="project-title"><%= p.info.title %></li>
