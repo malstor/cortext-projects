@@ -1,7 +1,16 @@
 <div id="dashboard-meta" class="col-1">
 <ul class="projects">
 	<% _.each(projects, function(p){ %>
-	<li class="project-title"><a href="/project/<%= p.info.id %>"><%= p.info.title %></a></li>
+	<li class="project-title">
+		<a href="/project/<%= p.info.id %>"><%= p.info.title %></a>
+		<div class="participation">
+		<ul class="data">
+			<% _.each(p.composition, function(v, k){ %>
+				<div class="<%= k %>"><%= k %>: <span><%= v %></span></div>
+			<% }); %>
+		</ul>
+		</div>
+	</li>
 	<% }); %>
 </ul>
 </div><!-- /dashboard-meta -->

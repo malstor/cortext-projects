@@ -48,6 +48,9 @@ function to_participation_bar(e){
 			count: $(elt).find("span").html()
 		}
 	});
+
+	data = _(data).sortBy(function(d){ return d.type });
+
 	//console.log(data);
 
 	var sum = _.reduce(data, function(m, t){ return m + parseInt(t.count) }, 0);
