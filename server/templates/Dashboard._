@@ -1,5 +1,26 @@
-<ul>
+<div id="dashboard-meta" class="col-1">
+<ul class="projects">
 	<% _.each(projects, function(p){ %>
-	<li><%= p.title %></li>
+	<li class="project-title"><%= p.info.title %></li>
 	<% }); %>
 </ul>
+</div><!-- /dashboard-meta -->
+
+<div id="dashboard" class="projects-list">
+<% _.each(projects, function(p){ %>
+<div id="project-<%= p.info.id %>" class="project">
+
+	<h2><%= p.info.title %><h2>
+
+	<div class="elements">
+	<% _.each(p.elements, function(e){ %>
+	<div id="<%= e.type%>-<%= e.id%>" class="<%= e.type%>">
+	<div class="author"><%= e.author.name %></div>
+	<div class="title"><%= e.title%></div>
+	<div class="date"><%= e.date_formated%></div>
+	</div>
+	<% }); %>
+	</div><!-- /elements-->
+</div><!-- /#project-<%= p.info.id %> -->
+<% }); %>
+</div><!-- /dashboard-meta -->

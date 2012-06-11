@@ -13,6 +13,8 @@ models.projects.prototype.sync = function(method, model, options) {
 
     var files = fs.readdirSync(projectDir);
 
+//    console.log(session);
+
     var load_defer = _.after(files.length, function(){
         options.success(projects);
     });
@@ -20,7 +22,13 @@ models.projects.prototype.sync = function(method, model, options) {
         yaml.load(projectDir+file, function(error, data){
             if(error) console.log(error)
 
-            projects.push(data.info);
+            if(!_.isUndefined(session.user) && _.find(data.members, function(m){ return m.id === session.user.id })){
+//            if(true){
+                data.elements = data.elements.slice(0,14);
+                projects.push(data);
+            } else {
+                console.log("access not granted");
+            }
             load_defer();
         });
     });

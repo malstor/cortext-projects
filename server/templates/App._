@@ -6,9 +6,10 @@
 <title><%= title %></title>
 
 <script src="/assets/bones/all.js?<%= version %>" type="text/javascript" charset="utf-8"></script>
+<script src="/assets/server/js/main.js?<%= version %>" type="text/javascript" charset="utf-8"></script>
 
-<link rel="stylesheet" href="/assets/server/css/reset.css" type="text/css" />  
-<link rel="stylesheet" href="/assets/server/css/main.css" type="text/css" />  
+<link rel="stylesheet" href="/assets/server/css/reset.css?<%= version %>" type="text/css" />  
+<link rel="stylesheet" href="/assets/server/css/main.css?<%= version %>" type="text/css" />  
 
 </head>
 

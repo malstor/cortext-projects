@@ -1,8 +1,12 @@
 var time = Date.now();
 
 routers.Default.prototype.send = function(view, options) {
-    var options = arguments.length > 1 ? arguments[1] : {};
+    // console.log('session:');
+    // console.log(this.req.session);
+    // pas sûr que ce soit très kasher ...
+    session = this.req.session;
 
+    var options = arguments.length > 1 ? arguments[1] : {};
 
     // Execute the main view.
     var main = new view(options);

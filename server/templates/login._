@@ -1,0 +1,9 @@
+Trying to log as :
+
+<form id="login">
+<label>id</label><input id="id" value="1"/>
+<label>email</label><input id="email" value="tk@deveha.com"/>
+<label>name</label><input id="name" value="Tam Kien Duong"/>
+<label>password</label><input id="password" type="password" value="pipicaca"/>
+<input type="submit" />
+</form>
