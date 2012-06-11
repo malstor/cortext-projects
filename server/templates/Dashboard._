@@ -1,7 +1,7 @@
 <div id="dashboard-meta" class="col-1">
 <ul class="projects">
 	<% _.each(projects, function(p){ %>
-	<li class="project-title"><%= p.info.title %></li>
+	<li class="project-title"><a href="/project/<%= p.info.id %>"><%= p.info.title %></a></li>
 	<% }); %>
 </ul>
 </div><!-- /dashboard-meta -->
@@ -10,13 +10,13 @@
 <% _.each(projects, function(p){ %>
 <div id="project-<%= p.info.id %>" class="project">
 
-	<h2><%= p.info.title %><h2>
+	<h2><a href="/project/<%= p.info.id %>"><%= p.info.title %></a>><h2>
 
 	<div class="elements">
 	<% _.each(p.elements, function(e){ %>
 	<div id="<%= e.type%>-<%= e.id%>" class="<%= e.type%>">
 	<div class="author"><%= e.author.name %></div>
-	<div class="title"><%= e.title%></div>
+	<div class="title"><%= (e.title ? e.title : "lorem ipsum dolor bacon frites") %></div>
 	<div class="date"><%= e.date_formated%></div>
 	</div>
 	<% }); %>
