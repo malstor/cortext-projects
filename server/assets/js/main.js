@@ -80,7 +80,7 @@ function to_participation_bar(e){
 
 	$(e).children(".data").hide();
 	$(e).bind("mouseenter mouseleave", function(evt){
-		$(e).children(".data").slideToggle();
+		$(e).children(".data").slideToggle("fast");
 	});
 
 
