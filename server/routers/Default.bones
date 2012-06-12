@@ -28,6 +28,7 @@ router = Backbone.Router.extend({
 
     login: function() {
         var router = this;
+
         router.send(views.Login, {});
     },
 

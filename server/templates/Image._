@@ -1,4 +1,4 @@
-<div class="element image" id="image-<%= e.id %>">
+<div class="element image" id="Image-<%= e.id %>">
 
 	<div class="info">
 		<h3>tubes (analysis.py/12:02 21.06.2011)</h3>

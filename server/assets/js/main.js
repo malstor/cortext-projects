@@ -1,4 +1,4 @@
-var routers;
+var app;
 
 var colors = {
 	Analysis: "#34B02C",
@@ -12,7 +12,10 @@ $(document).ready(function(){
 
 	Bones.initialize(function(models, views, routers, templates) {
 		m = models;
-		routers = routers;
+		app = new routers["Default"];
+		Backbone.history.start({pushState: true});
+
+		console.log(models);
 		console.log(routers);
 	});
 
