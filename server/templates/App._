@@ -51,7 +51,7 @@
 </div> <!-- /#menu-->
 
 <div id="user">
-<% if(session.user){ %>
+<% if(session && session.user){ %>
 <a href="/user/<%= session.user.id %>"><%= session.user.attributes.name %></a>
 <% } else { %>
 <a href="/login">login</a>

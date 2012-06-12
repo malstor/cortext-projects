@@ -1,3 +1,5 @@
+var routers;
+
 var colors = {
 	Analysis: "#34B02C",
 	Image: "#A3319F",
@@ -10,6 +12,8 @@ $(document).ready(function(){
 
 	Bones.initialize(function(models, views, routers, templates) {
 		m = models;
+		routers = routers;
+		console.log(routers);
 	});
 
 	_.each($(".participation"), function(e){
@@ -25,12 +29,8 @@ $(document).ready(function(){
 			id: $("#login #id").val()
 		});
 
-		console.log(user);
-		console.log(user.url());
 		var response = user.login(user.toJSON());
 //		var response = user.login();
-
-		console.log(user);
 	});	
 });
 
