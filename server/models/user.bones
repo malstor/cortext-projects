@@ -3,13 +3,18 @@ model = models.User;
 
 model = model.extend({
 	initialize: function(){
+		var m = this;
+
+
 		this.bind("auth:error", function(e){
 			console.log("log failed");
 		});
 
 		this.bind("auth:status", function(e){
 			console.log("log success");
-			this.save();
+			m.save();
+
+			window.location= "/dashboard";
 		});
 	},
 	url: function() {

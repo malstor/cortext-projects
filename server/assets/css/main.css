@@ -21,7 +21,7 @@ body {
 }	
 
 
-/*----------------------menu----------------------*/
+/*----------------------menu + header-------------------*/
 
 #menu {
 	height: 22px;
@@ -36,27 +36,27 @@ body {
 
 #path ul {
  	margin:0;
- 	list-style-type:none; 
+ 	list-style-type:none;
+ 	clear : both;
 }
- 
+
+#path ul li {
+	float:left;
+	line-height:21px;
+	border-bottom: 3px solid #ffffff;
+	padding : 0 7px;
+}
+
+#path .home { padding : 0; }
+
 #path .project{
-	float:left;
 	background-color:#3C3C3C;
-	margin-left:0px;
-	padding-left:7px;
-	padding-right:7px;
-	line-height:20px;
-	border-bottom: 3px solid #9c96a7;
+	border-color : #9c96a7;
 }
-	
+
 #path .Project, #path .dashboard{
-	float:left;
 	background-color:#235BBE;
-	margin-left:0px;
-	padding-left:7px;
-	padding-right:7px;
-	line-height:20px;
-	border-bottom: 3px solid #32B9E5;
+	border-color : #32B9E5;
 }		
 	
 #path .Project:hover{
@@ -74,6 +74,23 @@ body {
 	text-align: center;
 }
 
+#user {
+	position : absolute;
+	top : 0;
+	right : 0;
+}
+
+#user a {
+	padding : 0 7px;
+	display : inline-block;
+
+	font: normal 11px/21px Arial, sans-serif;
+	text-decoration: none;
+	text-transform: lowercase;
+	color : #fff;
+	background : #3C3C3C;
+	border-bottom : 3px solid #9C96A7;
+}
 
 /*----------------------formulaire/login----------------------*/
 
@@ -193,14 +210,25 @@ input:focus{
 	border-bottom: 1px solid #EEF2F6;
 }	
 
-.project-meta .date{
+.project-meta .date {
 	font: normal 12px/1.2em Arial, sans-serif;
 	color: #909090;
 	margin-top:5px;
 	margin-left:10px;
 }	
+
+.participation .data {
+	font: normal 12px/1.2em Arial, sans-serif;
+	color: #909090;
+	margin-top:2px;
+	margin-bottom : 10px;
+	z-index : 99999;
+	position : absolute;
+	background : white;
+}
+
 	
-.members h3, .dashboard-projects h1{
+/*.dashboard-projects h1{
 	font: normal 11px Arial, sans-serif;
 	color: #BEBEBE;
 	margin: 10px 10px 10px 0px;
@@ -208,20 +236,82 @@ input:focus{
 	padding-left:8px;
 	width:245px;
 	border-bottom: 1px solid #EEF2F6;
+}
+*/
+
+.dashboard-projects h1{
+	font: normal 11px Arial, sans-serif;
+	color: #FFFFFF;
+	margin: 10px 10px 10px 0px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:245px;
+	padding-top:2px;
+	background:#235BBE;
+}
+
+.members h3{
+	font: normal 11px Arial, sans-serif;
+	color: #FFFFFF;
+	margin: 10px 10px 10px 0px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:245px;
+	padding-top:2px;
+	background:#EE6E21;
+}
+
+
+.dashboard-projects #user-icon{
+	background: url("../images/dossier.png") no-repeat;
+    float: right;
+    height: 12px;
+    margin-right:-2px;
+    margin-top: 1px;
+    width: 17px;
 }	
+
+
+.members #user-icon{
+	background: url("../images/user-ic.png") no-repeat;
+    float: right;
+    height: 12px;
+    margin-right: 5px;
+    margin-top: 2px;
+    width: 10px;
+	padding-right:5px;
+}		
 	
+.dashboard-projects .data {
+	margin-left : 10px;
+}
+
 .member, .project-title a{
 	font: normal 11px Arial, sans-serif;
 	color:#909090;
-	margin-left: 10px;
+	margin-left: 5px;
 	padding-bottom:5px;
 	text-decoration:none;
 }		
-	
+		
+.member canvas{
+	padding-top:4px;
+	width:245px;
+}
+
+.project-title canvas{
+	padding-top:4px;
+	width:245px;
+	margin-left:6px;
+/*	display:none;
+*/}	
+
+
 #elements, #dashboard{
 	width:765px;
 	float:left;
 	margin-top: 12px;
+<<<<<<< HEAD
 }	
 
 .member canvas{
@@ -244,6 +334,13 @@ input:focus{
 #dashboard-meta .dashboard-projects{
         width:240px;
 } 
+=======
+}
+	
+#dashboard-meta .dashboard-projects{
+		width:245px;
+}
+>>>>>>> e5e4f3e9288dd0651c96749acfc99b7723289fa9
 
 /*-----------------messages-------------------------*/
 
@@ -393,23 +490,27 @@ input:focus{
 }
 
 .project .elements .Analysis{
-	background-image: url(../images/script_actu2.png);
-}
+/*	background-image: url(../images/script_actu2.png);
+*/background-image: url(../images/script_actu3.png);}
 
 .project .elements .Message{
 	background-image:url(../images/post_actu.png);
 }
 
 .project .elements .Image{
-	background-image:url(../images/visual_actu.png);
+/*	background-image:url(../images/visual_actu.png);
+*/	background-image:url(../images/visual_actu3.png);
 }
 	
+#dashboard .project canvas {   }
+#dashboard .project .participation { float : right; width : 200px; height : 10px; display : block; margin-top : 4px; }
 
 #dashboard .project  h2, #dashboard .project  h2 a {
 	color:#235BBE;
 	font: normal 18px Arial, sans-serif;
 	text-decoration:none;
-  	margin-bottom:10px;
+  	margin-bottom:0px;
+  	display : inline-block;
 }
   
 #dashboard .elements .author{

@@ -28,6 +28,7 @@ router = Backbone.Router.extend({
 
     login: function() {
         var router = this;
+
         router.send(views.Login, {});
     },
 
@@ -81,6 +82,7 @@ router = Backbone.Router.extend({
         } else {
             p.push({
                 class: "dashboard",
+                url: "/dashboard",
                 name: "dashboard"
             });
         }

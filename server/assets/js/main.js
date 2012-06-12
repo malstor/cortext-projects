@@ -1,3 +1,5 @@
+var app;
+
 var colors = {
 	Analysis: "#34B02C",
 	Image: "#A3319F",
@@ -10,6 +12,11 @@ $(document).ready(function(){
 
 	Bones.initialize(function(models, views, routers, templates) {
 		m = models;
+		app = new routers["Default"];
+		Backbone.history.start({pushState: true});
+
+		console.log(models);
+		console.log(routers);
 	});
 
 	_.each($(".participation"), function(e){
@@ -25,18 +32,14 @@ $(document).ready(function(){
 			id: $("#login #id").val()
 		});
 
-		console.log(user);
-		console.log(user.url());
 		var response = user.login(user.toJSON());
 //		var response = user.login();
-
-		console.log(user);
 	});	
 });
 
 
 function to_participation_bar(e){
-	console.log(e);
+//	console.log(e);
 
 	var w = $(e).width();
 	var h = 10;
@@ -57,6 +60,7 @@ function to_participation_bar(e){
 	
 	var canvas = document.createElement("canvas");
 	$(canvas).attr("height",10);
+	$(canvas).attr("width",w);
 
 	var ctx = canvas.getContext("2d");
 
@@ -78,5 +82,11 @@ function to_participation_bar(e){
 	});
 
 	$(e).children(".data").hide();
-	e.appendChild(canvas);	
+	$(e).bind("mouseenter mouseleave", function(evt){
+		$(e).children(".data").css("width", w+"px");
+		$(e).children(".data").slideToggle("fast");
+	});
+
+
+	$(e).prepend(canvas);
 }
