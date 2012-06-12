@@ -224,6 +224,26 @@ input:focus{
 	margin-top: 12px;
 }	
 
+.member canvas{
+    padding-top:4px;
+}
+
+.project-title canvas{
+    padding-top:4px;
+    margin-left:10px;
+/*    display:none;
+*/}    
+
+
+#elements, #dashboard{
+    width:765px;
+    float:left;
+    margin-top: 12px;
+}
+    
+#dashboard-meta .dashboard-projects{
+        width:240px;
+} 
 
 /*-----------------messages-------------------------*/
 
