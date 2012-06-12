@@ -227,7 +227,7 @@ input:focus{
 }
 
 	
-.members h3, .dashboard-projects h1{
+.dashboard-projects h1{
 	font: normal 11px Arial, sans-serif;
 	color: #BEBEBE;
 	margin: 10px 10px 10px 0px;
@@ -237,8 +237,18 @@ input:focus{
 	border-bottom: 1px solid #EEF2F6;
 }
 
+.members h3{
+	font: normal 11px Arial, sans-serif;
+	color: #FFFFFF;
+	margin: 10px 10px 10px 0px;
+	padding-bottom:2px;
+	padding-left:8px;
+	width:245px;
+	padding-top:2px;
+	background:#EE6E21;
+}
 
-.dashboard-projects #user-icon{
+/*.dashboard-projects #user-icon{
 	float:right;
 	background:url(../images/user3.png);
 	background-repeat:no-repeat;
@@ -246,37 +256,25 @@ input:focus{
 	width : 16px;
 	margin-top:-4px;
 	margin-right:5px;
-}
+}*/
 
 
 .members #user-icon{
-	float:right;
-	background:url(../images/user3.png);
-	background-repeat:no-repeat;
-	height:16px;
-	width : 16px;
-	margin-top:-4px;
-	margin-right:5px;
+	background: url("../images/user-ic.png") no-repeat;
+    float: right;
+    height: 12px;
+    margin-right: 5px;
+    margin-top: 2px;
+    width: 10px;
 }		
 	
-.member{
+.member, .project-title a{
 	font: normal 11px Arial, sans-serif;
 	color:#909090;
 	margin-left: 10px;
 	padding-bottom:5px;
 	text-decoration:none;
-}
-		
-.project-title a{
-	font: normal 14px Arial, sans-serif;
-	color: #235BBE;
-	margin-left: 10px;
-	padding-bottom:5px;
-	text-decoration:none;
-}
-.project-title a:hover{
-	color:#32B9E5;}
-
+}		
 		
 .member canvas{
 	padding-top:4px;
