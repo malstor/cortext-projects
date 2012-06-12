@@ -311,11 +311,36 @@ input:focus{
 	width:765px;
 	float:left;
 	margin-top: 12px;
+<<<<<<< HEAD
+}	
+
+.member canvas{
+    padding-top:4px;
+}
+
+.project-title canvas{
+    padding-top:4px;
+    margin-left:10px;
+/*    display:none;
+*/}    
+
+
+#elements, #dashboard{
+    width:765px;
+    float:left;
+    margin-top: 12px;
+}
+    
+#dashboard-meta .dashboard-projects{
+        width:240px;
+} 
+=======
 }
 	
 #dashboard-meta .dashboard-projects{
 		width:245px;
 }
+>>>>>>> e5e4f3e9288dd0651c96749acfc99b7723289fa9
 
 /*-----------------messages-------------------------*/
 
