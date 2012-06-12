@@ -1,0 +1,21 @@
+<div class="user-meta col-1">
+
+</div><!-- /user-meta -->
+
+<div id="user-<%= user.id %>" class="user">
+
+<div class="info">
+	<h1 id="name"><%= user.name %></h1>
+	<img src="<%= user.gravatar %>" />
+	<div id="email" class="email"><%= user.email %></div>
+</div>
+
+<div class="projects">
+<% _.each(projects, function(p){ %>
+<div class="project">
+<div class="title"><%= p.title %></div>
+</div>
+<%}); %>
+</div>
+
+</div><!-- /.user -->
