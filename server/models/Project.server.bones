@@ -3,9 +3,8 @@ var path = require('path');
 
 var yaml = require('pyyaml');
 
-models.Project.prototype.sync = function(method, model, options) {
-    if (method != 'read') return options.error('Unsupported method');
 
+models.Project.prototype.sync_read = function(method, model, options){
     var projectDir = '../data/projects/' + model.id,
         resp = {id: model.id};
 
@@ -38,9 +37,13 @@ models.Project.prototype.sync = function(method, model, options) {
 
         resp = _.extend(resp, data);
         options.success(resp);
-
-        // console.log(model);
-        // console.log(options);
-        // console.log(data);
     });
+}
+
+models.Project.prototype.sync = function(method, model, options) {
+    switch(method){
+        case "read": this.sync_read(method, model, options); break;
+        default : return options.error('Unsupported method');
+    }
+    
 };
