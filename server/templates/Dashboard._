@@ -32,6 +32,14 @@
 
 	<h2><a href="/project/<%= p.info.id %>"><%= p.info.title %></a>></h2>
 
+	<div class="participation">
+	<ul class="data">
+		<% _.each(p.composition, function(v, k){ %>
+			<div class="<%= k %>"><%= k %>: <span><%= v %></span></div>
+		<% }); %>
+	</ul>
+	</div>
+
 	<div class="elements">
 	<% _.each(p.elements, function(e){ %>
 	<div id="<%= e.type%>-<%= e.id%>" class="<%= e.type%>">

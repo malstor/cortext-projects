@@ -81,6 +81,7 @@ router = Backbone.Router.extend({
         } else {
             p.push({
                 class: "dashboard",
+                url: "/dashboard",
                 name: "dashboard"
             });
         }

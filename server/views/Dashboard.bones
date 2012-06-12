@@ -4,6 +4,8 @@ view = views.Main.extend({
 	},
 
     render: function() {
+        console.log(session.user);
+
     	var options = {
             projects: []
         }
