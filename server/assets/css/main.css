@@ -51,28 +51,12 @@ body {
 
 #path .project{
 	background-color:#3C3C3C;
-<<<<<<< HEAD
-	margin-left:0px;
-	padding-left:7px;
-	padding-right:7px;
-	line-height:21px;
-	border-bottom: 3px solid #9c96a7;
-=======
 	border-color : #9c96a7;
->>>>>>> a7c8524ea080a845b13771bc24db8676ef1d563d
 }
 
 #path .Project, #path .dashboard{
 	background-color:#235BBE;
-<<<<<<< HEAD
-	margin-left:0px;
-	padding-left:7px;
-	padding-right:7px;
-	line-height:21px;
-	border-bottom: 3px solid #32B9E5;
-=======
 	border-color : #32B9E5;
->>>>>>> a7c8524ea080a845b13771bc24db8676ef1d563d
 }		
 	
 #path .Project:hover{
@@ -226,7 +210,7 @@ input:focus{
 	border-bottom: 1px solid #EEF2F6;
 }	
 
-.project-meta .date{
+.project-meta .date {
 	font: normal 12px/1.2em Arial, sans-serif;
 	color: #909090;
 	margin-top:5px;
@@ -237,9 +221,10 @@ input:focus{
 	font: normal 12px/1.2em Arial, sans-serif;
 	color: #909090;
 	margin-top:2px;
-	margin-left:10px;
 	margin-bottom : 10px;
 	z-index : 99999;
+	position : absolute;
+	background : white;
 }
 
 	
@@ -251,6 +236,10 @@ input:focus{
 	padding-left:8px;
 	width:245px;
 	border-bottom: 1px solid #EEF2F6;
+}
+
+.dashboard-projects .data {
+	margin-left : 10px;
 }
 
 .members #user-icon{
