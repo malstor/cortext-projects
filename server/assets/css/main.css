@@ -228,7 +228,7 @@ input:focus{
 }
 
 	
-.dashboard-projects h1{
+/*.dashboard-projects h1{
 	font: normal 11px Arial, sans-serif;
 	color: #BEBEBE;
 	margin: 10px 10px 10px 0px;
@@ -237,27 +237,39 @@ input:focus{
 	width:245px;
 	border-bottom: 1px solid #EEF2F6;
 }
+*/
+
+.dashboard-projects h1{
+	font: normal 11px Arial, sans-serif;
+	color: #FFFFFF;
+	margin: 10px 10px 10px 0px;
+	padding-bottom:2px;
+	padding-left:5px;
+	width:245px;
+	padding-top:2px;
+	background:#235BBE;
+}
 
 .members h3{
 	font: normal 11px Arial, sans-serif;
 	color: #FFFFFF;
 	margin: 10px 10px 10px 0px;
 	padding-bottom:2px;
-	padding-left:8px;
+	padding-left:5px;
 	width:245px;
 	padding-top:2px;
 	background:#EE6E21;
 }
 
-/*.dashboard-projects #user-icon{
-	float:right;
-	background:url(../images/user3.png);
-	background-repeat:no-repeat;
-	height:16px;
-	width : 16px;
-	margin-top:-4px;
-	margin-right:5px;
-}*/
+
+.dashboard-projects #user-icon{
+	background: url("../images/dossier.png") no-repeat;
+    float: right;
+    height: 12px;
+    margin-right:-2px;
+    margin-top: 1px;
+    width: 17px;
+}	
 
 
 .members #user-icon{
@@ -267,6 +279,7 @@ input:focus{
     margin-right: 5px;
     margin-top: 2px;
     width: 10px;
+	padding-right:5px;
 }		
 	
 .dashboard-projects .data {
@@ -276,18 +289,20 @@ input:focus{
 .member, .project-title a{
 	font: normal 11px Arial, sans-serif;
 	color:#909090;
-	margin-left: 10px;
+	margin-left: 5px;
 	padding-bottom:5px;
 	text-decoration:none;
 }		
 		
 .member canvas{
 	padding-top:4px;
+	width:245px;
 }
 
 .project-title canvas{
 	padding-top:4px;
-	margin-left:10px;
+	width:245px;
+	margin-left:6px;
 /*	display:none;
 */}	
 
@@ -299,7 +314,7 @@ input:focus{
 }
 	
 #dashboard-meta .dashboard-projects{
-		width:240px;
+		width:245px;
 }
 
 /*-----------------messages-------------------------*/
@@ -450,15 +465,16 @@ input:focus{
 }
 
 .project .elements .Analysis{
-	background-image: url(../images/script_actu2.png);
-}
+/*	background-image: url(../images/script_actu2.png);
+*/background-image: url(../images/script_actu3.png);}
 
 .project .elements .Message{
 	background-image:url(../images/post_actu.png);
 }
 
 .project .elements .Image{
-	background-image:url(../images/visual_actu.png);
+/*	background-image:url(../images/visual_actu.png);
+*/	background-image:url(../images/visual_actu3.png);
 }
 	
 #dashboard .project canvas {   }

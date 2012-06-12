@@ -155,7 +155,7 @@
         
      	<div class="derniere_actu">
         
-		<div class="img_actu"><img src="images/script_actu2.png" alt="post" /></div>
+		<div class="img_actu"><img src="images/script_actu3.png" alt="post" /></div>
         <div class="autor">
         Script<br/>
         <div class="min_autor"></div>
@@ -166,7 +166,7 @@
         
      	<div class="derniere_actu2">
         
-		<div class="img_actu"><img src="images/visual_actu.png" alt="post" /></div>
+		<div class="img_actu"><img src="images/visual_actu3.png" alt="post" /></div>
         <div class="autor">
         Visualisation<br/>
         <div class="min_autor"></div>
@@ -188,7 +188,7 @@
                 
      	<div class="derniere_actu2">
        	
-		<div class="img_actu"><img src="images/visual_actu.png" alt="post" /></div>
+		<div class="img_actu"><img src="images/visual_actu3.png" alt="post" /></div>
         <div class="autor">
         Visualisation <br/>       
         <div class="min_autor"></div>
@@ -199,7 +199,7 @@
         
      	<div class="derniere_actu">
         
-		<div class="img_actu"><img src="images/script_actu2.png" alt="post" /></div>
+		<div class="img_actu"><img src="images/script_actu3.png" alt="post" /></div>
         <div class="autor">
         Script<br/>
         <div class="min_autor"></div>
@@ -211,7 +211,7 @@
         
         <div class="derniere_actu2">
        	
-		<div class="img_actu"><img src="images/visual_actu.png" alt="post" /></div>
+		<div class="img_actu"><img src="images/visual_actu3.png" alt="post" /></div>
         <div class="autor">
         Visualisation <br/>       
         <div class="min_autor"></div>
@@ -277,7 +277,7 @@
         
      	<div class="derniere_actu">
         
-		<div class="img_actu"><img src="images/script_actu2.png" alt="post" /></div>
+		<div class="img_actu"><img src="images/script_actu3.png" alt="post" /></div>
         <div class="autor">
         Script<br/>
         <div class="min_autor"></div>
@@ -288,7 +288,7 @@
         
      	<div class="derniere_actu2">
         
-		<div class="img_actu"><img src="images/visual_actu.png" alt="post" /></div>
+		<div class="img_actu"><img src="images/visual_actu3.png" alt="post" /></div>
         <div class="autor">
         Visualisation<br/>
         <div class="min_autor"></div>
@@ -310,7 +310,7 @@
                 
      	<div class="derniere_actu2">
        	
-		<div class="img_actu"><img src="images/visual_actu.png" alt="post" /></div>
+		<div class="img_actu"><img src="images/visual_actu3.png" alt="post" /></div>
         <div class="autor">
         Visualisation <br/>       
         <div class="min_autor"></div>
@@ -321,7 +321,7 @@
         
      	<div class="derniere_actu">
         
-		<div class="img_actu"><img src="images/script_actu2.png" alt="post" /></div>
+		<div class="img_actu"><img src="images/script_actu3.png" alt="post" /></div>
         <div class="autor">
         Script<br/>
         <div class="min_autor"></div>
@@ -333,7 +333,7 @@
         
         <div class="derniere_actu2">
        	
-		<div class="img_actu"><img src="images/visual_actu.png" alt="post" /></div>
+		<div class="img_actu"><img src="images/visual_actu3.png" alt="post" /></div>
         <div class="autor">
         Visualisation <br/>       
         <div class="min_autor"></div>
@@ -411,7 +411,7 @@
         
      	<div class="derniere_actu2">
         
-		<div class="img_actu"><img src="images/visual_actu.png" alt="post" /></div>
+		<div class="img_actu"><img src="images/visual_actu3.png" alt="post" /></div>
         <div class="autor">
         Visualisation<br/>
         <div class="min_autor"></div>
@@ -433,7 +433,7 @@
                
      	<div class="derniere_actu2">
        	
-		<div class="img_actu"><img src="images/visual_actu.png" alt="post" /></div>
+		<div class="img_actu"><img src="images/visual_actu3.png" alt="post" /></div>
         <div class="autor">
         Visualisation <br/>       
         <div class="min_autor"></div>
@@ -456,7 +456,7 @@
         
         <div class="derniere_actu2">
        	
-		<div class="img_actu"><img src="images/visual_actu.png" alt="post" /></div>
+		<div class="img_actu"><img src="images/visual_actu3.png" alt="post" /></div>
         <div class="autor">
         Visualisation <br/>       
         <div class="min_autor"></div>
@@ -533,7 +533,7 @@
         
      	<div class="derniere_actu2">
         
-		<div class="img_actu"><img src="images/visual_actu.png" alt="post" /></div>
+		<div class="img_actu"><img src="images/visual_actu3.png" alt="post" /></div>
         <div class="autor">
         Visualisation<br/>
         <div class="min_autor"></div>
@@ -555,7 +555,7 @@
                 
      	<div class="derniere_actu2">
        	
-		<div class="img_actu"><img src="images/visual_actu.png" alt="post" /></div>
+		<div class="img_actu"><img src="images/visual_actu3.png" alt="post" /></div>
         <div class="autor">
         Visualisation <br/>       
         <div class="min_autor"></div>
@@ -578,7 +578,7 @@
         
         <div class="derniere_actu2">
        	
-		<div class="img_actu"><img src="images/visual_actu.png" alt="post" /></div>
+		<div class="img_actu"><img src="images/visual_actu3.png" alt="post" /></div>
         <div class="autor">
         Visualisation <br/>       
         <div class="min_autor"></div>
