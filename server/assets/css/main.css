@@ -242,24 +242,25 @@ input:focus{
 	margin-left : 10px;
 }
 
-.members #user-icon{
-	float:left;
-	background:url(../images/user.png);
-	background-repeat:no-repeat;
-	height:16px;
-	width : 16px;
-	margin-top:-4px;
-	margin-right:5px;
-}		
-	
-.member, .project-title a{
+.member{
 	font: normal 11px Arial, sans-serif;
 	color:#909090;
 	margin-left: 10px;
 	padding-bottom:5px;
 	text-decoration:none;
-}		
+}
+		
+.project-title a{
+	font: normal 14px Arial, sans-serif;
+	color: #235BBE;
+	margin-left: 10px;
+	padding-bottom:5px;
+	text-decoration:none;
+}
+.project-title a:hover{
+	color:#32B9E5;}
 
+		
 .member canvas{
 	padding-top:4px;
 }
