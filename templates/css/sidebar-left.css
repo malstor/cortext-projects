@@ -64,20 +64,7 @@
 	height:100px;
 		}
 
-/*#sid_3 h3{
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 11px;
-	font-weight: normal;
-	color: #BEBEBE;
-	margin: 10px 10px 10px 0px;
-	width:245px;
-	padding-bottom:2px;
-	padding-left:8px;	
-	margin-top:30px;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-	border-bottom-color: #EEF2F6;
-	}	*/			
+		
 	
 #sid_3 h3{
 	font-family: Arial, Helvetica, sans-serif;
@@ -112,6 +99,16 @@
 	
 	}			
 	
+#user-icon{
+float:left;
+background:url(../images/user.png);
+background-repeat:no-repeat;
+	height:16px;
+	width : 16px;
+	margin-top:-4px;
+	margin-right:5px;
+	}	
+
 /*---------------- barre de progression double -------------------------*/	
 	
 

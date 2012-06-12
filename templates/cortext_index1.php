@@ -80,6 +80,7 @@
          </div>
          
          <div id="sid_2">
+         <div id="user-icon"></div>
          <h3>participants</h3>
          
          <div id="utilisateur">
