@@ -12,11 +12,20 @@ $(document).ready(function(){
 
 	Bones.initialize(function(models, views, routers, templates) {
 		m = models;
-		app = new routers["Default"];
-		Backbone.history.start({pushState: true});
 
-		console.log(models);
-		console.log(routers);
+		var main = Backbone.Router.extend({
+			routes : {
+				"user/:user" : "user"
+			},
+
+			user: function(user){
+				console.log(user);
+			}
+		});
+
+		app = new main();
+
+		Backbone.history.start({pushState: true});
 	});
 
 	_.each($(".participation"), function(e){

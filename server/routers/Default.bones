@@ -3,11 +3,10 @@ router = Backbone.Router.extend({
 		'/': 'home',
         '/dashboard': 'dashboard',
         '/login': 'login',
-        // '/user/:user': 'user',
+        '/user/:user': 'user',
         '/project/:project': 'project'
         // '/project/:project/object/:object': 'object'
     },
-
     home: function() {
     	var router = this;
     	router.send(views.Home, {});
@@ -45,6 +44,22 @@ router = Backbone.Router.extend({
         });
     },
 
+    user: function(user_id){
+        var router = this,
+            fetcher = this.fetcher(),
+            user = new models.user({id: user_id});
+
+        fetcher.push(user);
+        
+        fetcher.fetch(function(err) {
+            if (err) return router.error(err);
+            router.send(views.user, { model : user
+             });
+        });
+
+        console.log(user_id);
+    },
+
     send: function(view) {
         var options = (arguments.length > 1 ? arguments[1] : {});
         var v = new view(options);
@@ -65,7 +80,7 @@ router = Backbone.Router.extend({
     path : function(model){
         var p = [];
 
-        if(model){
+        if(false && model){
             var info = model.get("info");
             var type = model.constructor.title;
 

@@ -7,7 +7,8 @@ view = views.Main.extend({
         console.log(session.user);
 
     	var options = {
-            projects: []
+            projects: [],
+            templates : templates
         }
 
         this.options.projects.each(function(p){
