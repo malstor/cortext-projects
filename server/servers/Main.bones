@@ -1,14 +1,10 @@
-server = Bones.Server.extend();
+server = Bones.Server.extend({ model : models.user });
 
 // servers.Middleware.augment({
 //     initialize: function(parent, app) {
 //         parent.call(this, app);
-
-//         var args = { model : models.user };
-
-//         console.log(args);
-//         this.use(new servers['Auth'](app, args));
+// 		console.log("hum");
+//         this.use(new servers.Auth(app, { model : models.user }));
+//  //       console.log(app);
 //     }
 // });
-
-// console.log(servers);

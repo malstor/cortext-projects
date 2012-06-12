@@ -22,7 +22,7 @@
 
 <nav id="path">
 <ul>
-<li><a href="/"><img src="/assets/server/images/home2.png" alt="#" /></a></li>
+<li class="home"><a href="/"><img src="/assets/server/images/home2.png" alt="#" /></a></li>
 <% _.each(path, function(element){ %>
 <li class="<%= element.class %>"><a href="<%= element.url %>"><%= element.name %></a></li>  
 <% }); %>
@@ -48,7 +48,16 @@
 			</p>
 		</form>
 	</div>
-</div> <!-- /#menu-->  
+</div> <!-- /#menu-->
+
+<div id="user">
+<% if(session.user){ %>
+<a href="/user/<%= session.user.id %>"><%= session.user.attributes.name %></a>
+<% } else { %>
+<a href="/login">login</a>
+<% } %>
+</div>
+
 </div><!-- #header -->
 
 <div id='main'>

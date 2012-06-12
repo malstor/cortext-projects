@@ -21,7 +21,7 @@ body {
 }	
 
 
-/*----------------------menu----------------------*/
+/*----------------------menu + header-------------------*/
 
 #menu {
 	height: 22px;
@@ -36,27 +36,27 @@ body {
 
 #path ul {
  	margin:0;
- 	list-style-type:none; 
+ 	list-style-type:none;
+ 	clear : both;
 }
- 
+
+#path ul li {
+	float:left;
+	line-height:21px;
+	border-bottom: 3px solid #ffffff;
+	padding : 0 7px;
+}
+
+#path .home { padding : 0; }
+
 #path .project{
-	float:left;
 	background-color:#3C3C3C;
-	margin-left:0px;
-	padding-left:7px;
-	padding-right:7px;
-	line-height:20px;
-	border-bottom: 3px solid #9c96a7;
+	border-color : #9c96a7;
 }
-	
+
 #path .Project, #path .dashboard{
-	float:left;
 	background-color:#235BBE;
-	margin-left:0px;
-	padding-left:7px;
-	padding-right:7px;
-	line-height:20px;
-	border-bottom: 3px solid #32B9E5;
+	border-color : #32B9E5;
 }		
 	
 #path .Project:hover{
@@ -74,6 +74,23 @@ body {
 	text-align: center;
 }
 
+#user {
+	position : absolute;
+	top : 0;
+	right : 0;
+}
+
+#user a {
+	padding : 0 7px;
+	display : inline-block;
+
+	font: normal 11px/21px Arial, sans-serif;
+	text-decoration: none;
+	text-transform: lowercase;
+	color : #fff;
+	background : #3C3C3C;
+	border-bottom : 3px solid #9C96A7;
+}
 
 /*----------------------formulaire/login----------------------*/
 
@@ -398,12 +415,15 @@ input:focus{
 	background-image:url(../images/visual_actu.png);
 }
 	
+#dashboard .project canvas {   }
+#dashboard .project .participation { float : right; width : 200px; height : 10px; display : block; margin-top : 4px; }
 
 #dashboard .project  h2, #dashboard .project  h2 a {
 	color:#235BBE;
 	font: normal 18px Arial, sans-serif;
 	text-decoration:none;
-  	margin-bottom:10px;
+  	margin-bottom:0px;
+  	display : inline-block;
 }
   
 #dashboard .elements .author{

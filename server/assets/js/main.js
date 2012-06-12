@@ -36,7 +36,7 @@ $(document).ready(function(){
 
 
 function to_participation_bar(e){
-	console.log(e);
+//	console.log(e);
 
 	var w = $(e).width();
 	var h = 10;
@@ -57,6 +57,7 @@ function to_participation_bar(e){
 	
 	var canvas = document.createElement("canvas");
 	$(canvas).attr("height",10);
+	$(canvas).attr("width",w);
 
 	var ctx = canvas.getContext("2d");
 

@@ -43,7 +43,7 @@ models.projects.prototype.sync = function(method, model, options) {
                         return m;
                     }, data.composition);
 
-                console.log(data.composition);
+//                console.log(data.composition);
                 projects.push(data);
             } else {
                 console.log("access not granted");
