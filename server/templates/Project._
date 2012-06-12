@@ -8,6 +8,7 @@
 </div>
 
 <div class="members" id="member">
+    <div id="user-icon"></div>
 	<h3>participants</h3>
 
 	<% _.each(members, function(member){ %>
