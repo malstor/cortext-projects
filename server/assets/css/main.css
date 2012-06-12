@@ -216,6 +216,16 @@ input:focus{
 	margin-top:5px;
 	margin-left:10px;
 }	
+
+.participation .data {
+	font: normal 12px/1.2em Arial, sans-serif;
+	color: #909090;
+	margin-top:2px;
+	margin-left:10px;
+	margin-bottom : 10px;
+	z-index : 99999;
+}
+
 	
 .members h3, .dashboard-projects h1{
 	font: normal 11px Arial, sans-serif;

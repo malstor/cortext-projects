@@ -79,5 +79,10 @@ function to_participation_bar(e){
 	});
 
 	$(e).children(".data").hide();
-	e.appendChild(canvas);	
+	$(e).bind("mouseenter mouseleave", function(evt){
+		$(e).children(".data").slideToggle();
+	});
+
+
+	$(e).prepend(canvas);
 }
