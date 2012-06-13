@@ -42,12 +42,16 @@ body {
 
 #path ul li {
 	float:left;
+
 	line-height:21px;
-	border-bottom: 3px solid #ffffff;
 	padding : 0 7px;
 	margin : 0 !important;
+
 	background-color:#3C3C3C;
+	border-bottom: 3px solid #ffffff;
 	border-color : #9C96A7;
+
+	text-transform: lowercase;
 }
 
 #path .home { padding : 0; border : 0; }
