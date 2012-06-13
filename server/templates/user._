@@ -1,6 +1,8 @@
 <div class="user-meta col-1">
 
+<div class="info">
 <h3>informations</h3>
+</div>
 
 <h3>projets</h3>
 
@@ -10,7 +12,9 @@
 
 <div class="info">
 	<h1 id="name"><%= user.name %></h1>
+	<div id="gravatar">
 	<img src="<%= user.gravatar %>" />
+	</div>
 	<div id="email" class="email"><%= user.email %></div>
 </div>
 

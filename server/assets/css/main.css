@@ -126,10 +126,10 @@ body {
     color: #FFF;
 }
 	
-.user{
+/*.user{
 	line-height: 1.5;
 	margin-left:78px;
-}
+}*/
 
 .password{
 	margin-left:83px;
@@ -192,7 +192,7 @@ input:focus{
 	z-index:15px;
 }	
 	
-.project-meta, #dashboard-meta{
+.project-meta, #dashboard-meta, .user-meta{
 	width:255px;
 	float:left;
 	z-index:2;
@@ -205,7 +205,7 @@ input:focus{
 	height:100px;
 }
 	
-.project-meta .info h3, #dashboard-meta .info h3{
+.project-meta .info h3, #dashboard-meta .info h3, .user-meta h3{
 	font: normal 11px Arial, sans-serif;
 	color: #BEBEBE;
 	margin: 10px 10px 10px 0px;
@@ -317,7 +317,7 @@ input:focus{
 */}    
 
 
-#elements, #dashboard{
+#elements, #dashboard, #user-1{
     width:765px;
     float:left;
     margin-top: 12px;
@@ -529,4 +529,30 @@ input:focus{
   padding-top:10px;
   font: normal 12px/17px Arial, sans-serif;
 }
+
+/*-------------------user--------------------------*/
+
+#user-1 .info{
+	border: 1px solid #EEF2F6;
+    float: left; 
+	margin-left: 8px;
+    margin-top: 13px;
+    width: 745px;
+	}
 	
+#user-1 .info img{
+	border: 1px solid #EEF2F6;
+	height: 140px;
+    margin: 10px auto 0 10px;
+    width: 140px;
+    }
+	
+#user-1 .info h1{
+	color: #777777;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 17px;
+    font-style: normal;
+    margin-top: 25px;
+	float:right;
+	margin-right:430px;   
+	    }		
