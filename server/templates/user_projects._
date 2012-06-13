@@ -1,7 +1,7 @@
 <div class="project">
 <div class="title"><%= project.info.title %></div>
 
-<%= templates.participation({ composition: project.composition }) %>
+<%= templates.participation({ composition: composition }) %>
 
 <div class="date">created: <%= format_date(project.info.date_created) %></div>
 </div>

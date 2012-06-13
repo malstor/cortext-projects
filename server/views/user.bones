@@ -22,11 +22,26 @@ view = views.Main.extend({
     },
     load_projects: function(user){
         // TODO: ajax loading. On fera dans la dentelle plus tard
-
         $("#projects").empty();
 
         _(user.projects).each(function (p){
-            $("#projects").append(templates.user_projects({project : p}));
+            var composition = {
+                Message: 0,
+                Image: 0,
+                Analysis: 0,
+                Others: 0
+            }
+
+            _(p.elements).reduce(function(composition, element){
+                if(element.author.id == user.id){
+                    composition[element.type] +=1;
+                }else{
+                    composition["Others"] += 1;
+                }
+                return composition;
+            },composition);
+
+            $("#projects").append(templates.user_projects({project : p, composition : composition}));
         });
             
         _.each($(".participation"), function(e){
