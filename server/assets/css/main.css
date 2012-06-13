@@ -227,18 +227,6 @@ input:focus{
 	background : white;
 }
 
-	
-/*.dashboard-projects h1{
-	font: normal 11px Arial, sans-serif;
-	color: #BEBEBE;
-	margin: 10px 10px 10px 0px;
-	padding-bottom:2px;
-	padding-left:8px;
-	width:245px;
-	border-bottom: 1px solid #EEF2F6;
-}
-*/
-
 .dashboard-projects h1{
 	font: normal 11px Arial, sans-serif;
 	color: #FFFFFF;
@@ -483,16 +471,14 @@ input:focus{
 }
 
 .project .elements .Analysis{
-/*	background-image: url(../images/script_actu2.png);
-*/background-image: url(../images/script_actu3.png);}
+	background-image: url(../images/script_actu.png);}
 
 .project .elements .Message{
 	background-image:url(../images/post_actu.png);
 }
 
 .project .elements .Image{
-/*	background-image:url(../images/visual_actu.png);
-*/	background-image:url(../images/visual_actu3.png);
+	background-image:url(../images/visual_actu3.png);
 }
 	
 #dashboard .project canvas {   }
