@@ -1,0 +1,16 @@
+<div class="project-messages">
+
+<h5><%= project.info.title %></h5>
+
+<div class="messages">
+<% _.each(project.elements, function(m){ %>
+<div id="message-<%= m.id %>" class="message">
+<div class="info">
+	<div class="date"><%= m.date_formated %></div>
+</div>
+<div class="body"><%= m.content %></div>
+</div>
+<% }); %>
+</div>
+
+</div><!-- -->
