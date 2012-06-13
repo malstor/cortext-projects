@@ -45,9 +45,12 @@ body {
 	line-height:21px;
 	border-bottom: 3px solid #ffffff;
 	padding : 0 7px;
+	margin : 0 !important;
+	background-color:#3C3C3C;
+	border-color : #9C96A7;
 }
 
-#path .home { padding : 0; }
+#path .home { padding : 0; border : 0; }
 
 #path .project{
 	background-color:#3C3C3C;
@@ -66,7 +69,9 @@ body {
 #path .project:hover{
 	background-color:#777777;	
 }
-			
+
+#path .user.type { 	background-color: #EE6E21; border-color : #F3BE00; }
+		
 #path a{
 	font: normal 11px Arial, sans-serif;
 	text-decoration: none;
