@@ -20,7 +20,6 @@ body {
 	z-index: 10;
 }	
 
-
 /*----------------------menu + header-------------------*/
 
 #menu {
@@ -340,6 +339,12 @@ input:focus{
 	margin-left: 8px;
     margin-top: 10px;
 }
+
+.element .info .type { float : left; margin-top : 2px; margin-right : 5px; padding : 0 3px; text-transform : lowercase; font : normal 8px/15px verdana; color : white; background-color : #909090; }
+
+.element .info .message { background-color : #FFD505;}
+.element .info .analysis { background-color : #34B02C;}
+.element .info .image { background-color : #A3319F;}
 
 .element .info {
 	border-bottom: 1px solid #EEF2F6;

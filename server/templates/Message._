@@ -2,6 +2,7 @@
 
 	<div class="info">
 		<h3 class="author"><%= e.author.name %></h3>
+		<span class="type message"><%= e.type %></span>
 		<span class="date"><%= e.date_formated %></span>
 	</div><!-- /info -->
 

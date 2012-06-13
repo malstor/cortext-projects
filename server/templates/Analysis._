@@ -2,6 +2,7 @@
 
 <div class="info">
 	<h3>analysis.py</h3>
+	<span class="type analysis"><%= e.type %></span>
 	<span class="author"><%= e.author.name %></span>
 	<span class="extra"><a href="#">parameters</a> - <a href="#">logs</a></span>
 	<span class="date"><%= e.date_formated %></span>
