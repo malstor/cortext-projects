@@ -10,6 +10,7 @@ require('./views/Main');
 bones.load(__dirname);
 
 session = {};
+request = {};
 
 if (!module.parent) {
     bones.start();

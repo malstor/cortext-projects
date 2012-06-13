@@ -5,13 +5,14 @@ model = model.extend({
 	name : "",
 	email: "tk@deveha.com",
 	gravatar: "",
-
+	info: {},
+	projects : [],
 	url: function() {
         return '/api/user/' + encodeURIComponent(this.get('id'));
     },
 	initialize: function(){
-		var m = this;
-
+		var user = this;
+		var views = views;
 
 		this.bind("auth:error", function(e){
 			console.log("log failed");
@@ -23,25 +24,49 @@ model = model.extend({
 
 			window.location= "/dashboard";
 		});
-
-		this.bind("fetch:projects", function(){
-			views.user.load_projects(this);
-		});
 	},
 	url: function() {
         return '/api/user/' + encodeURIComponent(this.get('id'));
     },
 
-	fetch_projects: function(){
+	// fetch_projects: function(callback){
+	//     var user = this;
+
+	//     var options = {
+	//         data: {
+	//             user_id : this.id
+	//         },
+	//         success: function(evt){
+	//             user.trigger("fetch:projects");
+	//             callback();
+	//         }
+	//     }
+
+	//     this.projects = new models.projects();
+	//     this.projects.fetch(options);
+	// },
+
+	get_info: function(){
+		var clone = _.clone(this);
+		delete clone.projects;
+
+		return clone.toJSON();
+	},
+
+	fetch_projects: function(callback){
+		var user = this;
+
 		var options = {
-			data : {
-				user_id : this.id
+			data: {
 			},
-			success: function(evt){
-				this.trigger("fetch:projects");
+			url: this.url() + "/projects",
+			success: function(data){
+				user.projects = data;
+	            user.trigger("fetch:projects");
 			}
 		}
-		new models.projects().fetch(options);
+
+		$.ajax(options);
 	},
 
     sync: function(){

@@ -1,5 +1,9 @@
 <div class="user-meta col-1">
 
+<h3>informations</h3>
+
+<h3>projets</h3>
+
 </div><!-- /user-meta -->
 
 <div id="user-<%= user.id %>" class="user">
@@ -10,12 +14,12 @@
 	<div id="email" class="email"><%= user.email %></div>
 </div>
 
-<div class="projects">
-<% _.each(projects, function(p){ %>
-<div class="project">
-<div class="title"><%= p.title %></div>
+<h4>Projects</h4>
+<div id="projects" class="user-projects">
 </div>
-<%}); %>
+
+<h4>Recent messages</h4>
+<div id="messages" class="user-messages">
 </div>
 
 </div><!-- /.user -->

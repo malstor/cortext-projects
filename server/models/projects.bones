@@ -1,4 +1,7 @@
 model = Backbone.Collection.extend({
+	id : "",
     model: models.Project,
-    url: '/api/projects/default'
+    url: function() {
+        return '/api/projects/1';
+    }
 });

@@ -5,6 +5,9 @@ routers.Default.prototype.send = function(view, options) {
     // console.log(this.req.session);
     // pas sûr que ce soit très kasher ...
     session = this.req.session;
+    request = this.req;
+
+    console.log(request.query);
 
     var options = arguments.length > 1 ? arguments[1] : {};
 
@@ -37,3 +40,17 @@ routers.Default.prototype.send = function(view, options) {
         startup: ''
     }));
 };
+
+
+routers.Default.prototype.user_projects = function(user_id){
+    console.log("api>");
+    var router = this;
+
+    var u = new models.user({ id : user_id });
+
+    u.fetch_projects(function(){
+        router.res.send(u.projects.toJSON());
+    });
+
+    console.log("<api");
+}

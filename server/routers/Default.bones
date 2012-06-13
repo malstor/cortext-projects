@@ -4,8 +4,9 @@ router = Backbone.Router.extend({
         '/dashboard': 'dashboard',
         '/login': 'login',
         '/user/:user': 'user',
-        '/project/:project': 'project'
+        '/project/:project': 'project',
         // '/project/:project/object/:object': 'object'
+        '/api/user/:user/projects' : "user_projects"
     },
     home: function() {
     	var router = this;
@@ -80,8 +81,8 @@ router = Backbone.Router.extend({
     path : function(model){
         var p = [];
 
-        if(false && model){
-            var info = model.get("info");
+        if(model){
+            var info = model.get_info();
             var type = model.constructor.title;
 
             p.push({
@@ -90,9 +91,9 @@ router = Backbone.Router.extend({
             });
 
             p.push({
-                class: "project name",
+                class: type+" name",
                 url: info.url,
-                name: info.title
+                name: info.title || info.name
             });
         } else {
             p.push({

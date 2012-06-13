@@ -10,11 +10,10 @@ models['user'].secret = function() {
 };
 
 function get_gravatar_hash(email){
-    var email = ""; //email.toLowerCase();
+    var email = email.toLowerCase();
 
     return crypto.createHash('md5').update(email).digest("hex");
 };
-
 
 models.user.prototype.sync = function(method, model, options) {
     if (method != 'read') return options.error('Unsupported method');
@@ -39,3 +38,22 @@ models.user.prototype.sync = function(method, model, options) {
         options.success(resp);
     });
 };
+
+models.user.prototype.fetch_projects = function(callback){
+    console.log("#fetch_projects");
+
+    var user = this;
+
+    var options = {
+        url: new models.projects().url(),
+        data: {
+            user_id : this.id
+        },
+        success: function(evt){
+            callback();
+        }
+    }
+
+    this.projects = new models.projects();
+    this.projects.fetch(options);
+}

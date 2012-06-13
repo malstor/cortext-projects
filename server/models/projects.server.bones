@@ -6,7 +6,9 @@ var yaml = require('pyyaml');
 models.projects.prototype.sync = function(method, model, options) {
     if (method != 'read') return options.error('Unsupported method');
 
-    // if(_.isUndefined(session.user)) return options.error('You need to be authenticated');
+//    if(_.isUndefined(session.user)) return options.error('You need to be authenticated');
+
+    options.data = options.data || {};
 
     var projectDir = '../data/projects/',
         resp = {};
@@ -21,15 +23,17 @@ models.projects.prototype.sync = function(method, model, options) {
         options.success(projects);
     });
 
-    console.log(arguments);
+    // TEMPORARY PLEASE FIX ME
+//    var filter_user = options.user_id || session.user.id;
+    var filter_user = options.data.user_id || session.user.id;
 
-    var filter_user = options.user_id || session.user.id;
+    console.log(filter_user);
 
     _.each(files, function(file){
         yaml.load(projectDir+file, function(error, data){
             if(error) console.log(error)
 
-            if(_.find(data.members, function(m){ return m.id === filter_user })){
+            if(_.find(data.members, function(m){ return m.id == filter_user })){
 //            if(true){
                 data.elements = data.elements.slice(0,14);
 

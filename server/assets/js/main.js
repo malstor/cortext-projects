@@ -24,9 +24,13 @@ $(document).ready(function(){
 			},
 
 			user: function(user){
-				console.log(user);
-
 				var u = new models.user({ id : user });
+				var v = new views.user();
+
+				u.bind("fetch:projects", function(){
+					v.load_projects(this);
+					v.load_messages(this);
+				});
 
 				u.fetch_projects();
 			}
@@ -34,25 +38,24 @@ $(document).ready(function(){
 
 		app = new main();
 
+		$("#login").submit(function(e){
+			e.preventDefault();
+
+			var user = new models.user({
+				name: $("#login #name").val(),
+				password: $("#login #password").val(),
+				id: $("#login #id").val()
+			});
+
+			var response = user.login(user.toJSON());
+		});
+
 		Backbone.history.start({pushState: true});
 	});
 
 	_.each($(".participation"), function(e){
 		to_participation_bar(e);
 	});
-
-	$("#login").submit(function(e){
-		e.preventDefault();
-
-		var user = new models.user({
-			name: $("#login #name").val(),
-			password: $("#login #password").val(),
-			id: $("#login #id").val()
-		});
-
-		var response = user.login(user.toJSON());
-//		var response = user.login();
-	});	
 });
 
 
@@ -107,4 +110,25 @@ function to_participation_bar(e){
 
 
 	$(e).prepend(canvas);
+}
+
+String.prototype.lpad = function(padString, length) {
+	var str = this;
+    while (str.length < length)
+        str = padString + str;
+    return str;
+}
+
+format_date = function(date){
+	var date = new Date(date);
+
+	var d = date.getDate();
+		d = String(d).lpad("0", 2);
+
+	var m = date.getMonth()+1;
+		m = String(m).lpad("0", 2);
+
+	var y = date.getFullYear()
+
+	return d+"."+m+"."+y;
 }
