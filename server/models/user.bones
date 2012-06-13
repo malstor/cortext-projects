@@ -23,13 +23,25 @@ model = model.extend({
 
 			window.location= "/dashboard";
 		});
+
+		this.bind("fetch:projects", function(){
+			views.user.load_projects(this);
+		});
 	},
 	url: function() {
         return '/api/user/' + encodeURIComponent(this.get('id'));
     },
 
 	fetch_projects: function(){
-		 this.projects = new models.projects().fetch({ user_id : this.id });
+		var options = {
+			data : {
+				user_id : this.id
+			},
+			success: function(evt){
+				this.trigger("fetch:projects");
+			}
+		}
+		new models.projects().fetch(options);
 	},
 
     sync: function(){

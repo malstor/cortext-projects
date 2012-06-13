@@ -17,5 +17,8 @@ view = views.Main.extend({
         $(this.el).empty().append(templates.user(options));
 
         return this;
+    },
+    load_projects: function(user){
+        console.log(user);
     }
 });

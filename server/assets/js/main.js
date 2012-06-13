@@ -1,5 +1,7 @@
 var app;
 
+var models, views, routers, templates;
+
 var colors = {
 	Analysis: "#34B02C",
 	Image: "#A3319F",
@@ -11,7 +13,10 @@ $(document).ready(function(){
 	var m;
 
 	Bones.initialize(function(models, views, routers, templates) {
-		m = models;
+		models = models;
+		views = views;
+		routers = routers;
+		templates = templates;
 
 		var main = Backbone.Router.extend({
 			routes : {
@@ -20,6 +25,10 @@ $(document).ready(function(){
 
 			user: function(user){
 				console.log(user);
+
+				var u = new models.user({ id : user });
+
+				u.fetch_projects();
 			}
 		});
 
@@ -35,7 +44,7 @@ $(document).ready(function(){
 	$("#login").submit(function(e){
 		e.preventDefault();
 
-		var user = new m.user({
+		var user = new models.user({
 			name: $("#login #name").val(),
 			password: $("#login #password").val(),
 			id: $("#login #id").val()

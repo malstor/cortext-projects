@@ -21,6 +21,8 @@ models.projects.prototype.sync = function(method, model, options) {
         options.success(projects);
     });
 
+    console.log(arguments);
+
     var filter_user = options.user_id || session.user.id;
 
     _.each(files, function(file){

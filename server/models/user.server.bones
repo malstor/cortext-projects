@@ -10,7 +10,7 @@ models['user'].secret = function() {
 };
 
 function get_gravatar_hash(email){
-    var email = email.toLowerCase();
+    var email = ""; //email.toLowerCase();
 
     return crypto.createHash('md5').update(email).digest("hex");
 };
