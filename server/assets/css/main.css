@@ -57,7 +57,7 @@ body {
 	border-color : #9c96a7;
 }
 
-#path .Project, #path .dashboard{
+#path .Project.type, #path .dashboard{
 	background-color:#235BBE;
 	border-color : #32B9E5;
 }		
@@ -192,7 +192,7 @@ input:focus{
 	z-index:15px;
 }	
 	
-.project-meta, #dashboard-meta, .user-meta{
+.col-1 {
 	width:255px;
 	float:left;
 	z-index:2;
@@ -205,7 +205,7 @@ input:focus{
 	height:100px;
 }
 	
-.project-meta .info h3, #dashboard-meta .info h3, .user-meta h3{
+.col-1 h3 {
 	font: normal 11px Arial, sans-serif;
 	color: #BEBEBE;
 	margin: 10px 10px 10px 0px;
