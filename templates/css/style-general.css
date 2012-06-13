@@ -151,8 +151,6 @@ body {
 	float:right;
 	margin-right:10px;
 	margin-top:5px;
-	/*width:150px;
-	height:35px;*/
 	background:url(../images/dialogue.png);
 	background-repeat:no-repeat;
 	background-position:right;
@@ -209,8 +207,7 @@ body {
 	margin-left:10px;
 	padding-bottom:4px;
 	padding-top:4px;
-/*	margin-top:-12px;
-*/	}
+	}
 	
 .comment1 h3{
 	float:left;
@@ -231,8 +228,7 @@ body {
 	color:#BEBEBE;
 	margin-left:500px;
 	padding-top:4px;
-/*	margin-top:-12px;	
-*/	}	
+	}	
 	
 .data2{
 	float:left;
@@ -376,8 +372,7 @@ body {
 	
 		
 .rendu{
-/*	height:365px;
-*/	width:750px;
+	width:750px;
 	margin-left: 8px;
     margin-top: 18px;
 	border-top-width: 1px;
