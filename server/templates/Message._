@@ -1,4 +1,4 @@
-<div class="element message" id="Message-<%= e.id %>">
+<div class="element message user-<%= e.author.id %>" id="Message-<%= e.id %>">
 
 	<div class="info">
 		<h3 class="author"><%= e.author.name %></h3>

@@ -1,4 +1,4 @@
-<div class="element analysis" id="Analysis-<%= e.id %>">
+<div class="element analysis user-<%= e.author.id %>" id="Analysis-<%= e.id %>">
 
 <div class="info">
 	<h3>analysis.py</h3>

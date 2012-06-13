@@ -7,12 +7,12 @@
 	<div class="date_updated date">updated: <span><%= format_date(info.date_updated) %></span></div>
 </div>
 
-<div class="members" id="member">
+<div class="members" id="members">
     <div id="user-icon"></div>
 	<h3>participants</h3>
 
 	<% _.each(members, function(member){ %>
-	<div class="member">
+	<div class="member" rel="user-<%= member.id %>">
 		<div class="name"><%= member.name %></div>
 		<div class="participation">
 		<ul class="data">
