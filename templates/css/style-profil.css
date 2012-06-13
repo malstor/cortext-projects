@@ -129,8 +129,7 @@
 	
 .contain-left{
 	height:10px;
-/*	background:#EEF2F6;
-*/	margin-left:198px;
+	margin-left:198px;
 	margin-bottom:5px;	
 	width:390px;
 	margin-top:-12px; 
@@ -179,7 +178,7 @@
 #carr3{
 	height:12px;
 	width:12px;
-	background:#D0D644;
+	background:#FFD505;
 	float:left;
 	margin-left:100px;
 	}
@@ -212,7 +211,7 @@
 .proj-icon{
 	height:18px;
 	width:20px;
-	background:url(../images/proj-icon3.png);
+	background:url(../images/proj-icon.png);
 	background-repeat:no-repeat;
 	margin-top:12px;
 	margin-left:15px;
