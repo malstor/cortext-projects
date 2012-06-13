@@ -104,7 +104,6 @@
     
     	<div class="projet_cortext">
         
-        <div class="titreprojet"></div>
          <h1><a href="cortext_index1.php">Algues Vertes</a></h1>	
          <span class="date">10.05.12</span>
  
