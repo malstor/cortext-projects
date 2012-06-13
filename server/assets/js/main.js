@@ -5,7 +5,7 @@ var models, views, routers, templates;
 var colors = {
 	Analysis: "#34B02C",
 	Image: "#A3319F",
-	Message: "#D0D644",
+	Message: "#FFD505",
 	Others: "#EEF2F6"
 }
 

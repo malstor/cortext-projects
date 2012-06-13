@@ -49,8 +49,9 @@ models.user.prototype.fetch_projects = function(callback){
         data: {
             user_id : this.id
         },
-        success: function(evt){
-            callback();
+        success: function(event){
+            user.trigger("fetch:projects");
+            callback(); 
         }
     }
 
