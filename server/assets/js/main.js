@@ -39,8 +39,8 @@ $(document).ready(function(){
 			project: function(project){
 				$("#members").delegate(".member", "click", function(evt){
 					var user_id = $(this).attr("rel");
-					$("#elements").children().css("display", "block");
-					$("#elements").children(":not(."+user_id+")").slideToggle("fast");
+					$("#elements").children(":not(."+user_id+")").filter(":not(:hidden)").slideUp("fast");
+					$("#elements").children("."+user_id+"").slideDown("fast");
 				});
 			}
 		});
