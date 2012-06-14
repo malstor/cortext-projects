@@ -1,10 +1,20 @@
-server = Bones.Server.extend({ model : models.user });
+server = Bones.Server.extend({});
 
-// servers.Middleware.augment({
-//     initialize: function(parent, app) {
-//         parent.call(this, app);
-// 		console.log("hum");
-//         this.use(new servers.Auth(app, { model : models.user }));
-//  //       console.log(app);
-//     }
-// });
+// server.prototype.initialize = function(app){
+// 	console.log("hop");
+
+// 	this.all("*", function(req, res, next){
+// 		console.log("ping");
+// 		next();
+// 	});
+// }
+
+servers.Middleware.augment({
+    initialize: function(parent, app) {
+        parent.call(this, app);
+		this.all("*", function(req, res, next){
+			session = req.session;
+			next();
+		});
+    }
+});
