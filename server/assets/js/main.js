@@ -20,7 +20,8 @@ $(document).ready(function(){
 
 		var main = Backbone.Router.extend({
 			routes : {
-				"user/:user" : "user"
+				"user/:user" : "user",
+				"project/:project" : "project"
 			},
 
 			user: function(user){
@@ -33,6 +34,14 @@ $(document).ready(function(){
 				});
 
 				u.fetch_projects();
+			},
+
+			project: function(project){
+				$("#members").delegate(".member", "click", function(evt){
+					var user_id = $(this).attr("rel");
+					$("#elements").children().css("display", "block");
+					$("#elements").children(":not(."+user_id+")").slideToggle("fast");
+				});
 			}
 		});
 
@@ -103,11 +112,10 @@ function to_participation_bar(e){
 	});
 
 	$(e).children(".data").hide();
-	$(e).bind("mouseenter mouseleave", function(evt){
-		$(e).children(".data").css("width", w+"px");
-		$(e).children(".data").slideToggle("fast");
-	});
-
+	// $(e).bind("mouseenter mouseleave", function(evt){
+	// 	$(e).children(".data").css("width", w+"px");
+	// 	$(e).children(".data").slideToggle("fast");
+	// });
 
 	$(e).prepend(canvas);
 }
