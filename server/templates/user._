@@ -16,6 +16,24 @@
 	<img src="<%= user.gravatar %>" />
 	</div>
 	<div id="email" class="email"><%= user.email %></div>
+	<div id="number">
+	<div id="number1">
+	<h4>8</h4>
+	<h3>projets</h3>
+    </div>
+	<div id="number2">
+	<h4>12</h4>
+	<h3>analysis</h3>
+	</div>
+	<div id="number3">
+	<h4>33</h4>
+	<h3>documents</h3>
+	</div>
+	<div id="number4">
+	<h4>58</h4>
+	<h3>messages</h3>
+	</div>
+	</div>
 </div>
 
 <h4>Projects</h4>
