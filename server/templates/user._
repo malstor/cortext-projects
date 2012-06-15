@@ -36,11 +36,11 @@
 	</div>
 </div>
 
-<h4>Projects</h4>
+<h2>Projects</h2>
 <div id="projects" class="user-projects">
 </div>
 
-<h4>Recent messages</h4>
+<h2>Recent messages</h2>
 <div id="messages" class="user-messages">
 </div>
 
