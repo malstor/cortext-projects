@@ -39,8 +39,21 @@ $(document).ready(function(){
 			project: function(project){
 				$("#members").delegate(".member", "click", function(evt){
 					var user_id = $(this).attr("rel");
-					$("#elements").children(":not(."+user_id+")").filter(":not(:hidden)").slideUp("fast");
-					$("#elements").children("."+user_id+"").slideDown("fast");
+
+					if( $(this).hasClass("active") ){
+						$("#members .member").removeClass("inactive");
+						$(this).removeClass("active");
+
+						$("#elements").children().filter(":hidden").slideDown("fast");
+					} else {
+						$("#members .member").removeClass("active");
+						$("#members .member").addClass("inactive");
+						$(this).removeClass("inactive");
+						$(this).addClass("active");
+
+						$("#elements").children(":not(."+user_id+")").filter(":not(:hidden)").slideUp("fast");
+						$("#elements").children("."+user_id+"").slideDown("fast");
+					}
 				});
 			}
 		});

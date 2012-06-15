@@ -257,6 +257,11 @@ input:focus{
 	background:#EE6E21;
 }
 
+.members .inactive {
+	opacity: 0.5;
+	-moz-opacity: 0.5;
+	filter:alpha(opacity=5);
+}
 
 .dashboard-projects #user-icon{
 	background: url("../images/dossier.png") no-repeat;
@@ -580,53 +585,43 @@ input:focus{
     font-size: 13px;
     font-style: normal;
 	}
-	
-#user-1 .info #number{
+
+#indicators {
 	border-top: 1px solid #EEF2F6;
 	height:74px;
 	width:746px;
-	}	
-#user-1 .info #number #number1{
+	text-align : center;
+}
+#indicators > div { overflow : auto; display : inline-block; margin: auto; }
+
+#indicators > div > div {
 	height:74px;
 	width:74px;
-	background:#235BBE;
-	float:left;
-	margin-left:265px;
-	}
-#user-1 .info #number #number2{
-	height:74px;
-	width:74px;
-	background:#34B02C;
-	float:left;
-	}	
-#user-1 .info #number #number3{
-	height:74px;
-	width:74px;
-	background:#A3319F;	
-	float:left;
-	}
-#user-1 .info #number #number4{
-	height:74px;
-	width:74px;
-	background:#FFD505;
-	float:left;
-	}
+	float :left;
+
+	position : relative;
+}
+
+#indicators #indicator_projects { background:#235BBE; }
+#indicators #indicator_analysis { background:#34B02C; }	
+#indicators #indicator_documents{ background:#A3319F; }
+#indicators #indicator_messages { background:#FFD505; }
 	
-#user-1 .info #number h3{
-				
-	font: normal 13px Arial, sans-serif;
+#user-1 .info #indicators h4{
+	font: normal 10px/10px Arial, sans-serif;
 	color:#FFF;
-	margin-left:6px;
-	
+	text-align : center;
+
+	position : absolute;
+	bottom : 10px;
+	width : 74px;
 }
 	
-#user-1 .info #number h4{
-				
-	font: normal 26px Arial, sans-serif;
+#user-1 .info #indicators .number{
+	font: normal 26px/26px Arial, sans-serif;
 	color:#FFF;
-	margin-left:6px;
-	margin-top:15px;
-	
+	text-align : center;
+	margin-top : 24px;
 }
 	
 #user-1  h2{
