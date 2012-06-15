@@ -548,7 +548,6 @@ input:focus{
 
 #user-1 .info{
 	border: 1px solid #EEF2F6;
-    float: left; 
 	margin-left: 8px;
     margin-top: 13px;
     width: 745px;
@@ -624,18 +623,107 @@ input:focus{
 	margin-top : 24px;
 }
 	
-#user-1  h2{
-				
+	
+#user-1 h2{			
 	font: normal 17px Arial, sans-serif;
 	color:#FFFFFF;
-	height:20px;
-	background:#235BBE;
 	margin-left: 8px;
     margin-top: 13px;
-    width: 745px;
-	margin-left: 8px;	
+    width: 725px;
+	height:25px;
 
 }	
 
-	
+#user-1 .Recent{
+	background:#FFD505;
+	padding-left:20px;
+	padding-top:4px;
+}	
 
+#user-1 .Project{
+	background:#235BBE;
+	padding-left:20px;
+	padding-top:4px;
+}
+	
+#user-1 #projects{			
+	margin-left: 8px;
+    margin-top: 13px;
+    width: 745px;
+}	
+	
+#user-1 #projects .project{
+	
+border: 1px solid #EEF2F6;
+    height: 40px;
+    margin-bottom: 10px;}
+	
+#user-1 #projects .project .title {
+	font: normal 14px Arial, sans-serif;
+    margin-left: 17px;
+	padding-top:12px;	
+	}
+  
+ #user-1 #projects .project .title a{
+	color: #777777;
+	text-decoration:none;
+	}
+	 
+#user-1 #projects .project .participation{  
+  	margin-bottom: 5px;
+    margin-left: 198px;
+   	margin-top: -15px;
+    width: 390px;}
+	
+#user-1 #projects .project .date{  	
+	color: #777777;
+    float: right;
+	font: normal 12px Arial, sans-serif;
+    margin-right: 10px;
+    margin-top: -23px;
+}
+
+#user-1 #messages{
+    margin-left: 8px;
+    margin-top: 23px;
+    width: 750px;
+	}
+
+#user-1 #messages .project-messages{
+	border: 1px solid #EEF2F6;
+	margin-bottom: 10px;
+	}
+	
+#user-1 #messages .project-messages h5 a{	
+	color: #777777;
+	font: normal 14px Arial, sans-serif;
+	text-decoration:none;}
+	
+#user-1 #messages .project-messages h5{	
+    margin-left: 17px;
+    margin-top: 15px;
+	}	
+		
+#user-1 #messages .messages .message .info{
+    border:none;
+	}	
+
+#user-1 #messages .messages .message .info .date a{
+    color: #777777;
+    float: right;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    margin-right: 10px;
+	text-decoration:none;
+	}
+	
+#user-1 #messages .messages .body{
+
+	margin-bottom: 18px;
+    margin-left: 195px;
+    margin-right: 75px;
+	width:450px;
+	font-family: Arial,Helvetica,sans-serif;
+    font-size: 13px;
+	color: #909090;
+  }

@@ -35,11 +35,11 @@
 	</div></div><!-- #indicators -->
 </div>
 
-<h2>Projects</h2>
+<h2 class="Project">Projects</h2>
 <div id="projects" class="user-projects">
 </div>
 
-<h2>Recent messages</h2>
+<h2 class="Recent">Recent messages</h2>
 <div id="messages" class="user-messages">
 </div>
 
