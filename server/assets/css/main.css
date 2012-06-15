@@ -257,6 +257,11 @@ input:focus{
 	background:#EE6E21;
 }
 
+.members .inactive {
+	opacity: 0.5;
+	-moz-opacity: 0.5;
+	filter:alpha(opacity=5);
+}
 
 .dashboard-projects #user-icon{
 	background: url("../images/dossier.png") no-repeat;
