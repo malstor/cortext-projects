@@ -13,7 +13,7 @@ servers.Middleware.augment({
     initialize: function(parent, app) {
         parent.call(this, app);
 		this.all("*", function(req, res, next){
-			session = req.session;
+			session = req.session || {};
 			next();
 		});
     }
