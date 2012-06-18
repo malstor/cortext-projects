@@ -8,7 +8,7 @@
 
 </div><!-- /user-meta -->
 
-<div id="user-<%= user.id %>" class="user">
+<div id="user-<%= user.id %>" class="user profile">
 
 <div class="info">
 	<h1 id="name"><%= user.name %></h1>

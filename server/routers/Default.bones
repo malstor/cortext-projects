@@ -109,20 +109,9 @@ router = Backbone.Router.extend({
             var type = model.constructor.title;
 
             p.push({
-                class: type+" type",
-                name: type
-            });
-
-            p.push({
-                class: type+" name",
+                type: type,
                 url: info.url,
                 name: info.title || info.name
-            });
-        } else {
-            p.push({
-                class: "dashboard",
-                url: "/dashboard",
-                name: "dashboard"
             });
         }
 

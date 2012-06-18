@@ -6,6 +6,7 @@
 <title><%= title %></title>
 
 <script src="/assets/bones/all.js?<%= version %>" type="text/javascript" charset="utf-8"></script>
+<script src="/assets/server/js/lib/jquery-ui-1.8.21.custom.min.js?<%= version %>" type="text/javascript" charset="utf-8"></script>
 <script src="/assets/server/js/main.js?<%= version %>" type="text/javascript" charset="utf-8"></script>
 
 <link rel="stylesheet" href="/assets/server/css/reset.css?<%= version %>" type="text/css" />  
@@ -22,9 +23,10 @@
 
 <nav id="path">
 <ul>
-<li class="home"><a href="/"><img src="/assets/server/images/home.png" alt="#" /></a></li>
+<li class="home"><a href="/dashboard"><img src="/assets/server/images/home.png" alt="#" /></a></li>
+<li class="dashboard"><a class="name" href="/">dashboard</a></li>
 <% _.each(path, function(element){ %>
-<li class="<%= element.class %>"><a href="<%= element.url %>"><%= element.name %></a></li>  
+<li class="<%= element.type %>"><span class="type"><%= element.type %></span><a class="name" href="<%= element.url %>"><%= element.name %></a></li>  
 <% }); %>
 </ul>
 </nav>

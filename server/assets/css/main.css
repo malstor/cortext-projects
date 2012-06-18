@@ -42,84 +42,32 @@ body {
 */}
 
 #path ul li {
-/*	float:left;
-*/	line-height:30px;
-/*	line-height:21px;
-*/	padding : 0 7px;
-	margin : 0 !important;
+	float:left;
+	padding : 0;
+	margin : 0;
 	background-color:#3C3C3C;
-/*	border-bottom: 3px solid #ffffff;
-border-color : #9C96A7;*/	
+	border-bottom: 3px solid #000;
 	text-transform: lowercase;
+	color : white;
 }
 
+#path ul li .type { display:block; line-height:20px; font-size : 11px; font-family : verdana; padding : 0 5px; }
+#path ul li .name { display:block; line-height:30px; color : white; text-decoration : none; font-size : 16px; letter-spacing : 2px; font-family: "Oxygen-Regular"; padding : 0 8px; }
+#path ul li:hover { cursor: pointer; }
 
-#path ul .Project.name{
-border-bottom:3px solid #32B9E5;
-width:175px;
-}
+#path ul .Project { border-bottom:3px solid #32B9E5; }
+#path ul .Project .type { background-color:#235BBE; border-color : #9c96a7; }
+/* #path ul .Project:hover .name { background-color:#777777;	}*/
 
-#path ul .user.name{
-border-bottom:3px solid #F3BE00;
-width:175px;
-}
+#path ul .user { border-bottom:3px solid #F3BE00; }
+#path ul .user .type { background-color: #EE6E21; }
 
+#path ul .dashboard { display:none; }
+#path ul .dashboard .type { display : none; }		
+#path ul .dashboard .name { line-height : 50px; }		
 
-#path .home { 
-	padding : 0; 
-	border : 0;
- 
-}
+#path .home { padding : 0; border : 0; }
 
-#path .project{
-	background-color:#3C3C3C;
-	border-color : #9c96a7;
-}
-
-#path .Project.type, #path .dashboard{
-	background-color:#235BBE;
-/*	border-color : #32B9E5;
-*/	line-height:20px;
-	width:175px;
-}		
-	
-/*#path .Project:hover{
-	background-color:#3974db;	
-}*/	
-	
-#path .project:hover{
-	background-color:#777777;	
-}
-
-#path .user.type { 	
-	background-color: #EE6E21; 
-	border-color : #F3BE00;
-	line-height:20px; 
-	width:175px;
-}
-
-#path .type a { 	
-	padding-left:5px;
-	font: normal 11px Arial, sans-serif;
-	text-decoration: none;
-	color:white;
-	text-align: center;
-}
-
-#path .name a { 	
-	padding-left:14px;
-	font: normal 13px Arial, sans-serif;
-	text-decoration: none;
-	color:white;
-	text-align: center;
-}
-#path .dashboard a { 	
-	padding-left:10px;
-	font: normal 11px Arial, sans-serif;
-	text-decoration: none;
-	color:white;
-	text-align: center;
-}		
 /*#path a{
 	font: normal 11px Arial, sans-serif;
 	text-decoration: none;
@@ -635,27 +583,27 @@ input:focus{
 
 /*-------------------user--------------------------*/
 
-#user-1 .info{
+.user.profile .info{
 	border: 1px solid #EEF2F6;
 	margin-left: 8px;
     margin-top: 13px;
     width: 745px;
 }
 	
-#user-1 .info #gravatar{	
+.user.profile .info #gravatar{	
 	border-right: 1px solid #EEF2F6;
     height: 170px;
     width: 170px;
 }
 	
-#user-1 .info #gravatar img{
+.user.profile .info #gravatar img{
 	border: 1px solid #EEF2F6;
 	height: 140px;
     margin: 14px auto 0 14px;
     width: 140px;
 }
 	
-#user-1 .info h1{
+.user.profile .info h1{
 	font: normal 17px Arial, sans-serif;
 	color: #777777;
     margin-top: 25px;
@@ -663,7 +611,7 @@ input:focus{
 	margin-right:430px;   
 }
 				
-#user-1 .info #email{
+.user.profile .info #email{
 	height:125px;
 	width:550px;
 	margin-top:-125px;
@@ -693,7 +641,7 @@ input:focus{
 #indicators #indicator_documents{ background:#A3319F; }
 #indicators #indicator_messages { background:#FFD505; }
 	
-#user-1 .info #indicators h4{
+.user.profile .info #indicators h4{
 	font: normal 10px/10px Arial, sans-serif;
 	color:#FFF;
 	text-align : center;
@@ -702,14 +650,14 @@ input:focus{
 	width : 74px;
 }
 	
-#user-1 .info #indicators .number{
+.user.profile .info #indicators .number{
 	font: normal 26px/26px Arial, sans-serif;
 	color:#FFF;
 	text-align : center;
 	margin-top : 24px;
 }
 	
-#user-1 h2{
+.user.profile h2{
 	font: normal 17px "Oxygen-Regular", sans-serif;
 	letter-spacing:0.1em;	
 /*	font: normal 17px Arial, sans-serif;
@@ -719,27 +667,27 @@ input:focus{
 	height:25px;
 }	
 
-#user-1 .Recent{
+.user.profile .Recent{
 	background:#FFD505;
 	padding-left:10px;
 	padding-top:4px;
 	margin-top:15px;
 }	
 
-#user-1 .Project{
+.user.profile .Project{
 	background:#235BBE;
 	padding-left:10px;
 	padding-top:4px;
 	margin-top:15px;
 }
 	
-#user-1 #projects{			
+.user.profile #projects{			
 	margin-left: 8px;
     margin-top: 15px;
     width: 745px;
 }	
 	
-#user-1 #projects .project{
+.user.profile #projects .project{
 	background: url("../images/proj-icon.png") ;
 	background-repeat:no-repeat;
 	background-position: 10px 10px;
@@ -748,29 +696,29 @@ input:focus{
     margin-bottom: 10px;
 }
 	
-#user-1 #projects .project .title {
+.user.profile #projects .project .title {
 	font: normal 14px Arial, sans-serif;
     margin-left: 42px;
 	padding-top:12px;	
 }
   
-#user-1 #projects .project .title a{
+.user.profile #projects .project .title a{
 	color: #777777;
 	text-decoration:none;
 }
 
-#user-1 #projects .project .title a:hover{
+.user.profile #projects .project .title a:hover{
 	color: #444444;
 }
 
-#user-1 #projects .project .participation{  
+.user.profile #projects .project .participation{  
   	margin-bottom: 5px;
     margin-left: 198px;
    	margin-top: -15px;
     width: 390px;
 }
 	
-#user-1 #projects .project .date{  	
+.user.profile #projects .project .date{  	
 	color: #777777;
     float: right;
 	font: normal 12px Arial, sans-serif;
@@ -778,38 +726,38 @@ input:focus{
     margin-top: -23px;
 }
 
-#user-1 #messages{
+.user.profile #messages{
     margin-left: 8px;
     margin-top: 15px;
     width: 745px;
 }
 
-#user-1 #messages .project-messages{
+.user.profile #messages .project-messages{
 	border: 1px solid #EEF2F6;
 	margin-bottom: 10px;
 }
 	
-#user-1 #messages .project-messages .messages{
+.user.profile #messages .project-messages .messages{
 	margin-top:-16px;
 }
 		
-#user-1 #messages .project-messages h5 a{	
+.user.profile #messages .project-messages h5 a{	
 	color: #777777;
 	font: normal 14px Arial, sans-serif;
 	text-decoration:none;
 	border-bottom:1px solid  #235BBE;
 }
 	
-#user-1 #messages .project-messages h5{	
+.user.profile #messages .project-messages h5{	
     margin-left: 10px;
     margin-top: 15px;
 }	
 		
-#user-1 #messages .messages .message .info{
+.user.profile #messages .messages .message .info{
     border:none;
 }	
 
-#user-1 #messages .messages .message .info .date a{
+.user.profile #messages .messages .message .info .date a{
     color: #777777;
     float: right;
 	font: normal 12px Arial, sans-serif;
@@ -817,7 +765,7 @@ input:focus{
 	text-decoration:none;
 }
 	
-#user-1 #messages .messages .body{
+.user.profile #messages .messages .body{
 	margin-bottom: 18px;
     margin-left: 195px;
     margin-right: 75px;

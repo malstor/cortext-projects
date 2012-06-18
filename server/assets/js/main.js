@@ -20,9 +20,14 @@ $(document).ready(function(){
 
 		var main = Backbone.Router.extend({
 			routes : {
+				"dashboard": "dashboard",
 				"login" : "login",
 				"user/:user" : "user",
 				"project/:project" : "project"
+			},
+
+			dashboard: function(){
+				$("#path ul .dashboard").css("display", "block");
 			},
 
 			user: function(user){
@@ -63,6 +68,12 @@ $(document).ready(function(){
 		});
 
 		app = new main();
+
+		$("#path ul .home").bind("mouseenter mouseleave", function(evt){
+			$("#path ul .dashboard").toggle("slide", { direction: "left" }, 600);
+//			$("#path ul .dashboard").toggle("slide", { direction: "right" }, 1000);
+
+		});
 
 		$("#login").submit(function(e){
 			e.preventDefault();
