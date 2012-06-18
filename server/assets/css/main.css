@@ -115,7 +115,13 @@ width:175px;
 	color:white;
 	text-align: center;
 }
-		
+#path .dashboard a { 	
+	padding-left:10px;
+	font: normal 11px Arial, sans-serif;
+	text-decoration: none;
+	color:white;
+	text-align: center;
+}		
 /*#path a{
 	font: normal 11px Arial, sans-serif;
 	text-decoration: none;
@@ -354,7 +360,7 @@ input:focus{
 	cursor:pointer;
 }
 
-.member .name:hover{
+.member .name:hover, .project-title a:hover{
 	color: #444444;
 }			
 	
