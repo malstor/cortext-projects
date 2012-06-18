@@ -208,14 +208,34 @@ input:focus{
 	height:100px;
 }
 	
+.col-1 .info h3 {
+	font: normal 11px Arial, sans-serif;
+	color: #FFFFFF;
+	margin: 10px 10px 10px 0px;
+	width:245px;
+	padding-bottom:2px;
+	padding-left:5px;
+	padding-top:2px;
+	background:#999;
+}	
+
 .col-1 h3 {
 	font: normal 11px Arial, sans-serif;
+	color: #FFFFFF;
+	margin: 10px 10px 10px 0px;
+	width:245px;
+	padding-bottom:2px;
+	padding-left:5px;
+	padding-top:2px;
+	background:#235BBE;
+	
+	/*font: normal 11px Arial, sans-serif;
 	color: #BEBEBE;
 	margin: 10px 10px 10px 0px;
 	width:245px;
 	padding-bottom:2px;
 	padding-left:8px;
-	border-bottom: 1px solid #EEF2F6;
+	border-bottom: 1px solid #EEF2F6;*/
 }	
 
 .project-meta .date {
@@ -328,7 +348,15 @@ input:focus{
     float:left;
     margin-top: 12px;
 }
-    
+
+.elements{	
+	margin-bottom:35px;
+}
+
+.user{	
+	margin-bottom:25px;
+}
+
 #dashboard-meta .dashboard-projects{
         width:240px;
 } 
