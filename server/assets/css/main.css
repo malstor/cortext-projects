@@ -196,8 +196,7 @@ input:focus{
 	height:100px;
 }
 	
-.col-1 .info h3 {
-	
+.col-1 .info h3 {	
 	border-bottom: 1px solid #EEF2F6;
 	font: normal 11px Arial, sans-serif;
 	color: #BEBEBE;
@@ -256,7 +255,7 @@ input:focus{
 	background:#235BBE;
 }
 
-.members h3{
+.members h3 {
 	font: normal 11px Arial, sans-serif;
 	color: #FFFFFF;
 	margin: 10px 10px 10px 0px;
@@ -338,7 +337,7 @@ input:focus{
 */}    
 
 
-#elements, #dashboard, #user-1{
+#elements, #dashboard, .user.profile {
     width:765px;
     float:left;
     margin-top: 12px;
