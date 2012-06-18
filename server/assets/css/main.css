@@ -239,9 +239,9 @@ input:focus{
 	font: normal 11px Arial, sans-serif;
 	color: #FFFFFF;
 	margin: 10px 10px 10px 0px;
+	width:245px;
 	padding-bottom:2px;
 	padding-left:5px;
-	width:245px;
 	padding-top:2px;
 	background:#235BBE;
 }
@@ -263,7 +263,7 @@ input:focus{
 	filter:alpha(opacity=5);
 }
 
-.dashboard-projects #user-icon{
+/*.dashboard-projects #user-icon{
 	background: url("../images/dossier.png") no-repeat;
     float: right;
     height: 12px;
@@ -281,7 +281,7 @@ input:focus{
     margin-top: 2px;
     width: 10px;
 	padding-right:5px;
-}		
+}	*/	
 	
 .dashboard-projects .data {
 	margin-left : 10px;
@@ -476,7 +476,7 @@ input:focus{
 	float:left;
 	margin-left:8px;
  	width:750px;
-	margin-bottom:18px;
+	margin-bottom:35px;
 }
 
 .project .elements .Analysis, .project .elements .Message, .project .elements .Image{
@@ -518,7 +518,8 @@ input:focus{
 
 #dashboard .project  h2, #dashboard .project  h2 a {
 	color:#235BBE;
-	font: normal 18px Arial, sans-serif;
+	font: normal 17px "Oxygen-Regular", Arial, sans-serif;
+	letter-spacing:0.1em;	
 	text-decoration:none;
   	margin-bottom:0px;
   	display : inline-block;
@@ -718,7 +719,7 @@ input:focus{
 	color: #777777;
 	font: normal 14px Arial, sans-serif;
 	text-decoration:none;
-	border-bottom:1px solid  #00F;
+	border-bottom:1px solid  #235BBE;
 }
 	
 #user-1 #messages .project-messages h5{	
