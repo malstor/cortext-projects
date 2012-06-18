@@ -67,9 +67,9 @@ body {
 	border-color : #32B9E5;
 }		
 	
-#path .Project:hover{
+/*#path .Project:hover{
 	background-color:#3974db;	
-}	
+}*/	
 	
 #path .project:hover{
 	background-color:#777777;	
@@ -665,6 +665,9 @@ input:focus{
 }	
 	
 #user-1 #projects .project{
+	background: url("../images/proj-icon.png") ;
+	background-repeat:no-repeat;
+	background-position: 10px 10px;
 	border: 1px solid #EEF2F6;
     height: 40px;
     margin-bottom: 10px;
@@ -672,7 +675,7 @@ input:focus{
 	
 #user-1 #projects .project .title {
 	font: normal 14px Arial, sans-serif;
-    margin-left: 10px;
+    margin-left: 42px;
 	padding-top:12px;	
 }
   
