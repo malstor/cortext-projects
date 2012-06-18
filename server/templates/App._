@@ -22,7 +22,7 @@
 
 <nav id="path">
 <ul>
-<li class="home"><a href="/"><img src="/assets/server/images/home2.png" alt="#" /></a></li>
+<li class="home"><a href="/"><img src="/assets/server/images/home.png" alt="#" /></a></li>
 <% _.each(path, function(element){ %>
 <li class="<%= element.class %>"><a href="<%= element.url %>"><%= element.name %></a></li>  
 <% }); %>

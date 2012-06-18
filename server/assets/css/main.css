@@ -1,6 +1,6 @@
 body {
 	margin : 0px ;
-	background:url(../images/body.png);
+	background:url(../images/body-bg.png);
 	background-repeat:repeat-x;
 	background-attachment:fixed;
 	overflow-x:hidden; 
@@ -14,7 +14,7 @@ body {
 }
 
 #header {
-	height: 22px;
+	height: 60px;
 	position: fixed;
 	width: 1280px;
 	z-index: 10;
@@ -24,10 +24,10 @@ body {
 
 /*----------------------menu + header-------------------*/
 
-#menu {
-	height: 22px;
+#menu {	
+	height:50px;
 	background-color: #EEF2F6;
-	border-bottom: 2px solid #9C9C9C;
+	border-bottom: 3px solid #9C9C9C;
 	position: relative;
 }
 
@@ -38,23 +38,37 @@ body {
 #path ul {
  	margin:0;
  	list-style-type:none;
- 	clear : both;
-}
+/* 	clear : both;
+*/}
 
 #path ul li {
-	float:left;
-	line-height:21px;
-	padding : 0 7px;
+/*	float:left;
+*/	line-height:30px;
+/*	line-height:21px;
+*/	padding : 0 7px;
 	margin : 0 !important;
 	background-color:#3C3C3C;
-	border-bottom: 3px solid #ffffff;
-	border-color : #9C96A7;
+/*	border-bottom: 3px solid #ffffff;
+border-color : #9C96A7;*/	
 	text-transform: lowercase;
 }
 
+
+#path ul .Project.name{
+border-bottom:3px solid #32B9E5;
+width:175px;
+}
+
+#path ul .user.name{
+border-bottom:3px solid #EE6E21;
+width:175px;
+}
+
+
 #path .home { 
 	padding : 0; 
-	border : 0; 
+	border : 0;
+ 
 }
 
 #path .project{
@@ -64,7 +78,9 @@ body {
 
 #path .Project.type, #path .dashboard{
 	background-color:#235BBE;
-	border-color : #32B9E5;
+/*	border-color : #32B9E5;
+*/	line-height:20px;
+	width:175px;
 }		
 	
 /*#path .Project:hover{
@@ -77,15 +93,39 @@ body {
 
 #path .user.type { 	
 	background-color: #EE6E21; 
-	border-color : #F3BE00; 
+	border-color : #F3BE00;
+	line-height:20px; 
+	width:175px;
 }
-		
-#path a{
+
+#path .type a { 	
+	padding-left:5px;
 	font: normal 11px Arial, sans-serif;
 	text-decoration: none;
 	color:white;
 	text-align: center;
 }
+
+#path .name a { 	
+	padding-left:14px;
+	font: normal 13px Arial, sans-serif;
+	text-decoration: none;
+	color:white;
+	text-align: center;
+}
+#path .dashboard a { 	
+	padding-left:10px;
+	font: normal 11px Arial, sans-serif;
+	text-decoration: none;
+	color:white;
+	text-align: center;
+}		
+/*#path a{
+	font: normal 11px Arial, sans-serif;
+	text-decoration: none;
+	color:white;
+	text-align: center;
+}*/
 
 #user {
 	position : absolute;
@@ -96,7 +136,7 @@ body {
 #user a {
 	padding : 0 7px;
 	display : inline-block;
-	font: normal 11px/21px Arial, sans-serif;
+	font: normal 11px/50px Arial, sans-serif;
 	text-decoration: none;
 	text-transform: lowercase;
 	color : #fff;
@@ -191,7 +231,7 @@ input:focus{
 	background-repeat:repeat-y;
 	background-position:right;
 	position:absolute;
-	margin-top:22px;
+	margin-top:62px;
 	z-index:15px;
 }	
 	
@@ -200,7 +240,7 @@ input:focus{
 	float:left;
 	z-index:2;
 	height:inherit;
-	margin-top:0px;
+	margin-top:14px;
 	margin-bottom:0px;
 }	
 		
@@ -209,14 +249,16 @@ input:focus{
 }
 	
 .col-1 .info h3 {
+	
+	border-bottom: 1px solid #EEF2F6;
 	font: normal 11px Arial, sans-serif;
-	color: #FFFFFF;
+	color: #BEBEBE;
 	margin: 10px 10px 10px 0px;
 	width:245px;
 	padding-bottom:2px;
 	padding-left:5px;
 	padding-top:2px;
-	background:#999;
+	background:#FFFFFF;
 }	
 
 .col-1 h3 {
@@ -242,7 +284,7 @@ input:focus{
 	font: normal 12px/1.2em Arial, sans-serif;
 	color: #909090;
 	margin-top:5px;
-	margin-left:10px;
+	margin-left:5px;
 }	
 
 .participation .data {
@@ -313,8 +355,13 @@ input:focus{
 	margin-left: 5px;
 	padding-bottom:5px;
 	text-decoration:none;
-}		
-		
+	cursor:pointer;
+}
+
+.member .name:hover, .project-title a:hover{
+	color: #444444;
+}			
+	
 .member canvas{
 	padding-top:4px;
 	width:245px;
