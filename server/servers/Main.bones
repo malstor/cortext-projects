@@ -26,7 +26,5 @@ servers.Middleware.augment({
 			session = req.session || {};
 			next();
 		});
-
-		this.use();
     }
 });
