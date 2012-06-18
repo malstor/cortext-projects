@@ -48,7 +48,7 @@ models.user.prototype.sync = function(method, model, options) {
 
         data.app = {
             key: model.hash_app(model.password.slice(0,8)),
-            url: "http://88.191.67.92:8080/api/login"
+            url: "http://88.191.67.92:8080/login"
 //            url: "http://localhost:3000/login"
         }
 
