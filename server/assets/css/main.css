@@ -209,13 +209,12 @@ input:focus{
 }	
 
 .col-1 h3 {
-	font: normal 11px Arial, sans-serif;
+	font: normal 14px/30px "Oxygen-regular", sans-serif;
+	letter-spacing : 2px;
 	color: #FFFFFF;
 	margin: 10px 10px 10px 0px;
 	width:245px;
-	padding-bottom:2px;
 	padding-left:5px;
-	padding-top:2px;
 	background:#235BBE;
 	
 	/*font: normal 11px Arial, sans-serif;
@@ -225,7 +224,9 @@ input:focus{
 	padding-bottom:2px;
 	padding-left:8px;
 	border-bottom: 1px solid #EEF2F6;*/
-}	
+}
+
+.col-1 .members h3 { background:#EE6E21; }
 
 .project-meta .date {
 	font: normal 12px/1.2em Arial, sans-serif;
@@ -242,28 +243,6 @@ input:focus{
 	z-index : 99999;
 	position : absolute;
 	background : white;
-}
-
-.dashboard-projects h1{
-	font: normal 11px Arial, sans-serif;
-	color: #FFFFFF;
-	margin: 10px 10px 10px 0px;
-	width:245px;
-	padding-bottom:2px;
-	padding-left:5px;
-	padding-top:2px;
-	background:#235BBE;
-}
-
-.members h3 {
-	font: normal 11px Arial, sans-serif;
-	color: #FFFFFF;
-	margin: 10px 10px 10px 0px;
-	padding-bottom:2px;
-	padding-left:5px;
-	width:245px;
-	padding-top:2px;
-	background:#EE6E21;
 }
 
 .members .inactive {

@@ -6,8 +6,7 @@
 </div>
 
 <div class="dashboard-projects">
-    <div id="user-icon"></div>
-	<h1>projects</h1>
+	<h3>projects</h3>
 	
 <ul class="projects">
 	<% _.each(projects, function(p){ %>
