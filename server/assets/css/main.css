@@ -24,12 +24,10 @@ body {
 
 /*----------------------menu + header-------------------*/
 
-#menu {
-/*	height: 22px;
-*/	
+#menu {	
 	height:50px;
 	background-color: #EEF2F6;
-	border-bottom: 2px solid #9C9C9C;
+	border-bottom: 3px solid #9C9C9C;
 	position: relative;
 }
 
@@ -45,7 +43,7 @@ body {
 
 #path ul li {
 /*	float:left;
-*/	line-height:29px;
+*/	line-height:30px;
 /*	line-height:21px;
 */	padding : 0 7px;
 	margin : 0 !important;
@@ -138,7 +136,7 @@ width:175px;
 #user a {
 	padding : 0 7px;
 	display : inline-block;
-	font: normal 11px/49px Arial, sans-serif;
+	font: normal 11px/50px Arial, sans-serif;
 	text-decoration: none;
 	text-transform: lowercase;
 	color : #fff;
