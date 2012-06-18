@@ -58,12 +58,12 @@ border-color : #9C96A7;*/
 
 #path ul .Project.name{
 border-bottom:3px solid #32B9E5;
-width:155px;
+width:175px;
 }
 
 #path ul .user.name{
 border-bottom:3px solid #EE6E21;
-width:155px;
+width:175px;
 }
 
 
@@ -82,7 +82,7 @@ width:155px;
 	background-color:#235BBE;
 /*	border-color : #32B9E5;
 */	line-height:20px;
-	width:155px;
+	width:175px;
 }		
 	
 /*#path .Project:hover{
@@ -97,23 +97,31 @@ width:155px;
 	background-color: #EE6E21; 
 	border-color : #F3BE00;
 	line-height:20px; 
-	width:155px;
+	width:175px;
 }
 
 #path .type a { 	
-padding-left:10px;
-}
-
-#path .name a { 	
-padding-left:14px;
-}
-		
-#path a{
+	padding-left:10px;
 	font: normal 11px Arial, sans-serif;
 	text-decoration: none;
 	color:white;
 	text-align: center;
 }
+
+#path .name a { 	
+	padding-left:14px;
+	font: normal 13px Arial, sans-serif;
+	text-decoration: none;
+	color:white;
+	text-align: center;
+}
+		
+/*#path a{
+	font: normal 11px Arial, sans-serif;
+	text-decoration: none;
+	color:white;
+	text-align: center;
+}*/
 
 #user {
 	position : absolute;
@@ -343,8 +351,13 @@ input:focus{
 	margin-left: 5px;
 	padding-bottom:5px;
 	text-decoration:none;
-}		
-		
+	cursor:pointer;
+}
+
+.member .name:hover{
+	color: #444444;
+}			
+	
 .member canvas{
 	padding-top:4px;
 	width:245px;
