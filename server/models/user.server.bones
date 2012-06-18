@@ -9,6 +9,18 @@ models['user'].secret = function() {
     return Bones.plugin.config.secret;
 };
 
+models['user'].prototype.app_secret = function() {
+    return Bones.plugin.config.secret+"_app_1";
+};
+
+models['user'].prototype.hash_app = function(string) {
+    return crypto.createHmac('sha256', this.app_secret()).update(string).digest('hex');
+};
+
+models['user'].prototype.is_app_auth_ok = function(string) {
+    return this.hash_app(this.password.slice(0,8)) === string;
+};
+
 function get_gravatar_hash(email){
     var email = email.toLowerCase();
 
@@ -33,6 +45,12 @@ models.user.prototype.sync = function(method, model, options) {
         delete data.password;
 
         data.gravatar = "http://www.gravatar.com/avatar/"+get_gravatar_hash(data.email);
+
+        data.app = {
+            key: model.hash_app(model.password.slice(0,8)),
+            url: "http://88.191.67.92:8080/api/login"
+//            url: "http://localhost:3000/login"
+        }
 
         resp = _.extend(resp, data);
         options.success(resp);

@@ -20,28 +20,11 @@ model = model.extend({
 
 		this.bind("auth:status", function(e){
 			console.log("log success");
-			//user.save();
-			user.cross_auth();
-			//window.location= "/dashboard";
 		});
 	},
 
 	cross_auth: function(){
-		var user = this;
-
-		var options = {
-			data: {
-				name: $("#login #name").val(),
-				password: $("#login #password").val(),
-				id: $("#login #id").val()
-			},
-			url: "http://88.191.67.92:8080/api/Auth",
-			success: function(data){
-				console.log("session created on central server");
-			}
-		}
-
-		$.ajax(options);		
+		console.log(this);
 	},
 
 	url: function() {

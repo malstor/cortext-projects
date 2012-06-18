@@ -34,7 +34,24 @@ router = Backbone.Router.extend({
     login: function() {
         var router = this;
 
-        router.send(views.Login, {});
+        if(this.req.query.app_key){
+            var q = this.req.query;
+            var user = new models.user({ id : q.user });
+
+            var f = this.fetcher();
+            f.push(user);
+            f.fetch(function(){
+            
+                if(user.is_app_auth_ok(q.app_key)){
+                    router.req.session.user = user;
+                    console.log("ok billy");
+                }
+
+                router.send(views.login_app, { model : user });
+            });
+        } else {
+           router.send(views.Login, {});
+        }
     },
 
     project: function(project_id){

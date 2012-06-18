@@ -20,6 +20,7 @@ $(document).ready(function(){
 
 		var main = Backbone.Router.extend({
 			routes : {
+				"login" : "login",
 				"user/:user" : "user",
 				"project/:project" : "project"
 			},
@@ -34,6 +35,9 @@ $(document).ready(function(){
 				});
 
 				u.fetch_projects();
+			},
+
+			login: function(){
 			},
 
 			project: function(project){
@@ -63,13 +67,24 @@ $(document).ready(function(){
 		$("#login").submit(function(e){
 			e.preventDefault();
 
-			var user = new models.user({
+			var u = new models.user({
 				name: $("#login #name").val(),
 				password: $("#login #password").val(),
 				id: $("#login #id").val()
 			});
 
-			var response = user.login(user.toJSON());
+			u.bind("auth:status", function(e){
+				var target = e.get("app");
+
+				var options = {
+					app_key: target.key,
+					user: u.get("id")
+				}
+
+				window.open(target.url+"?"+$.param(options), "CROSS CONNECT", "width=500,height=500");
+			});
+
+			var response = u.login(u.toJSON());
 		});
 
 		Backbone.history.start({pushState: true});
