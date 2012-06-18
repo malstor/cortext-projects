@@ -18,6 +18,7 @@ var parse = require('url').parse;
 server = Bones.Server.extend();
 
 server.prototype.initialize = function(plugin, args) {
+    console.log(args);
     if (!args) args = {};
     args.model = args.model || models['user'];
     args.store = args.store || new middleware.session.MemoryStore({ reapInterval: -1 });
@@ -33,6 +34,8 @@ server.prototype.initialize = function(plugin, args) {
 
     // Hash any passwords in req.body.
     this.use(this.hashPassword.bind(this));
+
+    this.use(this.allow.bind(this));
 
     // Add the session middleware.
     this.session = middleware.session({
@@ -53,6 +56,12 @@ server.prototype.initialize = function(plugin, args) {
     this.use(this.args.url, this.getStatus.bind(this));
     this.use(this.args.url, this.login.bind(this));
     this.use(this.args.url, this.logout.bind(this));
+};
+
+server.prototype.allow = function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', '*');
+//    res.header('Access-Control-Allow-Methods', 'GET');
+    next();
 };
 
 // Passively instantiate the session (either via cookie in req or
