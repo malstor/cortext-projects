@@ -36,6 +36,7 @@
 </div>
 
 <h2 class="Project">Projects</h2>
+<img src="/assets/server/images/project.png"/>
 <div id="projects" class="user-projects">
 </div>
 

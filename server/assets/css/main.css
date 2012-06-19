@@ -78,7 +78,9 @@ body {
 #user {
 	position : absolute;
 	top : 0;
-	right : 0;
+	right : 0;	
+	background : #3C3C3C;
+
 }
 
 #user a {
@@ -88,8 +90,9 @@ body {
 	text-decoration: none;
 	text-transform: lowercase;
 	color : #fff;
-	background : #3C3C3C;
 	border-bottom : 3px solid #9C96A7;
+	background:url(../images/fleche-bl.png) no-repeat;
+	background-position: 65px 38px;
 }
 
 /*----------------------formulaire/login----------------------*/
@@ -216,7 +219,7 @@ input:focus{
 	width:245px;
 	padding-left:5px;
 	background:#235BBE;
-	
+
 	/*font: normal 11px Arial, sans-serif;
 	color: #BEBEBE;
 	margin: 10px 10px 10px 0px;
@@ -252,12 +255,12 @@ input:focus{
 }
 
 /*.dashboard-projects #user-icon{
-	background: url("../images/dossier.png") no-repeat;
+	background: url("../images/project.png") no-repeat;
     float: right;
-    height: 12px;
+    height: 18px;
     margin-right:-2px;
     margin-top: 1px;
-    width: 17px;
+    width: 20px;
 }	
 
 
@@ -645,6 +648,12 @@ input:focus{
 	height:25px;
 }	
 
+.user.profile img{
+	margin-top:-24px;
+	margin-right:20px;
+    float:right;
+}
+
 .user.profile .Recent{
 	background:#FFD505;
 	padding-left:10px;
@@ -652,8 +661,9 @@ input:focus{
 	margin-top:15px;
 }	
 
-.user.profile .Project{
+.user.profile .Project{	
 	background:#235BBE;
+	background-position:right;
 	padding-left:10px;
 	padding-top:4px;
 	margin-top:15px;
@@ -666,9 +676,9 @@ input:focus{
 }	
 	
 .user.profile #projects .project{
-	background: url("../images/proj-icon.png") ;
+	/*background: url("../images/proj-icon.png") ;
 	background-repeat:no-repeat;
-	background-position: 10px 10px;
+	background-position: 10px 10px;*/
 	border: 1px solid #EEF2F6;
     height: 40px;
     margin-bottom: 10px;
@@ -676,7 +686,7 @@ input:focus{
 	
 .user.profile #projects .project .title {
 	font: normal 14px Arial, sans-serif;
-    margin-left: 42px;
+    margin-left: 10px;
 	padding-top:12px;	
 }
   
