@@ -8,6 +8,7 @@ view = views.Main.extend({
     	var elements = this.model.get("elements");
         var members = this.model.get("members");
         var info = this.model.get("info");
+        var project_id = this.model.get("id");
 
         // console.log(this);
 
@@ -18,7 +19,8 @@ view = views.Main.extend({
         var elements_rendered = [];
 
     	_.each(elements, function(e){
-            var t = templates[ e.type ]({ e: e });
+            e.permalink = "/element/"+e.type+"/"+e.id+"/in/"+project_id;
+            var t = templates[ "Project_"+e.type ]({ e: e });
             console.log("  - "+e.type+"#"+e.id);
 
     		elements_rendered.push(t);

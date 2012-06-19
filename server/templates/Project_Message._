@@ -3,7 +3,7 @@
 	<div class="info">
 		<h3 class="author"><%= e.author.name %></h3>
 		<span class="type message"><%= e.type %></span>
-		<span class="date"><%= e.date_formated %></span>
+		<span class="date"><a href="<%= e.permalink %>"><%= e.date_formated %></a></span>
 	</div><!-- /info -->
 
 	<div class="body">

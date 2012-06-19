@@ -4,7 +4,7 @@
 		<h3>tubes (analysis.py/12:02 21.06.2011)</h3>
 		<span class="type image"><%= e.type %></span>
 		<span class="author"><%= e.author.name %></span>
-		<span class="date"><%= e.date_formated %></span>
+		<span class="date"><a href="<%= e.permalink %>"><%= e.date_formated %></a></span>
 	</div><!-- /info -->
 
 	<div class="body">

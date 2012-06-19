@@ -20,7 +20,7 @@ body {
 	z-index: 10;
 }
 
-@font-face { 	font-family: "Oxygen-Regular"; 	src: url('../font/Oxygen-Regular.ttf'); }	
+@font-face { font-family: "Oxygen-Regular"; 	src: url('../font/Oxygen-Regular.ttf'); }	
 
 /*----------------------menu + header-------------------*/
 
@@ -67,6 +67,15 @@ body {
 
 #path ul .user { border-bottom:3px solid #F3BE00; }
 #path ul .user .type { background-color: #EE6E21; }
+
+#path ul .Image { border-bottom:3px solid #F5A4DA; }
+#path ul .Image .type { background-color: #A3319F; }
+
+#path ul .Analysis { border-bottom:3px solid #D0D644; }
+#path ul .Analysis .type { background-color: #34B02C; }
+
+#path ul .Message { border-bottom:3px solid #FFFB61; }
+#path ul .Message .type { background-color: #FFD505; }
 
 /*#path ul .dashboard { display:none; }*/
 #path ul .dashboard .type { display : none; }		
@@ -385,6 +394,11 @@ input:focus{
 	float: right;
 	font: normal 12px/17px Arial, sans-serif;
 	color:#909090;
+}
+
+.element .info .date a {
+	text-decoration : none;
+	color : inherit;
 }
 
 .element .info .extra {
