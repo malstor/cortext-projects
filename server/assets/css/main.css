@@ -97,7 +97,7 @@ body {
 	text-transform: lowercase;
 	color : #fff;
 	border-bottom : 3px solid #9C96A7;
-	background:url(../images/fleche-bl.png) no-repeat;
+	background: #3C3C3C url(../images/fleche-bl.png) no-repeat;
 	background-position: 65px 38px;
 }
 
