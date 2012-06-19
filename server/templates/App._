@@ -10,6 +10,7 @@
 <script src="/assets/server/js/main.js?<%= version %>" type="text/javascript" charset="utf-8"></script>
 
 <link rel="stylesheet" href="/assets/server/css/reset.css?<%= version %>" type="text/css" />  
+<link rel="stylesheet" href="/assets/server/bootstrap/css/bootstrap.min.css" type="text/css" />  
 <link rel="stylesheet" href="/assets/server/css/main.css?<%= version %>" type="text/css" />  
 
 </head>
@@ -56,7 +57,7 @@
 <% if(session && session.user){ %>
 <a href="/user/<%= session.user.id %>"><%= session.user.attributes.name %></a>
 <% } else { %>
-<a href="/login">login</a>
+<a href="/login"><button class="btn btn-inverse">login</button></a>
 <% } %>
 </div>
 
@@ -68,6 +69,7 @@
 
 </div> <!--fin du conteneur principal (englobe menu)-->
 
+<script src="/assets/server/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript"><%= startup %></script>
 </body>
 
