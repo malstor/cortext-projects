@@ -38,6 +38,22 @@ model = model.extend({
 		return clone.toJSON();
 	},
 
+	get_path: function(){
+		var path = []
+
+		if(this.show){
+			path.push(this.show.get_path()[0]);
+		}
+
+		path.push({
+	        type: "user",
+	        url: "/user/"+this.get("id"),
+	        name: this.get("name")
+        });
+
+		return path;
+	}
+
 	fetch_projects: function(callback){
 		var user = this;
 
