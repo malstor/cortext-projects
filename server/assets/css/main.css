@@ -654,8 +654,8 @@ input:focus{
     float:right;
 }
 
-.user.profile .Recent{
-	background:#FFD505;
+.user.profile h2.Recent{
+	background : #FFD505 url('/assets/server/images/message.png') no-repeat 718px 5px;
 	padding-left:10px;
 	padding-top:4px;
 	margin-top:15px;
