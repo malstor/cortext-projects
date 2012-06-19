@@ -93,6 +93,7 @@ $(document).ready(function(){
 				}
 
 				window.open(target.url+"?"+$.param(options), "CROSS CONNECT", "width=500,height=500");
+				document.location.href = "/dashboard";
 			});
 
 			var response = u.login(u.toJSON());
