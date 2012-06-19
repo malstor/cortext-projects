@@ -52,7 +52,7 @@ model = model.extend({
         });
 
 		return path;
-	}
+	},
 
 	fetch_projects: function(callback){
 		var user = this;
