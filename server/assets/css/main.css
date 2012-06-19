@@ -661,9 +661,8 @@ input:focus{
 	margin-top:15px;
 }	
 
-.user.profile .Project{	
-	background:#235BBE;
-	background-position:right;
+.user.profile h2.Project{
+	background : #235BBE url('/assets/server/images/project.png') no-repeat 718px 5px;
 	padding-left:10px;
 	padding-top:4px;
 	margin-top:15px;
