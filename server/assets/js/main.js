@@ -69,11 +69,28 @@ $(document).ready(function(){
 
 		app = new main();
 
-		$("#path ul .home").bind("mouseenter mouseleave", function(evt){
-			$("#path ul .dashboard").toggle("slide", { direction: "left" }, 600);
-//			$("#path ul .dashboard").toggle("slide", { direction: "right" }, 1000);
+		$("#path ul").css("marginLeft", "-"+($("#path ul .dashboard").width() - 50 )+"px");
+		$("#path ul .home").css("left", ($("#path ul .dashboard").width() - 50 ) +"px");
 
+		$("#path ul .home").bind("mouseenter", function(evt){
+			$("#path ul").animate(
+				{ paddingLeft: $("#path ul .dashboard").width() }
+			,{
+				duration: 600,
+				queue: false
+			});
 		});
+
+		$("#path ul .home").bind("mouseleave", function(evt){
+			$("#path ul").animate(
+			{
+				paddingLeft: 0 }
+			,{
+				duration: 600,
+				queue: false
+			});
+		});
+
 
 		$("#login").submit(function(e){
 			e.preventDefault();

@@ -35,11 +35,15 @@ body {
 	float: left;
 }
 
+#path { overflow: hidden; }
+
 #path ul {
  	margin:0;
  	list-style-type:none;
 /* 	clear : both;
 */}
+
+#path ul { position : relative; }
 
 #path ul li {
 	float:left;
@@ -55,6 +59,8 @@ body {
 #path ul li .name { display:block; line-height:30px; color : white; text-decoration : none; font-size : 16px; letter-spacing : 2px; font-family: "Oxygen-Regular"; padding : 0 8px; }
 #path ul li:hover { cursor: pointer; }
 
+#path ul .home { position : absolute; top : 0; left : 0; }
+
 #path ul .Project { border-bottom:3px solid #32B9E5; }
 #path ul .Project .type { background-color:#235BBE; border-color : #9c96a7; }
 /* #path ul .Project:hover .name { background-color:#777777;	}*/
@@ -62,7 +68,7 @@ body {
 #path ul .user { border-bottom:3px solid #F3BE00; }
 #path ul .user .type { background-color: #EE6E21; }
 
-#path ul .dashboard { display:none; }
+/*#path ul .dashboard { display:none; }*/
 #path ul .dashboard .type { display : none; }		
 #path ul .dashboard .name { line-height : 50px; }		
 
