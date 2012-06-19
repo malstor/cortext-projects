@@ -1,0 +1,13 @@
+<div class="element-meta col-1">
+
+<div class="info">
+	<h3>informations</h3>
+</div>
+
+</div><!-- /element-meta -->
+
+<div id="element-" class="element">
+
+<%= element %>
+
+</div><!-- /elements -->

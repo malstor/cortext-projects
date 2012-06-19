@@ -1,12 +1,14 @@
 router = Backbone.Router.extend({
     routes: {
-		'/': 'home',
-        '/dashboard': 'dashboard',
-        '/login': 'login',
-        '/user/:user': 'user',
-        '/project/:project': 'project',
+		'/'                             : 'home',
+        '/dashboard'                    : 'dashboard',
+        '/login'                        : 'login',
+        '/user/:user'                   : 'user',
+        '/project/:project'             : 'project',
         // '/project/:project/object/:object': 'object'
-        '/api/user/:user/projects' : "user_projects"
+        '/api/user/:user/projects'      : "user_projects",
+        '/element/:type/:element/in/:project'   : 'element',
+        '/element/:type/:element'               : 'element'
     },
     home: function() {
     	var router = this;
@@ -77,11 +79,32 @@ router = Backbone.Router.extend({
         
         fetcher.fetch(function(err) {
             if (err) return router.error(err);
-            router.send(views.user, { model : user
-             });
+            router.send(views.user, { model : user });
         });
 
         console.log(user_id);
+    },
+
+    element: function(type, element, project){
+        var router = this;
+        var fetcher = this.fetcher();
+        var element = new models.element({id: element});
+
+console.log(element);
+        fetcher.push(element);
+
+        if(project){
+           project = new models.Project({id: project});
+           fetcher.push(project);
+        }
+
+        fetcher.fetch(function(err) {
+            if (err) return router.error(err);
+
+            if(project) element.show_in(project);
+
+            router.send(views.element, { model : element });
+        });
     },
 
     send: function(view) {
@@ -104,16 +127,7 @@ router = Backbone.Router.extend({
     path : function(model){
         var p = [];
 
-        if(model){
-            var info = model.get_info();
-            var type = model.constructor.title;
-
-            p.push({
-                type: type,
-                url: info.url,
-                name: info.title || info.name
-            });
-        }
+        if(model) p = model.get_path();
 
         return p;
     },
