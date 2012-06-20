@@ -318,13 +318,6 @@ input:focus{
 	width:245px;
 }	
 
-
-#elements, #dashboard{
-	width:765px;
-	float:left;
-	margin-top: 12px;
-}	
-
 .member canvas{
     padding-top:4px;
 }
@@ -336,7 +329,7 @@ input:focus{
 */}    
 
 
-#elements, #dashboard, .user.profile {
+.col-main {
     width:765px;
     float:left;
     margin-top: 12px;
