@@ -68,6 +68,8 @@ body {
 #path ul .user { border-bottom:3px solid #F3BE00; }
 #path ul .user .type { background-color: #EE6E21; }
 
+#path ul .Project + li .name { background-color : #777777; }
+
 #path ul .Image { border-bottom:3px solid #F5A4DA; }
 #path ul .Image .type { background-color: #A3319F; }
 
@@ -316,13 +318,6 @@ input:focus{
 	width:245px;
 }	
 
-
-#elements, #dashboard{
-	width:765px;
-	float:left;
-	margin-top: 12px;
-}	
-
 .member canvas{
     padding-top:4px;
 }
@@ -334,7 +329,7 @@ input:focus{
 */}    
 
 
-#elements, #dashboard, .user.profile {
+.col-main {
     width:765px;
     float:left;
     margin-top: 12px;

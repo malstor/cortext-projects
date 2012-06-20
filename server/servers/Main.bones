@@ -29,7 +29,7 @@ servers.Middleware.augment({
     initialize: function(parent, app) {
         parent.call(this, app);
 		this.all("*", function(req, res, next){
-			console.log("hoho");
+//			console.log("hoho");
 		    res.header('Access-Control-Allow-Origin', '*');
 //		    res.header('Access-Control-Allow-Methods', '*');
 

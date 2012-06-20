@@ -1,12 +1,11 @@
 router = Backbone.Router.extend({
     routes: {
-		'/'                             : 'home',
-        '/dashboard'                    : 'dashboard',
-        '/login'                        : 'login',
-        '/user/:user'                   : 'user',
-        '/project/:project'             : 'project',
-        // '/project/:project/object/:object': 'object'
-        '/api/user/:user/projects'      : "user_projects",
+		'/'                                     : 'home',
+        '/dashboard'                            : 'dashboard',
+        '/login'                                : 'login',
+        '/user/:user'                           : 'user',
+        '/project/:project'                     : 'project',
+        '/api/user/:user/projects'              : "user_projects",
         '/element/:type/:element/in/:project'   : 'element',
         '/element/:type/:element'               : 'element'
     },

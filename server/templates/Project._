@@ -27,7 +27,7 @@
 
 </div><!-- /project-meta -->
 
-<div id="elements" class="project elements">
+<div id="elements" class="project elements col-main">
 
 <% _.each(elements, function(e){ %>
 <%= e %>

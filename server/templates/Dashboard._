@@ -20,7 +20,7 @@
 </div><!-- /dashboard-projects -->
 </div><!-- /dashboard-meta -->
 
-<div id="dashboard" class="projects-list">
+<div id="dashboard" class="projects-list col-main">
 <% _.each(projects, function(p){ %>
 <div id="project-<%= p.info.id %>" class="project">
 
