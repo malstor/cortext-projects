@@ -6,7 +6,7 @@
 
 </div><!-- /element-meta -->
 
-<div id="element-" class="element col-main">
+<div id="element-" class="element-alone col-main">
 
 <%= element %>
 
