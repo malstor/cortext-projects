@@ -72,7 +72,7 @@ $(document).ready(function(){
 		$("#path ul").css("marginLeft", "-"+($("#path ul .dashboard").width() - 50 )+"px");
 		$("#path ul .home").css("left", ($("#path ul .dashboard").width() - 50 ) +"px");
 
-		$("#path ul .home").bind("mouseenter", function(evt){
+		$("#path ul .home, #path ul .dashboard").bind("mouseenter", function(evt){
 			$("#path ul").animate(
 				{ paddingLeft: $("#path ul .dashboard").width() }
 			,{
@@ -81,7 +81,7 @@ $(document).ready(function(){
 			});
 		});
 
-		$("#path ul .home").bind("mouseleave", function(evt){
+		$("#path ul .home, #path ul .dashboard").bind("mouseleave", function(evt){
 			$("#path ul").animate(
 			{
 				paddingLeft: 0 }
