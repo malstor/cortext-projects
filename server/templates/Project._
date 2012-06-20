@@ -7,7 +7,7 @@
 	<div class="date_updated date">updated: <span><%= format_date(info.date_updated) %></span></div>
 </div>
 
-<div class="members col-main" id="members">
+<div class="members" id="members">
     <div id="user-icon"></div>
 	<h3>participants</h3>
 
@@ -27,7 +27,7 @@
 
 </div><!-- /project-meta -->
 
-<div id="elements" class="project elements">
+<div id="elements" class="project elements col-main">
 
 <% _.each(elements, function(e){ %>
 <%= e %>
