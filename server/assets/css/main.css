@@ -71,7 +71,7 @@ body {
 #path ul .Project + li .name { background-color : #777777; }
 
 #path ul .Image { border-bottom:3px solid #F5A4DA; }
-#path ul .Image .type { background-color: #A3319F; }
+#path ul .Image .type { background-color: #E62E60; }
 
 #path ul .Analysis { border-bottom:3px solid #D0D644; }
 #path ul .Analysis .type { background-color: #34B02C; }
@@ -370,7 +370,7 @@ input:focus{
 
 .element .info .message { background-color : #FFD505;}
 .element .info .analysis { background-color : #34B02C;}
-.element .info .image { background-color : #A3319F;}
+.element .info .image { background-color : #E62E60;}
 
 .element .info {
 	border-bottom: 1px solid #EEF2F6;
@@ -634,7 +634,7 @@ input:focus{
 
 #indicators #indicator_projects { background:#235BBE; }
 #indicators #indicator_analysis { background:#34B02C; }	
-#indicators #indicator_documents{ background:#A3319F; }
+#indicators #indicator_documents{ background:#E62E60; }
 #indicators #indicator_messages { background:#FFD505; }
 	
 .user.profile .info #indicators h4{
