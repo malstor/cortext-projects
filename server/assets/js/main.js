@@ -27,7 +27,8 @@ $(document).ready(function(){
 			},
 
 			dashboard: function(){
-				$("#path ul .dashboard").css("display", "block");
+				$("#path ul .dashboard").css("paddingLeft", ($("#path ul .dashboard").width() + 10)+"px");
+				$("#path ul .home, #path ul .dashboard").unbind("mouseenter mouseleave");
 			},
 
 			user: function(user){
