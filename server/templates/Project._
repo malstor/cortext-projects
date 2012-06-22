@@ -27,10 +27,32 @@
 
 </div><!-- /project-meta -->
 
-<div id="elements" class="project elements col-main">
+<div class="col-main">
+
+<div id="add-elements">
+
+<div id="select-type">
+	<p>add new
+	<button>analysis</button>
+	<button>document</button>
+	<button>message</button>
+	</p>
+</div
+
+<form>
+<textarea></textarea>
+
+<button class="add">add</add>
+</form>
+
+</div>
+
+<div id="elements" class="project elements">
 
 <% _.each(elements, function(e){ %>
 <%= e %>
 <% }); %>
 
 </div><!-- /elements -->
+
+</div><!-- /col-main -->
