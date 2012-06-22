@@ -111,7 +111,7 @@ button:hover { background : #DDDDDD; border : 1px solid #B1B1B1; color : #333333
 	text-transform: lowercase;
 	color : #fff;
 	border-bottom : 3px solid #9C96A7;
-	background: #3C3C3C url(../images/fleche-bl.png) no-repeat;
+	background: #3C3C3C /*url(../images/fleche-bl.png) no-repeat*/;
 	background-position: 65px 38px;
 }
 
@@ -238,10 +238,11 @@ input:focus{
 	margin: 10px 10px 10px 0px;
 	width:245px;
 	padding-left:5px;
-	background:#235BBE;
+	background:#235BBE url('/assets/server/images/dossierB.png') no-repeat 225px 7px;
 }
 
-.col-1 .members h3 { background:#EE6E21; }
+.col-1 .members h3 {background : #EE6E21 url('/assets/server/images/userB.png') no-repeat 225px 8px;
+	 }
 
 .project-meta .date {
 	font: normal 12px/1.2em Arial, sans-serif;
