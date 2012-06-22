@@ -346,7 +346,7 @@ input:focus{
 #add-elements { }
 
 #add-elements form { border : 1px solid #EEF2F6; background : #FAFAFA; padding : 2px; width : 750px; margin-left : 8px; overflow: auto; }
-#add-elements textarea { display : block; width : 744px; height : 161px; border-radius : 2px; border : 1px solid #EEF2F6; }
+#add-elements textarea { display : block; width : 744px; height : 161px; border-radius : 2px; border : 1px solid #EEF2F6; resize:none; }
 #add-elements form .add { float : right; }
 
 /*-----------------messages-------------------------*/
