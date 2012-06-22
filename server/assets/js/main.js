@@ -4,7 +4,7 @@ var models, views, routers, templates;
 
 var colors = {
 	Analysis: "#34B02C",
-	Image: "#A3319F",
+	Image: "#E62E60",
 	Message: "#FFD505",
 	Others: "#EEF2F6"
 }
@@ -27,7 +27,8 @@ $(document).ready(function(){
 			},
 
 			dashboard: function(){
-				$("#path ul .dashboard").css("display", "block");
+				$("#path ul .dashboard").css("paddingLeft", ($("#path ul .dashboard").width() + 10)+"px");
+				$("#path ul .home, #path ul .dashboard").unbind("mouseenter mouseleave");
 			},
 
 			user: function(user){

@@ -1,0 +1,405 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+body {
+	margin : 0px ;
+	background:url(../images/body.png);
+	background-repeat:repeat-x;
+	background-attachment:fixed;
+	overflow-x:hidden; /*pour empecher le scroll horizontal du navigateur*/
+	}
+	
+		
+#conteneur-principal {
+	z-index:2;
+	margin : 0px auto 0px auto;
+	width:1280px;
+	position:relative;
+	
+	}
+
+	
+
+/*---------------------------contenu-centre-----------------------------------------*/
+
+#container{
+	background:url(../images/slide-droite2.png);
+	background-repeat:repeat-y;
+	background-position:right;
+	position:absolute;
+	margin-top:22px;
+	z-index:15px;
+	}
+
+
+#main-content{
+	width:765px;
+	float:left;
+	margin-left:255px;
+		margin-top:22px;
+
+	}
+	
+.projet{
+	width:750px;
+	float:left;
+	margin-top:21px;
+	margin-left:8px;
+	}
+	
+.projet h3{
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#909090;
+	font-weight: normal;
+	float:left;
+	line-height:17px;
+	margin-left:5px;
+	}	
+	
+.projet h4{
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#909090;
+	font-weight: normal;
+	float:right;
+	line-height:17px;
+	margin-right:5px;		
+	}	
+	
+.fichier {
+	height:44px;
+	border: 1px solid #EEF2F6;
+	} 
+
+.fichier img{
+	float:right;
+	margin-top:10px;
+	margin-right:5px;
+	} 
+
+.img-pdf {
+	background-color:#EEF2F6;
+	height:38px;
+	width:28px;
+	margin-left:5px;
+	margin-top:2px;
+	margin-bottom:2px;
+	border: 1px solid #EEF2F6;
+	float:left;
+	text-align:center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 40px;
+	font-weight: normal;
+	color:#909090;
+	} 
+
+
+.name-pdf {
+	float:left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 45px;
+	margin-left:15px;
+	font-weight: normal;
+	color:#909090;
+	} 
+
+.infos a{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color:#BEBEBE;
+	padding-right:40px;
+	} 	
+
+.data {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color:#909090;
+	padding-right:40px;
+	} 	
+
+
+#titre{
+	height:20px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #EEF2F6;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #EEF2F6;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #EEF2F6;
+	}
+	
+#titre a{
+	color:#BEBEBE;
+	}
+
+#titre a:hover{
+	color:#767676;
+	}
+	
+.bloc a:hover{
+	color:#767676;
+	}	
+	
+.bloc {
+	float:right;
+	margin-right:10px;
+	margin-top:5px;
+	background:url(../images/dialogue.png);
+	background-repeat:no-repeat;
+	background-position:right;
+	}
+	
+.info-bul-img{
+	background:url(../images/bul_petit.png);
+	background-repeat:no-repeat;
+	margin-top:8px;
+	margin-left:12px;
+	width:12px;
+	height:12px;
+	}
+	
+.commentaires{	
+/*	background:url(../images/barre-dial.png);
+	background-repeat:repeat-y;
+	background-position:left;*/
+	background:#EEF2F6;
+	width:750px;
+	float:left;
+	margin-top:0px;
+	margin-left:8px;
+	/*border-top-width: 7px;
+	border-top-style: solid;
+	border-top-color: #EEF2F6;*/
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #EEF2F6;
+	border-bottom-width: 4px;
+	border-bottom-style: solid;
+	border-bottom-color: #EEF2F6;	
+	}		
+
+.comments_list, .comments_list2, .comments_list3
+	{margin-top:-13px
+	}
+	
+.comment1{
+	background:#FFF;
+	width:710px;
+	margin-left:40px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #EEF2F6;	
+	}	
+
+.comment1 h2{
+	float:left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color:#BEBEBE;
+	margin-left:10px;
+	padding-bottom:4px;
+	padding-top:4px;
+	}
+	
+.comment1 h3{
+	float:left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color:#BEBEBE;
+	margin-left:10px;
+	padding-bottom:4px;
+	padding-top:5px;
+	}
+
+.data2A{
+	float:left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color:#BEBEBE;
+	margin-left:500px;
+	padding-top:4px;
+	}	
+	
+.data2{
+	float:left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color:#BEBEBE;
+	margin-left:500px;
+	padding-top:5px;	
+	}			
+	
+.comment1 p{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color:#909090;
+	margin-left:10px;
+	margin-right:10px;
+	text-align: justify;
+	line-height:14px;
+	margin-bottom:7px;
+	}		
+
+.comment-text{
+	height:25px;	
+	border-top-width: 6px;
+	border-top-style: solid;
+	border-top-color: #EEF2F6;	
+	}
+	
+.comment-text form{
+	width:630px;
+	float:left;	
+	margin-top:-1px;
+	}
+	
+.comment-text textarea{
+	height:22px;
+	width:633px;
+	border: none;
+	margin-left:40px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	font-weight: normal;
+	color:#909090;	
+	}
+	
+.img-commentaire{
+	width:75px;
+	float:right;
+	background:url(../images/barre-dial.png);
+	background-repeat:repeat-x;
+	background-position:right;
+	}
+
+.bouton-com{
+	height:21px;
+	width:67px;
+	background:#34B02C;
+	margin-left:8px;
+	border-radius: 4px;	
+	}
+	
+	.bouton-com:hover{
+	background:#54cf4c;
+		}
+	
+.comm{
+	font-size:11px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#FFF;
+	margin-right: 3px;
+    margin-top: 4px;
+	float:right;
+	}
+
+.bouton-com img {
+	padding-top:5px;
+	padding-left:4px;
+	}
+	
+.comment2{
+	height:100px;
+	width:750px;
+	margin-left: 8px;
+    margin-top: 18px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #EEF2F6;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #EEF2F6;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #EEF2F6;	
+	}
+		
+.comment2 h3{
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#909090;
+	font-weight: normal;
+	float:left;
+	line-height:17px;
+	margin-left:10px;
+	margin-top:3px;
+	}	
+	
+.data3{
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#909090;
+	font-weight: normal;
+	float:right;
+	line-height:17px;
+	margin-right:10px;
+	margin-top:3px;
+	}	
+	
+	
+.comment2b{
+	height:20px;
+	width:750px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #EEF2F6;	
+	}
+	
+.comment2 p{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color:#909090;
+	margin-top:5px;
+	margin-left:10px;
+	margin-right:10px;
+	margin-bottom:5px;
+	text-align: justify;
+	line-height:14px;
+	}	
+	
+		
+.rendu{
+	width:750px;
+	margin-left: 8px;
+    margin-top: 18px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #EEF2F6;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #EEF2F6;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #EEF2F6;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #EEF2F6;	
+	}
+	
+	
+.rendu h3{
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#909090;
+	font-weight: normal;
+	float:left;
+	line-height:17px;
+	margin-left:10px;
+	margin-top:3px;
+	}
+
