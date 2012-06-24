@@ -1,4 +1,6 @@
-Trying to log as :
+<div id="welcome"> 
+<h1>Welcome to Cortext Manager<img src="images/logo-petit.png" alt="#" /></h1>
+</div>
 
 <form id="login">
 <label>id</label><input id="id" value="1"/>
@@ -6,4 +8,14 @@ Trying to log as :
 <label>name</label><input id="name" value="Tam Kien Duong"/>
 <label>password</label><input id="password" type="password" value="pikachu"/>
 <input type="submit" />
+</form>
+
+<form id="register">
+
+<label>email</label><input id="email" />
+<label>name</label><input id="name" />
+<label>password</label><input id="password" type="password" />
+
+<input type="submit" />
+
 </form>
