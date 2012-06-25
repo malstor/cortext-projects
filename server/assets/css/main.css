@@ -797,7 +797,7 @@ input:focus{
     margin-top: 4px;
 }	
 
-#main form{
+/*#main form{
 	background:#3C3C3C;
     border-radius: 4px 4px 4px 4px;
     color: #FFFFFF;
@@ -806,7 +806,7 @@ input:focus{
     margin-bottom: 15px;
     margin-left: 40px;
     width: 380px;
-    }
+    }*/
 	
 #main form label{
 	margin-left:25px;
@@ -867,10 +867,26 @@ input:focus{
 #main #login{
     height: 110px;
 	margin-top:120px;
+	background:#3C3C3C;
+    border-radius: 4px 4px 4px 4px;
+    color: #FFFFFF;
+    float: left;
+	font: normal 15px Arial, sans-serif;
+    margin-bottom: 15px;
+    margin-left: 40px;
+    width: 380px;
     }
 	
 #main #register{	
     height: 181px;
+	background:#3C3C3C;
+    border-radius: 4px 4px 4px 4px;
+    color: #FFFFFF;
+    float: left;
+	font: normal 15px Arial, sans-serif;
+    margin-bottom: 15px;
+    margin-left: 40px;
+    width: 380px;
     }
 		
 #main #login .sign {
