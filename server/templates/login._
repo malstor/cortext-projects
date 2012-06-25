@@ -1,21 +1,22 @@
 <div id="welcome"> 
-<h1>Welcome to Cortext Manager<img src="images/logo-petit.png" alt="#" /></h1>
+<h1>Welcome to Cortext Manager<img src="/assets/server/images/logo-petit.png" alt="#" /></h1>
 </div>
 
 <form id="login">
-<label>id</label><input id="id" value="1"/>
-<label>email</label><input id="email" value="tk@deveha.com"/>
-<label>name</label><input id="name" value="Tam Kien Duong"/>
+<span class="sign">sign in</span>
+<label class="id">id</label><input id="id" value="1"/>
+<label class="email">email</label><input id="email" value="tk@deveha.com"/>
+<label class="name">name</label><input id="name" value="Tam Kien Duong"/>
 <label>password</label><input id="password" type="password" value="pikachu"/>
-<input type="submit" />
+<input class="submit button"  type="submit" />
 </form>
 
 <form id="register">
-
-<label>email</label><input id="email" />
-<label>name</label><input id="name" />
-<label>password</label><input id="password" type="password" />
-
-<input type="submit" />
+<span class="apply">apply for an account</span>
+<label class="Email">email</label><input id="email" />
+<label class="name">name</label><input id="name" />
+<label>password</label><input id="password"  class="password" type="password" />
+<label class="confirm">confirm</label><input id="confirm" type="password" />
+<input class="submit button" type="submit" />
 
 </form>

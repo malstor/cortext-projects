@@ -24,8 +24,9 @@ body {
 
 /* buttons ---------------------------------------------*/
 
-button { min-width : 120px; background : #FAFAFA; border : 1px solid #DCDCDC; padding : 10px; text-align : center; font : bold 14px arial; color : #6E6E6E; box-shadow: 0px 0px 3px rgba(107,107,107, 0.3); }
-button:hover { background : #DDDDDD; border : 1px solid #B1B1B1; color : #333333; box-shadow: 0px 0px 3px rgba(0,86,156, 0.6); }
+button, .button{ min-width : 120px; background : #FAFAFA; border : 1px solid #DCDCDC; padding : 10px; text-align : center; font : bold 14px arial; 
+color : #6E6E6E; box-shadow: 0px 0px 3px rgba(107,107,107, 0.3); border-radius:3px; }
+button:hover, .button:hover { background : #DDDDDD; border : 1px solid #B1B1B1; color : #333333; box-shadow: 0px 0px 3px rgba(0,86,156, 0.6); }
 
 /*----------------------menu + header-------------------*/
 
@@ -115,8 +116,8 @@ button:hover { background : #DDDDDD; border : 1px solid #B1B1B1; color : #333333
 	background-position: 65px 38px;
 }
 
-/*----------------------formulaire/login----------------------*/
-
+/*----------------------formulaire/login----------------------
+*/
 #login-panel {
 	z-index: 5;
 	position: absolute;
@@ -131,7 +132,7 @@ button:hover { background : #DDDDDD; border : 1px solid #B1B1B1; color : #333333
 	display: none;
 }	
 
-#login-link{	
+/*#login-link{	
     position: absolute;
     top: 0px;
     right: 0px;
@@ -193,7 +194,7 @@ input:focus{
 	border: 2px solid #54cf4c;
 	box-shadow: none;
 }	
-	
+	*/
 	
 /*--------------------main------------------------*/
 
@@ -767,3 +768,130 @@ input:focus{
 	font: normal 13px Arial, sans-serif;
 	color: #909090;
 }
+
+
+/*---------------login accueil-----------------*/
+
+#welcome{
+	border-radius: 4px;
+	height:306px;
+	width:520px;
+	float:left;
+	margin-top:120px;
+	margin-left:170px;
+    background: url("/assets/server/images/network1.png") no-repeat;
+	}
+	
+#welcome h1{
+	color: #3C3C3C;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 25px;
+    line-height: 1.2;
+    padding-left: 5px;
+	margin-top:102px;
+	background-color:#FFF;
+	}
+	
+#welcome h1 img {
+    margin-left: 48px;
+    margin-top: 4px;
+}	
+
+#main form{
+	background:#3C3C3C;
+    border-radius: 4px 4px 4px 4px;
+    color: #FFFFFF;
+    float: left;
+	font: normal 15px Arial, sans-serif;
+    margin-bottom: 15px;
+    margin-left: 40px;
+    width: 380px;
+    }
+	
+#main form label{
+	margin-left:25px;
+	line-height:2.3;
+	clear:both;
+    }
+	
+#main form #name{
+	margin-left:10px;
+	margin-right:100px;
+}	
+
+ #main form #email{
+	margin-left:10px;
+	margin-right:120px;
+}	
+
+ #main form .password{
+	margin-right:120px;
+}
+
+#main form .name{
+	margin-left:53px;
+}
+
+#main form .confirm{
+	margin-left:41px;
+}
+
+#main form .Email{
+	margin-left:55px;
+}
+  
+ #main form input{
+	margin-left:10px;
+	clear:both;
+}	 
+  
+#main form .submit{  
+  	background: #319E3C;
+    border:solid 1px #388530;
+	color:#F2F2F2;
+    cursor: pointer;
+    margin-left: 15px;
+	margin-top: -10px;
+	min-width : 91px;
+}
+#main form .submit:hover{ 
+    border:solid 1px #307229; 
+  	background: #25772d;
+	color:#FFFFFF;
+}  
+  
+#main #login #id, #main #login .id, #main #login #email, #main #login .email{
+		display:none;
+    }	
+	
+#main #login{
+    height: 110px;
+	margin-top:120px;
+    }
+	
+#main #register{	
+    height: 181px;
+    }
+		
+#main #login .sign {
+	font-size: 17px;
+	line-height: 1.7;
+	margin-left:150px;
+	display:block;
+}
+
+#main #register .apply {
+    font-size: 17px;
+    line-height: 1.9;
+    margin-left: 100px;
+	display:block;
+}	
+   
+input:focus{
+	-moz-transition:1s; 
+	-o-transition:1s; 
+	-ms-transition:1s; 
+	-webkit-transition:1s;
+	border: 2px solid #54cf4c;
+	box-shadow: none;
+}	   
