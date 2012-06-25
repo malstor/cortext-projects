@@ -34,7 +34,8 @@ models.projects.prototype.sync = function(method, model, options) {
                     _.each(array, function(project){
                         db.collection("elements", function(error, elements){
                             var options = {
-                                limit : 10
+                            // DASHBOARD NEED TO LIMIT THE NUMBER OF PROJECTS
+                            //    limit : 10
                             }
 
                             elements.find({ project : parseInt(project.id) }, options).toArray(function(error, element){
