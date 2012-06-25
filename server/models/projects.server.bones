@@ -16,8 +16,11 @@ models.projects.prototype.sync = function(method, model, options) {
 
     var current_user = options.data.user_id || session.user.id;
 
+    console.log("options:");
+    console.log(current_user);
+
     db.collection("projects_membership", function(error, collection){
-        collection.find({ "value.members" : current_user }).toArray(function(error, array){
+        collection.find({ "value.members" : parseInt(current_user) }).toArray(function(error, array){
             var in_project = _.pluck(array, "_id");
 
             db.collection("projects", function(error, collection){

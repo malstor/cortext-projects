@@ -1,4 +1,8 @@
 model = Backbone.Model.extend({
+
+    members : [],
+    elements: [],
+
     url: function() {
         return '/api/Project/' + encodeURIComponent(this.get('id'));
     },
@@ -21,5 +25,9 @@ model = Backbone.Model.extend({
         });
 
 		return path;
-	}
+	},
+
+    get_relative_participation: function(){
+        // TBC
+    }
 });

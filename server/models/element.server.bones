@@ -23,6 +23,7 @@ models.element.prototype.sync_read = function(method, model, options){
 models.element.prototype.sync = function(method, model, options) {
     switch(method){
         case "read": this.sync_read(method, model, options); break;
+        case "create": this.sync_update(method, model, options); break;
         default : return options.error('Unsupported method');
     }    
 };

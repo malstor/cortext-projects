@@ -17,6 +17,8 @@ view = views.Main.extend({
 
     	_.each(elements, function(e){
             e.permalink = "/element/"+e.type+"/"+e.id+"/in/"+model.get("id");
+            e.date_formated = moment(e.date).format("DD.MM.YYYY");
+
             var t = templates[ "Project_"+e.type ]({ e: e });
             console.log("  - "+e.type+"#"+e.id);
 

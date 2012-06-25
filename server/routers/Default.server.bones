@@ -31,13 +31,19 @@ routers.Default.prototype.send = function(view, options) {
     });
     o = o.replace(/,$/, '}');
 
+    var current_user = {};
+
+    if (session && session.user){
+        current_user = session.user.toJSON();
+    }
+
     // Finally send the page to the client.
     this.res.send(Bones.plugin.templates.App({
         version: time,
         title: this.pageTitle(main),
         main: $(main.el).html(),
         path: this.path(options.model),
-        startup: ''
+        startup: 'current_user = '+ JSON.stringify(current_user) +';'
     }));
 };
 

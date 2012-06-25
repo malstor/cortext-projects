@@ -33,7 +33,7 @@
 	<div id="<%= e.type%>-<%= e.id%>" class="<%= e.type%>">
 	<div class="author"><%= e.author.name %></div>
 	<div class="title"><a href="/project/<%= p.id %>#<%= e.type%>-<%= e.id%>"><%= (e.title ? e.title : "lorem ipsum dolor bacon frites") %></a></div>
-	<div class="date"><%= e.date_formated%></div>
+	<div class="date"><%= moment(e.date).format("DD.MM.YYYY") %></div>
 	</div>
 	<% }); %>
 	</div><!-- /elements-->
