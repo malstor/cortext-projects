@@ -1,12 +1,12 @@
 <div class="project-messages">
 
-<h5><a href="/project/<%= project.info.id %>"><%= project.info.title %></a></h5>
+<h5><a href="/project/<%= project.id %>"><%= project.title %></a></h5>
 
 <div class="messages">
 <% _.each(project.elements, function(m){ %>
 <div id="message-<%= m.id %>" class="message">
 <div class="info">
-	<div class="date"><a href="/project/<%= project.info.id %>#<%= m.type%>-<%= m.id %>"><%= m.date_formated %></a></div>
+	<div class="date"><a href="/project/<%= project.id %>#<%= m.type%>-<%= m.id %>"><%= moment(m.date).format("DD.MM.YYYY") %></a></div>
 </div>
 <div class="body"><%= m.content %></div>
 </div>

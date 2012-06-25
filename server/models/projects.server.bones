@@ -10,50 +10,50 @@ models.projects.prototype.sync = function(method, model, options) {
 
     options.data = options.data || {};
 
-    var projectDir = '../data/projects/',
-        resp = {};
+    var resp = {};
 
     var projects = [];
 
-    var files = fs.readdirSync(projectDir);
+    var current_user = options.data.user_id || session.user.id;
 
-//    console.log(session);
+    console.log("options:");
+    console.log(current_user);
 
-    var load_defer = _.after(files.length, function(){
-        options.success(projects);
-    });
+    db.collection("projects_membership", function(error, collection){
+        collection.find({ "value.members" : parseInt(current_user) }).toArray(function(error, array){
+            var in_project = _.pluck(array, "_id");
 
-    // TEMPORARY PLEASE FIX ME
-//    var filter_user = options.user_id || session.user.id;
-    var filter_user = options.data.user_id || session.user.id;
+            db.collection("projects", function(error, collection){
+                collection.find({ "id" : { "$in" : in_project } }).toArray(function(error, array){
+//                    console.log(array);
 
-    console.log(filter_user);
+                    var done = _.after(array.length, function(){
+                        options.success(projects);                        
+                    })
 
-    _.each(files, function(file){
-        yaml.load(projectDir+file, function(error, data){
-            if(error) console.log(error)
+                    _.each(array, function(project){
+                        db.collection("elements", function(error, elements){
+                            var options = {
+                            // DASHBOARD NEED TO LIMIT THE NUMBER OF PROJECTS
+                            //    limit : 10
+                            }
 
-            if(_.find(data.members, function(m){ return m.id == filter_user })){
-//            if(true){
-                data.elements = data.elements.slice(0,14);
+                            elements.find({ project : parseInt(project.id) }, options).toArray(function(error, element){
+                                console.log(error);
+                                project.elements = element;
 
-                data.composition = {
-                    Message: 0,
-                    Image: 0,
-                    Analysis: 0
-                };
-
-                data.composition = _.reduce(data.elements,
-                    function(m, e){
-                        m[e.type] = parseInt(m[e.type]) + 1;
-                        return m;
-                    }, data.composition);
-
-                projects.push(data);
-            } else {
-                console.log("access not granted");
-            }
-            load_defer();
+                                db.collection("counter_projects_elements", function(e,c){
+                                    c.findOne({ _id: project.id }, function(e, item){
+                                       project.composition = item.value;
+                                       projects.push(project);
+                                       done();
+                                    });
+                                });
+                            });
+                        });                    
+                    });
+                });
+            });
         });
     });
 };

@@ -36,8 +36,8 @@ $(document).ready(function(){
 				var v = new views.user();
 
 				u.bind("fetch:projects", function(){
-					v.load_projects(this);
-					v.load_messages(this);
+					v.load_projects(u);
+					v.load_messages(u);
 				});
 
 				u.fetch_projects();
@@ -64,6 +64,21 @@ $(document).ready(function(){
 						$("#elements").children(":not(."+user_id+")").filter(":not(:hidden)").slideUp("fast");
 						$("#elements").children("."+user_id+"").slideDown("fast");
 					}
+				});
+
+
+				$("#add-element .add").on("click", function(e){
+					e.preventDefault();
+
+					var element = new models.element({
+						type: "Message",
+						author: current_user.id,
+						date: new Date().getTime(),
+						content: $("#add-element textarea").val()
+					});
+
+					console.log(element);
+
 				});
 			}
 		});

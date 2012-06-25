@@ -35,7 +35,7 @@ view = views.Main.extend({
             _(p.elements).reduce(function(composition, element){
                 if(element.author.id == user.id){
                     composition[element.type] +=1;
-                }else{
+                } else {
                     composition["Others"] += 1;
                 }
                 return composition;

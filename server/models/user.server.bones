@@ -27,38 +27,58 @@ function get_gravatar_hash(email){
     return crypto.createHash('md5').update(email).digest("hex");
 };
 
+models.user.prototype.load = function(cb){
+    var _this = this;
+
+    db.collection("users", function(error, users){
+        users.findOne({ id: parseInt(_this.id) }, function(error, user){
+            if (error) {
+                console.log("[user] ERROR user #"+_this.id+"does not exist");
+                return options.error("user not found");
+            }
+
+            cb(user);
+        });
+    });
+}
+
+models.user.prototype.get_projects = function(callback){
+    var _this = this;
+
+    db.collection("projects_membership", function(error, memberships){
+        memberships.find({ "value.members" : parseInt(_this.id) }).toArray(function(error, projects){
+            callback( _.pluck(projects, "_id") );
+        });
+    });
+}
+
 models.user.prototype.sync = function(method, model, options) {
     if (method != 'read') return options.error('Unsupported method');
 
-    var user_dir = '../data/users/' + model.id,
-        resp = {id: model.id};
+    var resp = {id: model.id};
 
-    yaml.load(user_dir+".yaml", function(error, data){
-        if (error) {
-            console.log("[error][user: "+model.id+"] yaml not found");
-            return options.error("user not found");
-        }
+    var _this = this;
 
-        console.log("[user: "+model.id+"] loading data from yaml");
-        model.password = data.password;
+    this.load(function(user){
+        user.gravatar = "http://www.gravatar.com/avatar/"+get_gravatar_hash(user.email);
 
-        delete data.password;
-
-        data.gravatar = "http://www.gravatar.com/avatar/"+get_gravatar_hash(data.email);
-
-        data.app = {
-            key: model.hash_app(model.password.slice(0,8)),
+        user.app = {
+            key: model.hash_app(user.password.slice(0,8)),
             url: "http://88.191.67.92:8080/login"
-//            url: "http://localhost:3000/login"
         }
+        delete user.password;
 
-        resp = _.extend(resp, data);
-        options.success(resp);
+        resp = _.extend(resp, user);
+
+        _this.get_projects(function(projects){
+            resp.projects = projects;
+            options.success(resp);       
+        });
     });
 };
 
 models.user.prototype.fetch_projects = function(callback){
-    console.log("#fetch_projects");
+    console.log("[user]#fetch_projects");
 
     var user = this;
 
