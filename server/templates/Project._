@@ -3,15 +3,15 @@
 <div class="info">
 	<h3>informations</h3>
 
-	<div class="date_created date">created: <span><%= format_date(info.date_created) %></span></div>
-	<div class="date_updated date">updated: <span><%= format_date(info.date_updated) %></span></div>
+	<div class="date_created date">created: <span><%= format_date(project.date_created) %></span></div>
+	<div class="date_updated date">updated: <span><%= format_date(project.date_updated) %></span></div>
 </div>
 
 <div class="members" id="members">
     <div id="user-icon"></div>
 	<h3>participants</h3>
 
-	<% _.each(members, function(member){ %>
+	<% _.each(project.members, function(member){ %>
 	<div class="member" rel="user-<%= member.id %>">
 		<div class="name"><%= member.name %></div>
 		<div class="participation">

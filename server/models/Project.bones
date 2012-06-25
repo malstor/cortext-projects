@@ -17,7 +17,7 @@ model = Backbone.Model.extend({
 		path.push({
 	        type: "Project",
 	        url: this.permalink(),
-	        name: this.get("info").title
+	        name: this.get("title")
         });
 
 		return path;

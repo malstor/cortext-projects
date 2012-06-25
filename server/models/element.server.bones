@@ -5,19 +5,18 @@ var yaml = require('pyyaml');
 
 
 models.element.prototype.sync_read = function(method, model, options){
-    var projectDir = '../data/elements/' + model.id,
-        resp = {id: model.id};
+    resp = {id: model.id};
 
-    yaml.load(projectDir+".yaml", function(error, data){
-        if (error) {
-            console.log("[error][element: "+model.id+"] yaml not found");
-            return options.error("project not found");
-        }
+    db.collection("elements",function(error, collection){
+//        console.log(error);
 
-        console.log("[element: "+model.id+"] loading data from yaml");
+        collection.findOne({ "id" : parseInt(model.id) }, function(e, item){
+//            console.log(e);
+            console.log("[db]READ [element: "+model.id+"]");
 
-        resp = _.extend(resp, data);
-        options.success(resp);
+            resp = _.extend(resp, item);
+            options.success(resp);
+        });
     });
 }
 

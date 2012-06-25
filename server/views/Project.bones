@@ -4,11 +4,8 @@ view = views.Main.extend({
 	},
     render: function() {
     	var el = this.el;
-
+        var model = this.model;
     	var elements = this.model.get("elements");
-        var members = this.model.get("members");
-        var info = this.model.get("info");
-        var project_id = this.model.get("id");
 
         // console.log(this);
 
@@ -19,7 +16,7 @@ view = views.Main.extend({
         var elements_rendered = [];
 
     	_.each(elements, function(e){
-            e.permalink = "/element/"+e.type+"/"+e.id+"/in/"+project_id;
+            e.permalink = "/element/"+e.type+"/"+e.id+"/in/"+model.get("id");
             var t = templates[ "Project_"+e.type ]({ e: e });
             console.log("  - "+e.type+"#"+e.id);
 
@@ -27,8 +24,7 @@ view = views.Main.extend({
     	});
 
         var options = {
-            info: info,
-            members: members,
+            project: this.model.toJSON(),
             elements:elements_rendered
         }
 
