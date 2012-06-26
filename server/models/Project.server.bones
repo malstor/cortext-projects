@@ -35,8 +35,8 @@ models.Project.prototype.get_composition = function(cb){
     var _this = this;
 
     db.collection("counter_projects_elements", function(e,c){
-        c.findOne({ _id: _this.id }, function(e, item){
-           cb(item);
+        c.findOne({ _id: parseInt(_this.id) }, function(e, item){
+           cb(item.value);
         });
     });
 }
@@ -56,39 +56,37 @@ models.Project.prototype.sync_read = function(method, model, options){
     _this.get_elements(function(elements){
         project.elements = elements;
 
-        db.collection("counter_projects_elements", function(e,c){
-            c.findOne({ _id: parseInt(project.id) }, function(e, item){
-                project.composition = item.value;
+        _this.get_composition(function(composition){
+            project.composition = composition;
 
-                var u = {};
-                var s = _.size(project.elements);
+            var u = {};
+            var s = _.size(project.elements);
 
-                _this.get_members(function(members){
-                    project.members = members;
+            _this.get_members(function(members){
+                project.members = members;
 
-                    // console.log(members);
+                // console.log(members);
 
-                    // processing user data
-                    _.each(project.elements, function(e){
-                        var m = _.find(project.members, function(m){ return m.id == e.author; });
+                // processing user data
+                _.each(project.elements, function(e){
+                    var m = _.find(project.members, function(m){ return m.id == e.author; });
 
-                        console.log(e);
+                    console.log(e);
 
-                        if(!_.isObject(m.participation)){
-                            u[m.id] = m;
-                            m.participation = {};
-                            m.participation.Others = s;
-                        };
+                    if(!_.isObject(m.participation)){
+                        u[m.id] = m;
+                        m.participation = {};
+                        m.participation.Others = s;
+                    };
 
-                        m.participation[e.type] = ( m.participation[e.type] ? m.participation[e.type] + 1 : 1);
-                        m.participation.Others = m.participation.Others - 1;
-                    });
-
-                    project.members = u;
-
-                    resp = _.extend(resp, project);
-                    options.success(resp);                   
+                    m.participation[e.type] = ( m.participation[e.type] ? m.participation[e.type] + 1 : 1);
+                    m.participation.Others = m.participation.Others - 1;
                 });
+
+                project.members = u;
+
+                resp = _.extend(resp, project);
+                options.success(resp);                   
             });
         });
     });
