@@ -7,6 +7,7 @@ view = views.Main.extend({
         console.log(session.user);
 
     	var options = {
+            current_user_id: session.user.id,
             projects: [],
             templates : templates
         }
