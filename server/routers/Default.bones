@@ -88,9 +88,8 @@ router = Backbone.Router.extend({
     element: function(type, element, project){
         var router = this;
         var fetcher = this.fetcher();
-        var element = new models.element({id: element});
+        var element = new models.element({id: element });
 
-console.log(element);
         fetcher.push(element);
 
         if(project){
@@ -98,12 +97,20 @@ console.log(element);
            fetcher.push(project);
         }
 
+
         fetcher.fetch(function(err) {
             if (err) return router.error(err);
 
             if(project) element.show_in(project);
 
-            router.send(views.element, { model : element });
+            var f2 = router.fetcher();
+
+            var author = new models.user({id: element.get("author") });
+            f2.push(author);
+
+            f2.fetch(function(err){
+                router.send(views.element, { model : element, author : author });
+            });
         });
     },
 
