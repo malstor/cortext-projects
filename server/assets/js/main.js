@@ -47,6 +47,8 @@ $(document).ready(function(){
 			},
 
 			project: function(project){
+				var current_project = new models.Project({ id : project });
+
 				$("#members").delegate(".member", "click", function(evt){
 					var user_id = $(this).attr("rel");
 
@@ -78,17 +80,23 @@ $(document).ready(function(){
 						content: $("#add-element textarea").val()
 					});
 
-					console.log(element);
+//					console.log(element);
 
 					element.save();
 
 					var new_el = $(templates["Project_"+element.get("type")]({ e : element.toJSON() }));
 					$("#elements").prepend(new_el);
 
-					console.log(new_el);
+//					console.log(new_el);
 
 					$(new_el).css('display', 'none');
 					$(new_el).fadeIn(1000);
+				});
+
+				$("#add-member .add").on("click", function(e){
+					e.preventDefault();
+
+					current_project.add_member($("#add-member input").val());
 				});
 			}
 		});

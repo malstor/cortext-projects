@@ -60,3 +60,13 @@ routers.Default.prototype.user_projects = function(user_id){
 
     console.log("<api");
 }
+
+routers.Default.prototype.project_add_member = function(project_id){
+    console.log("api>");
+    var router = this;
+
+    var p = new models.Project({ id : project_id });
+    p.add_member(user_id);
+
+    console.log("<api");
+}

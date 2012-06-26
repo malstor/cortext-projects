@@ -23,6 +23,12 @@
 		</div>
 	</div>
 	<% }); %>
+
+	<form id="add-member">
+		<input type="text" />
+		<button class="add">add</button>
+	</form>
+
 </div>
 
 </div><!-- /project-meta -->

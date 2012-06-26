@@ -31,6 +31,16 @@ models.Project.prototype.get_members = function(cb){
     });
 }
 
+models.Project.prototype.add_member = function(user_id){
+    var _this = this;
+
+    db.collection("projects_membership", function(error, collection){
+        collection.update({ _id: parseInt(_this.id) }, { "$push" : { "value.members" : user_id }} ,function(error,r){
+            console.log(r);
+        });
+    });
+}
+
 models.Project.prototype.get_composition = function(cb){
     var _this = this;
 
@@ -71,8 +81,6 @@ models.Project.prototype.sync_read = function(method, model, options){
                 _.each(project.elements, function(e){
                     var m = _.find(project.members, function(m){ return m.id == e.author; });
 
-                    console.log(e);
-
                     if(!_.isObject(m.participation)){
                         u[m.id] = m;
                         m.participation = {};
@@ -81,6 +89,16 @@ models.Project.prototype.sync_read = function(method, model, options){
 
                     m.participation[e.type] = ( m.participation[e.type] ? m.participation[e.type] + 1 : 1);
                     m.participation.Others = m.participation.Others - 1;
+                });
+
+                var no_activity = _.difference(members, u);
+
+                // console.log(no_activity);
+
+                _.each(no_activity, function(member){
+                    u[member.id] = member;
+                    member.participation = {};
+                    member.participation.Others = s;
                 });
 
                 project.members = u;

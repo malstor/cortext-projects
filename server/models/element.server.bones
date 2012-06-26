@@ -42,14 +42,14 @@ models.element.prototype.sync_update = function(method, model, options){
 
 models.element.prototype.sync_update_project_counter = function(element){
 
-    console.log(element);
+//    console.log(element);
 
     var v = {};
     v["value."+element.type] = 1;
 
     var modifier = { $inc : v };
 
-    console.log(modifier);
+//    console.log(modifier);
 
     db.collection('counter_projects_elements', function(error, counters){
         counters.update({ "_id" : parseInt(element.project) }, modifier);

@@ -29,5 +29,30 @@ model = Backbone.Model.extend({
 
     get_relative_participation: function(){
         // TBC
+    },
+
+    add_member : function(user_id){
+        var project = this;
+
+        var url = this.url() + "/member";
+        url += (/\?/.test(url) ? '&' : '?') + '_=' + $.now();
+
+        var params = {
+            "user_id" : parseInt(user_id),
+            "bones.token" : Backbone.csrf(url)
+        }
+
+        var options = {
+            data: JSON.stringify(params),
+            contentType: 'application/json',
+            dataType: 'json',
+            type: "POST",
+            url: url,
+            success: function(data){
+                project.trigger("add:member");
+            }
+        }
+
+        $.ajax(options);
     }
 });
