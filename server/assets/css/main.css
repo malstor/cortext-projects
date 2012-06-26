@@ -163,7 +163,7 @@ button:hover, .button:hover { background : #DDDDDD; border : 1px solid #B1B1B1; 
 }
 
 .col-2 .help h2{
-	color: #3C3C3C/*#7F8183*/;
+	color:#565656/*#7F8183*/;
     float: right;
 	font: normal 17px "Oxygen-Regular", Arial, sans-serif;
     margin-top: 13px;
@@ -335,6 +335,10 @@ input:focus{
 }
 
 .col-1 .members h3 {background : #EE6E21 url('/assets/server/images/userB.png') no-repeat 225px 8px;
+}
+
+.col-1 .script h3 {background : #27AD19 /*url('/assets/server/images/userB.png') no-repeat 225px 8px*/;
+margin-top:40px;
 }
 
 .project-meta .date {

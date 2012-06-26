@@ -25,6 +25,12 @@
 	<% }); %>
 </div>
 
+<div class="script" id="script">
+	<h3>queued scripts</h3>
+</div>
+
+
+
 </div><!-- /project-meta -->
 
 <div class="col-main">
