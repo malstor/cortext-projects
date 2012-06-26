@@ -110,10 +110,44 @@ models.Project.prototype.sync_read = function(method, model, options){
     });
 }
 
+
+
+models.Project.prototype.sync_create = function(method, model, options){
+    var _this = this;
+
+    if( !(session && session.user) ){
+        return options.error("you must be logged in to perform this action.");
+    }
+
+    db.collection("projects", function(error, projects){
+        projects.findOne({}, { sort : [[ "id", -1 ]]  }, function(error, last){
+
+            model.set({
+                id: parseInt(last.id)+1,
+                date_created : new Date().getTime(),
+                date_updated : new Date().getTime()
+            });
+
+            projects.insert(model.toJSON(), function(error, new_project){
+                db.collection("projects_membership", function(error,collection){
+                    collection.insert({ _id : new_project[0]["id"], value : { members : [ session.user.id ] } });
+                });
+
+                db.collection("counter_projects_elements", function(error,collection){
+                    collection.insert({ _id : new_project[0]["id"], "value" : { Message:0, Analysis:0, Image:0 } });
+                });
+
+                options.success(new_project[0]);
+            });
+
+        });
+    });
+}
+
 models.Project.prototype.sync = function(method, model, options) {
     switch(method){
-        case "read": this.sync_read(method, model, options); break;
-        default : return options.error('Unsupported method');
-    }
-    
+        case "create"   : this.sync_create(method, model, options); break;
+        case "read"     : this.sync_read(method, model, options); break;
+        default         : return options.error('Unsupported method');
+    }   
 };

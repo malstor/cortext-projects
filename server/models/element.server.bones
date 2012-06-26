@@ -20,7 +20,7 @@ models.element.prototype.sync_read = function(method, model, options){
     });
 }
 
-models.element.prototype.sync_update = function(method, model, options){
+models.element.prototype.sync_create = function(method, model, options){
     var resp = {};
     var _this = this;
 
@@ -58,8 +58,8 @@ models.element.prototype.sync_update_project_counter = function(element){
 
 models.element.prototype.sync = function(method, model, options) {
     switch(method){
+        case "create": this.sync_create(method, model, options); break;
         case "read": this.sync_read(method, model, options); break;
-        case "create": this.sync_update(method, model, options); break;
         default : return options.error('Unsupported method');
     }    
 };

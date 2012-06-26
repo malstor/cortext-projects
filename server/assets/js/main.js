@@ -29,6 +29,16 @@ $(document).ready(function(){
 			dashboard: function(){
 				$("#path ul .dashboard").css("paddingLeft", ($("#path ul .dashboard").width() + 10)+"px");
 				$("#path ul .home, #path ul .dashboard").unbind("mouseenter mouseleave");
+
+				$("#project-new .new").on("click", function(e){
+					e.preventDefault();
+
+					var p = new models.Project({
+						title : $("#project-new input").val()
+					});
+
+					p.save();
+				});
 			},
 
 			user: function(user){

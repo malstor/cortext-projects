@@ -56,8 +56,6 @@ servers.Route.augment({
 
     	    console.log("api>");
 
-    	    console.log(req.body);
-		
 		    var p = new models.Project({ id : project_id });
 		    p.add_member(user_id);
 

@@ -4,7 +4,13 @@ model = Backbone.Model.extend({
     elements: [],
 
     url: function() {
-        return '/api/Project/' + encodeURIComponent(this.get('id'));
+        var url = '/api/Project/';
+
+        if(this.has('id')){
+            url += encodeURIComponent(this.get('id'))
+        }
+
+        return url;
     },
 
     permalink: function(){

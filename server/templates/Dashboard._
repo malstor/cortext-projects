@@ -21,6 +21,13 @@
 </div><!-- /dashboard-meta -->
 
 <div id="dashboard" class="projects-list col-main">
+
+<form id="project-new">
+	<input type="text"></input>
+	<button class="new">new</button>
+</form>
+
+
 <% _.each(projects, function(p){ %>
 <div id="project-<%= p.id %>" class="project">
 
