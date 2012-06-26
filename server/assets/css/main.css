@@ -119,47 +119,93 @@ button:hover, .button:hover { background : #DDDDDD; border : 1px solid #B1B1B1; 
 		border : 1px solid #161616;
 }
 
+/*--------------------col2------------------------*/
+
+
+.col-2{
+    float: left;
+    height: inherit;
+    margin-bottom: 0;
+    margin-top: 25px;
+	margin-left:13px;
+    width: 245px;
+    border-top: 1px solid #EEF2F6;
+	border-right: 1px solid #EEF2F6;
+    border-left: 1px solid #EEF2F6;
+}
+
+
+
+
 
 /*--------------------help/documentation------------------------*/
 
-.col-1 .help{
+.col-2 .help{
 	border-bottom: 1px solid #EEF2F6;
-    border-top: 1px solid #EEF2F6;
-    height: 75px;
-    margin-bottom: 40px;
-    margin-top: 11px;
+	border-top: 1px solid #EEF2F6;
+    height: 65px;
+    margin-bottom: 400px;
+    margin-top: 35px;	
 }
 
-.col-1 .help:hover{
+.col-2 .help:hover{
 	background-color:#F6FAFE;
 	cursor:pointer;
 }
 
-.col-1 .help a{
+/*.col-2 .help a{
 	text-decoration:none;
 }
-
-.col-1 .help img{
+*/
+.col-2 .help img{
 	margin-left: 8px;
-    margin-top: 5px;
+    margin-top: 3px;
 }
 
-.col-1 .help h2{
-	border-bottom: 1px solid #EEF2F6;
-    color: #7F8183;
+.col-2 .help h2{
+	color: #3C3C3C/*#7F8183*/;
     float: right;
-	font: normal 17px Arial, sans-serif;
-    margin-top: 12px;
-    padding-bottom: 12px;
-    width: 190px;
+	font: normal 17px "Oxygen-Regular", Arial, sans-serif;
+    margin-top: 13px;
+	margin-right:45px;
 }
  
-.col-1 .help h4{
+.col-2 .help h4{
 	color: #2159BE;
     float: right;
-	font: normal 12px "Oxygen-Regular", Arial, sans-serif;
-    margin-top: -22px;
-    width: 190px;
+	font: normal 14px "Oxygen-Regular", Arial, sans-serif;
+    margin-top: -27px;
+	margin-right:45px;
+}
+
+
+
+.col-2 .help a.info{
+    position:relative; 
+    z-index:24;
+    color:#000;
+    text-decoration:none
+}
+
+.col-2 .help a.info:hover{z-index:25;
+}
+
+.col-2 .help a.info span{display: none
+}
+
+.col-2 .help a.info:hover span{ 
+	display:block; 
+	position:absolute;
+	width:190px;
+	margin-top:10px;
+	margin-left:18px;
+	border:1px solid #EEF2F6;
+	color: #2159BE;
+	padding-left:15px;
+	padding-top:15px;
+	padding-bottom:15px;
+	font: normal 13px "Oxygen-Regular", Arial, sans-serif;
+	border-radius:3px;    
 }
 
 /*----------------------formulaire/login----------------------*/
@@ -258,7 +304,7 @@ input:focus{
 	float:left;
 	z-index:2;
 	height:inherit;
-	margin-top:14px;
+	margin-top:35px;
 	margin-bottom:0px;
 }	
 		
