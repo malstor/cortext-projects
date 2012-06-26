@@ -204,7 +204,7 @@ button:hover, .button:hover { background : #DDDDDD; border : 1px solid #B1B1B1; 
 	padding-left:15px;
 	padding-top:15px;
 	padding-bottom:15px;
-	font: normal 13px "Oxygen-Regular", Arial, sans-serif;
+	font: normal 13px/20px "Oxygen-Regular", Arial, sans-serif;
 	border-radius:3px;    
 }
 
