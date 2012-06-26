@@ -7,6 +7,8 @@
 
 <script src="/assets/bones/all.js?<%= version %>" type="text/javascript" charset="utf-8"></script>
 <script src="/assets/server/js/lib/jquery-ui-1.8.21.custom.min.js?<%= version %>" type="text/javascript" charset="utf-8"></script>
+<script src="/assets/server/js/lib/moment.js?<%= version %>" type="text/javascript" charset="utf-8"></script>
+<script src="/assets/server/js/lib/marked.js?<%= version %>" type="text/javascript" charset="utf-8"></script>
 <script src="/assets/server/js/main.js?<%= version %>" type="text/javascript" charset="utf-8"></script>
 
 <link rel="stylesheet" href="/assets/server/css/reset.css?<%= version %>" type="text/css" />  

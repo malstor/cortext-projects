@@ -1,10 +1,10 @@
-<div class="element image user-<%= e.author.id %>" id="Image-<%= e.id %>">
+<div class="element image user-<%= e.author %>" id="Image-<%= e.id %>">
 
 	<div class="info">
 		<h3>tubes (analysis.py/12:02 21.06.2011)</h3>
 		<span class="type image"><%= e.type %></span>
-		<span class="author"><%= e.author.name %></span>
-		<span class="date"><a href="<%= e.permalink %>"><%= e.date_formated %></a></span>
+		<span class="author"><%= author.name %></span>
+		<span class="date"><a href="<%= e.permalink %>"><%= moment(e.date).format("DD.MM.YYYY") %></a></span>
 	</div><!-- /info -->
 
 	<div class="body">

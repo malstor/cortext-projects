@@ -1,6 +1,12 @@
 model = Backbone.Model.extend({
    url: function() {
-        return '/api/element/' + encodeURIComponent(this.get('id'));
+   		var url = '/api/element/';
+
+   		if(this.get('id')){
+   			url += encodeURIComponent(this.get('id'));
+   		}
+
+        return  url;
     },
 
     show_in: function(project){

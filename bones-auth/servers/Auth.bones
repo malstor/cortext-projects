@@ -1,4 +1,5 @@
 var parse = require('url').parse;
+var MongoStore = require('connect-mongo')(middleware);
 
 // Authentication middleware
 // -------------------------
@@ -19,8 +20,17 @@ server = Bones.Server.extend();
 
 server.prototype.initialize = function(plugin, args) {
     console.log(args);
+
+    args = {
+        model : models['user'],
+        store : new MongoStore({
+            db  : "sessions",
+            host: "localhost"
+        })
+    };
+
     if (!args) args = {};
-    args.model = args.model || models['user'];
+    args.model = args.model || models['User'];
     args.store = args.store || new middleware.session.MemoryStore({ reapInterval: -1 });
     args.url = args.url || '/api/Auth';
     args.key = args.key || 'connect.sid';

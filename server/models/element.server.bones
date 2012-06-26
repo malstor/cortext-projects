@@ -5,24 +5,60 @@ var yaml = require('pyyaml');
 
 
 models.element.prototype.sync_read = function(method, model, options){
-    var projectDir = '../data/elements/' + model.id,
-        resp = {id: model.id};
+    var resp = {id: model.id};
 
-    yaml.load(projectDir+".yaml", function(error, data){
-        if (error) {
-            console.log("[error][element: "+model.id+"] yaml not found");
-            return options.error("project not found");
-        }
+    db.collection("elements",function(error, collection){
+//        console.log(error);
 
-        console.log("[element: "+model.id+"] loading data from yaml");
+        collection.findOne({ "id" : parseInt(model.id) }, function(e, item){
+//            console.log(e);
+            console.log("[db]READ [element: "+model.id+"]");
 
-        resp = _.extend(resp, data);
-        options.success(resp);
+            resp = _.extend(resp, item);
+            options.success(resp);
+        });
+    });
+}
+
+models.element.prototype.sync_create = function(method, model, options){
+    var resp = {};
+    var _this = this;
+
+    if( !(session && session.user) ){
+        return options.error("you must be logged in to perform this action.");
+    }
+
+    if( session.user.id != model.get("author") ){
+        return options.error("hum little prick. you can publish stuff as someone else.");
+    }
+
+    db.collection("elements", function(error, elements){
+        elements.insert(model.toJSON(), function(error, element){
+            _this.sync_update_project_counter(element[0]);
+            options.success(element);
+        });   
+    });
+}
+
+models.element.prototype.sync_update_project_counter = function(element){
+
+//    console.log(element);
+
+    var v = {};
+    v["value."+element.type] = 1;
+
+    var modifier = { $inc : v };
+
+//    console.log(modifier);
+
+    db.collection('counter_projects_elements', function(error, counters){
+        counters.update({ "_id" : parseInt(element.project) }, modifier);
     });
 }
 
 models.element.prototype.sync = function(method, model, options) {
     switch(method){
+        case "create": this.sync_create(method, model, options); break;
         case "read": this.sync_read(method, model, options); break;
         default : return options.error('Unsupported method');
     }    

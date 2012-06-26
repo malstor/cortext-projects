@@ -7,7 +7,10 @@
     "pyyaml" : "*",
     "marked" : "*",
     "email": "0.2.3",
-    "bones-auth" : "1.3.10"
+    "mongodb": "*",
+    "moment": "*",
+    "bones-auth" : "1.3.10",
+    "connect-mongo" : "*"
   },
   "devDependencies": {},
   "optionalDependencies": {},

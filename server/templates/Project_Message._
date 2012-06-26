@@ -1,9 +1,9 @@
-<div class="element message user-<%= e.author.id %>" id="Message-<%= e.id %>">
+<div class="element message user-<%= e.author %>" id="Message-<%= e.id %>">
 
 	<div class="info">
-		<h3 class="author"><%= e.author.name %></h3>
+		<h3 class="author"><%= author.name %></h3>
 		<span class="type message"><%= e.type %></span>
-		<span class="date"><a href="<%= e.permalink %>"><%= e.date_formated %></a></span>
+		<span class="date"><a href="<%= e.permalink %>"><%= moment(e.date).format("DD.MM.YYYY") %></a></span>
 	</div><!-- /info -->
 
 	<div class="body">

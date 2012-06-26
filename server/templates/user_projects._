@@ -1,7 +1,7 @@
 <div class="project">
-<h4 class="title"><a href="/project/<%= project.info.id %>"><%= project.info.title %></a></h4>
+<h4 class="title"><a href="/project/<%= project.id %>"><%= project.title %></a></h4>
 
 <%= templates.participation({ composition: composition }) %>
 
-<div class="date">created: <%= format_date(project.info.date_created) %></div>
+<div class="date">created: <%= moment(project.date_created).format("DD.MM.YYYY") %></div>
 </div>

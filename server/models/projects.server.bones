@@ -10,50 +10,35 @@ models.projects.prototype.sync = function(method, model, options) {
 
     options.data = options.data || {};
 
-    var projectDir = '../data/projects/',
-        resp = {};
+    var resp = {};
 
     var projects = [];
 
-    var files = fs.readdirSync(projectDir);
+    var current_user = options.data.user_id || session.user.id;
 
-//    console.log(session);
+    console.log("options:");
+    console.log(current_user);
 
-    var load_defer = _.after(files.length, function(){
-        options.success(projects);
-    });
+    db.collection("projects_membership", function(error, collection){
+        collection.find({ "value.members" : parseInt(current_user) }).toArray(function(error, array){
+            var in_project = _.pluck(array, "_id");
 
-    // TEMPORARY PLEASE FIX ME
-//    var filter_user = options.user_id || session.user.id;
-    var filter_user = options.data.user_id || session.user.id;
+            var done = _.after(array.length, function(){
+                options.success(projects);                        
+            })
 
-    console.log(filter_user);
+            _.each(in_project, function(project_id){
+                var o = {
+                    error : function(){},
+                    success: function(project){
+                        projects.push(project);
+                        done();
+                    }
+                }
 
-    _.each(files, function(file){
-        yaml.load(projectDir+file, function(error, data){
-            if(error) console.log(error)
-
-            if(_.find(data.members, function(m){ return m.id == filter_user })){
-//            if(true){
-                data.elements = data.elements.slice(0,14);
-
-                data.composition = {
-                    Message: 0,
-                    Image: 0,
-                    Analysis: 0
-                };
-
-                data.composition = _.reduce(data.elements,
-                    function(m, e){
-                        m[e.type] = parseInt(m[e.type]) + 1;
-                        return m;
-                    }, data.composition);
-
-                projects.push(data);
-            } else {
-                console.log("access not granted");
-            }
-            load_defer();
+                var p = new models.Project({ id : project_id });
+                p.fetch(o);
+            });
         });
     });
 };

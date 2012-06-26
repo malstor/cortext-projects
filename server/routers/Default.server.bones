@@ -31,13 +31,19 @@ routers.Default.prototype.send = function(view, options) {
     });
     o = o.replace(/,$/, '}');
 
+    var current_user = {};
+
+    if (session && session.user){
+        current_user = session.user.toJSON();
+    }
+
     // Finally send the page to the client.
     this.res.send(Bones.plugin.templates.App({
         version: time,
         title: this.pageTitle(main),
         main: $(main.el).html(),
         path: this.path(options.model),
-        startup: ''
+        startup: 'current_user = '+ JSON.stringify(current_user) +';'
     }));
 };
 
@@ -51,6 +57,16 @@ routers.Default.prototype.user_projects = function(user_id){
     u.fetch_projects(function(){
         router.res.send(u.projects.toJSON());
     });
+
+    console.log("<api");
+}
+
+routers.Default.prototype.project_add_member = function(project_id){
+    console.log("api>");
+    var router = this;
+
+    var p = new models.Project({ id : project_id });
+    p.add_member(user_id);
 
     console.log("<api");
 }

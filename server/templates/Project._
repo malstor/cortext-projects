@@ -3,15 +3,15 @@
 <div class="info">
 	<h3>informations</h3>
 
-	<div class="date_created date">created: <span><%= format_date(info.date_created) %></span></div>
-	<div class="date_updated date">updated: <span><%= format_date(info.date_updated) %></span></div>
+	<div class="date_created date">created: <span><%= moment(project.date_created).format("DD.MM.YYYY") %></span></div>
+	<div class="date_updated date">updated: <span><%= moment(project.date_updated).format("DD.MM.YYYY") %></span></div>
 </div>
 
 <div class="members" id="members">
     <div id="user-icon"></div>
 	<h3>participants</h3>
 
-	<% _.each(members, function(member){ %>
+	<% _.each(project.members, function(member){ %>
 	<div class="member" rel="user-<%= member.id %>">
 		<div class="name"><%= member.name %></div>
 		<div class="participation">
@@ -23,6 +23,12 @@
 		</div>
 	</div>
 	<% }); %>
+
+	<form id="add-member">
+		<input type="text" />
+		<button class="add">add</button>
+	</form>
+
 </div>
 
 <div class="script" id="script">
@@ -35,7 +41,7 @@
 
 <div class="col-main">
 
-<div id="add-elements">
+<div id="add-element">
 
 <div id="select-type">
 	<p>add new
@@ -45,7 +51,7 @@
 	</p>
 </div
 
-<form>
+<form rel="<%= project.id %>">
 <textarea></textarea>
 
 <button class="add">add</add>

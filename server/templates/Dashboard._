@@ -11,8 +11,8 @@
 <ul class="projects">
 	<% _.each(projects, function(p){ %>
 	<li class="project-title">
-		<a href="/project/<%= p.info.id %>"><%= p.info.title %></a>
-		<%= templates.participation({ composition: p.composition }) %>
+		<a href="/project/<%= p.id %>"><%= p.title %></a>
+		<%= templates.participation({ composition: p.members[current_user_id].participation }) %>
 	</li>
 	<% }); %>
 </ul>
@@ -21,23 +21,29 @@
 </div><!-- /dashboard-meta -->
 
 <div id="dashboard" class="projects-list col-main">
-<% _.each(projects, function(p){ %>
-<div id="project-<%= p.info.id %>" class="project">
 
-	<h2><a href="/project/<%= p.info.id %>"><%= p.info.title %></a>></h2>
+<form id="project-new">
+	<input type="text"></input>
+	<button class="new">new</button>
+</form>
+
+<% _.each(projects, function(p){ %>
+<div id="project-<%= p.id %>" class="project">
+
+	<h2><a href="/project/<%= p.id %>"><%= p.title %></a>></h2>
 
 	<%= templates.participation({ composition: p.composition }) %>
 
 	<div class="elements">
 	<% _.each(p.elements, function(e){ %>
 	<div id="<%= e.type%>-<%= e.id%>" class="<%= e.type%>">
-	<div class="author"><%= e.author.name %></div>
-	<div class="title"><a href="/project/<%= p.info.id %>#<%= e.type%>-<%= e.id%>"><%= (e.title ? e.title : "lorem ipsum dolor bacon frites") %></a></div>
-	<div class="date"><%= e.date_formated%></div>
+	<div class="author"><%= p.members[e.author].name %></div>
+	<div class="title"><a href="/project/<%= p.id %>#<%= e.type%>-<%= e.id%>"><%= (e.title ? e.title : "lorem ipsum dolor bacon frites") %></a></div>
+	<div class="date"><%= moment(e.date).format("DD.MM.YYYY") %></div>
 	</div>
 	<% }); %>
 	</div><!-- /elements-->
-</div><!-- /#project-<%= p.info.id %> -->
+</div><!-- /#project-<%= p.id %> -->
 <% }); %>
 </div><!-- /dashboard-meta -->
 
