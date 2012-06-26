@@ -331,7 +331,7 @@ input:focus{
 	margin: 10px 10px 10px 0px;
 	width:245px;
 	padding-left:5px;
-	background:#235BBE url('/assets/server/images/dossierB.png') no-repeat 225px 7px;
+	background:#235BBE url('/assets/server/images/dossier1.png') no-repeat 225px 7px;
 }
 
 .col-1 .members h3 {background : #EE6E21 url('/assets/server/images/userB.png') no-repeat 225px 8px;
@@ -764,7 +764,7 @@ input:focus{
 }	
 
 .user.profile h2.Project{
-	background : #235BBE url('/assets/server/images/project.png') no-repeat 718px 5px;
+	background : #235BBE url('/assets/server/images/dossier2.png') no-repeat 718px 5px;
 	padding-left:10px;
 	padding-top:4px;
 	margin-top:15px;
