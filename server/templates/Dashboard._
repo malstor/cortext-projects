@@ -27,7 +27,6 @@
 	<button class="new">new</button>
 </form>
 
-
 <% _.each(projects, function(p){ %>
 <div id="project-<%= p.id %>" class="project">
 

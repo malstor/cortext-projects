@@ -94,7 +94,7 @@ $(document).ready(function(){
 
 					element.save();
 
-					var new_el = $(templates["Project_"+element.get("type")]({ e : element.toJSON() }));
+					var new_el = $(templates["Project_"+element.get("type")]({ author : current_user, e : element.toJSON() }));
 					$("#elements").prepend(new_el);
 
 //					console.log(new_el);
