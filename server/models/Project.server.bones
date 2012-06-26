@@ -35,7 +35,7 @@ models.Project.prototype.add_member = function(user_id){
     var _this = this;
 
     db.collection("projects_membership", function(error, collection){
-        collection.update({ _id: parseInt(_this.id) }, { "$push" : { "value.members" : user_id }} ,function(error,r){
+        collection.update({ _id: parseInt(_this.id) }, { "$addToSet" : { "value.members" : user_id }} ,function(error,r){
             console.log(r);
         });
     });
