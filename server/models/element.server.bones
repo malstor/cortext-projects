@@ -22,6 +22,7 @@ models.element.prototype.sync_read = function(method, model, options){
 
 models.element.prototype.sync_update = function(method, model, options){
     var resp = {};
+    var _this = this;
 
     if( !(session && session.user) ){
         return options.error("you must be logged in to perform this action.");
@@ -33,8 +34,25 @@ models.element.prototype.sync_update = function(method, model, options){
 
     db.collection("elements", function(error, elements){
         elements.insert(model.toJSON(), function(error, element){
+            _this.sync_update_project_counter(element[0]);
             options.success(element);
         });   
+    });
+}
+
+models.element.prototype.sync_update_project_counter = function(element){
+
+    console.log(element);
+
+    var v = {};
+    v["value."+element.type] = 1;
+
+    var modifier = { $inc : v };
+
+    console.log(modifier);
+
+    db.collection('counter_projects_elements', function(error, counters){
+        counters.update({ "_id" : parseInt(element.project) }, modifier);
     });
 }
 
