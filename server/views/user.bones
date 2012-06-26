@@ -25,23 +25,7 @@ view = views.Main.extend({
         $("#projects").empty();
 
         _(user.projects).each(function (p){
-            var composition = {
-                Message: 0,
-                Image: 0,
-                Analysis: 0,
-                Others: 0
-            }
-
-            _(p.elements).reduce(function(composition, element){
-                if(element.author.id == user.id){
-                    composition[element.type] +=1;
-                } else {
-                    composition["Others"] += 1;
-                }
-                return composition;
-            },composition);
-
-            $("#projects").append(templates.user_projects({project : p, composition : composition}));
+            $("#projects").append(templates.user_projects({project : p, composition : p.members[user.id].participation }));
         });
             
         _.each($(".participation"), function(e){
