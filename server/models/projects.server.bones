@@ -23,36 +23,21 @@ models.projects.prototype.sync = function(method, model, options) {
         collection.find({ "value.members" : parseInt(current_user) }).toArray(function(error, array){
             var in_project = _.pluck(array, "_id");
 
-            db.collection("projects", function(error, collection){
-                collection.find({ "id" : { "$in" : in_project } }).toArray(function(error, array){
-//                    console.log(array);
+            var done = _.after(array.length, function(){
+                options.success(projects);                        
+            })
 
-                    var done = _.after(array.length, function(){
-                        options.success(projects);                        
-                    })
+            _.each(in_project, function(project_id){
+                var o = {
+                    error : function(){},
+                    success: function(project){
+                        projects.push(project);
+                        done();
+                    }
+                }
 
-                    _.each(array, function(project){
-                        db.collection("elements", function(error, elements){
-                            var options = {
-                            // DASHBOARD NEED TO LIMIT THE NUMBER OF PROJECTS
-                            //    limit : 10
-                            }
-
-                            elements.find({ project : parseInt(project.id) }, options).toArray(function(error, element){
-                                console.log(error);
-                                project.elements = element;
-
-                                db.collection("counter_projects_elements", function(e,c){
-                                    c.findOne({ _id: project.id }, function(e, item){
-                                       project.composition = item.value;
-                                       projects.push(project);
-                                       done();
-                                    });
-                                });
-                            });
-                        });                    
-                    });
-                });
+                var p = new models.Project({ id : project_id });
+                p.fetch(o);
             });
         });
     });

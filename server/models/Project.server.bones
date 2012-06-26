@@ -31,6 +31,16 @@ models.Project.prototype.get_members = function(cb){
     });
 }
 
+models.Project.prototype.get_composition = function(cb){
+    var _this = this;
+
+    db.collection("counter_projects_elements", function(e,c){
+        c.findOne({ _id: _this.id }, function(e, item){
+           cb(item);
+        });
+    });
+}
+
 models.Project.prototype.sync_read = function(method, model, options){
     var _this = this;
     var resp = {id: model.id}; 
@@ -56,7 +66,7 @@ models.Project.prototype.sync_read = function(method, model, options){
                 _this.get_members(function(members){
                     project.members = members;
 
-                    console.log(members);
+                    // console.log(members);
 
                     // processing user data
                     _.each(project.elements, function(e){
@@ -82,37 +92,6 @@ models.Project.prototype.sync_read = function(method, model, options){
             });
         });
     });
-
-    // yaml.load(projectDir+".yaml", function(error, data){
-    //     if (error) {
-    //         console.log("[error][project: "+model.id+"] yaml not found");
-    //         return options.error("project not found");
-    //     }
-
-    //     console.log("[project: "+model.id+"] loading data from yaml");
-
-    //     var u = {};
-    //     var s = _.size(data.elements);
-
-    //     // processing user data
-    //     _.each(data.elements, function(e){
-    //         var m = _.find(data.members, function(m){ return m.id == e.author.id; });
-
-    //         if(!_.isObject(m.participation)){
-    //             u[m.id] = m;
-    //             m.participation = {};
-    //             m.participation.Others = s;
-    //         };
-
-    //         m.participation[e.type] = ( m.participation[e.type] ? m.participation[e.type] + 1 : 1);
-    //         m.participation.Others = m.participation.Others - 1;
-    //     });
-
-    //     data.members = u;
-
-    //     resp = _.extend(resp, data);
-    //     options.success(resp);
-    // });
 }
 
 models.Project.prototype.sync = function(method, model, options) {
