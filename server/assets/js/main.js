@@ -78,10 +78,17 @@ $(document).ready(function(){
 						content: $("#add-element textarea").val()
 					});
 
+					console.log(element);
+
 					element.save();
 
-					$("#elements").prepend(templates["Project_"+element.get("type")]({ e : element.toJSON() }));
+					var new_el = $(templates["Project_"+element.get("type")]({ e : element.toJSON() }));
+					$("#elements").prepend(new_el);
 
+					console.log(new_el);
+
+					$(new_el).css('display', 'none');
+					$(new_el).fadeIn(1000);
 				});
 			}
 		});

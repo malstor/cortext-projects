@@ -23,8 +23,12 @@ models.element.prototype.sync_read = function(method, model, options){
 models.element.prototype.sync_update = function(method, model, options){
     var resp = {};
 
-    if( _.isUndefined(model.author) ){
-        return options.error("invalid element : you need an author");
+    if( !(session && session.user) ){
+        return options.error("you must be logged in to perform this action.");
+    }
+
+    if( session.user.id != model.get("author") ){
+        return options.error("hum little prick. you can publish stuff as someone else.");
     }
 
     db.collection("elements", function(error, elements){
