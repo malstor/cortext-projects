@@ -5,7 +5,7 @@ var yaml = require('pyyaml');
 
 
 models.element.prototype.sync_read = function(method, model, options){
-    resp = {id: model.id};
+    var resp = {id: model.id};
 
     db.collection("elements",function(error, collection){
 //        console.log(error);
@@ -17,6 +17,16 @@ models.element.prototype.sync_read = function(method, model, options){
             resp = _.extend(resp, item);
             options.success(resp);
         });
+    });
+}
+
+models.element.prototype.sync_update = function(method, model, options){
+    var resp = {};
+
+    db.collection("elements", function(error, elements){
+        elements.insert(model.toJSON(), function(error, element){
+            options.success(element);
+        });   
     });
 }
 

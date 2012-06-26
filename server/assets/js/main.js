@@ -73,9 +73,12 @@ $(document).ready(function(){
 					var element = new models.element({
 						type: "Message",
 						author: current_user.id,
+						project : parseInt($("#add-element form").attr("rel")),
 						date: new Date().getTime(),
 						content: $("#add-element textarea").val()
 					});
+
+					element.save();
 
 					console.log(element);
 

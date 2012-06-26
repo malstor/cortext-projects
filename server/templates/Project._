@@ -39,7 +39,7 @@
 	</p>
 </div
 
-<form>
+<form rel="<%= project.id %>">
 <textarea></textarea>
 
 <button class="add">add</add>

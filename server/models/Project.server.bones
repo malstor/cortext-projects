@@ -7,7 +7,11 @@ models.Project.prototype.get_elements = function(cb){
     var _this = this;
 
    db.collection("elements", function(error, elements){
-        elements.find({ project : parseInt(_this.id) }).toArray(function(error, elements){
+        var options = {
+            sort : [[ "date" , -1 ]]
+        }
+
+        elements.find({ project : parseInt(_this.id) }, options).toArray(function(error, elements){
             cb(elements);
         });
     });
@@ -52,9 +56,13 @@ models.Project.prototype.sync_read = function(method, model, options){
                 _this.get_members(function(members){
                     project.members = members;
 
+                    console.log(members);
+
                     // processing user data
                     _.each(project.elements, function(e){
-                        var m = _.find(project.members, function(m){ return m.id == e.author.id; });
+                        var m = _.find(project.members, function(m){ return m.id == e.author; });
+
+                        console.log(e);
 
                         if(!_.isObject(m.participation)){
                             u[m.id] = m;
