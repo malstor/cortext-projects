@@ -3,5 +3,5 @@
 
 <%= templates.participation({ composition: composition }) %>
 
-<div class="date">created: <%= format_date(project.date_created) %></div>
+<div class="date">created: <%= moment(project.date_created).format("DD.MM.YYYY") %></div>
 </div>

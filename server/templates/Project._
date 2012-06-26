@@ -3,8 +3,8 @@
 <div class="info">
 	<h3>informations</h3>
 
-	<div class="date_created date">created: <span><%= format_date(project.date_created) %></span></div>
-	<div class="date_updated date">updated: <span><%= format_date(project.date_updated) %></span></div>
+	<div class="date_created date">created: <span><%= moment(project.date_created).format("DD.MM.YYYY") %></span></div>
+	<div class="date_updated date">updated: <span><%= moment(project.date_updated).format("DD.MM.YYYY") %></span></div>
 </div>
 
 <div class="members" id="members">
