@@ -1,5 +1,13 @@
 <div class="project-meta col-1">
 
+<div class="help">
+	<a href="http://docs.cortext.net/">
+	<img src="/assets/server/images/robots.png" alt="#" />
+	<h2>you need help ?</h2>
+	<h4>read documentation</h4>
+	</a>
+</div>
+
 <div class="info">
 	<h3>informations</h3>
 

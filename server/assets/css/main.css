@@ -118,6 +118,50 @@ button:hover, .button:hover { background : #DDDDDD; border : 1px solid #B1B1B1; 
 		color:#FFFFFF;
 		border : 1px solid #161616;
 }
+
+
+/*--------------------help/documentation------------------------*/
+
+.col-1 .help{
+	border-bottom: 1px solid #EEF2F6;
+    border-top: 1px solid #EEF2F6;
+    height: 75px;
+    margin-bottom: 40px;
+    margin-top: 11px;
+}
+
+.col-1 .help:hover{
+	background-color:#F6FAFE;
+	cursor:pointer;
+}
+
+.col-1 .help a{
+	text-decoration:none;
+}
+
+.col-1 .help img{
+	margin-left: 8px;
+    margin-top: 5px;
+}
+
+.col-1 .help h2{
+	border-bottom: 1px solid #EEF2F6;
+    color: #7F8183;
+    float: right;
+	font: normal 17px Arial, sans-serif;
+    margin-top: 12px;
+    padding-bottom: 12px;
+    width: 190px;
+}
+ 
+.col-1 .help h4{
+	color: #2159BE;
+    float: right;
+	font: normal 12px "Oxygen-Regular", Arial, sans-serif;
+    margin-top: -22px;
+    width: 190px;
+}
+
 /*----------------------formulaire/login----------------------*/
 
 #login-panel {
