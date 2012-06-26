@@ -80,7 +80,7 @@ $(document).ready(function(){
 
 					element.save();
 
-					console.log(element);
+					$("#elements").prepend(templates["Project_"+element.get("type")]({ e : element.toJSON() }));
 
 				});
 			}

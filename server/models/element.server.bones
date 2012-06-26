@@ -23,6 +23,10 @@ models.element.prototype.sync_read = function(method, model, options){
 models.element.prototype.sync_update = function(method, model, options){
     var resp = {};
 
+    if( _.isUndefined(model.author) ){
+        return options.error("invalid element : you need an author");
+    }
+
     db.collection("elements", function(error, elements){
         elements.insert(model.toJSON(), function(error, element){
             options.success(element);
