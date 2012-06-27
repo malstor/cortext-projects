@@ -26,6 +26,7 @@
 	<% _.each(projects, function(p){ %>
 	<li class="project-title">
 		<a href="/project/<%= p.id %>"><%= p.title %></a>
+		<span class="members-count"><%= _.size(p.members) %></span>
 		<%= templates.participation({ composition: p.members[current_user_id].participation }) %>
 	</li>
 	<% }); %>

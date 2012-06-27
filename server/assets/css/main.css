@@ -352,9 +352,23 @@ height:100px;
 
 }
 
-.col-1 .project-title {
+.dashboard-projects a {
 	margin-bottom:8px;
-	background : url('/assets/server/images/user-pt.png') no-repeat 225px 5px;}
+}
+
+.dashboard-projects li {
+	margin-bottom : 5px;
+}
+
+.dashboard-projects span {
+	float : right;
+	font: normal 11px Arial, sans-serif;
+	color:#909090;
+
+	margin-top : 2px;
+	padding-left : 16px;
+	background : url('/assets/server/images/user-pt.png') no-repeat 0px 0px;
+}
 
 .project-meta .date {
 	font: normal 12px/1.2em Arial, sans-serif;
