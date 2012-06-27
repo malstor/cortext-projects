@@ -126,12 +126,12 @@ button:hover, .button:hover { background : #DDDDDD; border : 1px solid #B1B1B1; 
     float: left;
     height: inherit;
     margin-bottom: 0;
-    margin-top: 25px;
+    margin-top: 35px;
 	margin-left:13px;
     width: 245px;
-    border-top: 1px solid #EEF2F6;
+/*    border-top: 1px solid #EEF2F6;
 	border-right: 1px solid #EEF2F6;
-    border-left: 1px solid #EEF2F6;
+    border-left: 1px solid #EEF2F6;*/
 }
 
 
@@ -145,8 +145,8 @@ button:hover, .button:hover { background : #DDDDDD; border : 1px solid #B1B1B1; 
 	border-top: 1px solid #EEF2F6;
     height: 65px;
     margin-bottom: 400px;
-    margin-top: 35px;	
-}
+/*    margin-top: 35px;	
+*/}
 
 .col-2 .help:hover{
 	background-color:#F6FAFE;
@@ -158,15 +158,15 @@ button:hover, .button:hover { background : #DDDDDD; border : 1px solid #B1B1B1; 
 }
 */
 .col-2 .help img{
-	margin-left: 8px;
-    margin-top: 3px;
+	margin-left: 15px;
+    margin-top: 2px;
 }
 
 .col-2 .help h2{
 	color:#565656/*#7F8183*/;
     float: right;
 	font: normal 17px "Oxygen-Regular", Arial, sans-serif;
-    margin-top: 13px;
+    margin-top: 14px;
 	margin-right:45px;
 }
  
@@ -175,7 +175,7 @@ button:hover, .button:hover { background : #DDDDDD; border : 1px solid #B1B1B1; 
     float: right;
 	font: normal 14px "Oxygen-Regular", Arial, sans-serif;
     margin-top: -27px;
-	margin-right:45px;
+	margin-right:37px;
 }
 
 
