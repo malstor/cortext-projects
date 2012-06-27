@@ -8,7 +8,7 @@
 <label class="email">email</label><input id="email" value="tk@deveha.com"/>
 <label class="name">name</label><input id="name" value="Tam Kien Duong"/>
 <label>password</label><input id="password" type="password" value="pikachu"/>
-<input class="submit button"  type="submit" />
+<input class="submit button"  type="submit" value="submit" />
 </form>
 
 <form id="register">
@@ -17,6 +17,6 @@
 <label class="name">name</label><input id="name" />
 <label>password</label><input id="password"  class="password" type="password" />
 <label class="confirm">confirm</label><input id="confirm" type="password" />
-<input class="submit button" type="submit" />
+<input class="submit button" type="submit" value="submit" />
 
 </form>
