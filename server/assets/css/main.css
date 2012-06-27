@@ -627,15 +627,30 @@ height:100px;
 	background-color : #fafafa;
 }
 
-.project .elements .Analysis{
-	background-image: url(../images/script_actu.png);}
 
-.project .elements .Message{
+
+/*.project .elements .Message{
 	background-image:url(../images/post_actu.png);
+}*/
+
+.project .elements .icons{
+height:18px;
+width:18px;
+border-radius:4px;
+float:left;
+margin-top:8px;
+margin-left:5px;
 }
 
-.project .elements .Image{
-	background-image:url(../images/visual_actu3.png);
+.project .elements .Message .icons{
+background:#FFD505 url(../images/mess.png) no-repeat 3px 3px;
+}
+
+.project .elements .Analysis .icons{
+	background: #34B02C url(../images/script.png) no-repeat 2px 1px;}
+
+.project .elements .Image .icons{
+	background:#E62E60 url(../images/docs.png) no-repeat 1px 2px;
 }
 	
 #dashboard .project canvas { margin-top:17px;  }
@@ -662,7 +677,7 @@ height:100px;
 	color:#666768;
 	float:left;
 	font: normal 13px Arial, sans-serif;
-	margin-left:33px;
+	margin-left:13px;
 	margin-top:10px;
 	width:240px;	
 }	
