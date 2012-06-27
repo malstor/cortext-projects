@@ -34,16 +34,16 @@
 	<div id="indicators"><div>
 
 	<div id="indicator_projects">
-		<h4>projects</h4><div class="number">5</div>
+		<h4>projects</h4><div class="number"></div>
 	</div>
 	<div id="indicator_analysis">
-		<h4>analysis</h4><div class="number">30</div>
+		<h4>analysis</h4><div class="number"></div>
 	</div>
 	<div id="indicator_documents">
-		<h4>documents</h4><div class="number">50</div>
+		<h4>documents</h4><div class="number"></div>
 	</div>
 	<div id="indicator_messages">
-		<h4>messages</h4><div class="number">300</div>
+		<h4>messages</h4><div class="number"></div>
 	</div>
 
 	</div></div><!-- #indicators -->

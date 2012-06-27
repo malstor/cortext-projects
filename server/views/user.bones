@@ -24,10 +24,38 @@ view = views.Main.extend({
         // TODO: ajax loading. On fera dans la dentelle plus tard
         $("#projects").empty();
 
+        $("#indicator_projects .number").html( _.size(user.projects) );
+
+        var total = {
+            "Analysis": 0,
+            "Image": 0,
+            "Message": 0
+        }
+
+        var target = {
+            "Analysis"  : "#indicator_analysis",
+            "Image"     : "#indicator_documents",
+            "Message"   : "#indicator_messages"
+        };
+
         _(user.projects).each(function (p){
             $("#projects").append(templates.user_projects({project : p, composition : p.members[user.id].participation }));
+
+            _.each(p.members[user.id].participation, function(count, type){ if(type != "Others"){{ total[type] += count }} });
         });
-            
+        
+        var all = _.reduce(total, function(memo, item){ console.log(item); return parseInt(memo + item); }, 0);
+
+        _.each(total, function(count, type){
+            $(target[type]+" .number").html(count);
+
+            $(target[type]).width( Math.round(( count / all ) * ($("#indicators").width() - (4 * 74))) + 74);
+
+            console.log(total);
+            console.log(all);
+        });
+
+
         _.each($(".participation"), function(e){
             to_participation_bar(e);
         });
