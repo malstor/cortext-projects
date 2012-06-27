@@ -5,6 +5,20 @@
 
 </div>
 
+<div class="script" id="script">
+
+	<h3>queued scripts</h3>
+	
+	<div class="script">
+		<div class="name-script"></div>
+		<div class="queued-scripts">
+		<ul class="data">			
+		</ul>
+		</div>
+	</div>
+	
+</div><!-- /project-script -->
+
 <div class="dashboard-projects">
 	<h3>projects</h3>
 	
@@ -18,19 +32,6 @@
 </ul>
 
 </div><!-- /dashboard-projects -->
-
-
-<div class="script" id="script">
-
-	<h3>queued scripts</h3>
-	
-	<div class="script">
-		<div class="name-script"></div>
-		<div class="queued-scripts">
-		<ul class="data">			
-		</ul>
-		</div>
-	</div>
 	
 </div><!-- /dashboard-script -->
 

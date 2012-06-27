@@ -310,7 +310,7 @@ input:focus{
 	float:left;
 	z-index:2;
 	height:inherit;
-	margin-top:35px;
+	margin-top:15px;
 	margin-bottom:0px;
 }	
 		
@@ -343,8 +343,13 @@ input:focus{
 .col-1 .members h3 {background : #EE6E21 url('/assets/server/images/userB.png') no-repeat 225px 8px;
 }
 
+.col-1 .script {
+height:100px;	
+}
+
+
 .col-1 .script h3 {background : #27AD19 url('/assets/server/images/engrenage.png') no-repeat 225px 5px;
-margin-top:40px;
+
 }
 
 .col-1 .project-title {
