@@ -3,12 +3,12 @@ view = Backbone.View.extend({
     },
     render: function(){
     	var element = this.model.toJSON();
+        var author = this.options.author.toJSON();
+
     	var project_id = "";
 
-    	console.log(element);
-
         element.permalink = "/element/"+element.type+"/"+element.id+"/in/"+project_id;
-        var element_rendered = templates[ "Project_"+element.type ]({ e: element });
+        var element_rendered = templates[ "Project_"+element.type ]({ author : author, e: element });
 
         var options = {
             element: element_rendered
