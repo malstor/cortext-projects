@@ -32,10 +32,18 @@
 </div>
 
 <div class="script" id="script">
+
 	<h3>queued scripts</h3>
-</div>
-
-
+	
+	<div class="script">
+		<div class="name-script"></div>
+		<div class="queued-scripts">
+		<ul class="data">			
+		</ul>
+		</div>
+	</div>
+	
+</div><!-- /project-script -->
 
 </div><!-- /project-meta -->
 

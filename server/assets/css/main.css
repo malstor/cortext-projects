@@ -147,7 +147,8 @@ button:hover, .button:hover { background : #DDDDDD; border : 1px solid #B1B1B1; 
     height: 65px;
     margin-bottom: 900px;
     margin-top: 35px;
-	background:#FFF;	
+	background:#FFF;
+	z-index:2;	
 }
 
 .col-2 .help:hover{
@@ -161,7 +162,8 @@ button:hover, .button:hover { background : #DDDDDD; border : 1px solid #B1B1B1; 
 */
 .col-2 .help img{
 	margin-left: 15px;
-    margin-top: 2px;
+    margin-top: 2px;	z-index:2;
+
 }
 
 .col-2 .help h2{
@@ -169,7 +171,8 @@ button:hover, .button:hover { background : #DDDDDD; border : 1px solid #B1B1B1; 
     float: right;
 	font: normal 17px "Oxygen-Regular", Arial, sans-serif;
     margin-top: 14px;
-	margin-right:45px;
+	margin-right:45px;	z-index:2;
+
 }
  
 .col-2 .help h4{
@@ -340,7 +343,7 @@ input:focus{
 .col-1 .members h3 {background : #EE6E21 url('/assets/server/images/userB.png') no-repeat 225px 8px;
 }
 
-.col-1 .script h3 {background : #27AD19 /*url('/assets/server/images/userB.png') no-repeat 225px 8px*/;
+.col-1 .script h3 {background : #27AD19 url('/assets/server/images/engrenage.png') no-repeat 225px 5px;
 margin-top:40px;
 }
 

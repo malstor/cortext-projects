@@ -18,6 +18,23 @@
 </ul>
 
 </div><!-- /dashboard-projects -->
+
+
+<div class="script" id="script">
+
+	<h3>queued scripts</h3>
+	
+	<div class="script">
+		<div class="name-script"></div>
+		<div class="queued-scripts">
+		<ul class="data">			
+		</ul>
+		</div>
+	</div>
+	
+</div><!-- /dashboard-script -->
+
+
 </div><!-- /dashboard-meta -->
 
 <div id="dashboard" class="projects-list col-main">

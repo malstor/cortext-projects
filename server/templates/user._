@@ -1,10 +1,24 @@
 <div class="user-meta col-1">
 
-<div class="info">
+<!--<div class="info">
 <h3>informations</h3>
 </div>
 
-<h3>projets</h3>
+<h3>projets</h3>-->
+
+<div class="script" id="script">
+
+	<h3>queued scripts</h3>
+	
+	<div class="script">
+		<div class="name-script"></div>
+		<div class="queued-scripts">
+		<ul class="data">			
+		</ul>
+		</div>
+	</div>
+	
+</div><!-- /user-script -->
 
 </div><!-- /user-meta -->
 
