@@ -363,10 +363,10 @@ height:100px;
 .dashboard-projects span {
 	float : right;
 	font: normal 11px Arial, sans-serif;
-	color:#909090;
+	color: #EEF2F6; /*#909090;*/
 
 	margin-top : 2px;
-	padding-left : 16px;
+	padding-left : 18px;
 	background : url('/assets/server/images/user-pt.png') no-repeat 0px 0px;
 }
 
