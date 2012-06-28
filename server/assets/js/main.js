@@ -39,7 +39,7 @@ $(document).ready(function(){
 
 					p.save({}, { success: function(project, response){
 						p.set(response);
-console.log(p);
+
 						var new_elt = $(templates.Dashboard_list_project({ p: p.toJSON(), templates : templates }));
 
 						$(".projects-list").prepend(new_elt);
@@ -120,6 +120,10 @@ console.log(p);
 
 					current_project.add_member($("#add-member input").val());
 				});
+
+				$("#link").click(function(){
+        			$("#panel").slideToggle(200);
+    			});
 			}
 		});
 
