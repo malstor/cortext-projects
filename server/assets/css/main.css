@@ -527,59 +527,6 @@ height:100px;
 }
 
 
-/*
-
-
-
-
-
- .col-1 .members #panel{
-   position: absolute;
-    top: 30px;
-    right: 2px;
-    width: 190px;
-    padding: 5px 14px 5px 14px;
-    background: #2a2a2a;
-    color: #FFF;
-    display: none;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    z-index: 1000;
-}
-
-
-.col-1 .members #panel{
-	position:absolute;
-	z-index:5;
-	height:110px;
-	width: 220px;
-	padding: 0px 15px 5px 15px;
-	background:#309;
-	
-	font-size: 13px;
-	font-family:Arial, Helvetica, sans-serif;
-	color: #909098;
-	display: none;
-	font-style: normal;
-}*/
-	
-
-	
-	
-/*.col-1 .members #login-panel2 #add-member.add{
-	background:#34B02C;
-	border-radius: 4px;	
-	width:67px;
-	height:21px;
-	color:#FFF;
-	float:right;
-	margin-top:-22px;
-	margin-right:-5px;
-	border:none;
-	padding-bottom:4px;
-} 
-
-*/
 
 /*-----------------messages-------------------------*/
 
@@ -703,10 +650,9 @@ height:100px;
 }
 	
 .analysis .file .info {
-	background: url("../images/dialogue.png") no-repeat scroll right center transparent;
+	background: url("../images/dialogue.png") no-repeat scroll left center transparent;
     float: right;
-    margin-right: 10px;
-    margin-top: 5px;
+	margin-top: 5px;
 	border-style:none;
 }
 
@@ -714,7 +660,7 @@ height:100px;
 	display:block;
 	font: normal 11px Arial, sans-serif;
 	color: #909090;
-    padding-right: 30px;
+    padding-left: 30px;
 }
   
 .analysis .file .info span a{
@@ -748,11 +694,6 @@ height:100px;
 	background-color : #fafafa;
 }
 
-
-
-/*.project .elements .Message{
-	background-image:url(../images/post_actu.png);
-}*/
 
 .project .elements .icons{
 height:17px;
