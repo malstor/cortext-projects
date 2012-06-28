@@ -4,7 +4,7 @@ view = views.Main.extend({
 	},
 
     render: function() {
-        console.log(session.user);
+//        console.log(session.user);
 
     	var options = {
             current_user_id: session.user.id,

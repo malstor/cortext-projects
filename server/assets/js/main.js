@@ -37,7 +37,19 @@ $(document).ready(function(){
 						title : $("#project-new input").val()
 					});
 
-					p.save();
+					p.save({}, { success: function(project, response){
+						p.set(response);
+console.log(p);
+						var new_elt = $(templates.Dashboard_list_project({ p: p.toJSON(), templates : templates }));
+
+						$(".projects-list").prepend(new_elt);
+
+						$(new_elt).css('display', 'none');
+						$(new_elt).fadeIn(1000);
+					}});
+
+					// should take in account the save feedback
+
 				});
 			},
 
