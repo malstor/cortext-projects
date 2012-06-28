@@ -203,7 +203,7 @@ function to_participation_bar(e){
 	_.each(data, function(d){
 		// ERK
 		if(d.type != "Others"){
-			var l = Math.floor( (d.count/sum) *  w);
+			var l = Math.round( (d.count/sum) *  w);
 
 			ctx.fillStyle = colors[d.type];
 			ctx.fillRect (cursor_x, 0, l, h);
