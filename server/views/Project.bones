@@ -26,6 +26,7 @@ view = views.Main.extend({
     	});
 
         var options = {
+            templates : templates,
             project: this.model.toJSON(),
             elements:elements_rendered
         }
