@@ -26,10 +26,7 @@
 	<h3>participants</h3>
 
 	<% _.each(project.members, function(member){ %>
-	<div class="member" rel="user-<%= member.id %>">
-		<div class="name"><%= member.name %></div>
-		<%= templates.participation({ composition : member.participation }) %>
-	</div>
+	<%= templates.Project_member({ member : member, templates : templates }) %>
 	<% }); %>
 
 

@@ -1,0 +1,4 @@
+	<div class="member" rel="user-<%= member.id %>">
+		<div class="name"><%= member.name %></div>
+		<%= templates.participation({ composition : member.participation }) %>
+	</div>
