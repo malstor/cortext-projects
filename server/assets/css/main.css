@@ -143,10 +143,10 @@ button:hover, .button:hover { background : #DDDDDD; border : 1px solid #B1B1B1; 
 
 .col-2 .help{
 	border-bottom: 1px solid #EEF2F6;
-	border-top: 1px solid #EEF2F6;
-    height: 65px;
+/*	border-top: 1px solid #EEF2F6;
+*/    height: 65px;
     margin-bottom: 900px;
-    margin-top: 35px;
+    margin-top:Opx;
 	background:#FFF;
 	z-index:2;	
 }
@@ -473,6 +473,68 @@ height:100px;
 #add-element textarea { display : block; width : 744px; height : 161px; border-radius : 2px; border : 1px solid #EEF2F6; resize:none; }
 #add-element form .add { float : right; }
 
+/*-----------------messages-------------------------*/
+
+
+.col-1 .members h4 {	
+
+	margin-top:35px;
+}
+.col-1 .members h4 #link{
+  position: absolute;
+
+    display: block;
+    text-decoration:none;
+}
+
+.col-1 .members #panel{
+    position: absolute;
+    top: 30px;
+    right: 2px;
+    width: 190px;
+    padding: 5px 14px 5px 14px;
+    background: #2a2a2a;
+    color: #FFF;
+    display: none;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    z-index: 1000;
+}
+
+
+/*.col-1 .members #panel{
+	z-index:5;
+	position: absolute;
+	top: 308px;
+	height:60px;
+	right: 0px;
+	width: 220px;
+	padding: 10px 15px 5px 15px;
+	background:#EEF2F6;
+	font-size: 13px;
+	font-family:Arial, Helvetica, sans-serif;
+	color: #909098;
+	display: none;
+	font-style: normal;
+}
+	
+
+	
+	
+.col-1 .members #login-panel2 #add-member.add{
+	background:#34B02C;
+	border-radius: 4px;	
+	width:67px;
+	height:21px;
+	color:#FFF;
+	float:right;
+	margin-top:-22px;
+	margin-right:-5px;
+	border:none;
+	padding-bottom:4px;
+} 
+
+*/
 
 /*-----------------messages-------------------------*/
 

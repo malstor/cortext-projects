@@ -32,13 +32,16 @@
 	</div>
 	<% }); %>
 
-	<form id="add-member">
+
+	<h4><a id="link" class="button" href="#"> invit for share</a></h4>
+	<div id="panel">
+	<!--<form id="add-member">
 		<input type="text" />
 		<button class="add">add</button>
-	</form>
-
+	</form>-->
+	</div>
+	
 </div>
-
 
 
 </div><!-- /project-meta -->
