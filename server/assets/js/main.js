@@ -37,7 +37,19 @@ $(document).ready(function(){
 						title : $("#project-new input").val()
 					});
 
-					p.save();
+					p.save({}, { success: function(project, response){
+						p.set(response);
+
+						var new_elt = $(templates.Dashboard_list_project({ p: p.toJSON(), templates : templates }));
+
+						$(".projects-list").prepend(new_elt);
+
+						$(new_elt).css('display', 'none');
+						$(new_elt).fadeIn(1000);
+					}});
+
+					// should take in account the save feedback
+
 				});
 			},
 
@@ -108,6 +120,10 @@ $(document).ready(function(){
 
 					current_project.add_member($("#add-member input").val());
 				});
+
+				$("#link").click(function(){
+        			$("#panel").slideToggle(200);
+    			});
 			}
 		});
 
@@ -203,7 +219,7 @@ function to_participation_bar(e){
 	_.each(data, function(d){
 		// ERK
 		if(d.type != "Others"){
-			var l = Math.floor( (d.count/sum) *  w);
+			var l = Math.round( (d.count/sum) *  w);
 
 			ctx.fillStyle = colors[d.type];
 			ctx.fillRect (cursor_x, 0, l, h);

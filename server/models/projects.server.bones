@@ -24,6 +24,7 @@ models.projects.prototype.sync = function(method, model, options) {
             var in_project = _.pluck(array, "_id");
 
             var done = _.after(array.length, function(){
+                projects = _.sortBy(projects, function(p){ return -p.get("date_created"); });
                 options.success(projects);                        
             })
 
