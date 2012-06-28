@@ -125,14 +125,14 @@ button:hover, .button:hover { background : #DDDDDD; border : 1px solid #B1B1B1; 
 .col-2{
     float: left;
     height: inherit;
-    margin-top: -10px;
+    margin-top:0px;
 /*    margin-top: 35px;
 */	margin-left:13px;
     width: 245px;
- /*   border-top: 1px solid #EEF2F6;*/
+ /*   border-top: 1px solid #EEF2F6;
 	border-right: 1px solid #EEF2F6;
     border-left: 1px solid #EEF2F6;
-	background:#fafafa;
+	background:#fafafa;*/
 }
 
 
@@ -363,11 +363,11 @@ height:100px;
 .dashboard-projects span {
 	float : right;
 	font: normal 11px Arial, sans-serif;
-	color: #EEF2F6; /*#909090;*/
+	color: #DFE0E3; /*#EEF2F6; #909090;*/
 
 	margin-top : 2px;
 	padding-left : 18px;
-	background : url('/assets/server/images/user-pt.png') no-repeat 0px 0px;
+	background : url('/assets/server/images/user-ptit.png') no-repeat 0px 0px;
 }
 
 .project-meta .date {
@@ -674,7 +674,7 @@ background:#FFD505 url(../images/mess.png) no-repeat 3px 3px;
 	height : 30px; 
 	display : block; 
 	margin-bottom :5px;
-	background :url('/assets/server/images/user-pt.png') no-repeat 175px 1px; 
+	background :url('/assets/server/images/user-ptit.png') no-repeat 175px 1px; 
 }
 
 #dashboard .project  h2, #dashboard .project  h2 a {
