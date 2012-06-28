@@ -31,7 +31,7 @@
 
 
 
-	<h4><a id='link' href='#login' title='Login'> invit for share</a></h4>
+	<h4><a id='link' class="button" href='#login' title='Login'> invit for share </a></h4>
 	<div id='panel'>
 
 	<form id="add-member">
