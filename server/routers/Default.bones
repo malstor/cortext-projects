@@ -5,7 +5,6 @@ router = Backbone.Router.extend({
         '/login'                                : 'login',
         '/user/:user'                           : 'user',
         '/project/:project'                     : 'project',
-//        '/api/Project/:project/member'          : 'project_add_member',
         '/api/user/:user/projects'              : "user_projects",
         '/element/:type/:element/in/:project'   : 'element',
         '/element/:type/:element'               : 'element'
