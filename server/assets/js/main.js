@@ -129,8 +129,10 @@ $(document).ready(function(){
 
 		app = new main();
 
-		$("#path ul").css("marginLeft", "-"+($("#path ul .dashboard").width() - 50 )+"px");
-		$("#path ul .home").css("left", ($("#path ul .dashboard").width() - 50 ) +"px");
+		$("#path ul").css("marginLeft", "-"+($("#path ul li.dashboard").width() + 8 - $("#path ul li.home").width())+"px");
+		$("#path ul .home").css("left", ($("#path ul li.dashboard").width() + 8 - $("#path ul li.home").width()) +"px");
+
+		console.log($("#path ul li.home").width());
 
 		$("#path ul .home, #path ul .dashboard").bind("mouseenter", function(evt){
 			$("#path ul").animate(
@@ -176,12 +178,13 @@ $(document).ready(function(){
 			var response = u.login(u.toJSON());
 		});
 
-		Backbone.history.start({pushState: true});
 	});
 
 	_.each($(".participation"), function(e){
 		to_participation_bar(e);
 	});
+
+	Backbone.history.start({pushState: true});
 });
 
 
