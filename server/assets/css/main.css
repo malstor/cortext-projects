@@ -28,6 +28,7 @@ button, .button{ min-width : 120px; background : #FAFAFA; border : 1px solid #DC
 color : #6E6E6E; box-shadow: 0px 0px 3px rgba(107,107,107, 0.3); border-radius:3px;cursor: pointer; }
 button:hover, .button:hover { background : #DDDDDD; border : 1px solid #B1B1B1; color : #333333; box-shadow: 0px 0px 3px rgba(0,86,156, 0.6); }
 
+
 /*----------------------menu + header-------------------*/
 
 #menu {	
@@ -109,26 +110,26 @@ button:hover, .button:hover { background : #DDDDDD; border : 1px solid #B1B1B1; 
 }
 
 #user .btn{
-		background:#3C3C3C;
-		color:#F9F9F9;
-		border : 1px solid #303030;
+	background:#3C3C3C;
+	color:#F9F9F9;
+	border : 1px solid #303030;
 }
 
 #user .btn:hover{
-		background:#2f2f2f;
-		color:#FFFFFF;
-		border : 1px solid #161616;
+	background:#2f2f2f;
+	color:#FFFFFF;
+	border : 1px solid #161616;
 }
 
-/*--------------------col2------------------------*/
 
+
+/*--------------------col2------------------------*/
 
 .col-2{
     float: left;
     height: inherit;
-    margin-top:0px;
-/*    margin-top: 35px;
-*/	margin-left:13px;
+    margin-top:10px;
+	margin-left:13px;
     width: 245px;
  /*   border-top: 1px solid #EEF2F6;
 	border-right: 1px solid #EEF2F6;
@@ -137,17 +138,13 @@ button:hover, .button:hover { background : #DDDDDD; border : 1px solid #B1B1B1; 
 }
 
 
-
-
-
 /*--------------------help/documentation------------------------*/
 
 .col-2 .help{
 	border-bottom: 1px solid #EEF2F6;
-/*	border-top: 1px solid #EEF2F6;
-*/    height: 65px;
+	border-top: 1px solid #EEF2F6;
+    height: 65px;
     margin-bottom: 900px;
-    margin-top:Opx;
 	background:#FFF;
 	z-index:1;
 	position:relative;	
@@ -158,23 +155,17 @@ button:hover, .button:hover { background : #DDDDDD; border : 1px solid #B1B1B1; 
 	cursor:pointer;
 }
 
-/*.col-2 .help a{
-	text-decoration:none;
-}
-*/
 .col-2 .help img{
 	margin-left: 15px;
-    margin-top: 2px;	z-index:2;
-
+    margin-top: 2px;
 }
 
 .col-2 .help h2{
-	color:#565656/*#7F8183*/;
+	color:#565656;
     float: right;
 	font: normal 17px "Oxygen-Regular", Arial, sans-serif;
     margin-top: 14px;
-	margin-right:45px;	z-index:2;
-
+	margin-right:45px;
 }
  
 .col-2 .help h4{
@@ -184,8 +175,6 @@ button:hover, .button:hover { background : #DDDDDD; border : 1px solid #B1B1B1; 
     margin-top: -27px;
 	margin-right:37px;
 }
-
-
 
 .col-2 .help a.info{
     position:relative; 
@@ -215,6 +204,8 @@ button:hover, .button:hover { background : #DDDDDD; border : 1px solid #B1B1B1; 
 	font: normal 13px/20px "Oxygen-Regular", Arial, sans-serif;
 	border-radius:3px;    
 }
+
+
 
 /*----------------------formulaire/login----------------------*/
 
@@ -394,26 +385,6 @@ height:100px;
 	-moz-opacity: 0.5;
 	filter:alpha(opacity=5);
 }
-
-/*.dashboard-projects #user-icon{
-	background: url("../images/project.png") no-repeat;
-    float: right;
-    height: 18px;
-    margin-right:-2px;
-    margin-top: 1px;
-    width: 20px;
-}	
-
-
-.members #user-icon{
-	background: url("../images/user-ic.png") no-repeat;
-    float: right;
-    height: 12px;
-    margin-right: 5px;
-    margin-top: 2px;
-    width: 10px;
-	padding-right:5px;
-}	*/	
 	
 .dashboard-projects .data {
 	margin-left : 10px;
@@ -475,11 +446,12 @@ height:100px;
 #add-element textarea { display : block; width : 744px; height : 161px; border-radius : 2px; border : 1px solid #EEF2F6; resize:none; }
 #add-element form .add { float : right; }
 
+
+
 /*-----------------messages-------------------------*/
 
 
 .col-1 .members h4 {	
-
 	margin-top:35px;
 }
 
@@ -503,34 +475,17 @@ height:100px;
 	display: block;
     text-decoration:none;    
 	width: 122px;
-	
-    /*display: block;
-	background: url("/assets/server/images/fleche-bas.png") no-repeat 220px 7px #DFE0E3;
-    color: #FFF;
-    text-decoration:none;
-	font: 14px/30px "Oxygen-regular",sans-serif;
-    letter-spacing: 2px;
-  padding-left: 5px;
-    width: 245px;
-   */
 }
 
 .col-1 .members #panel{
-/*    position: absolute;
-    top: 30px;
-    right: 2px;*/
     width: 250px;
     padding: 15px 0px 15px 0px;
-    /*background: #DFE0E3;
-    color: #FFF;*/
     display: none;
     z-index: 1000;
     overflow: hidden;
 	border-radius:3px;
 	background : #FAFAFA; border : 1px solid #DCDCDC
 }
-
-
 
 /*-----------------messages-------------------------*/
 
