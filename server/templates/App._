@@ -13,7 +13,18 @@
 
 <link rel="stylesheet" href="/assets/server/css/reset.css?<%= version %>" type="text/css" />  
 <!-- <link rel="stylesheet" href="/assets/server/bootstrap/css/bootstrap.min.css" type="text/css" />   -->
-<link rel="stylesheet" href="/assets/server/css/main.css?<%= version %>" type="text/css" />  
+<link rel="stylesheet" href="/assets/server/css/main.css?<%= version %>" type="text/css" />
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".trigger").click(function(){
+		$(".aide").toggle("fast");
+		$(this).toggleClass("active");
+		return false;
+	});
+});
+</script>
+  
 
 </head>
 
@@ -70,6 +81,16 @@
 </div><!-- /#main -->
 
 </div> <!--fin du conteneur principal (englobe menu)-->
+
+
+<div class="aide">
+	<h3>You need help ?</h3>
+	<br/>
+	<p>Continually evisculate corporate infra structures parallel clouded :<br/>
+	<a href="http://docs.cortext.net/">Cortext Manager</a> </p>
+	</div>
+<div style="clear:both;"></div>
+<a class="trigger" href="#">help</a>
 
 <script src="/assets/server/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript"><%= startup %></script>

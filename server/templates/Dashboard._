@@ -55,7 +55,7 @@
 
 <div class="project-meta2 col-2">
 
-<div class="help">
+<!--<div class="help">
 	<a class="info" href="http://docs.cortext.net/">
 	<img src="/assets/server/images/robot1.png" alt="#" />
 	<h2>you need help ?</h2>
@@ -63,6 +63,6 @@
 	<span>Continually evisculate corporate infrastructures parallel clouded : 
 	http://docs.cortext.net </span>
 	</a>
-</div>
+</div>-->
 
 </div><!-- /dashboard-meta2 -->

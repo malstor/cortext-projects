@@ -140,7 +140,106 @@ button:hover, .button:hover { background : #DDDDDD; border : 1px solid #B1B1B1; 
 
 /*--------------------help/documentation------------------------*/
 
-.col-2 .help{
+.aide h3 {
+font-size:14px;
+font-family:verdana, helvetica, arial, sans-serif;
+letter-spacing:-1px;
+color:#fff;
+font-weight: 700;
+text-transform:uppercase;
+margin-left:-50px;
+padding:8px 0 8px 0;
+}
+
+
+.aide {
+position: fixed;
+top: 50px;
+right: 0;
+display: none;
+background: #000000;
+border:1px solid #111111;
+-moz-border-radius-topright: 20px;
+-webkit-border-top-right-radius: 20px;
+-moz-border-radius-bottomright: 20px;
+-webkit-border-bottom-right-radius: 20px;
+width: 180px;
+height: auto;
+padding: 30px 30px 30px 80px;
+filter: alpha(opacity=85);
+opacity: .85;
+}
+
+.aide p{
+margin-left:-50px;
+color: #cccccc;
+width:150px;
+}
+
+.aide a, .panel a:visited{
+margin: 0;
+padding: 0;
+color: #9FC54E;
+text-decoration: none;
+border-bottom: 1px solid #9FC54E;
+}
+
+.aide a:hover, .panel a:visited:hover{
+margin: 0;
+padding: 0;
+color: #ffffff;
+text-decoration: none;
+border-bottom: 1px solid #ffffff;
+}
+
+a.trigger{
+position: fixed;
+text-decoration: none;
+top: 80px; right: 0;
+font-size: 16px;
+letter-spacing:-1px;
+font-family: verdana, helvetica, arial, sans-serif;
+color:#fff;
+padding: 20px 40px 20px 15px;
+font-weight: 700;
+background:#333333 /*url("/assets/server/images/robot1.png") 85% 55% no-repeat*/;
+border:1px solid #444444;
+-moz-border-radius-topright: 20px;
+-webkit-border-top-right-radius: 20px;
+-moz-border-radius-bottomright: 20px;
+-webkit-border-bottom-right-radius: 20px;
+-moz-border-radius-bottomleft: 0px;
+-webkit-border-bottom-left-radius: 0px;
+display: block;
+}
+
+a.trigger:hover{
+position: fixed;
+text-decoration: none;
+top: 80px; right: 0;
+font-size: 16px;
+letter-spacing:-1px;
+font-family: verdana, helvetica, arial, sans-serif;
+color:#fff;
+padding: 20px 40px 20px 20px;
+font-weight: 700;
+background:#222222 /*url("/assets/server/images/robot1.png") 85% 55% no-repeat*/;
+border:1px solid #444444;
+-moz-border-radius-topright: 20px;
+-webkit-border-top-right-radius: 20px;
+-moz-border-radius-bottomright: 20px;
+-webkit-border-bottom-right-radius: 20px;
+-moz-border-radius-bottomleft: 0px;
+-webkit-border-bottom-left-radius: 0px;
+display: block;
+}
+
+a.active.trigger {
+background:#222222 url(images/minus.png) 85% 55% no-repeat;
+}
+
+
+/*.col-2 .help{
 	border-bottom: 1px solid #EEF2F6;
 	border-top: 1px solid #EEF2F6;
     height: 65px;
@@ -204,7 +303,7 @@ button:hover, .button:hover { background : #DDDDDD; border : 1px solid #B1B1B1; 
 	font: normal 13px/20px "Oxygen-Regular", Arial, sans-serif;
 	border-radius:3px;    
 }
-
+*/
 
 
 /*----------------------formulaire/login----------------------*/
@@ -469,6 +568,7 @@ height:100px;
     border:solid 1px #388530; 
   	background: #229716;
 	color:#FFFFFF;
+	box-shadow: 0px 0px 3px rgba(0,86,156, 0.6);
 } 
 
 .col-1 .members #link{
