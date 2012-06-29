@@ -8,7 +8,6 @@ model = Backbone.Model.extend({
 
         return  url;
     },
-
     show_in: function(project){
     	this.show = project;
     },
