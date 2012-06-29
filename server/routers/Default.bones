@@ -45,6 +45,10 @@ router = Backbone.Router.extend({
             f.fetch(function(){
             
                 if(user.is_app_auth_ok(q.app_key)){
+                    if(_.isUndefined(router.req.session)){
+                        router.req.session = {};
+                    }
+
                     router.req.session.user = user;
                     router.req.session.user.authenticated = true;
                     console.log("ok billy");
