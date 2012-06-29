@@ -129,8 +129,8 @@ $(document).ready(function(){
 
 		app = new main();
 
-		$("#path ul").css("marginLeft", "-"+($("#path ul .dashboard").width() - 60 )+"px");
-		$("#path ul .home").css("left", ($("#path ul .dashboard").width() - 60 ) +"px");
+		$("#path ul").css("marginLeft", "-"+($("#path ul .dashboard").width() - 50 )+"px");
+		$("#path ul .home").css("left", ($("#path ul .dashboard").width() - 50 ) +"px");
 
 		$("#path ul .home, #path ul .dashboard").bind("mouseenter", function(evt){
 			$("#path ul").animate(
