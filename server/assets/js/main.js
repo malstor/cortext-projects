@@ -47,9 +47,14 @@ $(document).ready(function(){
 						$(new_elt).css('display', 'none');
 						$(new_elt).fadeIn(1000);
 					}});
-
 					// should take in account the save feedback
+				});
 
+				$("#dashboard-meta .projects li").on("click", function(e){
+					var href = $(this).find("a").attr("href");
+					
+					//console.log($(this));
+					window.location = href;
 				});
 			},
 
@@ -104,15 +109,25 @@ $(document).ready(function(){
 
 //					console.log(element);
 
-					element.save();
+					element.save({},{
+						error: function(){},
+						success: function(e, response){
 
-					var new_el = $(templates["Project_"+element.get("type")]({ author : current_user, e : element.toJSON() }));
-					$("#elements").prepend(new_el);
+							element.set(e);
 
-//					console.log(new_el);
+				            element.set({
+				            	permalink : "/element/"+e.get("type")+"/"+response[0]["id"]+"/in/"+project
+				            });
 
-					$(new_el).css('display', 'none');
-					$(new_el).fadeIn(1000);
+							var new_el = $(templates["Project_"+element.get("type")]({ author : current_user, e : element.toJSON() }));
+							$("#elements").prepend(new_el);
+
+		//					console.log(new_el);
+
+							$(new_el).css('display', 'none');
+							$(new_el).fadeIn(1000);
+						}
+					});
 				});
 
 				$("#add-member .add").on("click", function(e){

@@ -33,10 +33,16 @@ models.element.prototype.sync_create = function(method, model, options){
     }
 
     db.collection("elements", function(error, elements){
-        elements.insert(model.toJSON(), function(error, element){
-            _this.sync_update_project_counter(element[0]);
-            options.success(element);
-        });   
+        elements.findOne({}, { sort : [[ "id", -1 ]]}, function(error, last){
+            model.set({
+                id : parseInt(last.id)+1,
+                date: new Date().getTime()
+            });
+            elements.insert(model.toJSON(), function(error, element){
+                _this.sync_update_project_counter(element[0]);
+                options.success(element);
+            });
+        });
     });
 }
 
