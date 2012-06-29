@@ -132,7 +132,7 @@ $(document).ready(function(){
 		$("#path ul").css("marginLeft", "-"+($("#path ul li.dashboard").width() + 8 - $("#path ul li.home").width())+"px");
 		$("#path ul .home").css("left", ($("#path ul li.dashboard").width() + 8 - $("#path ul li.home").width()) +"px");
 
-		console.log($("#path ul li.home").width());
+//		console.log($("#path ul li.home").width());
 
 		$("#path ul .home, #path ul .dashboard").bind("mouseenter", function(evt){
 			$("#path ul").animate(
