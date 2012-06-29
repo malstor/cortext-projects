@@ -353,6 +353,9 @@ height:100px;
 	margin-bottom : 5px;
 }
 
+.dashboard-projects .projects li:hover { cursor : pointer; }
+.dashboard-projects .projects li:hover * { color: #444444; }
+
 .dashboard-projects span {
 	float : right;
 	font: normal 11px Arial, sans-serif;

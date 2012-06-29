@@ -47,9 +47,12 @@ $(document).ready(function(){
 						$(new_elt).css('display', 'none');
 						$(new_elt).fadeIn(1000);
 					}});
-
 					// should take in account the save feedback
+				});
 
+				$("#dashboard-meta .projects li").on("click", function(e){
+					var href = $(e.target).find("a").attr("href");
+					window.location = href;
 				});
 			},
 
