@@ -195,6 +195,12 @@ $(document).ready(function(){
 
 	});
 
+	$(".trigger").click(function(){
+		$(".aide").toggle("fast");
+		$(this).toggleClass("active");
+		return false;
+	});
+
 	_.each($(".participation"), function(e){
 		to_participation_bar(e);
 	});

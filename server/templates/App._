@@ -15,17 +15,6 @@
 <!-- <link rel="stylesheet" href="/assets/server/bootstrap/css/bootstrap.min.css" type="text/css" />   -->
 <link rel="stylesheet" href="/assets/server/css/main.css?<%= version %>" type="text/css" />
 
-<script type="text/javascript">
-$(document).ready(function(){
-	$(".trigger").click(function(){
-		$(".aide").toggle("fast");
-		$(this).toggleClass("active");
-		return false;
-	});
-});
-</script>
-  
-
 </head>
 
 <body>
