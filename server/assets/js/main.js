@@ -51,7 +51,9 @@ $(document).ready(function(){
 				});
 
 				$("#dashboard-meta .projects li").on("click", function(e){
-					var href = $(e.target).find("a").attr("href");
+					var href = $(this).find("a").attr("href");
+					
+					//console.log($(this));
 					window.location = href;
 				});
 			},
