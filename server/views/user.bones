@@ -64,7 +64,7 @@ view = views.Main.extend({
         // TODO: ajax loading. On fera dans la dentelle plus tard
         $("#messages").empty();
 
-        var projects = user.projects.slice(0,4);
+        var projects = _(user.projects).filter(function(p){ return p.members[user.id].participation.Message > 0 }).slice(0,4);
 
         _(projects).each(function (p){
             

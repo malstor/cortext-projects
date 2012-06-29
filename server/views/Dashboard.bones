@@ -13,7 +13,9 @@ view = views.Main.extend({
         }
 
         this.options.projects.each(function(p){
-        	options.projects.push(p.toJSON() );
+            p.attributes.elements = p.attributes.elements.slice(0, 10);
+
+        	options.projects.push(p.toJSON());
         });
 
  //   	console.log(options);

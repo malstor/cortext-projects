@@ -30,6 +30,7 @@ models.projects.prototype.sync = function(method, model, options) {
 
             _.each(in_project, function(project_id){
                 var o = {
+                    data : options.data,
                     error : function(){},
                     success: function(project){
                         projects.push(project);
