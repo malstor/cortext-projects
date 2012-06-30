@@ -79,9 +79,8 @@
 	<a href="http://docs.cortext.net/">Cortext Manager</a> </p>
 	</div>
 <div style="clear:both;"></div>
-<a class="trigger" href="#">help</a>
+<a class="trigger">help</a>
 
-<script src="/assets/server/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript"><%= startup %></script>
 </body>
 

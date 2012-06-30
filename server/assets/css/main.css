@@ -15,6 +15,7 @@ body {
 
 #header {
 	height: 60px;
+	top : 0px;
 	position: fixed;
 	width: 1280px;
 	z-index: 10;
@@ -232,6 +233,7 @@ border:1px solid #444444;
 -moz-border-radius-bottomleft: 0px;
 -webkit-border-bottom-left-radius: 0px;
 display: block;
+z-index : 100;
 }
 
 a.active.trigger {
@@ -392,9 +394,8 @@ input:focus{
 	background:url(../images/slide-droite2.png);
 	background-repeat:repeat-y;
 	background-position:right;
-	position:absolute;
-	margin-top:62px;
-	z-index:15px;
+	position : relative;
+	padding-top : 60px;
 }	
 	
 .col-1 {
