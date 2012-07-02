@@ -74,12 +74,11 @@
 
 <div class="aide">
 	<h3>You need help ?</h3>
-	<br/>
-	<p>Continually evisculate corporate infra structures parallel clouded :<br/>
-	<a href="http://docs.cortext.net/">Cortext Manager</a> </p>
+	<p>Continually evisculate corporate infra structures parallel clouded :
+	<a href="http://docs.cortext.net">Cortext Manager</a></p>
 	</div>
 <div style="clear:both;"></div>
-<a class="trigger" href="#">help</a>
+<a class="trigger" href="#"></a>
 
 <script src="/assets/server/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript"><%= startup %></script>
