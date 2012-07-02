@@ -15,6 +15,7 @@ body {
 
 #header {
 	height: 60px;
+	top : 0px;
 	position: fixed;
 	width: 1280px;
 	z-index: 10;
@@ -200,10 +201,11 @@ a.trigger:hover{
 position: fixed;
 top: 80px; right: 0;
 padding: 60px 30px 0px 15px;
-background: url("/assets/server/images/aide-hover.png") no-repeat;
+background: url("/assets/server/images/aide-hover2.png") no-repeat;
 border-color: #F772BD #9e1d43 #F772BD #F772BD;
 border-style: solid;
 border-width: 2px;
+padding: 60px 30px 0px 18px;
 }
 
 a.active.trigger {
@@ -297,9 +299,8 @@ input:focus{
 	background:url(../images/slide-droite2.png);
 	background-repeat:repeat-y;
 	background-position:right;
-	position:absolute;
-	margin-top:62px;
-	z-index:15px;
+	position : relative;
+	padding-top : 60px;
 }	
 	
 .col-1 {
