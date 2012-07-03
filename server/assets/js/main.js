@@ -142,16 +142,19 @@ $(document).ready(function(){
 			}
 		});
 
-		app = new main();
+		// should be this value but having an issue of crossbrowser compatibility
+		// var offset = ($("#path ul li.dashboard").innerWidth() - $("#path ul li.home").innerWidth());
+		var offset = 107;
 
-		$("#path ul").css("marginLeft", "-"+($("#path ul li.dashboard").innerWidth() - $("#path ul li.home").width())+"px");
-		$("#path ul .home").css("left", ($("#path ul li.dashboard").innerWidth() - $("#path ul li.home").width()) +"px");
+		$("#path ul").css("left", "-"+ (offset - $("#path ul li.home").innerWidth()) +"px");
+		$("#path ul li.home").css("left", (offset - $("#path ul li.home").innerWidth()) +"px");
 
-		console.log($("#path ul li.dashboard").width());
+		console.log($("#path ul li.dashboard").css("width"));
+		console.log($("#path ul li.home").width());
 
 		$("#path ul .home, #path ul .dashboard").bind("mouseenter", function(evt){
 			$("#path ul").animate(
-				{ paddingLeft: $("#path ul .dashboard").width() }
+				{ paddingLeft: offset }
 			,{
 				duration: 600,
 				queue: false
@@ -167,6 +170,8 @@ $(document).ready(function(){
 				queue: false
 			});
 		});
+
+		app = new main();
 
 		// $(document).on("click", function(evt){
 		// 	console.log(evt);
