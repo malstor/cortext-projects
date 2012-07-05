@@ -3,23 +3,6 @@ var path = require('path');
 
 var yaml = require('pyyaml');
 
-
-models.element.prototype.sync_read = function(method, model, options){
-    var resp = {id: model.id};
-
-    db.collection("elements",function(error, collection){
-//        console.log(error);
-
-        collection.findOne({ "id" : parseInt(model.id) }, function(e, item){
-//            console.log(e);
-            console.log("[db]READ [element: "+model.id+"]");
-
-            resp = _.extend(resp, item);
-            options.success(resp);
-        });
-    });
-}
-
 models.element.prototype.sync_create = function(method, model, options){
     var resp = {};
     var _this = this;
@@ -50,6 +33,38 @@ models.element.prototype.sync_create = function(method, model, options){
     });
 }
 
+models.element.prototype.sync_read = function(method, model, options){
+    var resp = {id: model.id};
+
+    db.collection("elements",function(error, collection){
+//        console.log(error);
+
+        collection.findOne({ "id" : parseInt(model.id) }, function(e, item){
+//            console.log(e);
+            console.log("[db]READ [element: "+model.id+"]");
+
+            resp = _.extend(resp, item);
+            options.success(resp);
+        });
+    });
+}
+
+models.element.prototype.sync_update = function(method, model, options){
+    var resp = {id: model.id};
+
+    db.collection("elements",function(error, elements){
+        var update = {
+            $set : model.changedAttributes()
+        }
+
+        console.log(update);
+
+        elements.update({id: model.id}, update, function(error, results){
+             options.success( results[0] );
+        });
+    });
+}
+
 models.element.prototype.sync_update_project_counter = function(element){
 
 //    console.log(element);
@@ -68,8 +83,9 @@ models.element.prototype.sync_update_project_counter = function(element){
 
 models.element.prototype.sync = function(method, model, options) {
     switch(method){
-        case "create": this.sync_create(method, model, options); break;
-        case "read": this.sync_read(method, model, options); break;
+        case "create"   : this.sync_create(method, model, options); break;
+        case "read"     : this.sync_read(method, model, options); break;
+        case "update"   : this.sync_update(method, model, options); break;
         default : return options.error('Unsupported method');
     }    
 };
