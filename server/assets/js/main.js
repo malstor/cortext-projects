@@ -27,7 +27,10 @@ $(document).ready(function(){
 			},
 
 			dashboard: function(){
-				$("#path ul .dashboard").css("paddingLeft", ($("#path ul .dashboard").width() + 10)+"px");
+
+				// FIXME 				
+				// $("#path ul .dashboard").css("paddingLeft", ($("#path ul .dashboard").width() + 10)+"px");
+				$("#path ul .dashboard").css("paddingLeft", 107+"px");
 				$("#path ul .home, #path ul .dashboard").unbind("mouseenter mouseleave");
 
 				$("#project-new .new").on("click", function(e){
