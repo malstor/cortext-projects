@@ -769,7 +769,7 @@ background:#FFD505 url(../images/mess.png) no-repeat 3px 3px;
     width: 140px;
 }
 
-.user.profile .info #info-gravatar{
+.user.profile .info #gravatar + div {
 	height:170px;
 	width:250px;
 	float:left;
