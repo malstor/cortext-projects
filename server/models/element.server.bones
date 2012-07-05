@@ -32,6 +32,10 @@ models.element.prototype.sync_create = function(method, model, options){
         return options.error("hum little prick. you can publish stuff as someone else.");
     }
 
+    db.collection("projects", function(error, projects){
+        projects.update({ id : model.get("project")  }, { $set : { date_updated : new Date().getTime() } });
+    });
+
     db.collection("elements", function(error, elements){
         elements.findOne({}, { sort : [[ "id", -1 ]]}, function(error, last){
             model.set({
