@@ -753,6 +753,7 @@ background:#FFD505 url(../images/mess.png) no-repeat 3px 3px;
 	border-right: 1px solid #EEF2F6;
     height: 170px;
     width: 170px;
+	float:left;
 }
 	
 .user.profile .info #gravatar img{
@@ -761,20 +762,27 @@ background:#FFD505 url(../images/mess.png) no-repeat 3px 3px;
     margin: 14px auto 0 14px;
     width: 140px;
 }
+
+.user.profile .info #info-gravatar{
+	height:170px;
+	width:250px;
+	float:left;
+	margin-left:25px;
+/*margin-left:190px;
+margin-top:-120px;
+margin-bottom:120px;*/	
+}
 	
+		
 .user.profile .info h1{
 	font: normal 17px Arial, sans-serif;
 	color: #777777;
-    margin-top: 25px;
-	float:right;
-	margin-right:430px;   
+	margin-top:25px;
 }
 				
 .user.profile .info #email{
-	height:125px;
-	width:550px;
-	margin-top:-125px;
-	float:right;
+	margin-top:2px;
+	margin-left:2px;
 	color: #9B9B9B;
 	font: normal 13px Arial, sans-serif;
 }
@@ -784,6 +792,7 @@ background:#FFD505 url(../images/mess.png) no-repeat 3px 3px;
 	height:74px;
 	width:746px;
 	text-align : center;
+	clear:both;
 }
 
 #indicators > div { overflow : auto; display : inline-block; /*margin: auto;*/ float:right; }
@@ -837,7 +846,7 @@ background:#FFD505 url(../images/mess.png) no-repeat 3px 3px;
 	background : #235BBE url('/assets/server/images/dossier2.png') no-repeat 718px 5px;
 	padding-left:10px;
 	padding-top:4px;
-	margin-top:15px;
+	margin-top:25px;
 }
 	
 .user.profile #projects{			

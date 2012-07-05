@@ -25,11 +25,15 @@
 <div id="user-<%= user.id %>" class="user profile col-main">
 
 <div class="info">
-	<h1 id="name"><%= user.name %></h1>
+
 	<div id="gravatar">
 	<img src="<%= user.gravatar %>" />
 	</div>
+	
+	<div id="info-gravatar">
+	<h1 id="name"><%= user.name %></h1>
 	<div id="email" class="email"><%= user.email %></div>
+	</div>
 
 	<div id="indicators"><div>
 
