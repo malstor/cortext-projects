@@ -53,6 +53,10 @@ models.element.prototype.sync_update = function(method, model, options){
     var resp = {id: model.id};
 
     db.collection("elements",function(error, elements){
+        // model.set({
+        //     date_upated : new Date().getTime()
+        // });
+
         var update = {
             $set : model.changedAttributes()
         }

@@ -64,5 +64,20 @@ servers.Route.augment({
 
 		    console.log("<api");
     	});
+
+        this.post('/api/Element/:element/status', function(req, res){
+            var element_id = req.params.element;
+
+            var e = new models.Elements({ id : element_id });
+            e.save({ body : req.body }, {
+                success: function(model, resp) {
+                    res.send(resp, headers);
+                },
+                error: function(model, err) {
+                    err = err instanceof Object ? err.toString() : err;
+                    next(new Error.HTTP(err, 409));
+                }
+            });
+        });
     }
 });
