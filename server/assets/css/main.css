@@ -458,6 +458,8 @@ height:100px;
 .col-main input[type=text]{ width : 605px; border : 1px solid #DCDCDC; height : 30px; padding : 0 5px; font : normal 14px arial; color : #DCDCDC; }
 .col-main input[type=text].focus { color : #6E6E6E; }
 
+
+
 #add-element { }
 
 #add-element form { border : 1px solid #EEF2F6; background : #FAFAFA; padding : 2px; width : 750px; margin-left : 8px; overflow: auto; }
@@ -745,6 +747,7 @@ background:#FFD505 url(../images/mess.png) no-repeat 3px 3px;
   font: normal 12px/17px Arial, sans-serif;
 }
 
+#project-new { margin-bottom : 10px; }
 
 /*-------------------user--------------------------*/
 
