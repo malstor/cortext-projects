@@ -50,6 +50,42 @@ $(document).ready(function(){
 					// should take in account the save feedback
 				});
 
+				// FIXME : code un peu long
+				$("#project-new input").addClass('default');
+				$("#project-new .new").attr('disabled', 'disabled');
+				$("#project-new .new").addClass('inactive');
+
+				$("#project-new input").on("focus", function(evt){
+					var $input = $("#project-new input");
+
+					$input.val("");
+					$input.addClass("focus");
+					$input.removeClass('default');		
+					$("#project-new input").trigger("keyup");
+				});
+
+				$("#project-new input").on("blur", function(evt){
+					var $input = $("#project-new input");
+
+					if($input.val() === ''){
+						$input.val("type the name of the new script");
+						$input.removeClass("focus");
+						$input.addClass('default');		
+					}
+				});
+
+				$("#project-new input").on("keyup", function(evt){
+					var $input = $("#project-new input");
+
+					if($input.val() == '' || $input.hasClass('default') ){
+						$("#project-new .new").attr('disabled', 'disabled');
+						$("#project-new .new").addClass('inactive');
+					} else {
+						$("#project-new .new").removeAttr('disabled');
+						$("#project-new .new").removeClass('inactive');
+					}
+				});
+
 				$("#dashboard-meta .projects li").on("click", function(e){
 					var href = $(this).find("a").attr("href");
 					
