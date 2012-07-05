@@ -42,7 +42,7 @@
 <div id="dashboard" class="col-main">
 
 <form id="project-new">
-	<input type="text"></input>
+	<input type="text" value="type the name of the new script"></input>
 	<button class="new">new</button>
 </form>
 
