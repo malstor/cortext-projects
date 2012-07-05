@@ -30,6 +30,7 @@ $(document).ready(function(){
 
 				// FIXME 				
 				// $("#path ul .dashboard").css("paddingLeft", ($("#path ul .dashboard").width() + 10)+"px");
+
 				$("#path ul .dashboard").css("paddingLeft", 107+"px");
 				$("#path ul .home, #path ul .dashboard").unbind("mouseenter mouseleave");
 
@@ -53,41 +54,7 @@ $(document).ready(function(){
 					// should take in account the save feedback
 				});
 
-				// FIXME : code un peu long
-				$("#project-new input").addClass('default');
-				$("#project-new .new").attr('disabled', 'disabled');
-				$("#project-new .new").addClass('inactive');
-
-				$("#project-new input").on("focus", function(evt){
-					var $input = $("#project-new input");
-
-					$input.val("");
-					$input.addClass("focus");
-					$input.removeClass('default');		
-					$("#project-new input").trigger("keyup");
-				});
-
-				$("#project-new input").on("blur", function(evt){
-					var $input = $("#project-new input");
-
-					if($input.val() === ''){
-						$input.val("type the name of the new script");
-						$input.removeClass("focus");
-						$input.addClass('default');		
-					}
-				});
-
-				$("#project-new input").on("keyup", function(evt){
-					var $input = $("#project-new input");
-
-					if($input.val() == '' || $input.hasClass('default') ){
-						$("#project-new .new").attr('disabled', 'disabled');
-						$("#project-new .new").addClass('inactive');
-					} else {
-						$("#project-new .new").removeAttr('disabled');
-						$("#project-new .new").removeClass('inactive');
-					}
-				});
+				activate_button("#project-new input", "#project-new .new");
 
 				$("#dashboard-meta .projects li").on("click", function(e){
 					var href = $(this).find("a").attr("href");
@@ -178,6 +145,8 @@ $(document).ready(function(){
 				$("#link").click(function(){
         			$("#panel").slideToggle(200);
     			});
+
+    			activate_button("#add-element textarea", "#add-element .add");
 			}
 		});
 
@@ -306,4 +275,41 @@ function to_participation_bar(e){
 	// });
 
 	$(e).prepend(canvas);
+}
+
+var activate_button = function(input, button){
+	var $input = $(input);
+	var $button = $(button);
+
+	var default_value = $input.val();
+
+	// FIXME : code un peu long
+	$input.addClass('default');
+	$button.attr('disabled', 'disabled');
+	$button.addClass('inactive');
+
+	$input.on("focus", function(evt){
+		$input.val("");
+		$input.addClass("focus");
+		$input.removeClass('default');		
+		$input.trigger("keyup");
+	});
+
+	$input.on("blur", function(evt){
+		if($input.val() === ''){
+			$input.val(default_value);
+			$input.removeClass("focus");
+			$input.addClass('default');		
+		}
+	});
+
+	$input.on("keyup", function(evt){
+		if($input.val() == '' || $input.hasClass('default') ){
+			$button.attr('disabled', 'disabled');
+			$button.addClass('inactive');
+		} else {
+			$button.removeAttr('disabled');
+			$button.removeClass('inactive');
+		}
+	});
 }
