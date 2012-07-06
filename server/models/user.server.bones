@@ -9,8 +9,15 @@ models['user'].secret = function() {
     return Bones.plugin.config.secret;
 };
 
+models['user'].prototype.hash = function(string) {
+    var hash = crypto.createHash('sha1').update(this.get("salt") + string).digest('hex');
+
+    return hash;
+//    return crypto.createHmac('sha256', this.secret()).update(string).digest('hex');
+};
+
 models['user'].prototype.app_secret = function() {
-    return Bones.plugin.config.secret+"_app_1";
+    return Bones.plugin.config.api_key;
 };
 
 models['user'].prototype.hash_app = function(string) {
@@ -18,7 +25,7 @@ models['user'].prototype.hash_app = function(string) {
 };
 
 models['user'].prototype.is_app_auth_ok = function(string) {
-    return this.hash_app(this.password.slice(0,8)) === string;
+    return this.hash_app(this.password.slice(0,16)) === string;
 };
 
 function get_gravatar_hash(email){
@@ -63,8 +70,8 @@ models.user.prototype.sync = function(method, model, options) {
         user.gravatar = "http://www.gravatar.com/avatar/"+get_gravatar_hash(user.email);
 
         user.app = {
-            key: model.hash_app(user.password.slice(0,8)),
-            url: "http://88.191.67.92:8080/login"
+            key: model.hash_app(user.password),
+            url: "http://managerdev.cortext.org/api/signin/"
         }
 
         model.password = user.password;

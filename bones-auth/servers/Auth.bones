@@ -42,8 +42,8 @@ server.prototype.initialize = function(plugin, args) {
     this.args = args;
     this.config = plugin.config;
 
-    // Hash any passwords in req.body.
-    this.use(this.hashPassword.bind(this));
+    // // Hash any passwords in req.body.
+    // this.use(this.hashPassword.bind(this));
 
     this.use(this.allow.bind(this));
 
@@ -188,6 +188,9 @@ server.prototype.login = function(req, res, next) {
     var status = this.status.bind(this);
     new this.args.model({ id: req.body.id }, req.query).fetch({
         success: function(model, resp) {
+            // thanks a lot symfony for this ...
+            req.body.password = model.hash(req.body.password);
+
             console.log(model.password);
             console.log(req.body.password);
 

@@ -208,7 +208,9 @@ $(document).ready(function(){
 					user: u.get("id")
 				}
 
-				window.open(target.url+"?"+$.param(options), "CROSS CONNECT", "width=500,height=500");
+				// FIXME : static id for demo
+				// window.open(target.url+e.id+"/"+target.key, "CROSS CONNECT", "width=500,height=500");
+				window.open(target.url+"15/"+target.key, "CROSS CONNECT", "width=500,height=500");
 				document.location.href = "/dashboard";
 			});
 

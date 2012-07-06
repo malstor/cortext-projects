@@ -11,6 +11,7 @@ server 	= new Server('localhost', 27017, {auto_reconnect: true});
 db 		= new Db('projects', server);
 
 bones.plugin.config.secret = '4b6be4b408195388def323740e7cc20053fa6f57f46faf57816a99ae2a257af2';
+bones.plugin.config.api_key = 'c0rtext';
 
 require('bones-auth');
 
