@@ -196,7 +196,7 @@ a.trigger{
 position: fixed;
 text-decoration: none;
 top: 80px; right: 0;
-padding: 60px 30px 0px 15px;
+padding: 60px 30px 0px 5px;
 background: url("/assets/server/images/aide.png") no-repeat;
 border-color: #F772BD #9e1d43 #F772BD #F772BD;
 border-style: solid;
@@ -207,12 +207,11 @@ display: block;
 a.trigger:hover{
 position: fixed;
 top: 80px; right: 0;
-padding: 60px 30px 0px 15px;
 background: url("/assets/server/images/aide-hover2.png") no-repeat;
 border-color: #F772BD #9e1d43 #F772BD #F772BD;
 border-style: solid;
 border-width: 2px;
-padding: 60px 30px 0px 18px;
+padding: 60px 30px 0px 8px;
 }
 
 a.active.trigger {
