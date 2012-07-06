@@ -49,12 +49,11 @@ view = views.Main.extend({
         _.each(total, function(count, type){
             $(target[type]+" .number").html(count);
 
-            $(target[type]).width( Math.round(( count / all ) * ($("#indicators").width() - (4 * 74))) + 74);
+            // $(target[type]).width( Math.round(( count / all ) * ($("#indicators").width() - (4 * 74))) + 74);
 
-            console.log(total);
-            console.log(all);
+            // console.log(total);
+            // console.log(all);
         });
-
 
         _.each($(".participation"), function(e){
             to_participation_bar(e);
