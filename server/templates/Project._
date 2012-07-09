@@ -35,7 +35,16 @@
 	<div id='panel'>
 
 	<form id="add-member">
+	<div>
 		<input type="text" value="type user name"></input>
+		
+		<div class="invit-member">
+		<div class="gravatar">	<img src="#"/></div>
+		<p class="members">louise duloquin</p>
+		<div class="plus"></div>
+		</div>
+		
+	</div>
 	</form>
 	</div>
 

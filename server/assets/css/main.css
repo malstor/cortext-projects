@@ -538,10 +538,34 @@ height:100px;
     border: 1px solid #DCDCDC;
     color: #CFCFCF;
     font: 14px arial;
-    height: 25px;
+    height: 20px;
     padding: 0 5px;
     width: 218px;
 }
+
+.col-1 .members .invit-member {
+    height: 37px;
+   width: 228px;
+   background:#FFF;
+   margin-left: 10px;
+    margin-top: 10px;
+}
+
+.col-1 .members .invit-member .gravatar {
+    border: 1px solid #DCDCDC;
+    height: 25px;
+	margin: 5px auto 0 5px;
+    width: 25px;
+	float:left;}
+	
+.col-1 .members .invit-member .members {
+/*  color: #6E6E6E; */   color: #B6B6B6;
+
+    font: normal 14px arial;
+	clear:both;
+	position:absolute;
+	margin-left:50px;
+	margin-top:10px;}	
 
 /*-----------------messages-------------------------*/
 
