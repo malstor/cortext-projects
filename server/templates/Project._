@@ -31,12 +31,11 @@
 
 
 
-	<h4><a class="button" id='link' href='#login' title='Login'> invit for share</a></h4>
+	<h4><a class="button" id='link' href='#login' title='Login'> invite new members</a></h4>
 	<div id='panel'>
 
 	<form id="add-member">
-		<input type="text" />
-		<button class="add">add</button>
+		<input type="text" value="type user name"></input>
 	</form>
 	</div>
 

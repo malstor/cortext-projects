@@ -172,13 +172,13 @@ margin-left:-5px;
 margin-top:3px;
 padding:0px;
 }
+
 .aide p{
 margin-left:-5px;
 color: #fff;
 font: normal 12px Arial, sans-serif;
 padding:3px 0 4px 0;
 width:150px;
-
 }
 
 .aide a{
@@ -189,6 +189,7 @@ letter-spacing:1px;
 margin-left:-5px;
 text-decoration:none;
 }
+
 .letter{
 display:block;}
 
@@ -204,8 +205,8 @@ text-transform:uppercase;
 }
 
 .trigger a:hover{
-color:#F772BD;
-}
+/*color:#F772BD;
+*/color:#009;}
 
 .trigger{
 position: fixed;
@@ -506,7 +507,8 @@ height:100px;
 .col-1 .members #link{
 	display: block;
     text-decoration:none;    
-	width: 122px;
+	width: 135px;
+	margin:0px auto;
 }
 
 .col-1 .members #panel{
@@ -515,8 +517,17 @@ height:100px;
     display: none;
     z-index: 1000;
     overflow: hidden;
-	border-radius:3px;
-	background : #FAFAFA; border : 1px solid #DCDCDC
+    border: 1px solid #EEF2F6;
+	background : #FAFAFA; 
+}
+
+.col-1 .members input {
+    border: 1px solid #DCDCDC;
+    color: #CFCFCF;
+    font: 14px arial;
+    height: 25px;
+    padding: 0 5px;
+    width: 218px;
 }
 
 /*-----------------messages-------------------------*/
