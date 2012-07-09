@@ -102,8 +102,17 @@ $(document).ready(function(){
 					}
 				});
 
+				$("#add-element #select-type button").on("click", function(evt){
+					var $button = $(evt.target);
 
-				$("#add-element .add").on("click", function(e){
+					$("#add-element #select-type button").not("."+$button.attr("rel")).removeClass("on");
+					$("#add-element form").filter(".on").not("form."+$button.attr("rel")).hide().removeClass("on");
+
+					$button.toggleClass("on");
+					$("#add-element form." + $button.attr("rel")).slideToggle().toggleClass("on");
+				});
+
+				$("#add-element .message .add").on("click", function(e){
 					e.preventDefault();
 
 					var element = new models.element({
@@ -111,7 +120,7 @@ $(document).ready(function(){
 						author: current_user.id,
 						project : parseInt($("#add-element form").attr("rel")),
 						date: new Date().getTime(),
-						content: $("#add-element textarea").val()
+						content: $("#add-element .message textarea").val()
 					});
 
 //					console.log(element);
@@ -147,7 +156,7 @@ $(document).ready(function(){
         			$("#panel").slideToggle(200);
     			});
 
-    			activate_button("#add-element textarea", "#add-element .add");
+    			activate_button("#add-element .message textarea", "#add-element .message .add");
 			}
 		});
 
@@ -186,7 +195,7 @@ $(document).ready(function(){
 		// 	console.log(evt);
 		// });
 
-		$(".trigger").bind("click", function(evt){
+		$(".trigger").bind("v", function(evt){
 			console.log("heho");
 			$(".aide").toggle("fast");
 			$(this).toggleClass("active");
