@@ -42,8 +42,8 @@
 <div id="dashboard" class="col-main">
 
 <form id="project-new">
-	<input type="text" value="type the name of the new script"></input>
-	<button class="new">new</button>
+	<input type="text" value="type the name of your new project"></input>
+	<button class="new">create</button>
 </form>
 
 <div class="projects-list">
