@@ -185,7 +185,7 @@ $(document).ready(function(){
 		// 	console.log(evt);
 		// });
 
-		$(".trigger").bind("click", function(evt){
+		$(".trigger").bind("mouseenter mouseleave", function(evt){
 			console.log("heho");
 			$(".aide").toggle("fast");
 			$(this).toggleClass("active");

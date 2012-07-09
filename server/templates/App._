@@ -74,11 +74,17 @@
 
 <div class="aide">
 	<h3>You need help ?</h3>
-	<p>Continually evisculate corporate infra structures parallel clouded :
-	<a href="http://docs.cortext.net">Cortext Manager</a></p>
+	<p>you can read collaborative platform documentation :</p>
+	<a href="http://docs.cortext.net">Cortext Manager</a>
 	</div>
 <div style="clear:both;"></div>
-<a class="trigger" href="#"></a>
+<div class="trigger">
+<a href="http://docs.cortext.net">
+<span class="letter">h</span>
+<span class="letter">e</span>
+<span class="letter">l</span>
+<span class="letter">p</span>
+</a></div>
 
 <script type="text/javascript"><%= startup %></script>
 </body>
