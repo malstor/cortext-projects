@@ -469,10 +469,13 @@ height:100px;
 .col-main input[type=text]{ width : 605px; border : 1px solid #DCDCDC; height : 34px; padding : 0 5px; font : normal 14px arial; color : #DCDCDC; }
 .col-main input[type=text].focus { color : #6E6E6E; }
 
+.col-main textarea { font : normal 14px arial; color : #DCDCDC; }
+.col-main textarea.focus { color : #6E6E6E; }
+
 #add-element { position: relative; top : -9px; }
 
 #add-element form { display:none; border : 1px solid #EEF2F6; border-top : 0; background : #FAFAFA; padding : 2px; width : 750px; margin-left : 8px; overflow: auto; }
-#add-element textarea { display : block; width : 744px; height : 161px; border-radius : 2px; border : 1px solid #EEF2F6; resize:none; }
+#add-element textarea { display : block; width : 736px; padding : 5px; height : 161px; border-radius : 2px; border : 1px solid #EEF2F6; resize:none; }
 #add-element form .add { float : right; }
 
 #add-element #select-type { background : url("/assets/server/images/cross.png") no-repeat 7px 7px; margin-left : 8px; padding-left : 37px; width : 708px; border-bottom: 1px solid #EEF2F6;}
