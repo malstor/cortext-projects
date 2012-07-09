@@ -49,15 +49,17 @@
 <div id="add-element">
 
 <div id="select-type">
-	<p>add new
-	<button>analysis</button>
-	<button>document</button>
-	<button>message</button>
-	</p>
+	<button rel="analysis" class="analysis">analysis</button>
+	<button rel="document" class="document">document</button>
+	<button rel="message" class="message">message</button>
 </div
 
-<form rel="<%= project.id %>">
-<textarea></textarea>
+<form rel="<%= project.id %>" class="analysis">
+<button class="start">start a new script on cortext.manager</add>
+</form>
+
+<form rel="<%= project.id %>" class="message">
+<textarea id="new-message-body">write here the message to all project's members !</textarea>
 
 <button class="add">add</add>
 </form>
