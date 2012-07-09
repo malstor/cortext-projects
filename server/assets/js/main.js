@@ -43,13 +43,14 @@ $(document).ready(function(){
 
 					p.save({}, { success: function(project, response){
 						p.set(response);
+						window.location = p.permalink();
 
-						var new_elt = $(templates.Dashboard_list_project({ p: p.toJSON(), templates : templates }));
+						// var new_elt = $(templates.Dashboard_list_project({ p: p.toJSON(), templates : templates }));
 
-						$(".projects-list").prepend(new_elt);
+						// $(".projects-list").prepend(new_elt);
 
-						$(new_elt).css('display', 'none');
-						$(new_elt).fadeIn(1000);
+						// $(new_elt).css('display', 'none');
+						// $(new_elt).fadeIn(1000);
 					}});
 					// should take in account the save feedback
 				});
