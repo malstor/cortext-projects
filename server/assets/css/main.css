@@ -148,75 +148,87 @@ button.inactive { color : #DCDCDC; cursor: default; }
 
 /*--------------------help/documentation------------------------*/
 
-.aide h3 {
-font-size:14px;
-font-family: "Oxygen-Regular", arial, sans-serif;
-letter-spacing:-1px;
-color:#fff;
-font-weight: 700;
-text-transform:uppercase;
-margin-left:-10px;
-padding:8px 0 8px 0;
-}
-
-
 .aide {
 position: fixed;
-top: 50px;
+top: 80px;
 right: 0;
-display: none;
+display:none;
 background:  #9e1d43;
-border-top:3px solid #9C9C9C;
+/*border-top:3px solid #9C9C9C;
+*/border-top:1px solid #111111;
 border-bottom:1px solid #111111;
 border-left:1px solid #111111;
 width: 180px;
 height: auto;
-padding: 15px 15px 15px 50px;
+padding: 10px 10px 10px 40px;
 }
 
-.aide p{
-margin-left:-10px;
+.aide h3 {
 color: #fff;
-width:150px;
 font: normal 12px Arial, sans-serif;
+text-transform:uppercase;
+letter-spacing:1px;
+margin-left:-5px;
+margin-top:3px;
+padding:0px;
 }
-
-.aide p a{
+.aide p{
+margin-left:-5px;
 color: #fff;
-font: normal 15px Arial, sans-serif;
-display:block;
+font: normal 12px Arial, sans-serif;
+padding:3px 0 4px 0;
+width:150px;
+
 }
 
-.aide p a:hover{
+.aide a{
+color: #fff;
+font: normal 12px Arial, sans-serif;
+text-transform:uppercase;
+letter-spacing:1px;
+margin-left:-5px;
+text-decoration:none;
+}
+.letter{
+display:block;}
+
+.aide a:hover{
 color: #F772BD;
 }
 
+.trigger a{
+color: #fff;
+font: normal 12px Arial, sans-serif;
+text-decoration:none;
+text-transform:uppercase;
+}
 
-a.trigger{
+.trigger a:hover{
+color:#F772BD;
+}
+
+.trigger{
 position: fixed;
 text-decoration: none;
 top: 80px; right: 0;
-padding: 60px 30px 0px 5px;
-background: url("/assets/server/images/aide1.png") no-repeat;
+padding:5px 13px;
+background:#9e1d43; 
 border-color: #F772BD #9e1d43 #F772BD #F772BD;
 border-style: solid;
 border-width: 2px;
 display: block;
 }
 
-a.trigger:hover{
+.trigger:hover{
 position: fixed;
 top: 80px; right: 0;
-background: url("/assets/server/images/aide-hover2.png") no-repeat;
-border-color: #F772BD #9e1d43 #F772BD #F772BD;
-border-style: solid;
-border-width: 2px;
-padding: 60px 30px 0px 8px;
-}
-
-a.active.trigger {
-background: url("/assets/server/images/aide-active.png") no-repeat;
+background:#9e1d43;
 border:none;
+border-top:1px solid #111111;
+/*border-color: #F772BD #9e1d43 #F772BD #F772BD;
+border-style: solid;
+border-width: 2px;*/
+padding: 13px;
 }
 
 /*----------------------formulaire/login----------------------*/
