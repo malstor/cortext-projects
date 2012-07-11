@@ -18,13 +18,13 @@ button.inactive { color : #DCDCDC; cursor: default; }
 
 
 #container-accueil{
-	margin : 60px auto 0px auto;
+	margin : 100px auto 0px auto;
 	width:600px;
 	height:345px;
 /*	border:1px solid black;#000101
 */	}
 #container-accueil img{
-	margin-top : 12px;
+	margin-top : 5px;
 	margin-left:204px; 
 	}
 	
@@ -38,8 +38,8 @@ button.inactive { color : #DCDCDC; cursor: default; }
 	
 #container-accueil #distante{
 	width:600px;
-	height:60px;
-	margin-top : 70px;
+	height:50px;
+	margin-top :25px;
 	}
 #container-accueil #distante .login{
 	width:200px;
@@ -57,18 +57,19 @@ button.inactive { color : #DCDCDC; cursor: default; }
 #container-accueil #locale{
 	width:600px;
 	margin-top : 10px;
-	margin-bottom:30px;
+	margin-bottom:20px;
 	}
 #container-accueil #locale span{
 	float:right;
 	color: #a3a1a1;
-    font: 14px arial;
-	margin-right:160px;margin-top:-37px;	
+    font: 12px arial;
+	margin-right:165px;
+	margin-top:-25px;	
 	}
 #container-accueil #locale span a{
 	color: #a3a1a1;
-	text-decoration:none;
-}
+/*	text-decoration:none;
+*/}
 
 #container-accueil #locale span a:hover{
 	color: #666768;
@@ -96,7 +97,7 @@ button.inactive { color : #DCDCDC; cursor: default; }
     height: 34px;
     padding: 0 5px;
 	display:block;
-	margin-bottom:15px;
+	margin-bottom:5px;
 	margin-left :182px;
 
     }
@@ -104,8 +105,8 @@ button.inactive { color : #DCDCDC; cursor: default; }
 #container-accueil #inscription{
 	width:600px;
 	height:60px;
-	margin-top : 20px;
-	}	
+/*	margin-top : 20px;
+*/	}	
 
 #container-accueil #inscription .inscription{
 	margin-left :10px;
@@ -126,5 +127,4 @@ button.inactive { color : #DCDCDC; cursor: default; }
 	color: #a3a1a1;
     font: 14px arial;
 	margin-left:130px;
-	margin-top:17px;
 		}	
