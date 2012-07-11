@@ -526,15 +526,14 @@ height:100px;
 .col-1 .members input {
     border: 1px solid #DCDCDC;
     color: #CFCFCF;
-    font: 14px arial;
-    height: 20px;
+    font: 11px arial;
+    height: 27px;
     padding: 0 5px;
     width: 218px;
-	height:37px;
 }
 
 .col-1 .members .invit-member {
-    height: 37px;
+    height: 27px;
    width: 228px;
    background:#FFF;
    margin-left: 10px;
@@ -543,18 +542,18 @@ height:100px;
 
 .col-1 .members .invit-member .gravatar {
     border: 1px solid #DCDCDC;
-    height: 25px;
-	margin: 5px auto 0 5px;
-    width: 25px;
+    height: 19px;
+	margin: 3px auto 0 3px;
+    width: 19px;
 	float:left;}
 	
 .col-1 .members .invit-member .members {
-	color: #B6B6B6;
-    font: normal 14px arial;
+	color: #909090;
+    font: normal 11px arial;
 	clear:both;
 	position:absolute;
 	margin-left:44px;
-	margin-top:10px;
+	margin-top:7px;
 	}
 	
 .col-1 .members .invit-member .plus {
@@ -563,7 +562,7 @@ height:100px;
 	width:14px;
 	float:right;
 	margin-right:15px;
-	margin-top:11px;
+	margin-top:7px;
 	cursor:pointer;
 	}
 	
@@ -572,12 +571,12 @@ height:100px;
 	}	
 
 .col-1 .members #send-invit a {
-	color: #B6B6B6;
-    font: normal 14px arial;
+	color: #909090;
+    font: normal 11px arial;
 	}
 	
 .col-1 .members #send-invit a:hover {
-	color: #666768;
+	color: #444444;
 	}
 		
 .col-1 .members #send-invit{
