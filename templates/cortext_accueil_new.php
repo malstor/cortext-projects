@@ -13,9 +13,9 @@
 
      
 	<div id="container-accueil">    
-    	<h1>Collaborative Platform</h1>
- 		<img src="images/logo_cortext2.png"/>
- 
+	<h1>Collaborative Platform</h1>
+    <img src="images/logo_cortext2.png"/>
+
  	<div id="distante">
     	<button class="login">login on manager</button>
     </div>
