@@ -154,10 +154,9 @@ top: 80px;
 right: 0;
 display:none;
 background:  #9e1d43;
-/*border-top:3px solid #9C9C9C;
-*/border-top:1px solid #111111;
-border-bottom:1px solid #111111;
-border-left:1px solid #111111;
+border-top:2px solid #F772BD;
+border-bottom:2px solid #F772BD;
+border-left:2px solid #F772BD;
 width: 180px;
 height: auto;
 padding: 10px 10px 10px 40px;
@@ -197,22 +196,15 @@ display:block;}
 color: #F772BD;
 }
 
-.trigger a{
+.trigger{
 color: #fff;
 font: normal 12px Arial, sans-serif;
 text-decoration:none;
-text-transform:uppercase;
-}
-
-.trigger a:hover{
-/*color:#F772BD;
-*/color:#009;}
-
-.trigger{
+text-transform:uppercase;	
 position: fixed;
 text-decoration: none;
 top: 80px; right: 0;
-padding:5px 13px;
+padding:5px 10px;
 background:#9e1d43; 
 border-color: #F772BD #9e1d43 #F772BD #F772BD;
 border-style: solid;
@@ -225,10 +217,7 @@ position: fixed;
 top: 80px; right: 0;
 background:#9e1d43;
 border:none;
-border-top:1px solid #111111;
-/*border-color: #F772BD #9e1d43 #F772BD #F772BD;
-border-style: solid;
-border-width: 2px;*/
+border-top:2px solid #F772BD;
 padding: 13px;
 }
 
@@ -541,6 +530,7 @@ height:100px;
     height: 20px;
     padding: 0 5px;
     width: 218px;
+	height:37px;
 }
 
 .col-1 .members .invit-member {
@@ -559,13 +549,40 @@ height:100px;
 	float:left;}
 	
 .col-1 .members .invit-member .members {
-/*  color: #6E6E6E; */   color: #B6B6B6;
-
+	color: #B6B6B6;
     font: normal 14px arial;
 	clear:both;
 	position:absolute;
-	margin-left:50px;
-	margin-top:10px;}	
+	margin-left:44px;
+	margin-top:10px;
+	}
+	
+.col-1 .members .invit-member .plus {
+	background:url("/assets/server/images/cross2.png") no-repeat;
+	height:14px;
+	width:14px;
+	float:right;
+	margin-right:15px;
+	margin-top:11px;
+	cursor:pointer;
+	}
+	
+.col-1 .members .invit-member .plus:hover {
+	background:url("/assets/server/images/cross2-hover.png") no-repeat;
+	}	
+
+.col-1 .members #send-invit a {
+	color: #B6B6B6;
+    font: normal 14px arial;
+	}
+	
+.col-1 .members #send-invit a:hover {
+	color: #666768;
+	}
+		
+.col-1 .members #send-invit{
+	margin-left:147px;
+	margin-top:10px;}		
 
 /*-----------------messages-------------------------*/
 

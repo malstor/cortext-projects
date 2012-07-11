@@ -44,6 +44,16 @@
 		<div class="plus"></div>
 		</div>
 		
+		<div class="invit-member">
+		<div class="gravatar">	<img src="#"/></div>
+		<p class="members">lise cornileau</p>
+		<div class="plus"></div>
+		</div>
+		
+		<div id="send-invit">
+		<a href="#">send invitation</a>
+		</div>
+		
 	</div>
 	</form>
 	</div>
