@@ -152,8 +152,8 @@ $(document).ready(function(){
 					current_project.add_member($("#add-members input").val());
 				});
 
-				$("#link").click(function(){
-        			$("#new-members").slideToggle(200);
+				$("#new-members h4").click(function(){
+        			$("#new-members > div ").slideToggle(200);
     			});
 
     			activate_button("#add-element .message textarea", "#add-element .message .add");

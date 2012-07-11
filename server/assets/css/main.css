@@ -448,10 +448,6 @@ height:100px;
 	margin-bottom:35px;
 }
 
-.user{	
-/*	margin-bottom:25px;
-*/}
-
 #dashboard-meta .dashboard-projects{
     width:240px;
 }
@@ -485,108 +481,90 @@ height:100px;
 #add-element form.analysis { text-align: center; }
 #add-element form.analysis button { width : 100%; }
 
-/*-----------------messages-------------------------*/
+/* ADD NEW MEMBER BLOCK  ************************************************************/
 
+.col-1 #new-members { margin-top : 10px; }
 
-.col-1 .members h4 {	
-	margin-top:35px;
+.col-1 #new-members h4 { color : #CFCFCF; font: normal 12px/22px arial, sans-serif; border : 1px solid #EEF2F6; border-left :0; border-right: 0; padding-left : 24px; background : url("/assets/server/images/cross2.png") no-repeat 5px 4px; }
+.col-1 #new-members h4:hover { color : #6E6E6E; cursor : pointer; }
+
+.col-1 #new-members > div {
+    padding: 8px 4px 8px 4px;
+    border: 1px solid #EEF2F6;
+    border-top :0;
+	background : #FAFAFA;
+	display : none;
 }
 
-/*.col-1 .members #panel form .add {	
-	background: #34B02C;
-    border: 1px solid #388530;
-    box-shadow: 0 0 3px rgba(236, 236, 236, 0.3);
-    color: #FFFFFF;
-    margin-left: 5px;
-    min-width: 65px;
-    padding: 2px;
-}
-
-.col-1 .members #panel form .add:hover{ 
-    border:solid 1px #388530; 
-  	background: #229716;
-	color:#FFFFFF;
-	box-shadow: 0px 0px 3px rgba(0,86,156, 0.6);
-} */
-
-.col-1 .members .button{
+.col-1 #new-members .button {
 	display: block;
-    text-decoration:none;    
-	width: 140px;
+	margin : 5px;
+    text-decoration:none;
 	margin:0px auto;
 }
 
-.col-1 .members #new-members{
-    width: 250px;
-    padding: 8px 0px 8px 0px;
-    display: none;
-    z-index: 1000;
-    overflow: hidden;
-    border: 1px solid #EEF2F6;
-	background : #FAFAFA; 
-}
-
-.col-1 .members input {
+.col-1 #new-members input {
     border: 1px solid #DCDCDC;
     color: #CFCFCF;
     font: 11px arial;
     height: 27px;
     padding: 0 5px;
-    width: 218px;
-	margin-bottom:5px;
+    margin : 0;
+    width : 233px;
 }
 
-.col-1 .members #proposition-members .user{
-    height: 27px;
-   width: 228px;
-   background:#FFF;
-   margin-left: 10px;
-    margin-top:3px;
+.col-1 #new-members #proposition-members { border : 1px solid #DCDCDC; border-top : 0; }
+
+.col-1 #new-members #proposition-members .user {
+	background:#FFF;
+	padding : 4px 4px;
+	position : relative;
+	border-bottom : 1px solid #DCDCDC;
 }
 
-.col-1 .members #proposition-members .user img {
+.col-1 #new-members #proposition-members .user:last-child { border : none; }
+
+
+.col-1 #new-members #proposition-members .user img {
     border: 1px solid #DCDCDC;
-    height: 19px;
-	margin: 3px auto 0 3px;
-    width: 19px;
-	float:left;}
+    height: 24px;
+    width: 24px;
+	margin-right : 4px;
+	float:left;
+}
 	
-.col-1 .members #proposition-members .members {
+.col-1 #new-members #proposition-members .user .name {
 	color: #909090;
-    font: normal 11px arial;
-	clear:both;
-	position:absolute;
-	margin-left:44px;
-	margin-top:7px;
-	}
+    font: normal 11px/27px arial;
+}
 	
-.col-1 .members #proposition-members .plus {
+.col-1 #new-members #proposition-members .plus {
 	background:url("/assets/server/images/cross2.png") no-repeat;
 	height:14px;
 	width:14px;
-	float:right;
-	margin-right:15px;
-	margin-top:7px;
+	position : absolute;
+	top : 9px;
+	right : 5px;
 	cursor:pointer;
-	}
-	
-.col-1 .members #proposition-members .plus:hover {
-	background:url("/assets/server/images/cross2-hover.png") no-repeat;
-	}	
+}
 
-.col-1 .members #send-invitation a {
+.col-1 #new-members #proposition-members .plus:hover {
+	background:url("/assets/server/images/cross2-hover.png") no-repeat;
+}	
+
+.col-1 #new-members #send-invitation a {
 	color: #909090;
     font: normal 11px arial;
 	}
 	
-.col-1 .members #send-invitation a:hover {
+.col-1 #new-members #send-invitation a:hover {
 	color: #444444;
-	}
+}
 		
-.col-1 .members #send-invitation{
-	margin-left:165px;
-	margin-top:8px;
-	}		
+.col-1 #new-members #send-invitation{
+	text-align : center;
+	display : none;
+}
 
 /*-----------------messages-------------------------*/
 
