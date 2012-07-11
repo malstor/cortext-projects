@@ -79,12 +79,11 @@
 	</div>
 <div style="clear:both;"></div>
 <div class="trigger">
-<a href="http://docs.cortext.net">
 <span class="letter">h</span>
 <span class="letter">e</span>
 <span class="letter">l</span>
 <span class="letter">p</span>
-</a></div>
+</div>
 
 <script type="text/javascript"><%= startup %></script>
 </body>

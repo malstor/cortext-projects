@@ -31,12 +31,29 @@
 
 
 
-	<h4><a class="button" id='link' href='#login' title='Login'> invit for share</a></h4>
+	<h4><a class="button" id='link' href='#login' title='Login'> invite new members</a></h4>
 	<div id='panel'>
 
 	<form id="add-member">
-		<input type="text" />
-		<button class="add">add</button>
+	<div>
+		<input type="text" value="type user name"></input>
+		
+		<div class="invit-member">
+		<div class="gravatar">	<img src="#"/></div>
+		<p class="members">louise duloquin</p>
+		<div class="plus add"></div>
+		</div>
+		
+		<div class="invit-member">
+		<div class="gravatar">	<img src="#"/></div>
+		<p class="members">lise cornileau</p>
+		<div class="plus add"></div>
+		</div>
+		<div id="send-invit">
+		<a href="#">send invitation</a>
+		</div>
+		
+	</div>
 	</form>
 	</div>
 
