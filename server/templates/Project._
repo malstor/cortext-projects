@@ -29,7 +29,7 @@
 	<%= templates.Project_member({ member : member, templates : templates }) %>
 	<% }); %>
 
-	<h4><a class="button" href='#login'>invite a new member</a></h4>
+	<h4><a class="button" id="link" href='#login'>invite a new member</a></h4>
 
 	<div id='new-members'>
 

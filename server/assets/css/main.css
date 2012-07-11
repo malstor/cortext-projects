@@ -449,8 +449,8 @@ height:100px;
 }
 
 .user{	
-	margin-bottom:25px;
-}
+/*	margin-bottom:25px;
+*/}
 
 #dashboard-meta .dashboard-projects{
     width:240px;
@@ -509,16 +509,16 @@ height:100px;
 	box-shadow: 0px 0px 3px rgba(0,86,156, 0.6);
 } */
 
-.col-1 .members #link{
+.col-1 .members .button{
 	display: block;
     text-decoration:none;    
-	width: 135px;
+	width: 140px;
 	margin:0px auto;
 }
 
-.col-1 .members #panel{
+.col-1 .members #new-members{
     width: 250px;
-    padding: 15px 0px 15px 0px;
+    padding: 8px 0px 8px 0px;
     display: none;
     z-index: 1000;
     overflow: hidden;
@@ -533,24 +533,25 @@ height:100px;
     height: 27px;
     padding: 0 5px;
     width: 218px;
+	margin-bottom:5px;
 }
 
-.col-1 .members .invit-member {
+.col-1 .members #proposition-members .user{
     height: 27px;
    width: 228px;
    background:#FFF;
    margin-left: 10px;
-    margin-top: 10px;
+    margin-top:3px;
 }
 
-.col-1 .members .invit-member .gravatar {
+.col-1 .members #proposition-members .user img {
     border: 1px solid #DCDCDC;
     height: 19px;
 	margin: 3px auto 0 3px;
     width: 19px;
 	float:left;}
 	
-.col-1 .members .invit-member .members {
+.col-1 .members #proposition-members .members {
 	color: #909090;
     font: normal 11px arial;
 	clear:both;
@@ -559,7 +560,7 @@ height:100px;
 	margin-top:7px;
 	}
 	
-.col-1 .members .invit-member .plus {
+.col-1 .members #proposition-members .plus {
 	background:url("/assets/server/images/cross2.png") no-repeat;
 	height:14px;
 	width:14px;
@@ -569,22 +570,23 @@ height:100px;
 	cursor:pointer;
 	}
 	
-.col-1 .members .invit-member .plus:hover {
+.col-1 .members #proposition-members .plus:hover {
 	background:url("/assets/server/images/cross2-hover.png") no-repeat;
 	}	
 
-.col-1 .members #send-invit a {
+.col-1 .members #send-invitation a {
 	color: #909090;
     font: normal 11px arial;
 	}
 	
-.col-1 .members #send-invit a:hover {
+.col-1 .members #send-invitation a:hover {
 	color: #444444;
 	}
 		
-.col-1 .members #send-invit{
-	margin-left:147px;
-	margin-top:10px;}		
+.col-1 .members #send-invitation{
+	margin-left:165px;
+	margin-top:8px;
+	}		
 
 /*-----------------messages-------------------------*/
 

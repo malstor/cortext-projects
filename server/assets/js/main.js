@@ -146,14 +146,14 @@ $(document).ready(function(){
 					});
 				});
 
-				$("#add-member .add").on("click", function(e){
+				$("#add-members .add").on("click", function(e){
 					e.preventDefault();
 
-					current_project.add_member($("#add-member input").val());
+					current_project.add_member($("#add-members input").val());
 				});
 
 				$("#link").click(function(){
-        			$("#panel").slideToggle(200);
+        			$("#new-members").slideToggle(200);
     			});
 
     			activate_button("#add-element .message textarea", "#add-element .message .add");
