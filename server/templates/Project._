@@ -29,32 +29,37 @@
 	<%= templates.Project_member({ member : member, templates : templates }) %>
 	<% }); %>
 
+	<h4><a class="button" href='#login'>invite a new member</a></h4>
 
+	<div id='new-members'>
 
-	<h4><a class="button" id='link' href='#login' title='Login'> invite new members</a></h4>
-	<div id='panel'>
-
-	<form id="add-member">
-	<div>
-		<input type="text" value="type user name"></input>
-		
-		<div class="invit-member">
-		<div class="gravatar">	<img src="#"/></div>
-		<p class="members">louise duloquin</p>
-		<div class="plus add"></div>
-		</div>
-		
-		<div class="invit-member">
-		<div class="gravatar">	<img src="#"/></div>
-		<p class="members">lise cornileau</p>
-		<div class="plus add"></div>
-		</div>
-		<div id="send-invit">
-		<a href="#">send invitation</a>
-		</div>
-		
-	</div>
+	<form id="add-members">
+		<input type="text" value="type user name or email"></input>
 	</form>
+		
+	<div id="proposition-members">
+	<div class="user">
+		<img clas="gravatar" src="#"/>
+		<p class="members">louise duloquin</p>
+	
+		<div class="plus add"></div>
+	</div>
+
+	<div class="user">
+		<img clas="gravatar" src="#"/>
+		<p class="members">louise duloquin</p>
+	
+		<div class="plus add"></div>
+	</div>
+
+	</div><!-- #proposition-members -->
+
+	<div id="send-invitation">
+		<a href="#">send invitation</a>
+	</div>		
+
+	</div>
+
 	</div>
 
 </div>
