@@ -14,7 +14,7 @@
      
 	<div id="container-accueil">    
     	<h1>Collaborative Platform</h1>
- 		<img src="images/logo_cortext3.png"/>
+ 		<img src="images/logo_cortext2.png"/>
  
  	<div id="distante">
     	<button class="login">login on manager</button>
@@ -23,12 +23,13 @@
  	<div id="locale">
  		<input class="default" type="text" value="login">
     	<input class="default" type="text" value="password">
+        <span>(<a href="#">lost ?</a>)</span>
     	<button class="login">login</button>
     </div>
     
-    <div id="inscription">
-    <button>subscribe</button>
+    <div id="inscription"> 
     <span>new ?</span>
+    <button class="inscription">subscribe</button>
     </div>
 
     </div><!--fin du contener--> 
