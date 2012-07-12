@@ -1009,6 +1009,7 @@ margin-bottom:120px;*/
 	font: normal 12px Arial, sans-serif;
     margin-right: 18px;
 	text-decoration:none;
+	margin-top:1px;
 }
 	
 .user.profile #messages .messages .body{
