@@ -24,6 +24,13 @@ models.Project.prototype.get_members = function(cb){
         collection.findOne({ _id: parseInt(_this.id) }, function(error,r){
             db.collection("users", function(error, collection){
                 collection.find({ id: { "$in": r.value.members } }).toArray(function(error, array){
+
+                    // FIXME : name should be processed once and for all or at least not here
+
+                    _(array).each(function(item){
+                        item.name = item.firstname+" "+item.lastname;
+                    });
+
                     cb(array);
                 });
             });
@@ -79,7 +86,9 @@ models.Project.prototype.sync_read = function(method, model, options){
 
                 // processing user data
                 _.each(project.elements, function(e){
-                    var m = _.find(project.members, function(m){ return m.id == e.author; });
+                    console.log(project.members);
+                    console.log(e.author);
+                    var m = _.find(project.members, function(m){ console.log(m.id); return m.id == e.author; });
 
                     if(!_.isObject(m.participation)){
                         u[m.id] = m;
