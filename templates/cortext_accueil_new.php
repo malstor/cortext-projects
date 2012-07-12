@@ -9,29 +9,30 @@
 <link href="css/style-accueil_new.css" type="text/css" rel="stylesheet" />
 
 </head>
-<body onload="">
+<body onload="" class="log">
 
      
-	<div id="container-accueil">    
-	<h1>Collaborative Platform</h1>
+	<div id="container-accueil">  
     <img src="images/logo_cortext2.png"/>
+  
+	<h1>Collaborative Platform</h1>
 
  	<div id="distante">
-    	<button class="login">login on manager</button>
+    	<button class="login">log in</button>
     </div>
  
  	<div id="locale">
  		<input class="default" type="text" value="login">
     	<input class="default" type="text" value="password">
-        <span>(<a href="#">lost ?</a>)</span>
+        <span><a href="#">lost ?</a></span>
     	<button class="login">login</button>
     </div>
-    
+        <span>you don't have a account ?</span>
+
     <div id="inscription"> 
-    <span>new ?</span>
     <button class="inscription">subscribe</button>
     </div>
-
+    
     </div><!--fin du contener--> 
       
 </body>

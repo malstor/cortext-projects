@@ -558,6 +558,7 @@ height:100px;
 	cursor:pointer;
 }
 
+
 .col-1 #new-members #proposition-members .plus:hover {
 	background:url("/assets/server/images/cross2-hover.png") no-repeat;
 }	
@@ -609,14 +610,16 @@ height:100px;
 .element .info h3{
 	display: inline-block;
 	font: normal 12px/17px Arial, sans-serif;
-	color:#909090;
+	color:#666768;
 	font-weight: normal;
 }
 
 .element .info .date {
 	float: right;
 	font: normal 12px/17px Arial, sans-serif;
-	color:#909090;
+/*	color:#909090;
+*/	color:#BEBEBE;
+
 }
 
 .element .info .date a {
@@ -707,8 +710,9 @@ height:100px;
 .analysis .file .info span { 
 	display:block;
 	font: normal 11px Arial, sans-serif;
-	color: #909090;
-    padding-left: 30px;
+/*	color: #909090;
+*/  color:#BEBEBE;
+	padding-left: 30px;
 }
   
 .analysis .file .info span a{
@@ -808,7 +812,7 @@ background:#FFD505 url(../images/mess.png) no-repeat 3px 3px;
 } 
 		  
 #dashboard .elements .date{
-  color:#909090;
+  color:#BEBEBE;
   float:right;
   padding-right:10px;
   padding-top:10px;
@@ -853,14 +857,14 @@ margin-bottom:120px;*/
 		
 .user.profile .info h1{
 	font: normal 17px Arial, sans-serif;
-	color: #777777;
+	color: #666768;
 	margin-top:25px;
 }
 				
 .user.profile .info #email{
 	margin-top:2px;
 	margin-left:2px;
-	color: #9B9B9B;
+	color: #909090;
 	font: normal 13px Arial, sans-serif;
 }
 
@@ -945,7 +949,7 @@ margin-bottom:120px;*/
 }
   
 .user.profile #projects .project .title a{
-	color: #777777;
+	color: #666768;
 	text-decoration:none;
 }
 
@@ -961,7 +965,7 @@ margin-bottom:120px;*/
 }
 	
 .user.profile #projects .project .date{  	
-	color: #777777;
+	color: #BEBEBE;
     float: right;
 	font: normal 12px Arial, sans-serif;
     margin-right: 10px;
@@ -980,11 +984,11 @@ margin-bottom:120px;*/
 }
 	
 .user.profile #messages .project-messages .messages{
-	margin-top:-16px;
+	margin-top:-28px;
 }
 		
 .user.profile #messages .project-messages h5 a{	
-	color: #777777;
+	color: #666768;
 	font: normal 14px Arial, sans-serif;
 	text-decoration:none;
 	border-bottom:1px solid  #235BBE;
@@ -1000,7 +1004,7 @@ margin-bottom:120px;*/
 }	
 
 .user.profile #messages .messages .message .info .date a{
-    color: #777777;
+    color: #BEBEBE;
     float: right;
 	font: normal 12px Arial, sans-serif;
     margin-right: 18px;
@@ -1014,6 +1018,9 @@ margin-bottom:120px;*/
 	width:450px;
 	font: normal 13px Arial, sans-serif;
 	color: #909090;
+	border-bottom:1px solid #EEF2F6;
+	padding-bottom:8px;
+	padding-left:8px;
 }
 
 
