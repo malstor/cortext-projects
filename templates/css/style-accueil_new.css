@@ -16,9 +16,12 @@ button:not(.inactive):hover, .button:hover { background : #DDDDDD; border : 1px 
 
 button.inactive { color : #DCDCDC; cursor: default; }
 
-
+.log button{
+	width:200px;
+	}
+						
 #container-accueil{
-	margin : 100px auto 0px auto;
+	margin : 80px auto 0px auto;
 	width:600px;
 	height:345px;
 /*	border:1px solid black;#000101
@@ -32,18 +35,18 @@ button.inactive { color : #DCDCDC; cursor: default; }
 	font: normal 27px "Oxygen-Regular";
 	color:#3C3C3C;
 	letter-spacing : 1.5px;
-	margin-top : 5px;
+	margin-top : 20px;
 	margin-left:140px; 
 	}
 	
 #container-accueil #distante{
 	width:600px;
 	height:50px;
-	margin-top :25px;
+	margin-top :50px;
 	}
 #container-accueil #distante .login{
-	width:200px;
-	height:40px;
+/*	width:200px;
+*/	height:40px;
 	margin-left :182px;
 	background:#EE6E21;
 	border:1px solid #CA5C1A;
@@ -58,7 +61,8 @@ button.inactive { color : #DCDCDC; cursor: default; }
 	width:600px;
 	margin-top : 10px;
 	margin-bottom:20px;
-	}
+/*	display:none;
+*/	}
 #container-accueil #locale span{
 	float:right;
 	color: #a3a1a1;
@@ -77,8 +81,8 @@ button.inactive { color : #DCDCDC; cursor: default; }
 	
 #container-accueil #locale .login{
 	margin-left :182px;
-	width:200px;
-	height:40px;
+/*	width:200px;
+*/	height:40px;
 	background: #34B02C;
 	color:#FFF;
     border: 1px solid #388530;
@@ -99,6 +103,7 @@ button.inactive { color : #DCDCDC; cursor: default; }
 	display:block;
 	margin-bottom:5px;
 	margin-left :182px;
+	border-radius:3px;
 
     }
 	
@@ -110,8 +115,8 @@ button.inactive { color : #DCDCDC; cursor: default; }
 
 #container-accueil #inscription .inscription{
 	margin-left :10px;
-	width:200px;
-	height:40px;
+/*	width:200px;
+*/	height:40px;
 	background:#3C3C3C;
 	border:1px solid #303030;
 	color:#FFF;
