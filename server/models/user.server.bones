@@ -44,6 +44,8 @@ models.user.prototype.load = function(cb){
                 return options.error("user not found");
             }
 
+            user.name = user.firstname+" "+user.lastname;
+
             cb(user);
         });
     });
