@@ -1,3 +1,19 @@
+/*
+
+1. Layout
+2. Generic elements
+3. Specific code
+
+*/
+
+@font-face { font-family: "Oxygen-Regular"; 	src: url('../font/Oxygen-Regular.ttf'); }
+
+/*****************************************************************************************
+
+	LAYOUT
+
+/*****************************************************************************************/
+
 body {
 	margin : 0px ;
 	background:url(../images/body-bg.png);
@@ -5,12 +21,14 @@ body {
 	background-attachment:fixed;
 	overflow-x:hidden; 
 }
-	
+
 #conteneur-principal {
 	z-index:2;
 	margin : 0px auto 0px auto;
 	width:1280px;
 	position:relative;
+	overflow : auto;
+	margin-bottom : 35px;
 }
 
 #header {
@@ -21,7 +39,28 @@ body {
 	z-index: 10;
 }
 
-@font-face { font-family: "Oxygen-Regular"; 	src: url('../font/Oxygen-Regular.ttf'); }
+.col-main {
+    width:765px;
+    float:left;
+    margin-top: 12px;
+}
+
+.col-1 {
+	width:255px;
+	float:left;
+	z-index:2;
+	height:inherit;
+	margin-top:13px;
+	margin-bottom:0px;
+}
+
+.col-2{
+    float: left;
+    height: inherit;
+    margin-top:10px;
+	margin-left:13px;
+    width: 245px;
+}
 
 /* buttons ---------------------------------------------*/
 
@@ -127,22 +166,6 @@ button.inactive { color : #DCDCDC; cursor: default; }
 	background:#2f2f2f;
 	color:#FFFFFF;
 	border : 1px solid #161616;
-}
-
-
-
-/*--------------------col2------------------------*/
-
-.col-2{
-    float: left;
-    height: inherit;
-    margin-top:10px;
-	margin-left:13px;
-    width: 245px;
- /*   border-top: 1px solid #EEF2F6;
-	border-right: 1px solid #EEF2F6;
-    border-left: 1px solid #EEF2F6;
-	background:#fafafa;*/
 }
 
 
@@ -310,15 +333,6 @@ input:focus{
 	position : relative;
 	padding-top : 50px;
 }	
-	
-.col-1 {
-	width:255px;
-	float:left;
-	z-index:2;
-	height:inherit;
-	margin-top:13px;
-	margin-bottom:0px;
-}	
 		
 .project-meta .info, #dashboard-meta .info{
 	height:100px;
@@ -436,16 +450,6 @@ height:100px;
 .project-title canvas{
     padding-top:4px;
     margin-left:5px;
-}    
-
-.col-main {
-    width:765px;
-    float:left;
-    margin-top: 12px;
-}
-
-.elements{	
-	margin-bottom:35px;
 }
 
 #dashboard-meta .dashboard-projects{
