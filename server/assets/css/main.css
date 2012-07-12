@@ -447,7 +447,7 @@ height:100px;
 .project-title canvas{
 	padding-top:4px;
 	width:245px;
-}	
+}
 
 .member canvas{
     padding-top:4px;
@@ -463,7 +463,7 @@ height:100px;
 }
 
 .col-main input[type=text]{ width : 605px; border : 1px solid #DCDCDC; height : 34px; padding : 0 5px; font : normal 14px arial; color : #DCDCDC; }
-.col-main input[type=text].focus { color : #6E6E6E; }
+.col-1 input[type=text].focus, .col-main input[type=text].focus { color : #6E6E6E !important; }
 
 .col-main textarea { font : normal 14px arial; color : #DCDCDC; }
 .col-main textarea.focus { color : #6E6E6E; }
@@ -524,6 +524,8 @@ height:100px;
 }
 
 .col-1 #new-members #proposition-members { border : 1px solid #DCDCDC; border-top : 0; }
+
+.col-1 #new-members #proposition-members > p { background : white; padding : 10px; text-align : center; color : #6E6E6E; font: italic 11px/15px arial; }
 
 .col-1 #new-members #proposition-members .user {
 	background:#FFF;
