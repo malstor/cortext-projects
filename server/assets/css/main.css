@@ -62,6 +62,12 @@ body {
     width: 245px;
 }
 
+/*****************************************************************************************
+
+	GENERIC ELEMENTS
+
+/*****************************************************************************************/
+
 /* buttons ---------------------------------------------*/
 
 button, .button{ min-width : 120px; background : #FAFAFA; border : 1px solid #DCDCDC; padding : 10px; text-align : center; font : bold 14px arial; 
