@@ -86,8 +86,6 @@ models.Project.prototype.sync_read = function(method, model, options){
 
                 // processing user data
                 _.each(project.elements, function(e){
-                    console.log(project.members);
-                    console.log(e.author);
                     var m = _.find(project.members, function(m){ console.log(m.id); return m.id == e.author; });
 
                     if(!_.isObject(m.participation)){
