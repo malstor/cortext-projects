@@ -24,8 +24,8 @@ button.inactive { color : #DCDCDC; cursor: default; }
 	margin : 80px auto 0px auto;
 	width:600px;
 	height:345px;
-/*	border:1px solid black;#000101
-*/	}
+	}
+	
 #container-accueil img{
 	margin-top : 5px;
 	margin-left:204px; 
@@ -43,14 +43,15 @@ button.inactive { color : #DCDCDC; cursor: default; }
 	width:600px;
 	height:50px;
 	margin-top :50px;
+	margin-bottom:5px;
 	}
 #container-accueil #distante .login{
-/*	width:200px;
-*/	height:40px;
+	height:40px;
 	margin-left :182px;
 	background:#EE6E21;
 	border:1px solid #CA5C1A;
-	color:#FFFFFF;
+	color:#FFFFFF;	
+	
 	}
 	
 #container-accueil #distante .login:hover{
@@ -61,8 +62,9 @@ button.inactive { color : #DCDCDC; cursor: default; }
 	width:600px;
 	margin-top : 10px;
 	margin-bottom:20px;
-/*	display:none;
-*/	}
+	display:none;
+	}
+
 #container-accueil #locale span{
 	float:right;
 	color: #a3a1a1;
@@ -81,8 +83,7 @@ button.inactive { color : #DCDCDC; cursor: default; }
 	
 #container-accueil #locale .login{
 	margin-left :182px;
-/*	width:200px;
-*/	height:40px;
+	height:40px;
 	background: #34B02C;
 	color:#FFF;
     border: 1px solid #388530;
@@ -96,7 +97,7 @@ button.inactive { color : #DCDCDC; cursor: default; }
 #container-accueil #locale input{	
 	border: 1px solid #DCDCDC;
     color: #BCBBBB;
-    font: 14px arial;
+    font: 13px arial;
 	width:190px;
     height: 34px;
     padding: 0 5px;
@@ -110,16 +111,15 @@ button.inactive { color : #DCDCDC; cursor: default; }
 #container-accueil #inscription{
 	width:600px;
 	height:60px;
-/*	margin-top : 20px;
-*/	}	
+	}	
 
 #container-accueil #inscription .inscription{
-	margin-left :10px;
-/*	width:200px;
-*/	height:40px;
+	margin-left :182px;
+	height:40px;
 	background:#3C3C3C;
 	border:1px solid #303030;
 	color:#FFF;
+	margin-top:5px;
 	}							
 	
 #container-accueil #inscription .inscription:hover{
@@ -128,8 +128,10 @@ button.inactive { color : #DCDCDC; cursor: default; }
 	box-shadow: 0px 0px 3px rgba(0,86,156, 0.6);
 	}	
 	
-#container-accueil #inscription span{
-	color: #a3a1a1;
+#container-accueil  span{
+	color: #9B9B9B;
     font: 14px arial;
-	margin-left:130px;
+	margin-left:198px;
+	margin-bottom:5px;
+	margin-top:13px;
 		}	

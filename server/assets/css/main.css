@@ -980,7 +980,7 @@ margin-bottom:120px;*/
 }
 	
 .user.profile #messages .project-messages .messages{
-	margin-top:-16px;
+	margin-top:-28px;
 }
 		
 .user.profile #messages .project-messages h5 a{	
@@ -1014,6 +1014,8 @@ margin-bottom:120px;*/
 	width:450px;
 	font: normal 13px Arial, sans-serif;
 	color: #909090;
+	border-bottom:1px solid #EEF2F6;
+	padding-bottom:5px;
 }
 
 
