@@ -152,11 +152,44 @@ $(document).ready(function(){
 					current_project.add_member($("#add-members input").val());
 				});
 
+				$("#add-members input").on("keyup", function(e){
+					$("#proposition-members").empty();
+
+					var options = {
+						data : {
+							query : $("#add-members input").val()
+						},
+						success : function(data){							
+							$("#proposition-members").empty();
+
+							if(data.length == 0){
+								$("#proposition-members").html("<p>We cannot find available user for this project</p>");
+							} else {
+								_(data).each(function(u){
+									var user = new models.user(u);
+									user.set_gravatar();
+
+									var $elt = $(templates.Project_proposition_item({ user : user.toJSON() }));
+
+									$("#proposition-members").append($elt);
+
+									$elt.children(".plus").on("click", function(evt){
+										current_project.add_member(u.id);
+									});
+								});
+							}
+						}
+					};
+
+					$.ajax("/api/Project/"+parseInt($("#add-element form").attr("rel"))+"/members/propose", options);
+				});
+
 				$("#new-members h4").click(function(){
         			$("#new-members > div ").slideToggle(200);
     			});
 
     			activate_button("#add-element .message textarea", "#add-element .message .add");
+    			activate_button("#add-members input", null);
 			}
 		});
 

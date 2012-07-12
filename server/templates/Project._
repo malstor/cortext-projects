@@ -39,20 +39,6 @@
 		</form>
 			
 		<div id="proposition-members">
-		<div class="user">
-			<img clas="gravatar" src="http://lorempixel.com/24/24/"/>
-			<p class="name">louise duloquin</p>
-		
-			<div class="plus add"></div>
-		</div>
-
-		<div class="user">
-			<img clas="gravatar" src="http://lorempixel.com/24/24/"/>
-			<p class="name">louise duloquin</p>
-		
-			<div class="plus add"></div>
-		</div>
-
 		</div><!-- #proposition-members -->
 
 		<div id="send-invitation">

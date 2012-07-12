@@ -59,11 +59,30 @@ servers.Route.augment({
 		    var p = new models.Project({ id : project_id });
 		    p.add_member(user_id);
 
-		    // CLEANME je suis pas propre !
+		    // FIXME je suis pas propre !
 			res.send({}, headers);
 
 		    console.log("<api");
     	});
+
+        this.get('/api/Project/:project/members/propose', function(req, res){
+            var project_id = req.params.project;
+
+            db.collection("projects_membership", function(error, memberships){
+                memberships.findOne({ _id : parseInt(project_id) }, function(error, membership){
+                    db.collection("users", function(error, users){
+                        var q = {
+                            keywords : req.query.query,
+                            id : { "$nin" : membership["value"]["members"] }
+                        };
+
+                        users.find(q).toArray(function(error, matches){
+                            res.send(matches, headers);
+                        });
+                    });
+                });
+            });
+        });
 
         this.post('/api/Element/:element/status', function(req, res){
             var element_id = req.params.element;
