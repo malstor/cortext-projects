@@ -1,22 +1,25 @@
 <div id="welcome"> 
-<h1>Welcome to Cortext Manager<img src="/assets/server/images/logo-petit.png" alt="#" /></h1>
+
+		<img src="/assets/server/images/logo_cortext2.png" alt="#" />
+		<h1>Collaborative Platform</h1>
+
+	<div id="distante">
+    	<button class="login">log in</button>
+	</div>
+
+	<form id="login">
+		<input id="id" value="1"/>
+		<input id="email" value="tk@deveha.com"/>
+		<input id="name" value="Tam Kien Duong"/>
+		<input id="password" type="password" value="pikachu"/>
+		<span><a href="#">lost </a>?</span>
+		<button class="login" type="submit">login</button>
+	</form>
+ 
+	<div id="account">you don't have a account ?</div>
+	
+    <div id="inscription"> 
+    	<button class="inscription">subscribe</button>
+	</div>
+
 </div>
-
-<form id="login">
-<span class="sign">sign in</span>
-<label class="id">id</label><input id="id" value="1"/>
-<label class="email">email</label><input id="email" value="tk@deveha.com"/>
-<label class="name">name</label><input id="name" value="Tam Kien Duong"/>
-<label>password</label><input id="password" type="password" value="pikachu"/>
-<input class="submit button"  type="submit" value="submit" />
-</form>
-
-<form id="register">
-<span class="apply">apply for an account</span>
-<label class="Email">email</label><input id="email" />
-<label class="name">name</label><input id="name" />
-<label>password</label><input id="password"  class="password" type="password" />
-<label class="confirm">confirm</label><input id="confirm" type="password" />
-<input class="submit button" type="submit" value="submit" />
-
-</form>

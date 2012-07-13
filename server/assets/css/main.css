@@ -186,7 +186,7 @@ background:  #9e1d43;
 border-top:2px solid #F772BD;
 border-bottom:2px solid #F772BD;
 border-left:2px solid #F772BD;
-width: 180px;
+width: 160px;
 height: auto;
 padding: 10px 10px 10px 40px;
 }
@@ -196,13 +196,13 @@ color: #fff;
 font: normal 12px Arial, sans-serif;
 text-transform:uppercase;
 letter-spacing:1px;
-margin-left:-5px;
+margin-left:-15px;
 margin-top:3px;
 padding:0px;
 }
 
 .aide p{
-margin-left:-5px;
+margin-left:-15px;
 color: #fff;
 font: normal 12px Arial, sans-serif;
 padding:3px 0 4px 0;
@@ -214,7 +214,7 @@ color: #fff;
 font: normal 12px Arial, sans-serif;
 text-transform:uppercase;
 letter-spacing:1px;
-margin-left:-5px;
+margin-left:-15px;
 text-decoration:none;
 }
 
@@ -392,7 +392,7 @@ height:100px;
 .dashboard-projects span {
 	float : right;
 	font: normal 11px Arial, sans-serif;
-	color: #DFE0E3; /*#EEF2F6; #909090;*/
+	color: #DFE0E3; 
 
 	margin-top : 2px;
 	padding-left : 18px;
@@ -850,10 +850,7 @@ background:#FFD505 url(../images/mess.png) no-repeat 3px 3px;
 	height:170px;
 	width:250px;
 	float:left;
-	margin-left:25px;
-/*margin-left:190px;
-margin-top:-120px;
-margin-bottom:120px;*/	
+	margin-left:25px;	
 }
 	
 		
@@ -1028,132 +1025,139 @@ margin-bottom:120px;*/
 
 /*---------------login accueil-----------------*/
 
+
 #welcome{
-	border-radius: 4px;
-	height:306px;
-	width:520px;
-	float:left;
-	margin-top:120px;
-	margin-left:170px;
-    background: url("/assets/server/images/network1.png") no-repeat;
-}
+	margin : 70px auto 0px auto;
+	width:600px;
+	height:345px;
+	}
+	
+#welcome img{
+	margin-top : 5px;
+	margin-left:204px; 
+	}
 	
 #welcome h1{
-	color: #3C3C3C;
-    font-family: Arial,Helvetica,sans-serif;
-    font-size: 25px;
-    line-height: 1.2;
-    padding-left: 5px;
-	margin-top:102px;
-	background-color:#FFF;
+	font: normal 27px "Oxygen-Regular";
+	color:#444444;
+	letter-spacing : 1.5px;
+	margin-top : 20px;
+	margin-left:140px; 
+	}
+	
+#main #welcome #distante{
+	width:600px;
+	height:50px;
+	margin-top :50px;
+	margin-bottom:5px;
+	}
+	
+#main #welcome #distante .login{
+	height:40px;
+	width:200px;
+	margin-left :182px;
+	background:#EE6E21;
+	border:1px solid #CA5C1A;
+	color:#FFFFFF;	
+	}
+	
+#main #welcome #distante .login:hover{
+	background : #f95f03; border : 1px solid #a03f04; color : #ffffff; box-shadow: 0px 0px 3px rgba(0,86,156, 0.6);
+	}			
+		
+#main #welcome #inscription{
+	width:300px;
+	height:60px;
+	float:left;
+	}
+	
+#main #welcome #account{
+	width:174px;
+	height:60px;
+	margin-top:22px;
+	float:left;
+	color: #666768;
+    font: 14px arial;
+	}		
+	
+
+#main #welcome #inscription .inscription{
+	margin-left :8px;
+	height:40px;
+	width:200px;
+	background:#3C3C3C;
+	border:1px solid #303030;
+	color:#FFF;
+	margin-top:10px;
+	}							
+	
+#main #welcome #inscription .inscription:hover{
+	background : #2F2F2F; 
+	border : 1px solid #090909;
+	box-shadow: 0px 0px 3px rgba(0,86,156, 0.6);
+	}		
+	
+	
+#main #welcome #login{
+	width:600px;
+	margin-top : 20px;
+	margin-bottom:20px;
+/*	display:none;
+*/	}
+
+#main #welcome #login span{
+	float:right;
+	color: #a3a1a1;
+    font: 12px arial;
+	margin-right:165px;
+	margin-top:-25px;	
+	}
+	
+#main #welcome #login span a{
+	color: #a3a1a1;
+}
+
+#main #welcome #login span a:hover{
+	color: #666768;
 }
 	
-#welcome h1 img {
-    margin-left: 43px;
-    margin-top: 4px;
-}	
-
-#main #login{
-    height: 110px;
-	margin-top:120px;
-	background:#3C3C3C;
-    border-radius: 4px 4px 4px 4px;
-    color: #FFFFFF;
-    float: left;
-	font: normal 15px Arial, sans-serif;
-    margin-bottom: 15px;
-    margin-left: 40px;
-    width: 380px;
-}
+#main #welcome #login .login{
+	margin-left :182px;
+	height:40px;
+	width:200px;
+	background: #34B02C;
+	color:#FFF;
+    border: 1px solid #388530;
+	}							
 	
-#main #register{	
-    height: 181px;
-	background:#3C3C3C;
-    border-radius: 4px 4px 4px 4px;
-    color: #FFFFFF;
-    float: left;
-	font: normal 15px Arial, sans-serif;
-    margin-bottom: 15px;
-    margin-left: 40px;
-    width: 380px;
-}	
+#main #welcome #login .login:hover{
+    border:solid 1px #388530; 
+  	background: #229716;
+	}	
+		
+#main #welcome #login input{	
+	border: 1px solid #DCDCDC;
+    color: #BCBBBB;
+    font: 13px arial;
+	width:190px;
+    height: 34px;
+    padding: 0 5px;
+	display:block;
+	margin-bottom:5px;
+	margin-left :182px;
+	border-radius:3px;
 
-#main #login #id, #main #login .id, #main #login #email, #main #login .email{
+    }
+
+#main #welcome #login #id, #main  #welcome #login .id, #main  #welcome  #login #email, #main  #welcome #login .email{
 		display:none;
 }	
 	
-#main form label{
-	margin-left:25px;
-	line-height:2.3;
-	clear:both;
-}
-
-#main form input{
-	margin-left:10px;
-	clear:both;
-}
-	
-#main form #name{
-	margin-left:10px;
-	margin-right:100px;
-}	
-
- #main form #email{
-	margin-left:10px;
-	margin-right:120px;
-}	
-
- #main form .password{
-	margin-right:120px;
-}
-
-#main form .name{
-	margin-left:53px;
-}
-
-#main form .confirm{
-	margin-left:41px;
-}
-
-#main form .Email{
-	margin-left:55px;
-}
-  
-#main form .submit{  
-  	background: #34B02C;
-    border: 1px solid #388530;
-	color:#FFFFFF;
-    margin-left: 15px;
-	margin-top: -10px;
-	min-width : 91px;
-	padding:6px;
-/*	box-shadow: 0px 0px 3px rgba(236,236,236, 0.3);
-*/}
-
-#main form .submit:hover{ 
- 	border:solid 1px #388530; 
-  	background: #229716;
-}  
-  
-#main #login .sign{
-	font-size: 17px;
-	line-height: 1.7;
-	margin-left:150px;
-	display:block;
-}
-
-#main #register .apply{
-    font-size: 17px;
-    line-height: 1.9;
-    margin-left: 100px;
-	display:block;
-}	
-   
 input:focus{
 	-moz-transition:1s; 
 	-o-transition:1s; 
 	-ms-transition:1s; 
 	-webkit-transition:1s;
-	border: 2px solid #54cf4c;
+	border: 1px solid #54cf4c;
 	box-shadow: none;
 }	   
