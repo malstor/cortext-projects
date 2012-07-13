@@ -828,7 +828,7 @@ background:#FFD505 url(../images/mess.png) no-repeat 3px 3px;
 .user.profile .info{
 	border: 1px solid #EEF2F6;
 	margin-left: 8px;
-    margin-top: 13px;
+    padding-top: 13px;
     width: 745px;
 }
 	
