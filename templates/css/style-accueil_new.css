@@ -60,7 +60,7 @@ button.inactive { color : #DCDCDC; cursor: default; }
 	
 #container-accueil #locale{
 	width:600px;
-	margin-top : 10px;
+	margin-top : 20px;
 	margin-bottom:20px;
 /*	display:none;
 */	}
@@ -109,17 +109,28 @@ button.inactive { color : #DCDCDC; cursor: default; }
     }
 	
 #container-accueil #inscription{
-	width:600px;
+	width:300px;
 	height:60px;
-	}	
+	float:left;
+	}
+	
+#container-accueil #account{
+	width:174px;
+	height:60px;
+	margin-top:20px;
+	float:left;
+	color: #666768;
+    font: 14px arial;
+	}		
+	
 
 #container-accueil #inscription .inscription{
-	margin-left :182px;
+	margin-left :8px;
 	height:40px;
 	background:#3C3C3C;
 	border:1px solid #303030;
 	color:#FFF;
-	margin-top:5px;
+	margin-top:10px;
 	}							
 	
 #container-accueil #inscription .inscription:hover{
@@ -128,10 +139,8 @@ button.inactive { color : #DCDCDC; cursor: default; }
 	box-shadow: 0px 0px 3px rgba(0,86,156, 0.6);
 	}	
 	
-#container-accueil  span{
+/*#container-accueil  span{
 	color: #666768;
     font: 14px arial;
-	margin-left:198px;
-	margin-bottom:5px;
-	margin-top:13px;
-		}	
+	margin-left:5px;
+		}*/	

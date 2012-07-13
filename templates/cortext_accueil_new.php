@@ -27,7 +27,8 @@
         <span><a href="#">lost ?</a></span>
     	<button class="login">login</button>
     </div>
-        <span>you don't have a account ?</span>
+        
+    <div id="account">you don't have a account ?</div>
 
     <div id="inscription"> 
     <button class="inscription">subscribe</button>
