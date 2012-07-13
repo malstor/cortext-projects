@@ -1107,11 +1107,14 @@ background:#FFD505 url(../images/mess.png) no-repeat 3px 3px;
 
 #main #welcome #login span{
 	float:right;
+	width : 205px;
+	position : relative;
+	top : -40px;
 	color: #a3a1a1;
     font: 12px arial;
-	margin-right:165px;
-	margin-top:-25px;	
-	}
+    line-height : 36px;
+
+}
 	
 #main #welcome #login span a{
 	color: #a3a1a1;

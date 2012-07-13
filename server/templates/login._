@@ -12,7 +12,7 @@
 		<input id="email" value="tk@deveha.com"/>
 		<input id="name" value="Tam Kien Duong"/>
 		<input id="password" type="password" value="pikachu"/>
-		<span><a href="#">lost </a>?</span>
+		<span><a href="#">lost your password ?</a></span>
 		<button class="login" type="submit">login</button>
 	</form>
  
