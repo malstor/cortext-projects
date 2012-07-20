@@ -7,13 +7,13 @@ models.element.prototype.sync_create = function(method, model, options){
     var resp = {};
     var _this = this;
 
-    if( !(session && session.user) ){
-        return options.error("you must be logged in to perform this action.");
-    }
+    // if( !(session && session.user) ){
+    //     return options.error("you must be logged in to perform this action.");
+    // }
 
-    if( session.user.id != model.get("author") ){
-        return options.error("hum little prick. you can publish stuff as someone else.");
-    }
+    // if( session.user.id != model.get("author") ){
+    //     return options.error("hum little prick. you can publish stuff as someone else.");
+    // }
 
     db.collection("projects", function(error, projects){
         projects.update({ id : model.get("project")  }, { $set : { date_updated : new Date().getTime() } });
