@@ -1,7 +1,7 @@
-model = models.User;
+// model = models.User;
 // model = model.extend(Backbone.Model);
 
-model = model.extend({
+model = Backbone.Model.extend({
 	name : "",
 	email: "tk@deveha.com",
 	gravatar: "",

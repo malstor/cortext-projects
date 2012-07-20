@@ -84,7 +84,7 @@ servers.Route.augment({
             });
         });
 
-        this.post('/api/Element/:element/status', function(req, res){
+        this.post('/api/element/:element/status', function(req, res){
             var element_id = req.params.element;
 
             var e = new models.Elements({ id : element_id });

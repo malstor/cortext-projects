@@ -1,9 +1,19 @@
-// servers.Middleware.augment({
-//     initialize: function(parent, app) {
-//         parent.call(this, app);
-// //        this.use({ model : models.user });
-// 		console.log("hum");
-//         this.use(new servers['Auth'](app, { model : models.user }));
-//  //       console.log(app);
-//     }
-// });
+var MongoStore = require('connect-mongo')(middleware);
+
+servers.Middleware.augment({
+    initialize: function(parent, app) {
+        parent.call(this, app);
+        // session support is required, and is the responsibility
+        // of your application to enable.
+        this.use(middleware.session({
+        	secret: Bones.plugin.config.secret,
+	        store : new MongoStore({
+	            db  : "sessions",
+	            host: "localhost"
+	        })
+        }));
+
+        this.use(new servers.PassportOAuth(app));
+        this.use(new servers.PassportTwitter(app));
+    }
+});
