@@ -78,6 +78,9 @@ $(document).ready(function(){
 			},
 
 			login: function(){
+				$("#header").hide();
+				$(".trigger").hide();
+				$('body').css('background', 'none');
 			},
 
 			project: function(project){
