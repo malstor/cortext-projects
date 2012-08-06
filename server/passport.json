@@ -1,0 +1,15 @@
+{
+	"twitter" : {
+        "callbackURL": "http://mydomain:3000/auth/twitter/callback",
+        "consumerKey": "get from dev.twitter.com",
+        "consumerSecret": "get from div.twitter.com"
+    },
+    "oauth" : {
+	    "requestTokenURL": "http://managerdev.cortext.org/request_token",
+	    "accessTokenURL" : "http://managerdev.cortext.org/access_token",
+	    "userAuthorizationURL" : "http://managerdev.cortext.org/authorize",
+        "callbackURL": "http://localhost:3000/auth/oauth/callback",
+        "consumerKey": "12345",
+        "consumerSecret": "67890"
+    }
+}
