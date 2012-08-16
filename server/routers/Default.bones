@@ -19,6 +19,8 @@ router = Backbone.Router.extend({
             fetcher = this.fetcher(),
             projects = new models.projects();
 
+        session = this.req.session;
+
         if(_.isUndefined(session.user)){
 //            return this.res.redirect("/");
             return router.error({ status: 401, message: "you need to be logged to access this page" });

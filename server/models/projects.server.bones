@@ -13,7 +13,7 @@ models.projects.prototype.sync = function(method, model, options) {
     var resp = {};
 
     var projects = [];
-
+    
     var current_user = options.data.user_id || session.user.id;
 
     console.log("options:");
@@ -21,26 +21,31 @@ models.projects.prototype.sync = function(method, model, options) {
 
     db.collection("projects_membership", function(error, collection){
         collection.find({ "value.members" : parseInt(current_user) }).toArray(function(error, array){
-            var in_project = _.pluck(array, "_id");
+            if(array.length == 0){
+                options.success([]);
+            } else {
+                var in_project = _.pluck(array, "_id");
 
-            var done = _.after(array.length, function(){
-                projects = _.sortBy(projects, function(p){ return -p.get("date_created"); });
-                options.success(projects);                        
-            })
+                var done = _.after(array.length, function(){
+                    projects = _.sortBy(projects, function(p){ return -p.get("date_created"); });
+                    options.success(projects);                        
+                })
 
-            _.each(in_project, function(project_id){
-                var o = {
-                    data : options.data,
-                    error : function(){},
-                    success: function(project){
-                        projects.push(project);
-                        done();
+                _.each(in_project, function(project_id){
+                    var o = {
+                        data : options.data,
+                        error : function(){},
+                        success: function(project){
+                            projects.push(project);
+                            done();
+                        }
                     }
-                }
 
-                var p = new models.Project({ id : project_id });
-                p.fetch(o);
-            });
+                    var p = new models.Project({ id : project_id });
+                    p.fetch(o);
+                });
+
+            }
         });
     });
 };

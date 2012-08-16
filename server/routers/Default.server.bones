@@ -1,13 +1,14 @@
 var time = Date.now();
 
+
+
 routers.Default.prototype.send = function(view, options) {
     // console.log('session:');
     // console.log(this.req.session);
     // pas sûr que ce soit très kasher ...
-    session = this.req.session;
     request = this.req;
 
-    console.log(request.query);
+    session = this.req.session;
 
     var options = arguments.length > 1 ? arguments[1] : {};
 
@@ -34,7 +35,7 @@ routers.Default.prototype.send = function(view, options) {
     var current_user = {};
 
     if (session && session.user){
-        current_user = session.user.toJSON();
+        current_user = session.user;
     }
 
     // Finally send the page to the client.

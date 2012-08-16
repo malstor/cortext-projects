@@ -37,6 +37,8 @@ function get_gravatar_hash(email){
 models.user.prototype.load = function(cb){
     var _this = this;
 
+    console.log(_this.id);
+
     db.collection("users", function(error, users){
         users.findOne({ id: parseInt(_this.id) }, function(error, user){
             if (error) {
@@ -70,11 +72,6 @@ models.user.prototype.sync = function(method, model, options) {
 
     this.load(function(user){
         user.gravatar = "http://www.gravatar.com/avatar/"+get_gravatar_hash(user.email);
-
-        user.app = {
-            key: model.hash_app(user.password),
-            url: "http://managerdev.cortext.org/api/signin/"
-        }
 
         model.password = user.password;
 

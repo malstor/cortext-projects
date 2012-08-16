@@ -34,8 +34,6 @@ servers.Middleware.augment({
 //			console.log("hoho");
 		    res.header('Access-Control-Allow-Origin', '*');
 		    res.header('Access-Control-Allow-Methods', '*');
-
-			session = req.session || {};
 			next();
 		});
     }
