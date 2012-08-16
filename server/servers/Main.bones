@@ -70,7 +70,7 @@ servers.Route.augment({
                 memberships.findOne({ _id : parseInt(project_id) }, function(error, membership){
                     db.collection("users", function(error, users){
                         var q = {
-                            keywords : req.query.query,
+                            keywords : { $regex: req.query.query },
                             id : { "$nin" : membership["value"]["members"] }
                         };
 
