@@ -14,6 +14,5 @@ servers.Middleware.augment({
         }));
 
         this.use(new servers.PassportOAuth(app));
-        this.use(new servers.PassportTwitter(app));
     }
 });
