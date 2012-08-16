@@ -4,17 +4,17 @@
 		<h1>Collaborative Platform</h1>
 
 	<div id="distante">
-    	<button class="login">log in</button>
+    	<a href="/auth/oauth"><button class="login">log in</button></a>
 	</div>
 
-	<form id="login">
+<!-- 	<form id="login">
 		<input id="id" value="1"/>
 		<input id="email" value="tk@deveha.com"/>
 		<input id="name" value="Tam Kien Duong"/>
 		<input id="password" type="password" value="pikachu"/>
 		<span><a href="#">lost your password ?</a></span>
 		<button class="login" type="submit">login</button>
-	</form>
+	</form> -->
  
 	<div id="account">you don't have a account ?</div>
 	
