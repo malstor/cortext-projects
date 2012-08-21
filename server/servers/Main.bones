@@ -26,6 +26,15 @@ var headers = { 'Content-Type': 'application/json' };
 // 	}
 // });
 
+servers.Core.augment({
+    initialize : function(parent, app){
+        parent.call(this, app);
+
+
+        this.use(new servers.Main(app));
+    }
+});
+
 
 servers.Middleware.augment({
     initialize: function(parent, app) {
@@ -39,62 +48,68 @@ servers.Middleware.augment({
     }
 });
 
-servers.Route.augment({
-    initialize: function(parent, app) {
-        parent.call(this, app);
+// servers.Route.augment({
+//     initialize: function(parent, app) {
+//         parent.call(this, app);
+//     },
+//     initialize_api_extra: function(app){
+// });
 
-        this.initialize_api_extra(app);
-    },
-    initialize_api_extra: function(app){
-    	console.log("*** extra api modules ***");
+server.prototype.initialize = function(app){
+    console.log("haha");
+        this.extra_routes(app);
+}
 
-    	this.post('/api/Project/:project/member', function(req, res){
-    		var project_id = req.params.project;
-    		var user_id = req.body.user_id;
+server.prototype.extra_routes = function(app){
+    console.log("*** extra api modules ***");
 
-    	    console.log("api>");
+    this.get('/api/Project/:project/members/propose', this.api_project_members_propose);
 
-		    var p = new models.Project({ id : project_id });
-		    p.add_member(user_id);
+    this.post('/api/Project/:project/member', this.api_project_member);
+    this.post('/api/element/:element/status', this.api_element_status);
+}
 
-		    // FIXME je suis pas propre !
-			res.send({}, headers);
+server.prototype.api_project_member = function(req, res, next){
+    var project_id = req.params.project;
+    var user_id = req.body.user_id;
 
-		    console.log("<api");
-    	});
+    var p = new models.Project({ id : project_id });
+    p.add_member(user_id);
 
-        this.get('/api/Project/:project/members/propose', function(req, res){
-            var project_id = req.params.project;
+    // FIXME je suis pas propre !
+    res.send({}, headers);
+}
 
-            db.collection("projects_membership", function(error, memberships){
-                memberships.findOne({ _id : parseInt(project_id) }, function(error, membership){
-                    db.collection("users", function(error, users){
-                        var q = {
-                            keywords : { $regex: req.query.query },
-                            id : { "$nin" : membership["value"]["members"] }
-                        };
+server.prototype.api_project_members_propose = function(req, res, next){
+    var project_id = req.params.project;
 
-                        users.find(q).toArray(function(error, matches){
-                            res.send(matches, headers);
-                        });
-                    });
+    db.collection("projects_membership", function(error, memberships){
+        memberships.findOne({ _id : parseInt(project_id) }, function(error, membership){
+            db.collection("users", function(error, users){
+                var q = {
+                    keywords : { $regex: req.query.query },
+                    id : { "$nin" : membership["value"]["members"] }
+                };
+
+                users.find(q).toArray(function(error, matches){
+                    res.send(matches, headers);
                 });
             });
         });
+    });
+}
 
-        this.post('/api/element/:element/status', function(req, res){
-            var element_id = req.params.element;
+server.prototype.api_element_status = function(req, res, next){
+    var element_id = req.params.element;
 
-            var e = new models.Elements({ id : element_id });
-            e.save({ body : req.body }, {
-                success: function(model, resp) {
-                    res.send(resp, headers);
-                },
-                error: function(model, err) {
-                    err = err instanceof Object ? err.toString() : err;
-                    next(new Error.HTTP(err, 409));
-                }
-            });
-        });
-    }
-});
+    var e = new models.Elements({ id : element_id });
+    e.save({ body : req.body }, {
+        success: function(model, resp) {
+            res.send(resp, headers);
+        },
+        error: function(model, err) {
+            err = err instanceof Object ? err.toString() : err;
+            next(new Error.HTTP(err, 409));
+        }
+    });
+}

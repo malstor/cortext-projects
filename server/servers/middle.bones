@@ -15,4 +15,4 @@ servers.Middleware.augment({
 
         this.use(new servers.PassportOAuth(app));
     }
-});
+})
