@@ -9,8 +9,10 @@
     "email": "0.2.3",
     "mongodb": "*",
     "moment": "*",
-    "bones-passport" : "*",
-    "connect-mongo" : "*"
+    "passport" : "*",
+    "passport-oauth" : "*",
+    "connect-mongo" : "*",
+    "request" : "*"
   },
   "devDependencies": {},
   "optionalDependencies": {},

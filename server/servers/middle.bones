@@ -1,5 +1,7 @@
 var MongoStore = require('connect-mongo')(middleware);
 
+var request = require('request');
+
 servers.Middleware.augment({
     initialize: function(parent, app) {
         parent.call(this, app);
@@ -13,6 +15,7 @@ servers.Middleware.augment({
 	        })
         }));
 
-        this.use(new servers.PassportOAuth(app));
+        this.use(new servers.oauth(app));
     }
 })
+
