@@ -198,10 +198,13 @@ $(document).ready(function(){
 
 		// should be this value but having an issue of crossbrowser compatibility
 		// var offset = ($("#path ul li.dashboard").innerWidth() - $("#path ul li.home").innerWidth());
+	//	var offset = ($("#path ul li.dashboard").innerWidth());
 		var offset = 107;
 
 		$("#path ul").css("left", "-"+ (offset - $("#path ul li.home").innerWidth()) +"px");
 		$("#path ul li.home").css("left", (offset - $("#path ul li.home").innerWidth()) +"px");
+
+		console.log($("#path ul li.dashboard").innerWidth() - $("#path ul li.home").innerWidth());
 
 		console.log($("#path ul li.dashboard").css("width"));
 		console.log($("#path ul li.home").width());

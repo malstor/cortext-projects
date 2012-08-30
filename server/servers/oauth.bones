@@ -123,7 +123,7 @@ server.augment({
                     }
                 },function(error, response, body){
                     _.extend(req.user, JSON.parse(body))
-                    req.user.id = req.user.userid;
+                    req.user.id = parseInt(req.user.userid);
                     req.session.user = new models.user(req.user);
 
                     res.redirect('/');

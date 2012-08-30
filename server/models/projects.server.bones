@@ -23,6 +23,7 @@ models.projects.prototype.sync = function(method, model, options) {
         collection.find({ "value.members" : parseInt(current_user) }).toArray(function(error, array){
             if(array.length == 0){
                 options.success([]);
+                console.log("0");
             } else {
                 var in_project = _.pluck(array, "_id");
 
