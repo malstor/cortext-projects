@@ -55,8 +55,7 @@ servers.Middleware.augment({
 // });
 
 server.prototype.initialize = function(app){
-    console.log("haha");
-        this.extra_routes(app);
+    this.extra_routes(app);
 }
 
 server.prototype.extra_routes = function(app){

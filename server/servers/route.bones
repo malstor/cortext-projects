@@ -7,3 +7,12 @@ servers.Route.augment({
 		], { type: '.js' })
 	}
 });
+
+servers.Route.prototype.assets.all = new mirror([
+    servers.Route.prototype.assets.vendor,
+    servers.Route.prototype.assets.core,
+    servers.Route.prototype.assets.routers,
+    servers.Route.prototype.assets.models,
+    servers.Route.prototype.assets.views,
+    servers.Route.prototype.assets.templates
+], { type: '.js' });

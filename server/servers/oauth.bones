@@ -64,6 +64,14 @@ server.augment({
         this.options.callbackURL = "http://localhost:3000/auth/" + this.key + "/callback";
         parent.call(this, app);
 
+        this.get("/", function(req, res, next){
+            if(req.session.oauth){
+                res.redirect("/dashboard");          
+            } else {
+                res.redirect("/login");
+            }
+        });
+
         this.get('/auth/' + this.key + '/callback', 
             passport.authenticate(this.key), function(req, res, next) {
                 // add the query parameters to the user object.
