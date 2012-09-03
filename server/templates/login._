@@ -19,7 +19,7 @@
 	<div id="account">you don't have a account ?</div>
 	
     <div id="inscription"> 
-    	<button class="inscription">subscribe</button>
+    	<a href="http://managerdev.cortext.org/user/new"><button class="inscription">subscribe</button></a>
 	</div>
 
 </div>
