@@ -178,6 +178,7 @@ button.inactive { color : #DCDCDC; cursor: default; }
 /*--------------------help/documentation------------------------*/
 
 .aide {
+z-index:3;
 position: fixed;
 top: 80px;
 right: 0;
@@ -228,6 +229,7 @@ color: #F772BD;
 }
 
 .trigger{
+z-index:4;
 color: #fff;
 font: normal 12px Arial, sans-serif;
 text-decoration:none;
@@ -243,7 +245,7 @@ border-width: 2px;
 display: block;
 }
 
-.trigger:hover , .trigger:active{
+.trigger:hover{
 position: fixed;
 top: 80px; right: 0;
 background:#9e1d43;
@@ -254,8 +256,8 @@ padding: 13px;
 
 
 .aide #question-panel{
-	z-index:6;
-	position: absolute;
+/*	z-index:;
+*/	position: absolute;
 	width: 195px;
 	padding: 2px 15px 5px 0px;
 	background:#9e1d43;
