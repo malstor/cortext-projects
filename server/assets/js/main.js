@@ -241,11 +241,15 @@ $(document).ready(function(){
 	
 
 
-		 // $(".trigger").bind("mouseleave", function(evt){
+		  $(".aide").bind("mouseleave", function(evt){
 			//console.log("heho");
+			//$(".aide").css
+				//('display', 'none');
+			$(".aide").hide('slow');
+		
 			//$(".aide").toggle("fast");
 			//$(this).toggleClass("inactive");			
-		//});
+		});
 		  
 		  
 		
@@ -254,6 +258,11 @@ $(document).ready(function(){
 			console.log("heho");
 			$(".aide").toggle("fast");
 			$(this).toggleClass("active");
+			
+			//$(this).toggle(
+			//{duration:600});
+			//$(this).animate("easeOutBounce");
+			
 		});
 
 
