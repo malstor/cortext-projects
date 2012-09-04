@@ -74,9 +74,22 @@
 
 <div class="aide">
 	<h3>You need help ?</h3>
-	<p>you can read collaborative platform documentation :</p>
-	<a href="http://docs.cortext.net">Cortext Manager</a>
-	</div>
+	<p>you can read collaborative platform <a href="http://docs.cortext.net">documentation</a> </p>
+	
+	 <div id="aide-question">         
+   	<h4><a id="question" href="#" title="Login">you have any question?</a></h4>    
+    <div id="question-panel">
+	<form action="" method="post">
+    <p>  
+<input class="default" type="text" value="type your question"> 
+    </p>
+    </form>
+    </div>
+    </div><!--fin de aide-question-->
+	
+	</div><!--fin de aide-->
+	
+	
 <div style="clear:both;"></div>
 <div class="trigger">
 <span class="letter">h</span>

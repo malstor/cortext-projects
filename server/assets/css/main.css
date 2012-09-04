@@ -182,7 +182,7 @@ position: fixed;
 top: 80px;
 right: 0;
 display:none;
-background:  #9e1d43;
+background: #9e1d43;
 border-top:2px solid #F772BD;
 border-bottom:2px solid #F772BD;
 border-left:2px solid #F772BD;
@@ -203,6 +203,7 @@ padding:0px;
 
 .aide p{
 margin-left:-15px;
+margin-bottom:8px;
 color: #fff;
 font: normal 12px Arial, sans-serif;
 padding:3px 0 4px 0;
@@ -210,12 +211,13 @@ width:150px;
 }
 
 .aide a{
+letter-spacing:1px;
 color: #fff;
 font: normal 12px Arial, sans-serif;
-text-transform:uppercase;
-letter-spacing:1px;
-margin-left:-15px;
+/*text-transform:uppercase;
+margin-left:-15px;*/
 text-decoration:none;
+border-bottom:solid 1px #F772BD;
 }
 
 .letter{
@@ -249,6 +251,55 @@ border:none;
 border-top:2px solid #F772BD;
 padding: 13px;
 }
+
+
+.aide #question-panel{
+	z-index:6;
+	position: absolute;
+	width: 195px;
+	padding: 2px 15px 5px 0px;
+	background:#9e1d43;
+	display: none;
+	height:33px;
+    right: 0;
+    top:93px;
+	border-bottom: 2px solid #F772BD;
+    border-left: 2px solid #F772BD;
+}
+	
+
+.aide form p{
+	margin-left:22px;}
+.aide form input
+{ 
+	border: 1px solid #DCDCDC;
+    color: #CFCFCF;
+    font: 11px arial;
+    height: 27px;
+    margin: 0;
+    padding: 0 5px;
+    width: 170px;}			
+
+
+.aide #aide-question h4{
+	width:2OOpx;
+	padding-bottom:10px;
+	margin-bottom:3px;
+	}
+	
+.aide #question{	
+    position: absolute;
+    display: block;
+    color: #fff;
+	font-size:12px;
+	margin-left:-15px;
+}
+
+.aide #question:hover{	
+    color:#F772BD;
+}	
+
+
 
 /*----------------------formulaire/login----------------------*/
 

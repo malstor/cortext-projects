@@ -234,11 +234,32 @@ $(document).ready(function(){
 		// 	console.log(evt);
 		// });
 
+
+$("#question").click(function(){
+        $("#question-panel").slideToggle(200);
+    });
+	// if (e.keyCode == 27) {
+      //  $("#question-panel").hide(0);
+  	 // }
+
+
+		  $(".trigger").bind("mouseover", function(evt){
+			console.log("heho");
+			$(".aide").toggle("fast");
+			$(this).toggleClass("active");			
+		});
+		  
+		  
+		
+
 		$(".trigger").bind("mouseenter mouseleave", function(evt){
 			console.log("heho");
 			$(".aide").toggle("fast");
 			$(this).toggleClass("active");
 		});
+
+
+
 
 		$("#login").submit(function(e){
 			e.preventDefault();
