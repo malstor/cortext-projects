@@ -241,16 +241,16 @@ $(document).ready(function(){
 	
 
 
-		  $(".trigger").bind("mouseover", function(evt){
-			console.log("heho");
-			$(".aide").toggle("fast");
-			$(this).toggleClass("active");			
-		});
+		 // $(".trigger").bind("mouseleave", function(evt){
+			//console.log("heho");
+			//$(".aide").toggle("fast");
+			//$(this).toggleClass("inactive");			
+		//});
 		  
 		  
 		
 
-		$(".trigger").bind("mouseenter mouseleave", function(evt){
+		$(".trigger").bind("mouseenter", function(evt){
 			console.log("heho");
 			$(".aide").toggle("fast");
 			$(this).toggleClass("active");
