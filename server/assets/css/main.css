@@ -243,7 +243,7 @@ border-width: 2px;
 display: block;
 }
 
-.trigger:hover{
+.trigger:hover , .trigger:active{
 position: fixed;
 top: 80px; right: 0;
 background:#9e1d43;
@@ -275,7 +275,7 @@ padding: 13px;
 	border: 1px solid #DCDCDC;
     color: #CFCFCF;
     font: 11px arial;
-    height: 27px;
+    height: 24px;
     margin: 0;
     padding: 0 5px;
     width: 170px;}			
@@ -284,7 +284,7 @@ padding: 13px;
 .aide #aide-question h4{
 	width:2OOpx;
 	padding-bottom:10px;
-	margin-bottom:3px;
+	margin-bottom:8px;
 	}
 	
 .aide #question{	

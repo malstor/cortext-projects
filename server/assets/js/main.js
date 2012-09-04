@@ -235,12 +235,10 @@ $(document).ready(function(){
 		// });
 
 
-$("#question").click(function(){
+	$("#question").click(function(){
         $("#question-panel").slideToggle(200);
     });
-	// if (e.keyCode == 27) {
-      //  $("#question-panel").hide(0);
-  	 // }
+	
 
 
 		  $(".trigger").bind("mouseover", function(evt){
