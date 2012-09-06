@@ -236,12 +236,12 @@ text-decoration:none;
 text-transform:uppercase;	
 position: fixed;
 text-decoration: none;
-top: 80px; right: 0;
+top: 83px; right: 0;
 padding:5px 10px;
 background:#9e1d43; 
-border-color: #F772BD #9e1d43 #F772BD #F772BD;
+/*border-color: #F772BD #9e1d43 #F772BD #F772BD;
 border-style: solid;
-border-width: 2px;
+border-width: 2px;*/
 display: block;
 }
 
@@ -254,6 +254,15 @@ border-top:2px solid #F772BD;
 padding: 13px;
 }
 
+.trigger:active{
+	border:none;
+	border-top:2px solid #F772BD;}
+.trigger:visited{
+	border:none;
+	border-top:2px solid #F772BD;}
+.trigger:link{
+	border:none;
+	border-top:2px solid #F772BD;}
 
 .aide #question-panel{
 /*	z-index:;
