@@ -75,7 +75,7 @@
 <div class="aide">
 	<h3>You need help ?</h3>
 	<p>you can read collaborative platform <a href="http://docs.cortext.net">documentation</a> </p>
-	
+
 	 <div id="aide-question">         
    	<h4><a id="question" href="#" title="Login">you have any question?</a></h4>    
     <div id="question-panel">

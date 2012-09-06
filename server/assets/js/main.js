@@ -246,6 +246,7 @@ $(document).ready(function(){
 			//$(".aide").css
 				//('display', 'none');
 			$(".aide").hide('slow');
+			
 		
 			//$(".aide").toggle("fast");
 			//$(this).toggleClass("inactive");			
@@ -256,6 +257,7 @@ $(document).ready(function(){
 
 		$(".trigger").bind("mouseenter", function(evt){
 			console.log("heho");
+			
 			$(".aide").toggle("fast");
 			$(this).toggleClass("active");
 			
