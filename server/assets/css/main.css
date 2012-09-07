@@ -178,13 +178,14 @@ button.inactive { color : #DCDCDC; cursor: default; }
 /*--------------------help/documentation------------------------*/
 
 .aide {
-z-index:3;
+z-index:5;
+background:#9e1d43 url('/assets/server/images/robot.png') no-repeat 170px 10px;	
 position: fixed;
 top: 80px;
 right: 0;
 display:none;
-background: #9e1d43;
-border-top:2px solid #F772BD;
+/*background: #9e1d43;
+*/border-top:2px solid #F772BD;
 border-bottom:2px solid #F772BD;
 border-left:2px solid #F772BD;
 width: 160px;

@@ -252,7 +252,7 @@ $(document).ready(function(){
 			console.log("heho");			
 			$(".aide").toggle("fast");
 			$(this).toggleClass("active");
-			$(".trigger").css('border', 'none');
+			//$(".trigger").css('border', 'none');
 			//$(this).toggle(
 			//{duration:600});
 			//$(this).animate("easeOutBounce");		
