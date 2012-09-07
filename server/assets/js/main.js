@@ -230,10 +230,6 @@ $(document).ready(function(){
 
 		app = new main();
 
-		// $(document).on("click", function(evt){
-		// 	console.log(evt);
-		// });
-
 
 	$("#question").click(function(){
         $("#question-panel").slideToggle(200);
@@ -242,32 +238,25 @@ $(document).ready(function(){
 
 
 		  $(".aide").bind("mouseleave", function(evt){
-			//console.log("heho");
 			//$(".aide").css
-				//('display', 'none');
+			//('display', 'none');
 			$(".aide").hide('slow');
 			
-		
+		$(".trigger").css('background', '#9e1d43');
 			//$(".aide").toggle("fast");
 			//$(this).toggleClass("inactive");			
 		});
 		  
-		  
-		
 
 		$(".trigger").bind("mouseenter", function(evt){
-			console.log("heho");
-			
+			console.log("heho");			
 			$(".aide").toggle("fast");
 			$(this).toggleClass("active");
-			
+			$(".trigger").css('border', 'none');
 			//$(this).toggle(
 			//{duration:600});
-			//$(this).animate("easeOutBounce");
-			
+			//$(this).animate("easeOutBounce");		
 		});
-
-
 
 
 		$("#login").submit(function(e){

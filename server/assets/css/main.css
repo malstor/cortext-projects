@@ -189,36 +189,37 @@ border-bottom:2px solid #F772BD;
 border-left:2px solid #F772BD;
 width: 160px;
 height: auto;
-padding: 10px 10px 10px 40px;
+padding: 10px 10px 15px 40px;
 }
 
 .aide h3 {
-color: #fff;
-font: normal 12px Arial, sans-serif;
-text-transform:uppercase;
-letter-spacing:1px;
-margin-left:-5px;
-margin-top:3px;
+color:#fff;
+font: normal 16px Arial;
+/*text-transform:uppercase;
+letter-spacing:2px;*/
+margin-left:-17px;
+margin-top:0px;
+margin-bottom:3px;
 padding:0px;
 }
 
 .aide p{
 margin-left:-15px;
-margin-bottom:8px;
+margin-bottom:7px;
 color: #fff;
-font: normal 12px Arial, sans-serif;
-padding:3px 0 4px 0;
+font: normal 13px Arial, sans-serif;
+padding:0px 0 4px 0;
 width:150px;
 }
 
 .aide a{
-letter-spacing:1px;
 color: #fff;
-font: normal 12px Arial, sans-serif;
-/*text-transform:uppercase;
+font: normal 13px Arial, sans-serif;
+/*letter-spacing:1px;
+text-transform:uppercase;
 margin-left:-15px;*/
 text-decoration:none;
-border-bottom:solid 1px #F772BD;
+border-bottom:solid 1px/* #F772BD*/ #fff;
 }
 
 .letter{
@@ -236,7 +237,7 @@ text-decoration:none;
 text-transform:uppercase;	
 position: fixed;
 text-decoration: none;
-top: 80px; right: 0;
+top: 83px; right: 0;
 padding:5px 10px;
 background:#9e1d43; 
 border-color: #F772BD #9e1d43 #F772BD #F772BD;
@@ -247,40 +248,32 @@ display: block;
 
 .trigger:hover{
 position: fixed;
-top: 80px; right: 0;
+top: 83px; right: 0;
 background:#9e1d43;
 border:none;
 border-top:2px solid #F772BD;
 padding: 13px;
 }
 
-.trigger:active{
-	border:none;
-	border-top:2px solid #F772BD;}
-.trigger:visited{
-	border:none;
-	border-top:2px solid #F772BD;}
-.trigger:link{
-	border:none;
-	border-top:2px solid #F772BD;}
-
 .aide #question-panel{
 /*	z-index:;
 */	position: absolute;
 	width: 195px;
-	padding: 2px 15px 5px 0px;
+	padding: 4px 15px 5px 0px;
 	background:#9e1d43;
 	display: none;
 	height:36px;
     right: 0;
-    top:93px;
+    top:115px;
 	border-bottom: 2px solid #F772BD;
     border-left: 2px solid #F772BD;
 }
 	
 
 .aide form p{
-	margin-left:22px;}
+	margin-left:22px;
+	}
+	
 .aide form input
 { 
 	border: 1px solid #DCDCDC;
@@ -289,7 +282,7 @@ padding: 13px;
     height: 24px;
     margin: 0;
     padding: 0 5px;
-    width: 142px;}			
+    width: 135px;}			
 
 
 .aide #aide-question h4{
@@ -302,7 +295,7 @@ padding: 13px;
     position: absolute;
     display: block;
     color: #fff;
-	font-size:12px;
+	font-size:13px;
 	margin-left:-15px;
 }
 
