@@ -179,7 +179,7 @@ button.inactive { color : #DCDCDC; cursor: default; }
 
 .aide {
 z-index:5;
-background:#9e1d43 url('/assets/server/images/robot.png') no-repeat 170px 10px;	
+background:#9e1d43 url('/assets/server/images/robots.png') no-repeat 170px 10px;	
 position: fixed;
 top: 80px;
 right: 0;
