@@ -81,9 +81,10 @@
     <div id="question-panel">
 	<form action="" method="post">
     <p>  
-<input class="default" type="text" placeholder="type your question"> 
+<input class="default" type="text" placeholder="type your question">
     </p>
     </form>
+	<div id="croix"></div>
     </div>
     </div><!--fin de aide-question-->
 	

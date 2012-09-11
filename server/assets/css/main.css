@@ -304,6 +304,12 @@ padding: 13px;
     color:#F772BD;
 }	
 
+.aide #question-panel #croix{
+	float:right;
+	margin-top:-32px;
+	background:url("/assets/server/images/cross2.png") no-repeat;
+	height:14px;
+	width:14px;	}
 
 
 /*----------------------formulaire/login----------------------*/
