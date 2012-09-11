@@ -178,8 +178,8 @@ button.inactive { color : #DCDCDC; cursor: default; }
 /*--------------------help/documentation------------------------*/
 
 .aide {
-z-index:5;
-background:#9e1d43 url('/assets/server/images/robots.png') no-repeat 170px 10px;	
+z-index:3;
+background:#9e1d43 /*url('/assets/server/images/robots.png') no-repeat 170px 10px*/;	
 position: fixed;
 top: 80px;
 right: 0;
@@ -238,7 +238,7 @@ text-decoration:none;
 text-transform:uppercase;	
 position: fixed;
 text-decoration: none;
-top: 83px; right: 0;
+top: 80px; right: 0;
 padding:5px 10px;
 background:#9e1d43; 
 border-color: #F772BD #9e1d43 #F772BD #F772BD;
@@ -249,7 +249,7 @@ display: block;
 
 .trigger:hover{
 position: fixed;
-top: 83px; right: 0;
+top: 80px; right: 0;
 background:#9e1d43;
 border:none;
 border-top:2px solid #F772BD;
@@ -257,8 +257,7 @@ padding: 13px;
 }
 
 .aide #question-panel{
-/*	z-index:;
-*/	position: absolute;
+	position: absolute;
 	width: 195px;
 	padding: 4px 15px 5px 0px;
 	background:#9e1d43;
