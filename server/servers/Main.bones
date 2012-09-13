@@ -74,7 +74,7 @@ server.prototype.api_project_document = function(req, res, next){
     } else {
         var project = new models.Project( { id : req.params.project } );
         project.add_document( req.body, function(element){
-            res.send(element.toJSON(), headers);
+            res.send(element, headers);
         });
     }
 }

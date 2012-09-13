@@ -4,7 +4,12 @@ var request = require('request');
 
 servers.Middleware.augment({
     initialize: function(parent, app) {
-        parent.call(this, app);
+        this.use(middleware.sanitizeHost(app));
+        this.use(middleware.bodyParser());
+        this.use(middleware.cookieParser());
+//        this.use(middleware.validateCSRFToken());
+        this.use(middleware.fragmentRedirect());
+
         // session support is required, and is the responsibility
         // of your application to enable.
         this.use(middleware.session({
