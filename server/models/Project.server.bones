@@ -17,6 +17,26 @@ models.Project.prototype.get_elements = function(cb){
     });
 }
 
+models.Project.prototype.add_document = function(data, cb){
+    var _this = this;
+
+    db.collection("elements", function(error,elements){
+        var element = new models.element({
+            project: parseInt(_this.id),
+            type: "Image"       
+        });
+
+        element.set(data)
+
+        element.save({
+            error : function(){},
+            success : function(model, response){
+                cb(model);
+            }
+        });
+    });
+}
+
 models.Project.prototype.get_members = function(cb){
     var _this = this;
 

@@ -63,8 +63,20 @@ server.prototype.extra_routes = function(app){
 
     this.get('/api/Project/:project/members/propose', this.api_project_members_propose);
 
+    this.post('/api/Project/:project/document', this.api_project_document);
     this.post('/api/Project/:project/member', this.api_project_member);
     this.post('/api/element/:element/status', this.api_element_status);
+}
+
+server.prototype.api_project_document = function(req, res, next){
+    if(!req.body){
+        res.send(500, { error : 'invalid element' });
+    } else {
+        var project = new models.Project( { id : req.params.project } );
+        project.add_document( req.body, function(element){
+            res.send(element.toJSON(), headers);
+        });
+    }
 }
 
 server.prototype.api_project_member = function(req, res, next){
