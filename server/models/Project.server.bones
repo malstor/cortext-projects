@@ -17,6 +17,26 @@ models.Project.prototype.get_elements = function(cb){
     });
 }
 
+models.Project.prototype.add_document = function(data, cb){
+    var _this = this;
+
+    db.collection("elements", function(error,elements){
+        var element = new models.element({
+            project: parseInt(_this.id),
+            type: "Image"       
+        });
+
+        element.set(data)
+
+        element.save({}, {
+            error : function(){},
+            success : function(model, response){
+                cb(response[0]);
+            }
+        });
+    });
+}
+
 models.Project.prototype.get_members = function(cb){
     var _this = this;
 
@@ -95,16 +115,18 @@ models.Project.prototype.sync_read = function(method, model, options){
 
                 // processing user data
                 _.each(project.elements, function(e){
-                    var m = _.find(project.members, function(m){ return m.id == e.author; });
+                    if(e.author){
+                        var m = _.find(project.members, function(m){ return m.id == e.author; });
 
-                    if(!_.isObject(m.participation)){
-                        u[m.id] = m;
-                        m.participation = {};
-                        m.participation.Others = s;
-                    };
+                        if(!_.isObject(m.participation)){
+                            u[m.id] = m;
+                            m.participation = {};
+                            m.participation.Others = s;
+                        };
 
-                    m.participation[e.type] = ( m.participation[e.type] ? m.participation[e.type] + 1 : 1);
-                    m.participation.Others = m.participation.Others - 1;
+                        m.participation[e.type] = ( m.participation[e.type] ? m.participation[e.type] + 1 : 1);
+                        m.participation.Others = m.participation.Others - 1;
+                    }
                 });
 
                 var no_activity = _.difference(members, u);
