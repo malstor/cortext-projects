@@ -74,17 +74,17 @@
 
 <div class="aide">
 	<h3>You need help ?</h3>
-	<p>you can read collaborative platform <a href="http://docs.cortext.net">documentation</a> </p>
-
+	<h4><a href="http://docs.cortext.net">you can read collaborative platform documentation</a></h4> 
+	<div id="separator"=></div>
 	 <div id="aide-question">         
    	<h4><a id="question" href="#" title="Login">you have any question?</a></h4>    
     <div id="question-panel">
 	<form action="" method="post">
     <p>  
 <input class="default" type="text" placeholder="type your question">
+<button class="send-question">send question</button>
     </p>
     </form>
-	<div id="croix"></div>
     </div>
     </div><!--fin de aide-question-->
 	

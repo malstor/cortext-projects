@@ -232,19 +232,13 @@ $(document).ready(function(){
 
 
 	$("#question").click(function(){
-        $("#question-panel").slideToggle(200);
+    $("#question-panel").slideToggle(200);
     });
-	
-
-
-		  $(".aide").bind("mouseleave", function(evt){
-			//$(".aide").css
-			//('display', 'none');
-			$(".aide").hide('slow');
-			
-		$(".trigger").css('background', '#9e1d43');
-			//$(".aide").toggle("fast");
-			//$(this).toggleClass("inactive");			
+		$(".aide").bind("mouseleave", function(evt){
+		$(".aide").hide('slow');						
+		//$(".aide").css
+			//('display', 'none');	
+		//$(".trigger").css('background', '#9e1d43');		
 		});
 		  
 

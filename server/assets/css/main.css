@@ -178,49 +178,44 @@ button.inactive { color : #DCDCDC; cursor: default; }
 /*--------------------help/documentation------------------------*/
 
 .aide {
-z-index:3;
-background:#9e1d43 /*url('/assets/server/images/robots.png') no-repeat 170px 10px*/;	
+z-index:5;
 position: fixed;
+display:none;
 top: 80px;
 right: 0;
-display:none;
-/*background: #9e1d43;
-*/border-top:2px solid #F772BD;
-border-bottom:2px solid #F772BD;
-border-left:2px solid #F772BD;
 width: 160px;
+background:/*#EEF2F6*/#FAFAFA;	
 height: auto;
-padding: 10px 10px 15px 40px;
+padding:0px 65px 0px 0px;
 }
 
 .aide h3 {
 color:#fff;
-font: normal 16px Arial;
-/*text-transform:uppercase;
-letter-spacing:2px;*/
-margin-left:-17px;
-margin-top:0px;
-margin-bottom:3px;
-padding:0px;
+background: url("/assets/server/images/start.png") no-repeat 205px 7px #3C3C3C ;
+font: 14px/30px "Oxygen-regular",sans-serif;
+letter-spacing: 2px;
+width: 225px;
+padding-left:20px;
+margin-bottom:12px;
 }
 
-.aide p{
-margin-left:-15px;
-margin-bottom:7px;
-color: #fff;
-font: normal 13px Arial, sans-serif;
-padding:0px 0 4px 0;
-width:150px;
+.aide h4 {
+margin-left:20px;
+width:155px;
+padding-bottom:12px;
+}
+
+#separator{
+width:225px;
+height:7px;
+background:#FFF;
+margin-bottom:12px;
 }
 
 .aide a{
-color: #fff;
+color:#737373;
 font: normal 13px Arial, sans-serif;
-/*letter-spacing:1px;
-text-transform:uppercase;
-margin-left:-15px;*/
 text-decoration:none;
-border-bottom:solid 1px/* #F772BD*/ #fff;
 }
 
 .letter{
@@ -233,82 +228,63 @@ color: #F772BD;
 .trigger{
 z-index:4;
 color: #fff;
-font: normal 12px Arial, sans-serif;
+font:12px/17px "Oxygen-regular",sans-serif;
 text-decoration:none;
 text-transform:uppercase;	
 position: fixed;
 text-decoration: none;
 top: 80px; right: 0;
-padding:5px 10px;
-background:#9e1d43; 
-border-color: #F772BD #9e1d43 #F772BD #F772BD;
+padding:6px 13px;
+background:#3C3C3C ; 
+/*border-color: #F772BD #9e1d43 #F772BD #F772BD;
 border-style: solid;
-border-width: 2px;
+border-width: 2px;*/
 display: block;
 }
 
-.trigger:hover{
-position: fixed;
-top: 80px; right: 0;
-background:#9e1d43;
-border:none;
-border-top:2px solid #F772BD;
-padding: 13px;
-}
 
 .aide #question-panel{
 	position: absolute;
-	width: 195px;
-	padding: 4px 15px 5px 0px;
-	background:#9e1d43;
+	width: 225px;
+	padding: 8px 0px 12px 0px;
+	background:/*#EEF2F6*/#FAFAFA;
 	display: none;
-	height:36px;
+	height:65px;
     right: 0;
-    top:115px;
-	border-bottom: 2px solid #F772BD;
-    border-left: 2px solid #F772BD;
+    top:122px;
 }
 	
-
 .aide form p{
-	margin-left:22px;
-	}
+	margin-left:20px;
+}
 	
-.aide form input
-{ 
+.aide form input{ 
 	border: 1px solid #DCDCDC;
     color: #CFCFCF;
     font: 11px arial;
     height: 24px;
-    margin: 0;
+    margin-bottom:10px;
     padding: 0 5px;
-    width: 135px;}			
-
+    width: 170px;
+}			
 
 .aide #aide-question h4{
 	width:2OOpx;
-	padding-bottom:10px;
-	margin-bottom:8px;
-	}
+}
 	
-.aide #question{	
-    position: absolute;
-    display: block;
-    color: #fff;
-	font-size:13px;
-	margin-left:-15px;
+.aide #aide-question .send-question{	
+	background: none repeat scroll 0 0 #E93F44;
+    border: 1px solid #B53135;
+    color: #FFFFFF;
+    height: 24px;
+    width: 182px;
+	padding-top:2px;
 }
 
-.aide #question:hover{	
-    color:#F772BD;
-}	
-
-.aide #question-panel #croix{
-	float:right;
-	margin-top:-32px;
-	background:url("/assets/server/images/cross2.png") no-repeat;
-	height:14px;
-	width:14px;	}
+.aide #aide-question .send-question:hover{	
+	background: #e6282e;
+    border: 1px solid #a12c2f;
+}			
 
 
 /*----------------------formulaire/login----------------------*/
