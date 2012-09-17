@@ -256,6 +256,7 @@ display: block;
 	
 .aide form p{
 	margin-left:20px;
+	width:170px;
 }
 	
 .aide form textarea{ 
@@ -264,7 +265,8 @@ display: block;
     font: 12px arial;
  	margin-bottom:10px;
 /*    padding: 0 5px;
-*/    width: 170px;	
+   width: 170px;*/
+   width:inherit; 	
 }
 
 
