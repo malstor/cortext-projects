@@ -249,8 +249,8 @@ display: block;
 	padding: 8px 0px 12px 0px;
 	background:/*#EEF2F6*/#FAFAFA;
 	display: none;
-	height:65px;
-    right: 0;
+/*	height:65px;
+*/    right: 0;
     top:122px;
 }
 	
@@ -258,26 +258,26 @@ display: block;
 	margin-left:20px;
 }
 	
-.aide form input{ 
+.aide form textarea{ 
 	border: 1px solid #DCDCDC;
-    color: #CFCFCF;
-    font: 11px arial;
-    height: 24px;
-    margin-bottom:10px;
-    padding: 0 5px;
-    width: 170px;
-}			
+    color: #909090;
+    font: 12px arial;
+ 	margin-bottom:10px;
+/*    padding: 0 5px;
+*/    width: 170px;	
+}
+
 
 .aide #aide-question h4{
 	width:2OOpx;
 }
 	
 .aide #aide-question .send-question{	
-	background: none repeat scroll 0 0 #E93F44;
+	background:#E93F44;
     border: 1px solid #B53135;
     color: #FFFFFF;
     height: 24px;
-    width: 182px;
+    width: 173px;
 	padding-top:2px;
 }
 
