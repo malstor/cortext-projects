@@ -252,6 +252,7 @@ $(document).ready(function(){
 			//$(this).animate("easeOutBounce");		
 		});
 
+		$('#mon_textarea').elastic();
 
 		$("#login").submit(function(e){
 			e.preventDefault();
