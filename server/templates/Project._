@@ -86,7 +86,35 @@
 </div><!-- /col-main -->
 
 <div class="project-meta2 col-2">
+	
+	<h3>user</h3>
+	<div id="gravatar">
+	<img src="#" />
+	</div>
+	
+	<div id="infos">
+	<h1 id="name">#indefined</h1>
+	<div id="email" class="email">#indefined</div>
+	</div>
 
+	<div id="indicator_infos">
+	
+	<div id="indicator_projects">
+		<h4>projects</h4><div class="number">#</div>
+	</div>
+	<div id="indicator_analysis">
+		<h4>analysis</h4><div class="number">#</div>
+	</div>
+	<div id="indicator_documents">
+		<h4>documents</h4><div class="number">#</div>
+	</div>
+	<div id="indicator_messages">
+		<h4>messages</h4><div class="number">#</div>
+	</div>
+	</div><!-- /indicator_infos -->
+
+
+<h3>visualisations type</h3>
 
 
 </div><!-- /project-meta2 -->

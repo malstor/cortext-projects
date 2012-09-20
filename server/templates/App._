@@ -83,7 +83,7 @@
 	
 	<form action="#">
     <p> 	
-	<textarea id="mon_textarea" cols="10"></textarea>
+	<textarea id="mon_textarea" cols="7"></textarea>
 	<button class="send-question">send question</button>
     </p>
     </form>

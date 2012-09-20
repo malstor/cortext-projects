@@ -235,7 +235,10 @@ $(document).ready(function(){
     $("#question-panel").slideToggle(200);
     });
 		$(".aide").bind("mouseleave", function(evt){
-		$(".aide").hide('slow');						
+		$(".aide").hide('slow');
+		
+		$(".trigger").toggle("fast");
+			$(this).toggleClass("active");						
 		//$(".aide").css
 			//('display', 'none');	
 		//$(".trigger").css('background', '#9e1d43');		
@@ -246,6 +249,7 @@ $(document).ready(function(){
 			console.log("heho");			
 			$(".aide").toggle("fast");
 			$(this).toggleClass("active");
+			$(".trigger").css('display', 'none');	
 			//$(".trigger").css('border', 'none');
 			//$(this).toggle(
 			//{duration:600});

@@ -178,13 +178,13 @@ button.inactive { color : #DCDCDC; cursor: default; }
 /*--------------------help/documentation------------------------*/
 
 .aide {
-z-index:5;
+z-index:3;
 position: fixed;
 display:none;
 top: 80px;
 right: 0;
 width: 160px;
-background:/*#EEF2F6*/#FAFAFA;	
+background:#EEF2F6/*#FAFAFA*/;	
 height: auto;
 padding:0px 65px 0px 0px;
 }
@@ -247,7 +247,7 @@ display: block;
 	position: absolute;
 	width: 225px;
 	padding: 8px 0px 12px 0px;
-	background:/*#EEF2F6*/#FAFAFA;
+	background:#EEF2F6/*#FAFAFA*/;
 	display: none;
 /*	height:65px;
 */    right: 0;
@@ -266,7 +266,9 @@ display: block;
  	margin-bottom:10px;
 /*    padding: 0 5px;
    width: 170px;*/
-   width:inherit; 	
+   width:inherit; 
+/*    resize: none;
+*/	
 }
 
 
@@ -287,6 +289,86 @@ display: block;
 	background: #e6282e;
     border: 1px solid #a12c2f;
 }			
+
+/*----------------------col2/.project-meta2----------------------*/
+
+.project-meta2 {	
+	margin-top:15px;
+	}
+
+
+.project-meta2 h3{
+	background: none repeat scroll 0 0 #FFFFFF;
+    border-bottom: 1px solid #EEF2F6;
+	letter-spacing: 2px;
+    color: #BEBEBE;
+    font: 11px Arial,sans-serif;
+    margin: 10px 0px 10px 0;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    padding-top: 2px;
+    width: 240px;
+	/*font: normal 14px "Oxygen-regular", sans-serif;
+	color:#3C3C3C;
+	letter-spacing:1.4px;	
+	margin-bottom:5px;*/
+	}
+
+.project-meta2 #infos{
+ 	width: 165px;
+ 	float:left;
+}
+
+.project-meta2 #gravatar img {
+    border: 1px solid #EEF2F6;
+    height: 45px;
+	width: 45px;
+	float:left;
+}
+
+.project-meta2 h1 {
+    color: #909090;
+    font: 13px Arial,sans-serif;
+	margin-left:8px;
+}
+
+.project-meta2 .email {
+    color: #BEBEBE;
+    font: 12px Arial,sans-serif;
+	margin-left:8px;
+}
+
+.project-meta2 #indicator_infos{
+	width: 165px;
+ 	float:left;
+	margin-top:10px;
+	margin-bottom:45px;
+}
+
+.project-meta2 #indicator_infos h4{
+	float:left;
+	width:90px;
+}
+
+.project-meta2 #indicator_infos .number{
+float:left;
+
+}
+
+.project-meta2 #indicator_projects, .project-meta2 #indicator_analysis, .project-meta2 #indicator_number,
+.project-meta2 #indicator_documents, .project-meta2 #indicator_messages{
+    color: #909090;
+    font: 13px Arial,sans-serif;
+	margin-left:8px;
+	clear:both;
+	
+	}
+.project-meta2 #effacement{
+clear:both;
+
+}	
+
+
 
 
 /*----------------------formulaire/login----------------------*/
