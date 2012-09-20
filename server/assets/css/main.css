@@ -222,7 +222,7 @@ text-decoration:none;
 display:block;}
 
 .aide a:hover{
-color: #F772BD;
+color: #3C3C3C/*#F772BD*/;
 }
 
 .trigger{
@@ -250,13 +250,14 @@ display: block;
 	background:#EEF2F6/*#FAFAFA*/;
 	display: none;
 /*	height:65px;
-*/    right: 0;
+*/  right: 0;
     top:122px;
 }
 	
 .aide form p{
-	margin-left:20px;
-	width:170px;
+/*	margin-left:15px;
+*/	width:170px;
+margin:0px auto 0px auto;
 }
 	
 .aide form textarea{ 
