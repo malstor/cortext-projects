@@ -129,7 +129,9 @@ $(document).ready(function(){
 //					console.log(element);
 
 					element.save({},{
-						error: function(){},
+						error: function(){
+							console.log("new message: fail");
+						},
 						success: function(e, response){
 
 							element.set(e);

@@ -15,6 +15,8 @@ models.element.prototype.sync_create = function(method, model, options){
     //     return options.error("hum little prick. you can publish stuff as someone else.");
     // }
 
+    model.unset("bones.token");
+
     db.collection("projects", function(error, projects){
         projects.update({ id : model.get("project")  }, { $set : { date_updated : new Date().getTime() } });
     });
@@ -26,6 +28,8 @@ models.element.prototype.sync_create = function(method, model, options){
                 date: new Date().getTime()
             });
             elements.insert(model.toJSON(), function(error, element){
+                if(error) console.log(error);
+
                 _this.sync_update_project_counter(element[0]);
                 options.success(element);
             });
