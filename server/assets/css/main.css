@@ -297,7 +297,7 @@ margin:0px auto 0px auto;
 
 .project-meta2 h3{
 	background: none repeat scroll 0 0 #FFFFFF;
-    border-bottom: 1px solid #EEF2F6;
+    border-bottom: 1px solid /*#EEF2F6*/#DCDCDC;
 	letter-spacing: 2px;
     color: #BEBEBE;
     font: 11px Arial,sans-serif;
@@ -346,27 +346,68 @@ margin:0px auto 0px auto;
 .project-meta2 #indicator_infos h4{
 	float:left;
 	width:90px;
+	font: 12px Arial,sans-serif;
 }
 
 .project-meta2 #indicator_infos .number{
-float:left;
+	float:left;
 
 }
 
 .project-meta2 #indicator_projects, .project-meta2 #indicator_analysis, .project-meta2 #indicator_number,
-.project-meta2 #indicator_documents, .project-meta2 #indicator_messages,       .project-meta2 #visualisations_maps, .project-meta2 #visualisations_tubes , .project-meta2 #visualisations_charts, .project-meta2 #visualisations_data{
+.project-meta2 #indicator_documents, .project-meta2 #indicator_messages{
     color: #909090;
     font: 13px Arial,sans-serif;
 	margin-left:8px;
 	clear:both;
+}
 	
-	}
 .project-meta2 #effacement{
-clear:both;
+	clear:both;
+}
 
+.project-meta2 #visualisations_infos{
+	margin-left:11px;
+}
+
+.project-meta2 #visualisations_maps, .project-meta2 #visualisations_tubes, .project-meta2 #visualisations_charts, .project-meta2 #visualisations_data{
+	background-position:left;	
+	height:22px;
+	width:150px;	
+}
+
+.project-meta2 #visualisations_maps{
+	background: url("/assets/server/images/maps.png") no-repeat ;
+}
+
+.project-meta2 #visualisations_tubes{
+	background: url("/assets/server/images/tubes.png") no-repeat ;
 }	
 
+.project-meta2 #visualisations_charts{
+	background: url("/assets/server/images/charts.png") no-repeat ;
+}	
 
+.project-meta2 #visualisations_data{
+	background: url("/assets/server/images/data.png") no-repeat ;
+}		 
+	  	
+.project-meta2 #visualisations_maps h4, .project-meta2 #visualisations_tubes h4,
+.project-meta2 #visualisations_charts h4, .project-meta2 #visualisations_data h4{
+	margin-left:45px;
+	margin-top:15px;
+	padding-top:6px;
+	color: #909090;
+    font: 12px Arial,sans-serif;
+}	
+
+.project-meta2 #visualisations_maps .number, .project-meta2 #visualisations_tubes .number,
+.project-meta2 #visualisations_charts .number, .project-meta2 #visualisations_data .number{
+	margin-left:134px;
+	color: #909090;
+    font: 13px Arial,sans-serif;
+	margin-top:-15px;
+}	
 
 
 /*----------------------formulaire/login----------------------*/
@@ -464,7 +505,7 @@ input:focus{
 }
 	
 .col-1 .info h3 {	
-	border-bottom: 1px solid #EEF2F6;
+	border-bottom: 1px solid /*#EEF2F6*/#DCDCDC;
 	font: normal 11px Arial, sans-serif;
 	color: #BEBEBE;
 	margin: 10px 10px 10px 0px;
