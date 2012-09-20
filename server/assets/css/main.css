@@ -57,7 +57,7 @@ body {
 .col-2{
     float: left;
     height: inherit;
-    margin-top:10px;
+    margin-top:15px;
 	margin-left:13px;
     width: 245px;
 }
@@ -85,11 +85,6 @@ button.inactive { color : #DCDCDC; cursor: default; }
 	background-color: #EEF2F6;
 	border-bottom: 3px solid #9C9C9C;
 	position: relative;
-}
-
-#menu img {
-/*	float: left;
-*/
 }
 
 #path { overflow: hidden; }
@@ -120,7 +115,6 @@ button.inactive { color : #DCDCDC; cursor: default; }
 #path ul li:hover { cursor: pointer; }
 
 #path ul li.home { position : absolute; top : 0; left : 0; width : 60px; z-index : 1; overflow : hidden; }
-/*#path ul .home img { width : 50px; height : 50px }*/
 
 #path ul .Project { border-bottom:3px solid #32B9E5; }
 #path ul .Project .type { background-color:#235BBE; border-color : #9c96a7; }
@@ -175,73 +169,70 @@ button.inactive { color : #DCDCDC; cursor: default; }
 }
 
 
-/*--------------------help/documentation------------------------*/
+/* HELP DOCUMENTATION  ************************************************************/
 
 .aide {
-z-index:3;
-position: fixed;
-display:none;
-top: 80px;
-right: 0;
-width: 160px;
-background:#EEF2F6/*#FAFAFA*/;	
-height: auto;
-padding:0px 65px 0px 0px;
+	z-index:3;
+	position: fixed;
+	display:none;
+	top: 80px;
+	right: 0;
+	width: 160px;
+	background:#EEF2F6/*#FAFAFA*/;	
+	height: auto;
+	padding:0px 65px 0px 0px;
 }
 
 .aide h3 {
-color:#fff;
-background: url("/assets/server/images/start.png") no-repeat 205px 7px #3C3C3C ;
-font: 14px/30px "Oxygen-regular",sans-serif;
-letter-spacing: 2px;
-width: 225px;
-padding-left:20px;
-margin-bottom:12px;
+	color:#fff;
+	background: url("/assets/server/images/start.png") no-repeat 205px 7px #3C3C3C ;
+	font: 14px/30px "Oxygen-regular",sans-serif;
+	letter-spacing: 2px;
+	width: 225px;
+	padding-left:20px;
+	margin-bottom:12px;
 }
 
 .aide h4 {
-margin-left:20px;
-width:155px;
-padding-bottom:12px;
+	margin-left:20px;
+	width:155px;
+	padding-bottom:12px;
 }
 
 #separator{
-width:225px;
-height:7px;
-background:#FFF;
-margin-bottom:12px;
+	width:225px;
+	height:7px;
+	background:#FFF;
+	margin-bottom:12px;
 }
 
 .aide a{
-color:#737373;
-font: normal 13px Arial, sans-serif;
-text-decoration:none;
+	color:#737373;
+	font: normal 13px Arial, sans-serif;
+	text-decoration:none;
 }
 
 .letter{
-display:block;}
+	display:block;
+}
 
 .aide a:hover{
-color: #3C3C3C/*#F772BD*/;
+	color: #3C3C3C/*#F772BD*/;
 }
 
 .trigger{
-z-index:4;
-color: #fff;
-font:12px/17px "Oxygen-regular",sans-serif;
-text-decoration:none;
-text-transform:uppercase;	
-position: fixed;
-text-decoration: none;
-top: 80px; right: 0;
-padding:6px 13px;
-background:#3C3C3C ; 
-/*border-color: #F772BD #9e1d43 #F772BD #F772BD;
-border-style: solid;
-border-width: 2px;*/
-display: block;
+	z-index:4;
+	color: #fff;
+	font:12px/17px "Oxygen-regular",sans-serif;
+	text-decoration:none;
+	text-transform:uppercase;	
+	position: fixed;
+	text-decoration: none;
+	top: 80px; right: 0;
+	padding:6px 13px;
+	background:#3C3C3C ; 
+	display: block;
 }
-
 
 .aide #question-panel{
 	position: absolute;
@@ -249,15 +240,13 @@ display: block;
 	padding: 8px 0px 12px 0px;
 	background:#EEF2F6/*#FAFAFA*/;
 	display: none;
-/*	height:65px;
-*/  right: 0;
+	right: 0;
     top:122px;
 }
 	
 .aide form p{
-/*	margin-left:15px;
-*/	width:170px;
-margin:0px auto 0px auto;
+	width:170px;
+	margin:0px auto 0px auto;
 }
 	
 .aide form textarea{ 
@@ -265,9 +254,7 @@ margin:0px auto 0px auto;
     color: #909090;
     font: 12px arial;
  	margin-bottom:10px;
-    width:inherit; 
-/*    resize: none;
-*/	
+    width:inherit; 	
 }
 
 .aide #aide-question h4{
@@ -288,16 +275,14 @@ margin:0px auto 0px auto;
     border: 1px solid #a12c2f;
 }			
 
-/*----------------------col2/.project-meta2----------------------*/
 
-.project-meta2 {	
-	margin-top:15px;
-	}
+/*--------------------COL RIGHT: PROJECT META 2------------------------*/
 
+/* USER INFORMATIONS COL RIGHT  ************************************************************/
 
 .project-meta2 h3{
 	background: none repeat scroll 0 0 #FFFFFF;
-    border-bottom: 1px solid /*#EEF2F6*/#DCDCDC;
+    border-bottom: 1px solid #DCDCDC;
 	letter-spacing: 2px;
     color: #BEBEBE;
     font: 11px Arial,sans-serif;
@@ -306,10 +291,6 @@ margin:0px auto 0px auto;
     padding-left: 5px;
     padding-top: 2px;
     width: 240px;
-	/*font: normal 14px "Oxygen-regular", sans-serif;
-	color:#3C3C3C;
-	letter-spacing:1.4px;	
-	margin-bottom:5px;*/
 	}
 
 .project-meta2 #infos{
@@ -351,7 +332,6 @@ margin:0px auto 0px auto;
 
 .project-meta2 #indicator_infos .number{
 	float:left;
-
 }
 
 .project-meta2 #indicator_projects, .project-meta2 #indicator_analysis, .project-meta2 #indicator_number,
@@ -365,6 +345,9 @@ margin:0px auto 0px auto;
 .project-meta2 #effacement{
 	clear:both;
 }
+
+
+/*  VISUALISATIONS INFORMATIONS COL RIGHT  ************************************************************/
 
 .project-meta2 #visualisations_infos{
 	margin-left:11px;
@@ -426,69 +409,6 @@ margin:0px auto 0px auto;
 	display: none;
 }	
 
-/*#login-link{	
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    display: block;
-    background: #3C3C3C;
-	height:12px;
-	line-height:15px;
-	border-bottom: 3px solid #9c96a7;
-    padding: 3px 5px 5px 5px;
-    color: #FFF;
-}
-	
-
-.password{
-	margin-left:83px;
-}
-	
-.email{
-	line-height: 1.8;
-	margin-left:112px;
-}
-
-.sign{
-	margin-left:155px;
-	line-height: 1.8;
-}
-
-form p{
-	margin-top:10px;
-	margin-left:-5px;
-}
-	
-.enter{
-	background:#34B02C;
-	border-radius: 4px;	
-	width:67px;
-	height:21px;
-	color:#FFF;
-	margin-left:240px;
-	margin-top:10px;
-	border:none;
-	padding-bottom:4px;
-} 
-
-.enter:hover{
-	background:#54cf4c;
-}		
-
-.phrase{
-	margin-left:35px;
-	line-height:1.8;
-}	
-	
-input:focus{
-	-moz-transition:1s; 
-	-o-transition:1s; 
-	-ms-transition:1s; 
-	-webkit-transition:1s;
-	border: 2px solid #54cf4c;
-	box-shadow: none;
-}	
-	*/
 	
 /*--------------------main------------------------*/
 
@@ -505,7 +425,7 @@ input:focus{
 }
 	
 .col-1 .info h3 {	
-	border-bottom: 1px solid /*#EEF2F6*/#DCDCDC;
+	border-bottom: 1px solid #DCDCDC;
 	font: normal 11px Arial, sans-serif;
 	color: #BEBEBE;
 	margin: 10px 10px 10px 0px;
@@ -530,12 +450,10 @@ input:focus{
 }
 
 .col-1 .script {
-height:100px;	
+	height:100px;	
 }
 
-
 .col-1 .script h3 {background : #27AD19 url('/assets/server/images/engrenage.png') no-repeat 225px 5px;
-
 }
 
 .dashboard-projects a {
@@ -779,8 +697,7 @@ height:100px;
 .element .info .date {
 	float: right;
 	font: normal 12px/17px Arial, sans-serif;
-/*	color:#909090;
-*/	color:#BEBEBE;
+	color:#BEBEBE;
 
 }
 
@@ -872,8 +789,7 @@ height:100px;
 .analysis .file .info span { 
 	display:block;
 	font: normal 11px Arial, sans-serif;
-/*	color: #909090;
-*/  color:#BEBEBE;
+	color:#BEBEBE;
 	padding-left: 30px;
 }
   

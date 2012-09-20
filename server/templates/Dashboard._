@@ -2,27 +2,21 @@
 
 <div class="info">
 	<h3>informations</h3>
-
 </div>
 
 <div class="script" id="script">
-
 	<h3>queued scripts</h3>
-	
 	<div class="script">
 		<div class="name-script"></div>
 		<div class="queued-scripts">
-		<ul class="data">			
-		</ul>
+		<ul class="data"></ul>
 		</div>
 	</div>
-	
 </div><!-- /project-script -->
 
 <div class="dashboard-projects">
 	<h3>projects</h3>
-	
-<ul class="projects">
+	<ul class="projects">
 	<% _.each(projects, function(p){ %>
 	<li class="project-title">
 		<a href="/project/<%= p.id %>"><%= p.title %></a>
@@ -30,21 +24,19 @@
 		<%= templates.participation({ composition: p.members[current_user_id].participation }) %>
 	</li>
 	<% }); %>
-</ul>
-
+	</ul>
 </div><!-- /dashboard-projects -->
 	
 </div><!-- /dashboard-script -->
-
 
 </div><!-- /dashboard-meta -->
 
 <div id="dashboard" class="col-main">
 
-<form id="project-new">
+	<form id="project-new">
 	<input type="text" value="type the name of your new project"></input>
 	<button class="new">create</button>
-</form>
+	</form>
 
 <div class="projects-list">
 <% _.each(projects, function(p){ %>
@@ -82,8 +74,8 @@
 	</div><!-- /indicator_infos -->
 
 
-<h3>visualisations type</h3>
-<div id="visualisations_infos">
+	<h3>visualisations type</h3>
+	<div id="visualisations_infos">
 
 	<div id="visualisations_maps">
 		<h4>maps</h4><div class="number">#</div>
@@ -101,6 +93,6 @@
 		<h4>data</h4><div class="number">#</div>
 	</div>
 
-</div><!-- /visualisations_infos -->
+	</div><!-- /visualisations_infos -->
 	
 </div><!-- /dashboard-meta2 -->
