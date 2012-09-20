@@ -265,13 +265,10 @@ margin:0px auto 0px auto;
     color: #909090;
     font: 12px arial;
  	margin-bottom:10px;
-/*    padding: 0 5px;
-   width: 170px;*/
-   width:inherit; 
+    width:inherit; 
 /*    resize: none;
 */	
 }
-
 
 .aide #aide-question h4{
 	width:2OOpx;
@@ -357,7 +354,7 @@ float:left;
 }
 
 .project-meta2 #indicator_projects, .project-meta2 #indicator_analysis, .project-meta2 #indicator_number,
-.project-meta2 #indicator_documents, .project-meta2 #indicator_messages{
+.project-meta2 #indicator_documents, .project-meta2 #indicator_messages,       .project-meta2 #visualisations_maps, .project-meta2 #visualisations_tubes , .project-meta2 #visualisations_charts, .project-meta2 #visualisations_data{
     color: #909090;
     font: 13px Arial,sans-serif;
 	margin-left:8px;
