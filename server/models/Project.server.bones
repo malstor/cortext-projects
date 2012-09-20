@@ -153,6 +153,8 @@ models.Project.prototype.sync_read = function(method, model, options){
 models.Project.prototype.sync_create = function(method, model, options){
     var _this = this;
 
+    model.unset("bones.token");
+
     if( !(session && session.user) ){
         return options.error("you must be logged in to perform this action.");
     }
