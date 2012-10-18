@@ -93,7 +93,7 @@ server.augment({
                 // update users
                 console.log("huhu");
 
-                request.get("http://managerdev.cortext.org/api/users.json",function(error, response, body){
+                request.get("http://auth.cortext.org/api/users.json",function(error, response, body){
                         var data = JSON.parse(body);
 
                         db.collection("users", function(error, users){
@@ -114,7 +114,7 @@ server.augment({
 
                 // SET THE ME
                 request({
-                    uri: 'http://managerdev.cortext.org/api/user.json',
+                    uri: 'http://auth.cortext.org/api/user.json',
                     oauth : {
                         consumer_key: 12345,
                         consumer_secret: 67890,
