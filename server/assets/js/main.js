@@ -193,8 +193,23 @@ $(document).ready(function(){
         			$("#new-members > div ").slideToggle(200);
     			});
 
+				$("form .upload").click(function(){
+					var parameters = {
+						context : {
+							project_id : project
+						},
+						callback_url : "http://localhost:3000/project/"+project,
+						callback_json : "http://localhost:3000/api/Project/"+project+"/document"
+					};
+
+					console.log($.param(parameters, true));
+
+					window.location = "http://assets.cortext.org/?" + $.param(parameters);
+				});
+
     			activate_button("#add-element .message textarea", "#add-element .message .add");
     			activate_button("#add-members input", null);
+
 			}
 		});
 
