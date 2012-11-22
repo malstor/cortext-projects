@@ -198,8 +198,8 @@ $(document).ready(function(){
 						context : {
 							project_id : project
 						},
-						callback_url : "http://localhost:3000/project/"+project,
-						callback_json : "http://localhost:3000/api/Project/"+project+"/document"
+						callback_url : "http://collab.cortext.net/project/"+project,
+						callback_json : "http://collab.cortext.net/api/Project/"+project+"/document"
 					};
 
 					console.log($.param(parameters, true));
