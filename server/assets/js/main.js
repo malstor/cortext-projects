@@ -206,6 +206,18 @@ $(document).ready(function(){
 
 					window.location = "http://assets.cortext.org/?" + $.param(parameters);
 				});
+                                $("form .start").click(function(){
+					var parameters = {
+						context : {
+							project_id : project
+						}
+						
+					};
+
+					console.log($.param(parameters, true));
+
+					window.location = "http://ctmanager.dev/frontend_dev.php/job/new?" + $.param(parameters);
+				});
 
     			activate_button("#add-element .message textarea", "#add-element .message .add");
     			activate_button("#add-members input", null);
