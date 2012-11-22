@@ -216,7 +216,7 @@ $(document).ready(function(){
 
 					console.log($.param(parameters, true));
 
-					window.location = "http://ctmanager.dev/frontend_dev.php/job/new?" + $.param(parameters);
+					window.location = "http://managerdev.cortext.org/job/new?" + $.param(parameters);
 				});
 
     			activate_button("#add-element .message textarea", "#add-element .message .add");
