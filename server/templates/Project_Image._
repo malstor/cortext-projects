@@ -1,13 +1,13 @@
 <div class="element image user-<%= e.author %>" id="Image-<%= e.id %>">
 
 	<div class="info">
-		<h3>tubes (analysis.py/12:02 21.06.2011)</h3>
+		<h3>Image#<%= e.id %> (analysis.py/12:02 21.06.2011)</h3>
 		<span class="type image"><%= e.type %></span>
 		<span class="author"><%= author.name %></span>
 		<span class="date"><a href="<%= e.permalink %>"><%= moment(e.date).format("DD.MM.YYYY") %></a></span>
 	</div><!-- /info -->
 
 	<div class="body">
-		<a href="cortext_objet2.php"><img src="<%= e.url %>" alt="resultat-script" /></a>
+		<a href="<%= e.url %>"><img src="<%= e.url %>" alt="resultat-script" /></a>
 	</div>
 </div>
