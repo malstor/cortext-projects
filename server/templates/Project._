@@ -64,8 +64,13 @@
 </div
 
 <form rel="<%= project.id %>" class="analysis">
-<button class="start">start a new script on cortext.manager</add>
+<button type="button" class="start">start a new script on cortext.manager</add>
 </form>
+
+<form rel="<%= project.id %>" class="document">
+<button type="button" class="upload">upload a new document</add>
+</form>
+	
 
 <form rel="<%= project.id %>" class="message">
 <textarea id="new-message-body">Type your message for all your happy co-workers!</textarea>

@@ -193,8 +193,35 @@ $(document).ready(function(){
         			$("#new-members > div ").slideToggle(200);
     			});
 
+				$("form .upload").click(function(){
+					var parameters = {
+						context : {
+							project_id : project
+						},
+						callback_url : "http://collab.cortext.net/project/"+project,
+						callback_json : "http://collab.cortext.net/api/Project/"+project+"/document"
+					};
+
+					console.log($.param(parameters, true));
+
+					window.location = "http://assets.cortext.org/upload?" + $.param(parameters);
+				});
+                                $("form .start").click(function(){
+					var parameters = {
+						context : {
+							project_id : project
+						}
+						
+					};
+
+					console.log($.param(parameters, true));
+
+					window.location = "http://managerdev.cortext.org/job/new?" + $.param(parameters);
+				});
+
     			activate_button("#add-element .message textarea", "#add-element .message .add");
     			activate_button("#add-members input", null);
+
 			}
 		});
 
