@@ -36,6 +36,26 @@ models.Project.prototype.add_document = function(data, cb){
         });
     });
 }
+models.Project.prototype.add_analysis = function(data, cb){
+    var _this = this;
+
+    db.collection("elements", function(error,elements){
+        var element = new models.element({
+            project: parseInt(_this.id),
+            type: "Analysis",
+            author: parseInt(data.author)
+        });
+
+        element.set(data)
+
+        element.save({}, {
+            error : function(){},
+            success : function(model, response){
+                cb(response[0]);
+            }
+        });
+    });
+}
 
 models.Project.prototype.get_members = function(cb){
     var _this = this;
