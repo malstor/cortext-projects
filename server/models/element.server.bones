@@ -18,7 +18,7 @@ models.element.prototype.sync_create = function(method, model, options){
     model.unset("bones.token");
 
     db.collection("projects", function(error, projects){
-        projects.update({ id : model.get("project")  }, { $set : { date_updated : new Date().getTime() } });
+        projects.update({ id : parseInt(model.get("project"))  }, { $set : { date_updated : new Date().getTime() } });
     });
 
     db.collection("elements", function(error, elements){
