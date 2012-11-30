@@ -204,7 +204,7 @@ $(document).ready(function(){
 
 					console.log($.param(parameters, true));
 
-					window.location = "http://assets.cortext.org/?" + $.param(parameters);
+					window.location = "http://assets.cortext.org/upload?" + $.param(parameters);
 				});
                                 $("form .start").click(function(){
 					var parameters = {
