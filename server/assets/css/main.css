@@ -340,6 +340,12 @@ button.inactive { color : #DCDCDC; cursor: default; }
 	height:100px;	
 }
 
+.col-1 .script .queued-scripts{
+background: none repeat scroll 0 0 #EEF2F6;
+    height: 10px;
+    margin-left: 5px;
+    margin-right: 5px;}
+
 .col-1 .script h3 {background : #27AD19 url('/assets/server/images/engrenage.png') no-repeat 225px 5px;
 }
 

@@ -6,12 +6,8 @@
 
 <div class="script" id="script">
 	<h3>queued scripts</h3>
-	<div class="script">
-		<div class="name-script"></div>
-		<div class="queued-scripts">
-		<ul class="data"></ul>
-		</div>
-	</div>
+		<%= templates.queued_scripts() %>
+
 </div><!-- /project-script -->
 
 <div class="dashboard-projects">
