@@ -341,10 +341,33 @@ button.inactive { color : #DCDCDC; cursor: default; }
 }
 
 .col-1 .script .queued-scripts{
-background: none repeat scroll 0 0 #EEF2F6;
+	background: #EEF2F6;
     height: 10px;
     margin-left: 5px;
     margin-right: 5px;}
+	
+	.col-1 .script .queued-scripts .progress-script{
+	background: #25A618;
+    height: 10px;
+    width:100px;
+	display:block;}
+	
+.col-1 .script .name-script{
+	color: #909090;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    line-height: 20px;
+    margin-left: 5px;}
+
+.col-1 .script .hours{
+	color: #909090;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    line-height: 20px;
+	float:right;
+    margin-right:10px;	}
 
 .col-1 .script h3 {background : #27AD19 url('/assets/server/images/engrenage.png') no-repeat 225px 5px;
 }

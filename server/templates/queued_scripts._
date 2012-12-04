@@ -1,6 +1,10 @@
 	<div class="script">
-		<div class="name-script">anal</div>
+		<div>
+		<span class="name-script">analysis</span>
+		<span class="hours">13:55:46</span>
+		</div>
+		
 		<div class="queued-scripts">
-		<ul class="data">			
-		</ul>
-	</div></div>
+		<span class="progress-script"></span>
+		</div>
+	</div>
