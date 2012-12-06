@@ -1145,11 +1145,11 @@ background:#FFD505 url(../images/mess.png) no-repeat 3px 3px;
 	}
 	
 #welcome h1{
-	font: normal 27px "Oxygen-Regular";
+	font: normal 20px "Oxygen-Regular";
 	color:#444444;
 	letter-spacing : 1.5px;
-	margin-top : 20px;
-	margin-left:140px; 
+	margin-bottom : 20px;
+	margin-left:115px; 
 	}
 	
 #main #welcome #distante{
@@ -1183,7 +1183,7 @@ background:#FFD505 url(../images/mess.png) no-repeat 3px 3px;
 	height:60px;
 	margin-top:22px;
 	float:left;
-	color: #666768;
+	color: #444444;
     font: 14px arial;
 	}		
 	
