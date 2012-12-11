@@ -145,51 +145,44 @@ button.inactive { color : #DCDCDC; cursor: default; }
 	right : 0;
 	padding : 0 7px;
 	display : inline-block;
-	font: normal 11px/50px Arial, sans-serif;
-	text-decoration: none;
-	text-transform: lowercase;
-	color : #fff;
 	border-bottom : 3px solid #9C96A7;
 	background: #3C3C3C;		
 	background-position: 65px 38px;	
 }
 
 #user a {
-	/*padding : 0 7px;
-	display : inline-block;*/
 	font: normal 11px/50px Arial, sans-serif;
 	text-decoration: none;
 	text-transform: lowercase;
 	color : #fff;
-	margin-left:5px;
-	/*border-bottom : 3px solid #9C96A7;
-	background: #3C3C3C;		background-position: 65px 38px;
-
-	background: url("/assets/server/images/stop.png") no-repeat 83px 35px #3C3C3C ;*/
-
+	/*padding : 0 7px;
+	display : inline-block;
+	border-bottom : 3px solid #9C96A7;
+	background: #3C3C3C;		
+	background-position: 65px 38px;*/
 }
 
+#user a:hover {
+	text-decoration:underline;
+}
+
+
 #user #logout {
-display:block;
-height:10px;
-width:10px;
+height:9px;
+width:9px;
+margin-bottom: -10px;
+margin-left: -4px;
+margin-top: 1px;
 background: url("/assets/server/images/stop.png") no-repeat;
-margin-bottom:5px;
+/*margin-bottom:5px;
 margin-top:-15px;
-margin-left:83px;
-/*float:right;
-margin-top:35px;
-margin-right:0px;*/}
+margin-left:83px;*/
+}
 
 #user #logout:hover {
 cursor:pointer;
 background: url("/assets/server/images/stop-hover.png") no-repeat;
 }
-
-
-
-
-
 
 #user .btn{
 	background:#3C3C3C;
