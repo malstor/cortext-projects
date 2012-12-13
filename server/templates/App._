@@ -58,7 +58,6 @@
 </div> <!-- /#menu-->
 
 <div id="user">
-<div id="logout" title="logout"></div>
 
 <% if(session && session.user){ %>
 <a href="/user/<%= session.user.id %>"><%= session.user.name %></a>
