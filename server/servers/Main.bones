@@ -66,8 +66,8 @@ server.prototype.extra_routes = function(app){
     this.post('/api/Project/:project/document', this.api_project_document);
     this.post('/api/Project/:project/analysis', this.api_project_analysis);
     this.post('/api/Project/:project/member', this.api_project_member);
-    this.post('/api/element/:element/status', this.api_element_status); 
-    this.post('/api/Project/:project/:element/status', this.api_element_status);
+
+    this.post('/api/analysis/:analysis/status', this.api_analysis_status);
 }
 
 server.prototype.api_project_document = function(req, res, next){
@@ -122,17 +122,15 @@ server.prototype.api_project_members_propose = function(req, res, next){
     });
 }
 
-server.prototype.api_element_status = function(req, res, next){
-    var element_id = req.params.element;
+server.prototype.api_analysis_status = function(req, res, next){
+    var analysis_id = req.params.analysis;
 
-    var e = new models.Elements({ id : element_id });
-    e.save({ body : req.body }, {
-        success: function(model, resp) {
-            res.send(resp, headers);
-        },
-        error: function(model, err) {
-            err = err instanceof Object ? err.toString() : err;
-            next(new Error.HTTP(err, 409));
-        }
-    });
+    var e = new models.element({ id : parseInt(analysis_id) });
+
+    e.update_content( req.body, function(element){
+        console.log(element);
+
+        res.send(element, headers);
+    } );
+
 }

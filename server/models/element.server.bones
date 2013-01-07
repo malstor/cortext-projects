@@ -61,16 +61,52 @@ models.element.prototype.sync_update = function(method, model, options){
         //     date_upated : new Date().getTime()
         // });
 
+        // var update = {
+        //     $set : model.changedAttributes()
+        // }
+
         var update = {
-            $set : model.changedAttributes()
+            $set : { content : model.get('content') }
         }
 
-        console.log(update);
+        // console.log(model);
+        // console.log(update);
 
-        elements.update({id: model.id}, update, function(error, results){
-             options.success( results[0] );
+        elements.update({"id" : parseInt(model.id)}, update, function(error, results){
+            console.log(error);
+            options.success( model );
         });
     });
+}
+
+models.element.prototype.update_content = function(content, cb){
+    var _this = this;    
+
+    var save = function(model){
+        model.set({ content : content });
+
+        model.save({}, {
+            success : function(model){
+                console.log(model);
+                cb(model)
+            },
+            error : function(){
+                console.log('failed to update analysis: ' + model.id);
+            }
+        });
+    }
+
+    this.fetch({
+        success : function(model, response){
+            save(model);
+        },
+        error : function(error){
+            console.log('failed to fetch analysis: ' + _this.id);
+            console.log(error);
+        }
+    });
+
+
 }
 
 models.element.prototype.sync_update_project_counter = function(element){

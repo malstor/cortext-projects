@@ -8,37 +8,30 @@
 	<span class="date"><a href="<%= e.permalink %>"><%= moment(e.date).format("DD.MM.YYYY") %></a></span>
 </div><!-- /info -->
 
+<% if( e.content && e.content.results ){ %>
 <div class="files">
-	<div class="file">
-		<div class="icon img-pdf">pdf</div>
-		<div class="name">mon super nom de fichier un peu long</div>
 
-		<div class="info">            
-			<span class="comments"><a href="#">5 comments</a></span>
-			<span class="date">23:12 12.05.2012</span>
-		</div>
-	</div><!-- /file: 1 -->
+<% _.each( e.content.results, function(result){ %>
 
 	<div class="file">
 		<div class="icon img-pdf">pdf</div>
-		<div class="name">mon super nom de fichier un peu long</div>
+		<div class="name"><a href="<%= result.url %>"><%= result.title %></a></div>
 
-		<div class="info">            
-			<span class="comments"><a href="#">5 comments</a></span>
+		<!-- <div class="info">            
+			<span class="comments"><a href="#">5 comments</a></span> 
 			<span class="date">23:12 12.05.2012</span>
 		</div>
-	</div><!-- /file: 2 -->
-
-	<div class="file">
-		<div class="icon img-pdf">pdf</div>
-		<div class="name">mon super nom de fichier un peu long</div>
-
-		<div class="info">            
-			<span class="comments"><a href="#">5 comments</a></span>
-			<span class="date">23:12 12.05.2012</span>
-		</div>
-	</div><!-- /file: 3 -->
+		-->
+	</div>
+<% }); %>
 
 </div><!-- /files -->
+
+<% } else { %>
+
+<p>this script has not been yet processed</p>
+
+<% } %>
+
 
 </div>
