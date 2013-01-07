@@ -771,11 +771,18 @@ background: url("/assets/server/images/stop-hover.png") no-repeat;
 }
 	
 .message .body p{
-	font: normal 12px/14px Arial, sans-serif;
+	font: normal 12px/1.4em Arial, sans-serif;
 	color:#909090;
 	margin: 5px 10px;
 	text-align: justify;
-}	
+}
+
+.element .status { 
+	font: normal 12px/14px Arial, sans-serif;
+	color:#909090;
+	text-align : center;
+	margin : 20px 0;
+}
 	
 	
 /*-------------------analysis--------------------------*/
