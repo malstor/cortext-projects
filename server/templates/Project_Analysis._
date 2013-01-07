@@ -29,7 +29,7 @@
 
 <% } else { %>
 
-<p>this script has not been yet processed</p>
+<p class="status">this script has not been yet processed</p>
 
 <% } %>
 
