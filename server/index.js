@@ -1,3 +1,5 @@
+var domain = require('domain');
+
 bones  = require('bones');
 marked = require('marked');
 moment = require('moment');
@@ -21,5 +23,14 @@ session = {};
 request = {};
 
 if (!module.parent) {
+
+  var d = domain.create();
+
+  d.on('error', function(err){
+    console.log(err);
+  });
+
+  d.run(function(){
     bones.start();
+  });
 }

@@ -37,6 +37,7 @@ servers.Core.augment({
 
 servers.Middleware.augment({
     initialize: function(parent, app) {
+
         parent.call(this, app);
 		this.all("*", function(req, res, next){
 //			console.log("hoho");
