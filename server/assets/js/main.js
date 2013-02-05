@@ -209,15 +209,14 @@ $(document).ready(function(){
                                 $("form .start").click(function(){
 					var parameters = {
 						context : {
-							project_id : project,
-                                                                                                                user_id : current_user.id
+							project_id : project
 						}
 						
 					};
 
 					console.log($.param(parameters, true));
 
-					window.location = "http://managerdev.cortext.org/job/new?" + $.param(parameters);
+					window.location = "http://managerdev.cortext.org/job/new?user_id="+current_user.id+"&" + $.param(parameters);
 				});
 
     			activate_button("#add-element .message textarea", "#add-element .message .add");
