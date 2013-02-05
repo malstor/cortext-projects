@@ -209,7 +209,8 @@ $(document).ready(function(){
                                 $("form .start").click(function(){
 					var parameters = {
 						context : {
-							project_id : project
+							project_id : project,
+                                                                                                                user_id : current_user.id
 						}
 						
 					};
