@@ -29,7 +29,13 @@
 
 <% } else { %>
 
-<p class="status">this script has not been yet processed</p>
+<p class="status">
+		<% if(e. content && e.content.status){ %>
+			<%= e.content.status %>
+		<% } else { %>
+			this script has not been started yet
+		<% } %>
+</p>
 
 <% } %>
 
