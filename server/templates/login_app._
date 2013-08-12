@@ -1,5 +1,0 @@
-Welcome back, dude!
-
-<img src="<%= user.gravatar %>" />
-
-<%= user.name %>

@@ -1,7 +1,0 @@
-<div class="participation">
-	<ul class="data">
-	<% _.each(composition, function(v, k){ %>
-	<div class="<%= k %>"><%= k %>: <span><%= v %></span></div>
-	<% }); %>
-	</ul>
-</div><!-- /.participation -->
