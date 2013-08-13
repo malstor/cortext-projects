@@ -13,7 +13,7 @@
 
 	<div class="author"><%= p.members[e.author].name %></div>
 	<div class="title"><a href="/project/{{ ../id }}#{{ type }}-{{ id }}">{{ title }}</a></div>
-	<div class="date"><%= moment(e.date).format("DD.MM.YYYY") %></div>
+	<div class="date">{{date_short date }}</div>
 	</div>
 	{{/each}}
 

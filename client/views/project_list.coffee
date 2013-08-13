@@ -6,12 +6,15 @@ spare_elements =
   1:
     type: "image"
     title: "une fausse image"
+    date: (new Date().getTime())
   2:
     type: "analysis"
     title: "une fausse analyse"
+    date: new Date().getTime()
   3:
     type: "message"
     title: "un faux message"
+    date: new Date().getTime()
 
 @project_list = Backbone.View.extend
   init: ()->
