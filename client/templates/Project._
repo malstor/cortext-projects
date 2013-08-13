@@ -1,0 +1,136 @@
+<div class="project-meta col-1">
+
+<div class="info">
+	<h3>informations</h3>
+
+	<div class="date_created date">created: <span><%= moment(project.date_created).format("DD.MM.YYYY") %></span></div>
+	<div class="date_updated date">updated: <span><%= moment(project.date_updated).format("DD.MM.YYYY") %></span></div>
+</div>
+
+<div class="script" id="script">
+
+	<h3>queued scripts</h3>
+	<%= templates.queued_scripts() %>
+	
+</div><!-- /project-script -->
+
+<div class="members" id="members">
+    <div id="user-icon"></div>
+	<h3>participants</h3>
+
+	<% _.each(project.members, function(member){ %>
+	<%= templates.Project_member({ member : member, templates : templates }) %>
+	<% }); %>
+
+	<div id='new-members'>
+
+	<h4>invite a new member</h4>
+
+	<div>
+		<form id="add-members">
+			<input type="text" value="type user name or email"></input>
+		</form>
+			
+		<div id="proposition-members">
+		</div><!-- #proposition-members -->
+
+		<div id="send-invitation">
+			<a href="#">send invitation</a>
+		</div>		
+	</div>
+	</div>
+
+	</div>
+</div>
+
+
+</div><!-- /project-meta -->
+
+<div class="col-main">
+
+<div id="add-element">
+
+<div id="select-type">
+	<button rel="analysis" class="analysis">analysis</button>
+	<button rel="document" class="document">document</button>
+	<button rel="message" class="message">message</button>
+</div
+
+<form rel="<%= project.id %>" class="analysis">
+<button type="button" class="start">start a new script on cortext.manager</add>
+</form>
+
+<form rel="<%= project.id %>" class="document">
+<button type="button" class="upload">upload a new document</add>
+</form>
+	
+
+<form rel="<%= project.id %>" class="message">
+<textarea id="new-message-body">Type your message for all your happy co-workers!</textarea>
+
+<button class="add">add</add>
+</form>
+
+</div>
+
+<div id="elements" class="project elements">
+
+<% _.each(elements, function(e){ %>
+<%= e %>
+<% }); %>
+
+</div><!-- /elements -->
+
+</div><!-- /col-main -->
+
+<div class="project-meta2 col-2">
+	
+	<h3>user</h3>
+	<div id="gravatar">
+	<img src="#" />
+	</div>
+	
+	<div id="infos">
+	<h1 id="name">#indefined</h1>
+	<div id="email" class="email">#indefined</div>
+	</div>
+
+	<div id="indicator_infos">
+	
+	<div id="indicator_projects">
+		<h4>projects</h4><div class="number">#</div>
+	</div>
+	<div id="indicator_analysis">
+		<h4>analysis</h4><div class="number">#</div>
+	</div>
+	<div id="indicator_documents">
+		<h4>documents</h4><div class="number">#</div>
+	</div>
+	<div id="indicator_messages">
+		<h4>messages</h4><div class="number">#</div>
+	</div>
+	</div><!-- /indicator_infos -->
+
+
+<h3>visualisations type</h3>
+<div id="visualisations_infos">
+
+	<div id="visualisations_maps">
+		<h4>maps</h4><div class="number">#</div>
+	</div>
+	
+	<div id="visualisations_tubes">
+		<h4>tubes</h4><div class="number">#</div>
+	</div>
+	
+	<div id="visualisations_charts">
+		<h4>charts</h4><div class="number">#</div>
+	</div>
+	
+	<div id="visualisations_data">
+		<h4>data</h4><div class="number">#</div>
+	</div>
+
+</div><!-- /visualisations_infos -->
+
+</div><!-- /project-meta2 -->

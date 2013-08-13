@@ -1,0 +1,43 @@
+<div class="element analysis user-<%= e.author %>" id="Analysis-<%= e.id %>">
+
+<div class="info">
+	<h3>analysis.py</h3>
+	<span class="type analysis"><%= e.type %></span>
+	<span class="author"><%= author.name %></span>
+	<span class="extra"><a href="#">parameters</a> - <a href="#">logs</a></span>
+	<span class="date"><a href="<%= e.permalink %>"><%= moment(e.date).format("DD.MM.YYYY") %></a></span>
+</div><!-- /info -->
+
+<% if( e.content && e.content.results ){ %>
+<div class="files">
+
+<% _.each( e.content.results, function(result){ %>
+
+	<div class="file">
+		<div class="icon img-pdf">pdf</div>
+		<div class="name"><a href="<%= result.url %>"><%= result.title %></a></div>
+
+		<!-- <div class="info">            
+			<span class="comments"><a href="#">5 comments</a></span> 
+			<span class="date">23:12 12.05.2012</span>
+		</div>
+		-->
+	</div>
+<% }); %>
+
+</div><!-- /files -->
+
+<% } else { %>
+
+<p class="status">
+		<% if(e. content && e.content.status){ %>
+			<%= e.content.status %>
+		<% } else { %>
+			this script has not been started yet
+		<% } %>
+</p>
+
+<% } %>
+
+
+</div>

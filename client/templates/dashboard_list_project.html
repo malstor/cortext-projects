@@ -1,0 +1,22 @@
+<template name="dashboard_list_project">
+<div id="project-{{ project.id }}" class="project">
+
+	<h2><a href="/project/{{ project.id }}">{{ project.title }}</a></h2>
+
+	<%= templates.participation({ composition: p.composition }) %>
+
+	<div class="elements">
+
+	{{#each elements}}
+	<div id="{{ type }}-{{ id }}" class="{{ type }}>">	
+	<div class="icons"></div>
+
+	<div class="author"><%= p.members[e.author].name %></div>
+	<div class="title"><a href="/project/{{ ../id }}#{{ type }}-{{ id }}">{{ title }}</a></div>
+	<div class="date"><%= moment(e.date).format("DD.MM.YYYY") %></div>
+	</div>
+	{{/each}}
+
+	</div><!-- /elements-->
+</div><!-- /#project-<%= p.id %> -->
+</template>
