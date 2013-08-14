@@ -6,8 +6,12 @@
 	<%= templates.participation({ composition: p.composition }) %>
 
 	<div class="elements">
+	</div><!-- /elements-->
+</div><!-- /#project-<%= p.id %> -->
+</template>
 
-	{{#each elements}}
+<template name="dashboard_project_element">
+{{#with element}}
 	<div id="{{ type }}-{{ id }}" class="{{ type }}>">	
 	<div class="icons"></div>
 
@@ -15,8 +19,13 @@
 	<div class="title"><a href="/project/{{ ../id }}#{{ type }}-{{ id }}">{{ title }}</a></div>
 	<div class="date">{{date_short date }}</div>
 	</div>
-	{{/each}}
+{{/with}}
+</template>
 
-	</div><!-- /elements-->
-</div><!-- /#project-<%= p.id %> -->
+<template name="project_simple">
+		<li class="project-title">
+		<a href="/project/<%= p.id %>">{{ p.title }}</a>
+		<span class="members-count"><%= _.size(p.members) %></span>
+		<%= templates.participation({ composition: p.members[current_user_id].participation }) %>
+	</li>
 </template>

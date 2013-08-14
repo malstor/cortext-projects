@@ -4,8 +4,8 @@
 <div class="info">
 	<h3>informations</h3>
 
-	<div class="date_created date">created: <span><%= moment(project.date_created).format("DD.MM.YYYY") %></span></div>
-	<div class="date_updated date">updated: <span><%= moment(project.date_updated).format("DD.MM.YYYY") %></span></div>
+	<div class="date_created date">created: <span>{{date_short project.date_created }}</span></div>
+	<div class="date_updated date">updated: <span>{{date_short project.date_updated }}</span></div>
 </div>
 
 <div class="script" id="script">
@@ -57,16 +57,16 @@
 	<button rel="message" class="message">message</button>
 </div
 
-<form rel="<%= project.id %>" class="analysis">
+<form rel="{{= project.id }}" class="analysis">
 <button type="button" class="start">start a new script on cortext.manager</add>
 </form>
 
-<form rel="<%= project.id %>" class="document">
+<form rel="{{= project.id }}" class="document">
 <button type="button" class="upload">upload a new document</add>
 </form>
 	
 
-<form rel="<%= project.id %>" class="message">
+<form rel="{{= project.id }}" class="message">
 <textarea id="new-message-body">Type your message for all your happy co-workers!</textarea>
 
 <button class="add">add</add>

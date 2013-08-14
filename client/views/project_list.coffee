@@ -1,11 +1,35 @@
 Meteor.subscribe "projects"
+Meteor.subscribe "elements"
 
-@project_list = Backbone.View.extend
+
+@project_list_simple = Backbone.View.extend
   render: ()->
-    _(projects.find({}).fetch()).each (project)=>
-      @$el.append Template.dashboard_list_project
-        project: project
-        #elements: elements
+    Deps.autorun ()=>
+      @$el.empty()
+
+      _(projects.find({}).fetch()).each (project)=>
+        console.log project
+        @$el.append Template.project_simple
+          p: project
+
+@project_list_with_elements = Backbone.View.extend
+  render_elements: (project_id)->
+    Deps.autorun ()=>
+      project_elements = elements.find({ project : project_id }).fetch()
+
+      $("#project-"+project_id+" .elements").empty()
+
+      _(project_elements).each (element)=>
+        $("#project-"+project_id+" .elements").append(Template.dashboard_project_element({ element: element }))
+
+  render: ()->
+    Deps.autorun ()=>
+      _(projects.find({}).fetch()).each (project)=>
+
+        @$el.append Template.dashboard_list_project
+          project: project
+
+        @render_elements project.id
 
 # @project_element = Backbone.View.extend
 #   render: ()->

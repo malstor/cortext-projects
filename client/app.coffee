@@ -15,7 +15,8 @@
     u.render()
 
   project: (project_id)->
-    p = new project()
+    p = new project
+      project_id: project_id
     p.render()
 
   element: (element_id)->
