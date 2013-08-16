@@ -11,3 +11,4 @@ Meteor.subscribe "projects"
         console.log project
         $("#main").html Template.project 
           project: project
+          composition: []

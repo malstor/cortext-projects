@@ -3,7 +3,9 @@
 
 	<h2><a href="/project/{{ project.id }}">{{ project.title }}</a></h2>
 
-	<%= templates.participation({ composition: p.composition }) %>
+	<div class="participation">
+		{{participation composition}}		
+	</div>
 
 	<div class="elements">
 	</div><!-- /elements-->
