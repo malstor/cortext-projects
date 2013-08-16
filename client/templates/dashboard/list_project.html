@@ -5,21 +5,9 @@
 
 	<div class="participation"></div>
 
-	<div class="elements">
+	<div class="project elements">
 	</div><!-- /elements-->
 </div><!-- /#project-<%= p.id %> -->
-</template>
-
-<template name="dashboard_project_element">
-{{#with element}}
-	<div id="{{ type }}-{{ id }}" class="{{ type }}>">	
-	<div class="icons"></div>
-
-	<div class="author">{{ ../author.name }}</div>
-	<div class="title"><a href="/project/{{ ../id }}#{{ type }}-{{ id }}">{{ title }}</a></div>
-	<div class="date">{{date_short date }}</div>
-	</div>
-{{/with}}
 </template>
 
 <template name="project_simple">

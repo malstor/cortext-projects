@@ -77,7 +77,7 @@ Meteor.subscribe "projects"
         member = members.findOne({ id: element.author })
         if member
           element.author = member
-          $("#project-"+project_id+" .elements").append(Template[element.type.toLowerCase()](element))        
+          $("#project-"+project_id+" .elements").append Template[element.type.toLowerCase()](element)
 
   render: ()->
     Deps.autorun ()=>
