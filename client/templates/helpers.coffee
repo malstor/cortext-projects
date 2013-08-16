@@ -7,3 +7,6 @@ Handlebars.registerHelper 'participation', (composition)->
       element =
         key: k
         value: v
+
+Handlebars.registerHelper 'size', (a)->
+  return _(a).size()

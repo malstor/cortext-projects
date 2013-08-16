@@ -6,13 +6,15 @@ Meteor.subscribe "projects"
 
     Deps.autorun ()=>
       p = projects.findOne({ id: project_id })
+      p_e = elements.find({ project: project_id }).fetch()
+      p_m = _(_(p_e).pluck("author")).uniq()
 
       t = Template.project_simple
         p: p
+        members: p_m
 
+      @$el.find('.project-'+project_id).remove()
       @$el.append t
-
-      p_e = elements.find({ project: project_id }).fetch()
 
       reduce = (m, type)->
         m[type] = if m[type] is undefined then 0 else m[type] + 1
