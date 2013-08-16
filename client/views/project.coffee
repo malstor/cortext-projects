@@ -10,6 +10,7 @@
 
       _(p_e).each (e)=>
         # @$el.find("#elements").append e.author
+        e.author = members.findOne( { id: e.author } )
         $("#elements").append Template[ e.type.toLowerCase() ] e
 
   render: ()->
