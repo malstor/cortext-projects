@@ -15,11 +15,7 @@ Meteor.subscribe "projects"
       p_e = elements.find({ project: project_id }).fetch()
 
       reduce = (m, type)->
-        if m[type] >= 0
-          m[type] = m[type] + 1
-        else
-          m[type] = 0
-
+        m[type] = if m[type] is undefined then 0 else m[type] + 1
         m
 
       composition = _(_(p_e).map (e)-> if e.author == 0 then e.type else "Others" ).reduce reduce, {}
@@ -53,12 +49,9 @@ Meteor.subscribe "projects"
 
   render_composition: (project_id, elements)->
     reduce = (m, type)->
-      if m[type] >= 0
-        m[type] = m[type] + 1
-      else
-        m[type] = 0
-
+      m[type] = if m[type] is undefined then 0 else m[type] + 1
       m
+
 
     composition = _(_(elements).map (e)-> e.type ).reduce reduce, {}
 
