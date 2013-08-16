@@ -10,3 +10,6 @@ Handlebars.registerHelper 'participation', (composition)->
 
 Handlebars.registerHelper 'size', (a)->
   return _(a).size()
+
+Handlebars.registerHelper 'md', (txt)->
+  return new Handlebars.SafeString marked txt

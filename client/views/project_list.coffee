@@ -76,7 +76,8 @@ Meteor.subscribe "projects"
       _(project_elements).each (element)=>
         member = members.findOne({ id: element.author })
         if member
-          $("#project-"+project_id+" .elements").append(Template.dashboard_project_element({ element: element, author: member }))        
+          element.author = member
+          $("#project-"+project_id+" .elements").append(Template[element.type.toLowerCase()](element))        
 
   render: ()->
     Deps.autorun ()=>
