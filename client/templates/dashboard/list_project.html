@@ -3,9 +3,7 @@
 
 	<h2><a href="/project/{{ project.id }}">{{ project.title }}</a></h2>
 
-	<div class="participation">
-		{{participation composition}}		
-	</div>
+	<div class="participation"></div>
 
 	<div class="elements">
 	</div><!-- /elements-->
@@ -17,7 +15,7 @@
 	<div id="{{ type }}-{{ id }}" class="{{ type }}>">	
 	<div class="icons"></div>
 
-	<div class="author"><%= p.members[e.author].name %></div>
+	<div class="author">{{ ../author.name }}</div>
 	<div class="title"><a href="/project/{{ ../id }}#{{ type }}-{{ id }}">{{ title }}</a></div>
 	<div class="date">{{date_short date }}</div>
 	</div>
@@ -25,9 +23,9 @@
 </template>
 
 <template name="project_simple">
-		<li class="project-title">
+		<li data-project="{{ p.id }}" class="project-title project-{{ p.id }}">
 		<a href="/project/<%= p.id %>">{{ p.title }}</a>
 		<span class="members-count"><%= _.size(p.members) %></span>
-		<%= templates.participation({ composition: p.members[current_user_id].participation }) %>
+		<div class="participation"></div>
 	</li>
 </template>
