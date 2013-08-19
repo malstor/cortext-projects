@@ -1,0 +1,9 @@
+<template name="path">
+<ul>
+<li class="home"><a href="/dashboard"><img src="/assets/server/images/home.png" alt="#" /></a></li>
+<li class="dashboard"><a class="name" href="/dashboard">dashboard</a></li>
+{{#each path}}
+<li class="{{ type }}"><span class="type">{{ type }}</span><a class="name" href="{{ url }}">{{ name }}</a></li>  
+{{/each}}
+</ul>
+</template>

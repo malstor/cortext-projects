@@ -10,15 +10,7 @@
 <div id="header">
 <div id="menu">
 
-<nav id="path">
-<ul>
-<li class="home"><a href="/dashboard"><img src="/assets/server/images/home.png" alt="#" /></a></li>
-<li class="dashboard"><a class="name" href="/dashboard">dashboard</a></li>
-<% _.each(path, function(element){ %>
-<li class="<%= element.type %>"><span class="type"><%= element.type %></span><a class="name" href="<%= element.url %>"><%= element.name %></a></li>  
-<% }); %>
-</ul>
-</nav>
+<nav id="path"></nav>
 
 	<div id="login-panel">
 		<form action="" method="post">
