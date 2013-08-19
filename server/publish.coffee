@@ -22,3 +22,6 @@ Meteor.publish 'elements', ()->
 
 Meteor.publish 'members', ()->
   members.find({})
+
+Meteor.publish 'member', (user_id)->
+  members.find({ id: user_id })

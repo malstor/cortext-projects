@@ -20,12 +20,22 @@
     @path()
 
   user: (user_id)->
-    u = new user()
-    u.render()
+    user_id = parseInt user_id
+    member = new models.member() 
 
-    @path
-      type: "user"
-      url: "/"
+    member.on "member:loaded", ()=>
+      console.log member.attributes
+      u = new user
+        user: member.attributes
+      u.render()
+
+      @path [
+        type: "user"
+        url: "/"
+        name: member.get("name")
+      ]
+
+    member.get_by_id user_id
 
   project: (project_id)->
     project_id = parseInt project_id
@@ -38,7 +48,7 @@
 
     model.on "project:loaded", ()=>
       @path [
-        type: "project"
+        type: "Project"
         name: model.get("title")
       ]
 

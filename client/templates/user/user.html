@@ -26,17 +26,17 @@
 
 </div><!-- /user-meta -->
 
-<div id="user-<%= user.id %>" class="user profile col-main">
+<div id="user-{{ user.id }}" class="user profile col-main">
 
 <div class="info">
 
 	<div id="gravatar">
-	<img src="<%= user.gravatar %>" />
+	<img src="{{ user.gravatar }}" />
 	</div>
 	
 	<div>
-	<h1 id="name"><%= user.name %></h1>
-	<div id="email" class="email"><%= user.email %></div>
+	<h1 id="name">{{ user.name }}</h1>
+	<div id="email" class="email">{{ user.email }}</div>
 	</div>
 
 	<div id="indicators"><div>
