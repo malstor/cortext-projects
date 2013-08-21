@@ -36,4 +36,4 @@
       @render_elements project
       @render_participants project
 
-    project.get_by_id @options.project_id        
+    project.get_by_id @options.project_id
