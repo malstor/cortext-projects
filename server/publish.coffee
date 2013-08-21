@@ -24,4 +24,12 @@ Meteor.publish 'members', ()->
   members.find({})
 
 Meteor.publish 'member', (user_id)->
-  members.find({ id: user_id })
+  u_e = elements.find({ author: user_id }).fetch()
+  u_p = _(u_e).pluck("id")
+  u_p = _(u_p).uniq()
+
+  results = [
+    members.find({ id: user_id }),
+    elements.find({ author: user_id }),
+    projects.find({ id: {$in: u_p }})
+  ]

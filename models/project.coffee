@@ -12,8 +12,10 @@
     @composition = _(_(@elements).map (e)-> e.type ).reduce @reduce_elements_to_composition, {}
 
   get_participation: (author_id)->
+    author_id = parseInt author_id
 
-    composition = _(_(@elements).map (e)-> if e.author.id == author_id then e.type else "Others" ).reduce @reduce_elements_to_composition, {}
+    composition = _(_(@elements).map (e)->
+      if e.author == author_id then e.type else "Others" ).reduce @reduce_elements_to_composition, {}
 
   set_events: ()->
     Deps.autorun ()=>

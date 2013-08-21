@@ -4,8 +4,11 @@
   render_elements: (project)->
     _(project.elements).each (e)=>
       # @$el.find("#elements").append e.author
-      e.author = members.findOne( { id: e.author } )
-      $("#elements").append Template[ e.type.toLowerCase() ] e
+
+      element = _(e).clone()
+      element.author = members.findOne( { id: e.author } )
+
+      $("#elements").append Template[ e.type.toLowerCase() ] element
 
   render_participants: (project)->
     $("#members .list").empty()

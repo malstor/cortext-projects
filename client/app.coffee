@@ -20,13 +20,11 @@
     @path()
 
   user: (user_id)->
-    user_id = parseInt user_id
     member = new models.member() 
 
     member.on "member:loaded", ()=>
-      console.log member.attributes
       u = new user
-        user: member.attributes
+        user: member
       u.render()
 
       @path [
