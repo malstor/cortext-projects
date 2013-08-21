@@ -4,13 +4,16 @@
   initialize: ()->
     @set_events()
 
-  set_composition: ()->
-    reduce = (m, type)->
-      m[type] = if m[type] is undefined then 0 else m[type] + 1
-      m
+  reduce_elements_to_composition: (m, type)->
+    m[type] = if m[type] is undefined then 0 else m[type] + 1
+    m
 
-    @composition = _(_(@elements).map (e)-> e.type ).reduce reduce, {}
-#    @composition = _(_(p.elements).map (e)-> if e.author == 0 then e.type else "Others" ).reduce reduce, {}
+  set_composition: ()->
+    @composition = _(_(@elements).map (e)-> e.type ).reduce @reduce_elements_to_composition, {}
+
+  get_participation: (author_id)->
+
+    composition = _(_(@elements).map (e)-> if e.author.id == author_id then e.type else "Others" ).reduce @reduce_elements_to_composition, {}
 
   set_events: ()->
     Deps.autorun ()=>
