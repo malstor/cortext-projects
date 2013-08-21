@@ -38,8 +38,6 @@
     member.get_by_id user_id
 
   project: (project_id)->
-    project_id = parseInt project_id
-
     p = new project
       project_id: project_id
     p.render()

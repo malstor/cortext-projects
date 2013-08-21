@@ -2,25 +2,22 @@ Meteor.subscribe "projects"
 
 @project_list_simple = Backbone.View.extend
   render_item: (project_id)->
-    Meteor.subscribe "project", project_id
+    p = new models.project()
 
-    Deps.autorun ()=>
-      p = projects.findOne({ id: project_id })
-      p_e = elements.find({ project: project_id }).fetch()
-      p_m = _(_(p_e).pluck("author")).uniq()
-
+    p.on "project:loaded", ()=>
       t = Template.project_simple
-        p: p
-        members: p_m
+        p: p.attributes
+        members: p.members
 
       @$el.find('.project-'+project_id).remove()
       @$el.append t
 
+    p.on "project:elements:changed", ()=>
       reduce = (m, type)->
         m[type] = if m[type] is undefined then 0 else m[type] + 1
         m
 
-      composition = _(_(p_e).map (e)-> if e.author == 0 then e.type else "Others" ).reduce reduce, {}
+      composition = _(_(p.elements).map (e)-> if e.author == 0 then e.type else "Others" ).reduce reduce, {}
 
       $("#project-"+project_id+" .participation").empty()
 
@@ -28,6 +25,8 @@ Meteor.subscribe "projects"
          el: '#projects-simple .project-'+project_id+' .participation'
          composition: composition
       .render()
+
+    p.get_by_id(project_id)
 
   render: ()->
     Deps.autorun ()=>
@@ -38,16 +37,17 @@ Meteor.subscribe "projects"
 
 @project_list_with_elements = Backbone.View.extend
   render_project: (project_id)->
-    Meteor.subscribe "project", project_id
+    p = new models.project()
 
-    Deps.autorun ()=>
-      p = projects.findOne({ id: project_id })
-
+    p.on "project:loaded", ()=>
       @$el.append Template.dashboard_list_project
-        project: p
+        project: p.attributes
         composition: []
 
-      @render_elements p.id
+    p.on "project:elements:changed", ()=>
+      @render_elements p
+
+    p.get_by_id project_id
 
   render_composition: (project_id, elements)->
     reduce = (m, type)->
@@ -65,19 +65,19 @@ Meteor.subscribe "projects"
     .render()
 
 
-  render_elements: (project_id)->
-    Deps.autorun ()=>
-      project_elements = elements.find({ project : project_id }).fetch()
+  render_elements: (project)->
+    project_id = project.attributes.id
+    project_elements = project.elements
 
-      @render_composition project_id, project_elements
+    @render_composition project_id, project_elements
 
-      $("#project-"+project_id+" .elements").empty()
+    $("#project-"+project_id+" .elements").empty()
 
-      _(project_elements).each (element)=>
-        member = members.findOne({ id: element.author })
-        if member
-          element.author = member
-          $("#project-"+project_id+" .elements").append Template[element.type.toLowerCase()](element)
+    _(project_elements).each (element)=>
+      member = members.findOne({ id: element.author })
+      if member
+        element.author = member
+        $("#project-"+project_id+" .elements").append Template[element.type.toLowerCase()](element)
 
   render: ()->
     Deps.autorun ()=>
