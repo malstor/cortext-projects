@@ -13,17 +13,11 @@ Meteor.subscribe "projects"
       @$el.append t
 
     p.on "project:elements:changed", ()=>
-      reduce = (m, type)->
-        m[type] = if m[type] is undefined then 0 else m[type] + 1
-        m
-
-      composition = _(_(p.elements).map (e)-> if e.author == 0 then e.type else "Others" ).reduce reduce, {}
-
       $("#project-"+project_id+" .participation").empty()
 
       new participation
          el: '#projects-simple .project-'+project_id+' .participation'
-         composition: composition
+         composition: p.composition
       .render()
 
     p.get_by_id(project_id)
@@ -46,16 +40,13 @@ Meteor.subscribe "projects"
 
     p.on "project:elements:changed", ()=>
       @render_elements p
+      @render_composition p
 
     p.get_by_id project_id
 
-  render_composition: (project_id, elements)->
-    reduce = (m, type)->
-      m[type] = if m[type] is undefined then 0 else m[type] + 1
-      m
-
-
-    composition = _(_(elements).map (e)-> e.type ).reduce reduce, {}
+  render_composition: (project)->
+    project_id = project.attributes.id
+    composition = project.composition
 
     $("#project-"+project_id+" .participation").empty()
  
@@ -64,12 +55,9 @@ Meteor.subscribe "projects"
       composition: composition
     .render()
 
-
   render_elements: (project)->
     project_id = project.attributes.id
     project_elements = project.elements
-
-    @render_composition project_id, project_elements
 
     $("#project-"+project_id+" .elements").empty()
 
