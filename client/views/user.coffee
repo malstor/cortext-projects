@@ -21,6 +21,21 @@
 
         p.get_by_id project.id
 
+  render_messages: ()->
+    u = @options.user
+
+    u.on "member:elements:changed", ()=>
+      _(u.projects).each (p)=>
+        p.messages = _(u.elements).where
+          project: p.id
+          type: "Message"
+
+      u.projects = _(u.projects).filter (p)->
+        _(p.messages).size() > 0
+
+      $("#messages").html Template.user_messages
+        projects: u.projects
+
   render_counter: ()->
     u = @options.user
 
@@ -34,5 +49,6 @@
     $("#main").html Template.user
       user: @options.user.attributes
 
-    @render_projects()
     @render_counter()
+    @render_projects()
+    @render_messages()
