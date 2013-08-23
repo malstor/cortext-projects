@@ -1,0 +1,19 @@
+<template name="dashboard_list_project">
+<div id="project-{{ project.id }}" class="project">
+
+	<h2><a href="/project/{{ project.id }}">{{ project.title }}</a></h2>
+
+	<div class="participation"></div>
+
+	<div class="elements">
+	</div><!-- /elements-->
+</div><!-- /#project-<%= p.id %> -->
+</template>
+
+<template name="project_simple">
+		<li data-project="{{ p.id }}" class="project-title project-{{ p.id }}">
+		<a href="/project/<%= p.id %>">{{ p.title }}</a>
+		<span class="members-count">{{size members }}</span>
+		<div class="participation"></div>
+	</li>
+</template>

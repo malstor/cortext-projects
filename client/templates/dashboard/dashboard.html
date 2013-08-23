@@ -1,0 +1,86 @@
+<template  name="dashboard">
+<div id="dashboard-meta" class="col-1">
+
+<div class="info">
+	<h3>informations</h3>
+</div>
+
+<div class="script" id="script">
+	<h3>queued scripts</h3>
+		<%= templates.queued_scripts() %>
+
+</div><!-- /project-script -->
+
+<div id="projects-simple" class="dashboard-projects">
+	<h3>projects</h3>
+	<ul class="projects">
+	</ul>
+</div><!-- /dashboard-projects -->
+	
+</div><!-- /dashboard-script -->
+
+</div><!-- /dashboard-meta -->
+
+<div id="dashboard" class="col-main">
+
+	<form id="project-new">
+	<input type="text" value="type the name of your new project"></input>
+	<button class="new">create</button>
+	</form>
+
+<div id="timeline" class="projects-list">
+</div>
+</div><!-- /#dashboard -->
+
+<div class="project-meta2 col-2">
+
+	<h3>user</h3>
+	<div id="gravatar">
+	<img src="#" />
+	</div>
+	
+	<div id="infos">
+	<h1 id="name">#undefined</h1>
+	<div id="email" class="email">#undefined</div>
+	</div>
+
+	<div id="indicator_infos">
+	
+	<div id="indicator_projects">
+		<h4>projects</h4><div class="number">#</div>
+	</div>
+	<div id="indicator_analysis">
+		<h4>analysis</h4><div class="number">#</div>
+	</div>
+	<div id="indicator_documents">
+		<h4>documents</h4><div class="number">#</div>
+	</div>
+	<div id="indicator_messages">
+		<h4>messages</h4><div class="number">#</div>
+	</div>
+	</div><!-- /indicator_infos -->
+
+
+	<h3>visualisations type</h3>
+	<div id="visualisations_infos">
+
+	<div id="visualisations_maps">
+		<h4>maps</h4><div class="number">#</div>
+	</div>
+	
+	<div id="visualisations_tubes">
+		<h4>tubes</h4><div class="number">#</div>
+	</div>
+	
+	<div id="visualisations_charts">
+		<h4>charts</h4><div class="number">#</div>
+	</div>
+	
+	<div id="visualisations_data">
+		<h4>data</h4><div class="number">#</div>
+	</div>
+
+	</div><!-- /visualisations_infos -->
+	
+</div><!-- /dashboard-meta2 -->
+</template>

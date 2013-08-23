@@ -1,0 +1,9 @@
+<template name="participation">
+  <ul class="data">
+  {{#if composition}}
+  {{#each composition}}
+  <div class="{{key}}">{{this.key}}: <span>{{this.value}}</span></div>
+  {{/each}}
+  {{/if}}
+  </ul>
+</template>

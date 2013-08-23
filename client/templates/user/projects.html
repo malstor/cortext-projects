@@ -1,0 +1,12 @@
+<template name="user_projects">
+{{#each projects}}
+
+<div class="project project-{{ id }}">
+<h4 class="title"><a href="/project/{{ id }}">{{ title }}</a></h4>
+
+<div class="participation"></div>
+
+<div class="date">created: {{date_short date_created }}</div>
+</div>
+{{/each}}
+</template>
