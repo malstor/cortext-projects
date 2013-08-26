@@ -3,8 +3,6 @@
     u = @options.user
 
     u.on "member:elements:changed", ()=>
-      console.log u.projects
-
       $("#projects").html Template.user_projects
         projects: u.projects
 
@@ -12,7 +10,6 @@
         p = new models.project()
 
         p.on "project:elements:changed", ()=>
-          console.log "ouark", u.attributes.id
 
           new participation
             el: $("#projects .project-"+p.attributes.id+" .participation")

@@ -20,6 +20,10 @@
   set_events: ()->
     Deps.autorun ()=>
       @elements = elements.find({ project: @attributes.id }).fetch()
+
+      _(@elements).each (e)=>
+        e.permalink = "/element/#{e.type.toLowerCase()}/#{e.id}/in/#{@attributes.id}"
+
       @members = _(_(@elements).pluck("author")).uniq()
 
       @set_composition()

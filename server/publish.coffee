@@ -13,12 +13,16 @@ Meteor.publish 'project', (project_id)->
     members.find({ id: {$in: p_m }})
   ]
 
-  console.log result
+#  console.log result
 
   result
 
 Meteor.publish 'elements', ()->
   elements.find({})
+
+Meteor.publish 'element', (element_id)->
+  elements.find({ id: element_id })
+
 
 Meteor.publish 'members', ()->
   members.find({})
