@@ -6,7 +6,7 @@
   <span class="type analysis">{{ type }}</span>
   <span class="author">{{ author.name }}</span>
   <span class="extra"><a href="#">parameters</a> - <a href="#">logs</a></span>
-  <span class="date"><a href="<%= e.permalink %>">{{date_short date }}</a></span>
+  <span class="date"><a href="{{ permalink }}">{{date_short date }}</a></span>
 </div><!-- /info -->
 
 <% if( e.content && e.content.results ){ %>
