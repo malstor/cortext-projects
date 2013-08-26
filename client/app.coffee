@@ -40,11 +40,12 @@
   project: (project_id)->
     p = new project
       project_id: project_id
-    p.render()
 
     model = new models.project()
 
     model.on "project:loaded", ()=>
+      p.render()
+
       @path [
         type: "Project"
         name: model.get("title")
