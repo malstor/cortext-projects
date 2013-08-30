@@ -1,0 +1,22 @@
+{
+  "author": "duong tam kien <tk@deveha.com>",
+  "name": "cortext-scripts",
+  "description": "Set of command line tools (mainly in JS and for admin purposes)",
+  "version": "0.0.0",
+  "repository": {
+    "url": "https://github.com/cortext/cortext-scripts"
+  },
+  "dependencies": {
+    "synergipsum" : "*",
+    "pyyaml" : "*",
+    "colors" : "*",
+    "underscore" : "*",
+    "deferred":"*",
+    "mongodb": "*"
+    },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
