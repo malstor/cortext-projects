@@ -11,7 +11,7 @@ names = [
 	"Jean-Philippe Cointet"
 	"Tam Kien Duong"
 	"Chloé Duloquin"
-	"Lise Cornilleau"
+	"Elise Tancoigne"
 	"Marc Barbier"
 	"Philippe Breucker"
 ]
