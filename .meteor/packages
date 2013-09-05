@@ -8,3 +8,12 @@ preserve-inputs
 coffeescript
 backbone
 standard-app-packages
+oauth
+accounts-ui
+accounts-base
+random
+accounts-oauth
+service-configuration
+oauth2
+jquery
+http

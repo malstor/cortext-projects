@@ -3,10 +3,13 @@
     '':                     'dashboard'
     'dashboard':            'dashboard'
     'user/:user_id':        'user'
+    'user/subscribe':       'subscribe'
     'project/:project_id':  'project'
 #    'element/:element_id':  'element'
     'element/:type/:element/in/:project': 'element'
     'element/:type/:element': 'element'
+    'login': 'login'
+    'auth/oauth': 'oauth'
 
   path: (path_elements)->
     console.log "path_elements",  path_elements
@@ -14,6 +17,10 @@
     p = new path
       path: path_elements
     p.render()
+
+  login: ()->
+    l = new login({el: $('#main')})
+    l.render()
 
   dashboard: ()->
     d = new dashboard()

@@ -37,11 +37,11 @@
 
 <div id="user">
 
-<% if(session && session.user){ %>
-<a href="/user/<%= session.user.id %>"><%= session.user.name %></a>
-<% } else { %>
+{{#if currentUser}}
+<a href="/user/{{currentUser.id}}">{{currentUser.profile.name}}</a>
+{{else}}
 <a href="/login"><button class="btn btn-inverse"><i class="icon-user icon-white"></i> login</button></a>
-<% } %>	
+{{/if}}
 
 </div>
 
