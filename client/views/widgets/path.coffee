@@ -1,8 +1,9 @@
 @path = Backbone.View.extend
-  render: ()->
-    $("#path").html Template.path
-      path: @options.path
+  set_as_fix: ()->
+    $("#path ul .dashboard").css("paddingLeft", 107+"px")
+    $("#path ul .home, #path ul .dashboard").unbind("mouseenter mouseleave")
 
+  set_interactions: ()->
     offset = 107
 
     $("#path ul").css("left", "-"+(offset-$("#path ul li.home").innerWidth())+"px")
@@ -21,3 +22,9 @@
       ,
         duration: 600
         queue: false
+
+  render: ()->
+    $("#path").html Template.path
+      path: @options.path
+
+    @set_interactions()

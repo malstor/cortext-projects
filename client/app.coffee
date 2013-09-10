@@ -11,12 +11,15 @@
     'login': 'login'
     'auth/oauth': 'oauth'
 
-  path: (path_elements)->
+  path: (path_elements, options)->
     console.log "path_elements",  path_elements
 
     p = new path
       path: path_elements
     p.render()
+
+    if options.fix
+      p.set_as_fix()
 
   login: ()->
     l = new login({el: $('#main')})
@@ -26,10 +29,8 @@
     d = new dashboard()
     d.render()
 
-    @path()
-
-    $("#path ul .dashboard").css("paddingLeft", 107+"px")
-    $("#path ul .home, #path ul .dashboard").unbind("mouseenter mouseleave")
+    @path {},
+      fix: true
 
   user: (user_id)->
     member = new models.member() 
