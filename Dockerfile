@@ -4,13 +4,16 @@ RUN apt-get install -y curl git
 
 RUN curl https://install.meteor.com | /bin/sh
 
-RUN mkdir /var/www/
-RUN mkdir /var/www/cortext-projects
+#VOLUME ["server"]
 
-ADD . /var/www/cortext-projects
+RUN mkdir /server
+RUN mkdir /server/cortext-projects
+ADD . /server/cortext-projects
+RUN chown root:root -R /server/cortext-projects
+RUN rm -rf /server/cortext-projects/.meteor/local/build
 
 EXPOSE 3000:3000
 
-WORKDIR /var/www/cortext-projects
+WORKDIR /server/cortext-projects
 
 CMD meteor
