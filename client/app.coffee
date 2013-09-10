@@ -28,6 +28,9 @@
 
     @path()
 
+    $("#path ul .dashboard").css("paddingLeft", 107+"px")
+    $("#path ul .home, #path ul .dashboard").unbind("mouseenter mouseleave")
+
   user: (user_id)->
     member = new models.member() 
 
