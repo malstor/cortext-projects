@@ -6,7 +6,7 @@
 
 */
 
-@font-face { font-family: "Oxygen-Regular"; 	src: url('../font/Oxygen-Regular.ttf'); }
+@font-face { font-family: "Oxygen-Regular"; 	src: url('/font/Oxygen-Regular.ttf'); }
 
 /*****************************************************************************************
 
@@ -16,7 +16,7 @@
 
 body {
 	margin : 0px ;
-	background:url(../images/body-bg.png);
+	background:url(/images/body-bg.png);
 	background-repeat:repeat-x;
 	background-attachment:fixed;
 	overflow-x:hidden; 
@@ -173,12 +173,12 @@ width:9px;
 margin-bottom: -10px;
 margin-left: -4px;
 margin-top: 1px;
-background: url("/assets/server/images/stop.png") no-repeat;
+background: url("/images/stop.png") no-repeat;
 }
 
 #user #logout:hover {
 cursor:pointer;
-background: url("/assets/server/images/stop-hover.png") no-repeat;
+background: url("/images/stop-hover.png") no-repeat;
 }*/
 
 #user .btn{
@@ -210,7 +210,7 @@ background: url("/assets/server/images/stop-hover.png") no-repeat;
 
 .aide h3 {
 	color:#fff;
-	background: url("/assets/server/images/start.png") no-repeat 205px 7px #3C3C3C ;
+	background: url("/images/start.png") no-repeat 205px 7px #3C3C3C ;
 	font: 14px/30px "Oxygen-regular",sans-serif;
 	letter-spacing: 2px;
 	width: 225px;
@@ -324,7 +324,7 @@ background: url("/assets/server/images/stop-hover.png") no-repeat;
 /*--------------------main------------------------*/
 
 #main{
-	background:url(../images/slide-droite2.png);
+	background:url(/images/slide-droite2.png);
 	background-repeat:repeat-y;
 	background-position:right;
 	position : relative;
@@ -354,10 +354,10 @@ background: url("/assets/server/images/stop-hover.png") no-repeat;
 	margin: 10px 10px 10px 0px;
 	width:245px;
 	padding-left:5px;
-	background:#235BBE url('/assets/server/images/dossier1.png') no-repeat 225px 7px;
+	background:#235BBE url('/images/dossier1.png') no-repeat 225px 7px;
 }
 
-.col-1 .members h3 {background : #EE6E21 url('/assets/server/images/userB.png') no-repeat 225px 8px;
+.col-1 .members h3 {background : #EE6E21 url('/images/userB.png') no-repeat 225px 8px;
 }
 
 .col-1 .script {
@@ -393,7 +393,7 @@ background: url("/assets/server/images/stop-hover.png") no-repeat;
 	float:right;
     margin-right:10px;	}
 
-.col-1 .script h3 {background : #27AD19 url('/assets/server/images/engrenage.png') no-repeat 225px 5px;
+.col-1 .script h3 {background : #27AD19 url('/images/engrenage.png') no-repeat 225px 5px;
 }
 
 .dashboard-projects a {
@@ -414,7 +414,7 @@ background: url("/assets/server/images/stop-hover.png") no-repeat;
 
 	margin-top : 2px;
 	padding-left : 18px;
-	background : url('/assets/server/images/user-ptit.png') no-repeat 0px 0px;
+	background : url('/images/user-ptit.png') no-repeat 0px 0px;
 }
 
 .project-meta .date {
@@ -492,7 +492,7 @@ background: url("/assets/server/images/stop-hover.png") no-repeat;
 #add-element textarea { display : block; width : 736px; padding : 5px; height : 161px; border-radius : 2px; border : 1px solid #EEF2F6; resize:none; }
 #add-element form .add { float : right; }
 
-#add-element #select-type { background : url("/assets/server/images/cross.png") no-repeat 7px 7px; margin-left : 8px; padding-left : 37px; width : 708px; border-bottom: 1px solid #EEF2F6;}
+#add-element #select-type { background : url("/images/cross.png") no-repeat 7px 7px; margin-left : 8px; padding-left : 37px; width : 708px; border-bottom: 1px solid #EEF2F6;}
 #add-element #select-type button { background : white; border : 1px solid #EEF2F6; border-width : 0px 1px; border-radius: 0px; box-shadow: none; }
 
 #add-element #select-type button { margin-bottom : 0; margin-top : 0; }
@@ -513,7 +513,7 @@ background: url("/assets/server/images/stop-hover.png") no-repeat;
 
 .col-1 #new-members { margin-top : 10px; }
 
-.col-1 #new-members h4 { color : #CFCFCF; font: normal 12px/22px arial, sans-serif; border : 1px solid #EEF2F6; border-left :0; border-right: 0; padding-left : 24px; background : url("/assets/server/images/cross2.png") no-repeat 5px 4px; }
+.col-1 #new-members h4 { color : #CFCFCF; font: normal 12px/22px arial, sans-serif; border : 1px solid #EEF2F6; border-left :0; border-right: 0; padding-left : 24px; background : url("/images/cross2.png") no-repeat 5px 4px; }
 .col-1 #new-members h4:hover { color : #6E6E6E; cursor : pointer; }
 
 .col-1 #new-members > div {
@@ -569,7 +569,7 @@ background: url("/assets/server/images/stop-hover.png") no-repeat;
 }
 	
 .col-1 #new-members #proposition-members .plus {
-	background:url("/assets/server/images/cross2.png") no-repeat;
+	background:url("/images/cross2.png") no-repeat;
 	height:14px;
 	width:14px;
 	position : absolute;
@@ -579,7 +579,7 @@ background: url("/assets/server/images/stop-hover.png") no-repeat;
 }
 
 .col-1 #new-members #proposition-members .plus:hover {
-	background:url("/assets/server/images/cross2-hover.png") no-repeat;
+	background:url("/images/cross2-hover.png") no-repeat;
 }	
 
 .col-1 #new-members #send-invitation a {
@@ -681,19 +681,19 @@ background: url("/assets/server/images/stop-hover.png") no-repeat;
 }
 
 .project-meta2 #visualisations_maps{
-	background: url("/assets/server/images/maps.png") no-repeat ;
+	background: url("/images/maps.png") no-repeat ;
 }
 
 .project-meta2 #visualisations_tubes{
-	background: url("/assets/server/images/tubes.png") no-repeat ;
+	background: url("/images/tubes.png") no-repeat ;
 }	
 
 .project-meta2 #visualisations_charts{
-	background: url("/assets/server/images/charts.png") no-repeat ;
+	background: url("/images/charts.png") no-repeat ;
 }	
 
 .project-meta2 #visualisations_data{
-	background: url("/assets/server/images/data.png") no-repeat ;
+	background: url("/images/data.png") no-repeat ;
 }		 
 	  	
 .project-meta2 #visualisations_maps h4, .project-meta2 #visualisations_tubes h4,
@@ -843,7 +843,7 @@ background: url("/assets/server/images/stop-hover.png") no-repeat;
 }
 	
 .analysis .file .info {
-	background: url("../images/dialogue.png") no-repeat scroll left center transparent;
+	background: url("/images/dialogue.png") no-repeat scroll left center transparent;
     float: right;
 	margin-top: 5px;
 	border-style:none;
@@ -897,14 +897,14 @@ margin-left:5px;
 }
 
 .project .elements .Message .icons{
-background:#FFD505 url(../images/mess.png) no-repeat 3px 3px;
+background:#FFD505 url(/images/mess.png) no-repeat 3px 3px;
 }
 
 .project .elements .Analysis .icons{
-	background: #34B02C url(../images/script.png) no-repeat 2px 1px;}
+	background: #34B02C url(/images/script.png) no-repeat 2px 1px;}
 
 .project .elements .Image .icons{
-	background:#E62E60 url(../images/docs.png) no-repeat 1px 3px;
+	background:#E62E60 url(/images/docs.png) no-repeat 1px 3px;
 }
 	
 #dashboard .project canvas { margin-top:17px;  }
@@ -915,7 +915,7 @@ background:#FFD505 url(../images/mess.png) no-repeat 3px 3px;
 	height : 30px; 
 	display : block; 
 	margin-bottom :5px;
-	background :url('/assets/server/images/user-ptit.png') no-repeat 175px 1px; 
+	background :url('/images/user-ptit.png') no-repeat 175px 1px; 
 }
 
 #dashboard .project  h2, #dashboard .project  h2 a {
@@ -1054,14 +1054,14 @@ background:#FFD505 url(../images/mess.png) no-repeat 3px 3px;
 
 
 .user.profile h2.Recent{
-	background : #FFD505 url('/assets/server/images/message.png') no-repeat 718px 5px;
+	background : #FFD505 url('/images/message.png') no-repeat 718px 5px;
 	padding-left:10px;
 	padding-top:4px;
 	margin-top:15px;
 }	
 
 .user.profile h2.Project{
-	background : #235BBE url('/assets/server/images/dossier2.png') no-repeat 718px 5px;
+	background : #235BBE url('/images/dossier2.png') no-repeat 718px 5px;
 	padding-left:10px;
 	padding-top:4px;
 	margin-top:25px;
