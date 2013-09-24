@@ -25,9 +25,9 @@ Meteor.subscribe "projects"
   render: ()->
     Deps.autorun ()=>
       @$el.empty()
-
-      _(projects.find({}).fetch()).each (project)=>
-        @render_item project.id
+      if Meteor.userId()
+        _(projects.find({}).fetch()).each (project)=>
+          @render_item project.id
 
 @project_list_with_elements = Backbone.View.extend
   render_project: (project_id)->

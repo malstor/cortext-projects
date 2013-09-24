@@ -1,6 +1,6 @@
 @App = Backbone.Router.extend
   routes:
-    '':                     'dashboard'
+    '':                     'home'
     'dashboard':            'dashboard'
     'user/:user_id':        'user'
     'user/subscribe':       'subscribe'
@@ -13,20 +13,36 @@
 
   path: (path_elements)->
     console.log "path_elements",  path_elements
-
     p = new path
       path: path_elements
     p.render()
 
+  user_infos: (user)->
+    member = new models.member()
+    u = member.get_by_id({user_id: Meteor.userId()})
+    ui = new user_infos
+      user: member
+    ui.render()
+  
+  home: ()->
+    if Meteor.userId()
+      @user_infos()
+      @dashboard()
+    else
+      @login()
+
+
   login: ()->
-    l = new login({el: $('#main')})
-    l.render()
+      new login
+        el: '#main'
+      .render()
+     
 
   dashboard: ()->
-    d = new dashboard()
-    d.render()
-
-    @path()
+      d = new dashboard()
+      d.render()
+      @path()
+    
 
   user: (user_id)->
     member = new models.member() 

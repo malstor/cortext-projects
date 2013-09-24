@@ -25,7 +25,7 @@ Meteor.publish 'element', (element_id)->
 
 
 Meteor.publish 'members', ()->
-  members.find({})
+  Meteor.users.find({})
 
 Meteor.publish 'member', (user_id)->
   u_e = elements.find({ author: user_id }).fetch()
@@ -33,7 +33,7 @@ Meteor.publish 'member', (user_id)->
   u_p = _(u_p).uniq()
 
   results = [
-    members.find({ id: user_id }),
+    Meteor.users.find({ profile.cortext.id: user_id }),
     elements.find({ author: user_id }),
     projects.find({ id: {$in: u_p }})
   ]

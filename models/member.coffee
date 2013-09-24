@@ -7,9 +7,12 @@
     Meteor.subscribe "member", user_id
 
     Deps.autorun ()=>
-      current = members.findOne({ id: user_id })
-
+      current = Meteor.users.findOne({ _id : user_id })
+      
       if current
+        current.id = current.services.cortext.id
+        current.email = current.profile.email
+        current.name = current.profile.name
         @set current
         @set_gravatar()
         @trigger "member:loaded"

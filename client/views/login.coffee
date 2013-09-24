@@ -6,14 +6,8 @@
         "click .login" : "loginWithCortext"
         "click .inscription" : "subscribe"
 
-
     render: ()->
         $('#main').html Template.login
-        # $('.inscription').click ()=>
-        #     @subscribe()
-        # $('.login').click ()=>
-        #     @loginWithCortext()
-        console.log("login rendered")
 
     loginWithCortext: ()->
         Meteor.loginWithCortext()
