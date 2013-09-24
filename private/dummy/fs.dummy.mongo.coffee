@@ -155,5 +155,4 @@ aggregate_projects = (e, c)->
 
 db.open (err, db)->
 	db.dropDatabase (e,d)->
-		db.createCollection "users", add_users
-	
+		db.createCollection "members", add_users

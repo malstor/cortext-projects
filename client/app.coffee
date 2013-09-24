@@ -11,11 +11,13 @@
     'login': 'login'
     'auth/oauth': 'oauth'
 
-  path: (path_elements)->
+  path: (path_elements, options)->
     console.log "path_elements",  path_elements
     p = new path
       path: path_elements
     p.render()
+    if options.fix
+      p.set_as_fix()
 
   user_infos: (user)->
     member = new models.member()
@@ -31,18 +33,16 @@
     else
       @login()
 
-
   login: ()->
       new login
         el: '#main'
       .render()
-     
 
   dashboard: ()->
-      d = new dashboard()
-      d.render()
-      @path()
-    
+    d = new dashboard()
+    d.render()
+    @path {},
+      fix: true
 
   user: (user_id)->
     member = new models.member() 
