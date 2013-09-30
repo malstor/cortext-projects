@@ -32,7 +32,7 @@ Cortext.requestCredential = function (options, credentialRequestCompleteCallback
 
   console.log("[oauth] open popup with credentialToken :",credentialToken);
   var loginUrl =
-        dashboardConfig.url.Auth+'/authorize' +
+        dashboardConfig.services.Identity.urlAuth+'/authorize' +
         '?response_type=code' +
         '&state=' + credentialToken +
         '&client_id=' + config.clientId +

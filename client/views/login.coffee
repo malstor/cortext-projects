@@ -10,9 +10,15 @@
         $('#main').html Template.login
 
     loginWithCortext: ()->
-        Meteor.loginWithCortext()
+        Meteor.loginWithCortext (e)->
+            if(e)               
+              console.log('login error', e);
+            else
+                console.log "logged !", Meteor.user()                
+                App.navigate '/dashboard'
+        
 
     subscribe: ()->
-        window.location = dashboardConfig.url.Subscribe
+        window.location = dashboardConfig.services.Identity.urlSubscribe
 
     

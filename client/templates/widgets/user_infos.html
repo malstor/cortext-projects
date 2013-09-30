@@ -1,7 +1,7 @@
 <template name="user_infos">
-    {{#if currentUser}}
-    <img src="{{current.gravatar}}" />
-    <a href="/user/{{current.id}}">{{current.name}}</a>
+    {{#if user}}
+    <img src="{{user.gravatar}}" />
+    <a href="/user/{{user.id}}">{{user.name}}</a>
     {{else}}
     <a href="/login"><button class="btn btn-inverse">login</button></a>
     {{/if}}

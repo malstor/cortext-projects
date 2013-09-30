@@ -29,7 +29,7 @@ Oauth.registerService('cortext', 2, null, function(query) {
   
   var serviceObject = {
     serviceData: serviceData,
-    options: {profile: {name: identity.name, username: identity.username, email: identity.email}}
+    options: {profile: {name: identity.name, username: identity.username, email: identity.email, id: identity.id}}
   };
   console.log("[oauth] id complete, returning service object", serviceObject);
   return serviceObject;
@@ -48,7 +48,7 @@ var getTokens = function (query) {
   console.log("[oauth] get access token with query and config:", query, config);
   try {
     response = HTTP.post(
-      dashboardConfig.url.Auth+"/grant", {params: {
+      dashboardConfig.services.Identity.urlAuth+"/grant", {params: {
         code: query.code,
         client_id: config.clientId,
         client_secret: config.secret,
@@ -78,7 +78,7 @@ var getTokens = function (query) {
 var getIdentity = function (accessToken) {
   try {
     var response = HTTP.get(
-      dashboardConfig.url.Auth+"/access",
+      dashboardConfig.services.Identity.urlAuth+"/access",
       {params: {access_token: accessToken}});
     console.log('[auth] response from access request ', response);
     return JSON.parse(response.content);
