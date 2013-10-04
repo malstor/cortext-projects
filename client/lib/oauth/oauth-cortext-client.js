@@ -41,5 +41,5 @@ Cortext.requestCredential = function (options, credentialRequestCompleteCallback
   Oauth.initiateLogin(credentialToken,
                       loginUrl,
                       credentialRequestCompleteCallback,
-                      { height: 406 });
+                      { height: 700, width: 1400 });
 };

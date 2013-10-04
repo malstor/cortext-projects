@@ -10,120 +10,108 @@
     'element/:type/:element': 'element'
     'login': 'login'
     'auth/oauth': 'oauth'
+  initialize: (options)->
+      @checkLogin()
+
+  checkLogin : ->
+    if(demo)
+        @user_id = 1        
+      else
+        if(Meteor.user())
+          @user_id= parseInt(Meteor.user().profile.id)
+        else
+          @navigate('/login')
+
+      @user_infos(@user_id)
 
   path: (path_elements, options)->
-    console.log "path_elements",  path_elements
+    #console.log "path_elements",  path_elements
     p = new path
       path: path_elements
     p.render()
     if options.fix
       p.set_as_fix()
 
-  user_infos: ()->
-    console.log "user info ", Meteor.user()
-    if(Meteor.user())
-      user_id = Meteor.user().profile.id
-    else
-      user_id = null
-
+  user_infos: (user_id)->
     if(user_id)
-      console.log("render user info", user_id)
+      #console.log("render user info", user_id)
       member = new models.member()
       member.on "member:loaded", ()=>
         ui = new user_infos
           user: member
         ui.render()
-
-      member.get_by_id(user_id)
-    else
-      null
-    
+      member.get_by_id user_id
   
-  home: ()->  
-    if Meteor.userId()
-      @user_infos()      
-      @dashboard()
-    else
-      @login()
-
+  home: ()->
+    @checkLogin()
+    @dashboard()
+    
   login: ()->
-      new login
-        el: '#main'
-      .render()
+    new login
+      el: '#main'
+    .render()
 
   dashboard: ()->
-    if Meteor.userId()
-      @user_infos()    
-
-      d = new dashboard()
-      d.render()
-      
-      @path {},
-        fix: true
-    else
-      @login()
-
+    @checkLogin()
+    #console.log('dashboard - user ', @user_id)
+    d = new dashboard()
+    d.render()
+    
+    @path {},
+      fix: true
+    
   user: (user_id)->
-    if Meteor.userId()
+    @checkLogin()
 
-      member = new models.member() 
+    member = new models.member() 
 
-      member.on "member:loaded", ()=>
-        u = new user
-          user: member
-        u.render()
+    member.on "member:loaded", ()=>
+      u = new user
+        user: member
+      u.render()
 
-        @user_infos()
+      @path [
+        type: "user"
+        url: "/"
+        name: member.get("name")
+      ]
 
-        @path [
-          type: "user"
-          url: "/"
-          name: member.get("name")
-        ]
-
-      member.get_by_id user_id
-    else
-      @login()
-
+    member.get_by_id user_id
+    
   project: (project_id)->
-    if Meteor.userId()
-      @user_infos()  
+    @checkLogin()
 
-      p = new project
-        project_id: project_id
+    p = new project
+      project_id: project_id
 
-      model = new models.project()
+    model = new models.project()
 
-      model.on "project:loaded", ()=>
-        p.render()
+    model.on "project:loaded", ()=>
+      p.render()
 
-        @user_infos()
+      @user_infos()
 
-        @path [
-          type: "Project"
-          name: model.get("title")
-        ]
+      @path [
+        type: "Project"
+        name: model.get("title")
+      ]
 
-      model.get_by_id(project_id)
-    else
-      @login()
+    model.get_by_id(project_id)
 
   element: (type, element_id, project_id)->
-    if Meteor.userId()
-      @user_infos()  
+    @checkLogin()
 
-      console.log element_id
+    console.log element_id
 
-      model = new models.element()
+    model = new models.element()
 
-      model.on "element:loaded", ()=>
-        console.log model
-   
-        e = new element
-          element: model
+    model.on "element:loaded", ()=>
+      console.log model
+ 
+      e = new element
+        element: model
 
-        e.render()
+      e.render()
 
-      model.get_by_id element_id
-    else
-      @login()
+    model.get_by_id element_id
+    

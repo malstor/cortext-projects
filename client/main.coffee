@@ -1,6 +1,6 @@
 Meteor.startup ()->
-  Collections.init();
-  new App()
+  Collections.init()
+  @app = new App()
   Backbone.history.start({pushState: true})
 
   console.log "start"

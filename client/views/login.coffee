@@ -1,23 +1,29 @@
 @login = Backbone.View.extend
-    
-    initialize: ()->
-
     events:
-        "click .login" : "loginWithCortext"
+        "click #distante .login" : "loginWithCortext"
         "click .inscription" : "subscribe"
 
-    render: ()->
-        $('#main').html Template.login
+    render: ()=>
+        if(@demo)
+            app.navigate('/dashboard')
+        if(Meteor.userId())
+            Meteor.logout()
+        
+        $('#main').html Template.login()
+
 
     loginWithCortext: ()->
-        Meteor.loginWithCortext (e)->
-            if(e)               
-              console.log('login error', e);
+        Meteor.subscribe "members"
+        Meteor.loginWithCortext (error)->
+            if(error)               
+              console.log 'login error', error
             else
-                console.log "logged !", Meteor.user()                
-                App.navigate '/dashboard'
-        
-
+              route = "/dashboard" #todo redirect to the asked route
+              console.log "logged !", Meteor.user()
+              Collections.updateCurrentUser(Meteor.userId())
+              app.user_id =  parseInt(Meteor.user().profile.id)
+              app.navigate(route,{trigger: true})
+    
     subscribe: ()->
         window.location = dashboardConfig.services.Identity.urlSubscribe
 

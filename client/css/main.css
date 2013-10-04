@@ -151,7 +151,7 @@ button.inactive { color : #DCDCDC; cursor: default; }
 }
 
 #user a {
-	font: normal 11px/50px Arial, sans-serif;
+	font: normal 11px/50px "Oxygen-Regular" Arial, sans-serif;
 	text-decoration: none;
 	text-transform: lowercase;
 	color : #fff;
@@ -191,6 +191,14 @@ background: url("/images/stop-hover.png") no-repeat;
 	background:#2f2f2f;
 	color:#FFFFFF;
 	border : 1px solid #161616;
+}
+#user img {
+    border: none;
+    height: 40px;
+    width: 40px;
+    margin: 5px 5px;
+    padding: 0;
+    float: left;
 }
 
 

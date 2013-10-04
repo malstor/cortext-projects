@@ -1,4 +1,5 @@
 @user_infos = Backbone.View.extend
   render: ()->
-       $("#user").html Template.user_infos
-        user: @options.user.attributes
+    #console.log 'rendering user ', @options.user
+    $("#user").html Template.user_infos
+      user: @options.user.attributes

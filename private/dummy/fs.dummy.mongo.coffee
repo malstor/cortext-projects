@@ -81,8 +81,8 @@ add_users = (e,c)->
 
 	m.ok "users inserted"
 
-	db.createCollection "projects", add_projects
-	db.createCollection "elements", add_elements
+	db.createCollection "demo_projects", add_projects
+	db.createCollection "demo_elements", add_elements
 
 add_elements = (e,c)->
 	for project, project_id in projects
@@ -122,7 +122,7 @@ aggregate_projects = (e, c)->
 		out:
 			replace: "counter_projects_elements"
 
-	db.collection "elements", (error, collection)->
+	db.collection "demo_elements", (error, collection)->
 		collection.mapReduce map, reduce, options, (error, results)->
 
 
@@ -144,9 +144,9 @@ aggregate_projects = (e, c)->
 
 	options =
 		out:
-			replace: "projects_membership"
+			replace: "demo_projects_membership"
 
-	db.collection "elements", (error, collection)->
+	db.collection "demo_elements", (error, collection)->
 		collection.mapReduce map, reduce, options, (error, results)->
 #			console.log error
 #			console.log results
@@ -155,4 +155,4 @@ aggregate_projects = (e, c)->
 
 db.open (err, db)->
 	db.dropDatabase (e,d)->
-		db.createCollection "members", add_users
+		db.createCollection "demo_members", add_users
