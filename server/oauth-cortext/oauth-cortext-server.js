@@ -1,7 +1,7 @@
 Cortext = {};
 
 // https://developers.cortext.com/accounts/docs/OAuth2Login#userinfocall
-Cortext.whitelistedFields = ['id', 'email', 'username', 'name'];
+Cortext.whitelistedFields = ['id', 'email', 'username', 'name', 'accessToken'];
 
 Oauth.registerService('cortext', 2, null, function(query) {
 
@@ -29,7 +29,7 @@ Oauth.registerService('cortext', 2, null, function(query) {
   
   var serviceObject = {
     serviceData: serviceData,
-    options: {profile: {name: identity.name, username: identity.username, email: identity.email, id: identity.id}}
+    options: {profile: {name: identity.name, username: identity.username, email: identity.email, id: identity.id, accessToken : accessToken}}
   };
   console.log("[oauth] id complete, returning service object", serviceObject);
   return serviceObject;
