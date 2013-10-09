@@ -10,7 +10,7 @@
     'element/:type/:element': 'element'
     'login': 'login'
     'auth/oauth': 'oauth'
-  initialize: (options)->
+  start: (options)->
     Deps.autorun( => 
       if(demo)
         @user_id = 1        

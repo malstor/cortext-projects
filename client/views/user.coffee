@@ -35,14 +35,16 @@
 
   render_counter: ()->
     u = @options.user
-
+    console.log 'render counter'
     u.on "member:elements:changed", ()=>
+      console.log 'member elements changed'
       $("#indicator_projects .number").html _(u.projects).size()
       $("#indicator_analysis .number").html _(_(u.elements).where({ type : "Analysis" })).size()
       $("#indicator_documents .number").html _(_(u.elements).where({ type : "Image" })).size()
       $("#indicator_messages .number").html _(_(u.elements).where({ type : "Message" })).size()
 
   render: ()->
+    console.log 'render user'
     $("#main").html Template.user
       user: @options.user.attributes
 

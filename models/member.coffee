@@ -19,6 +19,7 @@
       @projects = projects.find({ id: {$in: _(_(@elements).pluck("project")).uniq() }}).fetch()
 
       @trigger "member:elements:changed"
+      console.log('trigger elements:changed', @elements)
 
   set_gravatar: ()->
     @set
