@@ -66,30 +66,37 @@
           #console.log('[jobs] new jobs found, updating collection');
           jobIds = new Array()
           _.each jobs.data, (item, key, list) ->
-            nbJobs = elements.find(id: item.id).count()
+            jobId = parseInt(item.id)
+            nbJobs = elements.find(id: jobId).count()
+            if item.label is 'external'
+              reg = item.script_path.match(/\/([^\/]*\..*)$/)
+              label = reg[1]
+            else
+              label = item.label
             newItem = 
-                id : parseInt(item.id) #@todo : replace by contextual id
-                name : item.label
-                type : 'analysis'
+                id : jobId #@todo : replace by contextual id
+                name : label
+                type : 'Analysis'
                 time: item.updated_at
                 progress: parseInt(item.progress)
                 author : parseInt(item.user_id)
+                state : item.state
 
             if nbJobs is 0
               newId = elements.insert newItem
               console.log "[jobs] added new job : #" + newId #+" : ",item
             else              
               elements.update
-                id: parseInt(item.id)
+                id: jobId
               , newItem
               console.log "[jobs] updated job : ", item.id
-            jobIds.push(parseInt(item.id))
+            jobIds.push(jobId)
 
           # each job
           #jobIds = _.pluck(jobs.data, "id")
           dashboardIds = _.pluck(elements.find(
             author: user_id
-            type: 'analysis'
+            type: 'Analysis'
           ,
             fields:
               id: 1

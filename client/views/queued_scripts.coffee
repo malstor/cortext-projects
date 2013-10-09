@@ -20,9 +20,9 @@ Meteor.subscribe "elements"
   render: ()->
     Deps.autorun ()=>
       @$el.empty()
-      if Meteor.userId()
+      if Meteor.user()
         console.log 'refreshing scripts'
-        _(elements.find({type: 'analysis', author: parseInt(Meteor.user().profile.id)}).fetch()).each (script)=>
+        _(elements.find({type: 'Analysis', author: parseInt(Meteor.user().profile.id)}).fetch()).each (script)=>
           @render_item script.id
 
       @$el.find('span.progress-script').each ->

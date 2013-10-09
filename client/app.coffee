@@ -11,33 +11,31 @@
     'login': 'login'
     'auth/oauth': 'oauth'
   initialize: (options)->
-    @checkLogin()
-    Meteor.setInterval (->
-      Meteor.call "update", (error, result)->
-        if(error)
-          console.log 'error : ', error
-        else
-          console.log "updated"
-
-      ),dashboardConfig.common.refreshRate
-
-  checkLogin : ->
-    if(demo)
+    Deps.autorun( => 
+      if(demo)
         @user_id = 1        
       else
         if(Meteor.user())
           @user_id= parseInt(Meteor.user().profile.id)
-        else
-          @navigate('/login')
+          @updateInt = Meteor.setInterval(->
+            Meteor.call "update", (error, result) ->
+              console.log "error while updating datas : ", error  if error
 
+          , dashboardConfig.common.refreshRate)
+          console.log 'updating started (interval '+@updateInt+')'
+        else
+          console.log 'user not logged : redirecting'
+          Meteor.clearInterval(@updateInt)
+          @navigate('/login')
       @user_infos(@user_id)
+    )
 
   path: (path_elements, options)->
     #console.log "path_elements",  path_elements
     p = new path
       path: path_elements
     p.render()
-    if options.fix
+    if options && options.fix
       p.set_as_fix()
 
   user_infos: (user_id)->
@@ -51,7 +49,6 @@
       member.get_by_id user_id
   
   home: ()->
-    @checkLogin()
     @dashboard()
     
   login: ()->
@@ -60,7 +57,6 @@
     .render()
 
   dashboard: ()->
-    @checkLogin()
     #console.log('dashboard - user ', @user_id)
     d = new dashboard()
     d.render()
@@ -69,8 +65,6 @@
       fix: true
     
   user: (user_id)->
-    @checkLogin()
-
     member = new models.member() 
 
     member.on "member:loaded", ()=>
@@ -87,7 +81,6 @@
     member.get_by_id user_id
     
   project: (project_id)->
-    @checkLogin()
 
     p = new project
       project_id: project_id
@@ -107,7 +100,6 @@
     model.get_by_id(project_id)
 
   element: (type, element_id, project_id)->
-    @checkLogin()
 
     console.log element_id
 
