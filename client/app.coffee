@@ -11,12 +11,15 @@
     'login': 'login'
     'auth/oauth': 'oauth'
   initialize: (options)->
-      @checkLogin()
-      Meteor.setInterval (->
-        Meteor.call "update", ->
+    @checkLogin()
+    Meteor.setInterval (->
+      Meteor.call "update", (error, result)->
+        if(error)
+          console.log 'error : ', error
+        else
           console.log "updated"
 
-        ),dashboardConfig.common.refreshRate
+      ),dashboardConfig.common.refreshRate
 
   checkLogin : ->
     if(demo)

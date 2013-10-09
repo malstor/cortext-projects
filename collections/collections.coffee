@@ -16,16 +16,19 @@
             @indicators = new Meteor.Collection 'indicators'
 
     update : (mUser_id)->
-        console.log 'udpating datas'
         if mUser_id
+            console.log 'udpating datas'
             @updateCurrentUser(mUser_id)
             @updateUserJobs()
+        else 
+          false
 
     updateCurrentUser : (mUser_id)=>
         console.log 'updating user ', mUser_id
         mUser = Meteor.users.findOne(mUser_id)
         @user_id =parseInt(mUser.profile.id)
-        @user_token = mUser.services.cortext.accessToken
+        if(Meteor.isServer)
+            @user_token = mUser.services.cortext.accessToken
         #console.log 'user found : ', mUser
         m = members.findOne({id: user_id})
         if(m)          
@@ -52,9 +55,8 @@
             @cachedJobs = ""
           console.log '...getting jobs datas... '
           #console.log 'jobs datas from '+urlJobs+' : ',jobs.data
-          console.log "[jobs] "+jobs.data.length+" job(s) found"
-          
-          console.log "[jobs] "+@cachedJobs.length+" jobs in cache"
+          #console.log "[jobs] "+jobs.data.length+" job(s) found"
+          #console.log "[jobs] "+@cachedJobs.length+" jobs in cache"
           #console.log "cached",JSON.stringify(@cachedJobs)
           #console.log "api call",JSON.stringify(jobs.data)
           console.log "[jobs] ---> No changes found, exiting"

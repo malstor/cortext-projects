@@ -1,0 +1,38 @@
+<template name="scripts">
+    <h3>queued scripts</h3>
+    <div id="queuedScripts" class="wrapper">
+    {{#each scripts}}
+        <div class="script"  id='script-{{id}}'>
+            <div>
+                <span class="name-script">{{name}}</span>
+                <span class="hours">{{time}}</span>
+            </div>
+            <div class="queued-scripts">
+                <span class="progress-script" data-progress='{{progress}}'></span>
+            </div>
+        </div>
+    {{/each}}
+    </div>
+    <!-- <h3 class="finished">finished scripts</h3>
+    <div id="finishedScripts"  class="wrapper">
+    {{#each finishedScripts}}
+        <div class="script state-{{state}}"  id="script-{{id}}" title="view {{name}} logs">
+            <div>
+                <span class="name-script">{{name}}</span>
+                <span class="hours">{{time}}</span>
+            </div>
+        </div>
+    {{/each}}
+    </div>
+    <h3 class="error">scripts with errors</h3>
+    <div id="errorScripts"  class="wrapper">
+    {{#each errorScripts}}
+        <div class="script state-{{state}}"  id="script-{{id}}" title="view {{name}} logs">
+            <div>
+                <span class="name-script">{{name}}</span>
+                <span class="hours">{{time}}</span>
+            </div>
+        </div>
+    {{/each}}
+    </div> -->
+</template>

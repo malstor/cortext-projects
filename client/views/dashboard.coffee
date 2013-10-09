@@ -2,6 +2,10 @@
   render: ()->
     $('#main').html Template.dashboard
 
+    new queued_scripts
+      el: $('#queuedScripts')
+    .render()
+
     new project_list_simple
       el: $('#projects-simple .projects')
     .render()
