@@ -7,8 +7,8 @@ dashboardConfig =
         },
         Identity: {
             name: "Cortext Auth",
-            urlAuth: "http://auth.cortext.net/auth",
-            urlSubscribe: "http://auth.cortext.net/user/register",
+            urlAuth: "http://oauth.dev/auth",
+            urlSubscribe: "http://oauth.dev/user/register",
             account: {
                 service: "cortext",
                 clientId: "cortext-dashboard",
@@ -17,7 +17,7 @@ dashboardConfig =
         },
         Jobs: {
             name: "Cortext Manager",
-            url: "http://mcp.cortext.net" 
+            url: "http://ctmanager.dev" 
 
         }
     },

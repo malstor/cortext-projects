@@ -64,13 +64,15 @@
           @cachedJobs = JSON.stringify(jobs.data)
           
           #console.log('[jobs] new jobs found, updating collection');
+          jobIds = new Array()
           _.each jobs.data, (item, key, list) ->
-            nbJobs = elements.find(jobid: item.id).count()
+            nbJobs = elements.find(id: item.id).count()
             newItem = 
-                jobid : item.id
+                id : parseInt(item.id) #@todo : replace by contextual id
                 name : item.label
                 type : 'analysis'
-                date: item.updated_at
+                time: item.updated_at
+                progress: parseInt(item.progress)
                 author : parseInt(item.user_id)
 
             if nbJobs is 0
@@ -78,27 +80,27 @@
               console.log "[jobs] added new job : #" + newId #+" : ",item
             else              
               elements.update
-                jobid: item.id
+                id: parseInt(item.id)
               , newItem
               console.log "[jobs] updated job : ", item.id
+            jobIds.push(parseInt(item.id))
 
           # each job
-          jobIds = _.pluck(jobs.data, "id")
+          #jobIds = _.pluck(jobs.data, "id")
           dashboardIds = _.pluck(elements.find(
             author: user_id
             type: 'analysis'
           ,
             fields:
-              jobid: 1
-          ).fetch(), "jobid")
+              id: 1
+          ).fetch(), "id")
           
-          #console.log('assets jobs : ', jobIds + ' --- dashboard doc :',dashboardIds);
+          console.log('assets jobs : ', jobIds + ' --- dashboard doc :',dashboardIds);
           jobsToRemove = _.difference(dashboardIds, jobIds)
           if _.size(jobsToRemove) > 0
             _(jobsToRemove).each (id) ->
-              elements.remove jobid: id
-
-            console.log " found jobs to remove : ", jobsToRemove
+              elements.remove id: id
+              console.log " found jobs to remove : ", jobsToRemove
         # end meteor call
 
 
