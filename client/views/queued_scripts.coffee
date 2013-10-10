@@ -2,12 +2,12 @@ Meteor.subscribe "elements"
 
 @queued_scripts = Backbone.View.extend
   render_item: (script_id)->
-    console.log "[scripts] rendrering ", script_id
+    #console.log "[scripts] rendrering ", script_id
 
     e = new models.element()
 
     e.on "element:loaded", ()=>
-      console.log 'element : loaded ', e
+      #console.log 'element : loaded ', e
       t = Template.script
         s: e.attributes   
 
@@ -21,7 +21,7 @@ Meteor.subscribe "elements"
     Deps.autorun ()=>
       @$el.empty()
       if Meteor.user()
-        console.log 'refreshing scripts'
+        #console.log 'refreshing scripts'
         _(elements.find({type: 'Analysis', author: parseInt(Meteor.user().profile.id)}).fetch()).each (script)=>
           @render_item script.id
 

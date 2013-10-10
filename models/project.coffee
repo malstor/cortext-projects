@@ -31,6 +31,7 @@
       @trigger "project:elements:changed"    
 
   get_by_id: (project_id)->
+    console.log 'get project ', project_id
     project_id = parseInt project_id
 
     Meteor.subscribe "project", project_id
@@ -42,3 +43,13 @@
         @set current
         @set_events()
         @trigger "project:loaded"
+
+  save: ->
+    date_current = moment().format('YYYY-MM-DD hh:mm:ss')
+    projects.insert 
+      title: @attributes.title
+      date_created : date_current
+      date_updated : date_current
+      , (error, id)=>
+        if(error)
+          console.log 'error inserting project : ', error

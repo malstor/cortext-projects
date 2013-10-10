@@ -28,6 +28,7 @@
     project = new models.project()
 
     project.on "project:loaded", ()->
+      console.log 'rendering ', project
       $("#main").html Template.project 
         project: project.attributes
         composition: []
@@ -37,3 +38,5 @@
       @render_participants project
 
     project.get_by_id @options.project_id
+
+    @options.project.trigger('project:loaded')
