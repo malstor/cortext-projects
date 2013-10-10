@@ -61,6 +61,11 @@
       $("#indicator_documents .number").html _(_(u.elements).where({ type : "Image" })).size()
       $("#indicator_messages .number").html _(_(u.elements).where({ type : "Message" })).size()
 
+  render_scripts: ()->
+    new queued_scripts
+      el: $('#queuedScripts')
+    .render()
+
   render: ()->
     #console.log 'user.render'
     $("#main").html Template.user
@@ -69,4 +74,5 @@
     @render_counter()
     @render_projects()
     @render_messages()
+    @render_scripts()
     @u.trigger('member:elements:changed') #@todo find why we have to trigger that manualy
