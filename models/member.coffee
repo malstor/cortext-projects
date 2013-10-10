@@ -2,6 +2,7 @@
 
 @models.member = Backbone.Model.extend
   get_by_id: (user_id)->
+    #console.log 'member.get_by_id : ', user_id
     user_id = parseInt user_id
 
     Meteor.subscribe "member", user_id
@@ -12,14 +13,18 @@
       if current
         @set current
         @set_gravatar()
+        
         @trigger "member:loaded"
+        #console.log('member:loaded triggered', current)
 
     Deps.autorun ()=>
       @elements = elements.find({ author: user_id}).fetch()
       @projects = projects.find({ id: {$in: _(_(@elements).pluck("project")).uniq() }}).fetch()
 
       @trigger "member:elements:changed"
-      console.log('trigger elements:changed', @elements)
+      #console.log('member:elements:changed triggered', @elements)
+
+    #console.log 'member deps set'
 
   set_gravatar: ()->
     @set

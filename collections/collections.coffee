@@ -2,6 +2,7 @@
 
 @Collections =
     init : ()=>
+        @cachedJobs = ""
         @demo = if(_.isUndefined(dashboardConfig.services.Identity)) then true else false
         #@demo = true;
         if(@demo)
@@ -17,11 +18,10 @@
 
     update : (mUser_id)->
         if mUser_id
-            console.log 'udpating datas'
+            console.log 'udpating user datas'
             @updateCurrentUser(mUser_id)
-            @updateUserJobs()
-        else 
-          false
+        console.log 'updating data'
+        @updateJobs()
 
     updateCurrentUser : (mUser_id)=>
         console.log 'updating user ', mUser_id
@@ -40,12 +40,11 @@
         #todo
         console.log 'udpate users'
 
-    updateUserJobs : ()=>
-        console.log 'update jobs for ', user_id 
+    updateJobs : ()=>
         if @demo
             console.log 'demo mode detected : no updates'
             false
-
+        user_token = (if _.isUndefined(user_token) then "c8e70e817b8ccc2e96ff76e2bb0b31ac2c4eaea0" else user_token)
         urlJobs = dashboardConfig.services.Jobs.url+ "/api/" + user_token + "/jobs.json"
 
         Meteor.http.call "GET", urlJobs, (error, jobs) ->  
@@ -53,7 +52,7 @@
             console.log "error getting jobs : ", error
           if(_.isUndefined(@cachedJobs))
             @cachedJobs = ""
-          console.log '...getting jobs datas... '
+          #console.log '...getting jobs datas... '
           #console.log 'jobs datas from '+urlJobs+' : ',jobs.data
           #console.log "[jobs] "+jobs.data.length+" job(s) found"
           #console.log "[jobs] "+@cachedJobs.length+" jobs in cache"
@@ -95,14 +94,13 @@
           # each job
           #jobIds = _.pluck(jobs.data, "id")
           dashboardIds = _.pluck(elements.find(
-            author: user_id
             type: 'Analysis'
           ,
             fields:
               id: 1
           ).fetch(), "id")
           
-          console.log('assets jobs : ', jobIds + ' --- dashboard doc :',dashboardIds);
+          #console.log('assets jobs : ', jobIds + ' --- dashboard doc :',dashboardIds);
           jobsToRemove = _.difference(dashboardIds, jobIds)
           if _.size(jobsToRemove) > 0
             _(jobsToRemove).each (id) ->

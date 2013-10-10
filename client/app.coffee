@@ -10,24 +10,18 @@
     'element/:type/:element': 'element'
     'login': 'login'
     'auth/oauth': 'oauth'
-  start: (options)->
+  initialize: (options)->
     Deps.autorun( => 
       if(demo)
         @user_id = 1        
       else
         if(Meteor.user())
-          @user_id= parseInt(Meteor.user().profile.id)
-          @updateInt = Meteor.setInterval(->
-            Meteor.call "update", (error, result) ->
-              console.log "error while updating datas : ", error  if error
-
-          , dashboardConfig.common.refreshRate)
-          console.log 'updating started (interval '+@updateInt+')'
+          @user_id = parseInt(Meteor.user().profile.id)
+          @user_infos(@user_id)
+          console.log 'logged in :', Meteor.user()
         else
-          console.log 'user not logged : redirecting'
-          Meteor.clearInterval(@updateInt)
           @navigate('/login')
-      @user_infos(@user_id)
+          false
     )
 
   path: (path_elements, options)->
@@ -35,7 +29,7 @@
     p = new path
       path: path_elements
     p.render()
-    if options && options.fix
+    if options.fix
       p.set_as_fix()
 
   user_infos: (user_id)->
@@ -70,14 +64,16 @@
     member.on "member:loaded", ()=>
       u = new user
         user: member
+      #console.log 'route user : member:loaded triggered => u.render, member :', member
       u.render()
-
       @path [
         type: "user"
         url: "/"
         name: member.get("name")
       ]
+      ,fix: false
 
+    #console.log 'route user : member get_by_id ', user_id
     member.get_by_id user_id
     
   project: (project_id)->
@@ -89,8 +85,6 @@
 
     model.on "project:loaded", ()=>
       p.render()
-
-      @user_infos()
 
       @path [
         type: "Project"
