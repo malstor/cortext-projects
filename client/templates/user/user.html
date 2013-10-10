@@ -2,36 +2,39 @@
   <div class="user-meta col-1">
 
     <div class="script" id="script">
-          <h3>queued scripts</h3>
-          <div id="queuedScripts" class="wrapper">
-          </div>
+      <h3>queued scripts</h3>
+      <div id="queuedScripts" class="wrapper">
+      </div>
     </div><!-- /script -->
-
-
   </div><!-- /user-meta -->
 
   <div id="user-{{ user.id }}" class="user profile col-main">
     <div class="info">
       <div id="gravatar">
-      <img src="{{ user.gravatar }}" />
+        <img src="{{ user.gravatar }}" />
       </div>    
       <div>
-       <h1 id="name">{{ user.name }}</h1>
-       <div id="email" class="email">{{ user.email }}</div>
+        <h1 id="name">{{ user.name }}</h1>
+        <div id="email" class="email">{{ user.email }}</div>
       </div>
-      <div id="indicators"><div>
-        <div id="indicator_projects">
-          <h4>projects</h4><div class="number"></div>
-        </div>
-        <div id="indicator_analysis">
-          <h4>analysis</h4><div class="number"></div>
-        </div>
-        <div id="indicator_documents">
-          <h4>documents</h4><div class="number"></div>
-        </div>
-        <div id="indicator_messages">
-          <h4>messages</h4><div class="number"></div>
-        </div>
+      <div id="indicators">
+        <div>
+          <div id="indicator_projects">
+            <h4>projects</h4>
+            <div class="number"></div>
+          </div>
+          <div id="indicator_analysis">
+            <h4>analysis</h4>
+            <div class="number"></div>
+          </div>
+          <div id="indicator_documents">
+            <h4>documents</h4>
+            <div class="number"></div>
+          </div>
+          <div id="indicator_messages">
+            <h4>messages</h4>
+            <div class="number"></div>
+          </div>
         </div>
       </div><!-- #indicators -->
     </div>
@@ -45,60 +48,5 @@
 
   <div class="project-meta2 col-2">
 
-  <h3>user</h3>
-  <div id="gravatar">
-    <img src="<%= user.gravatar %>" />
-    </div>
-    
-    <div id="infos">
-    <h1 id="name"><%= user.name %></h1>
-    <div id="email" class="email"><%= user.email %></div>
-    </div>
-
-
-    <div id="indicator_infos">
-    
-    <div id="indicator_projects">
-      <h4>projects</h4><div class="number"></div>
-    </div>
-    <div id="indicator_analysis">
-      <h4>analysis</h4><div class="number"></div>
-    </div>
-    <div id="indicator_documents">
-      <h4>documents</h4><div class="number"></div>
-    </div>
-    <div id="indicator_messages">
-      <h4>messages</h4><div class="number"></div>
-    </div>
-  </div><!-- /indicator_infos -->
-
-  <h3>visualisations type</h3>
-  <div id="visualisations_infos">
-
-    <div id="visualisations_maps">
-      <h4>maps</h4><div class="number">#</div>
-    </div>
-    
-    <div id="visualisations_tubes">
-      <h4>tubes</h4><div class="number">#</div>
-    </div>
-    
-    <div id="visualisations_charts">
-      <h4>charts</h4><div class="number">#</div>
-    </div>
-    
-    <div id="visualisations_data">
-      <h4>data</h4><div class="number">#</div>
-    </div>
-
-  </div><!-- /visualisations_infos -->
-
   </div><!-- /user-meta2 -->
-
-
-
-  <div class="project-meta2 col-2">
-
-
-  </div><!-- /dashboard-meta2 -->
 </template>
