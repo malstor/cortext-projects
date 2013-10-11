@@ -11,6 +11,8 @@
     'login': 'login'
     'auth/oauth': 'oauth'
   initialize: (options)->
+    Meteor.subscribe "members"
+    
     Deps.autorun( => 
       if(demo)
         @user_id = 1        
@@ -77,21 +79,24 @@
     member.get_by_id user_id
     
   project: (project_id)->
+    m_project = new models.project()
 
     p = new project
-      project_id: project_id
+      project: m_project
 
-    model = new models.project()
+    p.render()
 
-    model.on "project:loaded", ()=>
-      p.render()
-
+    m_project.on "project:loaded", ()=>
       @path [
         type: "Project"
-        name: model.get("title")
+        name: m_project.get("title")
       ]
+      , fix: false 
 
-    model.get_by_id(project_id)
+    m_project.get_by_id project_id
+
+
+    
 
   element: (type, element_id, project_id)->
 

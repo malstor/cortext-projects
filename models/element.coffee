@@ -12,3 +12,12 @@
       if current
         @set current
         @trigger "element:loaded"
+  create: (options)->
+    elements.insert @attributes, (error, id)->
+      if(error)
+        options.error()
+      if(id)
+        options.success(id)
+
+
+

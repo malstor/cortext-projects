@@ -1,7 +1,7 @@
 @models = {} if @models is undefined
 
 @models.project = Backbone.Model.extend
-  initialize: ()->
+  initialize: ()->    
     @set_events()
 
   set_permalink: ()->
@@ -34,7 +34,6 @@
       @trigger "project:elements:changed"    
 
   get_by_id: (project_id)->
-    console.log 'get project ', project_id
     project_id = parseInt project_id
 
     Meteor.subscribe "project", project_id

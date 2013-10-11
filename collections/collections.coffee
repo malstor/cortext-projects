@@ -18,13 +18,13 @@
 
     update : (mUser_id)->
         if mUser_id
-            console.log 'udpating user datas'
+            #console.log 'udpating user datas'
             @updateCurrentUser(mUser_id)
-        console.log 'updating data'
+        #console.log 'updating data'
         @updateJobs()
 
     updateCurrentUser : (mUser_id)=>
-        console.log 'updating user ', mUser_id
+        #console.log 'updating user ', mUser_id
         mUser = Meteor.users.findOne(mUser_id)
         @user_id =parseInt(mUser.profile.id)
         if(Meteor.isServer)
@@ -58,7 +58,7 @@
           #console.log "[jobs] "+@cachedJobs.length+" jobs in cache"
           #console.log "cached",JSON.stringify(@cachedJobs)
           #console.log "api call",JSON.stringify(jobs.data)
-          console.log "[jobs] ---> No changes found, exiting"
+          #console.log "[jobs] ---> No changes found, exiting"
           return  if cachedJobs is JSON.stringify(jobs.data)  unless _.isUndefined(@cachedJobs)
           @cachedJobs = JSON.stringify(jobs.data)
           

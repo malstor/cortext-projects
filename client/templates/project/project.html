@@ -11,15 +11,17 @@
     <div class="script" id="script">
 
       <h3>queued scripts</h3>
-      <%= templates.queued_scripts() %>
-      
+      <div id="queuedScripts" class="wrapper">
+      </div>
+
     </div><!-- /project-script -->
 
     <div class="members" id="members">
       <div id="user-icon"></div>
       <h3>participants</h3>
 
-      <div class="list"></div>
+      <div class="list">
+      </div>
 
       <div id='new-members'>
 
@@ -29,7 +31,7 @@
           <form id="add-members">
             <input type="text" value="type user name or email"></input>
           </form>
-          
+
           <div id="proposition-members">
           </div><!-- #proposition-members -->
 
@@ -56,76 +58,73 @@
     </div>
 
     <form rel="{{ project.id }}" class="analysis">
-      <button type="button" class="start">start a new script on cortext.manager</add>
-      </form>
+      <button type="button" class="start">start a new script on cortext.manager</button>
+    </form>
 
-      <form rel="{{ project.id }}" class="document">
-        <button type="button" class="upload">upload a new document</add>
-        </form>
-        
+    <form rel="{{ project.id }}" class="document">
+      <button type="button" class="upload">upload a new document</button>
+    </form>
+    <form rel="{{ project.id }}" class="message">
+      <textarea id="new-message-body">Type your message for all your happy co-workers!</textarea>
+      <button class="add">add</button>
+    </form>
 
-        <form rel="{{ project.id }}" class="message">
-          <textarea id="new-message-body">Type your message for all your happy co-workers!</textarea>
+  </div>
 
-          <button class="add">add</add>
-          </form>
+  <div id="elements" class="project elements">
+  </div><!-- /elements -->
 
-        </div>
+</div><!-- /col-main -->
 
-        <div id="elements" class="project elements">
-        </div><!-- /elements -->
+<div class="project-meta2 col-2">
 
-      </div><!-- /col-main -->
+  <h3>user</h3>
+  <div id="gravatar">
+    <img src="#" />
+  </div>
 
-      <div class="project-meta2 col-2">
-        
-        <h3>user</h3>
-        <div id="gravatar">
-          <img src="#" />
-        </div>
-        
-        <div id="infos">
-          <h1 id="name">#indefined</h1>
-          <div id="email" class="email">#indefined</div>
-        </div>
+  <div id="infos">
+    <h1 id="name">#indefined</h1>
+    <div id="email" class="email">#indefined</div>
+  </div>
 
-        <div id="indicator_infos">
-          
-          <div id="indicator_projects">
-            <h4>projects</h4><div class="number">#</div>
-          </div>
-          <div id="indicator_analysis">
-            <h4>analysis</h4><div class="number">#</div>
-          </div>
-          <div id="indicator_documents">
-            <h4>documents</h4><div class="number">#</div>
-          </div>
-          <div id="indicator_messages">
-            <h4>messages</h4><div class="number">#</div>
-          </div>
-        </div><!-- /indicator_infos -->
+  <div id="indicator_infos">
+
+    <div id="indicator_projects">
+      <h4>projects</h4><div class="number">#</div>
+    </div>
+    <div id="indicator_analysis">
+      <h4>analysis</h4><div class="number">#</div>
+    </div>
+    <div id="indicator_documents">
+      <h4>documents</h4><div class="number">#</div>
+    </div>
+    <div id="indicator_messages">
+      <h4>messages</h4><div class="number">#</div>
+    </div>
+  </div><!-- /indicator_infos -->
 
 
-        <h3>visualisations type</h3>
-        <div id="visualisations_infos">
+  <h3>visualisations type</h3>
+  <div id="visualisations_infos">
 
-          <div id="visualisations_maps">
-            <h4>maps</h4><div class="number">#</div>
-          </div>
-          
-          <div id="visualisations_tubes">
-            <h4>tubes</h4><div class="number">#</div>
-          </div>
-          
-          <div id="visualisations_charts">
-            <h4>charts</h4><div class="number">#</div>
-          </div>
-          
-          <div id="visualisations_data">
-            <h4>data</h4><div class="number">#</div>
-          </div>
+    <div id="visualisations_maps">
+      <h4>maps</h4><div class="number">#</div>
+    </div>
 
-        </div><!-- /visualisations_infos -->
+    <div id="visualisations_tubes">
+      <h4>tubes</h4><div class="number">#</div>
+    </div>
 
-      </div><!-- /project-meta2 -->
-    </template>
+    <div id="visualisations_charts">
+      <h4>charts</h4><div class="number">#</div>
+    </div>
+
+    <div id="visualisations_data">
+      <h4>data</h4><div class="number">#</div>
+    </div>
+
+  </div><!-- /visualisations_infos -->
+
+</div><!-- /project-meta2 -->
+</template>
