@@ -4,6 +4,9 @@
   initialize: ()->
     @set_events()
 
+  set_permalink: ()->
+      @set permalink: '/project/' + encodeURIComponent @get 'id'
+
   reduce_elements_to_composition: (m, type)->
     m[type] = if m[type] is undefined then 0 else m[type] + 1
     m
@@ -44,12 +47,22 @@
         @set_events()
         @trigger "project:loaded"
 
-  save: ->
+  create: (options)->
     date_current = moment().format('YYYY-MM-DD hh:mm:ss')
+    lastproj = projects.findOne {}, fields: {id: 1}, sort: {id : -1}
+    next_id = if(lastproj) then parseInt(lastproj.id+1) else 1
+
     projects.insert 
+      id: next_id
       title: @attributes.title
       date_created : date_current
       date_updated : date_current
+      members : [options.user_id]
       , (error, id)=>
         if(error)
           console.log 'error inserting project : ', error
+          options.error(error)
+        if(id)
+          @set id:next_id
+          @set_permalink()          
+          options.success(id)

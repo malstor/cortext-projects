@@ -1,8 +1,6 @@
 @dashboard = Backbone.View.extend
   render: ()->
     $('#main').html Template.dashboard
-    $('#main .new').on 'click', ->
-
 
     new queued_scripts
       el: $('#queuedScripts')
@@ -23,6 +21,10 @@
       e.preventDefault()
       p = new models.project(title: $("#project-new input").val())
       console.log 'p = ', p
-      id = p.save()
-      window.location = '/project/'+id
+      id = p.create
+        user_id: app.user_id
+        success: (id)->
+          window.location = p.get('permalink')
+        error: (err)->
+          console.log 'error while creating project ', err
 

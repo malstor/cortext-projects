@@ -19,7 +19,7 @@
 
     Deps.autorun ()=>
       @elements = elements.find({ author: user_id}).fetch()
-      @projects = projects.find({ id: {$in: _(_(@elements).pluck("project")).uniq() }}).fetch()
+      @projects = projects.find({ members: user_id}).fetch()
 
       @trigger "member:elements:changed"
       #console.log('member:elements:changed triggered', @elements)

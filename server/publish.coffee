@@ -35,5 +35,5 @@ Meteor.publish 'member', (user_id)->
   results = [
     members.find({ id: user_id }),
     elements.find({ author: user_id }),
-    projects.find({ id: {$in: u_p }})
+    projects.find({ members: user_id})
   ]

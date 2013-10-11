@@ -39,4 +39,4 @@
 
     project.get_by_id @options.project_id
 
-    @options.project.trigger('project:loaded')
+    #@options.project.trigger('project:loaded')
