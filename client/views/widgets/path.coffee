@@ -23,8 +23,18 @@
         duration: 600
         queue: false
 
+  set_title: ()->
+    console.log _.last @options.path
+    if !(_.isUndefined _.last(@options.path))
+      if !(_.isUndefined _.last(@options.path).name)
+        document.title = _.last(@options.path).name + ' :: cortext'
+    else
+      document.title = "dashboard :: cortext"
+
+
   render: ()->
     $("#path").html Template.path
       path: @options.path
-
+    
     @set_interactions()
+    @set_title()

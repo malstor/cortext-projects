@@ -55,7 +55,7 @@
     d = new dashboard()
     d.render()
     
-    @path {},
+    @path [],
       fix: true
     
   user: (user_id)->
