@@ -23,6 +23,7 @@
   set_events: ()->
     Deps.autorun ()=>
       @elements = elements.find({ project: @attributes.id }).fetch()
+      #console.log 'prj elements', @attributes, @elements
 
       _(@elements).each (e)=>
         e.permalink = "/element/#{e.type.toLowerCase()}/#{e.id}/in/#{@attributes.id}"

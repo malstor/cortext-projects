@@ -56,22 +56,20 @@ Meteor.subscribe "members"
         date: new Date().getTime()
         content: $("#add-element .message textarea").val()
       )
-      #         console.log(element);
       element.create
         error: ->
           console.log "new message: fail"
         success: (id)->
+          
           element.get_by_id(id)
-          element.set permalink: "/element/" + element.get("type") + "/" + id + "/in/" + project
-          new_el = Templates "Project_" + element.get("type")
+          element.set permalink: "/element/" + element.get("type") + "/" + id + "/in/" + project.get('id')
+          new_el = Template[element.get("type").toLowerCase()]
             author: members.findOne( { id: parseInt(app.user_id) })
-            e: element.toJSON()
-          
-          $("#elements").prepend new_el
-          
-          #         console.log(new_el);
+            e: element.attributes
+          $("#elements").prepend new_el 
           $(new_el).css "display", "none"
           $(new_el).fadeIn 1000
+          $('form.message').fadeOut('fast')
 
   set_members :(project)->  
     #members click
@@ -122,10 +120,11 @@ Meteor.subscribe "members"
 
 
   render_elements: (project)->
-    _(project.get('elements')).each (e)=>
+    console.log 'render elem project', project
+    _(project.elements).each (e)=>
       # @$el.find("#elements").append e.author
 
-      element = _(e).clone()
+      element.e = _(e).clone()
       element.author = members.findOne( { id: e.author } )
 
       $("#elements").append Template[ e.type.toLowerCase() ] element
@@ -149,7 +148,6 @@ Meteor.subscribe "members"
 
   render: ()->
     project = @options.project
-
     project.on "project:loaded", ()=>
       $("#main").html Template.project 
         project: project.attributes

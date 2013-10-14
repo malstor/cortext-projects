@@ -1,5 +1,8 @@
-Handlebars.registerHelper 'date_short', (timestamp)->
-  return moment(timestamp).format("DD.MM.YYYY")
+Handlebars.registerHelper 'date_short', (timestamp) ->
+    if typeof timestamp is 'number'
+      moment(timestamp).format("DD.MM.YYYY")
+    else
+      timestamp
 
 Handlebars.registerHelper 'participation', (composition)->
   return new Handlebars.SafeString Template.participation

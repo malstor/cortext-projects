@@ -37,6 +37,8 @@ Meteor.subscribe "projects"
       @$el.append Template.dashboard_list_project
         project: p.attributes
         composition: []
+      @render_elements p
+      @render_composition p
 
     p.on "project:elements:changed", ()=>
       @render_elements p
@@ -58,14 +60,16 @@ Meteor.subscribe "projects"
   render_elements: (project)->
     project_id = project.attributes.id
     project_elements = project.elements
-
+    return if _.isUndefined $("#project-"+project_id+" .elements").html()
     $("#project-"+project_id+" .elements").empty()
 
     _(project_elements).each (element)=>
       member = members.findOne({ id: element.author })
       if member
-        element.author = member
-        $("#project-"+project_id+" .elements").append Template[element.type.toLowerCase()](element)
+        elt = Template[element.type.toLowerCase()]
+          author : member
+          e : element
+        $("#project-"+project_id+" .elements").append elt
 
   render: ()->
     Deps.autorun ()=>
