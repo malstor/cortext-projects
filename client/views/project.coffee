@@ -66,6 +66,7 @@ Meteor.subscribe "members"
           new_el = Template[element.get("type").toLowerCase()]
             author: members.findOne( { id: parseInt(app.user_id) })
             e: element.attributes
+          $("#elements").find('#Message-'+element.get('id')).remove()
           $("#elements").prepend new_el 
           $(new_el).css "display", "none"
           $(new_el).fadeIn 1000
@@ -124,19 +125,17 @@ Meteor.subscribe "members"
 
 
   render_elements: (project)->
-    console.log 'render elem project', project
+    #console.log 'render elem project', project
+    $("#elements").empty()
     _(project.elements).each (e)=>
-      # @$el.find("#elements").append e.author
-
       element.e = _(e).clone()
       element.author = members.findOne( { id: e.author } )
-
       $("#elements").append Template[ e.type.toLowerCase() ] element
 
   render_participants: (project)->
     $("#members .list").empty()
     p_members = project.get('members')
-    console.log 'project render_participants', p_members
+    #console.log 'project render_participants', p_members
     _(p_members).each (m_id)=>    
       m = members.findOne( { id: parseInt(m_id) })
       m.participation = project.get_participation m_id

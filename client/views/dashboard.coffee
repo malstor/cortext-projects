@@ -1,7 +1,8 @@
 @dashboard = Backbone.View.extend
+
   render: ()->
     $('#main').html Template.dashboard
-
+    
     new queued_scripts
       el: $('#queuedScripts')
     .render()
@@ -15,6 +16,7 @@
     .render()
 
     @setEvents()
+
 
   setEvents: ()->
     $("#project-new .new").on "click", (e) ->

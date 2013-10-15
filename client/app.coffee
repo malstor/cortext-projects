@@ -53,7 +53,7 @@
     .render()
 
   dashboard: ()->
-    #console.log('dashboard - user ', @user_id)
+    console.log('dashboard - user ', @user_id)
     d = new dashboard()
     d.render()
     

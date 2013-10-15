@@ -30,11 +30,13 @@ Meteor.subscribe "projects"
           @render_item project.id
 
 @project_list_with_elements = Backbone.View.extend
-  render_project: (project_id)->
-    p = new models.project()
+  render_project: (project)->
+    p = project
+    project_id = p.get('id')
 
     p.on "project:loaded", ()=>
-      console.log p.attributes
+      #console.log p.attributes
+      @$el.find('#project-'+p.get('id')).remove()
       @$el.append Template.dashboard_list_project
         project: p.attributes
         composition: []
@@ -59,10 +61,12 @@ Meteor.subscribe "projects"
     .render()
 
   render_elements: (project)->
+    
     project_id = project.attributes.id
     project_elements = project.elements
     return if _.isUndefined $("#project-"+project_id+" .elements").html()
     $("#project-"+project_id+" .elements").empty()
+    console.log 'render elmts for ', project, project_elements
 
     _(project_elements).each (element)=>
       member = members.findOne({ id: element.author })
@@ -75,8 +79,11 @@ Meteor.subscribe "projects"
   render: ()->
     Deps.autorun ()=>
       _(projects.find({members : parseInt(app.user_id)}).fetch()).each (project)=>
-        console.log project.id
-        @render_project project.id
+        console.log 'loading project ', project.id
+        p = new models.project()
+        p.get_by_id project.id
+        @render_project p
+
 
 
 
