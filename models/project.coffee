@@ -47,6 +47,28 @@
         @set_events()
         @trigger "project:loaded"
 
+  propose_members: (options)->
+    p_id = @attributes.id
+    p_members = projects.findOne {id: p_id}, fields: {members: 1}
+    p_members = p_members.members
+    query = '.*'+options.query+'.*'
+    u_list = members.find(id: {$nin:p_members}, $or: [name: {$regex: query, $options: 'i'}, email:{$regex: query, $options: 'i'}] ).fetch()
+
+    if u_list
+      options.success(u_list)
+    else
+      console.log('error retrieving potiential project members')
+
+
+  
+  add_member: (u_id)->
+    console.log 'model adding member : ', u_id
+    p = projects.findOne({id: @attributes.id})
+    if(p)
+      projects.update p._id, $addToSet: {members: u_id}
+
+
+
   create: (options)->
     date_current = moment().format('YYYY-MM-DD hh:mm:ss')
     lastproj = projects.findOne {}, fields: {id: 1}, sort: {id : -1}

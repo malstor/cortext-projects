@@ -26,7 +26,7 @@ Meteor.subscribe "projects"
     Deps.autorun ()=>
       @$el.empty()
       if Meteor.userId()
-        _(projects.find({}).fetch()).each (project)=>
+        _(projects.find({members: parseInt(app.user_id)}).fetch()).each (project)=>
           @render_item project.id
 
 @project_list_with_elements = Backbone.View.extend
@@ -34,6 +34,7 @@ Meteor.subscribe "projects"
     p = new models.project()
 
     p.on "project:loaded", ()=>
+      console.log p.attributes
       @$el.append Template.dashboard_list_project
         project: p.attributes
         composition: []
@@ -73,7 +74,8 @@ Meteor.subscribe "projects"
 
   render: ()->
     Deps.autorun ()=>
-      _(projects.find({}).fetch()).each (project)=>
+      _(projects.find({members : parseInt(app.user_id)}).fetch()).each (project)=>
+        console.log project.id
         @render_project project.id
 
 

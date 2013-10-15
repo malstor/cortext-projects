@@ -90,29 +90,33 @@ Meteor.subscribe "members"
     #add-member click
     $("#add-members .add").on "click", (e) ->
       e.preventDefault()
-      current_project.add_member $("#add-members input").val()
+      project.add_member $("#add-members input").val()
 
     #add-member keyup
-    $("#add-members input").on "keyup", (e) ->
+    $("#add-members input").on "keyup", (e) =>
       $("#proposition-members").empty()
       options =
-        data:
-          query: $("#add-members input").val()
+        query: $("#add-members input").val()
 
-        success: (data) ->
+        success: (users) ->
+          console.log 'members : ', users
           $("#proposition-members").empty()
-          if data.length is 0
+          if users.length is 0
             $("#proposition-members").html "<p>We cannot find available user for this project</p>"
           else
-            _(data).each (u) ->
-              user = new models.user(u)
+            _(users).each (u) ->
+              user = new models.member(u)
               user.set_gravatar()
-              $elt = $(templates.Project_proposition_item(user: user.toJSON()))
-              $("#proposition-members").append $elt
-              $elt.children(".plus").on "click", (evt) ->
-                current_project.add_member u.id
+              elt = Template.project_proposition_item 
+                user: user.attributes
+              $elt = $("#proposition-members").append elt
+              console.log $elt
+              $("#add-"+u.id).on "click", (evt) ->
+                console.log 'event adding member : ',u.id
+                project.add_member u.id
 
-      $.ajax "/api/Project/" + parseInt($("#add-element form").attr("rel")) + "/members/propose", options
+      project.propose_members options
+      #$.ajax "/api/Project/" + parseInt($("#add-element form").attr("rel")) + "/members/propose", options
 
     #new member click
     $("#new-members h4").click ->
@@ -132,6 +136,7 @@ Meteor.subscribe "members"
   render_participants: (project)->
     $("#members .list").empty()
     p_members = project.get('members')
+    console.log 'project render_participants', p_members
     _(p_members).each (m_id)=>    
       m = members.findOne( { id: parseInt(m_id) })
       m.participation = project.get_participation m_id

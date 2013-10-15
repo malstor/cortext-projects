@@ -1,5 +1,5 @@
 Meteor.publish 'projects', ()->
-  projects.find({}) 
+  projects.find() 
 
 Meteor.publish 'project', (project_id)->
   p_e = elements.find( { project: project_id } ).fetch()

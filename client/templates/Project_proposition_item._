@@ -1,6 +1,0 @@
-<div class="user">
-	<img clas="gravatar" src="<%= user.gravatar %>"/>
-	<p class="name"><%= user.name %></p>
-
-	<div class="plus"></div>
-</div>
