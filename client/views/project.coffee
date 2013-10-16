@@ -139,12 +139,14 @@ Meteor.subscribe "members"
     _(p_members).each (m_id)=>    
       m = members.findOne( { id: parseInt(m_id) })
       m.participation = project.get_participation m_id
+      console.log 'participation ', m_id, m.participation
       $("#members .list").append Template.project_participant m
       
       new participation
         el: $("#members .list .member-"+m_id+" .participation")
         composition: m.participation
       .render()
+      
   render_scripts: ()->
     new queued_scripts
       el: $('#queuedScripts')

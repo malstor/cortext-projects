@@ -4,4 +4,4 @@ Meteor.startup ()->
 
   Backbone.history.start({pushState: true})
   
-  console.log "app started"
+  console.log "let's roll !"
