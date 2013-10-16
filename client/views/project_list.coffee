@@ -52,7 +52,6 @@ Meteor.subscribe "projects"
   render_composition: (project)->
     project_id = project.attributes.id
     composition = project.composition
-    console.log 'render compo ',project.composition
     $("#project-"+project_id+" .participation").empty()
  
     new participation
@@ -66,7 +65,6 @@ Meteor.subscribe "projects"
     project_elements = project.elements
     return if _.isUndefined $("#project-"+project_id+" .elements").html()
     $("#project-"+project_id+" .elements").empty()
-    #console.log 'render elmts for ', project, project_elements
 
     _(project_elements).each (element)=>
       member = members.findOne({ id: element.author })

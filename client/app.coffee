@@ -26,6 +26,21 @@
           false
     )
 
+  checkLogin : (callback)->
+    Deps.autorun ()=> 
+      if(demo)
+        @user_id = 1        
+      else
+        if(Meteor.user())
+          @user_id = parseInt(Meteor.user().profile.id)
+          @user_infos(@user_id)
+          console.log 'logged in :', Meteor.user()
+          callback()
+          
+        if !Meteor.loggingIn
+          @navigate('/login')
+
+
   path: (path_elements, options)->
     #console.log "path_elements",  path_elements
     p = new path
@@ -52,15 +67,17 @@
       el: '#main'
     .render()
 
-  dashboard: ()->
-    console.log('dashboard - user ', @user_id)
-    d = new dashboard()
-    d.render()
-    
-    @path [],
-      fix: true
+  dashboard: ()->  
+    @checkLogin ()=>
+      console.log @user_id
+      d = new dashboard()
+      d.render()
+      
+      @path [],
+        fix: true
     
   user: (user_id)->
+
     member = new models.member() 
 
     member.on "member:loaded", ()=>
@@ -79,6 +96,7 @@
     member.get_by_id user_id
     
   project: (project_id)->
+
     m_project = new models.project()
 
     p = new project
@@ -99,14 +117,9 @@
     
 
   element: (type, element_id, project_id)->
-
-    console.log element_id
-
     model = new models.element()
 
-    model.on "element:loaded", ()=>
-      console.log model
- 
+    model.on "element:loaded", ()=> 
       e = new element
         element: model
 

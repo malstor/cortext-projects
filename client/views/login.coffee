@@ -4,11 +4,9 @@
         "click .inscription" : "subscribe"
 
     render: ()=>
-        if(@demo)
-            app.navigate('/dashboard')
-        if(Meteor.userId())
-            Meteor.logout()
-        
+      if(@demo)
+        app.navigate('/dashboard')
+      else
         $('#main').html Template.login()
 
 

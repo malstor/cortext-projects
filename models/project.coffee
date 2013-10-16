@@ -6,26 +6,26 @@
       @set permalink: '/project/' + encodeURIComponent @get 'id'
 
   reduce_elements_to_composition: (m, type)->
-    console.log 'm ',m, 'type ', type
-    m[type] = if m[type] is undefined then 0 else m[type] + 1
-    
+    m[type] = if m[type] is undefined then 1 else m[type] + 1
+    console.log m
     m
 
   set_composition: ()->
     @composition = _(_(@elements).map (e)-> e.type ).reduce @reduce_elements_to_composition, {}
-    console.log 'project composition of ',@id , 'elements', @elements, 'compo' , @composition
 
   get_participation: (author_id)->
     author_id = parseInt author_id
 
-    composition = _(_(@elements).map (e)->      
-      if e.author == author_id then e.type else "Others"
-      ).countBy (e)->
-        return e
+    # composition = _(_(@elements).map (e)->      
+    #   if e.author == author_id then e.type else "Others"
+    #   ).countBy (e)->
+    #     return e
 
-      
     # FIXME the following does not work : the Memo is re-initialized at every iteration of reduce
     #.reduce @reduce_elements_to_composition, {}
+
+    composition = _(_(@elements).map (e)->      
+      if e.author == author_id then e.type else "Others" ).reduce @reduce_elements_to_composition, {}    
 
   set_events: ()->
     Deps.autorun ()=>
@@ -42,7 +42,6 @@
       @trigger "project:elements:changed"    
 
   get_by_id: (project_id)->
-    console.log 'project ',project_id,' load'
     project_id = parseInt project_id
 
     Meteor.subscribe "project", project_id
@@ -70,7 +69,6 @@
 
   
   add_member: (u_id)->
-    console.log 'model adding member : ', u_id
     p = projects.findOne({id: @attributes.id})
     if(p)
       projects.update p._id, $addToSet: {members: u_id}

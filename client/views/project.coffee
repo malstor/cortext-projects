@@ -21,7 +21,7 @@ Meteor.subscribe "members"
         callback_url: Meteor.absoluteUrl('project/' + project.get('id'))
         callback_json: null #todo changer lorsque l'api sera développée : "http://collab.cortext.net/api/Project/" + project + "/document"
 
-      console.log $.param(parameters, true)
+      #console.log $.param(parameters, true)
       window.location = dashboardConfig.services.Storage.url + "/upload?" + $.param(parameters)
 
     #start
@@ -32,7 +32,7 @@ Meteor.subscribe "members"
         accessToken: Meteor.user().profile.accessToken
         callback_url: Meteor.absoluteUrl('project/' + project.get('id'))
 
-      console.log $.param(parameters, true)
+      #console.log $.param(parameters, true)
       window.location = dashboardConfig.services.Jobs.url+"/job/new?" + $.param(parameters)
 
 
@@ -100,7 +100,6 @@ Meteor.subscribe "members"
         query: $("#add-members input").val()
 
         success: (users) ->
-          console.log 'members : ', users
           $("#proposition-members").empty()
           if users.length is 0
             $("#proposition-members").html "<p>We cannot find available user for this project</p>"
@@ -111,9 +110,7 @@ Meteor.subscribe "members"
               elt = Template.project_proposition_item 
                 user: user.attributes
               $elt = $("#proposition-members").append elt
-              console.log $elt
               $("#add-"+u.id).on "click", (evt) ->
-                console.log 'event adding member : ',u.id
                 project.add_member u.id
 
       project.propose_members options
@@ -127,6 +124,10 @@ Meteor.subscribe "members"
   render_elements: (project)->
     #console.log 'render elem project', project
     $("#elements").empty()
+
+    project.elements = _(project.elements).sortBy (e)->
+      -e.date
+
     _(project.elements).each (e)=>
       element.e = _(e).clone()
       element.author = members.findOne( { id: e.author } )
@@ -138,15 +139,15 @@ Meteor.subscribe "members"
     #console.log 'project render_participants', p_members
     _(p_members).each (m_id)=>    
       m = members.findOne( { id: parseInt(m_id) })
+      console.log m_id
       m.participation = project.get_participation m_id
-      console.log 'participation ', m_id, m.participation
       $("#members .list").append Template.project_participant m
       
       new participation
         el: $("#members .list .member-"+m_id+" .participation")
         composition: m.participation
       .render()
-      
+
   render_scripts: ()->
     new queued_scripts
       el: $('#queuedScripts')

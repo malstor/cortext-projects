@@ -1,7 +1,13 @@
 Meteor.startup ()->
   Collections.init()
-  @app = new App()
 
+  @app = new App()
   Backbone.history.start({pushState: true})
   
-  console.log "let's roll !"
+
+  # Deps.autorun ()=>
+  #   if Meteor.user() or demo
+  #     console.log "let's roll !"
+  #   else
+  #     @app.navigate('/login')   
+  #     console.log 'logging in...'
