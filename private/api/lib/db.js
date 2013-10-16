@@ -39,14 +39,23 @@ module.exports = {
             var collection = db.collection(collectionName, function(err, collection){
                 if (err) 
                     throw(new Error(err)); 
-                console.log('collection '+collectionName+' loaded', attributes);
-                collection.insert(attributes, function(err, id) {
+                console.log('collection '+collectionName+' loaded');
+                collection.findOne({},{id:1},{sort:{id:-1}}, function(err,item){
+                    if(item)
+                        attributes.id = parseInt(item.id+1);
+                    else
+                        attributes.id = 1;
+
+                    collection.insert(attributes, function(err, id) {
                         if (err) 
                             throw(new Error(err)); 
-                        console.log('insert item : ',attributes, id);
+                        console.log('insert item : ', id);
                         res.send('insert ok : ', id);
                         db.close();
                     });
+                })
+                
+                
             });
         });
     },
@@ -57,6 +66,7 @@ module.exports = {
                 if (err) 
                     throw(new Error(err)); 
                 console.log('collection '+collectionName+' loaded');
+
                 collection.update(query,attributes,{upsert: true}, function(err, id) {
                         if (err) 
                             throw(new Error(err)); 
