@@ -1,53 +1,43 @@
-var Db, Server, db, mongo, server, _;
-mongo = require('mongodb');
+/**
+ * cortext projects api - application
+ *
+ * @package    cortext-projects
+ * @subpackage api
+ * @author     Philippe Breucker
+ * @version    0.1 - 2013
+ */
 
-Server = mongo.Server;
 
-Db = mongo.Db;
-
-server = new Server('localhost', 3002, {
-  auto_reconnect: true
-});
-
-db = new Db('meteor', server);
-
-_ = require("underscore");
-
+/******** initialization *********/
+//express initialization - handle request/response
 var express = require('express');
 var app = express();
-var api = require('./lib/db.js');
+
+//cortext api methods
+var api = require('./lib/api.js');
+
+/****** app config ***********/
 app.use(express.bodyParser());
 
 /********Routes**************/
+
+// /
+app.get('/', api.welcome);
+
 //elements
-app.get('/', function(req, res){
-    res.send('cortext api - welcome');
-});
+app.get('/elements', api.getElements);
+app.get('/elements/:id', api.getOneElement);
+app.post('/elements', api.createElement);
 
-app.get('/elements', function(req, res){
-    console.log('--> [GET] /elements/');
-    api.sendAll('elements', {}, {}, res, db);
-});
+//documents (element type = document)
+app.get('/documents/:id', api.getOneDocument);
+app.post('/documents', api.createDocument);
 
-app.get('/elements/:id', function(req, res){
-    console.log('--> [GET] /elements/'+req.params.id);
-    api.sendItem('elements', {id: parseInt(req.params.id)}, res, db);
-});
-
-app.post('/elements', function(req, res){
-    var current_date = new Date().getTime();
-    var element = {
-        author: parseInt(req.body.author),
-        project: parseInt(req.body.project),
-        type: req.body.type,
-        date: current_date,
-        content: req.body.content
-    }
-    console.log('--> [POST] /elements', element);
-    api.insert('elements', element, res, db);
-});
+//analysis
+app.get('/analysis/:id', api.getOneAnalysis);
+app.post('/analysis', api.createAnalysis);
 
 /******** app start ***********/
 
 app.listen(8080);
-console.log('server listening on 8080');
+console.log('cortext api server - listening on port 8080');
