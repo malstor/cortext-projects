@@ -24,7 +24,7 @@
         queue: false
 
   set_title: ()->
-    console.log _.last @options.path
+    #console.log _.last @options.path
     if !(_.isUndefined _.last(@options.path))
       if !(_.isUndefined _.last(@options.path).name)
         document.title = _.last(@options.path).name + ' :: cortext'

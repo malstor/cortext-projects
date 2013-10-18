@@ -131,7 +131,11 @@ Meteor.subscribe "members"
     _(project.elements).each (e)=>
       element.e = _(e).clone()
       element.author = members.findOne( { id: e.author } )
-      $("#elements").append Template[ e.type.toLowerCase() ] element
+      if(!_.isUndefined(Template[ e.type.toLowerCase() ]))
+        $("#elements").append Template[ e.type.toLowerCase() ] element
+      else
+        $("#elements").append Template.element element
+
 
   render_participants: (project)->
     $("#members .list").empty()
@@ -139,7 +143,7 @@ Meteor.subscribe "members"
     #console.log 'project render_participants', p_members
     _(p_members).each (m_id)=>    
       m = members.findOne( { id: parseInt(m_id) })
-      console.log m_id
+      #console.log m_id
       m.participation = project.get_participation m_id
       $("#members .list").append Template.project_participant m
       

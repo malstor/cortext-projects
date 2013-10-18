@@ -69,7 +69,6 @@
 
   dashboard: ()->  
     @checkLogin ()=>
-      console.log @user_id
       d = new dashboard()
       d.render()
       

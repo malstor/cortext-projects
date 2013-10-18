@@ -7,7 +7,6 @@
 
   reduce_elements_to_composition: (m, type)->
     m[type] = if m[type] is undefined then 1 else m[type] + 1
-    console.log m
     m
 
   set_composition: ()->
@@ -15,14 +14,6 @@
 
   get_participation: (author_id)->
     author_id = parseInt author_id
-
-    # composition = _(_(@elements).map (e)->      
-    #   if e.author == author_id then e.type else "Others"
-    #   ).countBy (e)->
-    #     return e
-
-    # FIXME the following does not work : the Memo is re-initialized at every iteration of reduce
-    #.reduce @reduce_elements_to_composition, {}
 
     composition = _(_(@elements).map (e)->      
       if e.author == author_id then e.type else "Others" ).reduce @reduce_elements_to_composition, {}    

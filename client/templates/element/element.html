@@ -1,15 +1,22 @@
 <template name="element">
 <div class="element-meta col-1">
 
-<div class="info">
-	<h3>informations</h3>
+<div class="element {{type}} user-{{ author.id }}" id="Element-{{ e.id }}">
+
+  <div class="info">
+    <h3 class="author">{{ author.name }}</h3>
+    <span class="type element">{{ e.type }}</span>
+    <span class="date"><a href="{{ e.permalink }}">{{date_short date }}</a></span>
+  </div><!-- /info -->
+  {{#if content}}
+      <div class="body">
+         {{md content}}
+      </div>
+  {{/if}}
+
+  {{#if permalink}}
+    <a href='{{permalink}}'>view</a>
+  {{/if}}
+
 </div>
-
-</div><!-- /element-meta -->
-
-<div id="element-" class="element-alone col-main">
-
-<div id="element-content"></div>
-
-</div><!-- /elements -->
 </template>

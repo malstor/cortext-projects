@@ -9,14 +9,16 @@
   <span class="date"><a href="{{ permalink }}">{{date_short date }}</a></span>
 </div><!-- /info -->
 
-<% if( e.content && e.content.results ){ %>
+{{#if content}} 
+{{#if content.results}} 
+
 <div class="files">
 
-<% _.each( e.content.results, function(result){ %>
+{{#each content.results}}
 
   <div class="file">
     <div class="icon img-pdf">pdf</div>
-    <div class="name"><a href="<%= result.url %>"><%= result.title %></a></div>
+    <div class="name"><a href="{{result.url}}">{{title}}</a></div>
 
     <!-- <div class="info">            
       <span class="comments"><a href="#">5 comments</a></span> 
@@ -24,22 +26,23 @@
     </div>
     -->
   </div>
-<% }); %>
+
+{{/each}}
 
 </div><!-- /files -->
 
-<% } else { %>
+{{else}}
 
 <p class="status">
-    <% if(e. content && e.content.status){ %>
-      <%= e.content.status %>
-    <% } else { %>
+    {{#if content.status}}
+      {{content.status}}
+    {{else}}
       this script has not been started yet
-    <% } %>
+    {{/if}}
 </p>
 
-<% } %>
-
+{{/if}}
+{{/if}}
 
 </div>
 </template>

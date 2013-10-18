@@ -2,7 +2,7 @@
     <div class="script" id='script-{{s.id}}'>
         <div>
             <span class="name-script">{{s.name}}</span>
-            <span class="hours">{{s.time}}</span>
+            <span class="hours">{{date_short s.date}}</span>
         </div>
         <div class="queued-scripts">
             <span class="progress-script" data-progress='{{s.progress}}'></span>
