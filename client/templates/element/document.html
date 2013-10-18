@@ -1,0 +1,10 @@
+<template name="document">
+<div class="elements element document user-{{ author.id }}" id="Document-{{ e.id }}">
+    <div class="title-corpus">
+        <div class="icon"></div>
+        <div class="title-sc"><a href="{{e.permalink}}">{{e.name}}</a> -  {{e.size}} </div>
+        <div title="delete file" class="files2-icons trash" data-id="{{hash}}"></div>
+        <div class="info">{{date_short e.date}}</div>
+    </div>
+</div><!--document-->
+</template>
