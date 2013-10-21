@@ -44,7 +44,7 @@ function Storage(){
                        throw(new Error(err)); 
                     console.log(items);
                     res.send(items);
-                    db.close();
+                    //db.close();
                 });
             });
         });
@@ -64,7 +64,7 @@ function Storage(){
                             throw(new Error(err)); 
                         console.log('find item : ',query, item);
                         res.send(item);
-                        db.close();
+                        //db.close();
                     });
             });
         });
@@ -126,7 +126,7 @@ function Storage(){
                             throw(new Error(err)); 
                         console.log('upsert item : ',query, id);
                         res.send('update ok : ', id);
-                        db.close();
+                    db.close();
                     });
             });
         });
@@ -163,7 +163,7 @@ module.exports = {
             author: parseInt(req.body.author),
             project: parseInt(req.body.project),
             type: req.body.type,
-            date: parseInt(current_date),
+            date: parseInt(current_date), 
             content: req.body.content
         }
         console.log('--> [POST] /elements', element);
@@ -174,7 +174,9 @@ module.exports = {
         var current_date = new Date().getTime();
 
         if(req.body.timestamp)
-            current_date = req.body.timestamp;
+           //to avoid timestamps in seconds instead of ms  (given by php for example)
+           current_date = (req.body.timestamp <= 100000000000) ? req.body.timestamp*1000: req.body.timestamp; ;
+           
 
         var element = {
             name: req.body.name,

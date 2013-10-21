@@ -24,7 +24,8 @@
       #console.log 'prj elements', @attributes, @elements
 
       _(@elements).each (e)=>
-        e.permalink = "/element/#{e.type.toLowerCase()}/#{e.id}/in/#{@attributes.id}"
+        if e.type != 'Document'
+          e.permalink = "/element/#{e.type.toLowerCase()}/#{e.id}/in/#{@attributes.id}"
 
       @members = _(_(@elements).pluck("author")).uniq()
 
