@@ -4,7 +4,6 @@ dashboardConfig =
         Storage: {
             name: "Cortext Assets",
             url: "http://assets.dev",
-            callback_json:"http://localhost:8080/elements"
         },
         Identity: {
             name: "Cortext Auth",
@@ -21,6 +20,12 @@ dashboardConfig =
             url: "http://ctmanager.dev",
             callback_json:"http://localhost:8080/analysis"
 
+        },
+        Api: {
+            url: "http://localhost:8080",
+            createElement: "/elements",
+            createDocument: "/documents",
+            createAnalysis: "/analysis"
         }
     },
     common: {

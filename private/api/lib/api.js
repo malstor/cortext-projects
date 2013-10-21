@@ -184,7 +184,7 @@ module.exports = {
             mimetype: req.body.type,
             extension: req.body.extension,
             author: parseInt(req.body.author),
-            project: parseInt(req.body.project),
+            project: parseInt(req.params.project_id),
             type: 'Document',
             date: parseInt(current_date),
             timestamp: parseInt(current_date),
@@ -215,7 +215,7 @@ module.exports = {
             if(req.body.context.author)
                 var author = parseInt(req.body.context.author);
             if(req.body.context.project)
-                var project = parseInt(req.body.context.project);
+                var project = parseInt(req.params.project_id);
         var element = {
             author: author,
             project: project,

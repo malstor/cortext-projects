@@ -19,7 +19,7 @@ Meteor.subscribe "members"
           source: 'uploadedCorpus'
         token: Meteor.user().profile.accessToken
         callback_url: Meteor.absoluteUrl('project/' + project.get('id'))
-        callback_json: null #todo changer lorsque l'api sera développée : "http://collab.cortext.net/api/Project/" + project + "/document"
+        callback_json: dashboardConfig.services.Api.url+"/project/"+project.get('id')+"/documents"
 
       #console.log $.param(parameters, true)
       window.location = dashboardConfig.services.Storage.url + "/upload?" + $.param(parameters)
@@ -31,6 +31,8 @@ Meteor.subscribe "members"
           project_id: project.get('id')
         accessToken: Meteor.user().profile.accessToken
         callback_url: Meteor.absoluteUrl('project/' + project.get('id'))
+        callback_json: dashboardConfig.services.Api.url+"/project/"+project.get('id')+"/analysis"
+
 
       #console.log $.param(parameters, true)
       window.location = dashboardConfig.services.Jobs.url+"/job/new?" + $.param(parameters)

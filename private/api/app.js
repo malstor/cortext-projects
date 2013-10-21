@@ -30,12 +30,12 @@ app.get('/elements/:id', api.getOneElement);
 app.post('/elements', api.createElement);
 
 //documents (element type = document)
-app.get('/documents/:id', api.getOneDocument);
-app.post('/documents', api.createDocument);
+app.get('/project/:project_id/documents/:document_id', api.getOneDocument);
+app.post('/project/:project_id/documents', api.createDocument);
 
 //analysis
-app.get('/analysis/:id', api.getOneAnalysis);
-app.post('/analysis', api.createAnalysis);
+app.get('/project/:project_id/analysis/:analysis_id', api.getOneAnalysis);
+app.post('/project/:project_id/analysis', api.createAnalysis);
 
 /******** app start ***********/
 
