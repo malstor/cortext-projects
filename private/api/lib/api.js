@@ -210,26 +210,52 @@ module.exports = {
 
         if(req.body.timestamp)
             current_date = req.body.timestamp;
-
-        if(req.body.context)
-            if(req.body.context.author)
-                var author = parseInt(req.body.context.author);
-            if(req.body.context.project)
-                var project = parseInt(req.params.project_id);
+        
         var element = {
-            author: author,
-            project: project,
+            name: req.body.name,
+            author: parseInt(req.body.author),
+            project: parseInt(req.params.project_id),
             type: 'Analysis',
-            date: parseInt('current_date'),
+            date: parseInt(current_date),
+            progress: parseInt(req.body.progress),
+            state: parseInt(req.body.state)
+        }
+        if(req.body.content && req.body.content.results){
+            element.content={};
+            element.content.results=req.body.content.results;
+        }
+            
+            
+                
+
+        console.log('--> [POST] /analysis', element);
+        storage.insert('elements', element, res);
+    },
+
+    updateAnalysis : function(req, res){
+        var current_date = new Date().getTime();
+
+        if(req.body.timestamp)
+            current_date = req.body.timestamp;
+        var element = {
+            name: req.body.name,
+            author: parseInt(req.body.author),
+            project: parseInt(req.params.project_id),
+            type: 'Analysis',
+            date: parseInt(current_date),
             progress: parseInt(req.body.progress),
             state: parseInt(req.body.state)
         }
         if(req.body.content && req.body.content.results)
+        {
             element.content={};
             element.content.results=req.body.content.results;
+        }
+            
 
-        console.log('--> [POST] /analysis', element);
-        storage.insert('elements', element, res);
+        console.log('--> [POST] /analysis/'+req.params.id, element);
+        storage.updsert('elements', {id: req.params.analysis_id}, element, res);
+
     }
 };
 

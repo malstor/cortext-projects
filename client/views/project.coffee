@@ -29,9 +29,10 @@ Meteor.subscribe "members"
       parameters = 
         context:
           project_id: project.get('id')
+          callback_url: Meteor.absoluteUrl('project/' + project.get('id'))
+          callback_json: dashboardConfig.services.Api.url+"/project/"+project.get('id')+"/analysis"
         accessToken: Meteor.user().profile.accessToken
-        callback_url: Meteor.absoluteUrl('project/' + project.get('id'))
-        callback_json: dashboardConfig.services.Api.url+"/project/"+project.get('id')+"/analysis"
+        
 
 
       #console.log $.param(parameters, true)

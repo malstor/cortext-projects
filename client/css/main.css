@@ -818,9 +818,8 @@ background: url("/images/stop-hover.png") no-repeat;
 .analysis .info .author{
 	font: normal 12px/17px Arial, sans-serif;
 	color:#909090;
-	float:right;
 	margin-right:5px;
-	display:none;		
+			
 }
 		
 .analysis .info .extra a{
