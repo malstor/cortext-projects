@@ -1,10 +1,13 @@
 <template name="document">
-<div class="elements element document user-{{ author.id }}" id="Document-{{ e.id }}">
-    <div class="title-corpus">
-        <div class="icon"></div>
-        <div class="title-sc"><a href="{{e.permalink}}">{{e.name}}</a> -  {{e.size}} </div>
-        <div title="delete file" class="files2-icons trash" data-id="{{hash}}"></div>
-        <div class="info">{{date_short e.date}}</div>
+<div class="element document user-{{ author.id }}" id="Document-{{ e.id }}">
+    <div class="info">        
+    <h3 class="author">{{ author.name }}</h3>
+        <span class="type document">{{ e.type }}</span>        
+        <span class="date"><a >{{date_short e.date }}</a></span>
+    </div>
+    <div class="body">
+        <span class="name"><a href="{{e.permalink}}" title='download'>{{e.name}}</a> -  {{e.size}} </span>
+        <div class="trash" data-id="{{hash}}"  title="delete file"></div>
     </div>
 </div><!--document-->
 </template>

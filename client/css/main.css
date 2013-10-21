@@ -721,6 +721,26 @@ background: url("/images/stop-hover.png") no-repeat;
 	margin-top:-15px;
 }	
 
+/*---------------document---------------------------*/
+
+.document .name{
+    font: normal 12px/1.4em Arial, sans-serif;
+    color:#909090;
+    margin: 5px 10px;
+}
+
+.document .body {
+    width:750px;
+}
+
+.document .body a{
+    text-decoration : none;
+    color:#909090;
+}   
+.document .body a:hover{
+    color : #444444;
+}
+
 
 /*-----------------messages-------------------------*/
 
@@ -738,13 +758,13 @@ background: url("/images/stop-hover.png") no-repeat;
 	padding : 0 3px; 
 	text-transform : lowercase; 
 	font : normal 8px/15px verdana; 
-	color : white; 
-	background-color : #909090; 
+	color : white;
 }
 
 .element .info .message { background-color : #FFD505;}
 .element .info .analysis { background-color : #34B02C;}
 .element .info .image { background-color : #E62E60;}
+.element .info .document { background-color : #E62E60;}
 
 .element .info {
 	border-bottom: 1px solid #EEF2F6;
@@ -968,6 +988,8 @@ background:#FFD505 url(/images/mess.png) no-repeat 3px 3px;
 }
 
 #project-new { margin-bottom : 10px; }
+
+
 
 
 /*-------------------user--------------------------*/
