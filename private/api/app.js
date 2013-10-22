@@ -37,5 +37,7 @@ app.post('/project/:project_id/documents', api.createDocument);
 //analysis
 app.get('/project/:project_id/analysis/:analysis_id', api.getOneAnalysis);
 app.post('/project/:project_id/analysis', api.createAnalysis);
+app.post('/project/:project_id/analysis/:analysis_id', api.updateAnalysis);
+
 
 module.exports = app;

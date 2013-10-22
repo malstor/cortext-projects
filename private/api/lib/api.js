@@ -89,7 +89,7 @@ function Storage(){
                 if(err)
                     throw(new Error(err));
                 if(item)
-                    attributes.id = parseInt(item.id+1);
+                    attributes.id = parseInt(item.id)+1;
                 else
                     attributes.id = 1;
 
@@ -121,10 +121,10 @@ function Storage(){
                 throw(new Error(err)); 
             console.log('collection '+collectionName+' loaded');
 
-            collection.update(query,attributes,{upsert: true}, function(err, id) {
+            collection.update(query,{$set: attributes}, function(err, item) {
                     if (err) 
                         throw(new Error(err)); 
-                    console.log('upsert item : ',query, id);
+                    console.log('upsert item : ',query, '{$set: ',attributes,'}', id);
                     res.send('update ok : ', id);
                 });
         });
@@ -243,23 +243,18 @@ module.exports = {
            current_date = timestampJs(req.body.timestamp)
 
         var element = {
-            name: req.body.name,
-            author: parseInt(req.body.author),
-            project: parseInt(req.params.project_id),
-            type: 'Analysis',
-            date: parseInt(current_date),
             progress: parseInt(req.body.progress),
             state: parseInt(req.body.state)
         }
-        if(req.body.content && req.body.content.results)
+        if(req.body.results)
         {
             element.content={};
-            element.content.results=req.body.content.results;
+            element.content.results=req.body.results;
         }
             
 
-        console.log('--> [POST] /analysis/'+req.params.id, element);
-        storage.updsert('elements', {id: req.params.analysis_id}, element, res);
+        console.log('--> [POST] /project/'+req.params.project_id+'/analysis/'+req.params.analysis_id, element);
+        storage.upsert('elements', {id: parseInt(req.params.analysis_id)}, element, res);
 
     }
 };
