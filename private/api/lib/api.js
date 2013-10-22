@@ -20,32 +20,41 @@ server = new Server('localhost', 3002, {
 });
 
 db = new Db('meteor', server);
-
+db.open(function(err, dbConn){
+    if(err)
+       throw(new Error(err));
+});
 //_ = require("underscore");
 
+/***** Tools ***************************/
+//returns timestamp in mseconds if in seconds (php standard)
+function timestampJs(timestp)
+{
+    return (timestp <= 100000000000) ? timestp*1000: timestp;
+}
 
 /***** DB Management  ****************/
 
 /****** DB methods ***********/
+    
+
 function Storage(){
 
     /**
      *   Finds all items of <collectionName> filter with <query> and send it as an array of <fields> to <res>
      */
     this.getAll = function(collectionName, query, fields, res){
-        db.open(function(err, db){
-            var collection = db.collection(collectionName, function(err, collection){
-                if (err) 
-                    throw(new Error(err)); 
+        var collection = db.collection(collectionName, function(err, collection){
+            if (err) 
+                throw(new Error(err)); 
 
-                console.log('collection '+collectionName+' loaded');
-                collection.find(query, fields).toArray(function(err, items) {
-                    if (err) 
-                       throw(new Error(err)); 
-                    console.log(items);
-                    res.send(items);
-                    //db.close();
-                });
+            console.log('collection '+collectionName+' loaded');
+            collection.find(query, fields).toArray(function(err, items) {
+                if (err) 
+                   throw(new Error(err)); 
+                console.log(items);
+                res.send(items);
+                //db.close();
             });
         });
     };
@@ -54,19 +63,16 @@ function Storage(){
      * Find one item of <collectionName> based on query and send it as an array
      */
     this.getItem = function(collectionName, query, res){
-        db.open(function(err, db){
-            var collection = db.collection(collectionName, function(err, collection){
-                if (err) 
-                    throw(new Error(err)); 
-                console.log('collection '+collectionName+' loaded');
-                collection.findOne(query,function(err, item) {
-                        if (err) 
-                            throw(new Error(err)); 
-                        console.log('find item : ',query, item);
-                        res.send(item);
-                        //db.close();
-                    });
-            });
+        var collection = db.collection(collectionName, function(err, collection){
+            if (err) 
+                throw(new Error(err)); 
+            console.log('collection '+collectionName+' loaded');
+            collection.findOne(query,function(err, item) {
+                    if (err) 
+                        throw(new Error(err)); 
+                    console.log('find item : ',query, item);
+                    res.send(item);
+                });
         });
     };
 
@@ -75,38 +81,33 @@ function Storage(){
      */
 
     this.insert = function(collectionName, attributes, res){
-        db.open(function(err, db){
-            var collection = db.collection(collectionName, function(err, collection){
-                if (err) 
-                    throw(new Error(err)); 
-                console.log('collection '+collectionName+' loaded');
-                collection.findOne({},{id:1},{sort:{id:-1}}, function(err,item){
-                    if(err)
-                        throw(new Error(err));
-                    if(item)
-                        attributes.id = parseInt(item.id+1);
-                    else
-                        attributes.id = 1;
+        var collection = db.collection(collectionName, function(err, collection){
+            if (err) 
+                throw(new Error(err)); 
+            console.log('collection '+collectionName+' loaded');
+            collection.findOne({},{id:1},{sort:{id:-1}}, function(err,item){
+                if(err)
+                    throw(new Error(err));
+                if(item)
+                    attributes.id = parseInt(item.id+1);
+                else
+                    attributes.id = 1;
 
-                    console.log("new element id : ", attributes.id);
-                    try{
-                        collection.insert(attributes, function(err, item) {
-                            if (err) 
-                                throw(new Error(err)); 
+                console.log("new element id : ", attributes.id);
+                try{
+                    collection.insert(attributes, function(err, item) {
+                        if (err) 
+                            throw(new Error(err)); 
 
-                            console.log('inserted item : ', item);
-                            res.send(201, item);
-                            db.close();
-                        });
-                    }
-                    catch(err){
-                        console.log('error inserting element : ', err);
-                        res.send(500,"error inserting element");
-                    }
-                })
-                
-                
-            });
+                        console.log('inserted item : ', item);
+                        res.send(201, item);
+                    });
+                }
+                catch(err){
+                    console.log('error inserting element : ', err);
+                    res.send(500,"error inserting element");
+                }
+            })
         });
     };
 
@@ -115,20 +116,17 @@ function Storage(){
      */
 
     this.upsert = function(collectionName, query, attributes, res){
-        db.open(function(err, db){
-            var collection = db.collection(collectionName, function(err, collection){
-                if (err) 
-                    throw(new Error(err)); 
-                console.log('collection '+collectionName+' loaded');
+        var collection = db.collection(collectionName, function(err, collection){
+            if (err) 
+                throw(new Error(err)); 
+            console.log('collection '+collectionName+' loaded');
 
-                collection.update(query,attributes,{upsert: true}, function(err, id) {
-                        if (err) 
-                            throw(new Error(err)); 
-                        console.log('upsert item : ',query, id);
-                        res.send('update ok : ', id);
-                    db.close();
-                    });
-            });
+            collection.update(query,attributes,{upsert: true}, function(err, id) {
+                    if (err) 
+                        throw(new Error(err)); 
+                    console.log('upsert item : ',query, id);
+                    res.send('update ok : ', id);
+                });
         });
     }
 };
@@ -159,6 +157,9 @@ module.exports = {
 
     createElement : function(req, res){
         var current_date = new Date().getTime();
+        if(req.body.timestamp)
+            current_date = timestampJs(req.body.timestamp)
+
         var element = {
             author: parseInt(req.body.author),
             project: parseInt(req.body.project),
@@ -174,8 +175,7 @@ module.exports = {
         var current_date = new Date().getTime();
 
         if(req.body.timestamp)
-           //to avoid timestamps in seconds instead of ms  (given by php for example)
-           current_date = (req.body.timestamp <= 100000000000) ? req.body.timestamp*1000: req.body.timestamp; ;
+            current_date = timestampJs(req.body.timestamp)
            
 
         var element = {
@@ -190,14 +190,20 @@ module.exports = {
             timestamp: parseInt(current_date),
             permalink: req.body.url
         }
-        console.log('--> [POST] /documents', element);
+        console.log('--> [POST] /project/documents', element);
         storage.insert('elements', element, res);
     },
 
-    getOneDocument : function(req, res){
-        console.log('--> [GET] /documents/'+req.params.id);
-        storage.getItem('elements', {id: parseInt(req.params.id)}, res);
+    getProjectDocuments : function(req, res){
+        console.log('--> [GET] /project/'+req.params.project_id+'/documents');
+        storage.getAll('elements', {project: parseInt(req.params.project_id)}, {}, res);
     },
+
+    getOneDocument : function(req, res){
+        console.log('--> [GET] /documents/'+req.params.document_id);
+        storage.getItem('elements', {project: parseInt(req.params.project_id), id: parseInt(req.params.document_id)}, res);
+    },
+
 
     getOneAnalysis : function(req, res){
         console.log('--> [GET] /analysis/'+req.params.id);
@@ -209,7 +215,7 @@ module.exports = {
         var current_date = new Date().getTime();
 
         if(req.body.timestamp)
-            current_date = req.body.timestamp;
+           current_date = timestampJs(req.body.timestamp)
         
         var element = {
             name: req.body.name,
@@ -224,11 +230,9 @@ module.exports = {
             element.content={};
             element.content.results=req.body.content.results;
         }
-            
-            
-                
 
         console.log('--> [POST] /analysis', element);
+        console.log(req.body);
         storage.insert('elements', element, res);
     },
 
@@ -236,7 +240,8 @@ module.exports = {
         var current_date = new Date().getTime();
 
         if(req.body.timestamp)
-            current_date = req.body.timestamp;
+           current_date = timestampJs(req.body.timestamp)
+
         var element = {
             name: req.body.name,
             author: parseInt(req.body.author),

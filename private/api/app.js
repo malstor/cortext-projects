@@ -21,7 +21,7 @@ app.use(express.bodyParser());
 
 /********Routes**************/
 
-// /
+//root
 app.get('/', api.welcome);
 
 //elements
@@ -31,13 +31,11 @@ app.post('/elements', api.createElement);
 
 //documents (element type = document)
 app.get('/project/:project_id/documents/:document_id', api.getOneDocument);
+app.get('/project/:project_id/documents', api.getProjectDocuments);
 app.post('/project/:project_id/documents', api.createDocument);
 
 //analysis
 app.get('/project/:project_id/analysis/:analysis_id', api.getOneAnalysis);
 app.post('/project/:project_id/analysis', api.createAnalysis);
 
-/******** app start ***********/
-
-app.listen(8080);
-console.log('cortext api server - listening on port 8080');
+module.exports = app;

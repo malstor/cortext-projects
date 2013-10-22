@@ -3,11 +3,12 @@
     "version": "0.0.1",
     "private": true,
     "scripts": {
-        "start": "node app.js"
+        "start": "node index.js"
     },
     "dependencies": {
         "express": "3.*",
-        "underscore":"1.*"
-        "mongodb":"1.*"
+        "underscore":"1.*",
+        "mongodb":"1.*",
+	"supertest": "*"
     }
 }
