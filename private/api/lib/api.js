@@ -120,13 +120,19 @@ function Storage(){
             if (err) 
                 throw(new Error(err)); 
             console.log('collection '+collectionName+' loaded');
-
-            collection.update(query,{$set: attributes}, function(err, item) {
-                    if (err) 
+            try{
+                collection.update(query,{$set: attributes}, function(err, item) {
+                    if (err)
                         throw(new Error(err)); 
                     console.log('upsert item : ',query, '{$set: ',attributes,'}', id);
                     res.send('update ok : ', id);
-                });
+                });    
+            }
+            catch(err){
+                console.log('error updating element : ', err);
+                res.send(500,"error updating element");
+            }
+            
         });
     }
 };
