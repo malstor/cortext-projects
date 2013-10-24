@@ -8,18 +8,18 @@
  */
 
 /**** Servers Initialization *********/
-var Db, Server, db, mongo, server, _;
+var Db, Server, db, mongo, server, mongoClient, Client, _;
 mongo = require('mongodb');
 
 Server = mongo.Server;
+Client = mongo.MongoClient;
 
 Db = mongo.Db;
+server = new Server('localhost', 3002, {w: 1}, {auto_reconnect: true});
+mongoClient = new Client(server);
 
-server = new Server('localhost', 3002, {
-  auto_reconnect: true
-});
+db = mongoClient.db('meteor');
 
-db = new Db('meteor', server);
 db.open(function(err, dbConn){
     if(err)
        throw(new Error(err));
