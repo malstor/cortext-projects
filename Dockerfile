@@ -12,19 +12,11 @@ RUN apt-get -y update
 #TOOLS
 RUN apt-get install -y -q curl git make wget
 
-#BUILD
-RUN apt-get install -y -q build-essential g++
-
 ## MONGO
-RUN apt-get install -y -q mongodb-10gen
+#RUN apt-get install -y -q mongodb-10gen
 
 #METEOR
 RUN curl https://install.meteor.com | /bin/sh
-
-#SHIMS
-RUN dpkg-divert --local --rename --add /sbin/initctl
-RUN ln -s /bin/true /sbin/initctl
-ENV DEBIAN_FRONTEND noninteractive
 
 #VOLUME ["server"]
 
