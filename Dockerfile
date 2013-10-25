@@ -12,7 +12,7 @@ RUN echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen
 RUN apt-get -y update
 
 #TOOLS
-RUN apt-get install -y -q curl git make wget
+RUN apt-get install -y -q curl git make wget nano
 
 #python
 #RUN apt-get install -y python-software-properties python
@@ -28,21 +28,28 @@ RUN curl https://install.meteor.com | /bin/sh
 
 #VOLUME ["server"]
 
+#PROJECT dirictory and permissions
 RUN mkdir -p /server/cortext-projects
 ADD . /server/cortext-projects
 RUN chown root:root -R /server/cortext-projects
-RUN rm -rf /server/cortext-projects/.meteor/local/build
+RUN rm -rf /server/cortext-projects/.meteor/local/*
 
+#Application : database and env reset
+WORKDIR /server/cortext-projects/
+#RUN meteor reset
+RUN mv env/parameters.js.cortext env/parameters.js
+
+#API : install packages
 WORKDIR /server/cortext-projects/private/api
 CMD npm install
 
-#PORTS
+#Open correct ports
 EXPOSE 3000:3000
-EXPOSE 8080:8080
+EXPOSE 8080:4999
 
 WORKDIR /server/cortext-projects
 
-CMD ./start.sh
+CMD ["/server/cortext-projects/start.sh"]
 #CMD meteor &
 
 #WORKDIR /server/cortext-projects/private/api
