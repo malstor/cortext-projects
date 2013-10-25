@@ -45,12 +45,9 @@ CMD npm install
 
 #Open correct ports
 EXPOSE 3000:3000
-EXPOSE 8080:4999
+EXPOSE 8080:8080
 
 WORKDIR /server/cortext-projects
 
-CMD ["/server/cortext-projects/start.sh"]
-#CMD meteor &
-
-#WORKDIR /server/cortext-projects/private/api
-#CMD node index.js
+#CMD ["/server/cortext-projects/start.sh"]
+CMD meteor & node ./private/api/index.js
