@@ -30,7 +30,8 @@ RUN curl https://install.meteor.com | /bin/sh
 
 #PROJECT dirictory and permissions
 RUN mkdir -p /server/cortext-projects
-ADD . /server/cortext-projects
+#ADD . /server/cortext-projects
+RUN git clone https://github.com/cortext/cortext-projects.git /server/cortext-projects
 RUN chown root:root -R /server/cortext-projects
 RUN rm -rf /server/cortext-projects/.meteor/local/*
 
@@ -41,7 +42,7 @@ RUN mv env/parameters.js.cortext env/parameters.js
 
 #API : install packages
 WORKDIR /server/cortext-projects/private/api
-CMD npm install
+RUN npm install
 
 #Open correct ports
 EXPOSE 3000:3000
