@@ -1,8 +1,6 @@
-!#/bin/sh
+#!/bin/sh
 echo 'starting app'
-cd /server/cortext-projects/
-meteor
+meteor &
 
 echo 'starting api'
-cd /server/cortext-projects/private/api
-node index.js
+node ./private/api/index.js &

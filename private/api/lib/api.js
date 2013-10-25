@@ -21,8 +21,8 @@ mongoClient = new Client(server);
 db = mongoClient.db('meteor');
 
 db.open(function(err, dbConn){
-    if(err)
-       throw(new Error(err));
+    // if(err)
+    //    throw(new Error(err));
 });
 //_ = require("underscore");
 
