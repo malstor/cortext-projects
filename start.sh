@@ -1,6 +1,6 @@
 #!/bin/sh
-echo 'starting app'
+#echo 'starting app'
 meteor &
 
-echo 'starting api'
-node ./private/api/index.js &
+#echo 'starting api'
+node /server/private/api/index.js &
