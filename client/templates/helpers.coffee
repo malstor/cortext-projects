@@ -1,3 +1,11 @@
+Handlebars.registerHelper 'status', (st) ->
+  switch st
+    when 0 then "queued"
+    when 8 then "error"
+    when 9 then "finished"
+    else "unknown"
+  
+
 Handlebars.registerHelper 'date_short', (timestamp) ->
     if typeof timestamp is 'number'
       moment(timestamp).format("DD.MM.YYYY")

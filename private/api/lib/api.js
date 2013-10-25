@@ -124,8 +124,8 @@ function Storage(){
                 collection.update(query,{$set: attributes}, function(err, item) {
                     if (err)
                         throw(new Error(err)); 
-                    console.log('upsert item : ',query, '{$set: ',attributes,'}', id);
-                    res.send('update ok : ', id);
+                    console.log('upsert item : ',query, '{$set: ',attributes,'}', item);
+                    res.send('update ok : ', item);
                 });    
             }
             catch(err){
@@ -250,7 +250,8 @@ module.exports = {
 
         var element = {
             progress: parseInt(req.body.progress),
-            state: parseInt(req.body.state)
+            state: parseInt(req.body.state),
+            jobId: parseInt(req.body.jobId)
         }
         if(req.body.results)
         {

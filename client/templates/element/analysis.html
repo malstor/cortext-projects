@@ -1,48 +1,37 @@
 <template name="analysis">
-<div class="element analysis user-{{ author }}" id="Analysis-{{ id }}">
+  <div class="element analysis user-{{ author }}" id="Analysis-{{ id }}">
+    <div class="info">
+      <h3>{{e.name}}</h3>
+      <span class="type analysis">{{ e.type }}</span>
+      <span class="author">{{ author.name }}</span>
+      <!--<span class="extra"><a href="#">parameters</a> - <a href="#">logs</a></span>-->
+      <span class="extra"><a href="/job/{{e.jobId}}/log">parameters - logs</a></span>
+      <span class="date"><a href="{{ e.permalink }}">{{date_short e.date }}</a></span>
+      <span class="status">
+          {{#if e.state}}
+            {{status e.state}}
+          {{else}}
+            this script has not been started yet
+          {{/if}}
+      </span>
+    </div><!-- /info -->
 
-<div class="info">
-  <h3>{{e.name}}</h3>
-  <span class="type analysis">{{ e.type }}</span>
-  <span class="author">{{ author.name }}</span>
-  <span class="extra"><a href="#">parameters</a> - <a href="#">logs</a></span>
-  <span class="date"><a href="{{ permalink }}">{{date_short date }}</a></span>
-</div><!-- /info -->
-
-{{#if content}} 
-{{#if content.results}} 
-
-<div class="files">
-
-{{#each content.results}}
-
-  <div class="file">
-    <div class="icon img-pdf">pdf</div>
-    <div class="name"><a href="{{result.url}}">{{title}}</a></div>
-
-    <!-- <div class="info">            
-      <span class="comments"><a href="#">5 comments</a></span> 
-      <span class="date">23:12 12.05.2012</span>
-    </div>
-    -->
-  </div>
-
-{{/each}}
-
-</div><!-- /files -->
-
-{{else}}
-
-<p class="status">
-    {{#if content.status}}
-      {{content.status}}
-    {{else}}
-      this script has not been started yet
+    {{#if e.content}} 
+      {{#if e.content.results}} 
+      <div class="files">
+      {{#each e.content.results}}
+        <div class="file">
+          <div class="icon img-pdf">pdf</div>
+          <div class="name"><a href="{{url}}">{{title}}</a></div>
+          <!-- <div class="info">            
+            <span class="comments"><a href="#">5 comments</a></span> 
+            <span class="date">23:12 12.05.2012</span>
+          </div>
+          -->
+        </div>
+      {{/each}}
+      </div><!-- /files -->
+      {{/if}}
     {{/if}}
-</p>
-
-{{/if}}
-{{/if}}
-
-</div>
+  </div>
 </template>

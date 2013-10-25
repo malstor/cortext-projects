@@ -8,6 +8,7 @@
 #    'element/:element_id':  'element'
     'element/:type/:element/in/:project': 'element'
     'element/:type/:element': 'element'
+    'job/:jobId/log' : 'log'
     'login': 'login'
     'auth/oauth': 'oauth'
   initialize: (options)->
@@ -125,4 +126,7 @@
       e.render()
 
     model.get_by_id element_id
+
+  log: (jobId)->
+    window.location = dashboardConfig.services.Jobs.url + "/logs/"+jobId 
     
