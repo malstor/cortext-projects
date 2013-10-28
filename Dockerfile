@@ -45,10 +45,10 @@ WORKDIR /server/cortext-projects/private/api
 RUN npm install
 
 #Open correct ports
-EXPOSE 3000:3000
-EXPOSE 8080:8080
+EXPOSE 80
+EXPOSE 8080
 
 WORKDIR /server/cortext-projects
 
 #CMD ["/server/cortext-projects/start.sh"]
-CMD meteor & node ./private/api/index.js
+CMD meteor run -p 80 & node ./private/api/index.js
