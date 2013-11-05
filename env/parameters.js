@@ -3,12 +3,12 @@ dashboardConfig =
     services: {
         Storage: {
             name: "Cortext Assets",
-            url: "http://assets.dev",
+            url: "http://assets.cortext.net",
         },
         Identity: {
             name: "Cortext Auth",
-            urlAuth: "http://oauth.dev/auth",
-            urlSubscribe: "http://oauth.dev/user/register",
+            urlAuth: "http://auth.cortext.net/auth",
+            urlSubscribe: "http://auth.cortext.net/user/register",
             account: {
                 service: "cortext",
                 clientId: "cortext-dashboard",
@@ -17,12 +17,11 @@ dashboardConfig =
         },
         Jobs: {
             name: "Cortext Manager",
-            url: "http://ctmanager.dev",
-            callback_json:"http://localhost:8080/analysis"
-
+            callback_json:"http://api.projects.cortext.net/analysis"
+            url: "http://mcp.cortext.net" 
         },
         Api: {
-            url: "http://localhost:8080",
+            url: "http://api.projects.cortext.net",
             createElement: "/elements",
             createDocument: "/documents",
             createAnalysis: "/analysis"
