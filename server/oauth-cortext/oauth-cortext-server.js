@@ -52,7 +52,7 @@ var getTokens = function (query) {
         code: query.code,
         client_id: config.clientId,
         client_secret: config.secret,
-        redirect_uri: Meteor.absoluteUrl("_oauth/cortext?close"),
+        redirect_uri: dashboardConfig.services.Identity.callback+'/_oauth/cortext?close',
         grant_type: 'authorization_code'
       }});
     console.log("[oauth] response from grant request : ", response);
