@@ -36,7 +36,7 @@ Cortext.requestCredential = function (options, credentialRequestCompleteCallback
         '?response_type=code' +
         '&state=' + credentialToken +
         '&client_id=' + config.clientId +
-        '&redirect_uri=' + Meteor.absoluteUrl('_oauth/cortext?close');
+        '&redirect_uri=' + dashboardConfig.services.Identity.callback+'/_oauth/cortext?close';
         
   Oauth.initiateLogin(credentialToken,
                       loginUrl,
