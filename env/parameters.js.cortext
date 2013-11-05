@@ -4,12 +4,13 @@ dashboardConfig =
         Storage: {
             name: "Cortext Assets",
             url: "http://assets.cortext.net",
+            callback: "http://managerv2.cortext.net"
         },
         Identity: {
             name: "Cortext Auth",
             urlAuth: "http://auth.cortext.net/auth",
             urlSubscribe: "http://auth.cortext.net/user/register",
-	    callback: "http://managerv2.cortext.net",
+	        callback: "http://managerv2.cortext.net",
             account: {
                 service: "cortext",
                 clientId: "cortext-dashboard",
@@ -18,6 +19,7 @@ dashboardConfig =
         },
         Jobs: {
             name: "Cortext Manager",
+            callback:"http://managerv2.cortext.net",
             callback_json:"http://api.projects.cortext.net/analysis",
             url: "http://mcp.cortext.net" 
         },

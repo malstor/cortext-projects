@@ -18,7 +18,7 @@ Meteor.subscribe "members"
           project_id: $(this).attr("rel")
           source: 'uploadedCorpus'
         token: Meteor.user().profile.accessToken
-        callback_url: Meteor.absoluteUrl('project/' + project.get('id'))
+        callback_url: dashboardConfig.services.Storage.callback+'/project/' + project.get('id')
         callback_json: dashboardConfig.services.Api.url+"/project/"+project.get('id')+"/documents"
 
       #console.log $.param(parameters, true)
@@ -29,7 +29,7 @@ Meteor.subscribe "members"
       parameters = 
         context:
           project_id: project.get('id')
-          callback_url: Meteor.absoluteUrl('project/' + project.get('id'))
+          callback_url: dashboardConfig.services.Jobs.callback+'/project/' + project.get('id')
           callback_json: dashboardConfig.services.Api.url+"/project/"+project.get('id')+"/analysis"
         accessToken: Meteor.user().profile.accessToken
         
