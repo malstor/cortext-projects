@@ -15,7 +15,7 @@ Server = mongo.Server;
 Client = mongo.MongoClient;
 
 Db = mongo.Db;
-server = new Server('localhost', 3002, {w: 1}, {auto_reconnect: true});
+server = new Server('localhost', 3032, {w: 1}, {auto_reconnect: true});
 mongoClient = new Client(server);
 
 db = mongoClient.db('meteor');

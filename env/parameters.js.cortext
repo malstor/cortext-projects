@@ -9,6 +9,7 @@ dashboardConfig =
             name: "Cortext Auth",
             urlAuth: "http://auth.cortext.net/auth",
             urlSubscribe: "http://auth.cortext.net/user/register",
+	    callback: "http://managerv2.cortext.net",
             account: {
                 service: "cortext",
                 clientId: "cortext-dashboard",
@@ -17,12 +18,11 @@ dashboardConfig =
         },
         Jobs: {
             name: "Cortext Manager",
-            url: "http://mcp.cortext.net",
-            callback_json:"http://localhost:8080/analysis"
-
+            callback_json:"http://api.projects.cortext.net/analysis",
+            url: "http://mcp.cortext.net" 
         },
         Api: {
-            url: "http://localhost:8080",
+            url: "http://api.projects.cortext.net",
             createElement: "/elements",
             createDocument: "/documents",
             createAnalysis: "/analysis"
