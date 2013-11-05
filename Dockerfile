@@ -36,12 +36,12 @@ RUN chown root:root -R /server/cortext-projects
 RUN rm -rf /server/cortext-projects/.meteor/local/*
 
 #Application : database and env reset
-WORKDIR /server/cortext-projects/
+RUN cd /server/cortext-projects
 #RUN meteor reset
-RUN mv env/parameters.js.cortext env/parameters.js
+RUN mv /server/cortext-projects/env/parameters.js.cortext /server/cortext-projects/env/parameters.js
 
 #API : install packages
-WORKDIR /server/cortext-projects/private/api
+RUN cd /server/cortext-projects/private/api
 RUN npm install
 
 #Open correct ports
@@ -50,5 +50,4 @@ EXPOSE 8080
 
 WORKDIR /server/cortext-projects
 
-#CMD ["/server/cortext-projects/start.sh"]
 CMD meteor run -p 80 & node ./private/api/index.js
