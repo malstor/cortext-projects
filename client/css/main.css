@@ -390,7 +390,8 @@ background: url("/images/stop-hover.png") no-repeat;
     font-size: 11px;
     font-style: normal;
     line-height: 20px;
-    margin-left: 5px;}
+    margin-left: 5px;
+    }
 
 .col-1 .script .hours{
 	color: #909090;

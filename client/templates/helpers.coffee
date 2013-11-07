@@ -24,3 +24,6 @@ Handlebars.registerHelper 'size', (a)->
 
 Handlebars.registerHelper 'md', (txt)->
   return new Handlebars.SafeString marked txt
+
+Handlebars.registerHelper 'ellipsis', (str, limit) ->
+    return if str.length > limit then str.substring(0, limit)+"..." else str
