@@ -818,15 +818,25 @@ background: url("/images/stop-hover.png") no-repeat;
 	text-align : center;
 	margin : 20px 0;
 }
+
+.error { 
+    color:#f60 !important;
+}
+.finished { 
+    color: #909090 !important;
+}
 	
 	
 /*-------------------analysis--------------------------*/
 
-.analysis .info .author{
+.analysis .info .name{
 	font: normal 12px/17px Arial, sans-serif;
 	color:#909090;
 	margin-right:5px;
 			
+}
+.analysis .info .name {
+
 }
 		
 .analysis .info .extra a{

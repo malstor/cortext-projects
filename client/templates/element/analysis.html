@@ -1,30 +1,32 @@
 <template name="analysis">
   <div class="element analysis user-{{ author }}" id="Analysis-{{ id }}">
     <div class="info">
-      <h3>{{e.name}}</h3>
+      <h3 class="author"> {{ author.name }}</h3>
+      <span class="name"> {{e.name}}</span>
       <span class="type analysis">{{ e.type }}</span>
-      <span class="author">{{ author.name }}</span>
+     
       <!--<span class="extra"><a href="#">parameters</a> - <a href="#">logs</a></span>-->
-      <span class="extra"><a href="/job/{{e.jobId}}/log">parameters - logs</a></span>
+      
       <span class="date"><a href="{{ e.permalink }}">{{date_short e.date }}</a></span>
-      <span class="status">
-          {{#if e.state}}
-            {{status e.state}}
-          {{else}}
-            [queued]
-          {{/if}}
-      </span>
+      
+
     </div><!-- /info -->
     {{#if e.parameters}}
     <div class='parameters'>
       <table>
         <tr>
-          <td>script</td>
-          <td>{{e.parameters.script_name}}</td>
+          <td>script (click for logs)</td>
+          <td>
+            <a href="/job/{{e.jobId}}/log" title='view parameters &amp; logs'>{{e.parameters.script_name}}</a> 
+            {{#if e.state}}
+              <span class="status {{status e.state}}"> - {{status e.state}}</span>
+            
+            {{/if}}
+          </td>
         </tr>
         <tr>
-          <td>corpus</td>
-          <td><a href="{{e.parameters.corpus_permalink}}">{{e.parameters.corpus_name}}</td>
+          <td>corpus (click to download)</td>
+          <td><a href="{{e.parameters.corpus_permalink}}"  title='download'>{{e.parameters.corpus_name}}</td>
         </tr>
       </table>
     </div>
