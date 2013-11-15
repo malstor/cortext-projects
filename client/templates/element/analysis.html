@@ -11,10 +11,24 @@
           {{#if e.state}}
             {{status e.state}}
           {{else}}
-            this script has not been started yet
+            [queued]
           {{/if}}
       </span>
     </div><!-- /info -->
+    {{#if e.parameters}}
+    <div class='parameters'>
+      <table>
+        <tr>
+          <td>script</td>
+          <td>{{e.parameters.script_name}}</td>
+        </tr>
+        <tr>
+          <td>corpus</td>
+          <td><a href="{{e.parameters.corpus_permalink}}">{{e.parameters.corpus_name}}</td>
+        </tr>
+      </table>
+    </div>
+    {{/if}}
 
     {{#if e.content}} 
       {{#if e.content.results}} 

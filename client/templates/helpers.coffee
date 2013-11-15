@@ -8,7 +8,15 @@ Handlebars.registerHelper 'status', (st) ->
 
 Handlebars.registerHelper 'date_short', (timestamp) ->
     if typeof timestamp is 'number'
-      moment(timestamp).format("DD.MM.YYYY")
+      #moment(timestamp).fromNow()
+      moment(timestamp).format("YYYY-DD-MM H:mm:s")
+    else
+      timestamp
+
+Handlebars.registerHelper 'from_now', (timestamp) ->
+    if typeof timestamp is 'number'
+      #moment(timestamp).fromNow()
+      moment(timestamp).format("YYYY-DD-MM H:mm:s")
     else
       timestamp
 
@@ -27,3 +35,6 @@ Handlebars.registerHelper 'md', (txt)->
 
 Handlebars.registerHelper 'ellipsis', (str, limit) ->
     return if str.length > limit then str.substring(0, limit)+"..." else str
+
+Handlebars.registerHelper 'filename', (str) ->
+    return if str.length > 0 then _(str.split('/')).last() else ''

@@ -785,7 +785,13 @@ background: url("/images/stop-hover.png") no-repeat;
 	font: normal 12px/17px Arial, sans-serif;
 	color:#BEBEBE;
 }
-
+.element a{
+    text-decoration : none;
+    color : #666768;
+}
+.element a:hover{
+    text-decoration : underline;
+}
 .element .info .date a {
 	text-decoration : none;
 	color : inherit;
@@ -827,7 +833,18 @@ background: url("/images/stop-hover.png") no-repeat;
 	font: normal 12px/17px Arial, sans-serif;
 	color:#BEBEBE;
 	margin-left:5px;
-}				
+}	
+
+.analysis table {
+    font: normal 12px Arial, sans-serif;
+    color:#909090;
+    margin: 5px 10px;
+}
+.analysis table td {
+    padding-left: 5px;
+    color:#909090;
+}
+		
 	
 .image .info .author{
 	font: normal 12px/17px Arial, sans-serif;
@@ -843,7 +860,7 @@ background: url("/images/stop-hover.png") no-repeat;
 }		
 
 
-/*--------------------fichiers----------------------*/
+/*--------------------analysis files----------------------*/
 	
 .analysis .file{
 	position:relative;	
@@ -887,6 +904,7 @@ background: url("/images/stop-hover.png") no-repeat;
 .analysis .file .info span a{
 	color: #BEBEBE; 
 }
+
 	
 	
 /*-------------------dashboard--------------------------*/

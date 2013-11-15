@@ -11,6 +11,7 @@
     'job/:jobId/log' : 'log'
     'login': 'login'
     'auth/oauth': 'oauth'
+    
   initialize: (options)->
     Meteor.subscribe "members"
     
@@ -129,4 +130,5 @@
 
   log: (jobId)->
     window.location = dashboardConfig.services.Jobs.url + "/logs/"+jobId 
+
     

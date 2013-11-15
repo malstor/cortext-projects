@@ -15,7 +15,7 @@ Server = mongo.Server;
 Client = mongo.MongoClient;
 
 Db = mongo.Db;
-server = new Server('localhost', 3032, {w: 1}, {auto_reconnect: true});
+server = new Server('localhost', 3002, {w: 1}, {auto_reconnect: true});
 mongoClient = new Client(server);
 
 db = mongoClient.db('meteor');
@@ -230,7 +230,8 @@ module.exports = {
             type: 'Analysis',
             date: parseInt(current_date),
             progress: parseInt(req.body.progress),
-            state: parseInt(req.body.state)
+            state: parseInt(req.body.state),
+            parameters: req.body.parameters
         }
         if(req.body.content && req.body.content.results){
             element.content={};
