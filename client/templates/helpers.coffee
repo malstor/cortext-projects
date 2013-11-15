@@ -1,6 +1,7 @@
 Handlebars.registerHelper 'status', (st) ->
   switch st
     when 0 then "queued"
+    when 1 then "running"
     when 8 then "error"
     when 9 then "finished"
     else "unknown"
@@ -8,15 +9,13 @@ Handlebars.registerHelper 'status', (st) ->
 
 Handlebars.registerHelper 'date_short', (timestamp) ->
     if typeof timestamp is 'number'
-      #moment(timestamp).fromNow()
-      moment(timestamp).format("YYYY-DD-MM H:mm:s")
+      moment(timestamp).format("YYYY-MM-DD H:mm:s")
     else
       timestamp
 
 Handlebars.registerHelper 'from_now', (timestamp) ->
     if typeof timestamp is 'number'
-      #moment(timestamp).fromNow()
-      moment(timestamp).format("YYYY-DD-MM H:mm:s")
+      moment(timestamp).fromNow()
     else
       timestamp
 
