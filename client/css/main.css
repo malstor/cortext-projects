@@ -111,7 +111,7 @@ button.inactive { color : #DCDCDC; cursor: default; }
 	overflow: auto;
 }
 
-#path ul li .type { display:block; line-height:20px; font-size : 11px; font-family : verdana; padding : 0 5px; }
+#path ul li .type { display:block; line-height:20px; font-size : 11px; font-family :  "Oxygen-Regular","Bitstream Vera Sans", Sans-serif; padding : 0 5px; }
 #path ul li .name { display:block; line-height:30px; color : white; text-decoration : none; font-size : 16px; letter-spacing : 2px; font-family: "Oxygen-Regular"; padding : 0 8px; }
 #path ul li:hover { cursor: pointer; }
 
@@ -756,9 +756,9 @@ background: url("/images/stop-hover.png") no-repeat;
 	float : left; 
 	margin-top : 2px; 
 	margin-right : 5px; 
-	padding : 0 3px; 
+	padding : 0 4px; 
 	text-transform : lowercase; 
-	font : normal 8px/15px verdana; 
+	font : normal 10px/15px "Oxygen-Regular", "Bitstream Vera Sans", "DejaVu Sans", Sans-serif;; 
 	color : white;
 }
 
@@ -835,30 +835,21 @@ background: url("/images/stop-hover.png") no-repeat;
 	margin-right:5px;
 			
 }
-.analysis .info .name {
-
+.analysis .info .results {
+    font: normal 12px/17px Arial, sans-serif;
+    color:#909090;
+    margin-right:5px;
 }
 		
 .analysis .info .extra a{
 	font: normal 12px/17px Arial, sans-serif;
-	color:#BEBEBE;
+	color:#909090;
 	margin-left:5px;
 }	
 
-.analysis table {
-    font: normal 12px Arial, sans-serif;
-    color:#909090;
-    margin: 5px 10px;
-}
-.analysis table td {
-    padding-left: 5px;
-    color:#909090;
-}
-		
-	
 .image .info .author{
 	font: normal 12px/17px Arial, sans-serif;
-	color:#BEBEBE;
+	color:#909090;
 	float:left;
 	margin-top:3px;
 	margin-left:10px;
@@ -867,20 +858,28 @@ background: url("/images/stop-hover.png") no-repeat;
 	
 .image .body img{
 	margin-left:7px;
-}		
+}	
+
+.analysis .type a {
+    color:#fff;
+}	
 
 
 /*--------------------analysis files----------------------*/
-	
+
+.analysis .files{
+    max-height: 150px;    
+    overflow: auto;
+}
 .analysis .file{
 	position:relative;	
-	border: 1px solid #EEF2F6;
-	height:44px;	
+	border-bottom: 1px solid #EEF2F6;
+	height:44px;
 }
 
-.analysis .file .img-pdf {
+.analysis .file .icon {
     background-color: #EEF2F6;
-    border: 1px solid #EEF2F6;
+    border: none;
     color: #909090;
     float: left;
 	font: normal 12px/40px Arial, sans-serif;
@@ -889,12 +888,18 @@ background: url("/images/stop-hover.png") no-repeat;
     text-align: center;
     width: 28px;
 }
+.analysis .file .img-, .analysis .file .img-txt{
+    background: url("/images/img-fichiers.png") no-repeat scroll center center transparent;
+}
+.analysis .file .img-pdf{
+    background: url("/images/img-fichiers.png") no-repeat scroll center center transparent;
+}
 		
 .analysis .file .name {
 	font: normal 12px/45px Arial, sans-serif;
 	color: #909090;
     float: left;
-    margin-left: 15px;
+    margin-left: 5px;
 }
 	
 .analysis .file .info {

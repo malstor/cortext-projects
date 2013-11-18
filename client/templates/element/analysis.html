@@ -1,42 +1,31 @@
 <template name="analysis">
   <div class="element analysis user-{{ author }}" id="Analysis-{{ id }}">
     <div class="info">
-      <h3 class="author"> {{ author.name }}</h3>
-      <span class="name"> {{e.name}}</span>
-      <span class="type analysis">{{ e.type }}</span>
+      <span class="type analysis">
+        <a href="/job/{{e.jobId}}/log" title='{{e.name}} : view parameters &amp; logs'>
+        {{#if e.parameters.script_name}} {{e.parameters.script_name}} {{else}} {{e.type}} {{/if}}
+        </a>
+      </span>
+      <h3 class="author"> by <a href="/user/{{author.id}}">{{ author.name }}</a></h3>
+     {{#if e.parameters.corpus_name}}
+      <span class="name"> 
+       on <a href="{{e.parameters.corpus_permalink}}"  title='download'>{{e.parameters.corpus_name}}</a>
+      </span>
+     {{/if}}
+
+      
      
       <!--<span class="extra"><a href="#">parameters</a> - <a href="#">logs</a></span>-->
-      
       <span class="date"><a href="{{ e.permalink }}">{{date_short e.date }}</a></span>
-      
+      {{#if e.content.results}}<span class="results"><a href="#results-{{id}}"> - {{size e.content.results}} dataset(s)</a></span>{{/if}}
 
     </div><!-- /info -->
-    {{#if e.parameters}}
-    <div class='parameters'>
-      <table>
-        <tr>
-          <td>script (click for logs)</td>
-          <td>
-            <a href="/job/{{e.jobId}}/log" title='view parameters &amp; logs'>{{e.parameters.script_name}}</a> 
-            {{#if e.state}}
-              <span class="status {{status e.state}}"> - {{status e.state}}</span>
-            {{/if}}
-          </td>
-        </tr>
-        <tr>
-          <td>corpus (click to download)</td>
-          <td><a href="{{e.parameters.corpus_permalink}}"  title='download'>{{e.parameters.corpus_name}}</td>
-        </tr>
-      </table>
-    </div>
-    {{/if}}
-
     {{#if e.content}} 
       {{#if e.content.results}} 
-      <div class="files">
+      <div class="files" id="{{results-id}}">
       {{#each e.content.results}}
         <div class="file">
-          <div class="icon img-pdf">pdf</div>
+          <div class="icon img-{{extension}}">{{#if extension}}{{extension}}{{/if}}</div>
           <div class="name"><a href="{{url}}">{{title}}</a></div>
           <!-- <div class="info">            
             <span class="comments"><a href="#">5 comments</a></span> 
