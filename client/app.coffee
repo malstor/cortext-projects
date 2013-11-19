@@ -8,7 +8,7 @@
 #    'element/:element_id':  'element'
     'element/:type/:element/in/:project': 'element'
     'element/:type/:element': 'element'
-    'job/:jobId/log' : 'log'
+    'job/:jobId/log/:project_id' : 'log'
     'login': 'login'
     'auth/oauth': 'oauth'
     
@@ -128,7 +128,7 @@
 
     model.get_by_id element_id
 
-  log: (jobId)->
-    window.location = dashboardConfig.services.Jobs.url + "/logs/"+jobId 
+  log: (jobId, project_id)->
+    window.location = dashboardConfig.services.Jobs.url + "/logs/"+jobId+"?callback_url="+encodeURIComponent(dashboardConfig.common.callback+"/project/"+project_id)
 
     

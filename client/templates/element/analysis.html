@@ -1,8 +1,8 @@
 <template name="analysis">
-  <div class="element analysis user-{{ author }}" id="Analysis-{{ id }}">
+  <div class="element analysis user-{{ author }}" id="Analysis-{{ e.id }}" rel="{{e.id}}">
     <div class="info">
       <span class="type analysis">
-        <a href="/job/{{e.jobId}}/log" title='{{e.name}} : view parameters &amp; logs'>
+        <a href="/job/{{e.jobId}}/log/{{e.project}}" title='{{e.name}} : view parameters &amp; logs'>
         {{#if e.parameters.script_name}} {{e.parameters.script_name}} {{else}} {{e.type}} {{/if}}
         </a>
       </span>
@@ -17,21 +17,22 @@
      
       <!--<span class="extra"><a href="#">parameters</a> - <a href="#">logs</a></span>-->
       <span class="date"><a href="{{ e.permalink }}">{{date_short e.date }}</a></span>
-      {{#if e.content.results}}<span class="results"><a href="#results-{{id}}"> - {{size e.content.results}} dataset(s)</a></span>{{/if}}
+      {{#if e.content.results}}<span class="results">-<a href="#results-{{e.id}}"> {{size e.content.results}} dataset(s)</a></span>
+      {{else}}<span class="status {{status e.state}}">- {{status e.state}}</span>{{/if}}
 
     </div><!-- /info -->
     {{#if e.content}} 
       {{#if e.content.results}} 
-      <div class="files" id="{{results-id}}">
+      <div class="files" id="results-{{e.id}}">
+        <a name="results-{{e.id}}"></a>
       {{#each e.content.results}}
         <div class="file">
-          <div class="icon img-{{extension}}">{{#if extension}}{{extension}}{{/if}}</div>
-          <div class="name"><a href="{{url}}">{{title}}</a></div>
-          <!-- <div class="info">            
-            <span class="comments"><a href="#">5 comments</a></span> 
-            <span class="date">23:12 12.05.2012</span>
+          <div class="icon img-{{extension}}">{{extension}}</div>
+          <div class="name" id="{{id}}"><a href="{{url}}">{{title}}</a></div>
+          <div class="actions">               
+                <a class ="icon view" title="view file" rel="{{url}}" data-type="{{extension}}" target="_blank" href='{{viz extension url}}'></a>
+                <a class="icon delete" title="delete file" data-id="{{id}}" href="#" rel="{{e.id}}"></a>
           </div>
-          -->
         </div>
       {{/each}}
       </div><!-- /files -->

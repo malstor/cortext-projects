@@ -73,6 +73,11 @@ Meteor.subscribe "projects"
           author : member
           e : element
         $("#project-"+project_id+" .elements").append elt
+        #console.log "render", @options
+        $(".results a").on "click", (evt) ->
+          evt.preventDefault()
+          console.log("results"+@.attr('rel'))
+
 
   render: ()->
     Deps.autorun ()=>

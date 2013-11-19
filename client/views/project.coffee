@@ -8,6 +8,7 @@ Meteor.subscribe "members"
     @set_select_type project
     @set_add_message project
     @set_forms project
+    @set_actions project
 
   set_forms :(project)->
     #upload
@@ -27,16 +28,32 @@ Meteor.subscribe "members"
     #start
     $("form .start").click ->
       parameters = 
+        callback_url: dashboardConfig.services.Jobs.callback+'/project/' + project.get('id')
         context:
           project_id: project.get('id')
           callback_url: dashboardConfig.services.Jobs.callback+'/project/' + project.get('id')
           callback_json: dashboardConfig.services.Api.url+"/project/"+project.get('id')+"/analysis"
         accessToken: Meteor.user().profile.accessToken
+
         
 
 
       #console.log $.param(parameters, true)
       window.location = dashboardConfig.services.Jobs.url+"/job/new?" + $.param(parameters)
+
+  set_actions :(project)->
+    $('.delete').on "click", (evt) =>
+      evt.preventDefault()
+      $file = $(evt.target)
+      hash = $file.attr("data-id");
+      if confirm "Are you sure ? This will delete the file permanently !"
+        parameters = 
+          token: Meteor.user().profile.accessToken
+
+        HTTP.get dashboardConfig.services.Storage.url+dashboardConfig.services.Storage.getDocument+'/'+hash+'/trash?' + $.param(parameters), (data)=>
+          #//@todo : deal with the local database element : mark it as deleted ? delete it ? ...
+          @options.project.trigger('project:elements:changed')
+          $("#"+hash+" a").css('color', '#f00').html('(deleted)');
 
 
   set_select_type :(project)->

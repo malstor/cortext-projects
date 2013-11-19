@@ -3,14 +3,15 @@ dashboardConfig =
     services: {
         Storage: {
             name: "Cortext Assets",
-            url: "http://assets.cortext.net",
-            callback: "http://managerv2.cortext.net"
+            url: "http://assets.dev",
+            getDocument: "/docs",
+            callback: "http://localhost:3000"
         },
         Identity: {
             name: "Cortext Auth",
-            urlAuth: "http://auth.cortext.net/auth",
-            urlSubscribe: "http://auth.cortext.net/user/register",
-	        callback: "http://managerv2.cortext.net",
+            urlAuth: "http://oauth.dev/auth",
+            urlSubscribe: "http://oauth.dev/user/register",
+	        callback: "http://localhost:3000",
             account: {
                 service: "cortext",
                 clientId: "cortext-dashboard",
@@ -19,19 +20,23 @@ dashboardConfig =
         },
         Jobs: {
             name: "Cortext Manager",
-            callback:"http://managerv2.cortext.net",
-            callback_json:"http://api.projects.cortext.net/analysis",
-            url: "http://mcp.cortext.net" 
+            callback: "http://localhost:3000",
+            callback_json:"http://localhost:8080/analysis",
+            url: "http://ctmanager.dev" 
+        },
+        Viz: {
+            pdf: "http://ctmanager.dev/viewers/pdfjs/web/viewer.html?file=/get/"
         },
         Api: {
-            url: "http://api.projects.cortext.net",
+            url: "http://localhost:8080",
             createElement: "/elements",
             createDocument: "/documents",
             createAnalysis: "/analysis"
         }
     },
     common: {
-        refreshRate : 5000        
+        callback : "http://localhost:3000",
+        refreshRate : 5000      
     }
 
 };

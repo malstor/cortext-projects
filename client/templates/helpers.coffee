@@ -37,3 +37,9 @@ Handlebars.registerHelper 'ellipsis', (str, limit) ->
 
 Handlebars.registerHelper 'filename', (str) ->
     return if str.length > 0 then _(str.split('/')).last() else ''
+
+Handlebars.registerHelper 'viz', (type, url) ->
+  hash = _(url.split('/')).last()
+  switch type
+    when "pdf" then dashboardConfig.services.Viz.pdf+ hash
+    else url
