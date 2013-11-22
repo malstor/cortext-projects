@@ -42,4 +42,5 @@ Handlebars.registerHelper 'viz', (type, url) ->
   hash = _(url.split('/')).last()
   switch type
     when "pdf" then dashboardConfig.services.Viz.pdf+ hash
+    when "html" then url+'/view'
     else url

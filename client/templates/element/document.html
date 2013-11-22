@@ -6,8 +6,12 @@
         <span class="date"><a >{{date_short e.date }}</a></span>
     </div>
     <div class="body">
+        <div class="actions">               
+                <a class ="icon view" title="view file" rel="{{e.permalink}}" data-type="{{e.extension}}" target="_blank" href='{{viz e.extension e.permalink}}'></a>
+                <a class="icon delete" title="delete file" data-id="{{id}}" href="#" rel="{{e.id}}"></a>
+        </div>
         <span class="name"><a href="{{e.permalink}}" title='download'>{{e.name}}</a> -  {{e.size}} </span>
-        <div class="trash" data-id="{{hash}}"  title="delete file"></div>
+        
     </div>
 </div><!--document-->
 </template>

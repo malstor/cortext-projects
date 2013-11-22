@@ -877,7 +877,7 @@ background: url("/images/stop-hover.png") no-repeat;
 	height:44px;
 }
 
-.analysis .file .icon {
+.element .icon {
     background-color: #EEF2F6;
     border: none;
     color: #909090;
@@ -888,25 +888,25 @@ background: url("/images/stop-hover.png") no-repeat;
     text-align: center;
     width: 28px;
 }
-.analysis .file .view {
+.action .view {
     background: url("/images/icon-view.png") no-repeat scroll center center transparent;
 }
-.analysis .file .view:hover {
+.element .view:hover {
     background: url("/images/icon-view-hover.png") no-repeat scroll center center transparent;
 }
 
-.analysis .file .delete {
+.element .delete {
     background: url("/images/icon-trash.png") no-repeat scroll center center transparent;
 }
-.analysis .file .delete:hover {
+.element .delete:hover {
     background: url("/images/icon-trash-hover.png") no-repeat scroll center center transparent;
 }
 
 
-.analysis .file .img-, .analysis .file .img-txt{
+.element .file .img-, .analysis .file .img-txt{
     background: url("/images/img-fichiers.png") no-repeat scroll center center transparent;
 }
-.analysis .file .img-pdf{
+.element .file .img-pdf{
     background: url("/images/img-fichiers.png") no-repeat scroll center center transparent;
 }
 		
@@ -935,7 +935,7 @@ background: url("/images/stop-hover.png") no-repeat;
 	color: #BEBEBE; 
 }
 
-.analysis .actions {
+.element .actions {
     float: right;
 }
 	
