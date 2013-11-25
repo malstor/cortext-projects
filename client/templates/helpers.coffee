@@ -40,7 +40,6 @@ Handlebars.registerHelper 'filename', (str) ->
 
 Handlebars.registerHelper 'viz', (type, url) ->
   hash = _(url.split('/')).last()
-  console.log type
   switch type
     when "pdf" then dashboardConfig.services.Viz.pdf+ hash
     when "html","htm"  then url+'/view'
