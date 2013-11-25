@@ -291,7 +291,7 @@ background: url("/images/stop-hover.png") no-repeat;
 }
 
 .aide #aide-question h4{
-	width:2OOpx;
+	width: 200px;
 }
 	
 .aide #aide-question .send-question{	
@@ -732,6 +732,7 @@ background: url("/images/stop-hover.png") no-repeat;
 
 .document .body {
     width:750px;
+    min-height: 45px;
 }
 
 .document .body a{
@@ -758,7 +759,7 @@ background: url("/images/stop-hover.png") no-repeat;
 	margin-right : 5px; 
 	padding : 0 4px; 
 	text-transform : lowercase; 
-	font : normal 10px/15px "Oxygen-Regular", "Bitstream Vera Sans", "DejaVu Sans", Sans-serif;; 
+	font : normal 10px/15px "Oxygen-Regular", "Bitstream Vera Sans", "DejaVu Sans", Sans-serif;
 	color : white;
 }
 
@@ -888,7 +889,7 @@ background: url("/images/stop-hover.png") no-repeat;
     text-align: center;
     width: 28px;
 }
-.action .view {
+.element .view {
     background: url("/images/icon-view.png") no-repeat scroll center center transparent;
 }
 .element .view:hover {
@@ -937,6 +938,11 @@ background: url("/images/stop-hover.png") no-repeat;
 
 .element .actions {
     float: right;
+
+}
+.document .actions
+{
+	margin-right: 15px;
 }
 	
 	
@@ -1007,12 +1013,9 @@ background:#FFD505 url(/images/mess.png) no-repeat 3px 3px;
 }
   
 #dashboard .elements .author{
-	color:#666768;
-	float:left;
+	color:#666768;	
 	font: normal 13px Arial, sans-serif;
 	margin-left:13px;
-	margin-top:10px;
-	width:240px;	
 }	
 	
 #dashboard .elements .title{
@@ -1034,8 +1037,11 @@ background:#FFD505 url(/images/mess.png) no-repeat 3px 3px;
   color:#BEBEBE;
   float:right;
   padding-right:10px;
-  padding-top:10px;
   font: normal 12px/17px Arial, sans-serif;
+}
+
+#dashboard .analysis .file {
+	display: none;
 }
 
 #project-new { margin-bottom : 10px; }

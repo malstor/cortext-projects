@@ -74,9 +74,9 @@ Meteor.subscribe "projects"
           e : element
         $("#project-"+project_id+" .elements").append elt
         #console.log "render", @options
-        $(".results a").on "click", (evt) ->
-          evt.preventDefault()
-          console.log("results"+@.attr('rel'))
+        # $(".results a").on "click", (evt) ->
+        #   evt.preventDefault()
+        #   console.log("results"+@.attr('rel'))
 
 
   render: ()->
