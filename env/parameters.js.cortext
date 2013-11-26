@@ -26,6 +26,7 @@ dashboardConfig =
         },
         Viz: {
             pdf: "http://ctmanager.dev/viewers/pdfjs/web/viewer.html?file=/get/"
+            json: "http://localhost:4000/open/"
         },
         Api: {
             url: "http://localhost:8080",
