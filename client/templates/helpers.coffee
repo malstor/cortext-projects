@@ -43,5 +43,5 @@ Handlebars.registerHelper 'viz', (type, url) ->
   switch type
     when "pdf" then dashboardConfig.services.Viz.pdf+ hash
     when "html","htm"  then url+'/view'
-    when "json" then dashboardConfig.services.Viz.json+url
+    when "json" then dashboardConfig.services.Viz.json+encodeURIComponent(url)
     else url
