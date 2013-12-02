@@ -55,7 +55,7 @@ body {
 }
 
 .col-2{
-	display:none;
+	/*display:none;*/
     float: left;
     height: inherit;
     margin-top:15px;
