@@ -750,7 +750,15 @@ background: url("/images/stop-hover.png") no-repeat;
 
 /*-----------------messages-------------------------*/
 
-.element {
+#dashboard .element {
+	width: 750px;
+	height: 38px;
+	border: 1px solid #EEF2F6;
+	margin-left: 8px;
+    margin-top: 10px;
+}
+
+#main-project .element {
 	width: 750px;
 	border: 1px solid #EEF2F6;
 	margin-left: 8px;
@@ -760,20 +768,19 @@ background: url("/images/stop-hover.png") no-repeat;
 .element .info .type { 
 	float : left; 
 	margin-top : 2px; 
-	margin-right : 5px; 
+	margin-right : 45px; 
 	padding : 0 4px; 
 	text-transform : lowercase; 
-	font : normal 10px/15px "Oxygen-Regular", "Bitstream Vera Sans", "DejaVu Sans", Sans-serif;
-	color : white;
+	font : normal 14px/15px Arial, "Oxygen-Regular", "Bitstream Vera Sans", "DejaVu Sans", Sans-serif;
+	color : #393939;
 }
 
-.element .info .message { background-color : #FFD505;}
-.element .info .analysis { background-color : #34B02C;}
-.element .info .image { background-color : #E62E60;}
-.element .info .document { background-color : #E62E60;}
+.element .info .message { background: url("/images/messages.png") no-repeat; height: 24px; width:24px;}
+.element .info .analysis {background: url("/images/analysis.png") no-repeat; height: 24px; width:24px;}
+.element .info .image  {background: url("/images/image.png") no-repeat; height: 24px; width:24px;}
+.element .info .document { background: url("/images/document.png") no-repeat; height: 24px; width:24px;}
 
 .element .info {
-	border-bottom: 1px solid #EEF2F6;
 	padding: 3px 10px;
 	position: relative;
 }
@@ -865,9 +872,17 @@ background: url("/images/stop-hover.png") no-repeat;
 	margin-left:7px;
 }	
 
-.analysis .type a {
-    color:#fff;
-}	
+.analysis .type a, .message .type a, .document .type a{
+	margin-top : 2px; 
+	margin-left: 35px; 
+	padding : 0 4px; 
+	text-transform : lowercase; 
+	color: #3A3A3A;
+    float: left;
+    font: bold 15px Arial,sans-serif;
+
+}
+
 
 
 /*--------------------analysis files----------------------*/
@@ -973,7 +988,7 @@ background: url("/images/stop-hover.png") no-repeat;
 }
 
 .project .elements > div:nth-child(odd) {
-	background-color : #fafafa;
+	background-color : #E6E6E6;
 }
 
 .project .elements .icons{
