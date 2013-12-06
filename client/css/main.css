@@ -1005,7 +1005,7 @@ background:#FFD505 url(/images/mess.png) no-repeat 3px 3px;
 
 #dashboard .project  h2, #dashboard .project  h2 a {
 	color:#235BBE;
-	font: normal 17px "Oxygen-Regular", Arial, sans-serif;
+	font: normal 19px "Oxygen-Regular", Arial, sans-serif;
 	letter-spacing:0.1em;	
 	text-decoration:none;
   	margin-top:5px;
@@ -1045,7 +1045,6 @@ background:#FFD505 url(/images/mess.png) no-repeat 3px 3px;
 }
 
 #project-new { margin-bottom : 10px; }
-
 
 
 
