@@ -1,8 +1,8 @@
 <template  name="dashboard">
   <div id="dashboard-meta" class="col-1">
-    <div class="info">
+   <!-- <div class="info">
       <h3>informations</h3>
-    </div>
+    </div>-->
     <div class="script" id="script">
       <h3>queued scripts</h3>
       <div id="queuedScripts" class="wrapper">
@@ -20,6 +20,12 @@
       <input type="text" placeholder="type the name of your new project"></input>
       <button class="new">create project</button>
     </form>
+    
+    <div id="trace"></div>
+    
+    <form id="search-form" action="/">
+        <input type="text"  id="search" name="searchString"/>
+    </form> 
 
     <div id="timeline" class="projects-list">
       
