@@ -2,10 +2,15 @@
 <div class="element message user-{{ author.id }}" id="Message-{{ e.id }}">
 
   <div class="info">
-    <h3 class="author">{{ author.name }}</h3>
-    <span class="type message"><a href="#">{{ e.type }}</a></span>
-    <span class="date"><a href="{{ e.permalink }}">{{date_short e.date }}</a></span>
-         {{md e.content}}
+    <span class="type message"><a href="#"> {{md e.content}}</a></span>
+    	
+<!--        <h3 class="author">{{ author.name }}</h3>
+-->    
+  <span class="date">
+  {{ author.name }}
+  <a href="{{ e.permalink }}">{{date_short e.date }}</a>
+  </span>
+         
   </div><!-- /info -->
 
 

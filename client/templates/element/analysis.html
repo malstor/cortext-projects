@@ -6,19 +6,24 @@
         {{#if e.parameters.script_name}} {{e.parameters.script_name}} {{else}} {{e.type}} {{/if}}
         </a>
       </span>
-      <h3 class="author"> by <a href="/user/{{author.id}}">{{ author.name }}</a></h3>
-     {{#if e.parameters.corpus_name}}
+<!--      <h3 class="author"> by <a href="/user/{{author.id}}">{{ author.name }}</a></h3>
+-->     {{#if e.parameters.corpus_name}}
       <span class="name"> 
        on <a href="{{e.parameters.corpus_permalink}}"  title='download'>{{e.parameters.corpus_name}}</a>
       </span>
      {{/if}}
-
-      
      
-      <!--<span class="extra"><a href="#">parameters</a> - <a href="#">logs</a></span>-->
-      <span class="date"><a href="{{ e.permalink }}">{{date_short e.date }}</a></span>
-      {{#if e.content.results}}<span class="results">-<a href="/project/{{e.project}}#results-{{e.id}}"> {{size e.content.results}} dataset(s)</a></span>
+     {{#if e.content.results}}<span class="results">-<a href="/project/{{e.project}}#results-{{e.id}}"> {{size e.content.results}} dataset(s)</a></span>
       {{else}}<span class="status {{status e.state}}">- {{status e.state}}</span>{{/if}}
+
+  <span class="date">
+  <span class="state"></span>
+  {{ author.name }}
+  <a href="{{ e.permalink }}">{{date_short e.date }}</a>
+  </span>
+      
+<!--      <span class="date"><a href="{{ e.permalink }}">{{date_short e.date }}</a></span>
+-->      
 
     </div><!-- /info -->
     {{#if e.content}} 
@@ -28,7 +33,7 @@
         
       {{#each e.content.results}}
         <div class="file">
-          <div class="icon img-{{extension}}">{{extension}}</div>
+          <div class="icon img-{{extension}}"><!-- {{extension}} --></div>
           <div class="name" id="{{id}}"><a href="{{url}}">{{title}}</a></div>
           <div class="actions">               
                 <a class ="icon view" title="view file" rel="{{url}}" data-type="{{extension}}" target="_blank" href='{{viz extension url}}'></a>

@@ -501,7 +501,7 @@ background: url("/images/stop-hover.png") no-repeat;
 
 #add-element { position: relative; top : -9px; }
 
-#add-element form { display:none; border : 1px solid #EEF2F6; border-top : 0; background : #FAFAFA; padding : 2px; width : 750px; margin-left : 8px; overflow: auto; }
+#add-element form {  border : 1px solid #EEF2F6; border-top : 0; background : #FAFAFA; padding : 2px; width : 750px; margin-left : 8px; overflow: auto; }
 #add-element textarea { display : block; width : 736px; padding : 5px; height : 161px; border-radius : 2px; border : 1px solid #EEF2F6; resize:none; }
 #add-element form .add { float : right; }
 
@@ -521,6 +521,8 @@ background: url("/images/stop-hover.png") no-repeat;
 
 #add-element form.analysis { text-align: center; }
 #add-element form.analysis button { width : 100%; }
+
+
 
 /* ADD NEW MEMBER BLOCK  ************************************************************/
 
@@ -779,6 +781,22 @@ background: url("/images/stop-hover.png") no-repeat;
 .element .info .analysis {background: url("/images/analysis.png") no-repeat; height: 24px; width:24px;}
 .element .info .image  {background: url("/images/image.png") no-repeat; height: 24px; width:24px;}
 .element .info .document { background: url("/images/document.png") no-repeat; height: 24px; width:24px;}
+
+.element .info .state {
+    background: url("/images/state-2.png") no-repeat;
+    height: 14px;
+    width: 15px;
+    float: left;
+    margin-right: 10px;
+}
+
+
+#main-project .element .info {
+	padding: 3px 10px;
+	height: 38px;
+	background-color:#E6E6E6; 
+	position: relative;
+}
 
 .element .info {
 	padding: 3px 10px;
@@ -1057,6 +1075,7 @@ background:#FFD505 url(/images/mess.png) no-repeat 3px 3px;
   color:#BEBEBE;
   float:right;
   padding-right:10px;
+  padding-top: 8px;
   font: normal 12px/17px Arial, sans-serif;
 }
 

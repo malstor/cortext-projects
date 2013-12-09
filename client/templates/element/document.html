@@ -1,14 +1,17 @@
 <template name="document">
 <div class="element document user-{{ author.id }}" id="Document-{{ e.id }}">
     <div class="info">        
-        <h3 class="author">{{ author.name }}</h3>
-        <span class="type document"><a href="#">{{ e.extension }}</a></span>        
-        <span class="date"><a >{{date_short e.date }}</a></span>
-   
-        <div class="actions">               
+        <span class="type document img-{{e.extension}}"><a href="#">{{ e.extension }}</a></span> 
+        
+  <span class="date">
+  {{ author.name }}
+  <a href="{{ e.permalink }}">{{date_short e.date }}</a>
+  </span>
+ 
+        <!--<div class="actions">               
                 <a class ="icon view" title="view file" rel="{{e.permalink}}" data-type="{{e.extension}}" target="_blank" href='{{viz e.extension e.permalink}}'></a>
                 <a class="icon delete" title="delete file" data-id="{{id}}" href="#" rel="{{e.id}}"></a>
-        </div>
+        </div>-->
         <span class="name"><a href="{{e.permalink}}" title='download'>{{e.name}}</a> -  {{e.size}} </span>
         
     </div>
