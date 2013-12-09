@@ -68,9 +68,13 @@ Meteor.subscribe "projects"
 
     _(project_elements).each (element)=>
       member = members.findOne({ id: element.author })
-      if member
+      m = new models.member()
+      m.get_by_id(element.author)
+      m.set_gravatar()
+      #console.log 'member', m
+      if m
         elt = Template[element.type.toLowerCase()]
-          author : member
+          author : m.attributes
           e : element
         $("#project-"+project_id+" .elements").append elt
         #console.log "render", @options

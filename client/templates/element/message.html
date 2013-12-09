@@ -3,11 +3,9 @@
 
   <div class="info">
     <span class="type message"><a href="#"> {{md e.content}}</a></span>
-    	
-<!--        <h3 class="author">{{ author.name }}</h3>
--->    
+
   <span class="date">
-  {{ author.name }}
+  <a href="/user/{{author.id}}"><img class="gravatar" src="{{author.gravatar}}" /> {{author.name}} </a>
   <a href="{{ e.permalink }}">{{date_short e.date }}</a>
   </span>
          

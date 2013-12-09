@@ -789,7 +789,12 @@ background: url("/images/stop-hover.png") no-repeat;
     float: left;
     margin-right: 10px;
 }
-
+.element img.gravatar{
+    border: 1px solid #EEF2F6;
+    height: 20px;
+    width: 20px;
+    float:left;
+}
 
 #main-project .element .info {
 	padding: 3px 10px;

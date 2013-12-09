@@ -5,7 +5,7 @@
 
   <div class="info">
     <span class="type element">{{ e.type }}</span>
-    <h3 class="author">{{ author.name }}</h3>
+    <h3 class="author"><a href="/user/{{author.id}}"><img class="gravatar" src="{{author.gravatar}}" /> {{author.name}}</a></h3>
     <span class="date"><a href="{{ e.permalink }}">{{date_short date }}</a></span>
   </div><!-- /info -->
   {{#if content}}

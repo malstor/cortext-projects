@@ -150,8 +150,12 @@ Meteor.subscribe "members"
 
     _(project.elements).each (e)=>
       element.e = _(e).clone()
-      console.log e
-      element.author = members.findOne( { id: e.author } )
+      #console.log e
+      m = new models.member()
+      m.get_by_id(e.author)
+      m.set_gravatar()
+      element.author = m.attributes
+
       if(!_.isUndefined(Template[ e.type.toLowerCase() ]))
         $("#elements").append Template[ e.type.toLowerCase() ] element
       else
