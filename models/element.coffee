@@ -18,11 +18,12 @@
     next_id = if(lastelmt) then parseInt(lastelmt.id+1) else 1
     @set 'id', next_id
     
-    elements.insert @attributes, (error, id)->
+    elements.insert @attributes, (error, id)=>
       if(error)
         options.error()
       if(id)
-        options.success(id)
+        console.log 'calling success ', @id
+        options.success(@id)
 
 
 

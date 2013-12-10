@@ -58,7 +58,7 @@ Meteor.subscribe "members"
 
   set_select_type :(project)->
     #button
-    $("#add-element #select-type button").on "click", (evt) ->
+    $("#add-element button").on "click", (evt) ->
       $button = $(evt.target)
       $("#add-element #select-type button").not("." + $button.attr("rel")).removeClass "on"
       $("#add-element form").filter(".on").not("form." + $button.attr("rel")).hide().removeClass "on"
@@ -66,8 +66,13 @@ Meteor.subscribe "members"
       $("#add-element form." + $button.attr("rel")).slideToggle().toggleClass "on" 
 
   set_add_message :(project)->
+    $("form.message").css "display", "none"
+
+    $("button.write-message").on "click", ()->
+      $("form.message").fadeToggle 'fast'
+
     #add message
-    $("#add-element .message .add").on "click", (evt) ->
+    $("#add-element .message .add").on "click", (evt) ->      
       evt.preventDefault()
       element = new models.element(
         type: "Message"
@@ -79,12 +84,18 @@ Meteor.subscribe "members"
       element.create
         error: ->
           console.log "new message: fail"
+
         success: (id)->
-          
+          console.log "success", id
           element.get_by_id(id)
+
           element.set permalink: "/element/" + element.get("type") + "/" + id + "/in/" + project.get('id')
+          m = new models.member()
+          m.get_by_id(app.user_id)
+          m.set_gravatar()
+          console.log "element", element, "member", m
           new_el = Template[element.get("type").toLowerCase()]
-            author: members.findOne( { id: parseInt(app.user_id) })
+            author: m.attributes
             e: element.attributes
           $("#elements").find('#Message-'+element.get('id')).remove()
           $("#elements").prepend new_el 
