@@ -765,7 +765,15 @@ background: url("/images/stop-hover.png") no-repeat;
 	border: 1px solid #EEF2F6;
 	margin-left: 8px;
     margin-top: 10px;
+    background-color:#E6E6E6; 
+
 }
+
+#main-project .element .info {
+	   height: 38px;
+	position: relative;
+}
+
 
 .element .info .type { 
 	float : left; 
@@ -791,17 +799,14 @@ background: url("/images/stop-hover.png") no-repeat;
 }
 .element img.gravatar{
     border: 1px solid #EEF2F6;
-    height: 20px;
-    width: 20px;
+    height: 25px;
+    width: 25px;
+    border: 1px solid #fff;
     float:left;
+    margin-right:10px;
+    margin-top:-5px;
 }
 
-#main-project .element .info {
-	padding: 3px 10px;
-	height: 38px;
-	background-color:#E6E6E6; 
-	position: relative;
-}
 
 .element .info {
 	padding: 3px 10px;
@@ -817,8 +822,10 @@ background: url("/images/stop-hover.png") no-repeat;
 
 .element .info .date {
 	float: right;
+	padding-right:4px;
+	padding-top: 8px;
 	font: normal 12px/17px Arial, sans-serif;
-	color:#BEBEBE;
+	color:#666667;
 }
 .element a{
     text-decoration : none;
@@ -1077,9 +1084,9 @@ background:#FFD505 url(/images/mess.png) no-repeat 3px 3px;
 } 
 		  
 #dashboard .elements .date{
-  color:#BEBEBE;
+  color:#666667;
   float:right;
-  padding-right:10px;
+  padding-right:4px;
   padding-top: 8px;
   font: normal 12px/17px Arial, sans-serif;
 }
