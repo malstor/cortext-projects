@@ -525,7 +525,7 @@ background: url("/images/stop-hover.png") no-repeat;
 
 #add-element { position: relative; top : -9px; }
 
-#add-element form {  border : 1px solid #EEF2F6; border-top : 0; background : #FAFAFA; padding : 2px; width : 750px; margin-left : 8px; overflow: auto; }
+#add-element .message{  border : 1px solid #EEF2F6; border-top : 0; background : #FAFAFA; padding : 2px; width : 750px; margin-left : 8px; overflow: auto; }
 #add-element textarea { display : block; width : 736px; padding : 5px; height : 161px; border-radius : 2px; border : 1px solid #EEF2F6; resize:none; }
 #add-element form .add { float : right; }
 
@@ -544,7 +544,94 @@ background: url("/images/stop-hover.png") no-repeat;
 #add-element #select-type button.on.message  { background-color : #FFD505; }
 
 #add-element form.analysis { text-align: center; }
-#add-element form.analysis button { width : 100%; }
+
+
+#add-element .upload-corpus {
+    background: #EB5C83;
+    border: 1px solid #CC0033;
+    color: #FFFFFF;
+    height: 34px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-top: 25px;
+    padding-top: 6px;
+    width: 220px;
+    float: left;
+}
+#add-element .upload-corpus  span {
+    background: url("/images/bt-upload.png") no-repeat;
+    float: left;
+    height: 32px;
+    margin-left: -13px;
+    margin-top: -7px;
+    width: 32px;
+}
+#add-element .upload-corpus:hover {
+    background:  #E62E60;
+    border: 1px solid #CC0033;
+    transition: background-color 0.3s ease-in-out 0s;
+}
+
+#add-element .start-script {
+    background:  #2CC31C;
+    border: 1px solid #1D8912;
+    color: #FFFFFF;
+    height: 34px;
+    margin-bottom: 10px;
+    margin-left: 36px;
+    margin-top: 25px;
+    padding-top: 6px;
+    width: 220px;
+    float: left;
+}
+
+#add-element .start-script span {
+    background: url("/images/bt-script.png") no-repeat;
+    float: left;
+    height: 32px;
+    margin-left: -13px;
+    margin-top: -7px;
+    width: 32px;
+}
+
+#add-element .start-script:hover {
+    background:#27AD19;
+    border: 1px solid #1D8912;
+    transition: background-color 0.3s ease-in-out 0s;
+}
+
+#add-element .write-message {
+    background: #ffd505;
+    border: 1px solid #b89900;
+    color: #FFFFFF;
+    height: 34px;
+    margin-bottom: 10px;
+    margin-left: 36px;
+    margin-top: 25px;
+    padding-top: 6px;
+    width: 220px;
+    float: left;
+}
+
+#add-element .write-message span {
+    background: url("/images/bt-message.png") no-repeat;
+    float: left;
+    height: 32px;
+    margin-left: -6px;
+    margin-top: -7px;
+    width: 32px;
+}
+
+#add-element .write-message:hover {
+    background:#FFC005;
+    border: 1px solid #b89900;
+    transition: background-color 0.3s ease-in-out 0s;
+}
+
+#add-element .clear {
+ clear: both;   
+}
+
 
 
 
