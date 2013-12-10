@@ -7,7 +7,10 @@
         </a>
       </span>
 <!--      <h3 class="author"> by <a href="/user/{{author.id}}">{{ author.name }}</a></h3>
--->     {{#if e.parameters.corpus_name}}
+-->     
+
+ <div class="info-result">
+		{{#if e.parameters.corpus_name}}
       <span class="name"> 
        on <a href="{{e.parameters.corpus_permalink}}"  title='download'>{{e.parameters.corpus_name}}</a>
       </span>
@@ -15,6 +18,8 @@
      
      {{#if e.content.results}}<span class="results">-<a href="/project/{{e.project}}#results-{{e.id}}"> {{size e.content.results}} dataset(s)</a></span>
       {{else}}<span class="status2 {{status e.state}}"></span>{{/if}}
+
+</div>
 
   <span class="date">
   <span class="state">

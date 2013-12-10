@@ -515,7 +515,7 @@ background: url("/images/stop-hover.png") no-repeat;
 }
 
 
-.col-main #project-new input[type=text]{ width : 605px; border : 1px solid #DCDCDC; height : 34px; padding : 0 5px; font : normal 14px arial; color : #DCDCDC; border-radius:3px; margin-top:10px; }
+.col-main #project-new input[type=text]{ width : 605px; border : 1px solid #DCDCDC; height : 34px; padding : 0 5px; font : normal 14px arial; color : #9D9D9D; border-radius:3px; margin-top:10px; }
 .col-main #search-form input[type=text]{  background: url("/images/loupe.png") no-repeat 385px 8px; width : 400px; border : 1px solid #DCDCDC; height : 34px; padding : 0 5px; font : normal 14px arial; color : #DCDCDC;
  margin-top: 20px; margin-left: 18px; margin-bottom: 10px; border-radius:3px;}
 .col-1 input[type=text].focus, .col-main input[type=text].focus { color : #6E6E6E !important; }
@@ -759,12 +759,6 @@ background: url("/images/stop-hover.png") no-repeat;
 }*/
 
 
-.document .name{
-    font: normal 12px/1.4em Arial, sans-serif;
-    color:#909090;
-    margin: 5px 10px;
-}
-
 .document .body {
     width:750px;
     min-height: 45px;
@@ -832,7 +826,7 @@ background: url("/images/stop-hover.png") no-repeat;
 	font: normal 11px/14px Arial, sans-serif;
 	text-align: center;
 	color:#909090;
-	padding-left: 25px;
+	padding-left: 22px;
 }
 
 .running { 
@@ -862,6 +856,7 @@ background: url("/images/status-finish.png") no-repeat;
 .element .info {
 	padding: 3px 10px;
 	position: relative;
+	margin-top:2px;
 }
 
 .element .info h3{
@@ -874,14 +869,15 @@ background: url("/images/status-finish.png") no-repeat;
 .element .info .date {
 	float: right;
 	padding-right:4px;
-	padding-top: 8px;
+	padding-top: 6px;
 	font: normal 12px/17px Arial, sans-serif;
 	color:#666667;
 }
 .element a{
     text-decoration : none;
-    color : #666768;
+    color : #3A3A3A;
 }
+
 .element a:hover{
     text-decoration : underline;
 }
@@ -910,16 +906,23 @@ background: url("/images/status-finish.png") no-repeat;
 	
 /*-------------------analysis--------------------------*/
 
-.analysis .info .name{
-	font: normal 12px/17px Arial, sans-serif;
-	color:#909090;
-	margin-right:5px;
+.analysis .info .name, .document .info .name{
+	color: #3A3A3A;
+    font: 13px Arial,sans-serif;
 			
 }
+
+
+.analysis .info .info-result, .document .info .info-result{
+	float:left;
+	padding: 6px 90px;
+    
+}
+
 .analysis .info .results {
-    font: normal 12px/17px Arial, sans-serif;
-    color:#909090;
-    margin-right:5px;
+
+	color: #3A3A3A;
+    font: 13px Arial,sans-serif;
 }
 		
 .analysis .info .extra a{
@@ -943,7 +946,7 @@ background: url("/images/status-finish.png") no-repeat;
 
 .analysis .type a, .message .type a, .document .type a{
 	margin-top : 2px; 
-	margin-left: 35px; 
+	margin-left: 30px; 
 	padding : 0 4px; 
 	text-transform : lowercase; 
 	color: #3A3A3A;
@@ -1126,7 +1129,7 @@ background:#FFD505 url(/images/mess.png) no-repeat 3px 3px;
   color:#666667;
   float:right;
   padding-right:4px;
-  padding-top: 8px;
+  padding-top: 6px;
   font: normal 12px/17px Arial, sans-serif;
 }
 
