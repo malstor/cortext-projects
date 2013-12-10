@@ -9,7 +9,7 @@ Handlebars.registerHelper 'status', (st) ->
 
 Handlebars.registerHelper 'date_short', (timestamp) ->
     if typeof timestamp is 'number'
-      moment(timestamp).format("YYYY-MM-DD H:mm:s")
+      moment(timestamp).format("YYYY-MM-DD H:mm:ss")
     else
       timestamp
 
