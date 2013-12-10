@@ -812,16 +812,16 @@ background: url("/images/stop-hover.png") no-repeat;
 }
 
 .running { 
-	background: url("/images/state-1.png") no-repeat;
+	background: url("/images/status-running.png") no-repeat;
 	
 }
 
 .error { 
-	background: url("/images/state-error.png") no-repeat;
+	background: url("/images/status-error.png") no-repeat;
 	
 }
 .finished { 
-background: url("/images/state-2.png") no-repeat;
+background: url("/images/status-finish.png") no-repeat;
 }
 
 .element img.gravatar{
