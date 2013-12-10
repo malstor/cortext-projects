@@ -14,10 +14,12 @@
      {{/if}}
      
      {{#if e.content.results}}<span class="results">-<a href="/project/{{e.project}}#results-{{e.id}}"> {{size e.content.results}} dataset(s)</a></span>
-      {{else}}<span class="status {{status e.state}}">- {{status e.state}}</span>{{/if}}
+      {{else}}<span class="status2 {{status e.state}}"></span>{{/if}}
 
   <span class="date">
-  <span class="state"></span>
+  <span class="state">
+  <span class="status {{status e.state}}">{{status e.state}}</span>
+  </span>
   <a href="/user/{{author.id}}"><img class="gravatar" src="{{author.gravatar}}" /></a>
   <a href="{{ e.permalink }}">{{date_short e.date }}</a>
   </span>

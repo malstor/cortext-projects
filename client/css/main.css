@@ -730,6 +730,11 @@ background: url("/images/stop-hover.png") no-repeat;
 
 /*---------------document---------------------------*/
 
+/*#dashboard .document .name{
+    display: none;
+}*/
+
+
 .document .name{
     font: normal 12px/1.4em Arial, sans-serif;
     color:#909090;
@@ -791,12 +796,34 @@ background: url("/images/stop-hover.png") no-repeat;
 .element .info .document { background: url("/images/document.png") no-repeat; height: 24px; width:24px;}
 
 .element .info .state {
-    background: url("/images/state-2.png") no-repeat;
-    height: 14px;
-    width: 15px;
+/*    background: url("/images/state-2.png") no-repeat;
+*/    height: 24px;
+   
     float: left;
-    margin-right: 10px;
+    margin-right: 30px;
 }
+
+
+.element .status { 
+	font: normal 11px/14px Arial, sans-serif;
+	text-align: center;
+	color:#909090;
+	padding-left: 25px;
+}
+
+.running { 
+	background: url("/images/state-1.png") no-repeat;
+	
+}
+
+.error { 
+	background: url("/images/state-error.png") no-repeat;
+	
+}
+.finished { 
+background: url("/images/state-2.png") no-repeat;
+}
+
 .element img.gravatar{
     border: 1px solid #EEF2F6;
     height: 25px;
@@ -854,19 +881,7 @@ background: url("/images/stop-hover.png") no-repeat;
 	text-align: justify;
 }
 
-.element .status { 
-	font: normal 12px/14px Arial, sans-serif;
-	color:#909090;
-	text-align : center;
-	margin : 20px 0;
-}
 
-.error { 
-    color:#f60 !important;
-}
-.finished { 
-    color: #909090 !important;
-}
 	
 	
 /*-------------------analysis--------------------------*/
