@@ -192,14 +192,14 @@ background: url("/images/stop-hover.png") no-repeat;
 	color:#FFFFFF;
 	border : 1px solid #161616;
 }
+
 #user img {
-    border: none;
-    height: 40px;
-    width: 40px;
-    margin-top:4px;
-    margin-right: 8px;
-    padding: 0;
+    border: 5px solid #b0b0b0;
     float: left;
+    height: 40px;
+    margin-left: -7px;
+    margin-right: 10px;
+    width: 40px;
 }
 
 
@@ -490,6 +490,30 @@ background: url("/images/stop-hover.png") no-repeat;
     width:240px;
 }
 
+#dashboard-meta #link-dashboard {
+    margin-top: 25px;
+}
+
+#dashboard-meta #link-dashboard h4 {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: url("/images/go-eyes.png") no-repeat 5px 7px;
+    border-color: #EEF2F6 -moz-use-text-color;
+    border-image: none;
+    border-style: solid none;
+    border-width: 1px 0;
+    color: #909090;
+    font: 13px/25px arial,sans-serif;
+    padding-left: 34px;
+}
+
+#dashboard-meta #link-dashboard h4:hover {
+    color: #444444;
+    cursor: pointer;
+}
+
 
 .col-main #project-new input[type=text]{ width : 605px; border : 1px solid #DCDCDC; height : 34px; padding : 0 5px; font : normal 14px arial; color : #DCDCDC; border-radius:3px; margin-top:10px; }
 .col-main #search-form input[type=text]{  background: url("/images/loupe.png") no-repeat 385px 8px; width : 400px; border : 1px solid #DCDCDC; height : 34px; padding : 0 5px; font : normal 14px arial; color : #DCDCDC;
@@ -526,10 +550,10 @@ background: url("/images/stop-hover.png") no-repeat;
 
 /* ADD NEW MEMBER BLOCK  ************************************************************/
 
-.col-1 #new-members { margin-top : 10px; }
+.col-1 #new-members { margin-top : 25px; }
 
-.col-1 #new-members h4 { color : #CFCFCF; font: normal 12px/22px arial, sans-serif; border : 1px solid #EEF2F6; border-left :0; border-right: 0; padding-left : 24px; background : url("/images/cross2.png") no-repeat 5px 4px; }
-.col-1 #new-members h4:hover { color : #6E6E6E; cursor : pointer; }
+.col-1 #new-members h4 { color : #909090; font: normal 13px/25px arial, sans-serif; border : 1px solid #EEF2F6; border-left :0; border-right: 0; padding-left : 34px; background : url("/images/cross2.png") no-repeat 5px 5px; }
+.col-1 #new-members h4:hover { color : #444444; cursor : pointer; }
 
 .col-1 #new-members > div {
     padding: 8px 4px 8px 4px;
