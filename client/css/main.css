@@ -552,7 +552,7 @@ background: url("/images/stop-hover.png") no-repeat;
     color: #FFFFFF;
     height: 34px;
     margin-bottom: 10px;
-    margin-left: 20px;
+    margin-left: 18px;
     margin-top: 25px;
     padding-top: 6px;
     width: 220px;
@@ -905,7 +905,7 @@ background: url("/images/stop-hover.png") no-repeat;
 */    height: 24px;
    
     float: left;
-    margin-right: 30px;
+    margin-right: 20px;
 }
 
 
@@ -923,6 +923,7 @@ background: url("/images/stop-hover.png") no-repeat;
 
 .error { 
 	background: url("/images/status-error.png") no-repeat;
+	margin-right:14px;
 	
 }
 .finished { 
@@ -1082,11 +1083,24 @@ background: url("/images/status-finish.png") no-repeat;
 }
 
 
-.element .file .img-, .analysis .file .img-txt{
+.element .file .img-{
     background: url("/images/img-fichiers.png") no-repeat scroll center center transparent;
 }
-.element .file .img-pdf{
-    background: url("/images/img-fichiers.png") no-repeat scroll center center transparent;
+
+.analysis .file .img-txt, .analysis .file .img-csv{
+    background: url("/images/img-csv.png") no-repeat scroll center center transparent;
+}
+
+.analysis .file .img-db{
+    background: url("/images/img-db.png") no-repeat scroll center center transparent;
+}
+
+.analysis .file .img-html{
+    background: url("/images/img-html.png") no-repeat scroll center center transparent;
+}
+
+.element .file .img-pdf, .element .file .img-json{
+    background: url("/images/img-json.png") no-repeat scroll center center transparent;
 }
 		
 .analysis .file .name {
