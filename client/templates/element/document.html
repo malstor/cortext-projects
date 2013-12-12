@@ -4,7 +4,8 @@
         <span class="type document img-{{e.extension}}"><a href="#">{{ e.extension }}</a></span> 
         
   <span class="date">
-  <a href="/user/{{author.id}}"><img class="gravatar" src="{{author.gravatar}}" /> <!--{{author.name}}--></a>
+    <a href="/user/{{author.id}}"><img class="gravatar" src="{{author.gravatar}}" /></a>
+ <!--  {{ author.name }} -->
   <a href="{{ e.permalink }}">{{date_short e.date }}</a>
   </span>
  
@@ -12,10 +13,20 @@
                 <a class ="icon view" title="view file" rel="{{e.permalink}}" data-type="{{e.extension}}" target="_blank" href='{{viz e.extension e.permalink}}'></a>
                 <a class="icon delete" title="delete file" data-id="{{id}}" href="#" rel="{{e.id}}"></a>
         </div>-->
-         <div class="info-result">
-        <span class="name"><a href="{{e.permalink}}" title='download'>{{e.name}}</a> -  {{e.size}} </span>
+        <div class="document-name">
+        <span class="name"><a href="{{e.permalink}}" title='download'>{{e.name}}</a> </span>
         </div>
-        
     </div>
+
+
+<div class="document-body">
+        <div class="icon img-document"> </div>
+        <div class="body-doc">{{e.size}}</div>
+        <div class="actions">               
+                <a class ="icon view" title="view file">i</a>
+                <a class="icon delete" title="delete file"></a>
+        </div>
+
+
 </div><!--document-->
 </template>

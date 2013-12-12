@@ -1,13 +1,6 @@
 <template name="project">
   <div class="project-meta col-1">
 
-    <div class="info">
-      <h3>informations</h3>
-
-      <div class="date_created date">created: <span>{{date_short project.date_created }}</span></div>
-      <div class="date_updated date">updated: <span>{{date_short project.date_updated }}</span></div>
-    </div>
-
     <div class="script" id="script">
 
       <h3>queued scripts</h3>
@@ -100,8 +93,14 @@
 
 </div><!-- /col-main -->
 
-<div class="project-meta2 col-2">
+<div class="project-meta col-2">
 
+ <div class="info">
+      <h3>informations</h3>
+
+      <div class="date_created date">created: <span>{{date_short project.date_created }}</span></div>
+      <div class="date_updated date">updated: <span>{{date_short project.date_updated }}</span></div>
+    </div>
 
 </div><!-- /project-meta2 -->
 </template>
