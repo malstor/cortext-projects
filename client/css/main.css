@@ -522,6 +522,10 @@ background: url("/images/stop-hover.png") no-repeat;
     cursor: pointer;
 }
 
+#main-project .search-form{
+	margin-bottom: -5px;
+}
+
 
 .col-main #project-new input[type=text]{ width : 605px; border : 1px solid #DCDCDC; height : 34px; padding : 0 5px; font : normal 14px arial; color : #9D9D9D; border-radius:3px; margin-top:10px; }
 .col-main .search-form input[type=text]{  background: url("/images/loupe.png") no-repeat 385px 8px; width : 400px; border : 1px solid #DCDCDC; height : 34px; padding : 0 5px; font : normal 14px arial; color : #DCDCDC;
@@ -533,7 +537,7 @@ background: url("/images/stop-hover.png") no-repeat;
 
 #add-element { position: relative; top : -14px; margin-bottom: -10px;}
 
-#add-element .message{  border : 1px solid #EEF2F6; border-top : 0; background : #FAFAFA; padding : 2px; width : 750px; margin-left : 8px; overflow: auto; }
+#add-element .message{  border : 1px solid #EEF2F6; border-top : 0; background : #F6F0FF; padding : 2px; width : 750px; margin-left : 8px; overflow: auto; }
 #add-element textarea { display : block; width : 736px; padding : 5px; height : 161px; border-radius : 2px; border : 1px solid #EEF2F6; resize:none; }
 #add-element form .add { float : right; }
 
@@ -939,18 +943,18 @@ background-color: #fff;
 }
 
 
-.document .comment{
+.document .comment, .message .comment, .analysis .comment{
 height:25px;
 background-color: #F6F0FF;
 }
 
-.document .comment p{
+.document .comment p, .message .comment p, .analysis .comment p{
 float:right;
 font: 13px/20px Arial,sans-serif;
 margin-right:15px;
 }
 
-.document .comment a{
+.document .comment a, .message .comment a, .analysis .comment a{
 text-decoration: underline;
 }
 
