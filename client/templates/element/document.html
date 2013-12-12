@@ -19,13 +19,23 @@
     </div>
 
 
-<div class="document-body">
+    <div class="document-body">
         <div class="icon img-document"> </div>
         <div class="body-doc">{{e.size}}</div>
         <div class="actions">               
                 <a class ="icon view" title="view file">i</a>
                 <a class="icon delete" title="delete file"></a>
         </div>
+    </div>
+
+
+    <form rel="{{ project.id }}" class="message-write">
+      <textarea id="new-message-body">write your comment!</textarea>
+      <button class="add">add</button>
+    </form>
+    <div class="comment"><p><a href="">write a comment</a></p></div>
+  <!--  <div class="arrow"></div> --> 
+
 
 
 </div><!--document-->
