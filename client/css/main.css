@@ -970,7 +970,7 @@ border-right: 1px solid #E6E6E6;
 
 .document .arrow, .message .arrow, .analysis .arrow{
     background: url("/images/arrow.png") no-repeat 365px 0px #fff;
-    height: 15px;
+    height: 18px;
     margin-top:0px;
     width: 750px;
 }
