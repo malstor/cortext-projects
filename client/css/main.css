@@ -1206,29 +1206,25 @@ background: url("/images/status-finish.png") no-repeat;
 }
 
 
-.element .file .img-{
+.element .file .img-, .document .document-body .img-{
     background: url("/images/img-fichiers.png") no-repeat scroll center center transparent;
 }
 
-.analysis .file .img-txt, .analysis .file .img-csv{
+.analysis .file .img-txt, .analysis .file .img-csv, .document .document-body .img-csv, .document .document-body .img-zip, 
+.document .document-body .img-xlsx{
     background: url("/images/img-csv.png") no-repeat scroll center center transparent;
 }
 
-.analysis .file .img-db{
+.analysis .file .img-db, .document .document-body .img-db{
     background: url("/images/img-db.png") no-repeat scroll center center transparent;
 }
 
-.analysis .file .img-html{
+.analysis .file .img-html, .document .document-body .img-html{
     background: url("/images/img-html.png") no-repeat scroll center center transparent;
 }
 
-.element .file .img-pdf, .element .file .img-json{
+.element .file .img-pdf, .element .file .img-json, .document .document-body .img-pdf, .document .document-body .img-json {
     background: url("/images/img-json.png") no-repeat scroll center center transparent;
-}
-
-
- .document .document-body .img-html{
-    background: url("/images/img-html.png") no-repeat scroll center center transparent;
 }
 
 		
