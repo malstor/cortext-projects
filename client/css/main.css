@@ -968,6 +968,10 @@ border-right: 1px solid #E6E6E6;
 	text-decoration: underline;
 }
 
+.document .comment a:hover, .message .comment a:hover, .analysis .comment a:hover{
+	color:#FFD505;
+}
+
 .document .arrow, .message .arrow, .analysis .arrow{
     background: url("/images/arrow.png") no-repeat 365px 0px #fff;
     height: 18px;
