@@ -944,18 +944,28 @@ background-color: #fff;
 
 
 .document .comment, .message .comment, .analysis .comment{
-height:25px;
-background-color: #F6F0FF;
+	height:25px;
+	background-color: #F6F0FF;
 }
 
 .document .comment p, .message .comment p, .analysis .comment p{
-float:right;
-font: 13px/20px Arial,sans-serif;
-margin-right:15px;
+	float:right;
+	font: 13px/22px Arial,sans-serif;
+	margin-right:10px;
+
+}
+
+.document .comment span, .message .comment span, .analysis .comment span{
+	float:right;
+    background: url("/images/comment-bulle.png") no-repeat ;
+	height:20px;
+	width:20px;
+	margin-top:4px;
+	margin-left:10px;
 }
 
 .document .comment a, .message .comment a, .analysis .comment a{
-text-decoration: underline;
+	text-decoration: underline;
 }
 
 .document .arrow {
