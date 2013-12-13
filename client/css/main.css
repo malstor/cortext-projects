@@ -43,16 +43,16 @@ body {
     width:765px;
     float:left;
     margin-top: 12px;
-    margin-left:15px;
 }
 
 .col-1 {
-	width:255px;
+	width:260px;
 	float:left;
 	z-index:2;
 	height:inherit;
 	margin-top:13px;
 	margin-bottom:0px;
+	margin-right: 10px;
 }
 
 .col-2{
@@ -60,8 +60,7 @@ body {
     float: left;
     height: inherit;
     margin-top:27px;
-	margin-left:15px;
-    width: 230px;
+    width: 240px;
 }
 
 /*****************************************************************************************
@@ -343,6 +342,7 @@ background: url("/images/stop-hover.png") no-repeat;
 		
 .project-meta .info, #dashboard-meta .info{
 	height:100px;
+	width:220px;
 }
 	
 .project-meta .info h3 {	
@@ -350,12 +350,14 @@ background: url("/images/stop-hover.png") no-repeat;
 	font: normal 13px Arial, sans-serif;
 	color: #BEBEBE;
 	margin: 10px 10px 10px 0px;
-	width:245px;
+	width:220px;
 	padding-bottom:2px;
 	padding-left:5px;
 	padding-top:2px;
 	background:#FFFFFF;
-}	
+}
+
+.col-2 .info{float: right;}	
 
 .col-1 h3 {
 	font: normal 14px/30px "Oxygen-regular", sans-serif;
