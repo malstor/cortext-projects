@@ -535,7 +535,7 @@ background: url("/images/stop-hover.png") no-repeat;
 
 #add-element { position: relative; top : -14px; margin-bottom: -10px;}
 
-#add-element .message{  border : 1px solid #EEF2F6; border-top : 0; background : #FAFAFA; padding : 2px; width : 750px; margin-left : 8px; overflow: auto; }
+#add-element .message{  border : 1px solid #EEF2F6; border-top : 0; background : #F6F0FF; padding : 2px; width : 750px; margin-left : 8px; overflow: auto; }
 #add-element textarea { display : block; width : 736px; padding : 5px; height : 161px; border-radius : 2px; border : 1px solid #EEF2F6; resize:none; }
 #add-element form .add { float : right; }
 
@@ -915,7 +915,7 @@ border-right: 1px solid #E6E6E6;
     -moz-border-left-colors: none;
     -moz-border-right-colors: none;
     -moz-border-top-colors: none;
-    background: #FAFAFA;
+    background: #F6F0FF;
     border-color: -moz-use-text-color #EEF2F6 #EEF2F6;
     border-image: none;
     border-right: 1px solid #EEF2F6;
@@ -945,7 +945,7 @@ border-right: 1px solid #E6E6E6;
 
 .document .comment, .message .comment, .analysis .comment{
 	height:25px;
-	background-color: #FAFAFA;
+	background-color: #F6F0FF;
 }
 
 .document .comment p, .message .comment p, .analysis .comment p{
@@ -974,6 +974,8 @@ border-right: 1px solid #E6E6E6;
     margin-top:0px;
     width: 750px;
 }
+
+#dashboard .arrow{display: none;}
 
 
 #main-project .element {
@@ -1259,6 +1261,11 @@ background: url("/images/status-finish.png") no-repeat;
     float: right;
 
 }
+
+#main-project .element .actions {
+    margin-right: 15px;
+}
+
 .document .actions
 {
 	margin-right: 15px;
