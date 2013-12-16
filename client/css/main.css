@@ -539,7 +539,7 @@ background: url("/images/stop-hover.png") no-repeat;
  margin-top: 20px; margin-left: 18px; margin-bottom: 10px; border-radius:3px;}
 .col-1 input[type=text].focus, .col-main input[type=text].focus { color : #6E6E6E !important; }
 
-.col-main textarea { font : normal 14px arial; color : #DCDCDC; }
+.col-main textarea { font : normal 14px arial; color : #B1B1B1; }
 .col-main textarea.focus { color : #6E6E6E; }
 
 #add-element { position: relative; top : -14px; margin-bottom: -10px;}
@@ -982,7 +982,7 @@ border-right: 1px solid #E6E6E6;
 }
 
 .document .arrow, .message .arrow, .analysis .arrow{
-    background: url("/images/arrow.png") no-repeat 365px 0px #fff;
+    background: url("/images/arrow.png") no-repeat 362px 0px #fff;
     height: 18px;
     margin-top:0px;
     width: 750px;
