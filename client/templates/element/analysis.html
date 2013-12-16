@@ -12,11 +12,11 @@
  <div class="info-result">
 		{{#if e.parameters.corpus_name}}
       <span class="name"> 
-       on <a href="{{e.parameters.corpus_permalink}}"  title='download'>{{e.parameters.corpus_name}}</a>
+      / <a href="{{e.parameters.corpus_permalink}}"  title='download {{e.parameters.corpus_name}}'>{{ellipsis e.parameters.corpus_name 50}}</a>
       </span>
      {{/if}}
      
-     {{#if e.content.results}}<span class="results">-<a href="/project/{{e.project}}#results-{{e.id}}"> {{size e.content.results}} dataset(s)</a></span>
+     {{#if e.content.results}}<span class="results"><a href="/project/{{e.project}}#results-{{e.id}}">  - {{size e.content.results}} dataset(s)</a></span>
       {{else}}<span class="status2 {{status e.state}}"></span>{{/if}}
 
 </div>

@@ -1,7 +1,7 @@
 <template name="document">
 <div class="element document user-{{ author.id }}" id="Document-{{ e.id }}">
     <div class="info">        
-        <span class="type document img-{{e.extension}}"><a href="#">{{ e.extension }}</a></span> 
+        <span class="type document img-{{e.extension}}"><a href="{{e.permalink}}" title="{{e.name}}">{{ellipsis e.name 50 }}</a></span> 
         
   <span class="date">
     <a href="/user/{{author.id}}"><img class="gravatar" src="{{author.gravatar}}" /></a>
@@ -14,16 +14,16 @@
                 <a class="icon delete" title="delete file" data-id="{{id}}" href="#" rel="{{e.id}}"></a>
         </div>-->
         <div class="document-name">
-        <span class="name"><a href="{{e.permalink}}" title='download'>{{e.name}}</a> </span>
+        <span class="name"><a href="{{e.permalink}}" title='download'><!--{{e.name}}--></a> </span>
         </div>
     </div>
 
 
     <div class="document-body">
         <div class="icon img-{{e.extension}}"> </div>
-        <div class="body-doc">{{e.size}}</div>
+        <div class="body-doc"><a href="download {{e.permalink}}">{{ e.extension }} - {{e.size}}</a></div>
         <div class="actions">               
-                <a class ="icon view" title="view file"></a>
+                <a class ="icon view" title="view file" href='{{viz e.extension e.permalink}}'></a>
                 <a class="icon delete" title="delete file"></a>
         </div>
     </div>

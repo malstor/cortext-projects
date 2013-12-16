@@ -1008,10 +1008,10 @@ border-right: 1px solid #E6E6E6;
 	color : #393939;
 }
 
-.element .info .message { background: url("/images/messages.png") no-repeat; height: 24px; width:24px;}
-.element .info .analysis {background: url("/images/analysis.png") no-repeat; height: 24px; width:24px;}
-.element .info .image  {background: url("/images/image.png") no-repeat; height: 24px; width:24px;}
-.element .info .document { background: url("/images/document.png") no-repeat; height: 24px; width:24px;}
+.element .info .message { background: url("/images/messages.png") no-repeat; height: 24px;}
+.element .info .analysis {background: url("/images/analysis.png") no-repeat; height: 24px;width: 70px}
+.element .info .image  {background: url("/images/image.png") no-repeat; height: 24px;}
+.element .info .document { background: url("/images/document.png") no-repeat; height: 24px;}
 
 .element .info .state {
 /*    background: url("/images/state-2.png") no-repeat;
