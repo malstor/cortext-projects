@@ -373,8 +373,11 @@ background: url("/images/stop-hover.png") no-repeat;
 }
 
 .col-1 .script {
-	margin-bottom: 25px;
-	
+	margin-bottom: 5px;
+}
+
+.col-1 #script {
+    margin-bottom: 30px;
 }
 
 .col-1 .script .queued-scripts{
