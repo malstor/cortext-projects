@@ -966,10 +966,10 @@ border-right: 1px solid #E6E6E6;
 
 .document .comment span, .message .comment span, .analysis .comment span{
 	float:right;
-    background: url("/images/comment-bulle.png") no-repeat ;
+    background: url("/images/comment-1.png") no-repeat ;
 	height:20px;
 	width:20px;
-	margin-top:4px;
+	margin-top:6px;
 	margin-left:10px;
 }
 
