@@ -416,7 +416,7 @@ background: url("/images/stop-hover.png") no-repeat;
 	float:right;
     margin-right:10px;	}
 
-.col-1 .script h3 {background : #27AD19 url('/images/engrenage.png') no-repeat 225px 5px;
+.col-1 .script h3 {background : #27AD19 url('/images/analysis-queued.png') no-repeat 225px 6px;
 }
 
 .dashboard-projects a {
@@ -978,7 +978,7 @@ border-right: 1px solid #E6E6E6;
 }
 
 .document .comment a:hover, .message .comment a:hover, .analysis .comment a:hover{
-	color:#FFD505;
+	color:#ff9705;
 }
 
 .document .arrow, .message .arrow, .analysis .arrow{
