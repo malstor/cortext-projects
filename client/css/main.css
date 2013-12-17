@@ -22,7 +22,7 @@ body {
 	overflow-x:hidden; 
 }
 
-#conteneur-principal {
+#content {
 	z-index:2;
 	margin : 0px auto 0px auto;
 	width:1280px;
@@ -39,13 +39,13 @@ body {
 	z-index: 10;
 }
 
-.col-main {
+.container-main {
     width:765px;
     float:left;
     margin-top: 12px;
 }
 
-.col-1 {
+.container-left {
 	width:255px;
 	float:left;
 	z-index:2;
@@ -55,8 +55,7 @@ body {
 	margin-right: 15px;
 }
 
-.col-2{
-	/*display:none;*/
+.container-right{
     float: left;
     height: inherit;
     margin-top:27px;
@@ -78,8 +77,7 @@ button:not(.inactive):hover, .button:hover { background : #DDDDDD; border : 1px 
 
 button.inactive { color : #DCDCDC; cursor: default; }
 
-
-/*----------------------menu + header-------------------*/
+/* HEADER  +  MENU  ************************************************************/
 
 #menu {	
 	height:50px;
@@ -88,14 +86,17 @@ button.inactive { color : #DCDCDC; cursor: default; }
 	position: relative;
 }
 
-#path { overflow: hidden; }
+#path { 
+	overflow: hidden; 
+}
 
 #path ul {
  	margin:0;
  	list-style-type:none;
 }
 
-#path ul { position : relative; 
+#path ul { 
+	position : relative; 
 }
 
 #path ul li {
@@ -139,8 +140,8 @@ button.inactive { color : #DCDCDC; cursor: default; }
 
 #path .home { padding : 0; border : 0; }
 
-#path ul .add-friend-project {height: 34px; width: 34px; margin-left: 10px;background: url("/images/add.png") no-repeat; border: none;margin-top:15px;}
-#path ul .add-friend-project:hover {height: 34px; width: 34px; margin-left: 10px;background: url("/images/add-hover.png") no-repeat; border: none;margin-top:15px;cursor: pointer;}
+#path ul .add-friend-project {height: 34px; width: 34px; margin-left: 10px;background: url("/images/add2.png") no-repeat; border: none;margin-top:15px;}
+#path ul .add-friend-project:hover {height: 34px; width: 34px; margin-left: 10px;background: url("/images/add-hover2.png") no-repeat; border: none;margin-top:15px;cursor: pointer;}
 
 
 #user {
@@ -155,35 +156,19 @@ button.inactive { color : #DCDCDC; cursor: default; }
 }
 
 #user a {
-
 	color: #FFFFFF;
     display: block;
     font-family: "Oxygen-Regular";
     font-size: 16px;
     letter-spacing: 2px;
     line-height: 50px;
-   text-decoration: none;
+   	text-decoration: none;
 	text-transform: lowercase;
 }
 
 #user a:hover {
 	text-decoration:underline;
 }
-
-
-/*#user #logout {
-height:9px;
-width:9px;
-margin-bottom: -10px;
-margin-left: -4px;
-margin-top: 1px;
-background: url("/images/stop.png") no-repeat;
-}
-
-#user #logout:hover {
-cursor:pointer;
-background: url("/images/stop-hover.png") no-repeat;
-}*/
 
 #user .btn{
 	background:#3C3C3C;
@@ -209,7 +194,7 @@ background: url("/images/stop-hover.png") no-repeat;
 
 /* HELP DOCUMENTATION  ************************************************************/
 
-.aide {
+.help {
 	z-index:3;
 	position: fixed;
 	display:none;
@@ -221,7 +206,7 @@ background: url("/images/stop-hover.png") no-repeat;
 	padding:0px 65px 0px 0px;
 }
 
-.aide h3 {
+.help h3 {
 	color:#fff;
 	background: url("/images/start.png") no-repeat 205px 7px #3C3C3C ;
 	font: 14px/30px "Oxygen-regular",sans-serif;
@@ -231,7 +216,7 @@ background: url("/images/stop-hover.png") no-repeat;
 	margin-bottom:12px;
 }
 
-.aide h4 {
+.help h4 {
 	margin-left:20px;
 	width:155px;
 	padding-bottom:12px;
@@ -244,7 +229,7 @@ background: url("/images/stop-hover.png") no-repeat;
 	margin-bottom:12px;
 }
 
-.aide a{
+.help a{
 	color:#737373;
 	font: normal 13px Arial, sans-serif;
 	text-decoration:none;
@@ -254,7 +239,7 @@ background: url("/images/stop-hover.png") no-repeat;
 	display:block;
 }
 
-.aide a:hover{
+.help a:hover{
 	color: #3C3C3C;
 }
 
@@ -272,7 +257,7 @@ background: url("/images/stop-hover.png") no-repeat;
 	display: block;
 }
 
-.aide #question-panel{
+.help #question-panel{
 	position: absolute;
 	width: 225px;
 	padding: 8px 0px 12px 0px;
@@ -282,12 +267,12 @@ background: url("/images/stop-hover.png") no-repeat;
     top:122px;
 }
 	
-.aide form p{
+.help form p{
 	width:170px;
 	margin:0px auto 0px auto;
 }
 	
-.aide form textarea{ 
+.help form textarea{ 
 	border: 1px solid #DCDCDC;
     color: #909090;
     font: 12px arial;
@@ -295,11 +280,11 @@ background: url("/images/stop-hover.png") no-repeat;
     width:inherit; 	
 }
 
-.aide #aide-question h4{
+.help #help-question h4{
 	width: 200px;
 }
 	
-.aide #aide-question .send-question{	
+.help #help-question .send-question{	
 	background:#E93F44;
     border: 1px solid #B53135;
     color: #FFFFFF;
@@ -308,42 +293,20 @@ background: url("/images/stop-hover.png") no-repeat;
 	padding-top:2px;
 }
 
-.aide #aide-question .send-question:hover{	
+.help #help-question .send-question:hover{	
 	background: #e6282e;
     border: 1px solid #a12c2f;
 }			
 
-
-
-
-
-/*----------------------formulaire/login----------------------*/
-
-#login-panel {
-	z-index: 5;
-	position: absolute;
-	top: 26px;
-	height: 240px;
-	right: 0px;
-	width: 420px;
-	padding: 10px 15px 5px 15px;
-	background: #3C3C3C;
-	font: normal 15px Arial, sans-serif;
-	color: white;
-	display: none;
-}	
-
 	
-/*--------------------main------------------------*/
+/* MAIN  ************************************************************/
 
 #main{
-	background:url(/images/slide-droite2.png);
-	background-repeat:repeat-y;
-	background-position:right;
 	position : relative;
 	padding-top : 50px;
 }	
 		
+<<<<<<< HEAD
 .project-meta .info, #dashboard-meta .info{
 	height:100px;
 	width:220px;
@@ -1751,4 +1714,4 @@ input:focus{
 	-webkit-transition:1s;
 	border: 1px solid #54cf4c;
 	box-shadow: none;
-}	   
+}
