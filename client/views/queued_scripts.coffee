@@ -26,7 +26,8 @@ Meteor.subscribe "elements"
           @render_item script.id
 
       @$el.find('span.progress-script').each ->
-        t = 245
+        t = parseInt $('div.queued-scripts').width()
+        console.log 'taille ', t
         s = parseInt($(this).attr('data-progress') * t / 100)
         $(this).css "width", s + "px" #@todo remove the "+20" : just for demo...
             

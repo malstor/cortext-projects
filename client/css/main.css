@@ -418,7 +418,7 @@ background: url("/images/stop-hover.png") no-repeat;
     font-style: normal;
     line-height: 20px;
 	float:right;
-    margin-right:10px;	}
+    margin-right:5px;	}
 
 .col-1 .script h3 {background : #27AD19 url('/images/analysis-queued.png') no-repeat 225px 6px;
 }
