@@ -139,6 +139,8 @@ button.inactive { color : #DCDCDC; cursor: default; }
 
 #path .home { padding : 0; border : 0; }
 
+#path ul .add-friend-project {height: 34px; width: 34px; margin-left: 10px;background: url("/images/add.png") no-repeat; border: none;margin-top:15px;}
+
 #user {
 	position : absolute;
 	top : 0;
