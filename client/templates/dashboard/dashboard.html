@@ -1,8 +1,6 @@
 <template  name="dashboard">
-  <div id="dashboard-meta" class="col-1">
-   <!-- <div class="info">
-      <h3>informations</h3>
-    </div>-->   
+  <div id="dashboard-meta" class="col-1 container-left">
+
     <div class="script" id="script">
       <h3>queued scripts</h3>
       <div id="queuedScripts" class="wrapper">
@@ -12,17 +10,15 @@
       <h3>projects</h3>
       <ul class="projects">
       </ul>   
-        
     </div><!-- /dashboard-projects -->
 
-<div id="link-dashboard">
-<h4><a href="http://dashboard.cortext.org/" target="_blank"> go to personal dashboard</a></h4>
-</div>
+    <div id="link-dashboard">
+      <h4><a href="http://dashboard.cortext.org/" target="_blank"> go to personal dashboard</a></h4>
+    </div>
 
+  </div><!-- /dashboard-meta -->
 
-    </div><!-- /dashboard-meta -->
-
-  <div id="dashboard" class="col-main">
+  <div id="dashboard" class="container-main">
     <form id="project-new">
       <input type="text" placeholder="type the name of your new project"></input>
       <button class="new">create project</button>
@@ -41,7 +37,7 @@
     
   </div><!-- /#dashboard -->
 
-  <div class="project-meta2 col-2">
+  <div class="project-meta2 container-right">
 
   </div><!-- /dashboard-meta2 -->
 </template>

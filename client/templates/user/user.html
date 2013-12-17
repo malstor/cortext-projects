@@ -1,5 +1,5 @@
 <template name="user">
-  <div class="user-meta col-1">
+  <div class="user-meta col-1 container-left">
 
     <div class="script" id="script">
       <h3>queued scripts</h3>
@@ -8,7 +8,7 @@
     </div><!-- /script -->
   </div><!-- /user-meta -->
 
-  <div id="user-{{ user.id }}" class="user profile col-main">
+  <div id="user-{{ user.id }}" class="user profile container-main">
     <div class="info">
       <div id="gravatar">
         <img src="{{ user.gravatar }}" />
@@ -46,7 +46,7 @@
     </div>
   </div><!-- /.user -->
 
-  <div class="project-meta2 col-2">
+  <div class="project-meta2 container-right">
 
   </div><!-- /user-meta2 -->
 </template>

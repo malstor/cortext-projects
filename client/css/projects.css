@@ -538,7 +538,7 @@ background:#FFD505 url(/images/mess.png) no-repeat 3px 3px;
     border: 1px solid #173C7D;
     }
 
-.col-main .trace{background:#DCDCDC;
+.container-main .trace{background:#DCDCDC;
     height: 1px;
     margin-top: 20px;
     margin-left: 18px;

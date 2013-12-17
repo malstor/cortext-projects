@@ -39,13 +39,13 @@ body {
 	z-index: 10;
 }
 
-.col-main {
+.container-main {
     width:765px;
     float:left;
     margin-top: 12px;
 }
 
-.col-1 {
+.container-left {
 	width:255px;
 	float:left;
 	z-index:2;
@@ -55,8 +55,7 @@ body {
 	margin-right: 15px;
 }
 
-.col-2{
-	/*display:none;*/
+.container-right{
     float: left;
     height: inherit;
     margin-top:27px;
@@ -78,8 +77,7 @@ button:not(.inactive):hover, .button:hover { background : #DDDDDD; border : 1px 
 
 button.inactive { color : #DCDCDC; cursor: default; }
 
-
-/*----------------------menu + header-------------------*/
+/* HEADER  +  MENU  ************************************************************/
 
 #menu {	
 	height:50px;
@@ -88,14 +86,17 @@ button.inactive { color : #DCDCDC; cursor: default; }
 	position: relative;
 }
 
-#path { overflow: hidden; }
+#path { 
+	overflow: hidden; 
+}
 
 #path ul {
  	margin:0;
  	list-style-type:none;
 }
 
-#path ul { position : relative; 
+#path ul { 
+	position : relative; 
 }
 
 #path ul li {
@@ -155,21 +156,19 @@ button.inactive { color : #DCDCDC; cursor: default; }
 }
 
 #user a {
-
 	color: #FFFFFF;
     display: block;
     font-family: "Oxygen-Regular";
     font-size: 16px;
     letter-spacing: 2px;
     line-height: 50px;
-   text-decoration: none;
+   	text-decoration: none;
 	text-transform: lowercase;
 }
 
 #user a:hover {
 	text-decoration:underline;
 }
-
 
 #user .btn{
 	background:#3C3C3C;
@@ -303,7 +302,7 @@ button.inactive { color : #DCDCDC; cursor: default; }
 
 
 
-/*----------------------formulaire/login----------------------*/
+/*----------------------formulaire/login----------------------
 
 #login-panel {
 	z-index: 5;
@@ -318,7 +317,7 @@ button.inactive { color : #DCDCDC; cursor: default; }
 	color: white;
 	display: none;
 }	
-
+*/
 	
 /*--------------------main------------------------*/
 
@@ -347,9 +346,9 @@ button.inactive { color : #DCDCDC; cursor: default; }
 	background:#FFFFFF;
 }
 
-.col-2 .info{float: right;}	
+.container-left .info{float: right;}	
 
-.col-1 h3 {
+.container-left h3 {
 	font: normal 14px/30px "Oxygen-regular", sans-serif;
 	letter-spacing : 2px;
 	color: #FFFFFF;
@@ -359,14 +358,14 @@ button.inactive { color : #DCDCDC; cursor: default; }
 	background:#235BBE url('/images/dossier1.png') no-repeat 225px 7px;
 }
 
-.col-1 .members h3 {background : #EE6E21 url('/images/userB.png') no-repeat 225px 8px;
+.container-left .members h3 {background : #EE6E21 url('/images/userB.png') no-repeat 225px 8px;
 }
 
-.col-1 .script {
+.container-left .script {
 	margin-bottom: 5px;
 }
 
-.col-1 #script {
+.container-left #script {
     margin-bottom: 30px;
 }
 #queuedScripts
@@ -376,19 +375,19 @@ button.inactive { color : #DCDCDC; cursor: default; }
     height: 250px;
 }
 
-.col-1 .script .queued-scripts{
+.container-left .script .queued-scripts{
 	background: #EEF2F6;
     height: 10px;
     margin-left: 5px;
     margin-right: 5px;}
 	
-	.col-1 .script .queued-scripts .progress-script{
+	.container-left .script .queued-scripts .progress-script{
 	background: #25A618;
     height: 10px;
     width:100px;
 	display:block;}
 	
-.col-1 .script .name-script{
+.container-left .script .name-script{
 	color: #909090;
     font-family: Arial,Helvetica,sans-serif;
     font-size: 11px;
@@ -397,7 +396,7 @@ button.inactive { color : #DCDCDC; cursor: default; }
     margin-left: 5px;
     }
 
-.col-1 .script .hours{
+.container-left .script .hours{
 	color: #909090;
     font-family: Arial,Helvetica,sans-serif;
     font-size: 11px;
@@ -406,7 +405,7 @@ button.inactive { color : #DCDCDC; cursor: default; }
 	float:right;
     margin-right:10px;	}
 
-.col-1 .script h3 {background : #27AD19 url('/images/analysis-queued.png') no-repeat 225px 6px;
+.container-left .script h3 {background : #27AD19 url('/images/analysis-queued.png') no-repeat 225px 6px;
 }
 
 .dashboard-projects a {
@@ -524,13 +523,13 @@ button.inactive { color : #DCDCDC; cursor: default; }
 }
 
 
-.col-main #project-new input[type=text]{ width : 605px; border : 1px solid #DCDCDC; height : 34px; padding : 0 5px; font : normal 14px arial; color : #B1B1B1; border-radius:3px; margin-top:10px; }
-.col-main .search-form input[type=text]{  background: url("/images/loupe.png") no-repeat 385px 8px; width : 400px; border : 1px solid #DCDCDC; height : 34px; padding : 0 5px; font : normal 14px arial; color : #DCDCDC;
+.container-main #project-new input[type=text]{ width : 605px; border : 1px solid #DCDCDC; height : 34px; padding : 0 5px; font : normal 14px arial; color : #B1B1B1; border-radius:3px; margin-top:10px; }
+.container-main .search-form input[type=text]{  background: url("/images/loupe.png") no-repeat 385px 8px; width : 400px; border : 1px solid #DCDCDC; height : 34px; padding : 0 5px; font : normal 14px arial; color : #DCDCDC;
  margin-top: 20px; margin-left: 18px; margin-bottom: 10px; border-radius:3px;}
-.col-1 input[type=text].focus, .col-main input[type=text].focus { color : #6E6E6E !important; }
+.container-left input[type=text].focus, .container-main input[type=text].focus { color : #6E6E6E !important; }
 
-.col-main textarea { font : normal 14px arial; color : #B1B1B1; }
-.col-main textarea.focus { color : #6E6E6E; }
+.container-main textarea { font : normal 14px arial; color : #B1B1B1; }
+.container-main textarea.focus { color : #6E6E6E; }
 
 #add-element { position: relative; top : -14px; margin-bottom: -10px;}
 
@@ -647,12 +646,12 @@ button.inactive { color : #DCDCDC; cursor: default; }
 
 /* ADD NEW MEMBER BLOCK  ************************************************************/
 
-.col-1 #new-members { margin-top : 25px; }
+.container-left #new-members { margin-top : 25px; }
 
-.col-1 #new-members h4 { color : #909090; font: normal 13px/25px arial, sans-serif; border : 1px solid #DCDCDC; border-left :0; border-right: 0; padding-left : 34px; background : url("/images/cross2.png") no-repeat 5px 5px; }
-.col-1 #new-members h4:hover { color : #444444; cursor : pointer; }
+.container-left #new-members h4 { color : #909090; font: normal 13px/25px arial, sans-serif; border : 1px solid #DCDCDC; border-left :0; border-right: 0; padding-left : 34px; background : url("/images/cross2.png") no-repeat 5px 5px; }
+.container-left #new-members h4:hover { color : #444444; cursor : pointer; }
 
-.col-1 #new-members > div {
+.container-left #new-members > div {
     padding: 8px 4px 8px 4px;
     border: 1px solid #EEF2F6;
     border-top :0;
@@ -660,14 +659,14 @@ button.inactive { color : #DCDCDC; cursor: default; }
 	display : none;
 }
 
-.col-1 #new-members .button {
+.container-left #new-members .button {
 	display: block;
 	margin : 5px;
     text-decoration:none;
 	margin:0px auto;
 }
 
-.col-1 #new-members input {
+.container-left #new-members input {
     border: 1px solid #DCDCDC;
     color: #CFCFCF;
     font: 11px arial;
@@ -677,21 +676,21 @@ button.inactive { color : #DCDCDC; cursor: default; }
     width : 233px;
 }
 
-.col-1 #new-members #proposition-members { border : 1px solid #DCDCDC; border-top : 0; }
+.container-left #new-members #proposition-members { border : 1px solid #DCDCDC; border-top : 0; }
 
-.col-1 #new-members #proposition-members > p { background : white; padding : 10px; text-align : center; color : #6E6E6E; font: italic 11px/15px arial; }
+.container-left #new-members #proposition-members > p { background : white; padding : 10px; text-align : center; color : #6E6E6E; font: italic 11px/15px arial; }
 
-.col-1 #new-members #proposition-members .user {
+.container-left #new-members #proposition-members .user {
 	background:#FFF;
 	padding : 4px 4px;
 	position : relative;
 	border-bottom : 1px solid #DCDCDC;
 }
 
-.col-1 #new-members #proposition-members .user:last-child { border : none; }
+.container-left #new-members #proposition-members .user:last-child { border : none; }
 
 
-.col-1 #new-members #proposition-members .user img {
+.container-left #new-members #proposition-members .user img {
     border: 1px solid #DCDCDC;
     height: 24px;
     width: 24px;
@@ -699,12 +698,12 @@ button.inactive { color : #DCDCDC; cursor: default; }
 	float:left;
 }
 	
-.col-1 #new-members #proposition-members .user .name {
+.container-left #new-members #proposition-members .user .name {
 	color: #909090;
     font: normal 11px/27px arial;
 }
 	
-.col-1 #new-members #proposition-members .plus {
+.container-left #new-members #proposition-members .plus {
 	background:url("/images/cross2.png") no-repeat;
 	height:14px;
 	width:14px;
@@ -714,20 +713,20 @@ button.inactive { color : #DCDCDC; cursor: default; }
 	cursor:pointer;
 }
 
-.col-1 #new-members #proposition-members .plus:hover {
+.container-left #new-members #proposition-members .plus:hover {
 	background:url("/images/cross2-hover.png") no-repeat;
 }	
 
-.col-1 #new-members #send-invitation a {
+.container-left #new-members #send-invitation a {
 	color: #909090;
     font: normal 11px arial;
 }
 	
-.col-1 #new-members #send-invitation a:hover {
+.container-left #new-members #send-invitation a:hover {
 	color: #444444;
 }
 		
-.col-1 #new-members #send-invitation{
+.container-left #new-members #send-invitation{
 	text-align : center;
 	display : none;
 }
@@ -802,7 +801,4 @@ button.inactive { color : #DCDCDC; cursor: default; }
 .project-meta2 #effacement{
 	clear:both;
 }
-
-
-
 
