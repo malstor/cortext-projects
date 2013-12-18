@@ -7,7 +7,7 @@ Meteor.subscribe "elements"
     e = new models.element()
 
     e.on "element:loaded", ()=>
-      #console.log 'element : loaded ', e
+      console.log 'element : loaded ', e
       t = Template.script
         s: e.attributes   
 
@@ -23,12 +23,13 @@ Meteor.subscribe "elements"
       if Meteor.user()
         #console.log 'refreshing scripts'
         _(elements.find({type: 'Analysis', author: parseInt(Meteor.user().profile.id)}).fetch()).each (script)=>
+          console.log "render_item ", script.id
           @render_item script.id
 
       @$el.find('span.progress-script').each ->
         t = parseInt $('div.queued-scripts').width()
-        console.log 'taille ', t
         s = parseInt($(this).attr('data-progress') * t / 100)
+        console.log 'refreshing progress ', $(this)
         $(this).css "width", s + "px" #@todo remove the "+20" : just for demo...
             
         
