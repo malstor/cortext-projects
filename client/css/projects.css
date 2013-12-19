@@ -44,6 +44,7 @@
         border-left: 1px solid #E6E6E6;
         border-right: 1px solid #E6E6E6;
 }
+form.message {display: none}
 
 #dashboard .message-write{
         display: none;
@@ -109,6 +110,10 @@
 
 .document .comment a:hover, .message .comment a:hover, .analysis .comment a:hover{
         color:#ff9705;
+}
+
+.frm-comment textarea{
+    height: 30px;
 }
 
 .document .arrow, .message .arrow, .analysis .arrow{

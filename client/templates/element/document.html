@@ -27,16 +27,7 @@
                 <a class="icon delete" title="delete file"></a>
         </div>
     </div>
-
-
-    <form rel="{{ project.id }}" class="message message-write">
-      <textarea id="new-message-body">write your comment!</textarea>
-      <button class="add">add</button>
-    </form>
-    <div class="comment"><p><a href="">write a comment</a><span></span></p></div>
-   <div class="arrow"></div> 
-
-
+    {{>comment}}
 
 </div><!--document-->
 </template>
