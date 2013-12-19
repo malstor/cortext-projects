@@ -32,17 +32,69 @@
 }
 
 .message .message-body .body-mess, .document .document-body .body-doc{
-        color: #3A3A3A;
+   	color: #3A3A3A;
     float: left;
-    font: 12px/45px Arial,sans-serif;
+    font: 12px Arial,sans-serif;
     margin-left: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: justify;
+    width: 670px;
 }
 
-.message .message-body, .document .document-body{
+#dashboard .message .message-body, .document .document-body{
         height:44px;
         background-color: #fff;
         border-left: 1px solid #E6E6E6;
         border-right: 1px solid #E6E6E6;
+}
+
+#main-project .message .message-body{
+        max-height: 100px;
+        overflow: auto;
+        background-color: #fff;
+        border: 1px solid #E6E6E6;
+}
+
+#main-project .comment-container{
+    border:6px solid #F6F0FF;
+    float: left;
+    width: 738px; 
+}
+
+#main-project .comment-container .info-comment{
+    display: block;
+    margin-top:6px;
+    font-size: 11px;
+}
+
+.document .document-comment {
+        max-height: 100px;
+        overflow: auto;
+        width: 100%;
+        background-color: #fff;
+        border: 1px solid #E6E6E6;
+        border-top: none;
+}
+
+#dashboard .document-comment {
+        display: none;}
+
+
+
+.document .document-comment .body-mess {
+    color: #666667;
+    float: left;
+    font: 12px Arial,sans-serif;
+    margin-left: 5px;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    text-align: justify;
+    width: 670px;
+}
+
+.document .document-comment .img-message{
+    background: url("/images/img-message.png") no-repeat scroll center center transparent;
 }
 
 #dashboard .message-write{
@@ -398,6 +450,7 @@ background: url("/images/status-finish.png") no-repeat;
 
 #main-project .element .actions {
     margin-right: 15px;
+    margin-top: -44px;
 }
 
 .document .actions
