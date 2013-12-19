@@ -68,7 +68,7 @@
     font-size: 11px;
 }
 
-.document .document-comment {
+#main-project .document-comment {
         max-height: 100px;
         overflow: auto;
         width: 100%;
@@ -82,7 +82,7 @@
 
 
 
-.document .document-comment .body-mess {
+#main-project .document-comment .body-mess {
     color: #666667;
     float: left;
     font: 12px Arial,sans-serif;
@@ -93,7 +93,7 @@
     width: 670px;
 }
 
-.document .document-comment .img-message{
+#main-project .document-comment .img-message{
     background: url("/images/img-message.png") no-repeat scroll center center transparent;
 }
 
