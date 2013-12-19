@@ -40,6 +40,7 @@
     margin-bottom: 15px;
     text-align: justify;
     width: 670px;
+    line-height: 18px;
 }
 
 #dashboard .message .message-body, .document .document-body{
@@ -90,10 +91,12 @@
     margin-bottom: 8px;
     text-align: justify;
     width: 670px;
+    line-height: 18px;
 }
 
 #main-project .document-comment .img-message{
     background: url("/images/img-message.png") no-repeat scroll center center transparent;
+    margin-left:2px;
 }
 
 #dashboard .message-write{
