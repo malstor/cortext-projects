@@ -11,15 +11,15 @@
 /*-----------------messages-------------------------*/
 
 #dashboard .element {
-        width: 750px;
-        height: 38px;
-        border: 1px solid #E6E6E6;
-        margin-left: 8px;
+    width: 750px;
+    height: 38px;
+    border: 1px solid #E6E6E6;
+    margin-left: 8px;
     margin-top: 10px;
 }
 
 #dashboard .message-body, #dashboard .document-body, #dashboard .comment {
-        display:none;
+    display:none;
 }
 
 .document .document-body .img-document{
@@ -32,22 +32,73 @@
 }
 
 .message .message-body .body-mess, .document .document-body .body-doc{
-        color: #3A3A3A;
+   	color: #3A3A3A;
     float: left;
-    font: 12px/45px Arial,sans-serif;
+    font: 12px Arial,sans-serif;
     margin-left: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: justify;
+    width: 670px;
 }
 
-.message .message-body, .document .document-body{
-        height:44px;
-        background-color: #fff;
-        border-left: 1px solid #E6E6E6;
-        border-right: 1px solid #E6E6E6;
+#dashboard .message .message-body, .document .document-body{
+    height:44px;
+    background-color: #fff;
+    border-left: 1px solid #E6E6E6;
+    border-right: 1px solid #E6E6E6;
+}
+
+#main-project .message .message-body{
+    max-height: 80px;
+    overflow: auto;
+    background-color: #fff;
+    border: 1px solid #E6E6E6;
+}
+
+#main-project .comment-container{
+	border:6px solid #F6F0FF;
+	float: left;
+	width: 738px; 
+}
+
+#main-project .comment-container .info-comment{
+	display: block;
+	margin-top:6px;
+	font-size: 11px;
+}
+
+#main-project .document-comment {
+	max-height: 80px;
+	overflow: auto;
+	width: 100%;
+	background-color: #fff;
+	border: 1px solid #E6E6E6;
+	border-top: none;
+}
+
+#dashboard .document-comment {
+    display: none;
+}
+
+#main-project .document-comment .body-mess {
+    color: #666667;
+    float: left;
+    font: 12px Arial,sans-serif;
+    margin-left: 5px;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    text-align: justify;
+    width: 670px;
+}
+
+#main-project .document-comment .img-message{
+    background: url("/images/img-message.png") no-repeat scroll center center transparent;
 }
 form.message {display: none}
 
 #dashboard .message-write{
-        display: none;
+    display: none;
 }
 
 .document .message-write, .analysis .message-write, .message .message-write{
@@ -84,32 +135,31 @@ form.message {display: none}
 
 
 .document .comment, .message .comment, .analysis .comment{
-        height:25px;
-        background-color: #F6F0FF;
+    height:25px;
+    background-color: #F6F0FF;
 }
 
 .document .comment p, .message .comment p, .analysis .comment p{
-        float:right;
-        font: 13px/22px Arial,sans-serif;
-        margin-right:10px;
-
+    float:right;
+    font: 13px/22px Arial,sans-serif;
+    margin-right:10px;
 }
 
 .document .comment span, .message .comment span, .analysis .comment span{
-        float:right;
+    float:right;
     background: url("/images/comment-1.png") no-repeat ;
-        height:20px;
-        width:20px;
-        margin-top:6px;
-        margin-left:10px;
+    height:20px;
+    width:20px;
+    margin-top:6px;
+    margin-left:10px;
 }
 
 .document .comment a, .message .comment a, .analysis .comment a{
-        text-decoration: underline;
+    text-decoration: underline;
 }
 
 .document .comment a:hover, .message .comment a:hover, .analysis .comment a:hover{
-        color:#ff9705;
+    color:#ff9705;
 }
 
 .frm-comment textarea{
@@ -124,31 +174,31 @@ form.message {display: none}
 }
 
 #dashboard .arrow{
-        display: none;
+    display: none;
 }
 
 
 #main-project .element {
-        width: 750px;
-        margin-left: 8px;
+    width: 750px;
+    margin-left: 8px;
     margin-top: 12px;
     background-color:#E6E6E6; 
 }
 
 #main-project .element .info {
-           height: 30px;
-        position: relative;
+    height: 30px;
+    position: relative;
 }
 
 
 .element .info .type { 
-        float : left; 
-        margin-top : 2px; 
-        margin-right : 45px; 
-        padding : 0 4px; 
-        text-transform : lowercase; 
-        font : normal 14px/15px Arial, "Oxygen-Regular", "Bitstream Vera Sans", "DejaVu Sans", Sans-serif;
-        color : #393939;
+    float : left; 
+    margin-top : 2px; 
+    margin-right : 45px; 
+    padding : 0 4px; 
+    text-transform : lowercase; 
+    font : normal 14px/15px Arial, "Oxygen-Regular", "Bitstream Vera Sans", "DejaVu Sans", Sans-serif;
+    color : #393939;
 }
 
 .element .info .message { background: url("/images/messages.png") no-repeat; height: 24px;}
@@ -164,24 +214,24 @@ form.message {display: none}
 
 
 .element .status { 
-        font: normal 11px/14px Arial, sans-serif;
-        text-align: center;
-        color:#909090;
-        padding-left: 22px;
+    font: normal 11px/14px Arial, sans-serif;
+    text-align: center;
+    color:#909090;
+    padding-left: 22px;
 }
 
 .running { 
-        background: url("/images/status-running.png") no-repeat;
+    background: url("/images/status-running.png") no-repeat;
         
 }
 
 .error { 
-        background: url("/images/status-error.png") no-repeat;
-        margin-right:14px;
+    background: url("/images/status-error.png") no-repeat;
+    margin-right:14px;
         
 }
 .finished { 
-background: url("/images/status-finish.png") no-repeat;
+	background: url("/images/status-finish.png") no-repeat;
 }
 
 .element img.gravatar{
@@ -196,24 +246,24 @@ background: url("/images/status-finish.png") no-repeat;
 
 
 .element .info {
-        padding: 3px 10px;
-        position: relative;
-        margin-top:2px;
+    padding: 3px 10px;
+    position: relative;
+    margin-top:2px;
 }
 
 .element .info h3{
-        display: inline-block;
-        font: normal 12px/17px Arial, sans-serif;
-        color:#666768;
-        font-weight: normal;
+    display: inline-block;
+    font: normal 12px/17px Arial, sans-serif;
+    color:#666768;
+    font-weight: normal;
 }
 
 .element .info .date {
-        float: right;
-        padding-right:4px;
-        padding-top: 6px;
-        font: normal 12px/17px Arial, sans-serif;
-        color:#666667;
+    float: right;
+    padding-right:4px;
+    padding-top: 6px;
+    font: normal 12px/17px Arial, sans-serif;
+    color:#666667;
 }
 .element a{
     text-decoration : none;
@@ -224,82 +274,77 @@ background: url("/images/status-finish.png") no-repeat;
     text-decoration : underline;
 }
 .element .info .date a {
-        text-decoration : none;
-        color : inherit;
+    text-decoration : none;
+    color : inherit;
 }
 
 .element .info .extra {
-        display: inline-block;
+    display: inline-block;
 }
 
 .message .body{
-        width:750px;
+    width:750px;
 }
         
 .message .body p{
-        font: normal 12px/1.4em Arial, sans-serif;
-        color:#909090;
-        margin: 5px 10px;
-        text-align: justify;
+    font: normal 12px/1.4em Arial, sans-serif;
+    color:#909090;
+    margin: 5px 10px;
+    text-align: justify;
 }
         
         
 /*-------------------analysis--------------------------*/
 
 .analysis .info .name, .document .info .name{
-        color: #3A3A3A;
+    color: #3A3A3A;
     font: 13px Arial,sans-serif;
-                        
 }
 
  .document .info .document-name{
-        float:left;
-        padding: 6px 40px;
+    float:left;
+    padding: 6px 40px;
 }
 
 
 .analysis .info .info-result, .document .info .info-result{
-        float:left;
-        padding: 6px 40px;
-
+    float:left;
+    padding: 6px 40px;
 }
 
 .analysis .info .results {
-
-        color: #3A3A3A;
+    color: #3A3A3A;
     font: 13px Arial,sans-serif;
 }
                 
 .analysis .info .extra a{
-        font: normal 12px/17px Arial, sans-serif;
-        color:#909090;
-        margin-left:5px;
+    font: normal 12px/17px Arial, sans-serif;
+    color:#909090;
+    margin-left:5px;
 }        
 
 .image .info .author{
-        font: normal 12px/17px Arial, sans-serif;
-        color:#909090;
-        float:left;
-        margin-top:3px;
-        margin-left:10px;
-        display:none;
+    font: normal 12px/17px Arial, sans-serif;
+    color:#909090;
+    float:left;
+    margin-top:3px;
+    margin-left:10px;
+    display:none;
 }                        
         
 .image .body img{
-        margin-left:7px;
+    margin-left:7px;
 }        
 
 .analysis .type a, .message .type a, .document .type a{
-        margin-top : 4px; 
-        margin-left: 30px; 
-        padding : 0 4px; 
-        text-transform : lowercase; 
-        color: #3A3A3A;
+    margin-top : 4px; 
+    margin-left: 30px; 
+    padding : 0 4px; 
+    text-transform : lowercase; 
+    color: #3A3A3A;
     float: left;
     font: bold 13px Arial,sans-serif;
-
 }
-
 
 
 /*--------------------analysis files----------------------*/
@@ -311,16 +356,16 @@ background: url("/images/status-finish.png") no-repeat;
 
 
 #main-project .analysis .file{
-        border-left: 1px solid #E6E6E6;
-        border-right: 1px solid #E6E6E6;
+    border-left: 1px solid #E6E6E6;
+    border-right: 1px solid #E6E6E6;
 }
 
 
 .analysis .file{
-        position:relative;        
-        border-top: 1px solid #E6E6E6;
-        height:44px;
-        background-color:#fff; 
+    position:relative;        
+    border-top: 1px solid #E6E6E6;
+    height:44px;
+    background-color:#fff; 
 }
 
 .element .icon {
@@ -328,9 +373,9 @@ background: url("/images/status-finish.png") no-repeat;
     border: none;
     color: #909090;
     float: left;
-        font: normal 12px/40px Arial, sans-serif;
+    font: normal 12px/40px Arial, sans-serif;
     height: 38px;
-        margin:2px 0px 2px 8px;
+    margin:2px 0px 2px 8px;
     text-align: center;
     width: 28px;
 }
@@ -372,149 +417,152 @@ background: url("/images/status-finish.png") no-repeat;
 
                 
 .analysis .file .name {
-        font: normal 12px/45px Arial, sans-serif;
-        color: #909090;
+    font: normal 12px/45px Arial, sans-serif;
+    color: #909090;
     float: left;
     margin-left: 5px;
 }
         
 .analysis .file .info {
-        background: url("/images/dialogue.png") no-repeat scroll left center transparent;
+    background: url("/images/dialogue.png") no-repeat scroll left center transparent;
     float: right;
-        margin-top: 5px;
-        border-style:none;
+    margin-top: 5px;
+    border-style:none;
 }
 
 .analysis .file .info span { 
-        display:block;
-        font: normal 11px Arial, sans-serif;
-        color:#BEBEBE;
-        padding-left: 30px;
+    display:block;
+    font: normal 11px Arial, sans-serif;
+    color:#BEBEBE;
+    padding-left: 30px;
 }
   
 .analysis .file .info span a{
-        color: #BEBEBE; 
+    color: #BEBEBE; 
 }
 
 .element .actions {
     float: right;
-
 }
 
 #main-project .element .actions {
     margin-right: 15px;
+    margin-top: -44px;
 }
 
-.document .actions
-{
-        margin-right: 15px;
+.document .actions{
+    margin-right: 15px;
 }
         
         
 /*-------------------DASHBOARD PAGE--------------------------*/
 
 #dashboard .project{
-        float:left;
-        margin-left:8px;
-         width:750px;
-        margin-bottom:35px;
+    float:left;
+    margin-left:8px;
+    width:750px;
+    margin-bottom:35px;
 }
 
 .project .elements .Analysis, .project .elements .Message, .project .elements .Image{
-        border:1px solid #EEF2F6;
-        float:left;
-        height:35px;
-        margin-top:5px;
-        width:748px;        
+    border:1px solid #EEF2F6;
+    float:left;
+    height:35px;
+    margin-top:5px;
+    width:748px;        
 }        
 
 .project .elements > div {
-        background-repeat: no-repeat;
-        background-position: 4px 8px;
+    background-repeat: no-repeat;
+    background-position: 4px 8px;
 }
 
 .project .elements > div:nth-child(odd) {
-        background-color : #E6E6E6;
+    background-color : #E6E6E6;
 }
 
 .project .elements .icons{
-height:17px;
-width:17px;
-border-radius:2px;
-float:left;
-margin-top:8px;
-margin-left:5px;
+	height:17px;
+	width:17px;
+	border-radius:2px;
+	float:left;
+	margin-top:8px;
+	margin-left:5px;
 }
 
 .project .elements .Message .icons{
-background:#FFD505 url(/images/mess.png) no-repeat 3px 3px;
+	background:#FFD505 url(/images/mess.png) no-repeat 3px 3px;
 }
 
 .project .elements .Analysis .icons{
-        background: #34B02C url(/images/script.png) no-repeat 2px 1px;}
+    background: #34B02C url(/images/script.png) no-repeat 2px 1px;}
 
 .project .elements .Image .icons{
-        background:#E62E60 url(/images/docs.png) no-repeat 1px 3px;
+    background:#E62E60 url(/images/docs.png) no-repeat 1px 3px;
 }
-        
-#dashboard .project canvas { margin-top:17px;  }
+    
+#dashboard .project canvas { 
+	margin-top:17px;  }
 
 #dashboard .project .participation { 
-        float : right; 
-        width : 200px;
-        height : 30px; 
-        display : block; 
-        margin-bottom :5px;
-        background :url('/images/user-ptit.png') no-repeat 175px 1px; 
+    float : right; 
+    width : 200px;
+    height : 30px; 
+    display : block; 
+    margin-bottom :5px;
+    background :url('/images/user-ptit.png') no-repeat 175px 1px; 
 }
 
 #dashboard .project h2, #dashboard .project  h2 a {
-        color:#235BBE;
-        font: normal 18px "Oxygen-Regular", Arial, sans-serif;
-        letter-spacing:0.1em;
-        text-decoration:none;
-          margin-top:5px;
-          display : inline-block;
-          margin-left:6px;
+    color:#235BBE;
+    font: normal 18px "Oxygen-Regular", Arial, sans-serif;
+    letter-spacing:0.1em;
+    text-decoration:none;
+    margin-top:5px;
+    display : inline-block;
+    margin-left:6px;
 }
-  
+
 #dashboard .elements .author{
-        color:#666768;        
-        font: normal 13px Arial, sans-serif;
-        margin-left:13px;
+    color:#666768;        
+    font: normal 13px Arial, sans-serif;
+    margin-left:13px;
 }        
-        
+    
 #dashboard .elements .title{
-        float:left;
-        font: normal 13px Arial, sans-serif;
-        color:#909090;
-         margin-top:10px;
+    float:left;
+    font: normal 13px Arial, sans-serif;
+    color:#909090;
+    margin-top:10px;
 }          
  
 #dashboard .elements .title a{
-        color:#909090;
+    color:#909090;
 } 
         
 #dashboard .elements .title a:hover{
-        color:#666768;
+    color:#666768;
 } 
                   
 #dashboard .elements .date{
-  color:#666667;
-  float:right;
-  padding-right:4px;
-  padding-top: 6px;
-  font: normal 12px/17px Arial, sans-serif;
+	color:#666667;
+	float:right;
+	padding-right:4px;
+	padding-top: 6px;
+	font: normal 12px/17px Arial, sans-serif;
 }
 
 #dashboard .analysis .file {
-        display: none;
+	display: none;
 }
 
-#project-new { margin-bottom : 10px;
-        margin-left: 18px; }
+#project-new { 
+	margin-bottom : 10px;
+    margin-left: 18px; 
+}
 
-#project-new .new{ background:#235BBE;
+#project-new .new{ 
+	background:#235BBE;
     border: 1px solid #19428F;
     border-radius: 3px;
     box-shadow: 0 0 3px rgba(107, 107, 107, 0.3);
@@ -524,20 +572,23 @@ background:#FFD505 url(/images/mess.png) no-repeat 3px 3px;
     min-width: 120px;
     padding: 10px;
     text-align: center;
-    margin-left:4px; }
+    margin-left:4px; 
+}
 
-    #project-new .new:hover{ 
+#project-new .new:hover{ 
     background:#19428F;
     border: 1px solid #173C7D;
-    }
+}
 
-.container-main .trace{background:#DCDCDC;
+.container-main .trace{
+	background:#DCDCDC;
     height: 1px;
     margin-top: 20px;
     margin-left: 18px;
 }
 
-#main-project .trace{background:#DCDCDC;
+#main-project .trace{
+	background:#DCDCDC;
     margin-top: 8px;
 }
 
@@ -545,61 +596,61 @@ background:#FFD505 url(/images/mess.png) no-repeat 3px 3px;
 /*-------------------USER PAGE--------------------------*/
 
 .user.profile .info{
-        border: 1px solid #DCDCDC;
-        margin-left: 8px;
+    border: 1px solid #DCDCDC;
+    margin-left: 8px;
     padding-top: 13px;
     width: 745px;
 }
         
 .user.profile .info #gravatar{        
-        border-right: 1px solid #DCDCDC;
+    border-right: 1px solid #DCDCDC;
     height: 170px;
     width: 170px;
-        float:left;
+   	float:left;
 }
         
 .user.profile .info #gravatar img{
-        border: 1px solid #EEF2F6;
-        height: 140px;
+    border: 1px solid #EEF2F6;
+    height: 140px;
     margin: 14px auto 0 14px;
     width: 140px;
 }
 
 .user.profile .info #gravatar + div {
-        height:170px;
-        width:250px;
-        float:left;
-        margin-left:25px;        
+    height:170px;
+    width:250px;
+    float:left;
+    margin-left:25px;        
 }
-                        
+                    
 .user.profile .info h1{
-        font: normal 22px Arial, sans-serif;
-        color: #3A3A3A;
-        margin-top:25px;
+    font: normal 22px Arial, sans-serif;
+    color: #3A3A3A;
+    margin-top:25px;
 }
-                                
+                            
 .user.profile .info #email{
-        margin-top:2px;
-        margin-left:2px;
-        color: #909090;
-        font: normal 15px Arial, sans-serif;
+    margin-top:2px;
+    margin-left:2px;
+    color: #909090;
+    font: normal 15px Arial, sans-serif;
 }
 
 #indicators {
-        border-top: 1px solid #DCDCDC;
-        height:74px;
-        width:746px;
-        text-align : center;
-        clear:both;
+    border-top: 1px solid #DCDCDC;
+    height:74px;
+    width:746px;
+    text-align : center;
+    clear:both;
 }
 
 #indicators > div { overflow : auto; display : inline-block; float:right; }
 
 #indicators > div > div {
-        height:74px;
-        width:74px;
-        float :left;
-        position : relative;
+    height:74px;
+    width:74px;
+    float :left;
+    position : relative;
 }
 
 #indicators #indicator_projects { background:#235BBE; }
@@ -608,83 +659,82 @@ background:#FFD505 url(/images/mess.png) no-repeat 3px 3px;
 #indicators #indicator_messages { background:#FFD505; }
         
 .user.profile .info #indicators h4{
-        font: normal 10px/10px Arial, sans-serif;
-        color:#FFF;
-        text-align : center;
-        position : absolute;
-        bottom : 10px;
-        width : 100%;
+    font: normal 10px/10px Arial, sans-serif;
+    color:#FFF;
+    text-align : center;
+    position : absolute;
+    bottom : 10px;
+    width : 100%;
 }
-        
+    
 .user.profile .info #indicators .number{
-        font: normal 26px/26px Arial, sans-serif;
-        color:#FFF;
-        text-align : center;
-        margin-top : 24px;
+    font: normal 26px/26px Arial, sans-serif;
+    color:#FFF;
+    text-align : center;
+    margin-top : 24px;
 }
-        
+    
 .user.profile h2{
-        font: normal 17px "Oxygen-Regular", sans-serif;
-        letter-spacing:0.1em;        
-        color:#FFFFFF;
-        margin-left: 8px;
-    width: 735px;
-        height:25px;
+    font: normal 17px "Oxygen-Regular", sans-serif;
+    letter-spacing:0.1em;        
+    color:#FFFFFF;
+    margin-left: 8px;
+	width: 735px;
+    height:25px;
 }        
 
-
 .user.profile h2.Recent{
-        background : #FFD505 url('/images/message.png') no-repeat 718px 5px;
-        padding-left:10px;
-        padding-top:4px;
-        margin-top:15px;
+    background : #FFD505 url('/images/message.png') no-repeat 718px 5px;
+    padding-left:10px;
+    padding-top:4px;
+    margin-top:15px;
 }        
 
 .user.profile h2.Project{
-        background : #235BBE url('/images/dossier2.png') no-repeat 718px 5px;
-        padding-left:10px;
-        padding-top:4px;
-        margin-top:25px;
+    background : #235BBE url('/images/dossier2.png') no-repeat 718px 5px;
+    padding-left:10px;
+    padding-top:4px;
+    margin-top:25px;
 }
-        
+    
 .user.profile #projects{                        
-        margin-left: 8px;
-    margin-top: 15px;
-    width: 745px;
+    margin-left: 8px;
+	margin-top: 15px;
+	width: 745px;
 }        
-        
+    
 .user.profile #projects .project{
-        border: 1px solid #E6E6E6;
-    height: 40px;
-    margin-bottom: 10px;
+    border: 1px solid #E6E6E6;
+	height: 40px;
+	margin-bottom: 10px;
 }
-        
+    
 .user.profile #projects .project .title {
-        font: normal 14px Arial, sans-serif;
-    margin-left: 10px;
-        padding-top:12px;        
+    font: normal 14px Arial, sans-serif;
+	margin-left: 10px;
+    padding-top:12px;        
 }
   
 .user.profile #projects .project .title a{
-        color: #3A3A3A;
-        text-decoration:none;
+    color: #3A3A3A;
+    text-decoration:none;
 }
 
 .user.profile #projects .project .title a:hover{
-        color: #444444;
+    color: #444444;
 }
 
 .user.profile #projects .project .participation{  
-          margin-bottom: 5px;
+    margin-bottom: 5px;
     margin-left: 150px;
-           margin-top: -15px;
+    margin-top: -15px;
     width: 390px;
 }
         
 .user.profile #projects .project .date{          
-        color: #666667;
+    color: #666667;
     float: right;
-        font: normal 12px Arial, sans-serif;
+    font: normal 12px Arial, sans-serif;
     margin-right: 10px;
     margin-top: -23px;
 }
@@ -696,19 +746,19 @@ background:#FFD505 url(/images/mess.png) no-repeat 3px 3px;
 }
 
 .user.profile #messages .project-messages{
-        border: 1px solid #EEF2F6;
-        margin-bottom: 10px;
+    border: 1px solid #EEF2F6;
+    margin-bottom: 10px;
 }
         
 .user.profile #messages .project-messages .messages{
-        margin-top:-28px;
+    margin-top:-28px;
 }
                 
 .user.profile #messages .project-messages h5 a{        
-        color: #666768;
-        font: normal 14px Arial, sans-serif;
-        text-decoration:none;
-        border-bottom:1px solid  #235BBE;
+    color: #666768;
+    font: normal 14px Arial, sans-serif;
+    text-decoration:none;
+    border-bottom:1px solid  #235BBE;
 }
         
 .user.profile #messages .project-messages h5{        
@@ -723,58 +773,58 @@ background:#FFD505 url(/images/mess.png) no-repeat 3px 3px;
 .user.profile #messages .messages .message .info .date a{
     color: #BEBEBE;
     float: right;
-        font: normal 12px Arial, sans-serif;
+    font: normal 12px Arial, sans-serif;
     margin-right: 18px;
-        text-decoration:none;
-        margin-top:1px;
+    text-decoration:none;
+    margin-top:1px;
 }
         
 .user.profile #messages .messages .body{
     margin-left: 195px;
     margin-right: 75px;
-        width:450px;
-        font: normal 13px Arial, sans-serif;
-        color: #909090;
-        border-bottom:1px solid #EEF2F6;
-        padding-bottom:13px;
-        padding-left:8px;
+    width:450px;
+    font: normal 13px Arial, sans-serif;
+    color: #909090;
+    border-bottom:1px solid #EEF2F6;
+    padding-bottom:13px;
+    padding-left:8px;
 }
 
 
 .project-meta .info, #dashboard-meta .info{
-        height:100px;
-        width:220px;
+    height:100px;
+    width:220px;
 }
-        
+    
 .project-meta .info h3 {        
-        border-bottom: 1px solid #DCDCDC;
-        font: normal 13px Arial, sans-serif;
-        color: #BEBEBE;
-        margin: 10px 10px 10px 0px;
-        width:220px;
-        padding-bottom:2px;
-        padding-left:5px;
-        padding-top:2px;
-        background:#FFFFFF;
+    border-bottom: 1px solid #DCDCDC;
+    font: normal 13px Arial, sans-serif;
+    color: #BEBEBE;
+    margin: 10px 10px 10px 0px;
+    width:220px;
+    padding-bottom:2px;
+    padding-left:5px;
+    padding-top:2px;
+    background:#FFFFFF;
 }
 
 .container-left .info{float: right;}        
 
 .container-left h3 {
-        font: normal 14px/30px "Oxygen-regular", sans-serif;
-        letter-spacing : 2px;
-        color: #FFFFFF;
-        margin: 10px 10px 10px 0px;
-        width:250px;
-        padding-left:5px;
-        background:#235BBE url('/images/dossier1.png') no-repeat 230px 7px;
+    font: normal 14px/30px "Oxygen-regular", sans-serif;
+    letter-spacing : 2px;
+    color: #FFFFFF;
+    margin: 10px 10px 10px 0px;
+    width:250px;
+    padding-left:5px;
+    background:#235BBE url('/images/dossier1.png') no-repeat 230px 7px;
 }
 
 .container-left .members h3 {background : #EE6E21 url('/images/userB.png') no-repeat 230px 8px;
 }
 
 .container-left .script {
-        margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 .container-left #script {
@@ -782,24 +832,25 @@ background:#FFD505 url(/images/mess.png) no-repeat 3px 3px;
 }
 
 #queuedScripts{
-          overflow: auto;
+    overflow: auto;
     height: 250px;
 }
 
 .container-left .script .queued-scripts{
-        background: #EEF2F6;
+    background: #EEF2F6;
     height: 10px;
     margin-left: 5px;
     margin-right: 5px;}
         
-        .container-left .script .queued-scripts .progress-script{
-        background: #25A618;
+.container-left .script .queued-scripts .progress-script{
+    background: #25A618;
     height: 10px;
     width:100px;
-        display:block;}
+    display:block;
+}
         
 .container-left .script .name-script{
-        color: #909090;
+    color: #909090;
     font-family: Arial,Helvetica,sans-serif;
     font-size: 11px;
     font-style: normal;
@@ -808,36 +859,35 @@ background:#FFD505 url(/images/mess.png) no-repeat 3px 3px;
     }
 
 .container-left .script .hours{
-        color: #909090;
+    color: #909090;
     font-family: Arial,Helvetica,sans-serif;
     font-size: 11px;
     font-style: normal;
     line-height: 20px;
-        float:right;
+    float:right;
     margin-right:5px;        }
 
 .container-left .script h3 {background : #27AD19 url('/images/analysis-queued.png') no-repeat 230px 6px;
 }
 
 .dashboard-projects a {
-        margin-bottom:8px;
+    margin-bottom:8px;
 }
 
 .dashboard-projects li {
-        margin-bottom : 5px;
+   	margin-bottom : 5px;
 }
 
 .dashboard-projects .projects li:hover { cursor : pointer; }
 .dashboard-projects .projects li:hover * { color: #444444; }
 
 .dashboard-projects span {
-        float : right;
-        font: normal 11px Arial, sans-serif;
-        color: #DFE0E3; 
-
-        margin-top : 2px;
-        padding-left : 18px;
-        background : url('/images/user-ptit.png') no-repeat 0px 0px;
+    float : right;
+    font: normal 11px Arial, sans-serif;
+    color: #DFE0E3; 
+    margin-top : 2px;
+    padding-left : 18px;
+    background : url('/images/user-ptit.png') no-repeat 0px 0px;
 }
 
 
@@ -867,7 +917,7 @@ background:#FFD505 url(/images/mess.png) no-repeat 3px 3px;
 
 #dashboard-meta #link-dashboard h4 a {
     color: #909090;
-         text-decoration: none;
+    text-decoration: none;
 }
 
 #dashboard-meta #link-dashboard h4 a:hover {
@@ -875,56 +925,54 @@ background:#FFD505 url(/images/mess.png) no-repeat 3px 3px;
     cursor: pointer;
 }
 
-
-
 .project-meta .date {
-        font: normal 12px/1.2em Arial, sans-serif;
-        color: #909090;
-        margin-top:5px;
-        margin-left:5px;
+    font: normal 12px/1.2em Arial, sans-serif;
+    color: #909090;
+    margin-top:5px;
+    margin-left:5px;
 }        
 
 .participation .data {
-        font: normal 12px/1.2em Arial, sans-serif;
-        color: #909090;
-        margin-top:2px;
-        margin-bottom : 10px;
-        z-index : 99999;
-        position : absolute;
-        background : white;
+    font: normal 12px/1.2em Arial, sans-serif;
+    color: #909090;
+    margin-top:2px;
+    margin-bottom : 10px;
+    z-index : 99999;
+    position : absolute;
+    background : white;
 }
 
 .members .inactive {
-        opacity: 0.5;
-        -moz-opacity: 0.5;
-        filter:alpha(opacity=5);
+    opacity: 0.5;
+    -moz-opacity: 0.5;
+    filter:alpha(opacity=5);
 }
         
 .dashboard-projects .data {
-        margin-left : 10px;
+    margin-left : 10px;
 }
 
 .member, .project-title a{
-        font: normal 11px Arial, sans-serif;
-        color:#909090;
-        margin-left: 5px;
-        padding-bottom:5px;
-        text-decoration:none;
-        cursor:pointer;
+    font: normal 11px Arial, sans-serif;
+    color:#909090;
+    margin-left: 5px;
+    padding-bottom:5px;
+    text-decoration:none;
+    cursor:pointer;
 }
 
 .member .name:hover, .project-title a:hover{
-        color: #444444;
+    color: #444444;
 }                        
         
 .member canvas{
-        padding-top:4px;
-        width:245px;
+    padding-top:4px;
+    width:245px;
 }
 
 .project-title canvas{
-        padding-top:4px;
-        width:245px;
+    padding-top:4px;
+    width:245px;
 }
 
 .member canvas{
@@ -1056,7 +1104,7 @@ background:#FFD505 url(/images/mess.png) no-repeat 3px 3px;
 }
 
 #add-element .clear {
-         clear: both;   
+    clear: both;   
 }
 
 
@@ -1071,15 +1119,15 @@ background:#FFD505 url(/images/mess.png) no-repeat 3px 3px;
     padding: 8px 4px 8px 4px;
     border: 1px solid #EEF2F6;
     border-top :0;
-        background : #FAFAFA;
-        display : none;
+    background : #FAFAFA;
+    display : none;
 }
 
 .container-left #new-members .button {
-        display: block;
-        margin : 5px;
+    display: block;
+    margin : 5px;
     text-decoration:none;
-        margin:0px auto;
+    margin:0px auto;
 }
 
 .container-left #new-members input {
@@ -1097,10 +1145,10 @@ background:#FFD505 url(/images/mess.png) no-repeat 3px 3px;
 .container-left #new-members #proposition-members > p { background : white; padding : 10px; text-align : center; color : #6E6E6E; font: italic 11px/15px arial; }
 
 .container-left #new-members #proposition-members .user {
-        background:#FFF;
-        padding : 4px 4px;
-        position : relative;
-        border-bottom : 1px solid #DCDCDC;
+    background:#FFF;
+    padding : 4px 4px;
+    position : relative;
+    border-bottom : 1px solid #DCDCDC;
 }
 
 .container-left #new-members #proposition-members .user:last-child { border : none; }
@@ -1110,41 +1158,41 @@ background:#FFD505 url(/images/mess.png) no-repeat 3px 3px;
     border: 1px solid #DCDCDC;
     height: 24px;
     width: 24px;
-        margin-right : 4px;
-        float:left;
+    margin-right : 4px;
+    float:left;
 }
         
 .container-left #new-members #proposition-members .user .name {
-        color: #909090;
+    color: #909090;
     font: normal 11px/27px arial;
 }
         
 .container-left #new-members #proposition-members .plus {
-        background:url("/images/cross2.png") no-repeat;
-        height:14px;
-        width:14px;
-        position : absolute;
-        top : 9px;
-        right : 5px;
-        cursor:pointer;
+    background:url("/images/cross2.png") no-repeat;
+    height:14px;
+    width:14px;
+    position : absolute;
+    top : 9px;
+    right : 5px;
+    cursor:pointer;
 }
 
 .container-left #new-members #proposition-members .plus:hover {
-        background:url("/images/cross2-hover.png") no-repeat;
+    background:url("/images/cross2-hover.png") no-repeat;
 }        
 
 .container-left #new-members #send-invitation a {
-        color: #909090;
+    color: #909090;
     font: normal 11px arial;
 }
         
 .container-left #new-members #send-invitation a:hover {
-        color: #444444;
+    color: #444444;
 }
                 
 .container-left #new-members #send-invitation{
-        text-align : center;
-        display : none;
+    text-align : center;
+    display : none;
 }
 
 /*---------------login accueil-----------------*/
@@ -1273,7 +1321,7 @@ background:#FFD505 url(/images/mess.png) no-repeat 3px 3px;
     }
 
 #main #welcome #login #id, #main  #welcome #login .id, #main  #welcome  #login #email, #main  #welcome #login .email{
-        display:none;
+    display:none;
 }   
     
 input:focus{
