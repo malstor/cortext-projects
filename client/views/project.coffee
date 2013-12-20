@@ -71,23 +71,31 @@ Meteor.subscribe "members"
     $("button.write-message").on "click", ()->
       $("form.message").fadeToggle 'fast'
 
-    $("a.display-comment").on "click", (evt)->
+    $("a.display-comment").live "click", (evt)->
       evt.preventDefault()
       $linkComment = $(evt.target)      
       idElement = $linkComment.attr('rel')
       $("#comment-"+idElement).fadeToggle 'fast'
 
     #add message
-    $("#add-element .message .add").on "click", (evt) ->      
+    $(".message .add").on "click", (evt) ->  
+      console.log 'click', evt        
       evt.preventDefault()
+      $form = $(evt.currentTarget.form)
+      console.log "form ", $form, "text ", $("#"+$form.attr('id')+" textarea").val()
       element = new models.element(
         type: "Message"
         author: app.user_id
-        project: parseInt($("#add-element form").attr("rel"))
+        project: parseInt($form.attr("rel"))
         date: new Date().getTime()
-        content: $("#add-element .message textarea").val()
-        commentOn: parseInt($("#add-element form").attr("data-element"))
+        content: $("#"+$form.attr('id')+" textarea").val()
       )
+      #comment case
+      if _.isUndefined($form.attr("data-element"))
+        element.set "commentOn", 0
+      else
+        element.set "commentOn", parseInt($form.attr("data-element"))
+
       element.create
         error: ->
           console.log "new message: fail"
@@ -101,11 +109,19 @@ Meteor.subscribe "members"
           m.get_by_id(app.user_id)
           m.set_gravatar()
           console.log "element", element, "member", m
-          new_el = Template[element.get("type").toLowerCase()]
-            author: m.attributes
-            e: element.attributes
-          $("#elements").find('#Message-'+element.get('id')).remove()
-          $("#elements").prepend new_el 
+          
+          if element.get('commentOn') !=0
+            new_comment = Template["comment-item"]
+              author: m.attributes
+              e: element.attributes
+            $("#elements").find('[rel="'+element.get('commentOn')+'"]').remove()
+            $('[rel="'+element.get('commentOn')+'"] .comment-container').prepend new_comment
+          else
+            new_el = Template[element.get("type").toLowerCase()]
+              author: m.attributes
+              e: element.attributes
+            $("#elements").find('#Message-'+element.get('id')).remove()
+            $("#elements").prepend new_el 
           $(new_el).css "display", "none"
           $(new_el).fadeIn 1000
           $('form.message').fadeOut('fast')
@@ -174,6 +190,17 @@ Meteor.subscribe "members"
       m.get_by_id(e.author)
       m.set_gravatar()
       element.author = m.attributes
+      
+      #fetch comments on current element
+      e.comments = elements.find({commentOn: e.id})
+      
+      #little recursivity for comments author
+      # if(e.comments)
+      #   _(e.comments).each (co)=>
+      #      au = new models.member()
+      #      au.get_by_id(co.author)
+      #      au.set_gravatar()
+      #      co.author = au.attributes
 
       if(!_.isUndefined(Template[ e.type.toLowerCase() ]))
         $("#elements").append Template[ e.type.toLowerCase() ] element

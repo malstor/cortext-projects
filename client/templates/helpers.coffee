@@ -30,7 +30,7 @@ Handlebars.registerHelper 'size', (a)->
   return _(a).size()
 
 Handlebars.registerHelper 'md', (txt)->
-  return new Handlebars.SafeString marked txt
+  return if txt then new Handlebars.SafeString marked txt else ""
 
 Handlebars.registerHelper 'ellipsis', (str, limit) ->
     return if str.length > limit then str.substring(0, limit)+"..." else str
@@ -46,3 +46,6 @@ Handlebars.registerHelper 'viz', (type, url) ->
     when "json" then dashboardConfig.services.Viz.json+encodeURIComponent(url)
     when "csv" then dashboardConfig.services.Viz.csv+hash
     else url
+
+Handlebars.registerHelper 'isNotAComment', (e) ->
+    return if parseInt(e.commentOn) > 0 then false else true
