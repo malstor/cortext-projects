@@ -71,6 +71,12 @@ Meteor.subscribe "members"
     $("button.write-message").on "click", ()->
       $("form.message").fadeToggle 'fast'
 
+    $("a.display-comment").on "click", (evt)->
+      evt.preventDefault()
+      $linkComment = $(evt.target)      
+      idElement = $linkComment.attr('rel')
+      $("#comment-"+idElement).fadeToggle 'fast'
+
     #add message
     $("#add-element .message .add").on "click", (evt) ->      
       evt.preventDefault()
@@ -80,6 +86,7 @@ Meteor.subscribe "members"
         project: parseInt($("#add-element form").attr("rel"))
         date: new Date().getTime()
         content: $("#add-element .message textarea").val()
+        commentOn: parseInt($("#add-element form").attr("data-element"))
       )
       element.create
         error: ->
@@ -102,6 +109,7 @@ Meteor.subscribe "members"
           $(new_el).css "display", "none"
           $(new_el).fadeIn 1000
           $('form.message').fadeOut('fast')
+
 
   set_members :(project)->  
     #members click
