@@ -796,6 +796,7 @@ form.message {display: none}
 .project-meta .info, #dashboard-meta .info{
     height:100px;
     width:220px;
+    margin-left:22px;
 }
     
 .project-meta .info h3 {        
