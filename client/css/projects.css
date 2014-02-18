@@ -607,7 +607,7 @@ form.message {display: none}
 .user.profile .info{
     border: 1px solid #DCDCDC;
     margin-left: 8px;
-    padding-top: 13px;
+    margin-top: 10px;
     width: 745px;
 }
         
@@ -803,6 +803,7 @@ form.message {display: none}
 .project-meta .info, #dashboard-meta .info{
     height:100px;
     width:220px;
+    margin-left:22px;
 }
     
 .project-meta .info h3 {        
