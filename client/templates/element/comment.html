@@ -10,7 +10,7 @@
   </form>
   <div class="comment">
     <p>
-      <a rel="{{e.id}}" href="#" class="display-comment">comment...</a>{{#if e.comments}}<span class="comment-number active">{{size e.comments}}</span>{{else}}<span class="comment-number"></span>{{/if}}
+      <a rel="{{e.id}}" href="#" class="display-comment">comment...</a>{{#if size e.comments}}<span class="comment-number active">{{size e.comments}}</span>{{else}}<span class="comment-number"></span>{{/if}}
     </p>
   </div>
   <div class="arrow"></div>
@@ -22,7 +22,7 @@
       <div class="body-mess"> {{content}}
         <span class="date info-comment">
           <a href="/user/{{author.id}}">{{ author.name }} - </a>      
-          <a href="">{{date_short e.date }}</a>
+          <a href="">{{date_short date }}</a>
         </span>
       </div>
     </div>

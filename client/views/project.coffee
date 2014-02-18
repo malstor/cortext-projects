@@ -68,7 +68,7 @@ Meteor.subscribe "members"
   set_add_message :(project)->
     $("form.message").css "display", "none"
 
-    $("button.write-message").on "click", ()->
+    $("button.write-message").live "click", ()->
       $("form.message").fadeToggle 'fast'
 
     $("a.display-comment").live "click", (evt)->
@@ -77,10 +77,11 @@ Meteor.subscribe "members"
       idElement = $linkComment.attr('rel')
       $("#comment-"+idElement).fadeToggle 'fast'
 
-    #add message
-    $(".message .add").on "click", (evt) ->  
+    #if it is a new message
+    $(".message .add").live "click", (evt) ->  
       console.log 'click', evt        
       evt.preventDefault()
+      evt.stopImmediatePropagation()
       $form = $(evt.currentTarget.form)
       console.log "form ", $form, "text ", $("#"+$form.attr('id')+" textarea").val()
       element = new models.element(
@@ -90,7 +91,7 @@ Meteor.subscribe "members"
         date: new Date().getTime()
         content: $("#"+$form.attr('id')+" textarea").val()
       )
-      #comment case
+      #if it is a comment
       if _.isUndefined($form.attr("data-element"))
         element.set "commentOn", 0
       else
@@ -109,22 +110,26 @@ Meteor.subscribe "members"
           m.get_by_id(app.user_id)
           m.set_gravatar()
           console.log "element", element, "member", m
-          
+
+          #if this is a comment on a comment
           if element.get('commentOn') !=0
             new_comment = Template["comment-item"]
               author: m.attributes
               e: element.attributes
-            $("#elements").find('[rel="'+element.get('commentOn')+'"]').remove()
+            $("#elements").find('.element [rel="'+element.get('commentOn')+'"]').remove()
             $('[rel="'+element.get('commentOn')+'"] .comment-container').prepend new_comment
+            $(new_comment).fadeIn 1000
           else
             new_el = Template[element.get("type").toLowerCase()]
               author: m.attributes
               e: element.attributes
             $("#elements").find('#Message-'+element.get('id')).remove()
             $("#elements").prepend new_el 
-          $(new_el).css "display", "none"
-          $(new_el).fadeIn 1000
+            $(new_el).css "display", "none"
+            $(new_el).fadeIn 1000
+
           $('form.message').fadeOut('fast')
+          project.trigger 'project:elements:changed'
 
 
   set_members :(project)->  
@@ -185,27 +190,18 @@ Meteor.subscribe "members"
 
     _(project.elements).each (e)=>
       element.e = _(e).clone()
-      #console.log e
+      #console.log e.id
       m = new models.member()
       m.get_by_id(e.author)
       m.set_gravatar()
       element.author = m.attributes
-      
-      #fetch comments on current element
-      e.comments = elements.find({commentOn: e.id})
-      
-      #little recursivity for comments author
-      # if(e.comments)
-      #   _(e.comments).each (co)=>
-      #      au = new models.member()
-      #      au.get_by_id(co.author)
-      #      au.set_gravatar()
-      #      co.author = au.attributes
-
+      #console.log 'comments : ', element.comments
       if(!_.isUndefined(Template[ e.type.toLowerCase() ]))
+        #console.log "rendering el ", e.id
         $("#elements").append Template[ e.type.toLowerCase() ] element
       else
         $("#elements").append Template.element element
+
 
 
   render_participants: (project)->
@@ -234,6 +230,7 @@ Meteor.subscribe "members"
       $("#main").html Template.project 
         project: project.attributes
         composition: []
+      #console.log 'project elements :', project.elements
       @render_elements project
       @render_participants project
       @render_scripts()
