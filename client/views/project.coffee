@@ -68,17 +68,17 @@ Meteor.subscribe "members"
   set_add_message :(project)->
     $("form.message").css "display", "none"
 
-    $("button.write-message").live "click", ()->
+    $("button.write-message").on "click", ()->
       $("form.message").fadeToggle 'fast'
 
-    $("a.display-comment").live "click", (evt)->
+    $('#main').on "click","a.display-comment" , (evt)->
       evt.preventDefault()
       $linkComment = $(evt.target)      
       idElement = $linkComment.attr('rel')
       $("#comment-"+idElement).fadeToggle 'fast'
 
     #if it is a new message
-    $(".message .add").live "click", (evt) ->  
+    $("#main").on "click",  "button.add", (evt) ->  
       console.log 'click', evt        
       evt.preventDefault()
       evt.stopImmediatePropagation()
@@ -134,7 +134,7 @@ Meteor.subscribe "members"
 
   set_members :(project)->  
     #members click
-    $("#members").delegate ".member", "click", (evt) ->
+    $("#members").on "click",".member", (evt) ->
       user_id = $(this).attr("rel")
       if $(this).hasClass("active")
         $("#members .member").removeClass "inactive"
