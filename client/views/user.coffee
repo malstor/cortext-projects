@@ -58,7 +58,7 @@
       
       $("#indicator_projects .number").html _(u.projects).size()
       $("#indicator_analysis .number").html _(_(u.elements).where({ type : "Analysis" })).size()
-      $("#indicator_documents .number").html _(_(u.elements).where({ type : "Image" })).size()
+      $("#indicator_documents .number").html _(_(u.elements).where({ type : "Document" })).size()
       $("#indicator_messages .number").html _(_(u.elements).where({ type : "Message" })).size()
 
   render_scripts: ()->
