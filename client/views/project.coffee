@@ -219,9 +219,10 @@ Meteor.subscribe "members"
         composition: m.participation
       .render()
 
-  render_scripts: ()->
+  render_scripts: (project)->
     new queued_scripts
       el: $('#queuedScripts')
+      project: project
     .render()
 
   render: ()->
@@ -233,7 +234,7 @@ Meteor.subscribe "members"
       #console.log 'project elements :', project.elements
       @render_elements project
       @render_participants project
-      @render_scripts()
+      @render_scripts project
       @set_events project
       activate_button "#add-element .message textarea", "#add-element .message .add"
       activate_button "#add-members input", null

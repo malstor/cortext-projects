@@ -22,9 +22,16 @@ Meteor.subscribe "elements"
       @$el.empty()
       if Meteor.user()
         #console.log 'refreshing scripts'
-        _(elements.find({type: 'Analysis', author: parseInt(Meteor.user().profile.id)}).fetch()).each (script)=>
+        if(@options.project)
+          project = @options.project.attributes
+          console.log "display scripts for project", project
+          _(elements.find({type: 'Analysis', author: {$in: project.members}, project: parseInt(project.id)}).fetch()).each (script)=>
+            @render_item script.id
+        else      
+          _(elements.find({type: 'Analysis', author: parseInt(Meteor.user().profile.id)}).fetch()).each (script)=>
+            @render_item script.id
          # console.log "render_item ", script.id
-          @render_item script.id
+          
 
       @$el.find('span.progress-script').each ->
         t = parseInt $('div.queued-scripts').width()
