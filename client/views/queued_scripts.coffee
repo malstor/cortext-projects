@@ -24,7 +24,7 @@ Meteor.subscribe "elements"
         #console.log 'refreshing scripts'
         if(@options.project)
           project = @options.project.attributes
-          console.log "display scripts for project", project
+          #console.log "display scripts for project", project
           _(elements.find({type: 'Analysis', author: {$in: project.members}, project: parseInt(project.id)}).fetch()).each (script)=>
             @render_item script.id
         else      
