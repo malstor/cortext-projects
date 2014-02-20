@@ -45,13 +45,13 @@ function Storage(){
      */
     this.getAll = function(collectionName, query, fields, res){
         var collection = db.collection(collectionName, function(err, collection){
-            if (err) 
-                throw(new Error(err)); 
+            if (err)
+                throw(new Error(err));
 
             console.log('collection '+collectionName+' loaded');
             collection.find(query, fields).toArray(function(err, items) {
-                if (err) 
-                   throw(new Error(err)); 
+                if (err)
+                   throw(new Error(err));
                 console.log(items);
                 res.send(items);
                 //db.close();
@@ -64,12 +64,12 @@ function Storage(){
      */
     this.getItem = function(collectionName, query, res){
         var collection = db.collection(collectionName, function(err, collection){
-            if (err) 
-                throw(new Error(err)); 
+            if (err)
+                throw(new Error(err));
             console.log('collection '+collectionName+' loaded');
             collection.findOne(query,function(err, item) {
-                    if (err) 
-                        throw(new Error(err)); 
+                    if (err)
+                        throw(new Error(err));
                     console.log('find item : ',query, item);
                     res.send(item);
                 });
@@ -82,8 +82,8 @@ function Storage(){
 
     this.insert = function(collectionName, attributes, res){
         var collection = db.collection(collectionName, function(err, collection){
-            if (err) 
-                throw(new Error(err)); 
+            if (err)
+                throw(new Error(err));
             console.log('collection '+collectionName+' loaded');
             collection.findOne({},{id:1},{sort:{id:-1}}, function(err,item){
                 if(err)
@@ -96,8 +96,8 @@ function Storage(){
                 console.log("new element id : ", attributes.id);
                 try{
                     collection.insert(attributes, function(err, item) {
-                        if (err) 
-                            throw(new Error(err)); 
+                        if (err)
+                            throw(new Error(err));
 
                         console.log('inserted item : ', item);
                         res.send(201, item);
@@ -107,7 +107,7 @@ function Storage(){
                     console.log('error inserting element : ', err);
                     res.send(500,"error inserting element");
                 }
-            })
+            });
         });
     };
 
@@ -117,16 +117,16 @@ function Storage(){
 
     this.upsert = function(collectionName, query, attributes, res){
         var collection = db.collection(collectionName, function(err, collection){
-            if (err) 
-                throw(new Error(err)); 
+            if (err)
+                throw(new Error(err));
             console.log('collection '+collectionName+' loaded');
             try{
                 collection.update(query,{$set: attributes}, function(err, item) {
                     if (err)
-                        throw(new Error(err)); 
+                        throw(new Error(err));
                     console.log('upsert item : ',query, '{$set: ',attributes,'}', item);
                     res.send('update ok : ', item);
-                });    
+                });
             }
             catch(err){
                 console.log('error updating element : ', err);
@@ -134,8 +134,8 @@ function Storage(){
             }
             
         });
-    }
-};
+    };
+}
 
 storage = new Storage();
     
@@ -164,15 +164,14 @@ module.exports = {
     createElement : function(req, res){
         var current_date = new Date().getTime();
         if(req.body.timestamp)
-            current_date = timestampJs(req.body.timestamp)
-
+            current_date = timestampJs(req.body.timestamp);
         var element = {
             author: parseInt(req.body.author),
             project: parseInt(req.body.project),
             type: req.body.type,
-            date: parseInt(current_date), 
+            date: parseInt(current_date),
             content: req.body.content
-        }
+        };
         console.log('--> [POST] /elements', element);
         storage.insert('elements', element, res);
     },
@@ -181,8 +180,7 @@ module.exports = {
         var current_date = new Date().getTime();
 
         if(req.body.timestamp)
-            current_date = timestampJs(req.body.timestamp)
-           
+            current_date = timestampJs(req.body.timestamp);         
 
         var element = {
             name: req.body.name,
@@ -195,7 +193,7 @@ module.exports = {
             date: parseInt(current_date),
             timestamp: parseInt(current_date),
             permalink: req.body.url
-        }
+        };
         console.log('--> [POST] /project/documents', element);
         storage.insert('elements', element, res);
     },
@@ -221,7 +219,7 @@ module.exports = {
         var current_date = new Date().getTime();
 
         if(req.body.timestamp)
-           current_date = timestampJs(req.body.timestamp)
+           current_date = timestampJs(req.body.timestamp);
         
         var element = {
             name: req.body.name,
@@ -232,7 +230,7 @@ module.exports = {
             progress: parseInt(req.body.progress),
             state: parseInt(req.body.state),
             parameters: req.body.parameters
-        }
+        };
         if(req.body.content && req.body.content.results){
             element.content={};
             element.content.results=req.body.content.results;
@@ -247,13 +245,13 @@ module.exports = {
         var current_date = new Date().getTime();
 
         if(req.body.timestamp)
-           current_date = timestampJs(req.body.timestamp)
+           current_date = timestampJs(req.body.timestamp);
 
         var element = {
             progress: parseInt(req.body.progress),
             state: parseInt(req.body.state),
             jobId: parseInt(req.body.jobId)
-        }
+        };
         if(req.body.results)
         {
             element.content={};
