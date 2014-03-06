@@ -916,7 +916,7 @@ form.message {display: none}
     -moz-border-top-colors: none;
     background: url("/images/go-eyes.png") no-repeat 5px 7px;
     border-color: #DCDCDC;
-    -moz-use-text-color;
+    /*-moz-use-text-color;*/
     border-image: none;
     border-style: solid none;
     border-width: 1px 0;
