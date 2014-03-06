@@ -7,6 +7,7 @@
  * @version    0.1 - 2013
  */
 
+
 /**** Servers Initialization *********/
 var Db, Server, db, mongo, server, mongoClient, Client, _;
 mongo = require('mongodb');
@@ -15,24 +16,57 @@ Server = mongo.Server;
 Client = mongo.MongoClient;
 
 Db = mongo.Db;
-server = new Server('localhost', 3002, {w: 1}, {auto_reconnect: true});
+//var sys = require('sys');
+var url = require('url');
+var exec = require('child_process').exec;
+//Default values for mongoDb meteor server
+var mongoHost = 'localhost';
+var mongoPort = 3001;
+var mongoDbName = 'meteor';
+
+exec("meteor mongo -U", function(error, stdout, stderr){
+    var mongoUrl = url.parse(stdout.trim());
+    console.log("Meteo Mongo Server : ", mongoUrl);
+    if(mongoUrl){
+        if(mongoUrl.port)
+            mongoPort = mongoUrl.port;
+        if(mongoUrl.host)
+            mongoHost = mongoUrl.host;
+        if(mongoUrl.pathname)
+            mongoDbName = mongoUrl.pathname.replace(/^\//, '');
+    }
+});
+server = new Server(mongoHost, mongoPort, {w: 1}, {auto_reconnect: true});
+
 mongoClient = new Client(server);
 
 db = mongoClient.db('meteor');
 
 db.open(function(err, dbConn){
-    // if(err)
-    //    throw(new Error(err));
+    if(err){
+        console.log("Error in db.open :",err);
+    }
 });
 //_ = require("underscore");
 
 /***** Tools ***************************/
+
+
 //returns timestamp in mseconds if in seconds (php standard)
 function timestampJs(timestp)
 {
     return (timestp <= 100000000000) ? timestp*1000: timestp;
 }
 
+function logReferrer(req){
+    var ref = req.headers.referrer;
+    if(ref){
+        console.log("RECEIVED request from "+ref);
+    }
+    else{
+        console.log("RECEIVED request from unknown : ",req.url, req.method,  req.headers);
+    }
+}
 /***** DB Management  ****************/
 
 /****** DB methods ***********/
@@ -148,20 +182,24 @@ module.exports = {
 
     /****** API specific **********/
     welcome : function(req, res){
+        logReferrer(req);
         res.send('cortext api - welcome');
     },
 
     getElements : function(req, res){
+        logReferrer(req);
         console.log('--> [GET] /elements/');
         storage.getAll('elements', {}, {}, res);
     },
 
     getOneElement : function(req, res){
+        logReferrer(req);
         console.log('--> [GET] /elements/'+req.params.id);
         storage.getItem('elements', {id: parseInt(req.params.id)}, res);
     },
 
     createElement : function(req, res){
+        logReferrer(req);
         var current_date = new Date().getTime();
         if(req.body.timestamp)
             current_date = timestampJs(req.body.timestamp);
@@ -177,6 +215,7 @@ module.exports = {
     },
 
     createDocument : function(req, res){
+        logReferrer(req);
         var current_date = new Date().getTime();
 
         if(req.body.timestamp)
@@ -199,23 +238,26 @@ module.exports = {
     },
 
     getProjectDocuments : function(req, res){
+        logReferrer(req);
         console.log('--> [GET] /project/'+req.params.project_id+'/documents');
         storage.getAll('elements', {project: parseInt(req.params.project_id)}, {}, res);
     },
 
     getOneDocument : function(req, res){
+        logReferrer(req);
         console.log('--> [GET] /documents/'+req.params.document_id);
         storage.getItem('elements', {project: parseInt(req.params.project_id), id: parseInt(req.params.document_id)}, res);
     },
 
 
     getOneAnalysis : function(req, res){
+        logReferrer(req);
         console.log('--> [GET] /analysis/'+req.params.id);
         storage.getItem('elements', {id: parseInt(req.params.id)}, res);
     },
 
     createAnalysis : function(req, res){
-       
+        logReferrer(req);
         var current_date = new Date().getTime();
 
         if(req.body.timestamp)
@@ -242,6 +284,7 @@ module.exports = {
     },
 
     updateAnalysis : function(req, res){
+        logReferrer(req);
         var current_date = new Date().getTime();
 
         if(req.body.timestamp)
