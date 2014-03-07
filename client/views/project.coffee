@@ -176,9 +176,17 @@ Meteor.subscribe "members"
       project.propose_members options
       #$.ajax "/api/Project/" + parseInt($("#add-element form").attr("rel")) + "/members/propose", options
 
+
     #new member click
     $("#new-members h4").click ->
       $("#new-members > div ").slideToggle 200
+
+    #remove membre click
+    $("#remove-from-project").on "click", (e) ->
+      e.preventDefault()
+      if(confirm("Are sure you don't want to be member of this project ?"))
+        project.remove_member app.user_id
+        location.href="/dashboard"
 
 
   render_elements: (project)->
@@ -207,6 +215,10 @@ Meteor.subscribe "members"
   render_participants: (project)->
     $("#members .list").empty()
     p_members = project.get('members')
+    #if there is more than one member, display "remove yourself" action
+    if _.size(p_members)>1
+      $("#remove-from-project").show()
+
     #console.log 'project render_participants', p_members
     _(p_members).each (m_id)=>    
       m = members.findOne( { id: parseInt(m_id) })

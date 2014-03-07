@@ -75,6 +75,10 @@
     p = projects.findOne({id: @attributes.id})
     if(p)
       projects.update p._id, $addToSet: {members: u_id}
+  remove_member: (u_id)->
+    p = projects.findOne({id: @attributes.id})
+    if(p)
+      projects.update p._id, $pull: {members: u_id}
 
 
 
