@@ -6,7 +6,7 @@
  * @author     Philippe Breucker
  * @version    0.1 - 2013
  */
-var app = require('./app.js')
+var app = require('./app.js');
 
 /******** app start ***********/
 
