@@ -80,8 +80,6 @@
     if(p)
       projects.update p._id, $pull: {members: u_id}
 
-
-
   create: (options)->
     date_current = moment().format('YYYY-MM-DD hh:mm:ss')
     lastproj = projects.findOne {}, fields: {id: 1}, sort: {id : -1}
@@ -101,3 +99,21 @@
           @set id:next_id
           @set_permalink()          
           options.success(id)
+
+  searchElements: (searchString) ->
+    searchReg = new RegExp(searchString.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, "\\$&"))
+    @elements = elements.find({ 
+      project: @attributes.id, 
+      $or: 
+        [
+          {'name'                   : searchReg},
+          {'content'                : searchReg},
+          {'content.results.title'  : searchReg}, 
+          {'parameters.script_name' : searchReg},
+          {'parameters.jobUserName' : searchReg}, 
+          {'parameters.corpus'      : searchReg},
+          {'parameters.corpus_name' : searchReg}
+        ] 
+      }).fetch()
+    @trigger "project:elements:changed"
+

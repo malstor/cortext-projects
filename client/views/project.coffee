@@ -42,6 +42,7 @@ Meteor.subscribe "members"
       window.location = dashboardConfig.services.Jobs.url+"/job/new?" + $.param(parameters)
 
   set_actions :(project)->
+    #action delete on element
     $('.delete').on "click", (evt) =>
       evt.preventDefault()
       $file = $(evt.target)
@@ -54,6 +55,17 @@ Meteor.subscribe "members"
           #//@todo : deal with the local database element : mark it as deleted ? delete it ? ...
           @options.project.trigger('project:elements:changed')
           $("#"+hash+" a").css('color', '#f00').html('(deleted)');
+
+    #search bar
+    $("#search").on "keyup", (evt)->
+      evt.preventDefault()
+      searchString = $(evt.target).val().trim()
+      _.delay (->
+          project.searchElements searchString
+          project.trigger 'project:elements:changed'
+        ),
+        300
+        
 
 
   set_select_type :(project)->
@@ -186,7 +198,7 @@ Meteor.subscribe "members"
       e.preventDefault()
       if(confirm("Are sure you don't want to be member of this project ?"))
         project.remove_member app.user_id
-        location.href="/dashboard"
+        location.href = '/dashboard'
 
 
   render_elements: (project)->
