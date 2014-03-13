@@ -30,3 +30,26 @@
         error: (err)->
           console.log 'error while creating project ', err
 
+    $("#search").on 'keyup', (e)=>
+      e.preventDefault()
+      searchString = $(e.target).val().trim()
+      _.delay (=>
+            @search_projects(searchString)
+        ),
+        100
+
+  search_projects: (searchString)->
+    searchReg = new RegExp(searchString.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, "\\$&"))
+    projectList = projects.find({
+      $or: 
+        [
+          {'title'          : searchReg},
+          {'date_created'   : searchReg}
+        ] 
+      }, {id:1}).fetch()
+    #console.log "Search for "+searchReg+"-hide all"
+    $("#timeline .project").hide()
+    #console.log("project found : ", projectList)
+    _(projectList).each (p)=>
+      #console.log 'project match : ', "#project-"+p.id
+      $("#project-"+p.id).fadeIn()
