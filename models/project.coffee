@@ -22,28 +22,31 @@
     Deps.autorun ()=>
       @elements = elements.find({ project: @attributes.id, $or: [{commentOn: {$exists: false}}, {commentOn : 0} ] } ).fetch()
       #console.log 'prj elements', @attributes, @elements
+      @set_elements()
 
-      _(@elements).each (e)=>
-        comments = elements.find({commentOn: e.id}).fetch()      
-        #comments = [{author: 1, content: "this is a comment on "+element_id}]
-        #console.log "find comments : on ",current , comments  
+      @members = _(_(@elements).pluck("author")).uniq()
+      @set_composition()
+      @trigger "project:elements:changed" 
 
-        if(comments)
-          _(comments).each (co)=>
-            au = new models.member()
-            au.get_by_id(co.author)
-            au.set_gravatar()
-            co.author = au.attributes
-          e.comments = comments
-         
+  set_elements: ()->
+    _(@elements).each (e)=>
+        @set_comments(e)
         if e.type != 'Document'
           e.permalink = "/element/#{e.type.toLowerCase()}/#{e.id}/in/#{@attributes.id}"
 
-      @members = _(_(@elements).pluck("author")).uniq()
 
-      @set_composition()
+  set_comments : (e)->
+    comments = elements.find({commentOn: e.id}).fetch()      
+    #console.log "find comments : on ",e.id, comments  
 
-      @trigger "project:elements:changed"    
+    if(comments)
+      _(comments).each (co)=>
+        au = new models.member()
+        au.get_by_id(co.author)
+        au.set_gravatar()
+        co.author = au.attributes
+      e.comments = comments
+
 
   get_by_id: (project_id)->
     project_id = parseInt project_id
@@ -115,5 +118,8 @@
           {'parameters.corpus_name' : searchReg}
         ] 
       }).fetch()
+
+    @set_elements()
+
     @trigger "project:elements:changed"
 

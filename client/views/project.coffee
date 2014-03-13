@@ -91,11 +91,11 @@ Meteor.subscribe "members"
 
     #if it is a new message
     $("#main").on "click",  "button.add", (evt) ->  
-      console.log 'click', evt        
+      #console.log 'click', evt        
       evt.preventDefault()
       evt.stopImmediatePropagation()
       $form = $(evt.currentTarget.form)
-      console.log "form ", $form, "text ", $("#"+$form.attr('id')+" textarea").val()
+      #console.log "form ", $form, "text ", $("#"+$form.attr('id')+" textarea").val()
       element = new models.element(
         type: "Message"
         author: app.user_id
@@ -205,6 +205,7 @@ Meteor.subscribe "members"
     #console.log 'render elem project', project
     $("#elements").empty()
 
+
     project.elements = _(project.elements).sortBy (e)->
       -e.date
 
@@ -266,7 +267,7 @@ Meteor.subscribe "members"
     project.on "project:elements:changed", ()=>
       @render_elements project
       @render_participants project
-      @render_scripts()
+      @render_scripts project
 
 
     #@options.project.trigger('project:elements:changed')
