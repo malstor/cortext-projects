@@ -19,9 +19,27 @@
 
 
   setEvents: ()->
-    $("#project-new .new").on "click", (e) ->
+    $('#project-new input').on "keyup", (e) ->
+      if($("#project-new input").val().length > 0)
+        $("#project-new button")
+          .attr('disabled',false)
+          .addClass('new')
+          .removeClass('inactive')
+      else
+        $("#project-new button")
+          .attr('disabled',true)
+          .addClass('inactive')
+          .removeClass('new')
+
+
+    $("#project-new button").on "click", (e) ->
       e.preventDefault()
-      p = new models.project(title: $("#project-new input").val())
+      $title = $("#project-new input").val()
+      if(!$title)
+       return;
+      $("#project-new").fadeOut()
+      $("#dashboard").prepend("<p>Creating project "+$title+", please wait...</p>");
+      p = new models.project(title: $title)
       console.log 'p = ', p
       id = p.create
         user_id: app.user_id
