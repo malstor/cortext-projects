@@ -24,11 +24,13 @@
           @user_infos(@user_id)
           console.log 'logged in :', Meteor.user()
         else
-          @navigate('/login')
-          false
+          if !Meteor.loggingIn()
+            console.log 'logging in'
+            @navigate('/login')
     )
 
   checkLogin : (callback)->
+    console.log "checkLogin"
     Deps.autorun ()=> 
       if(demo)
         @user_id = 1        
@@ -37,10 +39,12 @@
           @user_id = parseInt(Meteor.user().profile.id)
           @user_infos(@user_id)
           console.log 'logged in :', Meteor.user()
+          $('#header').show()
           callback()
-          
-        if !Meteor.loggingIn
-          @navigate('/login')
+        else
+          if !Meteor.loggingIn()
+            console.log 'logging in'
+            @navigate('/login')
 
 
   path: (path_elements, options)->

@@ -7,6 +7,7 @@
       if(@demo)
         app.navigate('/dashboard')
       else
+        $('#header').hide()
         $('#main').html Template.login()
 
 
@@ -20,6 +21,7 @@
               console.log "logged !", Meteor.user()
               Collections.updateCurrentUser(Meteor.userId())
               app.user_id =  parseInt(Meteor.user().profile.id)
+              $('#header').show()
               app.navigate(route,{trigger: true})
     
     subscribe: ()->
