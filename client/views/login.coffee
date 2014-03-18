@@ -25,6 +25,6 @@
               app.navigate(route,{trigger: true})
     
     subscribe: ()->
-        window.location = dashboardConfig.services.Identity.urlSubscribe
+        window.location = dashboardConfig.services.Identity.urlSubscribe+"?callback="+dashboardConfig.common.callback
 
     
