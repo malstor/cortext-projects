@@ -203,7 +203,7 @@ form.message {display: none}
 .element .info .type { 
     float : left; 
     margin-top : 2px; 
-    margin-right : 45px; 
+    margin-right : 5px; 
     padding : 0 4px; 
     text-transform : lowercase; 
     font : normal 14px/15px Arial, "Oxygen-Regular", "Bitstream Vera Sans", "DejaVu Sans", Sans-serif;
@@ -211,7 +211,7 @@ form.message {display: none}
 }
 
 .element .info .message { background: url("/images/messages.png") no-repeat; height: 24px;}
-.element .info .analysis {background: url("/images/analysis.png") no-repeat; height: 24px;width: 70px}
+.element .info .analysis {background: url("/images/analysis.png") no-repeat; height: 24px;width: 200px}
 .element .info .image  {background: url("/images/image.png") no-repeat; height: 24px;}
 .element .info .document { background: url("/images/document.png") no-repeat; height: 24px;}
 
@@ -318,7 +318,7 @@ form.message {display: none}
 
 .analysis .info .info-result, .document .info .info-result{
     float:left;
-    padding: 6px 40px;
+    padding: 6px 0px;
 }
 
 .analysis .info .results {
@@ -353,6 +353,7 @@ form.message {display: none}
     color: #3A3A3A;
     float: left;
     font: bold 13px Arial,sans-serif;
+    white-space: nowrap;
 }
 
 

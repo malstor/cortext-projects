@@ -3,7 +3,7 @@
     <div class="info">
       <span class="type analysis">
         <a href="/job/{{e.jobId}}/log/{{e.project}}" title='{{e.name}} : view parameters &amp; logs'>
-        {{#if e.parameters.script_name}} {{e.parameters.script_name}} {{else}} {{e.type}} {{/if}}
+        {{#if e.name}} {{ellipsis e.name 20}} {{else}} {{ellipsis e.parameters.script_name 20}} {{/if}}
         </a>
       </span>
 <!--      <h3 class="author"> by <a href="/user/{{author.id}}">{{ author.name }}</a></h3>
@@ -12,7 +12,7 @@
  <div class="info-result">
 		{{#if e.parameters.corpus_name}}
       <span class="name"> 
-      / <a href="{{e.parameters.corpus_permalink}}"  title='download {{e.parameters.corpus_name}}'>{{ellipsis e.parameters.corpus_name 50}}</a>
+      / <a href="{{e.parameters.corpus_permalink}}"  title='download {{e.parameters.corpus_name}}'>{{ellipsis e.parameters.corpus_name 30}}</a>
       </span>
      {{/if}}
      
