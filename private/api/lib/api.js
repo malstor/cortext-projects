@@ -20,24 +20,11 @@ Db = mongo.Db;
 var url = require('url');
 var exec = require('child_process').exec;
 //Default values for mongoDb meteor server
-// var mongoHost = 'localhost';
-// var mongoPort = 3001;
-// var mongoDbName = 'meteor';
+mongoHost = config.get('mongo:host' || 'http://localhost');
+mongoPort = config.get('mongo:port' || 3001);
+mongoDbName = config.get('mongo:dbname' || 'meteor');
 
-mongoPort = mongoHost = mongoDbName = null;
-//try to find the correct url for mongoDb metor server
-exec("meteor mongo -U", function(error, stdout, stderr){
-    var mongoUrl = url.parse(stdout.trim());
-    console.log("Meteo Mongo Server : ", mongoUrl);
-    if(mongoUrl){
-        if(mongoUrl.port)
-            mongoPort = mongoUrl.port;
-        if(mongoUrl.hostname)
-            mongoHost = mongoUrl.hostname;
-        if(mongoUrl.pathname)
-            mongoDbName = mongoUrl.pathname.replace(/^\//, '');
-        console.log("mongoServer : mongodb://"+mongoHost+":"+mongoPort+"/"+mongoDbName);
-        server = new Server(mongoHost, mongoPort, {w: 1}, {auto_reconnect: true});
+server = new Server(mongoHost, mongoPort, {w: 1}, {auto_reconnect: true});
 
         mongoClient = new Client(server);
 
@@ -48,8 +35,22 @@ exec("meteor mongo -U", function(error, stdout, stderr){
                 console.log("Error in db.open :",err);
             }
         });
-    }
-});
+//try to find the correct url for mongoDb metor server
+
+// exec("meteor mongo -U", function(error, stdout, stderr){
+//     var mongoUrl = url.parse(stdout.trim());
+//     console.log("Meteo Mongo Server : ", mongoUrl);
+//     if(mongoUrl){
+//         if(mongoUrl.port)
+//             mongoPort = mongoUrl.port;
+//         if(mongoUrl.hostname)
+//             mongoHost = mongoUrl.hostname;
+//         if(mongoUrl.pathname)
+//             mongoDbName = mongoUrl.pathname.replace(/^\//, '');
+//         console.log("mongoServer : mongodb://"+mongoHost+":"+mongoPort+"/"+mongoDbName);
+        
+//     }
+// });
 
 //_ = require("underscore");
 

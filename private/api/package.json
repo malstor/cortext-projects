@@ -9,6 +9,7 @@
         "express": "3.*",
         "underscore":"1.*",
         "mongodb":"1.*",
-	"supertest": "*"
+	"supertest": "*",
+	"nconf":"*"
     }
 }

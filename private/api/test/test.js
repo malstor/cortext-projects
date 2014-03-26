@@ -1,4 +1,13 @@
 /** cortext project API tests (with module supertest)*/
+ 
+/****** loading config **********/
+config = require('nconf');
+
+config.argv()
+     .env()
+     .file({ file:
+       './config.json'
+     });
 var request = require('supertest')
   , express = require('express');
 
@@ -25,7 +34,7 @@ describe('GET /elements', function(){
         .expect(200)
         .end(function(err, res){
           if (err) throw err;
-          res.send('coucou');
+          //res.send('coucou');
           
         });    
   });
@@ -37,7 +46,7 @@ describe('POST /elements', function(){
       request(app)
         .post('/elements')
         .send({ author: 1, project: 1, type: 'Message', content: 'Hey dude !' })
-        .expect('Content-Type', /text/)
+        .expect('Content-Type', /application\/json/)
         .expect(201)
         .end(function(err, res){
           if (err) throw err;
@@ -45,12 +54,12 @@ describe('POST /elements', function(){
   });
 });
 
-describe('POST /project/2/documents', function(){
+describe('POST /project/1/documents', function(){
   it("should return code 200 and welcome tag", function (){
       request(app)
         .post('/elements')
         .send({ author: 1, project: 1, type: 'Message', content: 'Hey dude !' })
-        .expect('Content-Type', /text/)
+        .expect('Content-Type', /application\/json/)
         .expect(201)
         .end(function(err, res){
           if (err) throw err;
