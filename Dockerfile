@@ -9,8 +9,8 @@ RUN apt-get install -y software-properties-common python-software-properties
 ### Add repos necessary for nodejs and mongodb
 RUN add-apt-repository -y "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe"
 RUN add-apt-repository -y ppa:chris-lea/node.js
-#RUN apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
-#RUN echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/10gen.list
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
+RUN echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/10gen.list
 
 #update apt
 RUN apt-get -y update
@@ -21,7 +21,7 @@ RUN apt-get install -y -q curl git make wget nano
 
 
 ## MONGO
-#RUN apt-get install -y -q mongodb-10gen
+RUN apt-get install -y -q mongodb-10gen
 
 #nodejs from ppa chris-lea
 RUN apt-get install -y nodejs
@@ -42,17 +42,19 @@ RUN rm -rf /server/cortext-projects/.meteor/local/*
 WORKDIR /server/cortext-projects
 #RUN meteor reset
 RUN mv /server/cortext-projects/env/parameters.js.cortext /server/cortext-projects/env/parameters.js
+RUN mv /server/cortext-projects/env/private/api/config.json.default /server/cortext-projects/env/private/api/config.json
 
 #API : install packages
 WORKDIR /server/cortext-projects/private/api
 RUN npm install
 
-#Open correct ports
+#Open correct ports for meteor (3000) and api (8080)
 EXPOSE 3000
-EXPOSE 3001
-#EXPOSE 8080
+EXPOSE 8080
 
 WORKDIR /server/cortext-projects
+RUN meteor bundle cortext-projects.tgz
+RUN tar -xf cortext-projects.tgz
+WORKDIR /server/cortext-projects
 
-CMD meteor 
-#& node ./private/api/index.js
+CMD MONGO_URL="mongodb://localhost:27017/meteor" PORT=3000 node bundle/main.js & node ./private/api/index.js
