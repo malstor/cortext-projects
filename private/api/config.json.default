@@ -1,7 +1,11 @@
 {
-    APP_PORT     : 8080,
-    MONGO_PORT   : 27017,
-    MONGO_DB  : "cortext-projects",
-    MONGO_URL    :"mongodb://localhost:27017/cortext-projects"
-
+    "app": {
+        "port"     : "8080"    
+    },
+    "mongo": {
+        "host"    : "localhost",
+        "port"    : "27017",
+        "dbname"  : "meteor",
+        "url"     : "mongodb://localhost:27017/meteor"   
+    }
 }
