@@ -1,3 +1,4 @@
 node_modules
 env/parameters.js
+config.json
 dump
