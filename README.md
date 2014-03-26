@@ -22,3 +22,12 @@ Note that this front app is very linked to the other modules of Cortext for now 
 #Tests
 The sub-directory test handle the automated test for special api part of the app (private/api).
 Tests are done with mocha (http://visionmedia.github.io/mocha) for the tests engine, and supertest(https://github.com/visionmedia/supertest)  to add some http request specific tests. 
+After installing mocha, just type "mocha" at the root of the api directory (private/api).thhth
+
+#Troubleshooting
+## API not responding
+If api is not reponding or seems responsive but no effect is shown in the cortext-project meteor app, check the followning :
+- is the api port number correctly set
+- is the mongodb server (host and port) the same in api and meteor
+## "cannot find module bson"
+Probably a bad mongodb install : remove node_modules/mongodb and do a fresh install from 'npm install mongodb'
