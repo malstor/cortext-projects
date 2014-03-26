@@ -34,6 +34,7 @@ server = new Server(mongoHost, mongoPort, {w: 1}, {auto_reconnect: true});
             if(err){
                 console.log("Error in db.open :",err);
             }
+            else console.log("db connected : on mongoServer mongodb://"+mongoHost+":"+mongoPort+"/"+mongoDbName);
         });
 //try to find the correct url for mongoDb metor server
 
