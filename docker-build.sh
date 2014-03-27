@@ -1,1 +1,1 @@
-sudo docker build -t cortext-projects .
+sudo docker build -t cortext-projects - < Dockerfile

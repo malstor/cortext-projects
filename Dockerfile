@@ -17,7 +17,7 @@ RUN apt-get -y update
 RUN apt-get install -y -q software-properties-common python-software-properties python
 
 #TOOLS
-RUN apt-get install -y -q curl git make wget nano
+RUN apt-get install -y -q curl git make
 
 
 ## MONGO
@@ -36,13 +36,13 @@ RUN mkdir -p /server/cortext-projects
 #ADD . /server/cortext-projects
 RUN git clone https://github.com/cortext/cortext-projects.git /server/cortext-projects
 RUN chown root:root -R /server/cortext-projects
-RUN rm -rf /server/cortext-projects/.meteor/local/*
+#RUN rm -rf /server/cortext-projects/.meteor/local/*
 
 #Application : database and env reset
 WORKDIR /server/cortext-projects
 #RUN meteor reset
 RUN mv /server/cortext-projects/env/parameters.js.cortext /server/cortext-projects/env/parameters.js
-RUN mv /server/cortext-projects/env/private/api/config.json.default /server/cortext-projects/env/private/api/config.json
+RUN mv /server/cortext-projects/private/api/config.json.default /server/cortext-projects/private/api/config.json
 
 #API : install packages
 WORKDIR /server/cortext-projects/private/api
@@ -52,9 +52,14 @@ RUN npm install
 EXPOSE 3000
 EXPOSE 8080
 
+#bundle the app
 WORKDIR /server/cortext-projects
 RUN meteor bundle cortext-projects.tgz
-RUN tar -xf cortext-projects.tgz
+RUN tar -xvzf cortext-projects.tgz
+WORKDIR /server/cortext-projects/bundle/programs/server/node_modules
+RUN rm -r fibers
+RUN npm install fibers@1.0.1
+
 WORKDIR /server/cortext-projects
 
-CMD MONGO_URL="mongodb://localhost:27017/meteor" PORT=3000 node bundle/main.js & node ./private/api/index.js
+CMD mongod --fork -f /etc/mongodb.conf && MONGO_URL="mongodb://localhost:27017/meteor" PORT=3000 node bundle/main.js & cd private/api ; node index.js
