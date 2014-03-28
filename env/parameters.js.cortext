@@ -3,15 +3,15 @@ dashboardConfig =
     services: {
         Storage: {
             name: "Cortext Assets",
-            url: "http://assets.dev",
+            url: "http://assets.cortext.net",
             getDocument: "/docs",
-            callback: "http://localhost:3000"
+            callback: "http://managerv2.cortext.net"
         },
         Identity: {
             name: "Cortext Auth",
-            urlAuth: "http://oauth.dev/auth",
-            urlSubscribe: "http://oauth.dev/user/register",
-	        callback: "http://localhost:3000",
+            urlAuth: "http://auth.cortext.net/auth",
+            urlSubscribe: "http://auth.cortext.net/user/register",
+	        callback: "http://managerv2.cortext.net",
             account: {
                 service: "cortext",
                 clientId: "cortext-dashboard",
@@ -20,24 +20,24 @@ dashboardConfig =
         },
         Jobs: {
             name: "Cortext Manager",
-            callback: "http://localhost:3000",
-            callback_json:"http://localhost:8080/analysis",
+            callback: "http://managerv2.cortext.net",
+            callback_json:"http://api.projects.cortext.net/analysis",
             url: "http://ctmanager.dev" 
         },
         Viz: {
             pdf: "http://ctmanager.dev/viewers/pdfjs/web/viewer.html?file=/get/",
-            json: "http://localhost:4000/open/",
-            csv: "http://ctmanager.dev/viewers/csv/",
+            json: "http://graphs.cortext.net/open/",
+            csv: "http://mcp.cortext.net/viewers/csv/",
         },
         Api: {
-            url: "http://localhost:8080",
+            url: "http://api.project.cortext.net",
             createElement: "/elements",
             createDocument: "/documents",
             createAnalysis: "/analysis"
         }
     },
     common: {
-        callback : "http://localhost:3000",
+        callback : "http://managerv2.cortext.net",
         refreshRate : 5000      
     }
 
