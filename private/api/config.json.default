@@ -4,7 +4,7 @@
     },
     "mongo": {
         "host"    : "localhost",
-        "port"    : "3001",
+        "port"    : "27017",
         "dbname"  : "meteor",
         "url"     : "mongodb://localhost:27017/meteor"   
     }
