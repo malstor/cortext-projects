@@ -34,7 +34,7 @@
 .message .message-body .body-mess, .document .document-body .body-doc{
    	color: #3A3A3A;
     float: left;
-    font: 12px Arial,sans-serif;
+    font: 12px Arial,sans-serif ! important;
     margin-left: 5px;
     margin-top: 15px;
     margin-bottom: 15px;
