@@ -34,14 +34,20 @@
 .message .message-body .body-mess, .document .document-body .body-doc{
    	color: #3A3A3A;
     float: left;
-    font: 12px Arial,sans-serif ! important;
-    margin-left: 5px;
-    margin-top: 15px;
+    font: 12px Arial,sans-serif;
+    margin-left: 6px;
+    margin-top: 12px;
     margin-bottom: 15px;
     text-align: justify;
     width: 670px;
     line-height: 18px;
 }
+.message .message-body .body-mess p{
+    color: #3A3A3A;
+    font: 13px Arial,sans-serif;
+    margin-left:2px;
+    }
+
 
 #dashboard .message .message-body, .document .document-body{
     height:44px;
@@ -86,7 +92,7 @@
     float: left;
     font: 12px Arial,sans-serif;
     margin-left: 5px;
-    margin-top: 15px;
+    margin-top: 12px;
     margin-bottom: 8px;
     text-align: justify;
     width: 670px;
@@ -153,7 +159,7 @@ form.message {display: none}
     background: url("/images/comment-1.png") no-repeat ;
     height:20px;
     width:20px;
-    margin-top:6px;
+    margin-top:5px;
     margin-left:10px;   
 }
 .element .comment span.active{
@@ -161,6 +167,7 @@ form.message {display: none}
     color: white; 
     font: bold 10px/10px Arial,sans-serif;
     padding-left: 4px;
+    padding-top:1px;
 }
 
 .document .comment a, .message .comment a, .analysis .comment a{
@@ -457,7 +464,7 @@ form.message {display: none}
 
 #main-project .element .actions {
     margin-right: 15px;
-/*    margin-top: -44px;*/
+   /* margin-top: -45px;*/
 }
 
 .document .actions{
