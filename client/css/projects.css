@@ -37,7 +37,7 @@
     font: 12px Arial,sans-serif;
     margin-left: 6px;
     margin-top: 12px;
-    margin-bottom: 15px;
+    margin-bottom: -27px;
     text-align: justify;
     width: 670px;
     line-height: 18px;
@@ -165,13 +165,14 @@ form.message {display: none}
 .element .comment span.active{
     background: url("/images/comment-active.png") no-repeat ;
     color: white; 
-    font: bold 10px/10px Arial,sans-serif;
+    font: bold 9px/10px Arial,sans-serif;
     padding-left: 4px;
     padding-top:1px;
 }
 
 .document .comment a, .message .comment a, .analysis .comment a{
     text-decoration: underline;
+    float: left;
 }
 
 .document .comment a:hover, .message .comment a:hover, .analysis .comment a:hover{
