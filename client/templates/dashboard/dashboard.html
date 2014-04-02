@@ -12,14 +12,17 @@
       </ul>   
     </div><!-- /dashboard-projects -->
 
-    <div id="link-dashboard">
+    <div id="link-dashboard" data-intro="go to personal dashboard" data-step="2">
       <h4><a href="http://dashboard.cortext.org/" target="_blank"> go to personal dashboard</a></h4>
     </div>
+
+<p><a href="javascript:void(0);" onclick="javascript:introJs().start();" class="btn btn-primary">Visite guidée</a></p>
+
 
   </div><!-- /dashboard-meta -->
 
   <div id="dashboard" class="container-main">
-    <form id="project-new">
+    <form id="project-new" data-intro="tape le nom de ton nouveau projet" data-step="1">
       <input type="text" placeholder="type the name of your new project"></input>
       <button class="inactive" disabled>create project</button>
     </form>
