@@ -1133,8 +1133,8 @@ form.message {display: none}
 
 .container-left  h4 { color : #909090; font: normal 13px/25px arial, sans-serif; border : 1px solid #DCDCDC; border-left :0; border-right: 0; padding-left : 34px; background : url("/images/cross2.png") no-repeat 5px 5px; }
 .container-left  h4:hover { color : #444444; cursor : pointer;background : url("/images/cross2-hover.png") no-repeat 5px 5px;  }
-.container-left #remove-from-project{margin-top: 20px; background : url("/images/minus.png") no-repeat 5px 5px;display: none}
-.container-left #remove-from-project:hover{color : #444444; cursor : pointer; background : url("/images/minus-hover.png") no-repeat 5px 5px; }
+.container-left #remove-from-project{margin-top: 20px; background : url("/images/close.png") no-repeat 5px 5px;display: none}
+.container-left #remove-from-project:hover{color : #444444; cursor : pointer; background : url("/images/close-hover.png") no-repeat 5px 5px; }
 
 .container-left #new-members > div {
     padding: 8px 4px 8px 4px;
