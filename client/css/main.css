@@ -70,7 +70,7 @@ body {
 
 /* buttons ---------------------------------------------*/
 
-button, .button{ min-width : 120px; background : #FAFAFA; border : 1px solid #DCDCDC; padding : 10px; text-align : center; font : bold 14px arial; 
+button, .button{ /*min-width : 120px;*/ background : #FAFAFA; border : 1px solid #DCDCDC; padding : 10px; text-align : center; font : bold 14px arial; 
 color : #6E6E6E; box-shadow: 0px 0px 3px rgba(107,107,107, 0.3); border-radius:3px;cursor: pointer; }
 
 button:not(.inactive):hover, .button:hover { background : #DDDDDD; border : 1px solid #B1B1B1; color : #333333; box-shadow: 0px 0px 3px rgba(0,86,156, 0.6); }
@@ -143,6 +143,30 @@ button.inactive { color : #DCDCDC !important; cursor: default !important; }
 #path ul .add-friend-project {height: 34px; width: 34px; margin-left: 10px;background: url("/images/add.png") no-repeat; border: none;margin-top:15px;display:none;}
 #path ul .add-friend-project:hover {height: 34px; width: 34px; margin-left: 10px;background: url("/images/add-hover.png") no-repeat; border: none;margin-top:15px;cursor: pointer;display:none;}
 
+
+#add-friend-panel{
+    height:110px;
+    width: 255px; 
+    background-color: #fff;
+    border: 1px solid #DCDCDC; 
+    margin-top:20px; 
+}
+
+#add-friend-panel .add{
+    height:35px;
+    width: 90px; 
+    margin-left: 23px;
+    margin-top:15px;
+    padding: 4px;
+}
+
+#add-friend-panel p{
+    font: normal 12px/1.4em Arial, sans-serif;
+    color:#666667;
+    margin-top: 10px;
+
+    
+}
 
 #user {
         position : absolute;
