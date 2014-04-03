@@ -1,19 +1,19 @@
 <template  name="dashboard">
   <div id="dashboard-meta" class="col-1 container-left">
 
-    <div class="script" id="script" data-step="3" data-intro="you need help" >
+    <div class="script" id="script" data-step="3" data-intro="View the scripts you launched : when you start a script it appears here and you can check its progression." >
       <h3>queued scripts</h3>
       <div id="queuedScripts" class="wrapper">
       </div>
     </div><!-- /script -->
 
-    <div id="projects-simple" class="dashboard-projects" data-step="4" data-intro="you need help" >
+    <div id="projects-simple" class="dashboard-projects" data-step="4" data-intro="Your project list : all projects for which you are a member, with number of participants." >
       <h3>projects</h3>
       <ul class="projects">
       </ul>   
     </div><!-- /dashboard-projects -->
 
-    <div id="link-dashboard" data-intro="go to personal dashboard" data-step="6">
+    <div id="link-dashboard" data-step="6" data-intro="Go to Personal Dashboard : this is where you go if you want to see all your files and results, and launch some scripts, without a collaborative or project function." >
       <h4><a href="http://dashboard.cortext.org/" target="_blank"> go to personal dashboard</a></h4>
     </div>
 
@@ -21,14 +21,14 @@
   </div><!-- /dashboard-meta -->
 
   <div id="dashboard" class="container-main">
-    <form id="project-new" data-intro="tape le nom de ton nouveau projet" data-step="1">
+    <form id="project-new" data-intro="Create your project : just type in your project name and click - Create Project : a few seconds later you will be redirected to your new project." data-step="1">
       <input type="text" placeholder="type the name of your new project"></input>
       <button class="inactive" disabled>create project</button>
     </form>
     
     <div class="trace"></div>
     
-    <form class="search-form" data-step="2" data-intro="you need help" action="/">
+    <form class="search-form" data-step="2" data-intro="Search in existing projects : type a few keywords in this search bar to filter all your projects by name, which will appear just above this bar, in your timeline." action="/">
         <input type="text"  id="search" name="searchString"/>
     </form> 
 

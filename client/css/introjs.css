@@ -222,7 +222,7 @@
 }
 .introjs-bullets ul {
   clear: both;
-  margin: 15px auto 0;
+  margin: 1px auto 0;
   padding: 0;
   display: inline-block;
 }
@@ -245,7 +245,7 @@
   background: #999;
 }
 .introjs-bullets ul li a.active {
-  background: #999;
+  background: #235BBE;
 }
 .introjsFloatingElement {
   position: absolute;
@@ -256,6 +256,6 @@
 }
 
 .introjs-tooltiptext{
-font: normal 13px/1.4em Arial, sans-serif;
-color:#666666;
+font: normal 13px/1.6em Arial, sans-serif;
+color:#444444;
 }
