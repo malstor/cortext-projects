@@ -1,22 +1,21 @@
 <template  name="dashboard">
   <div id="dashboard-meta" class="col-1 container-left">
 
-    <div class="script" id="script">
+    <div class="script" id="script" data-step="3" data-intro="you need help" >
       <h3>queued scripts</h3>
       <div id="queuedScripts" class="wrapper">
       </div>
     </div><!-- /script -->
-    <div id="projects-simple" class="dashboard-projects">
+
+    <div id="projects-simple" class="dashboard-projects" data-step="4" data-intro="you need help" >
       <h3>projects</h3>
       <ul class="projects">
       </ul>   
     </div><!-- /dashboard-projects -->
 
-    <div id="link-dashboard" data-intro="go to personal dashboard" data-step="2">
+    <div id="link-dashboard" data-intro="go to personal dashboard" data-step="6">
       <h4><a href="http://dashboard.cortext.org/" target="_blank"> go to personal dashboard</a></h4>
     </div>
-
-<p><a href="javascript:void(0);" onclick="javascript:introJs().start();" class="btn btn-primary">Visite guidée</a></p>
 
 
   </div><!-- /dashboard-meta -->
@@ -29,7 +28,7 @@
     
     <div class="trace"></div>
     
-    <form class="search-form" action="/">
+    <form class="search-form" data-step="2" data-intro="you need help" action="/">
         <input type="text"  id="search" name="searchString"/>
     </form> 
 
@@ -41,6 +40,10 @@
   </div><!-- /#dashboard -->
 
   <div class="project-meta2 container-right">
+
+<p>
+  <a href="javascript:void(0);" onclick="javascript:introJs().start();" class="btn btn-primary">First Visit</a>
+</p>
 
   </div><!-- /dashboard-meta2 -->
 </template>
