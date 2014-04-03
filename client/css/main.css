@@ -150,7 +150,7 @@ button.inactive { color : #DCDCDC !important; cursor: default !important; }
     background-color: #fff;
     border: 1px solid #DCDCDC; 
     margin-top:20px; 
-}
+    display: none;}
 
 #add-friend-panel .add{
     height:35px;
