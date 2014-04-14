@@ -1353,3 +1353,15 @@ input:focus{
     border: 1px solid #54cf4c;
     box-shadow: none;
 }   
+
+.container-right a.first-visit{
+    color : #909090;
+    text-decoration: none;
+    display: block;
+    float: right;
+    margin-right: 5px;
+}
+.container-right a.first-visit:hover{
+    color : #909090;
+    text-decoration: underline;
+}

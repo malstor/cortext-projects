@@ -30,6 +30,10 @@
           .attr('disabled',true)
           .addClass('inactive')
           .removeClass('new')
+    
+    $('a.first-visit').on "click", (e)->
+      e.preventDefault()
+      introJs().start()
 
 
     $("#project-new button").on "click", (e) ->
