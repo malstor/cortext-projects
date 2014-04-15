@@ -29,7 +29,7 @@
   set_gravatar: ()->
     if(@.get("email"))
       @set
-        gravatar : 'http://www.gravatar.com/avatar/' + models.helpers.md5(@.get("email"))
+        gravatar : 'http://www.gravatar.com/avatar/' + models.helpers.md5(@.get("email")) + "?d=identicon"
     else
       @set
         gravatar : ''
