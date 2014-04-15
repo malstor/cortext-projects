@@ -11,6 +11,7 @@
     'element/:type/:element': 'element'
     'job/:jobId/log/:project_id' : 'log'
     'login': 'login'
+    'logout': 'logout'
     'auth/oauth': 'oauth'
     
   initialize: (options)->
@@ -26,7 +27,8 @@
           console.log 'logged in :', Meteor.user()
         else
           if !Meteor.loggingIn()
-            console.log 'logging in'
+            console.log 'not logging in, displaying log in page'
+            @login()
             @navigate('/login')
     )
 
@@ -44,7 +46,8 @@
           callback()
         else
           if !Meteor.loggingIn()
-            console.log 'logging in'
+            console.log 'not logging in, displaying log in page'
+            @login()
             @navigate('/login')
 
 
@@ -73,6 +76,9 @@
     new login
       el: '#main'
     .render()
+
+  logout: ()->
+    Meteor.logout()
 
   dashboard: ()->  
     @checkLogin ()=>
