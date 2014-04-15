@@ -5,6 +5,7 @@
     'user/:user_id':        'user'
     'user/subscribe':       'subscribe'
     'project/:project_id':  'project'
+    'project/:project_id/uploadedCorpus&corpus_id=:corpus_id': 'uploadCorpus'
 #    'element/:element_id':  'element'
     'element/:type/:element/in/:project': 'element'
     'element/:type/:element': 'element'
@@ -134,5 +135,19 @@
 
   log: (jobId, project_id)->
     window.location = dashboardConfig.services.Jobs.url + "/logs/"+jobId+"?callback_url="+encodeURIComponent(dashboardConfig.common.callback+"/project/"+project_id)
+  
+  uploadCorpus: (project_id, corpus_id)->
+     @checkLogin ()=>
+      parameters = 
+        callback_url: dashboardConfig.services.Jobs.callback+'/project/' + project_id
+        context:
+          project_id: project_id
+          callback_url: dashboardConfig.services.Jobs.callback+'/project/' + project_id
+          callback_json: dashboardConfig.services.Api.url+"/project/"+project_id+"/analysis"
+        accessToken: Meteor.user().profile.accessToken
+        corpus_id: corpus_id
+      #console.log $.param(parameters, true)
+      window.location = dashboardConfig.services.Jobs.url+"/job/new?" + $.param(parameters)
+
 
     
