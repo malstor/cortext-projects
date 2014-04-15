@@ -11,6 +11,7 @@ dashboardConfig =
             name: "Cortext Auth",
             urlAuth: "http://auth.cortext.net/auth",
             urlSubscribe: "http://auth.cortext.net/user/register",
+            urlEdit: "http://auth.cortext.net/user",
 	        callback: "http://managerv2.cortext.net",
             account: {
                 service: "cortext",
