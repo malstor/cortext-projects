@@ -654,6 +654,45 @@ form.message {display: none}
     font: normal 15px Arial, sans-serif;
 }
 
+#edit-user {
+background: url("/images/edit.png") no-repeat 5px 0px;
+width: 30px;
+height: 25px;
+margin-top: 38px;
+padding-left: 32px;
+width: 30px;
+}
+
+#edit-user a {
+color: #909090;
+font: 14px Arial,sans-serif;
+text-decoration: none;
+}
+
+#edit-user a:hover {
+color: #666667;
+text-decoration: underline;
+}
+
+#log-out {
+background: url("/images/power.png") no-repeat 2px 0px;
+width: 100px;
+height: 40px;
+padding-left: 33px;
+padding-top: 6px;
+}
+
+#log-out a {
+color: #909090;
+font: 14px Arial,sans-serif;
+text-decoration: none;
+}
+
+#log-out a:hover {
+color: #666667;
+text-decoration: underline;
+}
+
 #indicators {
     border-top: 1px solid #DCDCDC;
     height:74px;
