@@ -27,5 +27,9 @@
     #console.log 'member deps set'
 
   set_gravatar: ()->
-    @set
-      gravatar : 'http://www.gravatar.com/avatar/' + models.helpers.md5(@.get("email"))
+    if(@.get("email"))
+      @set
+        gravatar : 'http://www.gravatar.com/avatar/' + models.helpers.md5(@.get("email"))
+    else
+      @set
+        gravatar : ''
