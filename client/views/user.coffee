@@ -69,7 +69,7 @@
   render: ()->
     #console.log 'user.render'
     @u.set
-      urlEdit : dashboardConfig.services.Identity.urlEdit+'/'+@u.id+'/edit'
+      urlEdit : dashboardConfig.services.Identity.urlEdit+'/'+@u.id+'/edit?callback_url='+dashboardConfig.common.callback+"/user/"+@u.id
       
     $("#main").html Template.user
       user: @options.user.attributes
