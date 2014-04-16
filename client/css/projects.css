@@ -1394,13 +1394,16 @@ input:focus{
 }   
 
 .container-right a.first-visit{
+    background: url("/images/robot.png") no-repeat scroll 5px 1px;
     color : #909090;
     text-decoration: none;
     display: block;
     float: right;
     margin-right: 5px;
+    padding-left: 33px;
+    font-size: 14px;
 }
 .container-right a.first-visit:hover{
-    color : #909090;
+    color : #444444;
     text-decoration: underline;
 }
