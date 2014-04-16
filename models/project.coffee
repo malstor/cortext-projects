@@ -103,6 +103,11 @@
           @set_permalink()          
           options.success(id)
 
+  archive: () ->
+    p = projects.findOne({id: @attributes.id})
+    if(p)
+      projects.update p._id, {$set: {archive: true}}
+
   searchElements: (searchString) ->
     searchReg = new RegExp(searchString.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, "\\$&"))
     @elements = elements.find({ 

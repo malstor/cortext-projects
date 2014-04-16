@@ -103,7 +103,30 @@
     background: url("/images/img-message.png") no-repeat scroll center center transparent;
     margin-left:2px;
 }
+
 form.message {display: none}
+
+.project .icon {
+/*    background-color: #EEF2F6;
+    border: none;
+    color: #909090;
+    float: left;
+    font: normal 12px/40px Arial, sans-serif;*/
+    height: 15px;
+    margin:0;
+    text-align: center;
+    width: 28px;
+}
+
+.project .delete {
+    background: url("/images/icon-trash.png") no-repeat scroll center center transparent;
+}
+
+.project .delete:hover {
+    background: url("/images/icon-trash-hover.png") no-repeat scroll center center transparent;
+}
+
+
 
 #dashboard .message-write{
     display: none;

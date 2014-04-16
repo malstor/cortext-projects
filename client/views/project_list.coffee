@@ -43,6 +43,11 @@ Meteor.subscribe "projects"
       @render_elements p
       @render_composition p
 
+      $('a.delete').on "click", (evt)=>
+        evt.preventDefault()
+        p.archive()
+        @$el.find('#project-'+p.get('id')).remove()
+
     p.on "project:elements:changed", ()=>
       @render_elements p
       @render_composition p
@@ -85,7 +90,7 @@ Meteor.subscribe "projects"
 
   render: ()->
     Deps.autorun ()=>
-      _(projects.find({members : parseInt(app.user_id)}).fetch()).each (project)=>
+      _(projects.find({members : parseInt(app.user_id), $or: [{'archive': {$exists: false}}, {'archive': false} ] }).fetch()).each (project)=>
         #console.log 'loading project ', project.id
         p = new models.project()
         p.get_by_id project.id
