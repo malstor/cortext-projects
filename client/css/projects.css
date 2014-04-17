@@ -66,6 +66,9 @@
 #main-project .comment-container{
 	border:6px solid #F6F0FF;
 	width: 738px; 
+    max-height: 150px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 #main-project .comment-container .info-comment{

@@ -25,10 +25,10 @@ Meteor.subscribe "elements"
         if(@options.project)
           project = @options.project.attributes
           #console.log "display scripts for project", project
-          _(elements.find({type: 'Analysis', author: {$in: project.members}, project: parseInt(project.id)}).fetch()).each (script)=>
+          _(elements.find({type: 'Analysis', author: {$in: project.members}, project: parseInt(project.id)}, sort: {date : -1},  limit: 20).fetch()).each (script)=>
             @render_item script.id
         else      
-          _(elements.find({type: 'Analysis', author: parseInt(Meteor.user().profile.id)}).fetch()).each (script)=>
+          _(elements.find({type: 'Analysis', author: parseInt(Meteor.user().profile.id)}, sort: {date : -1}, limit: 20 ).fetch()).each (script)=>
             @render_item script.id
          # console.log "render_item ", script.id
           
