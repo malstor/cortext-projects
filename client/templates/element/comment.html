@@ -1,5 +1,5 @@
 <template name="comment">
-  <div class="comment-container">
+  <div class="comment-container" id="comments-{{e.id}}">
     {{#each e.comments}}
       {{> comment-item}}
     {{/each}}
@@ -13,7 +13,7 @@
       <a rel="{{e.id}}" href="#" class="display-comment">comment...</a>{{#if size e.comments}}<span class="comment-number active">{{size e.comments}}</span>{{else}}<span class="comment-number"></span>{{/if}}
     </p>
   </div>
-  <div class="arrow"></div>
+  <div class="arrow" rel="{{e.id}}" title="view all elements"></div>
 </template>
 
 <template name="comment-item">

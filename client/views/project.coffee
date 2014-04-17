@@ -65,6 +65,24 @@ Meteor.subscribe "members"
           project.trigger 'project:elements:changed'
         ),
         300
+
+    #view-all
+    $('.element .arrow').on "click", (evt) ->
+      $target = $(evt.target)
+      $idElement = $target.attr('rel')
+      $elements = $("#results-"+$idElement)
+      $comments = $("#comments-"+$idElement)
+      maxHeight = "150px"
+      console.log 'element', $elements.css('max-height')
+      if($elements.css('max-height')==maxHeight)
+        $elements.css('max-height','none')
+        $comments.css('max-height','none')
+        $target.attr('title', "hide elements")
+      else
+        $elements.css('max-height',maxHeight)
+        $comments.css('max-height',maxHeight)
+        $target.attr('title', "view all elements")
+
         
 
 
