@@ -213,6 +213,14 @@ form.message {display: none}
     width: 750px;
 }
 
+.document .arrow:hover, .message .arrow:hover, .analysis .arrow:hover{
+    background: url("/images/arrow-hover.png") no-repeat 362px 0px #fff;
+    height: 18px;
+    margin-top:0px;
+    width: 750px;
+    cursor: pointer;
+}
+
 #dashboard .arrow{
     display: none;
 }

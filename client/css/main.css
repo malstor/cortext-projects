@@ -27,7 +27,7 @@ body {
         margin : 0px auto 0px auto;
         width:1280px;
         position:relative;
-        overflow : auto;
+      /*  overflow : auto;*/
         margin-bottom : 35px;
 }
 
