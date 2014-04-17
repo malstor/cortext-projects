@@ -112,18 +112,18 @@ form.message {display: none}
     color: #909090;
     float: left;
     font: normal 12px/40px Arial, sans-serif;*/
-    height: 15px;
+    height: 18px;
     margin:0;
     text-align: center;
     width: 28px;
 }
 
 .project .delete {
-    background: url("/images/icon-trash.png") no-repeat scroll center center transparent;
+    background: url("/images/archived.png") no-repeat scroll center center transparent;
 }
 
 .project .delete:hover {
-    background: url("/images/icon-trash-hover.png") no-repeat scroll center center transparent;
+    background: url("/images/archived-hover.png") no-repeat scroll center center transparent;
 }
 
 
