@@ -2,7 +2,7 @@
   <div class="element analysis user-{{ e.author }}" id="Analysis-{{ e.id }}" rel="{{e.id}}">
     <div class="info">
       <span class="type analysis">
-        <a href="/project/#Analysis-{{e.id}}" >
+        <a href="/project/{{e.project}}#Analysis-{{e.id}}" >
         {{#if e.name}} {{ellipsis e.name 20}} {{else}} {{ellipsis e.parameters.script_name 20}} {{/if}}
         </a>
       </span>

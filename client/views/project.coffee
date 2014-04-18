@@ -287,6 +287,7 @@ Meteor.subscribe "members"
       @render_elements project
       @render_participants project
       @render_scripts project
+      @set_events project
       scrollToHash() #noting to here but very handy :)
 
     
