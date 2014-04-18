@@ -13,15 +13,15 @@
     'login': 'login'
     'logout': 'logout'
     'auth/oauth': 'oauth'
-    
-  initialize: (options)->
+
+  initialize: (options) ->
     Meteor.subscribe "members"
-    
-    Deps.autorun( => 
+
+    Deps.autorun( =>
       if(demo)
-        @user_id = 1        
+        @user_id = 1
       else
-        if(Meteor.user())
+        if(Meteor.user() )
           @user_id = parseInt(Meteor.user().profile.id)
           @user_infos(@user_id)
           console.log 'logged in :', Meteor.user()
@@ -32,13 +32,13 @@
             @navigate('/login')
     )
 
-  checkLogin : (callback)->
+  checkLogin : (callback) ->
     console.log "checkLogin"
-    Deps.autorun ()=> 
+    Deps.autorun () =>
       if(demo)
-        @user_id = 1        
+        @user_id = 1
       else
-        if(Meteor.user())
+        if(Meteor.user() )
           @user_id = parseInt(Meteor.user().profile.id)
           @user_infos(@user_id)
           console.log 'logged in :', Meteor.user()
@@ -51,7 +51,7 @@
             @navigate('/login')
 
 
-  path: (path_elements, options)->
+  path: (path_elements, options) ->
     #console.log "path_elements",  path_elements
     p = new path
       path: path_elements
@@ -59,40 +59,40 @@
     if options.fix
       p.set_as_fix()
 
-  user_infos: (user_id)->
+  user_infos: (user_id) ->
     if(user_id)
       #console.log("render user info", user_id)
       member = new models.member()
-      member.on "member:loaded", ()=>
+      member.on "member:loaded", () =>
         ui = new user_infos
           user: member
         ui.render()
       member.get_by_id user_id
-  
-  home: ()->
+
+  home: () ->
     @dashboard()
-    
-  login: ()->
+
+  login: () ->
     new login
       el: '#main'
     .render()
 
-  logout: ()->
+  logout: () ->
     Meteor.logout()
 
-  dashboard: ()->  
-    @checkLogin ()=>
+  dashboard: () ->
+    @checkLogin () =>
       d = new dashboard()
       d.render()
-      
+
       @path [],
         fix: true
-    
-  user: (user_id)->
 
-    member = new models.member() 
+  user: (user_id) ->
 
-    member.on "member:loaded", ()=>
+    member = new models.member()
+
+    member.on "member:loaded", () =>
       u = new user
         user: member
       #console.log 'route user : member:loaded triggered => u.render, member :', member
@@ -102,12 +102,12 @@
         url: "/"
         name: member.get("name")
       ]
-      ,fix: false
+      , fix: false
 
     #console.log 'route user : member get_by_id ', user_id
     member.get_by_id user_id
-    
-  project: (project_id)->
+
+  project: (project_id) ->
 
     m_project = new models.project()
 
@@ -116,22 +116,22 @@
 
     p.render()
 
-    m_project.on "project:loaded", ()=>
+    m_project.on "project:loaded", () =>
       @path [
         type: "Project"
         name: m_project.get("title")
       ]
-      , fix: false 
+      , fix: false
 
     m_project.get_by_id project_id
 
 
-    
 
-  element: (type, element_id, project_id)->
+
+  element: (type, element_id, project_id) ->
     model = new models.element()
 
-    model.on "element:loaded", ()=> 
+    model.on "element:loaded", () =>
       e = new element
         element: model
 
@@ -139,21 +139,20 @@
 
     model.get_by_id element_id
 
-  log: (jobId, project_id)->
-    window.location = dashboardConfig.services.Jobs.url + "/logs/"+jobId+"?callback_url="+encodeURIComponent(dashboardConfig.common.callback+"/project/"+project_id)
-  
-  uploadCorpus: (project_id, corpus_id)->
-     @checkLogin ()=>
-      parameters = 
-        callback_url: dashboardConfig.services.Jobs.callback+'/project/' + project_id
+  log: (jobId, project_id) ->
+    window.location = dashboardConfig.services.Jobs.url + "/logs/"+jobId+"?callback_url="+encodeURIComponent(dashboardConfig.common.callback+"/project/" + project_id)
+
+  uploadCorpus: (project_id, corpus_id) ->
+     @checkLogin () =>
+      parameters =
+        callback_url: dashboardConfig.services.Jobs.callback + '/project/' + project_id
         context:
           project_id: project_id
-          callback_url: dashboardConfig.services.Jobs.callback+'/project/' + project_id
-          callback_json: dashboardConfig.services.Api.url+"/project/"+project_id+"/analysis"
+          callback_url: dashboardConfig.services.Jobs.callback + '/project/' + project_id
+          callback_json: dashboardConfig.services.Api.url + "/project/"+project_id+"/analysis"
         accessToken: Meteor.user().profile.accessToken
         corpus_id: corpus_id
       #console.log $.param(parameters, true)
-      window.location = dashboardConfig.services.Jobs.url+"/job/new?" + $.param(parameters)
+      window.location = dashboardConfig.services.Jobs.url + "/job/new?" + $.param(parameters)
 
 
-    

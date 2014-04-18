@@ -2,7 +2,7 @@
   <div class="element analysis user-{{ e.author }}" id="Analysis-{{ e.id }}" rel="{{e.id}}">
     <div class="info">
       <span class="type analysis">
-        <a href="/job/{{e.jobId}}/log/{{e.project}}" title='{{e.name}} : view parameters &amp; logs'>
+        <a href="/project/#Analysis-{{e.id}}" >
         {{#if e.name}} {{ellipsis e.name 20}} {{else}} {{ellipsis e.parameters.script_name 20}} {{/if}}
         </a>
       </span>
@@ -16,14 +16,14 @@
       </span>
      {{/if}}
      
-     {{#if e.content.results}}<span class="results"><a href="/project/{{e.project}}#results-{{e.id}}"> »  {{size e.content.results}} dataset(s)</a></span>
+     {{#if e.content.results}}<span class="results"><a href="/project/{{e.project}}#Analysis-{{e.id}}"> »  {{size e.content.results}} dataset(s)</a></span>
       {{else}}<span class="status2 {{status e.state}}"></span>{{/if}}
 
 </div>
 
   <span class="date">
   <span class="state">
-  <span class="status {{status e.state}}">{{status e.state}}</span>
+  <a href="/job/{{e.jobId}}/log/{{e.project}}" title='view parameters &amp; logs' class="status {{status e.state}}">{{status e.state}}</a>
   </span>
   <a href="/user/{{author.id}}"><img class="gravatar" src="{{author.gravatar}}" /></a>
   <a href="{{ e.permalink }}">{{date_short e.date }}</a>
@@ -34,8 +34,7 @@
 
     </div><!-- /info -->
     {{#if e.content}} 
-      {{#if e.content.results}} 
-      <a name="results-{{e.id}}"></a>
+      {{#if e.content.results}}       
       <div class="files" id="results-{{e.id}}">
         
       {{#each e.content.results}}

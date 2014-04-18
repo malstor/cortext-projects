@@ -280,12 +280,16 @@ Meteor.subscribe "members"
       @render_scripts project
       @set_events project
       activate_button "#add-element .message textarea", "#add-element .message .add"
-      activate_button "#add-members input", null
+      activate_button "#add-members input", null     
+      scrollToHash() #noting to here but very handy :)
 
     project.on "project:elements:changed", ()=>
       @render_elements project
       @render_participants project
       @render_scripts project
+      scrollToHash() #noting to here but very handy :)
+
+    
 
 
     #@options.project.trigger('project:elements:changed')
