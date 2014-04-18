@@ -15,6 +15,7 @@ Meteor.subscribe "elements"
       @$el.append t
 
 
+
     e.get_by_id(script_id)
 
   render: ()->
@@ -38,5 +39,8 @@ Meteor.subscribe "elements"
         s = parseInt($(this).attr('data-progress') * t / 100)
         # console.log 'refreshing progress ', $(this)
         $(this).css "width", s + "px" #@todo remove the "+20" : just for demo...
+
+      $('.name-script').on 'click', ()->
+        scrollToHash()
             
         

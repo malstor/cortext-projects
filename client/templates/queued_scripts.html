@@ -1,7 +1,9 @@
 <template name="script">
     <div class="script" id='script-{{s.id}}'>
         <div>
-            <span class="name-script" title='script : {{s.name}} - progress : {{s.progress}} %'>{{ellipsis s.name 18}}</span>
+            <a class="name-script" 
+            title='{{s.name}} (progress : {{s.progress}} %)' 
+            href="/project/{{s.project}}#Analysis-{{s.id}}">{{ellipsis s.name 18}}</a>
             <span class="hours">{{date_short s.date}}</span>
         </div>
         <div class="queued-scripts">

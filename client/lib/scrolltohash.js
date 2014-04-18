@@ -9,3 +9,7 @@ scrollToHash = function  (hash, time) {
     }, time);
   }
 };
+
+$(window).on('hashchange', function() {
+  scrollToHash();
+  });
