@@ -134,7 +134,7 @@ Meteor.subscribe "members"
       evt.preventDefault()
       $linkComment = $(evt.target)      
       idElement = $linkComment.attr('rel')
-      $("#comment-"+idElement).fadeToggle 'fast'
+      $("#comment-"+idElement).fadeIn 'fast'
 
     #if it is a new message
     $("#main").on "click",  "button.add", (evt) ->  
