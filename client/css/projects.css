@@ -948,7 +948,6 @@ text-decoration: underline;
     font-style: normal;
     line-height: 20px;
     margin-left: 5px;
-    text-decoration: none;
     }
 
 .container-left .script .hours{
@@ -1054,7 +1053,7 @@ text-decoration: underline;
     cursor:pointer;
 }
 
-.member .name:hover, .project-title a:hover, #queuedScripts a:hover{
+.member .name:hover, .project-title a:hover{
     color: #444444;
 }                        
         
