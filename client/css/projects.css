@@ -450,7 +450,7 @@ form.message {display: none}
     background: url("/images/img-fichiers.png") no-repeat scroll center center transparent;
 }
 
-.analysis .file .img-txt, .analysis .file .img-csv, .document .document-body .img-csv, .document .document-body .img-zip, 
+.analysis .file .img-txt, .analysis .file .img-csv,.analysis .file .img-zip, .document .document-body .img-csv, .document .document-body .img-zip, 
 .document .document-body .img-xlsx{
     background: url("/images/img-csv.png") no-repeat scroll center center transparent;
 }
