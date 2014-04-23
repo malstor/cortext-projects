@@ -43,7 +43,7 @@
           <div class="name" id="{{id}}"><a href="{{url}}">{{title}}</a></div>
           <div class="actions">               
                 <a class ="icon view" title="view file" rel="{{url}}" data-type="{{extension}}" target="_blank" href='{{viz extension url}}'></a>
-                <a class="icon delete" title="delete file" data-id="{{id}}" href="#" rel="{{e.id}}"></a>
+                <a class="icon delete" title="delete file" data-permalink="{{url}}" href="#" data-type="Result" data-hash="{{id}}"></a>
           </div>
         </div>
       {{/each}}

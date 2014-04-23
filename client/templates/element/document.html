@@ -24,7 +24,7 @@
         <div class="body-doc"><a title="download file" href="{{e.permalink}}">{{ e.extension }} - {{e.size}}</a></div>
         <div class="actions">               
                 <a class ="icon view" title="view file" href='{{viz e.extension e.permalink}}'></a>
-                <a class="icon delete" title="delete file"></a>
+                <a class="icon delete" title="delete file and comments" data-permalink="{{e.permalink}}" rel="{{e.id}}" data-type="Document"></a>
         </div>
     </div>
     {{>comment}}

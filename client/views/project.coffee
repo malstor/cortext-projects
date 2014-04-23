@@ -46,15 +46,44 @@ Meteor.subscribe "members"
     $('.delete').on "click", (evt) =>
       evt.preventDefault()
       $file = $(evt.target)
-      hash = $file.attr("data-id");
-      if confirm "Are you sure ? This will delete the file permanently !"
-        parameters = 
-          token: Meteor.user().profile.accessToken
+      permalink = $file.attr("data-permalink")
+      result_id = $file.attr("data-hash")
+      element_id = $file.attr("rel")
+      type = $file.attr("data-type")
+      elm = new models.element()
+      console.log "element to be removed : ", element_id, "permalink : ", permalink, "type :", type
+      if(permalink?) #if permalink : delete a file
+        if confirm "Are you sure ? This will delete the file permanently !"
+          parameters = 
+            token: Meteor.user().profile.accessToken
 
-        HTTP.get dashboardConfig.services.Storage.url+dashboardConfig.services.Storage.getDocument+'/'+hash+'/trash?' + $.param(parameters), (data)=>
-          #//@todo : deal with the local database element : mark it as deleted ? delete it ? ...
-          @options.project.trigger('project:elements:changed')
-          $("#"+hash+" a").css('color', '#f00').html('(deleted)');
+          HTTP.get permalink+'/trash?' + $.param(parameters), (error,data)=>
+            #//@todo : deal with the local database element : mark it as deleted ? delete it ? ...
+            if error
+              console.log 'error deleting file ! ',error
+              alert "There was an error deleting your file. Please try again later" #fixme : this should be a nice message, not ugly alert...
+            else
+              switch type
+                when 'Document' 
+                  elm.delete(element_id)    
+                  $("#Document-"+element_id).fadeOut().remove()
+                  console.log "removing document ", elm.id
+                when 'Result'
+                  elm.remove_result(result_id)
+                  $("#"+result_id).parent().remove()
+                  console.log "removing result ", result_id
+
+      else #if not permalink then it is an element
+        #for now only message suppression are handled here
+        if(type=="Message")
+          elm.delete(element_id)
+          $("#Message-"+element_id).remove()
+          console.log "removing message ", element_id
+
+      
+      @options.project.trigger('project:elements:changed')
+      
+
 
     #search bar
     $("#search").on "keyup", (evt)->

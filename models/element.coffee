@@ -35,5 +35,26 @@
         console.log 'calling success ', @id
         options.success(@id)
 
+  remove_result: (result_id)->
+      #find all elements that referenced the file
+      elem_with_result = elements.find('content.results.id':result_id).fetch()
+      _(elem_with_result).each (e)=>
+        elements.update e._id, $pull: {'content.results':{id: result_id}} 
+        console.log "result removed : ", result_id
+
+  delete: (element_id)->
+    comments = elements.find({commentOn: element_id}).fetch()
+    _(comments).each (e)->
+      elements.remove e._id
+      console.log 'removing comment #'+e.id
+
+    elm = elements.findOne({id: parseInt(element_id)})
+    if(elm)
+      elements.remove elm._id
+      console.log "element removed : ", element_id
+    else 
+      console.log 'no element found : ', element_id
+
+
 
 
