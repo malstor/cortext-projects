@@ -231,7 +231,7 @@ form.message {display: none}
 
 #main-project .element {
     width: 750px;
-    margin-left: 8px;
+    margin-left: 16px;
     margin-top: 12px;
     background-color:#E6E6E6; 
 }
@@ -636,7 +636,7 @@ form.message {display: none}
 	background:#DCDCDC;
     height: 1px;
     margin-top: 20px;
-    margin-left: 18px;
+    margin-left: 16px;
 }
 
 #main-project .trace{
@@ -646,6 +646,8 @@ form.message {display: none}
 
 
 /*-------------------USER PAGE--------------------------*/
+
+#main .user{margin-left: 280px;}
 
 .user.profile .info{
     border: 1px solid #DCDCDC;
@@ -1088,7 +1090,7 @@ text-decoration: underline;
 
 .container-main #project-new input[type=text]{ width : 605px; border : 1px solid #DCDCDC; height : 34px; padding : 0 5px; font : normal 14px arial; color : #B1B1B1; border-radius:3px; margin-top:10px; }
 .container-main .search-form input[type=text]{  background: url("/images/loupe.png") no-repeat 385px 8px; width : 400px; border : 1px solid #DCDCDC; height : 34px; padding : 0 5px; font : normal 14px arial; color : #DCDCDC;
- margin-top: 20px; margin-left: 18px; margin-bottom: 10px; border-radius:3px;}
+ margin-top: 20px; margin-left: 16px; margin-bottom: 10px; border-radius:3px;}
 .container-left input[type=text].focus, .container-main input[type=text].focus { color : #6E6E6E !important; }
 
 .container-main textarea { font : normal 14px arial; color : #B1B1B1; }
@@ -1123,7 +1125,7 @@ text-decoration: underline;
     color: #FFFFFF;
     height: 34px;
     margin-bottom: 10px;
-    margin-left: 18px;
+    margin-left: 25px;
     margin-top: 25px;
     padding-top: 6px;
     width: 220px;
