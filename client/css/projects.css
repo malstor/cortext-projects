@@ -1249,6 +1249,7 @@ text-decoration: underline;
     padding : 4px 4px;
     position : relative;
     border-bottom : 1px solid #DCDCDC;
+    margin-left: 0px;
 }
 
 .container-left #new-members #proposition-members .user:last-child { border : none; }
