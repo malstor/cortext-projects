@@ -24,17 +24,18 @@
         @updateJobs()
 
     updateCurrentUser : (mUser_id)=>
-        #console.log 'updating user ', mUser_id
+        console.log 'updating user ', mUser_id
         mUser = Meteor.users.findOne(mUser_id)
-        @user_id =parseInt(mUser.profile.id)
-        if(Meteor.isServer)
-            @user_token = mUser.services.cortext.accessToken
-        #console.log 'user found : ', mUser
-        m = members.findOne({id: user_id})
-        if(m)          
-          m = members.update(m._id, $set:{name: mUser.profile.name, email: mUser.profile.email})
-        else
-          m = members.insert({id: user_id, name: mUser.profile.name, email: mUser.profile.email})
+        if(mUser)
+          @user_id =parseInt(mUser.profile.id)
+          if(Meteor.isServer)
+              @user_token = mUser.services.cortext.accessToken
+          #console.log 'user found : ', mUser
+          m = members.findOne({id: user_id})
+          if(m)          
+            m = members.update(m._id, $set:{name: mUser.profile.name, email: mUser.profile.email})
+          else
+            m = members.insert({id: user_id, name: mUser.profile.name, email: mUser.profile.email})
 
     updateUsers : ()->
         #todo

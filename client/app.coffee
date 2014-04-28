@@ -4,6 +4,7 @@
     'dashboard':            'dashboard'
     'user/:user_id':        'user'
     'user/subscribe':       'subscribe'
+    'user/:user_id/update':          'userUpdate'
     'project/:project_id':  'project'
     'project/:project_id/uploadedCorpus&corpus_id=:corpus_id': 'uploadCorpus'
 #    'element/:element_id':  'element'
@@ -61,6 +62,7 @@
 
   user_infos: (user_id) ->
     if(user_id)
+      Collections.updateCurrentUser(Meteor.userId())
       #console.log("render user info", user_id)
       member = new models.member()
       member.on "member:loaded", () =>
@@ -68,6 +70,12 @@
           user: member
         ui.render()
       member.get_by_id user_id
+  
+  userUpdate: (user_id)->
+    res = Meteor.call('updateProfile','true');
+    Collections.updateCurrentUser(Meteor.userId())
+    @navigate('/user/'+user_id)
+
 
   home: () ->
     @dashboard()
@@ -78,7 +86,8 @@
     .render()
 
   logout: () ->
-    Meteor.logout()
+    Meteor.logout ()->
+      window.open dashboardConfig.services.Identity.urlLogout
 
   dashboard: () ->
     @checkLogin () =>

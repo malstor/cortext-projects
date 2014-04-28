@@ -67,7 +67,7 @@ Meteor.subscribe "members"
                 when 'Document' 
                   elm.delete(element_id)    
                   $("#Document-"+element_id).fadeOut().remove()
-                  console.log "removing document ", elm.id
+                  console.log "removing document ", element_id
                 when 'Result'
                   elm.remove_result(result_id)
                   $("#"+result_id).parent().remove()
