@@ -1184,6 +1184,7 @@ text-decoration: underline;
     padding-top: 6px;
     width: 220px;
     float: left;
+    overflow: hidden;
 }
 
 #add-element .write-message span {
@@ -1447,4 +1448,56 @@ input:focus{
 .container-right a.first-visit:hover{
     color : #444444;
     text-decoration: underline;
+}
+
+/*-------------------MESSAGE WELCOME--------------------------*/
+
+#first-usage{display: none;}
+
+#first-connection h1{
+color: #515151;
+font: normal 21px "Oxygen-Regular";
+margin: 20px 0px 20px 20px;
+}
+
+#first-connection p{
+color: #777777;
+margin-bottom: 10px;
+text-align: justify;
+}
+
+#first-connection p span{
+color: #515151;
+}
+
+#first-connection #icon-create{
+background: url("/images/project-first.png") no-repeat 0px 2px;
+padding-left: 30px;
+margin-top: 25px;
+}
+
+#first-connection #icon-corpus{
+background: url("/images/corpus-first.png") no-repeat 0px 2px;
+padding-left: 30px;
+}
+
+#first-connection #icon-script{
+background: url("/images/script-first.png") no-repeat 0px 2px;
+padding-left: 30px;
+}
+
+#first-connection #icon-invite{
+background: url("/images/invite-first.png") no-repeat 0px 2px;
+padding-left: 30px;
+}
+
+#first-connection #icon-message{
+background: url("/images/message-first.png") no-repeat 0px 4px;
+padding-left: 30px;
+}
+
+#first-connection h2{
+    color: #777777;
+    font: 15px/1.4em Arial,sans-serif;
+    margin: 0px 0px 18px 25px;
 }
