@@ -117,22 +117,27 @@
     member.get_by_id user_id
 
   project: (project_id) ->
+    @checkLogin ()=>
+      m_project = new models.project()
 
-    m_project = new models.project()
+      if !(m_project.isMember(project_id,@user_id))
+        @navigate('/dashboard')
+        window.location = "/dashboard"
+        return
 
-    p = new project
-      project: m_project
+      p = new project
+        project: m_project
 
-    p.render()
+      p.render()
 
-    m_project.on "project:loaded", () =>
-      @path [
-        type: "Project"
-        name: m_project.get("title")
-      ]
-      , fix: false
+      m_project.on "project:loaded", () =>
+        @path [
+          type: "Project"
+          name: m_project.get("title")
+        ]
+        , fix: false
 
-    m_project.get_by_id project_id
+      m_project.get_by_id project_id
 
 
 
