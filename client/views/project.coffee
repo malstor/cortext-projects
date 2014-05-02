@@ -82,7 +82,12 @@ Meteor.subscribe "members"
 
       
       @options.project.trigger('project:elements:changed')
-      
+    
+    $("#unarchive").on "click", (evt)->
+      project.unArchive()
+
+    $("#archive").on "click", (evt)->
+      project.archive()
 
 
     #search bar

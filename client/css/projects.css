@@ -1028,12 +1028,19 @@ text-decoration: underline;
     cursor: pointer;
 }
 
-.project-meta .date {
+.project-meta *{
     font: normal 12px/1.2em Arial, sans-serif;
     color: #909090;
+}
+.project-meta a:hover{
+    color: #444444;
+    cursor: pointer;
+}
+.project-meta div {
+    
     margin-top:5px;
     margin-left:5px;
-}        
+}
 
 .participation .data {
     font: normal 12px/1.2em Arial, sans-serif;

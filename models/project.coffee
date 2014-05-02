@@ -108,6 +108,11 @@
     if(p)
       projects.update p._id, {$set: {archive: true}}
 
+  unArchive: () ->
+    p = projects.findOne({id: @attributes.id})
+    if(p)
+      projects.update p._id, {$set: {archive: false}}
+
   searchElements: (searchString) ->
     searchReg = new RegExp(searchString.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, "\\$&"))
     @elements = elements.find({ 

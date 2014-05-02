@@ -90,6 +90,7 @@ Meteor.subscribe "projects"
 
   render: ()->
     Deps.autorun ()=>
+      Meteor.subscribe("projects")
       userProjects = projects.find {members : parseInt(app.user_id), $or: [{'archive': {$exists: false}}, {'archive': false} ]}
 
       if userProjects.count() == 0
