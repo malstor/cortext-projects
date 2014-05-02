@@ -136,7 +136,7 @@
   isMember: (project_id, user_id)->
     p = projects.findOne({id : parseInt(project_id)})
     if(p?)
-      _(p.members).contains(parseInt(user_id))
+      return  _(p.members).contains(parseInt(user_id))
 
 
 
