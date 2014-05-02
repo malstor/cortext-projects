@@ -120,10 +120,7 @@
     @checkLogin ()=>
       m_project = new models.project()
 
-      if !(m_project.isMember(project_id,@user_id))
-        @navigate('/dashboard')
-        window.location = "/dashboard"
-        return
+      
 
       p = new project
         project: m_project
@@ -136,6 +133,10 @@
           name: m_project.get("title")
         ]
         , fix: false
+        if !(m_project.isMember(project_id,@user_id))
+          @navigate('/dashboard')
+          window.location = "/dashboard"
+          return
 
       m_project.get_by_id project_id
 
