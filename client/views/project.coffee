@@ -123,7 +123,9 @@ Meteor.subscribe "members"
       $("#add-element form." + $button.attr("rel")).slideToggle().toggleClass "on" 
 
   set_add_message :(project)->
-    $("button.write-message").on "click", ()->
+    $("button.write-message").on "click", (evt)->
+      evt.preventDefault()
+      evt.stopImmediatePropagation()
       $("#add-element form.message").fadeToggle 'fast'
 
     $('#main a.display-comment').on "click", (evt)->
