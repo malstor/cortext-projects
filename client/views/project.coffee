@@ -45,11 +45,11 @@ Meteor.subscribe "members"
     #action delete on element
     $('.delete').on "click", (evt) =>
       evt.preventDefault()
-      $file = $(evt.target)
-      permalink = $file.attr("data-permalink")
-      result_id = $file.attr("data-hash")
-      element_id = $file.attr("rel")
-      type = $file.attr("data-type")
+      $target = $(evt.target)
+      permalink = $target.attr("data-permalink")
+      result_id = $target.attr("data-hash")
+      element_id = $target.attr("rel")
+      type = $target.attr("data-type")
       elm = new models.element()
       console.log "element to be removed : ", element_id, "permalink : ", permalink, "type :", type
       if(permalink?) #if permalink : delete a file
@@ -75,9 +75,9 @@ Meteor.subscribe "members"
 
       else #if not permalink then it is an element
         #for now only message suppression are handled here
-        if(type=="Message" or type=="comment")
+        if(type=="Message")
           elm.delete(element_id)
-          $("#"+type+"-"+element_id).remove()
+          $("#Message-"+element_id).remove()
           console.log "removing message ", element_id
 
       
@@ -325,11 +325,15 @@ Meteor.subscribe "members"
       scrollToHash() #noting to here but very handy :)
 
     project.on "project:elements:changed", ()=>
+      scroll = $("body").scrollTop()
       @render_elements project
       @render_participants project
       @render_scripts project
       @set_events project
-      scrollToHash() #noting to here but very handy :)
+      if(scroll?)
+        $("body").scrollTop(scroll)
+      else
+        scrollToHash() #noting to here but very handy :)
 
     
 
