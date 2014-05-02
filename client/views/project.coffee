@@ -125,16 +125,15 @@ Meteor.subscribe "members"
       $("#add-element form." + $button.attr("rel")).slideToggle().toggleClass "on" 
 
   set_add_message :(project)->
-    $("form.message").css "display", "none"
-
     $("button.write-message").on "click", ()->
-      $("form.message").fadeToggle 'fast'
+      $("#add-element form.message").fadeToggle 'fast'
 
-    $('#main').on "click","a.display-comment" , (evt)->
+    $('#main a.display-comment').on "click", (evt)->
       evt.preventDefault()
+      evt.stopImmediatePropagation()
       $linkComment = $(evt.target)      
       idElement = $linkComment.attr('rel')
-      $("#comment-"+idElement).fadeIn 'fast'
+      $("#comment-"+idElement).fadeToggle 'fast'
 
     #if it is a new message
     $("#main").on "click",  "button.add", (evt) ->  
