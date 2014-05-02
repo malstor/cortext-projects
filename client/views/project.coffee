@@ -273,16 +273,12 @@ Meteor.subscribe "members"
       $elmFiles = $(eId+" .files")[0]
       $elmComment = $(eId+" .comment-container")[0]
       $elmArrow = $(eId+" .arrow")
-      if($elmFiles?)
-        if $elmFiles.offsetHeight < $elmFiles.scrollHeight
+      $elmArrow.hide()
+      if($elmFiles?) and $elmFiles.offsetHeight < $elmFiles.scrollHeight
            $elmArrow.show()
-        else
-           $elmArrow.hide()
-      if($elmComment)
-        if $elmComment.offsetHeight < $elmComment.scrollHeight
+      if($elmComment?) and $elmComment.offsetHeight < $elmComment.scrollHeight
            $elmArrow.show()
-        else
-           $elmArrow.hide()
+           
 
 
 
