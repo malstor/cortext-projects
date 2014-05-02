@@ -103,7 +103,7 @@ Meteor.subscribe "members"
       $comments = $("#comments-"+$idElement)
       maxHeight = "150px"
       console.log 'element', $elements.css('max-height')
-      if($elements.css('max-height')==maxHeight)
+      if($elements.css('max-height')==maxHeight or $comments.css('max-height')==maxHeight)
         $elements.css('max-height','none')
         $comments.css('max-height','none')
         $target.attr('title', "hide elements")
@@ -111,8 +111,6 @@ Meteor.subscribe "members"
         $elements.css('max-height',maxHeight)
         $comments.css('max-height',maxHeight)
         $target.attr('title', "view all elements")
-
-        
 
 
   set_select_type :(project)->
@@ -257,17 +255,36 @@ Meteor.subscribe "members"
 
     _(project.elements).each (e)=>
       element.e = _(e).clone()
-      #console.log e.id
+      # console.log e.id
       m = new models.member()
       m.get_by_id(e.author)
       m.set_gravatar()
       element.author = m.attributes
       #console.log 'comments : ', element.comments
+
       if(!_.isUndefined(Template[ e.type.toLowerCase() ]))
         #console.log "rendering el ", e.id
         $("#elements").append Template[ e.type.toLowerCase() ] element
       else
         $("#elements").append Template.element element
+
+      #show arrow if overflow on files or comments
+      eId = "#"+e.type+"-"+e.id
+      $elmFiles = $(eId+" .files")[0]
+      $elmComment = $(eId+" .comment-container")[0]
+      $elmArrow = $(eId+" .arrow")
+      if($elmFiles?)
+        if $elmFiles.offsetHeight < $elmFiles.scrollHeight
+           $elmArrow.show()
+        else
+           $elmArrow.hide()
+      if($elmComment)
+        if $elmComment.offsetHeight < $elmComment.scrollHeight
+           $elmArrow.show()
+        else
+           $elmArrow.hide()
+
+
 
 
 
