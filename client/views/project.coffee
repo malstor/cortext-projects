@@ -77,7 +77,7 @@ Meteor.subscribe "members"
         #for now only message suppression are handled here
         if(type=="Message" or type=="comment")
           elm.delete(element_id)
-          $("#"+type"-"+element_id).remove()
+          $("#"+type+"-"+element_id).remove()
           console.log "removing message ", element_id
 
       
