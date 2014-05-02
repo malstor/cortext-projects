@@ -98,7 +98,7 @@
     margin-top: 12px;
     margin-bottom: 8px;
     text-align: justify;
-    width: 670px;
+    width: 630px;
     line-height: 18px;
 }
 
@@ -430,7 +430,9 @@ form.message {display: none}
     margin:2px 0px 2px 8px;
     text-align: center;
     width: 28px;
+
 }
+.actions .icon { cursor: pointer;}
 .element .view {
     background: url("/images/icon-view.png") no-repeat scroll center center transparent;
 }
@@ -495,6 +497,9 @@ form.message {display: none}
 
 .element .actions {
     float: right;
+}
+.comment-container .actions {
+    height: 15px;
 }
 
 #main-project .element .actions {

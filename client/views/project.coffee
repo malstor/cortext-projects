@@ -75,9 +75,9 @@ Meteor.subscribe "members"
 
       else #if not permalink then it is an element
         #for now only message suppression are handled here
-        if(type=="Message")
+        if(type=="Message" or type=="comment")
           elm.delete(element_id)
-          $("#Message-"+element_id).remove()
+          $("#"+type"-"+element_id).remove()
           console.log "removing message ", element_id
 
       

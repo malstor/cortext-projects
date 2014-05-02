@@ -17,8 +17,11 @@
 </template>
 
 <template name="comment-item">
-  <div class="document-comment">
+  <div class="document-comment" id="comment-{{id}}">
       <div class="icon img-message"> </div>
+      <div class="actions">
+        <a class="icon delete" title="delete comment" data-type="comment" rel="{{id}}"></a>
+      </div>
       <div class="body-mess"> {{content}}
         <span class="date info-comment">
           <a href="/user/{{author.id}}">{{ author.name }} - </a>      
