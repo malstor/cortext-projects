@@ -232,7 +232,7 @@ form.message {display: none}
 #main-project .element {
     width: 750px;
     margin-left: 16px;
-    margin-top: 12px;
+    margin-top: 15px;
     background-color:#E6E6E6; 
 }
 
@@ -642,6 +642,7 @@ form.message {display: none}
     height: 1px;
     margin-top: 20px;
     margin-left: 16px;
+    margin-bottom: 30px;
 }
 
 #main-project .trace{
