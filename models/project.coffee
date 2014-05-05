@@ -114,7 +114,7 @@
       projects.update p._id, {$set: {archive: false}}
 
   searchElements: (searchString) ->
-    searchReg = new RegExp(searchString.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, "\\$&"))
+    searchReg = RegExp.searchReg(searchString)
     @elements = elements.find({ 
       project: @attributes.id, 
       $or: 

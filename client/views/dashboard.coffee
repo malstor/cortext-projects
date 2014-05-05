@@ -60,8 +60,9 @@
         ),
         100
 
-  search_projects: (searchString)->
-    searchReg = new RegExp(searchString.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, "\\$&"))
+  search_projects: (searchString)->        
+     
+    searchReg = RegExp.searchReg(searchString)
     projectList = projects.find({
       $or: 
         [
@@ -69,9 +70,9 @@
           {'date_created'   : searchReg}
         ] 
       }, {id:1}).fetch()
-    #console.log "Search for "+searchReg+"-hide all"
+    console.log "Search for "+searchReg+"-hide all"
     $("#timeline .project").hide()
-    #console.log("project found : ", projectList)
+    console.log("project found : ", projectList)
     _(projectList).each (p)=>
       #console.log 'project match : ', "#project-"+p.id
       $("#project-"+p.id).fadeIn()
