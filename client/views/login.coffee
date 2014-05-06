@@ -9,6 +9,8 @@
       else
         $('#header').hide()
         $('#main').html Template.login()
+        
+        $('#first-usage').show()
 
 
     loginWithCortext: ()->

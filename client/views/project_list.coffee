@@ -93,15 +93,15 @@ Meteor.subscribe "projects"
       Meteor.subscribe("projects")
       userProjects = projects.find {members : parseInt(app.user_id), $or: [{'archive': {$exists: false}}, {'archive': false} ]}
 
-      if userProjects.count() == 0
-        $("#first-usage").show()
-      else
-        $("#first-usage").hide()
-        _(userProjects.fetch()).each (project)=>
-          #console.log 'loading project ', project.id
-          p = new models.project()
-          p.get_by_id project.id
-          @render_project p
+      # if userProjects.count() == 0
+      #   $("#first-usage").show()
+      # else
+      #   $("#first-usage").hide()
+      _(userProjects.fetch()).each (project)=>
+        #console.log 'loading project ', project.id
+        p = new models.project()
+        p.get_by_id project.id
+        @render_project p
 
 
 
