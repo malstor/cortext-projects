@@ -1317,6 +1317,8 @@ text-decoration: underline;
     height:410px;
     float: left;
     background-color: #F6F7F8;
+    border: 1px solid #e8eaed;
+    border-radius: 3px;
     }
     
 #welcome img{
@@ -1472,6 +1474,7 @@ input:focus{
 
 #first-connection{
     background:#F6F7F8;
+    border: 1px solid #e8eaed;
     margin-left: 25px;
     padding-right: 20px;
     margin-top: 80px;
@@ -1485,8 +1488,8 @@ input:focus{
 #first-connection h1{
     color: #3C3C3C;
     font: 21px "Oxygen-Regular";
-    letter-spacing: 1.5px;
-    margin: 20px 0px 30px 20px;
+    letter-spacing: 1.1px;
+    margin: 25px 0px 20px 20px;
     text-align: center;
 }
 
@@ -1495,6 +1498,8 @@ color: #444444;
 font: 14px/1.4em Arial,sans-serif;
 margin-bottom: 10px;
 margin-top: 20px;
+width: 430px;
+padding-left: 50px;
 text-align: justify;
 }
 
@@ -1532,4 +1537,5 @@ padding-left: 30px;
     color: #444444;
     font: 14px/1.4em Arial,sans-serif;
     margin: 0px 0px 18px 25px;
+    margin-left: 70px;
 }
