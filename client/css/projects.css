@@ -1312,22 +1312,25 @@ text-decoration: underline;
 
 
 #welcome{
-    margin : 70px auto 0px auto;
-    width:600px;
-    height:345px;
+    margin : 80px auto 0px 140px;
+    width:400px;
+    height:410px;
+    float: left;
+    background-color: #F6F7F8;
     }
     
 #welcome img{
-    margin-top : 5px;
-    margin-left:204px; 
+    margin-left: 120px;
+    margin-top: 110px;
     }
     
 #welcome h1{
-    font: normal 20px "Oxygen-Regular";
-    color:#444444;
-    letter-spacing : 1.5px;
+    color: #444444;
+    font: 20px "Oxygen-Regular";
+    letter-spacing: 1.5px; 
     margin-bottom : 20px;
-    margin-left:115px; 
+    margin-left:135px;
+    margin-top: 38px; 
     }
     
 #main #welcome #distante{
@@ -1340,7 +1343,7 @@ text-decoration: underline;
 #main #welcome #distante .login{
     height:40px;
     width:200px;
-    margin-left :182px;
+    margin-left :100px;
     background:#EE6E21;
     border:1px solid #CA5C1A;
     color:#FFFFFF;  
@@ -1353,6 +1356,7 @@ text-decoration: underline;
 #main #welcome #inscription{
     width:300px;
     height:60px;
+    margin-left: 93px;
     float:left;
     }
     
@@ -1363,6 +1367,7 @@ text-decoration: underline;
     float:left;
     color: #444444;
     font: 14px arial;
+    display: none;
     }       
     
 #main #welcome #inscription .inscription{
@@ -1465,15 +1470,31 @@ input:focus{
 
 #first-usage{display: none;}
 
+#first-connection{
+    background:#F6F7F8;
+    margin-left: 25px;
+    padding-right: 20px;
+    margin-top: 80px;
+    height: 410px;
+    width: 550px;
+    float: left;}
+
+#first-connection img{
+    margin-bottom: 25px;}
+
 #first-connection h1{
-color: #515151;
-font: normal 21px "Oxygen-Regular";
-margin: 20px 0px 20px 20px;
+    color: #3C3C3C;
+    font: 21px "Oxygen-Regular";
+    letter-spacing: 1.5px;
+    margin: 20px 0px 30px 20px;
+    text-align: center;
 }
 
 #first-connection p{
-color: #777777;
+color: #444444;
+font: 14px/1.4em Arial,sans-serif;
 margin-bottom: 10px;
+margin-top: 20px;
 text-align: justify;
 }
 
@@ -1508,7 +1529,7 @@ padding-left: 30px;
 }
 
 #first-connection h2{
-    color: #777777;
-    font: 15px/1.4em Arial,sans-serif;
+    color: #444444;
+    font: 14px/1.4em Arial,sans-serif;
     margin: 0px 0px 18px 25px;
 }
