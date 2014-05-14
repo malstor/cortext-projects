@@ -30,7 +30,7 @@
           if !Meteor.loggingIn()
             console.log 'not logging in, displaying log in page'
             @login()
-            @navigate('/login')
+            @navigate('/login', true)
     )
 
   checkLogin : (callback) ->
@@ -49,7 +49,7 @@
           if !Meteor.loggingIn()
             console.log 'not logging in, displaying log in page'
             @login()
-            @navigate('/login')
+            @navigate('/login', true)
 
 
   path: (path_elements, options) ->
@@ -74,7 +74,7 @@
   userUpdate: (user_id)->
     res = Meteor.call('updateProfile','true');
     Collections.updateCurrentUser(Meteor.userId())
-    @navigate('/user/'+user_id)
+    @navigate('/user/'+user_id, true)
 
 
   home: () ->
@@ -113,7 +113,7 @@
       ]
       , fix: false
 
-    #console.log 'route user : member get_by_id ', user_id
+    console.log 'route user : member get_by_id ', user_id
     member.get_by_id user_id
 
   project: (project_id) ->
@@ -134,8 +134,7 @@
         ]
         , fix: false
         if !(m_project.isMember(project_id,@user_id))
-          @navigate('/dashboard')
-          window.location = "/dashboard"
+          @navigate('/dashboard', true)
           return
 
       m_project.get_by_id project_id
