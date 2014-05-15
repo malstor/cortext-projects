@@ -45,6 +45,8 @@ Meteor.subscribe "projects"
 
       $('a.delete').on "click", (evt)=>
         evt.preventDefault()
+        evt.stopImmediatePropagation()
+        #console.log "archiving #",p.id
         p.archive()
         @$el.find('#project-'+p.get('id')).remove()
 
