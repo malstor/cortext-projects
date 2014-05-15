@@ -1,5 +1,8 @@
 Meteor.publish 'projects', ()->
-  projects.find() 
+  if(this.userId?)
+    if(Meteor.Users)
+      user = Meteor.Users.findOne(this.userId)
+      projects.find members: {$in: user.id} 
 
 Meteor.publish 'project', (project_id)->
   p_e = elements.find( { project: project_id } ).fetch()

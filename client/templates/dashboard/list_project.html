@@ -15,7 +15,7 @@
 
 <template name="project_simple">
 		<li data-project="{{ p.id }}" class="project-title project-{{ p.id }}">
-		<a href="/project/{{p.id }}">{{ p.title }}</a>
+		<a href="/project/{{p.id }}">{{#if p.archive}}* {{/if}}{{ p.title }}</a>
 		<span class="members-count">{{size members }}</span>
 		<div class="participation"></div>
 	</li>

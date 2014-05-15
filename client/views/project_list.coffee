@@ -26,7 +26,7 @@ Meteor.subscribe "projects"
     Deps.autorun ()=>
       @$el.empty()
       if Meteor.userId()
-        _(projects.find({members: parseInt(app.user_id)}).fetch()).each (project)=>
+        _(projects.find({members: parseInt(app.user_id)}, sort: {archive: 1, date_created: -1}).fetch()).each (project)=>
           @render_item project.id
 
 @project_list_with_elements = Backbone.View.extend
@@ -93,7 +93,7 @@ Meteor.subscribe "projects"
   render: ()->
     Deps.autorun ()=>
       Meteor.subscribe("projects")
-      userProjects = projects.find {members : parseInt(app.user_id), $or: [{'archive': {$exists: false}}, {'archive': false} ]}
+      userProjects = projects.find {members : parseInt(app.user_id), archive: {$ne:true}}, sort: {date_created : -1}
 
       # if userProjects.count() == 0
       #   $("#first-usage").show()

@@ -107,6 +107,7 @@
     p = projects.findOne({id: @attributes.id})
     if(p)
       projects.update p._id, {$set: {archive: true}}
+      console.log 'archived prj#',p.id
 
   unArchive: () ->
     p = projects.findOne({id: @attributes.id})
