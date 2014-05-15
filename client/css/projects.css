@@ -973,6 +973,9 @@ text-decoration: underline;
 .container-left .script h3 {background : #27AD19 url('/images/analysis-queued.png') no-repeat 230px 6px;
 }
 
+.dashboard-projects {
+    height: 50%;
+}
 .dashboard-projects a {
     margin-bottom:8px;
 }
@@ -980,7 +983,7 @@ text-decoration: underline;
 .dashboard-projects li {
    	margin-bottom : 5px;
 }
-
+.dashboard-projects .projects {height: 150px; overflow: auto}
 .dashboard-projects .projects li:hover { cursor : pointer; }
 .dashboard-projects .projects li:hover * { color: #444444; }
 
