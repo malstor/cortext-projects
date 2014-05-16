@@ -20,7 +20,7 @@ Meteor.subscribe "projects"
 
   render_composition: (p)->
     $("#project-simple .project-"+p.id+" .participation").empty()
-    console.log 'rendering composition', p.composition
+    # console.log 'rendering composition', p.composition
     new participation
        el: '#projects-simple .project-'+p.id+' .participation'
        composition: p.composition

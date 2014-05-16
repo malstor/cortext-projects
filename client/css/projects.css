@@ -558,16 +558,22 @@ form.message {display: none}
     background:#E62E60 url(/images/docs.png) no-repeat 1px 3px;
 }
     
-#dashboard .project canvas { 
-	margin-top:17px;  }
+#dashboard .project canvas { margin-top:17px; margin-left: 25px }
 
 #dashboard .project .participation { 
     float : right; 
     width : 200px;
-    height : 30px; 
-    display : block; 
+    height : 10px; 
+    display : inline-block; 
     margin-bottom :5px;
-    background :url('/images/user-ptit.png') no-repeat 175px 1px; 
+}
+#dashboard .project span.members-count{
+    float: right;
+    font: normal 11px Arial, sans-serif;
+    color: #DFE0E3;
+    margin-top: 2px;
+    padding-left: 18px;
+    background: url('/images/user-ptit.png') no-repeat 0px 0px;
 }
 
 #dashboard .project h2, #dashboard .project  h2 a {

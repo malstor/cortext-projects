@@ -5,8 +5,8 @@
         <a href="/project/{{ project.id }}">{{ project.title }}</a>
         <a href="#" class="icon delete" title="archive this project" rel="{{project.id }}"></a>
     </h2>
-
-	<div class="participation"></div>
+    <span class="members-count">{{size project.members }}</span>
+    <div class="participation"></div>
 
 	<div class="elements">
 	</div><!-- /elements-->
