@@ -11,16 +11,20 @@ Meteor.subscribe "projects"
 
       @$el.find('.project-'+project_id).remove()
       @$el.append t
+      @render_composition(p)
 
     p.on "project:elements:changed", ()=>
-      $("#project-"+project_id+" .participation").empty()
-
-      new participation
-         el: '#projects-simple .project-'+project_id+' .participation'
-         composition: p.composition
-      .render()
+      @render_composition(p)
 
     p.get_by_id(project_id)
+
+  render_composition: (p)->
+    $("#project-simple .project-"+p.id+" .participation").empty()
+    console.log 'rendering composition', p.composition
+    new participation
+       el: '#projects-simple .project-'+p.id+' .participation'
+       composition: p.composition
+    .render()
 
   render: ()->
     Deps.autorun ()=>

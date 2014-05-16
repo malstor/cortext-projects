@@ -983,7 +983,7 @@ text-decoration: underline;
 .dashboard-projects li {
    	margin-bottom : 5px;
 }
-.dashboard-projects .projects {height: 150px; overflow: auto}
+.dashboard-projects .projects {height: 250px; overflow-y: auto; overflow-x: hidden; padding-right: 15px}
 .dashboard-projects .projects li:hover { cursor : pointer; }
 .dashboard-projects .projects li:hover * { color: #444444; }
 
@@ -1084,7 +1084,7 @@ text-decoration: underline;
 
 .project-title canvas{
     padding-top:4px;
-    width:245px;
+    width:100%;
 }
 
 .member canvas{
