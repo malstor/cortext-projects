@@ -68,7 +68,12 @@
     u_list = members.find(id: {$nin:p_members}, $or: [name: {$regex: query, $options: 'i'}, email:{$regex: query, $options: 'i'}] ).fetch()
 
     if u_list
-      options.success(u_list)
+      #console.log _(u_list).size()
+      _(u_list).uniq (item, key)->
+        #console.log 'uniq ',item.id
+        return item.id
+      #console.log _(u_list).size()
+      options.success _(u_list).uniq()
     else
       console.log('error retrieving potiential project members')
 
