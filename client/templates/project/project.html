@@ -36,55 +36,43 @@
       <h4 id="remove-from-project">remove yourself from this project</h4>
     </div>
   </div>
-
-
 </div><!-- /project-meta -->
 
 <div class="container-main" id="main-project">
-
   <div id="add-element">
-
-    <form rel="{{ project.id }}" class="document">
-     
-     <button type="button" class="upload upload-corpus">
-      upload a new corpus
+    {{#if project.archive}}
+      <p class="archived"> This is an archived project : you must un-archive it to add elements.</p>
+    
+    {{else}}
+    <form rel="{{ project.id }}" class="document">           
+      <button type="button" class="upload upload-corpus">
+        upload a new corpus
+        <span></span>
+      </button>
+    </form>
+    <form rel="{{ project.id }}" class="analysis">          
+      <button type="button" class="start start-script">
+       start a new script
+       <span></span>
+     </button>
+    </form>       
+    <button type="button" class="message write-message">
+      write a comment
       <span></span>
     </button>
+    <div class="clear"></div>
+    <form rel="{{ project.id }}" class="message" id="addMessage">
+      <textarea id="new-message-body">Type your message for all your happy co-workers!</textarea>
+      <button class="add">add</button>
+    </form>
+    {{/if}}
+  </div>
+  <div class="trace"></div>
+  <form class="search-form" action="/">
+    <input type="text"  id="search" name="searchString"/>
   </form>
-
-  <form rel="{{ project.id }}" class="analysis">
-    
-    <button type="button" class="start start-script">
-     start a new script
-     <span></span>
-   </button>
- </form>
- 
- <button type="button" class="message write-message">
-   write a comment
-   <span></span>
- </button>
-</form>
-
-<div class="clear"></div>
-
-<form rel="{{ project.id }}" class="message" id="addMessage">
-  <textarea id="new-message-body">Type your message for all your happy co-workers!</textarea>
-  <button class="add">add</button>
-</form>
-
-</div>
-
-
-<div class="trace"></div>
-
-<form class="search-form" action="/">
-  <input type="text"  id="search" name="searchString"/>
-</form> 
-
-<div id="elements" class="project elements">
-</div><!-- /elements -->
-
+  <div id="elements" class="project elements">
+  </div><!-- /elements -->
 </div><!-- /col-main -->
 
 <div class="project-meta container-right">
