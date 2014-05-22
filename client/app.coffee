@@ -66,7 +66,6 @@
     if(user_id)
       #console.log("render user info", user_id)
       member = new models.member()
-      member.updateCurrentUser(Meteor.userId())
       member.on "member:loaded", () =>
         ui = new user_infos
           user: member
@@ -74,12 +73,14 @@
       member.get_by_id user_id
   
   userUpdate: (user_id)->
-    res = Meteor.call('updateProfile','true');
-   
-    member = new models.member()
-    member.updateCurrentUser(Meteor.userId())
+    Meteor.call('updateProfile',true, ()=>
+      new models.member()
+      .updateCurrentUser(Meteor.userId())
 
-    @navigate('/user/'+user_id, true)
+      @navigate('/user/'+user_id, true)
+    );
+    
+    
 
 
   home: () ->

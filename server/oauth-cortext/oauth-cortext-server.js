@@ -97,6 +97,7 @@ Cortext.retrieveCredential = function(credentialToken) {
 
 Meteor.methods({
   updateProfile: function(force_update){
+    console.log ('[profileUpdate] updateProfile called');
     var mUser = Meteor.users.findOne(this.userId);
     var accessToken = mUser.services.cortext.accessToken;
     var email = mUser.services.cortext.email;
@@ -107,6 +108,7 @@ Meteor.methods({
     {
       //@fixme : this will introduce a potiential difference between service.cortext and profile until the next login
       identity = getIdentity(accessToken);
+      console.log ('[profileUpdate] ====> return from getIdentity : ', identity);
       id = identity.id;
       email =  identity.email;
       username = identity.username;
@@ -129,5 +131,6 @@ Meteor.methods({
 
       }
     });
+    console.log('[profileUpdate] user profile has been updated :', Meteor.users.findOne(this.userId));
   }
 });
