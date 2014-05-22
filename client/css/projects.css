@@ -1481,6 +1481,7 @@ input:focus{
 
 #first-usage{display: none;}
 
+#first-connection p.welcome {font-weight: bold}
 #first-connection{
     background:#F6F7F8;
     border: 1px solid #e8eaed;

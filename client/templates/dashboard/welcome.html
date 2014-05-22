@@ -2,7 +2,10 @@
 
 <div id="first-connection">
     <h1>Welcome to Cortext Manager</h1>
-<p>This application allows you to upload data sets from disparate sources, initiate treatments (scripts) to perform remote analyses/maps of primary data, and share the results in collaborative projects.</p>
+{{#if registered}}
+            <p class="welcome">Your account has been created : thank you for registering ! You can now log in by clicking on the button on the left.</p>
+ {{/if}}
+
 <p>With Cortext Manager, you can do the following tasks :</p>
 <h2 id="icon-create">create a project</h2>
 <h2 id="icon-corpus">upload a corpus</h2>

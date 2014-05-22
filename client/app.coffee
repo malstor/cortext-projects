@@ -12,6 +12,7 @@
     'element/:type/:element/in/:project': 'element'
     'element/:type/:element': 'element'
     'job/:jobId/log/:project_id' : 'log'
+    'login/:registered': 'login'
     'login': 'login'
     'logout': 'logout'
     'auth/oauth': 'oauth'
@@ -26,16 +27,16 @@
         if(Meteor.user() )
           @user_id = parseInt(Meteor.user().profile.id)
           @user_infos(@user_id)
-          console.log 'logged in :', Meteor.user()
+          #console.log 'logged in :', Meteor.user()
         else
           if !Meteor.loggingIn()
-            console.log 'not logging in, displaying log in page'
+            #console.log 'not logging in, displaying log in page'
             @login()
             @navigate('/login', true)
     )
 
   checkLogin : (callback) ->
-    console.log "checkLogin"
+    #console.log "checkLogin"
     Deps.autorun () =>
       if(demo)
         @user_id = 1
@@ -43,12 +44,12 @@
         if(Meteor.user() )
           @user_id = parseInt(Meteor.user().profile.id)
           @user_infos(@user_id)
-          console.log 'logged in :', Meteor.user()
+          #console.log 'logged in :', Meteor.user()
           $('#header').show()
           callback()
         else
           if !Meteor.loggingIn()
-            console.log 'not logging in, displaying log in page'
+            #console.log 'not logging in, displaying log in page'
             @login()
             @navigate('/login', true)
 
@@ -84,9 +85,11 @@
   home: () ->
     @dashboard()
 
-  login: () ->
+  login: (registered) ->
+    #console.log "registered",registered
     new login
       el: '#main'
+      registered: registered
     .render()
 
   logout: () ->

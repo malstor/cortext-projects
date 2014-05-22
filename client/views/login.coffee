@@ -2,15 +2,18 @@
     events:
         "click #distante .login" : "loginWithCortext"
         "click .inscription" : "subscribe"
-
-    render: ()=>
+    initialize: ()=>
       if(@demo)
         app.navigate('/dashboard')
-      else
-        $('#header').hide()
-        $('#main').html Template.login()
-        
-        $('#first-usage').show()
+
+    render: ()->
+      $('#header').hide()
+      Template.welcome.registered = ()=>
+        @options.registered
+
+      $('#main').html Template.login()
+      
+      $('#first-usage').show()
 
 
     loginWithCortext: ()->
@@ -21,15 +24,16 @@
               #alert 'Error in login attempt !'
             else
               route = "/dashboard" #todo redirect to the asked route
-              console.log "logged !", Meteor.user()              
+              #console.log "logged !", Meteor.user()              
               if(Meteor.user())
                 res = Meteor.call('updateProfile');
-                Collections.updateCurrentUser(Meteor.userId())
+                if(Collections.updateCurrentUser)
+                  Collections.updateCurrentUser(Meteor.user()._id)
                 app.user_id =  parseInt(Meteor.user().profile.id)
                 $('#header').show()
                 app.navigate(route,{trigger: true})
     
     subscribe: ()->
-        window.location = dashboardConfig.services.Identity.urlSubscribe+"?callback="+dashboardConfig.common.callback
+        window.location = dashboardConfig.services.Identity.urlSubscribe+"?callback="+dashboardConfig.common.callback+'/login/1'
 
     
