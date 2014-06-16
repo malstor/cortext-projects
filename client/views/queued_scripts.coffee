@@ -30,7 +30,9 @@ Meteor.subscribe "elements"
             @render_item script.id
         else      
           _(elements.find({type: 'Analysis', author: parseInt(Meteor.user().profile.id)}, sort: {date : -1}, limit: 20 ).fetch()).each (script)=>
-            @render_item script.id
+            script_project = projects.findOne({id: script.project})
+            if script_project
+              @render_item script.id unless script_project.archive
          # console.log "render_item ", script.id
           
 
