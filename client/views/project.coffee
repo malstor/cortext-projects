@@ -10,7 +10,7 @@ Meteor.subscribe "members"
     @set_forms project
     @set_actions project
 
-  set_forms :(project)->
+  set_forms :(project)->    
     #upload
     $("form .upload").click ->
       parameters =
@@ -116,6 +116,21 @@ Meteor.subscribe "members"
         $elements.css('max-height',maxHeight)
         $comments.css('max-height',maxHeight)
         $target.attr('title', "view all elements")
+
+    #edit informations
+    $('#descriptionEdit').on "click", (evt)->
+
+      evt.preventDefault()
+     
+      $('#descriptionContainer').fadeOut()
+      $('#descriptionEditForm').html Template.editProject({p: project.attributes})
+
+      $('#saveInformations').on "click", (evt)->
+        evt.preventDefault()
+        $('#descriptionEditForm').fadeOut()
+        project.setInformations($("#projectTitle").val(), $("#projectDescription").val())
+        $('#descriptionContainer').fadeIn()
+
 
 
   set_select_type :(project)->

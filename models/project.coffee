@@ -144,5 +144,12 @@
     if(p?)
       return  _(p.members).contains(parseInt(user_id))
 
+  setInformations: (title, description)->
+    p = projects.findOne({id: @attributes.id})
+    if(p)
+      projects.update p._id, {$set: {title: title, description: description}}
+      
+
+
 
 

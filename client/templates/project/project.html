@@ -79,7 +79,13 @@
 
  <div class="info">
   <h3>informations</h3>
+  <div id="descriptionContainer">
+    <p id="description">{{project.description}}</p>
+    <a href="#" id="descriptionEdit">Edit Project informations</a>
+  </div>
+  <div id="descriptionEditForm">
 
+  </div>
   <div class="date_created date">created: <span>{{date_short project.date_created }}</span></div>
   <div class="date_updated date">updated: <span>{{date_short project.date_updated }}</span></div>
   <div class="archived">
@@ -92,4 +98,15 @@
 </div>
 
 </div><!-- /project-meta2 -->
+</template>
+
+<template name="editProject">
+  <form id="frmEditProjectInfos">
+    
+    <input type="text" name="projectTitle" id="projectTitle" placeholder="project's title" value="{{p.title}}" />
+    
+    <textarea name="projectDescription" id="projectDescription" rows="4" cols="20">{{#if p.description}}{{p.description}}{{else}}type a description here{{/if}}
+    </textarea>
+    <a href="#" id="saveInformations">Save </a>
+  </form>
 </template>
