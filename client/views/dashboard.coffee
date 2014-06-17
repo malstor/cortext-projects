@@ -35,6 +35,14 @@
       e.preventDefault()
       introJs().start()
 
+    $('#fileManager').on "click", (e)->
+      e.preventDefault()
+      parameters =
+        token: Meteor.user().profile.accessToken
+        callback_url: dashboardConfig.services.Storage.callback+'/'
+      #console.log $.param(parameters, true)
+      window.location = dashboardConfig.services.Storage.url + "?" + $.param(parameters)
+
 
     $("#project-new button").on "click", (e) ->
       e.preventDefault()
