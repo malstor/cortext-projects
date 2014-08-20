@@ -316,6 +316,7 @@ Meteor.subscribe "members"
     #console.log 'project render_participants', p_members
     _(p_members).each (m_id)=>    
       m = members.findOne( { id: parseInt(m_id) })
+      return unless m
       #console.log m_id
       m.participation = project.get_participation m_id
       $("#members .list").append Template.project_participant m
