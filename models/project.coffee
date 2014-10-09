@@ -68,7 +68,12 @@
     u_list = members.find(id: {$nin:p_members}, $or: [name: {$regex: query, $options: 'i'}, email:{$regex: query, $options: 'i'}] ).fetch()
 
     if u_list
-      options.success(u_list)
+      #console.log _(u_list).size()
+      _(u_list).uniq (item, key)->
+        #console.log 'uniq ',item.id
+        return item.id
+      #console.log _(u_list).size()
+      options.success _(u_list).uniq()
     else
       console.log('error retrieving potiential project members')
 
@@ -103,8 +108,19 @@
           @set_permalink()          
           options.success(id)
 
+  archive: () ->
+    p = projects.findOne({id: @attributes.id})
+    if(p)
+      projects.update p._id, {$set: {archive: true}}
+      console.log 'archived prj#',p.id
+
+  unArchive: () ->
+    p = projects.findOne({id: @attributes.id})
+    if(p)
+      projects.update p._id, {$set: {archive: false}}
+
   searchElements: (searchString) ->
-    searchReg = new RegExp(searchString.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, "\\$&"))
+    searchReg = RegExp.searchReg(searchString)
     @elements = elements.find({ 
       project: @attributes.id, 
       $or: 
@@ -122,4 +138,18 @@
     @set_elements()
 
     @trigger "project:elements:changed"
+
+  isMember: (project_id, user_id)->
+    p = projects.findOne({id : parseInt(project_id)})
+    if(p?)
+      return  _(p.members).contains(parseInt(user_id))
+
+  setInformations: (title, description)->
+    p = projects.findOne({id: @attributes.id})
+    if(p)
+      projects.update p._id, {$set: {title: title, description: description}}
+      
+
+
+
 

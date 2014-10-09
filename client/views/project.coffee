@@ -10,16 +10,16 @@ Meteor.subscribe "members"
     @set_forms project
     @set_actions project
 
-  set_forms :(project)->
+  set_forms :(project)->    
     #upload
     $("form .upload").click ->
       parameters =
         context:
           app: 'dashboard' #todo change to config value
-          project_id: $(this).attr("rel")
+          project_id: project.get('id')
           source: 'uploadedCorpus'
         token: Meteor.user().profile.accessToken
-        callback_url: dashboardConfig.services.Storage.callback+'/project/' + project.get('id')
+        callback_url: dashboardConfig.services.Storage.callback+'/project/' + project.get('id') + '/uploadedCorpus'
         callback_json: dashboardConfig.services.Api.url+"/project/"+project.get('id')+"/documents"
 
       #console.log $.param(parameters, true)
@@ -45,16 +45,50 @@ Meteor.subscribe "members"
     #action delete on element
     $('.delete').on "click", (evt) =>
       evt.preventDefault()
-      $file = $(evt.target)
-      hash = $file.attr("data-id");
-      if confirm "Are you sure ? This will delete the file permanently !"
-        parameters = 
-          token: Meteor.user().profile.accessToken
+      $target = $(evt.target)
+      permalink = $target.attr("data-permalink")
+      result_id = $target.attr("data-hash")
+      element_id = $target.attr("rel")
+      type = $target.attr("data-type")
+      elm = new models.element()
+      console.log "element to be removed : ", element_id, "permalink : ", permalink, "type :", type
+      if(permalink?) #if permalink : delete a file
+        if confirm "Are you sure ? This will delete the file permanently !"
+          parameters = 
+            token: Meteor.user().profile.accessToken
 
-        HTTP.get dashboardConfig.services.Storage.url+dashboardConfig.services.Storage.getDocument+'/'+hash+'/trash?' + $.param(parameters), (data)=>
-          #//@todo : deal with the local database element : mark it as deleted ? delete it ? ...
-          @options.project.trigger('project:elements:changed')
-          $("#"+hash+" a").css('color', '#f00').html('(deleted)');
+          HTTP.get permalink+'/trash?' + $.param(parameters), (error,data)=>
+            #//@todo : deal with the local database element : mark it as deleted ? delete it ? ...
+            if error
+              console.log 'error deleting file ! ',error
+              alert "There was an error deleting your file. Please try again later" #fixme : this should be a nice message, not ugly alert...
+            else
+              switch type
+                when 'Document' 
+                  elm.delete(element_id)    
+                  $("#Document-"+element_id).fadeOut().remove()
+                  console.log "removing document ", element_id
+                when 'Result'
+                  elm.remove_result(result_id)
+                  $("#"+result_id).parent().remove()
+                  console.log "removing result ", result_id
+
+      else #if not permalink then it is an element
+        #for now only message suppression are handled here
+        if(type=="Message")
+          elm.delete(element_id)
+          $("#Message-"+element_id).remove()
+          console.log "removing message ", element_id
+
+      
+      @options.project.trigger('project:elements:changed')
+    
+    $("#unarchive").on "click", (evt)->
+      project.unArchive()
+
+    $("#archive").on "click", (evt)->
+      project.archive()
+
 
     #search bar
     $("#search").on "keyup", (evt)->
@@ -65,7 +99,38 @@ Meteor.subscribe "members"
           project.trigger 'project:elements:changed'
         ),
         300
-        
+
+    #view-all
+    $('.element .arrow').on "click", (evt) ->
+      $target = $(evt.target)
+      $idElement = $target.attr('rel')
+      $elements = $("#results-"+$idElement)
+      $comments = $("#comments-"+$idElement)
+      maxHeight = "150px"
+      console.log 'element', $elements.css('max-height')
+      if($elements.css('max-height')==maxHeight or $comments.css('max-height')==maxHeight)
+        $elements.css('max-height','none')
+        $comments.css('max-height','none')
+        $target.attr('title', "hide elements")
+      else
+        $elements.css('max-height',maxHeight)
+        $comments.css('max-height',maxHeight)
+        $target.attr('title', "view all elements")
+
+    #edit informations
+    $('#descriptionEdit').on "click", (evt)->
+
+      evt.preventDefault()
+     
+      $('#descriptionContainer').fadeOut()
+      $('#descriptionEditForm').html Template.editProject({p: project.attributes})
+
+      $('#saveInformations').on "click", (evt)->
+        evt.preventDefault()
+        $('#descriptionEditForm').fadeOut()
+        project.setInformations($("#projectTitle").val(), $("#projectDescription").val())
+        $('#descriptionContainer').fadeIn()
+
 
 
   set_select_type :(project)->
@@ -78,13 +143,14 @@ Meteor.subscribe "members"
       $("#add-element form." + $button.attr("rel")).slideToggle().toggleClass "on" 
 
   set_add_message :(project)->
-    $("form.message").css "display", "none"
-
-    $("button.write-message").on "click", ()->
-      $("form.message").fadeToggle 'fast'
-
-    $('#main').on "click","a.display-comment" , (evt)->
+    $("button.write-message").on "click", (evt)->
       evt.preventDefault()
+      evt.stopImmediatePropagation()
+      $("#add-element form.message").fadeToggle 'fast'
+
+    $('#main a.display-comment').on "click", (evt)->
+      evt.preventDefault()
+      evt.stopImmediatePropagation()
       $linkComment = $(evt.target)      
       idElement = $linkComment.attr('rel')
       $("#comment-"+idElement).fadeToggle 'fast'
@@ -211,17 +277,32 @@ Meteor.subscribe "members"
 
     _(project.elements).each (e)=>
       element.e = _(e).clone()
-      #console.log e.id
+      # console.log e.id
       m = new models.member()
       m.get_by_id(e.author)
       m.set_gravatar()
       element.author = m.attributes
       #console.log 'comments : ', element.comments
+
       if(!_.isUndefined(Template[ e.type.toLowerCase() ]))
         #console.log "rendering el ", e.id
         $("#elements").append Template[ e.type.toLowerCase() ] element
       else
         $("#elements").append Template.element element
+
+      #show arrow if overflow on files or comments
+      eId = "#"+e.type+"-"+e.id
+      $elmFiles = $(eId+" .files")[0]
+      $elmComment = $(eId+" .comment-container")[0]
+      $elmArrow = $(eId+" .arrow")
+      $elmArrow.hide()
+      if($elmFiles?) and $elmFiles.offsetHeight < $elmFiles.scrollHeight
+           $elmArrow.show()
+      if($elmComment?) and $elmComment.offsetHeight < $elmComment.scrollHeight
+           $elmArrow.show()
+           
+
+
 
 
 
@@ -235,6 +316,7 @@ Meteor.subscribe "members"
     #console.log 'project render_participants', p_members
     _(p_members).each (m_id)=>    
       m = members.findOne( { id: parseInt(m_id) })
+      return unless m
       #console.log m_id
       m.participation = project.get_participation m_id
       $("#members .list").append Template.project_participant m
@@ -262,12 +344,21 @@ Meteor.subscribe "members"
       @render_scripts project
       @set_events project
       activate_button "#add-element .message textarea", "#add-element .message .add"
-      activate_button "#add-members input", null
+      activate_button "#add-members input", null     
+      scrollToHash() #noting to here but very handy :)
 
     project.on "project:elements:changed", ()=>
+      scroll = $("body").scrollTop()
       @render_elements project
       @render_participants project
       @render_scripts project
+      @set_events project
+      if(scroll?)
+        $("body").scrollTop(scroll)
+      else
+        scrollToHash() #noting to here but very handy :)
+
+    
 
 
     #@options.project.trigger('project:elements:changed')

@@ -11,22 +11,26 @@ Meteor.subscribe "projects"
 
       @$el.find('.project-'+project_id).remove()
       @$el.append t
+      @render_composition(p)
 
     p.on "project:elements:changed", ()=>
-      $("#project-"+project_id+" .participation").empty()
-
-      new participation
-         el: '#projects-simple .project-'+project_id+' .participation'
-         composition: p.composition
-      .render()
+      @render_composition(p)
 
     p.get_by_id(project_id)
+
+  render_composition: (p)->
+    $("#project-simple .project-"+p.id+" .participation").empty()
+    # console.log 'rendering composition', p.composition
+    new participation
+       el: '#projects-simple .project-'+p.id+' .participation'
+       composition: p.composition
+    .render()
 
   render: ()->
     Deps.autorun ()=>
       @$el.empty()
       if Meteor.userId()
-        _(projects.find({members: parseInt(app.user_id)}).fetch()).each (project)=>
+        _(projects.find({members: parseInt(app.user_id)}, sort: {archive: 1, date_created: -1}).fetch()).each (project)=>
           @render_item project.id
 
 @project_list_with_elements = Backbone.View.extend
@@ -42,6 +46,13 @@ Meteor.subscribe "projects"
         composition: []
       @render_elements p
       @render_composition p
+
+      $('a.delete').on "click", (evt)=>
+        evt.preventDefault()
+        evt.stopImmediatePropagation()
+        #console.log "archiving #",p.id
+        p.archive()
+        @$el.find('#project-'+p.get('id')).remove()
 
     p.on "project:elements:changed", ()=>
       @render_elements p
@@ -85,7 +96,14 @@ Meteor.subscribe "projects"
 
   render: ()->
     Deps.autorun ()=>
-      _(projects.find({members : parseInt(app.user_id)}).fetch()).each (project)=>
+      Meteor.subscribe("projects")
+      userProjects = projects.find {members : parseInt(app.user_id), archive: {$ne:true}}, sort: {date_created : -1}
+
+      # if userProjects.count() == 0
+      #   $("#first-usage").show()
+      # else
+      #   $("#first-usage").hide()
+      _(userProjects.fetch()).each (project)=>
         #console.log 'loading project ', project.id
         p = new models.project()
         p.get_by_id project.id

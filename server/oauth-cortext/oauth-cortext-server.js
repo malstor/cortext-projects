@@ -32,6 +32,7 @@ Oauth.registerService('cortext', 2, null, function(query) {
     options: {profile: {name: identity.name, username: identity.username, email: identity.email, id: identity.id, accessToken : accessToken}}
   };
   console.log("[oauth] id complete, returning service object", serviceObject);
+  
   return serviceObject;
 });
 
@@ -72,7 +73,7 @@ var getTokens = function (query) {
   }
   else{
     console.log("[oauth] error retrieving accessToken :", response);
-  }  
+  }
 };
 
 var getIdentity = function (accessToken) {
@@ -93,3 +94,43 @@ var getIdentity = function (accessToken) {
 Cortext.retrieveCredential = function(credentialToken) {
   return Oauth.retrieveCredential(credentialToken);
 };
+
+Meteor.methods({
+  updateProfile: function(force_update){
+    console.log ('[profileUpdate] updateProfile called');
+    var mUser = Meteor.users.findOne(this.userId);
+    var accessToken = mUser.services.cortext.accessToken;
+    var email = mUser.services.cortext.email;
+    var username = mUser.services.cortext.username;
+    var name = mUser.services.cortext.name;
+    var id = mUser.services.cortext.id;
+    if(force_update)
+    {
+      //@fixme : this will introduce a potiential difference between service.cortext and profile until the next login
+      identity = getIdentity(accessToken);
+      console.log ('[profileUpdate] ====> return from getIdentity : ', identity);
+      id = identity.id;
+      email =  identity.email;
+      username = identity.username;
+      name = identity.name;
+
+    }
+
+    Meteor.users.update(this.userId, {$set:
+      {
+        'profile.id' : id,
+        'profile.name' : name,
+        'profile.email': email,
+        'profile.accessToken' : accessToken,
+        'profile.username' : username,
+        'services.cortext.id' : id,
+        'services.cortext.name' : name,
+        'services.cortext.email': email,
+        'services.cortext.accessToken' : accessToken,
+        'services.cortext.username' : username,
+
+      }
+    });
+    console.log('[profileUpdate] user profile has been updated :', Meteor.users.findOne(this.userId));
+  }
+});

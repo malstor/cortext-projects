@@ -1,6 +1,7 @@
 <head>
 	<meta charset='utf-8'>
 	<title></title>
+    <link rel="icon" sizes="16x16 32x32" href="/favicon.ico">
 </head>
 
 <body>
@@ -35,30 +36,6 @@ project “algues vertes” </p>
 </div> <!--fin du conteneur principal (englobe menu)-->
 
 
-<div class="help">
-  <h3>You need help ?</h3>
-  <h4><a href="http://docs.cortext.net" target="_blank">go to cortext documentation website</a></h4> 
-  <div id="separator"></div>
-  <div id="help-question">         
-    <h4><a id="question" href="http://docs.cortext.net/forums/forum/community-support/" title="Login">you have any question ? Ask it on our forum</a></h4>    
-    <div id="question-panel">
-      <form action="post">
-        <p>   
-          <textarea id="mon_textarea" cols="7"></textarea>
-          <button class="send-question">send question</button>
-        </p>
-      </form>
-    </div>
-  </div><!--fin de aide-question-->  
-</div><!--fin de aide-->
-
-
-<div style="clear:both;"></div>
-<div class="trigger" data-step="7" data-intro="Help ! You need some more referenced documentation, or ask a particular question in our forum ? Here it is." data-position="left">
-  <span class="letter">h</span>
-  <span class="letter">e</span>
-  <span class="letter">l</span>
-  <span class="letter">p</span>
-</div>
+{{>help}}
 
 </body>

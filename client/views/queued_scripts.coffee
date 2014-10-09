@@ -15,6 +15,7 @@ Meteor.subscribe "elements"
       @$el.append t
 
 
+
     e.get_by_id(script_id)
 
   render: ()->
@@ -25,11 +26,13 @@ Meteor.subscribe "elements"
         if(@options.project)
           project = @options.project.attributes
           #console.log "display scripts for project", project
-          _(elements.find({type: 'Analysis', author: {$in: project.members}, project: parseInt(project.id)}).fetch()).each (script)=>
+          _(elements.find({type: 'Analysis', author: {$in: project.members}, project: parseInt(project.id)}, sort: {date : -1},  limit: 20).fetch()).each (script)=>
             @render_item script.id
         else      
-          _(elements.find({type: 'Analysis', author: parseInt(Meteor.user().profile.id)}).fetch()).each (script)=>
-            @render_item script.id
+          _(elements.find({type: 'Analysis', author: parseInt(Meteor.user().profile.id)}, sort: {date : -1}, limit: 20 ).fetch()).each (script)=>
+            script_project = projects.findOne({id: script.project})
+            if script_project
+              @render_item script.id unless script_project.archive
          # console.log "render_item ", script.id
           
 
@@ -38,5 +41,8 @@ Meteor.subscribe "elements"
         s = parseInt($(this).attr('data-progress') * t / 100)
         # console.log 'refreshing progress ', $(this)
         $(this).css "width", s + "px" #@todo remove the "+20" : just for demo...
+
+      $('.name-script').on 'click', ()->
+        scrollToHash()
             
         

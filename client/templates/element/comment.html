@@ -1,5 +1,5 @@
 <template name="comment">
-  <div class="comment-container">
+  <div class="comment-container" id="comments-{{e.id}}">
     {{#each e.comments}}
       {{> comment-item}}
     {{/each}}
@@ -13,12 +13,15 @@
       <a rel="{{e.id}}" href="#" class="display-comment">comment...</a>{{#if size e.comments}}<span class="comment-number active">{{size e.comments}}</span>{{else}}<span class="comment-number"></span>{{/if}}
     </p>
   </div>
-  <div class="arrow"></div>
+  <div class="arrow" rel="{{e.id}}" title="view all elements"></div>
 </template>
 
 <template name="comment-item">
-  <div class="document-comment">
+  <div class="document-comment" id="Message-{{id}}">
       <div class="icon img-message"> </div>
+      <div class="actions">
+        <a class="icon delete" title="delete comment" data-type="Message" rel="{{id}}"></a>
+      </div>
       <div class="body-mess"> {{content}}
         <span class="date info-comment">
           <a href="/user/{{author.id}}">{{ author.name }} - </a>      

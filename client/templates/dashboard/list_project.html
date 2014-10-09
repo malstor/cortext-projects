@@ -1,9 +1,12 @@
 <template name="dashboard_list_project">
 <div id="project-{{ project.id }}" class="project">
 
-	<h2><a href="/project/{{ project.id }}">{{ project.title }}</a></h2>
-
-	<div class="participation"></div>
+	<h2>
+        <a href="/project/{{ project.id }}">{{ project.title }}</a>
+        <a href="#" class="icon delete" title="archive this project" rel="{{project.id }}"></a>
+    </h2>
+    <span class="members-count">{{size project.members }}</span>
+    <div class="participation"></div>
 
 	<div class="elements">
 	</div><!-- /elements-->
@@ -12,8 +15,8 @@
 
 <template name="project_simple">
 		<li data-project="{{ p.id }}" class="project-title project-{{ p.id }}">
-		<a href="/project/{{p.id }}">{{ p.title }}</a>
-		<span class="members-count">{{size members }}</span>
+		<a href="/project/{{p.id }}">{{#if p.archive}}* {{/if}}{{ p.title }}</a>
+		<span class="members-count">{{size p.members }}</span>
 		<div class="participation"></div>
 	</li>
 

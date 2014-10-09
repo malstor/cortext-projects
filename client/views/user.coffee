@@ -68,8 +68,13 @@
 
   render: ()->
     #console.log 'user.render'
+    @u.set
+      urlEdit : dashboardConfig.services.Identity.urlEdit+'/'+@u.id+'/edit?callback_url='+dashboardConfig.common.callback+"/user/"+@u.id+"/update"
+      
     $("#main").html Template.user
       user: @options.user.attributes
+
+    
 
     @render_counter()
     @render_projects()

@@ -53,7 +53,7 @@ server = new Server(mongoHost, mongoPort, {w: 1}, {auto_reconnect: true});
 //     }
 // });
 
-//_ = require("underscore");
+_ = require("underscore");
 
 /***** Tools ***************************/
 
@@ -92,7 +92,7 @@ function Storage(){
             collection.find(query, fields).toArray(function(err, items) {
                 if (err)
                    throw(new Error(err));
-                console.log(items);
+                //console.log(items.size);
                 res.send(items);
                 //db.close();
             });
@@ -194,8 +194,13 @@ module.exports = {
 
     getElements : function(req, res){
         logReferrer(req);
-        console.log('--> [GET] /elements/');
-        storage.getAll('elements', {}, {}, res);
+        
+        filters = {};
+        if(req.query){
+            _(filters).extend(req.query);
+        }
+        console.log('--> [GET] /elements/', filters);
+        storage.getAll('elements', filters, {}, res);
     },
 
     getOneElement : function(req, res){
@@ -246,7 +251,12 @@ module.exports = {
     getProjectDocuments : function(req, res){
         logReferrer(req);
         console.log('--> [GET] /project/'+req.params.project_id+'/documents');
-        storage.getAll('elements', {project: parseInt(req.params.project_id)}, {}, res);
+        console.log('--> params : ',req.query);
+        //building query
+        filters = {project: parseInt(req.params.project_id), type:"Document"};
+        if(req.query)
+            _(filters).extend(req.query)
+        storage.getAll('elements', filters, {}, res);
     },
 
     getOneDocument : function(req, res){

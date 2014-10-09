@@ -3,11 +3,11 @@
   <div class="element message user-{{ author.id }}" id="Message-{{ e.id }}" rel="{{e.id}}">
 
     <div class="info">
-      <span class="type message"><a href="#"> {{author.name}}</a></span>
+      <span class="type message"><a href="/project/{{e.project}}#Message-{{e.id}}"> {{author.name}}</a></span>
 
     <span class="date">
     <a href="/user/{{author.id}}"><img class="gravatar" src="{{author.gravatar}}" /> <!--{{author.name}}--> </a>
-    <a href="{{ e.permalink }}">{{date_short e.date }}</a>
+    <a name="message-{{e.id}}">{{date_short e.date }}</a>
     </span>
            
     </div><!-- /info -->
@@ -21,7 +21,7 @@
 
             <div class="actions">               
   <!--                 <a class ="icon view" title="view file">i</a> -->
-                  <a class="icon delete" title="delete file"></a>
+                  <a class="icon delete" title="delete message and comments" rel="{{ e.id }}" data-type="Message"></a>
             </div>
   </div>
   {{>comment}}

@@ -30,6 +30,18 @@
           .attr('disabled',true)
           .addClass('inactive')
           .removeClass('new')
+    
+    $('a.first-visit').on "click", (e)->
+      e.preventDefault()
+      introJs().start()
+
+    $('#fileManager').on "click", (e)->
+      e.preventDefault()
+      parameters =
+        token: Meteor.user().profile.accessToken
+        callback_url: dashboardConfig.services.Storage.callback+'/'
+      #console.log $.param(parameters, true)
+      window.location = dashboardConfig.services.Storage.url + "?" + $.param(parameters)
 
 
     $("#project-new button").on "click", (e) ->
@@ -56,8 +68,9 @@
         ),
         100
 
-  search_projects: (searchString)->
-    searchReg = new RegExp(searchString.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, "\\$&"))
+  search_projects: (searchString)->        
+     
+    searchReg = RegExp.searchReg(searchString)
     projectList = projects.find({
       $or: 
         [
@@ -65,9 +78,9 @@
           {'date_created'   : searchReg}
         ] 
       }, {id:1}).fetch()
-    #console.log "Search for "+searchReg+"-hide all"
+    console.log "Search for "+searchReg+"-hide all"
     $("#timeline .project").hide()
-    #console.log("project found : ", projectList)
+    console.log("project found : ", projectList)
     _(projectList).each (p)=>
       #console.log 'project match : ', "#project-"+p.id
       $("#project-"+p.id).fadeIn()

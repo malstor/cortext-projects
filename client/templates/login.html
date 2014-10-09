@@ -1,16 +1,24 @@
 <template name="login">
-	<div id="welcome"> 
-            <h1>Welcome to Collaborative Platform</h1>
-            <img src="/images/logo_cortext2.png" alt="#" />
+    
+
+
+	<div id="welcome">
+
+    <img src="/images/logo_cortext2.png" alt="#" />
 
         <div id="distante">
             <button class="login">log in</button>
         </div>
         <div id="account">you don't have a account ?</div>
         
+
         <div id="inscription"> 
             <button class="inscription">subscribe</button>
         </div>
-
     </div>
+
+    <div id="first-usage">
+            {{>welcome}}
+    </div>
+
 </template>

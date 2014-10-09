@@ -39,7 +39,7 @@
     margin-top: 12px;
     margin-bottom: -27px;
     text-align: justify;
-    width: 670px;
+    width: 625px;
     line-height: 18px;
 }
 .message .message-body .body-mess p{
@@ -66,6 +66,9 @@
 #main-project .comment-container{
 	border:6px solid #F6F0FF;
 	width: 738px; 
+    max-height: 150px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 #main-project .comment-container .info-comment{
@@ -95,7 +98,7 @@
     margin-top: 12px;
     margin-bottom: 8px;
     text-align: justify;
-    width: 670px;
+    width: 630px;
     line-height: 18px;
 }
 
@@ -103,7 +106,30 @@
     background: url("/images/img-message.png") no-repeat scroll center center transparent;
     margin-left:2px;
 }
+
 form.message {display: none}
+
+.project .icon {
+/*    background-color: #EEF2F6;
+    border: none;
+    color: #909090;
+    float: left;
+    font: normal 12px/40px Arial, sans-serif;*/
+    height: 18px;
+    margin:0;
+    text-align: center;
+    width: 28px;
+}
+
+.project .delete {
+    background: url("/images/archived.png") no-repeat scroll center center transparent;
+}
+
+.project .delete:hover {
+    background: url("/images/archived-hover.png") no-repeat scroll center center transparent;
+}
+
+
 
 #dashboard .message-write{
     display: none;
@@ -190,6 +216,14 @@ form.message {display: none}
     width: 750px;
 }
 
+.document .arrow:hover, .message .arrow:hover, .analysis .arrow:hover{
+    background: url("/images/arrow-hover.png") no-repeat 362px 0px #fff;
+    height: 18px;
+    margin-top:0px;
+    width: 750px;
+    cursor: pointer;
+}
+
 #dashboard .arrow{
     display: none;
 }
@@ -197,8 +231,8 @@ form.message {display: none}
 
 #main-project .element {
     width: 750px;
-    margin-left: 8px;
-    margin-top: 12px;
+    margin-left: 16px;
+    margin-top: 15px;
     background-color:#E6E6E6; 
 }
 
@@ -396,7 +430,9 @@ form.message {display: none}
     margin:2px 0px 2px 8px;
     text-align: center;
     width: 28px;
+
 }
+.actions .icon { cursor: pointer;}
 .element .view {
     background: url("/images/icon-view.png") no-repeat scroll center center transparent;
 }
@@ -416,7 +452,7 @@ form.message {display: none}
     background: url("/images/img-fichiers.png") no-repeat scroll center center transparent;
 }
 
-.analysis .file .img-txt, .analysis .file .img-csv, .document .document-body .img-csv, .document .document-body .img-zip, 
+.analysis .file .img-txt, .analysis .file .img-csv,.analysis .file .img-zip, .document .document-body .img-csv, .document .document-body .img-zip, 
 .document .document-body .img-xlsx{
     background: url("/images/img-csv.png") no-repeat scroll center center transparent;
 }
@@ -461,6 +497,9 @@ form.message {display: none}
 
 .element .actions {
     float: right;
+}
+.comment-container .actions {
+    height: 15px;
 }
 
 #main-project .element .actions {
@@ -519,16 +558,22 @@ form.message {display: none}
     background:#E62E60 url(/images/docs.png) no-repeat 1px 3px;
 }
     
-#dashboard .project canvas { 
-	margin-top:17px;  }
+#dashboard .project canvas { margin-top:17px; margin-left: 25px }
 
 #dashboard .project .participation { 
     float : right; 
     width : 200px;
-    height : 30px; 
-    display : block; 
+    height : 10px; 
+    display : inline-block; 
     margin-bottom :5px;
-    background :url('/images/user-ptit.png') no-repeat 175px 1px; 
+}
+#dashboard .project span.members-count{
+    float: right;
+    font: normal 11px Arial, sans-serif;
+    color: #DFE0E3;
+    margin-top: 2px;
+    padding-left: 18px;
+    background: url('/images/user-ptit.png') no-repeat 0px 0px;
 }
 
 #dashboard .project h2, #dashboard .project  h2 a {
@@ -602,7 +647,7 @@ form.message {display: none}
 	background:#DCDCDC;
     height: 1px;
     margin-top: 20px;
-    margin-left: 18px;
+    margin-left: 16px;
 }
 
 #main-project .trace{
@@ -612,6 +657,8 @@ form.message {display: none}
 
 
 /*-------------------USER PAGE--------------------------*/
+
+#main .user{margin-left: 280px;}
 
 .user.profile .info{
     border: 1px solid #DCDCDC;
@@ -652,6 +699,45 @@ form.message {display: none}
     margin-left:2px;
     color: #909090;
     font: normal 15px Arial, sans-serif;
+}
+
+#edit-user {
+background: url("/images/edit.png") no-repeat 5px 0px;
+width: 30px;
+height: 25px;
+margin-top: 38px;
+padding-left: 32px;
+width: 30px;
+}
+
+#edit-user a {
+color: #909090;
+font: 14px Arial,sans-serif;
+text-decoration: none;
+}
+
+#edit-user a:hover {
+color: #666667;
+text-decoration: underline;
+}
+
+#log-out {
+background: url("/images/power.png") no-repeat 2px 0px;
+width: 100px;
+height: 40px;
+padding-left: 33px;
+padding-top: 6px;
+}
+
+#log-out a {
+color: #909090;
+font: 14px Arial,sans-serif;
+text-decoration: none;
+}
+
+#log-out a:hover {
+color: #666667;
+text-decoration: underline;
 }
 
 #indicators {
@@ -875,7 +961,11 @@ form.message {display: none}
     font-style: normal;
     line-height: 20px;
     margin-left: 5px;
+    text-decoration: none;
     }
+.container-left .script .name-script:hover {
+    color: #444444;
+}
 
 .container-left .script .hours{
     color: #909090;
@@ -889,6 +979,9 @@ form.message {display: none}
 .container-left .script h3 {background : #27AD19 url('/images/analysis-queued.png') no-repeat 230px 6px;
 }
 
+.dashboard-projects {
+    height: 50%;
+}
 .dashboard-projects a {
     margin-bottom:8px;
 }
@@ -896,7 +989,7 @@ form.message {display: none}
 .dashboard-projects li {
    	margin-bottom : 5px;
 }
-
+.dashboard-projects .projects {height: 250px; overflow-y: auto; overflow-x: hidden; padding-right: 15px}
 .dashboard-projects .projects li:hover { cursor : pointer; }
 .dashboard-projects .projects li:hover * { color: #444444; }
 
@@ -909,10 +1002,10 @@ form.message {display: none}
     background : url('/images/user-ptit.png') no-repeat 0px 0px;
 }
 
-
+/*
 #dashboard-meta .dashboard-projects{
     width:240px;
-}
+}*/
 
 #dashboard-meta #link-dashboard {
     margin-top: 25px;
@@ -944,12 +1037,18 @@ form.message {display: none}
     cursor: pointer;
 }
 
-.project-meta .date {
+.project-meta *{
     font: normal 12px/1.2em Arial, sans-serif;
     color: #909090;
+}
+.project-meta a:hover{
+    color: #444444;
+    cursor: pointer;
+}
+.project-meta div {
+    
     margin-top:5px;
-    margin-left:5px;
-}        
+}
 
 .participation .data {
     font: normal 12px/1.2em Arial, sans-serif;
@@ -991,7 +1090,7 @@ form.message {display: none}
 
 .project-title canvas{
     padding-top:4px;
-    width:245px;
+    width:100%;
 }
 
 .member canvas{
@@ -1011,14 +1110,14 @@ form.message {display: none}
 
 .container-main #project-new input[type=text]{ width : 605px; border : 1px solid #DCDCDC; height : 34px; padding : 0 5px; font : normal 14px arial; color : #B1B1B1; border-radius:3px; margin-top:10px; }
 .container-main .search-form input[type=text]{  background: url("/images/loupe.png") no-repeat 385px 8px; width : 400px; border : 1px solid #DCDCDC; height : 34px; padding : 0 5px; font : normal 14px arial; color : #DCDCDC;
- margin-top: 20px; margin-left: 18px; margin-bottom: 10px; border-radius:3px;}
+ margin-top: 20px; margin-left: 16px; margin-bottom: 10px; border-radius:3px;}
 .container-left input[type=text].focus, .container-main input[type=text].focus { color : #6E6E6E !important; }
 
 .container-main textarea { font : normal 14px arial; color : #B1B1B1; }
 .container-main textarea.focus { color : #6E6E6E; }
 
 #add-element { position: relative; top : -14px; margin-bottom: -10px;}
-
+#add-element p.archived{ margin-top: 10px}
 #add-element .message{  border : 1px solid #EEF2F6; border-top : 0; background : #F6F0FF; padding : 2px; width : 750px; margin-left : 8px; overflow: auto; }
 #add-element textarea { display : block; width : 736px; padding : 5px; height : 161px; border-radius : 2px; border : 1px solid #EEF2F6; resize:none; }
 #add-element form .add { float : right; }
@@ -1046,7 +1145,7 @@ form.message {display: none}
     color: #FFFFFF;
     height: 34px;
     margin-bottom: 10px;
-    margin-left: 18px;
+    margin-left: 25px;
     margin-top: 25px;
     padding-top: 6px;
     width: 220px;
@@ -1105,6 +1204,7 @@ form.message {display: none}
     padding-top: 6px;
     width: 220px;
     float: left;
+    overflow: hidden;
 }
 
 #add-element .write-message span {
@@ -1161,7 +1261,7 @@ form.message {display: none}
     width : 233px;
 }
 
-.container-left #new-members #proposition-members { border : 1px solid #DCDCDC; border-top : 0; }
+.container-left #new-members #proposition-members { border : 1px solid #DCDCDC; border-top : 0; max-height: 150px; overflow-y: auto;}
 
 .container-left #new-members #proposition-members > p { background : white; padding : 10px; text-align : center; color : #6E6E6E; font: italic 11px/15px arial; }
 
@@ -1170,6 +1270,7 @@ form.message {display: none}
     padding : 4px 4px;
     position : relative;
     border-bottom : 1px solid #DCDCDC;
+    margin-left: 0px;
 }
 
 .container-left #new-members #proposition-members .user:last-child { border : none; }
@@ -1220,35 +1321,40 @@ form.message {display: none}
 
 
 #welcome{
-    margin : 70px auto 0px auto;
-    width:600px;
-    height:345px;
+    margin : 80px auto 0px 140px;
+    width:400px;
+    height:410px;
+    float: left;
+    background-color: #F6F7F8;
+    border: 1px solid #e8eaed;
+    border-radius: 3px;
     }
     
 #welcome img{
-    margin-top : 5px;
-    margin-left:204px; 
+    margin-left: 120px;
+    margin-top: 110px;
     }
     
 #welcome h1{
-    font: normal 20px "Oxygen-Regular";
-    color:#444444;
-    letter-spacing : 1.5px;
+    color: #444444;
+    font: 20px "Oxygen-Regular";
+    letter-spacing: 1.5px; 
     margin-bottom : 20px;
-    margin-left:115px; 
+    margin-left:135px;
+    margin-top: 38px; 
     }
     
 #main #welcome #distante{
     width:600px;
     height:50px;
-    margin-top :60px;
+    margin-top :45px;
     margin-bottom:5px;
     }
     
 #main #welcome #distante .login{
     height:40px;
     width:200px;
-    margin-left :182px;
+    margin-left :100px;
     background:#EE6E21;
     border:1px solid #CA5C1A;
     color:#FFFFFF;  
@@ -1261,17 +1367,19 @@ form.message {display: none}
 #main #welcome #inscription{
     width:300px;
     height:60px;
+    margin-left: 93px;
     float:left;
     }
     
 #main #welcome #account{
     width:174px;
-    height:60px;
-    margin-top:22px;
+    height:20px;
+    margin-top:28px;
     float:left;
     color: #444444;
     font: 14px arial;
-    }       
+    margin-left: 120px;
+}       
     
 #main #welcome #inscription .inscription{
     margin-left :8px;
@@ -1353,3 +1461,91 @@ input:focus{
     border: 1px solid #54cf4c;
     box-shadow: none;
 }   
+
+.container-right a.first-visit{
+    background: url("/images/robot.png") no-repeat scroll 5px 1px;
+    color : #909090;
+    text-decoration: none;
+    display: block;
+    float: right;
+    margin-right: 5px;
+    padding-left: 33px;
+    font-size: 14px;
+}
+.container-right a.first-visit:hover{
+    color : #444444;
+    text-decoration: underline;
+}
+
+/*-------------------MESSAGE WELCOME--------------------------*/
+
+#first-usage{display: none;}
+
+#first-connection p.welcome {font-weight: bold}
+#first-connection{
+    background:#F6F7F8;
+    border: 1px solid #e8eaed;
+    margin-left: 25px;
+    padding-right: 20px;
+    margin-top: 80px;
+    height: 410px;
+    width: 550px;
+    float: left;}
+
+#first-connection img{
+    margin-bottom: 25px;}
+
+#first-connection h1{
+    color: #3C3C3C;
+    font: 21px "Oxygen-Regular";
+    letter-spacing: 1.1px;
+    margin: 25px 0px 20px 20px;
+    text-align: center;
+}
+
+#first-connection p{
+color: #444444;
+font: 14px/1.4em Arial,sans-serif;
+margin-bottom: 10px;
+margin-top: 20px;
+width: 430px;
+padding-left: 50px;
+text-align: justify;
+}
+
+#first-connection p span{
+color: #515151;
+}
+
+#first-connection #icon-create{
+background: url("/images/project-first.png") no-repeat 0px 2px;
+padding-left: 30px;
+margin-top: 25px;
+}
+
+#first-connection #icon-corpus{
+background: url("/images/corpus-first.png") no-repeat 0px 2px;
+padding-left: 30px;
+}
+
+#first-connection #icon-script{
+background: url("/images/script-first.png") no-repeat 0px 2px;
+padding-left: 30px;
+}
+
+#first-connection #icon-invite{
+background: url("/images/invite-first.png") no-repeat 0px 2px;
+padding-left: 30px;
+}
+
+#first-connection #icon-message{
+background: url("/images/message-first.png") no-repeat 0px 4px;
+padding-left: 30px;
+}
+
+#first-connection h2{
+    color: #444444;
+    font: 14px/1.4em Arial,sans-serif;
+    margin: 0px 0px 18px 25px;
+    margin-left: 70px;
+}
