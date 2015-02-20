@@ -10,6 +10,8 @@ dashboardConfig =
         Identity: {
             name: "Cortext Auth",
             urlAuth: "http://auth.cortext.net/auth",
+            urlGrant: "http://auth.cortext.net/auth/grant",
+            urlAccess: "http://auth.cortext.net/auth/access",
             urlSubscribe: "http://auth.cortext.net/user/register",
             urlEdit: "http://auth.cortext.net/user",
 	        callback: "http://managerv2.cortext.net",

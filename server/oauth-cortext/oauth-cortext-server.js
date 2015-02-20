@@ -49,7 +49,7 @@ var getTokens = function (query) {
   console.log("[oauth] get access token with query and config:", query, config);
   try {
     response = HTTP.post(
-      dashboardConfig.services.Identity.urlAuth+"/grant", {params: {
+      dashboardConfig.services.Identity.urlGrant, {params: {
         code: query.code,
         client_id: config.clientId,
         client_secret: config.secret,
@@ -79,7 +79,7 @@ var getTokens = function (query) {
 var getIdentity = function (accessToken) {
   try {
     var response = HTTP.get(
-      dashboardConfig.services.Identity.urlAuth+"/access",
+      dashboardConfig.services.Identity.urlAccess,
       {params: {access_token: accessToken}});
     console.log('[auth] response from access request ', response);
     return JSON.parse(response.content);
