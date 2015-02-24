@@ -1,10 +1,11 @@
 @participation = Backbone.View.extend
   render: ()->
-    @$el.html Template.participation
+    UI.insert UI.renderWithData(Template.participation,
       composition: _(@options.composition).map (v,k)->
-        element =
-          key: k
-          value: v
+          element =
+            key: k
+            value: v
+     ),  @$el
 
     @to_bar @el
 

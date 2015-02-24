@@ -5,9 +5,10 @@ Meteor.subscribe "projects"
     p = new models.project()
 
     p.on "project:loaded", ()=>
-      t = Template.project_simple
+      t = UI.renderWithData(Template.project_simple,
         p: p.attributes
         members: p.members
+        )
 
       @$el.find('.project-'+project_id).remove()
       @$el.append t
@@ -41,9 +42,10 @@ Meteor.subscribe "projects"
     p.on "project:loaded", ()=>
       #console.log p.attributes
       @$el.find('#project-'+p.get('id')).remove()
-      @$el.append Template.dashboard_list_project
+      @$el.append UI.renderWithData(Template.dashboard_list_project,
         project: p.attributes
         composition: []
+        )
       @render_elements p
       @render_composition p
 

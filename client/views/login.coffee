@@ -8,10 +8,11 @@
 
     render: ()->
       $('#header').hide()
+      
       Template.welcome.registered = ()=>
         @options.registered
 
-      $('#main').html Template.login()
+      UI.insert UI.render(Template.login), $('#main').get(0)
       
       $('#first-usage').show()
 

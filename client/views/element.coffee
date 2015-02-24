@@ -1,7 +1,7 @@
 @element = Backbone.View.extend
   render: ()->
-    $("#main").html Template.element
-
+    UI.insert UI.render(Template.element), $("#main").get(0)
+    
     element = @options.element.attributes
 
     $("#element-content").html Template[element.type.toLowerCase()] element

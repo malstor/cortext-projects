@@ -8,8 +8,9 @@ Meteor.subscribe "elements"
 
     e.on "element:loaded", ()=>
       #console.log 'element : loaded ', e
-      t = Template.script
+      t = UI.renderWithData(Template.script,
         s: e.attributes   
+        )
 
       @$el.find('#script-'+script_id).remove()
       @$el.append t

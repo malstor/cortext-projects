@@ -1,7 +1,7 @@
 <template name="comment">
   <div class="comment-container" id="comments-{{e.id}}">
     {{#each e.comments}}
-      {{> comment-item}}
+      {{> commentItem}}
     {{/each}}
   </div>
   <form rel="{{e.project}}" data-element = "{{e.id}}" class="frm-comment message message-write" id="comment-{{e.id}}">
@@ -16,7 +16,7 @@
   <div class="arrow" rel="{{e.id}}" title="view all elements"></div>
 </template>
 
-<template name="comment-item">
+<template name="commentItem">
   <div class="document-comment" id="Message-{{id}}">
       <div class="icon img-message"> </div>
       <div class="actions">

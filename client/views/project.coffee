@@ -39,7 +39,7 @@ Meteor.subscribe "members"
 
 
       #console.log $.param(parameters, true)
-      window.location = dashboardConfig.services.Jobs.url+"/job/new?" + $.param(parameters)
+      window.location = dashboardConfig.services.Jobs.url+"?" + $.param(parameters)
 
   set_actions :(project)->
     #action delete on element
@@ -123,7 +123,8 @@ Meteor.subscribe "members"
       evt.preventDefault()
      
       $('#descriptionContainer').fadeOut()
-      $('#descriptionEditForm').html Template.editProject({p: project.attributes})
+      UI.insert UI.renderWithData(Template.editProject, {p: project.attributes}), $('#descriptionEditForm').get(0)
+      
 
       $('#saveInformations').on "click", (evt)->
         evt.preventDefault()
@@ -191,7 +192,7 @@ Meteor.subscribe "members"
 
           #if this is a comment on a comment
           if element.get('commentOn') !=0
-            new_comment = Template["comment-item"]
+            new_comment = Template["commentItem"]
               author: m.attributes
               e: element.attributes
             $("#elements").find('.element [rel="'+element.get('commentOn')+'"]').remove()
@@ -245,8 +246,9 @@ Meteor.subscribe "members"
             _(users).each (u) ->
               user = new models.member(u)
               user.set_gravatar()
-              elt = Template.project_proposition_item 
+              elt = UI.renderWithData(Template.project_proposition_item, 
                 user: user.attributes
+                )
               $elt = $("#proposition-members").append elt
               $("#add-"+u.id).on "click", (evt) ->
                 project.add_member u.id
@@ -286,9 +288,9 @@ Meteor.subscribe "members"
 
       if(!_.isUndefined(Template[ e.type.toLowerCase() ]))
         #console.log "rendering el ", e.id
-        $("#elements").append Template[ e.type.toLowerCase() ] element
+        $("#elements").append UI.renderWithData(Template[ e.type.toLowerCase() ], element: element)
       else
-        $("#elements").append Template.element element
+        $("#elements").append UI.renderWithData(Template.element, element: element)
 
       #show arrow if overflow on files or comments
       eId = "#"+e.type+"-"+e.id
@@ -319,7 +321,7 @@ Meteor.subscribe "members"
       return unless m
       #console.log m_id
       m.participation = project.get_participation m_id
-      $("#members .list").append Template.project_participant m
+      $("#members .list").append UI.renderWithData(Template.project_participant), m
       
       new participation
         el: $("#members .list .member-"+m_id+" .participation")
@@ -335,9 +337,11 @@ Meteor.subscribe "members"
   render: ()->
     project = @options.project
     project.on "project:loaded", ()=>
-      $("#main").html Template.project 
+      UI.insert UI.renderWithData(Template.project,
         project: project.attributes
         composition: []
+       ), $('#main').get(0)
+      
       #console.log 'project elements :', project.elements
       @render_elements project
       @render_participants project

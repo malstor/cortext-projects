@@ -33,8 +33,7 @@
 
 
   render: ()->
-    $("#path").html Template.path
-      path: @options.path
+    UI.insert UI.renderWithData(Template.path, {path: @options.path}), $("#path").get(0)
     
     @set_interactions()
     @set_title()

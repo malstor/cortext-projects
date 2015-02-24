@@ -1,11 +1,11 @@
 {
     "app": {
-        "port"     : "8080"    
+        "port"     : "8081"    
     },
     "mongo": {
         "host"    : "localhost",
-        "port"    : "27017",
+        "port"    : "3001",
         "dbname"  : "meteor",
-        "url"     : "mongodb://localhost:27017/meteor"   
+        "url"     : "mongodb://localhost:3001/meteor"   
     }
 }

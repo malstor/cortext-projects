@@ -1,22 +1,22 @@
 <template name="element">
 <div class="element-meta col-1">
+  <div class="element {{type}} user-{{ author.id }}" id="Element-{{ e.id }}" rel="{{e.id}}">
 
-<div class="element {{type}} user-{{ author.id }}" id="Element-{{ e.id }}" rel="{{e.id}}">
+    <div class="info">
+      <span class="type element">{{ e.type }}</span>
+      <h3 class="author"><a href="/user/{{author.id}}"><img class="gravatar" src="{{author.gravatar}}" /> {{author.name}}</a></h3>
+      <span class="date"><a href="{{ e.permalink }}">{{date_short date }}</a></span>
+    </div><!-- /info -->
+    {{#if content}}
+        <div class="body">
+           {{md content}}
+        </div>
+    {{/if}}
 
-  <div class="info">
-    <span class="type element">{{ e.type }}</span>
-    <h3 class="author"><a href="/user/{{author.id}}"><img class="gravatar" src="{{author.gravatar}}" /> {{author.name}}</a></h3>
-    <span class="date"><a href="{{ e.permalink }}">{{date_short date }}</a></span>
-  </div><!-- /info -->
-  {{#if content}}
-      <div class="body">
-         {{md content}}
-      </div>
-  {{/if}}
+    {{#if permalink}}
+      <a href='{{permalink}}'>view</a>
+    {{/if}}
 
-  {{#if permalink}}
-    <a href='{{permalink}}'>view</a>
-  {{/if}}
-
+  </div>
 </div>
 </template>

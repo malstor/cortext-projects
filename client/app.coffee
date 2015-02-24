@@ -177,7 +177,7 @@
           accessToken: Meteor.user().profile.accessToken
           corpus_id: corpus_id
         #console.log $.param(parameters, true)
-        window.location = dashboardConfig.services.Jobs.url + "/job/new?" + $.param(parameters)
+        window.location = dashboardConfig.services.Jobs.url+ "?" + $.param(parameters)
       else
         @navigate('/project/'+project_id, true)
 

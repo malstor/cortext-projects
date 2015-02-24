@@ -13,9 +13,8 @@
     u.on "member:elements:changed", ()=>
       #console.log 'user.on member:elements:changed -> listener render_projects'
 
-      $("#projects").html Template.user_projects
-        projects: u.projects
-
+      UI.insert UI.renderWithData(Template.user_projects, {projects: u.projects}), $("#projects").get(0)
+      
       _(u.projects).each (project)=>
         p = new models.project()
 
@@ -43,9 +42,8 @@
 
       u.projects = _(u.projects).filter (p)->
         _(p.messages).size() > 0
-
-      $("#messages").html Template.user_messages
-        projects: u.projects
+      
+      UI.insert UI.renderWithData(Template.user_messages, {projects: u.projects}), $("#messages").get(0)
 
   render_counter: ()->
     #console.log 'user.render_counter'
@@ -71,8 +69,8 @@
     @u.set
       urlEdit : dashboardConfig.services.Identity.urlEdit+'/'+@u.id+'/edit?callback_url='+dashboardConfig.common.callback+"/user/"+@u.id+"/update"
       
-    $("#main").html Template.user
-      user: @options.user.attributes
+    UI.insert UI.renderWithData(Template.user, user: @options.user.attributes), $("#main").get(0)
+    
 
     
 

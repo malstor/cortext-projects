@@ -1,7 +1,8 @@
 @dashboard = Backbone.View.extend
 
   render: ()->
-    $('#main').html Template.dashboard
+    UI.insert UI.render(Template.dashboard), $('#main').get(0)
+    
     
     new queued_scripts
       el: $('#queuedScripts')
