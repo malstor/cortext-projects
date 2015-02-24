@@ -39,7 +39,7 @@ Meteor.subscribe "members"
 
 
       #console.log $.param(parameters, true)
-      window.location = dashboardConfig.services.Jobs.url+"/job/new?" + $.param(parameters)
+      window.location = dashboardConfig.services.Jobs.url+"?" + $.param(parameters)
 
   set_actions :(project)->
     #action delete on element
