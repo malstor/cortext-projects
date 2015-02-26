@@ -192,16 +192,18 @@ Meteor.subscribe "members"
 
           #if this is a comment on a comment
           if element.get('commentOn') !=0
-            new_comment = Template["commentItem"]
+            new_comment = UI.renderWithData(Template["commentItem"],
               author: m.attributes
               e: element.attributes
+            )
             $("#elements").find('.element [rel="'+element.get('commentOn')+'"]').remove()
             $('[rel="'+element.get('commentOn')+'"] .comment-container').prepend new_comment
             $(new_comment).fadeIn 1000
           else
-            new_el = Template[element.get("type").toLowerCase()]
+            new_el = UI.renderWithData(Template[element.get("type").toLowerCase()],
               author: m.attributes
               e: element.attributes
+            )
             $("#elements").find('#Message-'+element.get('id')).remove()
             $("#elements").prepend new_el 
             $(new_el).css "display", "none"
@@ -288,9 +290,9 @@ Meteor.subscribe "members"
 
       if(!_.isUndefined(Template[ e.type.toLowerCase() ]))
         #console.log "rendering el ", e.id
-        $("#elements").append UI.renderWithData(Template[ e.type.toLowerCase() ], element: element)
+        $("#elements").append UI.renderWithData(Template[ e.type.toLowerCase() ], e: element)
       else
-        $("#elements").append UI.renderWithData(Template.element, element: element)
+        $("#elements").append UI.renderWithData(Template.element, e: element)
 
       #show arrow if overflow on files or comments
       eId = "#"+e.type+"-"+e.id

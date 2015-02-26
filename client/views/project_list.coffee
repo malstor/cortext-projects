@@ -86,9 +86,10 @@ Meteor.subscribe "projects"
       m.set_gravatar()
       #console.log 'member', m
       if m
-        elt = Template[element.type.toLowerCase()]
+        elt = UI.renderWithData(Template[element.type.toLowerCase()],
           author : m.attributes
           e : element
+        )
         $("#project-"+project_id+" .elements").append elt
         #console.log "render", @options
         # $(".results a").on "click", (evt) ->
