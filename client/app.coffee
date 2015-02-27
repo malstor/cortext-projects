@@ -16,6 +16,7 @@
     'login': 'login'
     'logout': 'logout'
     'auth/oauth': 'oauth'
+    'view/pdf/:hash': 'viewPdf'
 
   initialize: (options) ->
     Meteor.subscribe "members"
@@ -180,5 +181,10 @@
         window.location = dashboardConfig.services.Jobs.url + "?" + $.param(parameters)
       else
         @navigate('/project/'+project_id, true)
+
+  viewPdf: (hash) ->
+    v = new viewPdf
+    console.log "I'm there !", hash
+    v.render(hash)
 
 
