@@ -32,9 +32,9 @@ server = new Server(mongoHost, mongoPort, {w: 1}, {auto_reconnect: true});
 
         db.open(function(err, dbConn){
             if(err){
-                console.log("Error in db.open :",err);
+                console.log(nowDate()+"Error in db.open :",err);
             }
-            else console.log("db connected : on mongoServer mongodb://"+mongoHost+":"+mongoPort+"/"+mongoDbName);
+            else console.log(nowDate()+"db connected : on mongoServer mongodb://"+mongoHost+":"+mongoPort+"/"+mongoDbName);
         });
 //try to find the correct url for mongoDb metor server
 
@@ -57,7 +57,13 @@ _ = require("underscore");
 
 /***** Tools ***************************/
 
-
+//formats current date
+function nowDate(){
+  d = new Date().toISOString().
+    replace(/T/, ' ').      // replace T with a space
+    replace(/\..+/, '');
+  return "["+d+"] ";
+}
 //returns timestamp in mseconds if in seconds (php standard)
 function timestampJs(timestp)
 {
@@ -67,10 +73,10 @@ function timestampJs(timestp)
 function logReferrer(req){
     var ref = req.headers.referrer;
     if(ref){
-        console.log("RECEIVED request from "+ref);
+        console.log(nowDate()+"RECEIVED request from "+ref);
     }
     else{
-        console.log("RECEIVED request from unknown : ",req.url, req.method,  req.headers, req.body);
+        console.log(nowDate()+"RECEIVED request from unknown : ",req.url, req.method,  req.headers, req.body);
     }
 }
 /***** DB Management  ****************/
@@ -88,7 +94,7 @@ function Storage(){
             if (err)
                 throw(new Error(err));
 
-            console.log('collection '+collectionName+' loaded');
+            console.log(nowDate()+'collection '+collectionName+' loaded');
             collection.find(query, fields).toArray(function(err, items) {
                 if (err)
                    throw(new Error(err));
@@ -106,11 +112,11 @@ function Storage(){
         var collection = db.collection(collectionName, function(err, collection){
             if (err)
                 throw(new Error(err));
-            console.log('collection '+collectionName+' loaded');
+            console.log(nowDate()+'collection '+collectionName+' loaded');
             collection.findOne(query,function(err, item) {
                     if (err)
                         throw(new Error(err));
-                    console.log('find item : ',query, item);
+                    console.log(nowDate()+'find item : ',query, item);
                     res.send(item);
                 });
         });
@@ -124,7 +130,7 @@ function Storage(){
         var collection = db.collection(collectionName, function(err, collection){
             if (err)
                 throw(new Error(err));
-            console.log('collection '+collectionName+' loaded');
+            console.log(nowDate()+'collection '+collectionName+' loaded');
             collection.findOne({},{id:1},{sort:{id:-1}}, function(err,item){
                 if(err)
                     throw(new Error(err));
@@ -133,18 +139,18 @@ function Storage(){
                 else
                     attributes.id = 1;
 
-                console.log("new element id : ", attributes.id);
+                console.log(nowDate()+"new element id : ", attributes.id);
                 try{
                     collection.insert(attributes, function(err, item) {
                         if (err)
                             throw(new Error(err));
 
-                        console.log('inserted item : ', item);
+                        console.log(nowDate()+'inserted item : ', item);
                         res.send(201, item);
                     });
                 }
                 catch(err){
-                    console.log('error inserting element : ', err);
+                    console.log(nowDate()+'error inserting element : ', err);
                     res.send(500,"error inserting element");
                 }
             });
@@ -159,17 +165,17 @@ function Storage(){
         var collection = db.collection(collectionName, function(err, collection){
             if (err)
                 throw(new Error(err));
-            console.log('collection '+collectionName+' loaded');
+            console.log(nowDate()+'collection '+collectionName+' loaded');
             try{
                 collection.update(query,{$set: attributes}, function(err, item) {
                     if (err)
                         throw(new Error(err));
-                    console.log('upsert item : ',query, '{$set: ',attributes,'}', item);
+                    console.log(nowDate()+'upsert item : ',query, '{$set: ',attributes,'}', item);
                     res.send('update ok : ', item);
                 });
             }
             catch(err){
-                console.log('error updating element : ', err);
+                console.log(nowDate()+'error updating element : ', err);
                 res.send(500,"error updating element");
             }
             
@@ -199,13 +205,13 @@ module.exports = {
         if(req.query){
             _(filters).extend(req.query);
         }
-        console.log('--> [GET] /elements/', filters);
+        console.log(nowDate()+'--> [GET] /elements/', filters);
         storage.getAll('elements', filters, {}, res);
     },
 
     getOneElement : function(req, res){
         logReferrer(req);
-        console.log('--> [GET] /elements/'+req.params.id);
+        console.log(nowDate()+'--> [GET] /elements/'+req.params.id);
         storage.getItem('elements', {id: parseInt(req.params.id)}, res);
     },
 
@@ -221,7 +227,7 @@ module.exports = {
             date: parseInt(current_date),
             content: req.body.content
         };
-        console.log('--> [POST] /elements', element);
+        console.log(nowDate()+'--> [POST] /elements', element);
         storage.insert('elements', element, res);
     },
 
@@ -244,14 +250,14 @@ module.exports = {
             timestamp: parseInt(current_date),
             permalink: req.body.url
         };
-        console.log('--> [POST] /project/documents', element);
+        console.log(nowDate()+'--> [POST] /project/documents', element);
         storage.insert('elements', element, res);
     },
 
     getProjectDocuments : function(req, res){
         logReferrer(req);
-        console.log('--> [GET] /project/'+req.params.project_id+'/documents');
-        console.log('--> params : ',req.query);
+        console.log(nowDate()+'--> [GET] /project/'+req.params.project_id+'/documents');
+        console.log(nowDate()+'--> params : ',req.query);
         //building query
         filters = {project: parseInt(req.params.project_id), type:"Document"};
         if(req.query)
@@ -261,14 +267,14 @@ module.exports = {
 
     getOneDocument : function(req, res){
         logReferrer(req);
-        console.log('--> [GET] /documents/'+req.params.document_id);
+        console.log(nowDate()+'--> [GET] /documents/'+req.params.document_id);
         storage.getItem('elements', {project: parseInt(req.params.project_id), id: parseInt(req.params.document_id)}, res);
     },
 
 
     getOneAnalysis : function(req, res){
         logReferrer(req);
-        console.log('--> [GET] /analysis/'+req.params.id);
+        console.log(nowDate()+'--> [GET] /analysis/'+req.params.id);
         storage.getItem('elements', {id: parseInt(req.params.id)}, res);
     },
 
@@ -294,7 +300,7 @@ module.exports = {
             element.content.results=req.body.content.results;
         }
 
-        console.log('--> [POST] /analysis', element);
+        console.log(nowDate()+'--> [POST] /analysis', element);
         console.log(req.body);
         storage.insert('elements', element, res);
     },
@@ -318,7 +324,7 @@ module.exports = {
         }
             
 
-        console.log('--> [POST] /project/'+req.params.project_id+'/analysis/'+req.params.analysis_id, element);
+        console.log(nowDate()+'--> [POST] /project/'+req.params.project_id+'/analysis/'+req.params.analysis_id, element);
         storage.upsert('elements', {id: parseInt(req.params.analysis_id)}, element, res);
 
     }
