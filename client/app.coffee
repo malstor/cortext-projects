@@ -17,6 +17,7 @@
     'logout': 'logout'
     'auth/oauth': 'oauth'
     'view/pdf/:hash': 'viewPdf'
+    'view/csv/:hash': 'viewCsv'
 
   initialize: (options) ->
     Meteor.subscribe "members"
@@ -184,6 +185,11 @@
 
   viewPdf: (hash) ->
     v = new viewPdf
+    console.log "I'm there !", hash
+    v.render(hash)
+
+  viewCsv: (hash) ->
+    v = new viewCsv
     console.log "I'm there !", hash
     v.render(hash)
 
