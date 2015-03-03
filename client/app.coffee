@@ -184,13 +184,19 @@
         @navigate('/project/'+project_id, true)
 
   viewPdf: (hash) ->
-    v = new viewPdf
-    console.log "I'm there !", hash
-    v.render(hash)
+    @checkLogin () =>
+      v = new viewPdf
+      console.log "I'm there !", hash
+      v.render(hash)
+      @path [],
+        fix: true
 
   viewCsv: (hash) ->
-    v = new viewCsv
-    console.log "I'm there !", hash
-    v.render(hash)
+    @checkLogin () =>
+      v = new viewCsv
+      console.log "I'm there !", hash
+      v.render(hash)
+      @path [],
+        fix: true
 
 

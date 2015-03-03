@@ -7,7 +7,7 @@
 
     render: (hash)->
       $('#main').html Template.viewPdf()
-
+      
       PDFJS.workerSrc = '/client/lib/pdfjs/pdf.worker.js'
       url = dashboardConfig.services.Storage.url+dashboardConfig.services.Storage.getDocument+"/"+hash
       console.log "I'm here ! Try to view ", url
@@ -26,3 +26,5 @@
 
               # Render PDF page into canvas context
               page.render({canvasContext: context, viewport: viewport}).promise.then ()=>
+                #unset loading
+                $('p.loading').html ''

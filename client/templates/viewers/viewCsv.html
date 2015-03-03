@@ -1,3 +1,7 @@
 <template name="viewCsv">
-    <div id="csvContent"></div>
+	<div id="fileDescription" class="viewCsv element document">
+		<p>{{ file.name }} - {{ file.size }}</p>
+		<p class="loading">Loading<span class="loadingOne">.</span><span class="loadingTwo">.</span><span class="loadingThree">.</span></p>
+	</div>
+    <div id="csvContent" class="csvContainer"></div>
 </template>
