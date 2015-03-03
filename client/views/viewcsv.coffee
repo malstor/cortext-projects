@@ -58,4 +58,5 @@
               $('p.loading').html ''
 
               #resize the content to window size
-              $('.csvContainer').css("height", $(window).height()-100)
+              #$('.csvContainer').css("height", $(window).height()-150)
+              $('.csvContainer').css("max-height", $(window).height()-150)

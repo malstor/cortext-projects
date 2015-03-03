@@ -6,7 +6,26 @@ _.mixin({
     CSVtoArray: function( strData, strDelimiter ){
       // Check to see if the delimiter is defined. If not,
     	// then default to comma.
-    	strDelimiter = (strDelimiter || ",");
+        
+	possibleDelimiters = [",", ";", "\t", "|"] ;
+
+        if ( !strDelimiter ) {
+		// Testing the first line of csv file for all possible delimiters and returning the most probable
+		firstLine = strData.split('\n',1);
+		if ( firstLine.length == 0 ) {
+			strDelimiter = ",";
+		} else {
+			firstLine = firstLine[0];
+			maxSplit = 0 ;
+		 	for ( i = 0; i < possibleDelimiters.length; i++ ) {
+				nb = firstLine.split(possibleDelimiters[i]).length;
+				if ( nb > maxSplit ) {
+					maxSplit = nb ;
+					strDelimiter = possibleDelimiters[i];
+				}
+			}
+		}
+	}
 
     	// Create a regular expression to parse the CSV values.
     	var objPattern = new RegExp(

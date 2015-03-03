@@ -342,7 +342,8 @@ p{
 
 /*** handsontable csv view **/
 .viewCsv {margin-top: 20px; margin-bottom: 20px;}
-.csvContainer{overflow: scroll; width: 100%;}
+.csvContainer{overflow: scroll; width: 100%; min-height: 150px; }
+.htCore{height:100%;}
 
 /* loading animation */
 .loadingOne {
