@@ -15,16 +15,18 @@
       PDFJS.getDocument(url).then (pdf)=>
           # Fetch the first page
           pdf.getPage(1).then (page)=>
-              scale = 1
-              viewport = page.getViewport(scale)
+              desiredWidth = 1200
+              viewport = page.getViewport(1);
+              scale = desiredWidth / viewport.width;
+              scaledViewport = page.getViewport(scale);
 
               # Prepare canvas using PDF page dimensions
               canvas = document.getElementById('pdfcanvas')
               context = canvas.getContext('2d')
-              canvas.height = viewport.height
-              canvas.width = viewport.width
+              canvas.height = scaledViewport.height
+              canvas.width = scaledViewport.width
 
               # Render PDF page into canvas context
-              page.render({canvasContext: context, viewport: viewport}).promise.then ()=>
+              page.render({canvasContext: context, viewport: scaledViewport}).promise.then ()=>
                 #unset loading
                 $('p.loading').html ''
