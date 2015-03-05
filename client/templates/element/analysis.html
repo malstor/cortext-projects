@@ -40,7 +40,7 @@
       {{#each e.content.results}}
         <div class="file">
           <div class="icon img-{{extension}}"><!-- {{extension}} --></div>
-          <div class="name" id="{{id}}"><a href="{{url}}">{{title}}</a></div>
+          <div class="name" id="{{id}}"><a title ="download {{title}}" href="{{url}}">{{title}}</a></div>
           <div class="actions">               
                 <a class ="icon view" title="view file" rel="{{url}}" data-type="{{extension}}" target="_blank" href='{{viz extension url}}'></a>
                 <a class="icon delete" title="delete file" data-permalink="{{url}}" href="#" data-type="Result" data-hash="{{id}}"></a>
