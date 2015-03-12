@@ -6,7 +6,9 @@
     initialize: ()=>
 
     render: (hash)->
-      
+      $('#main').html Template.viewCsv
+        file : null
+
       console.log "I'm there ! Try to view csv :", hash
       #constructing the file url given the hash
       url = dashboardConfig.services.Storage.url+dashboardConfig.services.Storage.getDocument+"/"+hash
@@ -49,7 +51,7 @@
                 data: @data, #the array of datas we juste created
                 minSpareRows: 1, # wtf ?
                 rowHeaders: true, #display row numbers for headers
-                colHeaders: true, #idem for columns
+                colHeaders: false, #idem for columns
                 columnSorting: true, #click on the col header to sort
                 contextMenu: true # right-click menu : insert/remove row and cols, ...
               });
