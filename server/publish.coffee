@@ -45,5 +45,7 @@ Meteor.publish 'member', (user_id)->
 Meteor.methods
   nextProjectId: ()->
     lastproj = projects.findOne {}, fields: {id: 1}, sort: {id : -1}
+    console.log "nextProjectId called. result :", lastproj
     next_id = if(lastproj) then parseInt(lastproj.id+1) else 1
+    console.log "returning next_id :", next_id
     next_id
