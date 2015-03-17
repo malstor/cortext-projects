@@ -90,8 +90,7 @@
 
   create: (options)->
     date_current = moment().format('YYYY-MM-DD hh:mm:ss')
-    lastproj = projects.findOne {}, fields: {id: 1}, sort: {id : -1}
-    next_id = if(lastproj) then parseInt(lastproj.id+1) else 1
+    next_id = Meteor.call('nextProjectId') #we call the server method to access all the projects, not only the user's
 
     projects.insert 
       id: next_id
