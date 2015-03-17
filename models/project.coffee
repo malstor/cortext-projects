@@ -90,7 +90,7 @@
 
   create: (options)->
     date_current = moment().format('YYYY-MM-DD hh:mm:ss')
-    next_id = Meteor.call('nextProjectId') #we call the server method to access all the projects, not only the user's
+    next_id = parseInt(Meteor.call('nextProjectId')) #we call the server method to access all the projects, not only the user's
 
     projects.insert 
       id: next_id
