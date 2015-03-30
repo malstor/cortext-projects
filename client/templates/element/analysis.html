@@ -12,7 +12,7 @@
  <div class="info-result">
 		{{#if e.parameters.corpus_name}}
       <span class="name"> 
-      / <a href="{{e.parameters.corpus_permalink}}"  title='download {{e.parameters.corpus_name}}'>{{ellipsis e.parameters.corpus_name 30}}</a>
+      / <a href="{{e.parameters.corpus_permalink}}"  title='download {{e.parameters.corpus_name}}'>{{ellipsis e.parameters.corpus_name 30}}.{{e.parameters.extension}}</a>
       </span>
      {{/if}}
      
@@ -40,7 +40,7 @@
       {{#each e.content.results}}
         <div class="file">
           <div class="icon img-{{extension}}"><!-- {{extension}} --></div>
-          <div class="name" id="{{id}}"><a title ="download {{title}}" href="{{url}}">{{ellipsis title 85}}</a></div>
+          <div class="name" id="{{id}}"><a title ="download {{title}} [{{extension}}]" href="{{url}}">{{ellipsis title 85}}.{{extension}}</a></div>
           <div class="actions">               
                 <a class ="icon view" title="view file" rel="{{url}}" data-type="{{extension}}" target="_blank" href='{{viz extension url}}'></a>
                 <a class="icon delete" title="delete file" data-permalink="{{url}}" href="#" data-type="Result" data-hash="{{id}}"></a>

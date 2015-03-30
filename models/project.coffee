@@ -90,23 +90,25 @@
 
   create: (options)->
     date_current = moment().format('YYYY-MM-DD hh:mm:ss')
-    lastproj = projects.findOne {}, fields: {id: 1}, sort: {id : -1}
-    next_id = if(lastproj) then parseInt(lastproj.id+1) else 1
-
-    projects.insert 
-      id: next_id
-      title: @attributes.title
-      date_created : date_current
-      date_updated : date_current
-      members : [options.user_id]
-      , (error, id)=>
-        if(error)
-          console.log 'error inserting project : ', error
-          options.error(error)
-        if(id)
-          @set id:next_id
-          @set_permalink()          
-          options.success(id)
+ 
+    #we call the server method to access all the projects, not only the user's
+    Meteor.call 'nextProjectId', (error, result)=>   
+      console.error("no id given :", error) unless result?
+      next_id = parseInt(result)
+      projects.insert 
+        id: next_id
+        title: @attributes.title
+        date_created : date_current
+        date_updated : date_current
+        members : [options.user_id]
+        , (error, id)=>
+          if(error)
+            console.log 'error inserting project : ', error
+            options.error(error)
+          if(id)
+            @set id:next_id
+            @set_permalink()          
+            options.success(id)
 
   archive: () ->
     p = projects.findOne({id: @attributes.id})
