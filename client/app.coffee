@@ -164,7 +164,11 @@
     model.get_by_id element_id
 
   log: (jobId, project_id) ->
-    window.location = dashboardConfig.services.Jobs.url + "/logs/"+jobId+"?callback_url="+encodeURIComponent(dashboardConfig.common.callback+"/project/" + project_id)
+    @checkLogin () =>
+      parameters =
+        callback_url : dashboardConfig.common.callback+"/project/" + project_id
+        accessToken: Meteor.user().profile.accessToken
+      window.location = dashboardConfig.services.Jobs.url + "/logs/"+jobId+"?"+ $.param(parameters)
 
   uploadCorpus: (project_id, corpus_id) ->
      console.log('uploadedCorpus ', corpus_id, project_id)
