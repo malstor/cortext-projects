@@ -32,6 +32,7 @@ app.post('/elements', api.createElement);
 //documents (element type = document)
 app.get('/project/:project_id/documents/:document_id', api.getOneDocument);
 app.get('/project/:project_id/documents', api.getProjectDocuments);
+app.get('/project/:project_id/files', api.getProjectFiles);
 app.post('/project/:project_id/documents', api.createDocument);
 
 //analysis

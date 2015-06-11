@@ -265,6 +265,20 @@ module.exports = {
         storage.getAll('elements', filters, {}, res);
     },
 
+    getProjectFiles : function(req, res){
+        logReferrer(req);
+        console.log(nowDate()+'--> [GET] /project/'+req.params.project_id+'/files');
+        console.log(nowDate()+'--> params : ',req.query);
+        //building query
+        // we need all documents and all analysis with results to return all the files
+        filters = {project: parseInt(req.params.project_id), $or : [{"type":"Document"}, {"type":"Analysis"}]};
+        if(req.query)
+            _(filters).extend(req.query)
+        storage.getAll('elements', filters, {}, res);
+    },
+    
+
+
     getOneDocument : function(req, res){
         logReferrer(req);
         console.log(nowDate()+'--> [GET] /documents/'+req.params.document_id);
