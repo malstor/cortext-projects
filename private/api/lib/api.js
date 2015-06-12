@@ -277,6 +277,17 @@ module.exports = {
         storage.getAll('elements', filters, {}, res);
     },
     
+    getUserFiles : function(req, res){
+        logReferrer(req);
+        console.log(nowDate()+'--> [GET] /user/'+req.params.user_id+'/files');
+        console.log(nowDate()+'--> params : ',req.query);
+        //building query
+        // we need all documents and all analysis with results to return all the user files
+        filters = {author: parseInt(req.params.user_id), $or : [{"type":"Document"}, {"type":"Analysis"}]};
+        if(req.query)
+            _(filters).extend(req.query)
+        storage.getAll('elements', filters, {}, res);
+    },
 
 
     getOneDocument : function(req, res){

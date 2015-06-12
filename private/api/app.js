@@ -33,6 +33,7 @@ app.post('/elements', api.createElement);
 app.get('/project/:project_id/documents/:document_id', api.getOneDocument);
 app.get('/project/:project_id/documents', api.getProjectDocuments);
 app.get('/project/:project_id/files', api.getProjectFiles);
+app.get('/user/:user_id/files', api.getUserFiles);
 app.post('/project/:project_id/documents', api.createDocument);
 
 //analysis
