@@ -167,11 +167,11 @@ function Storage(){
                 throw(new Error(err));
             console.log(nowDate()+'collection '+collectionName+' loaded');
             try{
-                collection.update(query,{$set: attributes}, function(err, item) {
+                collection.update(query,{$set: attributes}, function(err, id, result) {
                     if (err)
                         throw(new Error(err));
-                    console.log(nowDate()+'upsert item : ',query, '{$set: ',attributes,'}', item);
-                    res.send('update ok : ', item);
+                    console.log(nowDate()+'upsert item : ',query, '{$set: ',attributes,'}', id);
+                    res.json(200,{msg:'update ok : ',result:result});
                 });
             }
             catch(err){
