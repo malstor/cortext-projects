@@ -1,7 +1,7 @@
 Handlebars.registerHelper 'status', (st) ->
   switch st
-    when 0 then "queued"
-    when 1 then "running"
+    when 0, 1 then "queued"
+    when 2, 3, 4 then "running"
     when 8 then "error"
     when 9 then "finished"
     else "unknown"
