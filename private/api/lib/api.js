@@ -312,12 +312,12 @@ module.exports = {
         
         var element = {
             name: req.body.name,
-            author: parseInt(req.body.author),
-            project: parseInt(req.params.project_id),
+            author: parseInt(req.body.author) || 0,
+            project: parseInt(req.params.project_id) || 0,
             type: 'Analysis',
-            date: parseInt(current_date),
-            progress: parseInt(req.body.progress),
-            state: parseInt(req.body.state),
+            date: parseInt(current_date) || null,
+            progress: parseInt(req.body.progress) || 0,
+            state: parseInt(req.body.state) || 0,
             parameters: req.body.parameters
         };
         if(req.body.content && req.body.content.results){
@@ -334,13 +334,14 @@ module.exports = {
         logReferrer(req);
         var current_date = new Date().getTime();
 
-        if(req.body.timestamp)
-           current_date = timestampJs(req.body.timestamp);
+        if(req.body.timestamp){
+           current_date = timestampJs(req.body.timestamp);            
+        }
 
         var element = {
-            progress: parseInt(req.body.progress),
-            state: parseInt(req.body.state),
-            jobId: parseInt(req.body.jobId)
+            progress: parseInt(req.body.progress) || 0,
+            state: parseInt(req.body.state) || 0,
+            jobId: parseInt(req.body.jobId) || 0
         };
         if(req.body.results)
         {
