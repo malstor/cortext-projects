@@ -272,8 +272,10 @@ module.exports = {
         //building query
         // we need all documents and all analysis with results to return all the files
         filters = {project: parseInt(req.params.project_id), $or : [{"type":"Document"}, {"type":"Analysis"}]};
-        if(req.query)
-            _(filters).extend(req.query)
+        if(req.query.extension){
+            ext = req.query.extension.trim();
+            _(filters).extend({$or : [{"extension":ext}, {"content.results.extension":ext}]})
+        }
         storage.getAll('elements', filters, {}, res);
     },
     
@@ -284,6 +286,10 @@ module.exports = {
         //building query
         // we need all documents and all analysis with results to return all the user files
         filters = {author: parseInt(req.params.user_id), $or : [{"type":"Document"}, {"type":"Analysis"}]};
+        if(req.query.extension){
+            ext = req.query.exension.trim();
+            filters.extend({$or : [{"extension":ext}, {"content.results.extension":ext}]})
+        }
         if(req.query)
             _(filters).extend(req.query)
         storage.getAll('elements', filters, {}, res);
