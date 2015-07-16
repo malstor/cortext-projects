@@ -65,7 +65,7 @@
     p_members = projects.findOne {id: p_id}, fields: {members: 1}
     p_members = p_members.members
     query = '.*'+options.query+'.*'
-    u_list = members.find(id: {$nin:p_members}, $or: [name: {$regex: query, $options: 'i'}, email:{$regex: query, $options: 'i'}] ).fetch()
+    u_list = members.find(id: {$nin:p_members}, $or: [{name: {$regex: query, $options: 'i'}}, {email:{$regex: query, $options: 'i'}}] ).fetch()
 
     if u_list
       #console.log _(u_list).size()
