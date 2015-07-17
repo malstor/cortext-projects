@@ -17,6 +17,7 @@ var app = express();
 var api = require('./lib/api.js');
 
 /****** app config ***********/
+process.env.TZ="Europe/Paris";
 app.use(express.bodyParser());
 
 /********Routes**************/
